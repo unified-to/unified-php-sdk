@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreatePaymentPaymentRequest
 {
     /**
+     *
+     * @var Shared\PaymentPayment $paymentPayment
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\PaymentPayment $paymentPayment;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\PaymentPayment $paymentPayment
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\PaymentPayment $paymentPayment = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreatePaymentPaymentRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\PaymentPayment  $paymentPayment
      * @param  string  $connectionId
-     * @param  ?Shared\PaymentPayment  $paymentPayment
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\PaymentPayment $paymentPayment = null, ?array $fields = null)
+    public function __construct(Shared\PaymentPayment $paymentPayment, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->paymentPayment = $paymentPayment;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

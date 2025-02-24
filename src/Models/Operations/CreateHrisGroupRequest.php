@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateHrisGroupRequest
 {
     /**
+     *
+     * @var Shared\HrisGroup $hrisGroup
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\HrisGroup $hrisGroup;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\HrisGroup $hrisGroup
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\HrisGroup $hrisGroup = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateHrisGroupRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\HrisGroup  $hrisGroup
      * @param  string  $connectionId
-     * @param  ?Shared\HrisGroup  $hrisGroup
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\HrisGroup $hrisGroup = null, ?array $fields = null)
+    public function __construct(Shared\HrisGroup $hrisGroup, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->hrisGroup = $hrisGroup;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

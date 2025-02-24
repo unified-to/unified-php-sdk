@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateLmsClassRequest
 {
     /**
+     *
+     * @var Shared\LmsClass $lmsClass
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\LmsClass $lmsClass;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\LmsClass $lmsClass
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\LmsClass $lmsClass = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateLmsClassRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\LmsClass  $lmsClass
      * @param  string  $connectionId
-     * @param  ?Shared\LmsClass  $lmsClass
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\LmsClass $lmsClass = null, ?array $fields = null)
+    public function __construct(Shared\LmsClass $lmsClass, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->lmsClass = $lmsClass;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

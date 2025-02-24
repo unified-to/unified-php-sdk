@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUcContactRequest
 {
     /**
+     * A contact represents a person that optionally is associated with a call
+     *
+     * @var Shared\UcContact $ucContact
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\UcContact $ucContact;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * A contact represents a person that optionally is associated with a call
-     *
-     * @var ?Shared\UcContact $ucContact
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\UcContact $ucContact = null;
 
     /**
      * Comma-delimited fields to return
@@ -37,15 +37,15 @@ class CreateUcContactRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\UcContact  $ucContact
      * @param  string  $connectionId
-     * @param  ?Shared\UcContact  $ucContact
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\UcContact $ucContact = null, ?array $fields = null)
+    public function __construct(Shared\UcContact $ucContact, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->ucContact = $ucContact;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

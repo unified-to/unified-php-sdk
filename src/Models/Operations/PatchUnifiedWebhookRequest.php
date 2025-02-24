@@ -13,6 +13,14 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchUnifiedWebhookRequest
 {
     /**
+     * A webhook is used to POST new/updated information to your server.
+     *
+     * @var Shared\Webhook $webhook
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\Webhook $webhook;
+
+    /**
      * ID of the Webhook
      *
      * @var string $id
@@ -21,21 +29,13 @@ class PatchUnifiedWebhookRequest
     public string $id;
 
     /**
-     * A webhook is used to POST new/updated information to your server.
-     *
-     * @var ?Shared\Webhook $webhook
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\Webhook $webhook = null;
-
-    /**
+     * @param  Shared\Webhook  $webhook
      * @param  string  $id
-     * @param  ?Shared\Webhook  $webhook
      * @phpstan-pure
      */
-    public function __construct(string $id, ?Shared\Webhook $webhook = null)
+    public function __construct(Shared\Webhook $webhook, string $id)
     {
-        $this->id = $id;
         $this->webhook = $webhook;
+        $this->id = $id;
     }
 }

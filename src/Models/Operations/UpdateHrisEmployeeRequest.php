@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateHrisEmployeeRequest
 {
     /**
+     *
+     * @var Shared\HrisEmployee $hrisEmployee
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\HrisEmployee $hrisEmployee;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateHrisEmployeeRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\HrisEmployee $hrisEmployee
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\HrisEmployee $hrisEmployee = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateHrisEmployeeRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\HrisEmployee  $hrisEmployee
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\HrisEmployee  $hrisEmployee
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\HrisEmployee $hrisEmployee = null, ?array $fields = null)
+    public function __construct(Shared\HrisEmployee $hrisEmployee, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->hrisEmployee = $hrisEmployee;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->hrisEmployee = $hrisEmployee;
         $this->fields = $fields;
     }
 }

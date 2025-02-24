@@ -20,6 +20,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -28,6 +29,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateGenaiPromptRequest(
+    genaiPrompt: new Shared\GenaiPrompt(),
     connectionId: '<id>',
 );
 

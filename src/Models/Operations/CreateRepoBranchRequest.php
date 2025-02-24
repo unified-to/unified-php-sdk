@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateRepoBranchRequest
 {
     /**
+     *
+     * @var Shared\RepoBranch $repoBranch
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoBranch $repoBranch;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\RepoBranch $repoBranch
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoBranch $repoBranch = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateRepoBranchRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoBranch  $repoBranch
      * @param  string  $connectionId
-     * @param  ?Shared\RepoBranch  $repoBranch
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\RepoBranch $repoBranch = null, ?array $fields = null)
+    public function __construct(Shared\RepoBranch $repoBranch, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->repoBranch = $repoBranch;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchCommerceLocationRequest
 {
     /**
+     *
+     * @var Shared\CommerceLocation $commerceLocation
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CommerceLocation $commerceLocation;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchCommerceLocationRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\CommerceLocation $commerceLocation
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceLocation $commerceLocation = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchCommerceLocationRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CommerceLocation  $commerceLocation
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\CommerceLocation  $commerceLocation
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\CommerceLocation $commerceLocation = null, ?array $fields = null)
+    public function __construct(Shared\CommerceLocation $commerceLocation, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->commerceLocation = $commerceLocation;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->commerceLocation = $commerceLocation;
         $this->fields = $fields;
     }
 }

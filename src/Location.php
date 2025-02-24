@@ -58,9 +58,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -124,9 +125,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\CreateHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -438,9 +440,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -504,9 +507,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\PatchHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -682,9 +686,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -748,9 +753,10 @@ class Location
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';

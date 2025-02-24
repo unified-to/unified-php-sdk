@@ -58,9 +58,10 @@ class Activity
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\CreateAtsActivityRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -248,9 +249,10 @@ class Activity
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\PatchAtsActivityRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
@@ -370,9 +372,10 @@ class Activity
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsActivity', 'json');
-        if ($body !== null) {
-            $httpOptions = array_merge_recursive($httpOptions, $body);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
         }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
 
         $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsActivityRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';

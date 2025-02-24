@@ -37,6 +37,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -45,6 +46,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -86,6 +91,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,6 +100,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskProjectRequest(
+    taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
 );
 
@@ -135,6 +142,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -143,6 +151,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskTaskRequest(
+    taskTask: new Shared\TaskTask(),
     connectionId: '<id>',
 );
 
@@ -481,6 +490,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -489,6 +499,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -531,6 +545,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -539,6 +554,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskProjectRequest(
+    taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -581,6 +597,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -589,6 +606,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskTaskRequest(
+    taskTask: new Shared\TaskTask(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -781,6 +799,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -789,6 +808,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -831,6 +854,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -839,6 +863,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskProjectRequest(
+    taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -881,6 +906,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -889,6 +915,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskTaskRequest(
+    taskTask: new Shared\TaskTask(),
     connectionId: '<id>',
     id: '<id>',
 );

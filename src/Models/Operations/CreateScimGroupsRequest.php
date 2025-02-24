@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateScimGroupsRequest
 {
     /**
+     *
+     * @var Shared\ScimGroup $scimGroup
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\ScimGroup $scimGroup;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -21,20 +28,13 @@ class CreateScimGroupsRequest
     public string $connectionId;
 
     /**
-     *
-     * @var ?Shared\ScimGroup $scimGroup
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\ScimGroup $scimGroup = null;
-
-    /**
+     * @param  Shared\ScimGroup  $scimGroup
      * @param  string  $connectionId
-     * @param  ?Shared\ScimGroup  $scimGroup
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\ScimGroup $scimGroup = null)
+    public function __construct(Shared\ScimGroup $scimGroup, string $connectionId)
     {
-        $this->connectionId = $connectionId;
         $this->scimGroup = $scimGroup;
+        $this->connectionId = $connectionId;
     }
 }

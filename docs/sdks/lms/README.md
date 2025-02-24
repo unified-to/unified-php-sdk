@@ -43,6 +43,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -51,6 +52,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsClassRequest(
+    lmsClass: new Shared\LmsClass(
+        courseId: '<id>',
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -92,6 +97,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -100,6 +106,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsCourseRequest(
+    lmsCourse: new Shared\LmsCourse(
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -141,6 +150,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -149,6 +159,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsInstructorRequest(
+    lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
 );
 
@@ -190,6 +201,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -198,6 +210,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsStudentRequest(
+    lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
 );
 
@@ -635,6 +648,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -643,6 +657,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsClassRequest(
+    lmsClass: new Shared\LmsClass(
+        courseId: '<id>',
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -685,6 +703,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -693,6 +712,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsCourseRequest(
+    lmsCourse: new Shared\LmsCourse(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -735,6 +757,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -743,6 +766,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsInstructorRequest(
+    lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -785,6 +809,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -793,6 +818,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsStudentRequest(
+    lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1035,6 +1061,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1043,6 +1070,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsClassRequest(
+    lmsClass: new Shared\LmsClass(
+        courseId: '<id>',
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1085,6 +1116,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1093,6 +1125,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsCourseRequest(
+    lmsCourse: new Shared\LmsCourse(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1135,6 +1170,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1143,6 +1179,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsInstructorRequest(
+    lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1185,6 +1222,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1193,6 +1231,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsStudentRequest(
+    lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
     id: '<id>',
 );

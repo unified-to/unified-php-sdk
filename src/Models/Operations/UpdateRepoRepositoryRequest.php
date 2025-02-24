@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateRepoRepositoryRequest
 {
     /**
+     *
+     * @var Shared\RepoRepository $repoRepository
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoRepository $repoRepository;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateRepoRepositoryRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\RepoRepository $repoRepository
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoRepository $repoRepository = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateRepoRepositoryRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoRepository  $repoRepository
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\RepoRepository  $repoRepository
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\RepoRepository $repoRepository = null, ?array $fields = null)
+    public function __construct(Shared\RepoRepository $repoRepository, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->repoRepository = $repoRepository;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->repoRepository = $repoRepository;
         $this->fields = $fields;
     }
 }

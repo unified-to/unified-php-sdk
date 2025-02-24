@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateHrisEmployeeRequest
 {
     /**
+     *
+     * @var Shared\HrisEmployee $hrisEmployee
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\HrisEmployee $hrisEmployee;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\HrisEmployee $hrisEmployee
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\HrisEmployee $hrisEmployee = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateHrisEmployeeRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\HrisEmployee  $hrisEmployee
      * @param  string  $connectionId
-     * @param  ?Shared\HrisEmployee  $hrisEmployee
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\HrisEmployee $hrisEmployee = null, ?array $fields = null)
+    public function __construct(Shared\HrisEmployee $hrisEmployee, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->hrisEmployee = $hrisEmployee;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

@@ -13,6 +13,14 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateUnifiedConnectionRequest
 {
     /**
+     * A connection represents a specific authentication of an integration.
+     *
+     * @var Shared\Connection $connection
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\Connection $connection;
+
+    /**
      * ID of the Connection
      *
      * @var string $id
@@ -21,21 +29,13 @@ class UpdateUnifiedConnectionRequest
     public string $id;
 
     /**
-     * A connection represents a specific authentication of an integration.
-     *
-     * @var ?Shared\Connection $connection
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\Connection $connection = null;
-
-    /**
+     * @param  Shared\Connection  $connection
      * @param  string  $id
-     * @param  ?Shared\Connection  $connection
      * @phpstan-pure
      */
-    public function __construct(string $id, ?Shared\Connection $connection = null)
+    public function __construct(Shared\Connection $connection, string $id)
     {
-        $this->id = $id;
         $this->connection = $connection;
+        $this->id = $id;
     }
 }

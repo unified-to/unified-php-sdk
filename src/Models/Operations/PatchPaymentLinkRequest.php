@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchPaymentLinkRequest
 {
     /**
+     *
+     * @var Shared\PaymentLink $paymentLink
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\PaymentLink $paymentLink;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchPaymentLinkRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\PaymentLink $paymentLink
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\PaymentLink $paymentLink = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchPaymentLinkRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\PaymentLink  $paymentLink
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\PaymentLink  $paymentLink
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\PaymentLink $paymentLink = null, ?array $fields = null)
+    public function __construct(Shared\PaymentLink $paymentLink, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->paymentLink = $paymentLink;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->paymentLink = $paymentLink;
         $this->fields = $fields;
     }
 }

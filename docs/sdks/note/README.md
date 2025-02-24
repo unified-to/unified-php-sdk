@@ -25,6 +25,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -33,6 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTicketingNoteRequest(
+    ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
 );
 
@@ -173,6 +175,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -181,6 +184,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTicketingNoteRequest(
+    ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -273,6 +277,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -281,6 +286,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTicketingNoteRequest(
+    ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
     id: '<id>',
 );

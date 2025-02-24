@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingInvoiceRequest
 {
     /**
+     *
+     * @var Shared\AccountingInvoice $accountingInvoice
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingInvoice $accountingInvoice;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateAccountingInvoiceRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AccountingInvoice $accountingInvoice
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingInvoice $accountingInvoice = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateAccountingInvoiceRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingInvoice  $accountingInvoice
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AccountingInvoice  $accountingInvoice
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AccountingInvoice $accountingInvoice = null, ?array $fields = null)
+    public function __construct(Shared\AccountingInvoice $accountingInvoice, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->accountingInvoice = $accountingInvoice;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->accountingInvoice = $accountingInvoice;
         $this->fields = $fields;
     }
 }

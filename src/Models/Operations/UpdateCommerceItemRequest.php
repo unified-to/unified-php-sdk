@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateCommerceItemRequest
 {
     /**
+     *
+     * @var Shared\CommerceItem $commerceItem
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CommerceItem $commerceItem;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateCommerceItemRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\CommerceItem $commerceItem
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceItem $commerceItem = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateCommerceItemRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CommerceItem  $commerceItem
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\CommerceItem  $commerceItem
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\CommerceItem $commerceItem = null, ?array $fields = null)
+    public function __construct(Shared\CommerceItem $commerceItem, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->commerceItem = $commerceItem;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->commerceItem = $commerceItem;
         $this->fields = $fields;
     }
 }

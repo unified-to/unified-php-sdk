@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchRepoPullrequestRequest
 {
     /**
+     *
+     * @var Shared\RepoPullrequest $repoPullrequest
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoPullrequest $repoPullrequest;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchRepoPullrequestRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoPullrequest $repoPullrequest = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchRepoPullrequestRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoPullrequest  $repoPullrequest
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\RepoPullrequest  $repoPullrequest
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\RepoPullrequest $repoPullrequest = null, ?array $fields = null)
+    public function __construct(Shared\RepoPullrequest $repoPullrequest, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->repoPullrequest = $repoPullrequest;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->repoPullrequest = $repoPullrequest;
         $this->fields = $fields;
     }
 }

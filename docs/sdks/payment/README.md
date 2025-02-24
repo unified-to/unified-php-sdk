@@ -41,6 +41,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -49,6 +50,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentLinkRequest(
+    paymentLink: new Shared\PaymentLink(),
     connectionId: '<id>',
 );
 
@@ -90,6 +92,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -98,6 +101,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentPaymentRequest(
+    paymentPayment: new Shared\PaymentPayment(),
     connectionId: '<id>',
 );
 
@@ -139,6 +143,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -147,6 +152,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentSubscriptionRequest(
+    paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
 );
 
@@ -683,6 +689,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -691,6 +698,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentLinkRequest(
+    paymentLink: new Shared\PaymentLink(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -733,6 +741,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -741,6 +750,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentPaymentRequest(
+    paymentPayment: new Shared\PaymentPayment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -783,6 +793,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -791,6 +802,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentSubscriptionRequest(
+    paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -983,6 +995,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -991,6 +1004,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentLinkRequest(
+    paymentLink: new Shared\PaymentLink(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1033,6 +1047,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1041,6 +1056,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentPaymentRequest(
+    paymentPayment: new Shared\PaymentPayment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1083,6 +1099,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1091,6 +1108,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentSubscriptionRequest(
+    paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTaskProjectRequest
 {
     /**
+     *
+     * @var Shared\TaskProject $taskProject
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\TaskProject $taskProject;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\TaskProject $taskProject
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\TaskProject $taskProject = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateTaskProjectRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\TaskProject  $taskProject
      * @param  string  $connectionId
-     * @param  ?Shared\TaskProject  $taskProject
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\TaskProject $taskProject = null, ?array $fields = null)
+    public function __construct(Shared\TaskProject $taskProject, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->taskProject = $taskProject;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

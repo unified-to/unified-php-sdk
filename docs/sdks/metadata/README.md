@@ -25,6 +25,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -33,6 +34,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMetadataMetadataRequest(
+    metadataMetadata: new Shared\MetadataMetadata(
+        name: '<value>',
+        objectType: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -173,6 +178,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -181,6 +187,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMetadataMetadataRequest(
+    metadataMetadata: new Shared\MetadataMetadata(
+        name: '<value>',
+        objectType: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -273,6 +283,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -281,6 +292,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMetadataMetadataRequest(
+    metadataMetadata: new Shared\MetadataMetadata(
+        name: '<value>',
+        objectType: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

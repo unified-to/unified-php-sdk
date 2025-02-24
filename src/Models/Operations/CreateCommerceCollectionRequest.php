@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCommerceCollectionRequest
 {
     /**
+     * A collection of items/products/services
+     *
+     * @var Shared\CommerceCollection $commerceCollection
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CommerceCollection $commerceCollection;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * A collection of items/products/services
-     *
-     * @var ?Shared\CommerceCollection $commerceCollection
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CommerceCollection $commerceCollection = null;
 
     /**
      * Comma-delimited fields to return
@@ -37,15 +37,15 @@ class CreateCommerceCollectionRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CommerceCollection  $commerceCollection
      * @param  string  $connectionId
-     * @param  ?Shared\CommerceCollection  $commerceCollection
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\CommerceCollection $commerceCollection = null, ?array $fields = null)
+    public function __construct(Shared\CommerceCollection $commerceCollection, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->commerceCollection = $commerceCollection;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

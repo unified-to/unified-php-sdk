@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateScimUsersRequest
 {
     /**
+     *
+     * @var Shared\ScimUser $scimUser
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\ScimUser $scimUser;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\ScimUser $scimUser
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\ScimUser $scimUser = null;
 
     /**
      *
@@ -63,8 +63,8 @@ class CreateScimUsersRequest
     public ?float $startIndex = null;
 
     /**
+     * @param  Shared\ScimUser  $scimUser
      * @param  string  $connectionId
-     * @param  ?Shared\ScimUser  $scimUser
      * @param  ?float  $count
      * @param  ?string  $filter
      * @param  ?string  $sortBy
@@ -72,10 +72,10 @@ class CreateScimUsersRequest
      * @param  ?float  $startIndex
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\ScimUser $scimUser = null, ?float $count = null, ?string $filter = null, ?string $sortBy = null, ?string $sortOrder = null, ?float $startIndex = null)
+    public function __construct(Shared\ScimUser $scimUser, string $connectionId, ?float $count = null, ?string $filter = null, ?string $sortBy = null, ?string $sortOrder = null, ?float $startIndex = null)
     {
-        $this->connectionId = $connectionId;
         $this->scimUser = $scimUser;
+        $this->connectionId = $connectionId;
         $this->count = $count;
         $this->filter = $filter;
         $this->sortBy = $sortBy;

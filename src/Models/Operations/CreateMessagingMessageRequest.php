@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMessagingMessageRequest
 {
     /**
+     *
+     * @var Shared\MessagingMessage $messagingMessage
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\MessagingMessage $messagingMessage;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\MessagingMessage $messagingMessage
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MessagingMessage $messagingMessage = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateMessagingMessageRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
-     * @param  ?Shared\MessagingMessage  $messagingMessage
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\MessagingMessage $messagingMessage = null, ?array $fields = null)
+    public function __construct(Shared\MessagingMessage $messagingMessage, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->messagingMessage = $messagingMessage;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

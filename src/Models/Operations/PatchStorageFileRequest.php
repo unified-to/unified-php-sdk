@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchStorageFileRequest
 {
     /**
+     *
+     * @var Shared\StorageFile $storageFile
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\StorageFile $storageFile;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchStorageFileRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\StorageFile $storageFile
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\StorageFile $storageFile = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchStorageFileRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\StorageFile  $storageFile
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\StorageFile  $storageFile
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\StorageFile $storageFile = null, ?array $fields = null)
+    public function __construct(Shared\StorageFile $storageFile, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->storageFile = $storageFile;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->storageFile = $storageFile;
         $this->fields = $fields;
     }
 }

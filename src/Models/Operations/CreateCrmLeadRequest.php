@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmLeadRequest
 {
     /**
+     *
+     * @var Shared\CrmLead $crmLead
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CrmLead $crmLead;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\CrmLead $crmLead
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmLead $crmLead = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateCrmLeadRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CrmLead  $crmLead
      * @param  string  $connectionId
-     * @param  ?Shared\CrmLead  $crmLead
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\CrmLead $crmLead = null, ?array $fields = null)
+    public function __construct(Shared\CrmLead $crmLead, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->crmLead = $crmLead;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

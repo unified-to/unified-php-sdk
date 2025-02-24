@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateKmsSpaceRequest
 {
     /**
+     *
+     * @var Shared\KmsSpace $kmsSpace
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\KmsSpace $kmsSpace;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\KmsSpace $kmsSpace
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\KmsSpace $kmsSpace = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateKmsSpaceRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\KmsSpace  $kmsSpace
      * @param  string  $connectionId
-     * @param  ?Shared\KmsSpace  $kmsSpace
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\KmsSpace $kmsSpace = null, ?array $fields = null)
+    public function __construct(Shared\KmsSpace $kmsSpace, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->kmsSpace = $kmsSpace;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

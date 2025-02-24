@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAccountingTransactionRequest
 {
     /**
+     *
+     * @var Shared\AccountingTransaction $accountingTransaction
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingTransaction $accountingTransaction;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchAccountingTransactionRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AccountingTransaction $accountingTransaction
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingTransaction $accountingTransaction = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchAccountingTransactionRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingTransaction  $accountingTransaction
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AccountingTransaction  $accountingTransaction
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AccountingTransaction $accountingTransaction = null, ?array $fields = null)
+    public function __construct(Shared\AccountingTransaction $accountingTransaction, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->accountingTransaction = $accountingTransaction;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->accountingTransaction = $accountingTransaction;
         $this->fields = $fields;
     }
 }

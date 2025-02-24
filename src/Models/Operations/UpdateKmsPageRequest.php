@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateKmsPageRequest
 {
     /**
+     *
+     * @var Shared\KmsPage $kmsPage
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\KmsPage $kmsPage;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateKmsPageRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\KmsPage $kmsPage
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\KmsPage $kmsPage = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateKmsPageRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\KmsPage  $kmsPage
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\KmsPage  $kmsPage
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\KmsPage $kmsPage = null, ?array $fields = null)
+    public function __construct(Shared\KmsPage $kmsPage, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->kmsPage = $kmsPage;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->kmsPage = $kmsPage;
         $this->fields = $fields;
     }
 }

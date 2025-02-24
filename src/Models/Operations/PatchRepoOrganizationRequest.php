@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchRepoOrganizationRequest
 {
     /**
+     *
+     * @var Shared\RepoOrganization $repoOrganization
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoOrganization $repoOrganization;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchRepoOrganizationRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\RepoOrganization $repoOrganization
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoOrganization $repoOrganization = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchRepoOrganizationRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoOrganization  $repoOrganization
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\RepoOrganization  $repoOrganization
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\RepoOrganization $repoOrganization = null, ?array $fields = null)
+    public function __construct(Shared\RepoOrganization $repoOrganization, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->repoOrganization = $repoOrganization;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->repoOrganization = $repoOrganization;
         $this->fields = $fields;
     }
 }

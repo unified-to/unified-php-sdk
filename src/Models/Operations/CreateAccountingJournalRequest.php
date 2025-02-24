@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingJournalRequest
 {
     /**
+     *
+     * @var Shared\AccountingJournal $accountingJournal
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingJournal $accountingJournal;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\AccountingJournal $accountingJournal
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingJournal $accountingJournal = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateAccountingJournalRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingJournal  $accountingJournal
      * @param  string  $connectionId
-     * @param  ?Shared\AccountingJournal  $accountingJournal
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\AccountingJournal $accountingJournal = null, ?array $fields = null)
+    public function __construct(Shared\AccountingJournal $accountingJournal, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->accountingJournal = $accountingJournal;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

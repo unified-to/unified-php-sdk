@@ -13,6 +13,14 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateCrmCompanyRequest
 {
     /**
+     * A company represents an organization that optionally is associated with a deal and/or contacts
+     *
+     * @var Shared\CrmCompany $crmCompany
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CrmCompany $crmCompany;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,14 +37,6 @@ class UpdateCrmCompanyRequest
     public string $id;
 
     /**
-     * A company represents an organization that optionally is associated with a deal and/or contacts
-     *
-     * @var ?Shared\CrmCompany $crmCompany
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmCompany $crmCompany = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -45,17 +45,17 @@ class UpdateCrmCompanyRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CrmCompany  $crmCompany
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\CrmCompany  $crmCompany
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\CrmCompany $crmCompany = null, ?array $fields = null)
+    public function __construct(Shared\CrmCompany $crmCompany, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->crmCompany = $crmCompany;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->crmCompany = $crmCompany;
         $this->fields = $fields;
     }
 }

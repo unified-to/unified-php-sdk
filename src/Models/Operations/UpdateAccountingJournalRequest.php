@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingJournalRequest
 {
     /**
+     *
+     * @var Shared\AccountingJournal $accountingJournal
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingJournal $accountingJournal;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateAccountingJournalRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AccountingJournal $accountingJournal
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingJournal $accountingJournal = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateAccountingJournalRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingJournal  $accountingJournal
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AccountingJournal  $accountingJournal
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AccountingJournal $accountingJournal = null, ?array $fields = null)
+    public function __construct(Shared\AccountingJournal $accountingJournal, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->accountingJournal = $accountingJournal;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->accountingJournal = $accountingJournal;
         $this->fields = $fields;
     }
 }

@@ -31,6 +31,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -39,6 +40,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -80,6 +84,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -88,6 +93,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisLocationRequest(
+    hrisLocation: new Shared\HrisLocation(),
     connectionId: '<id>',
 );
 
@@ -327,6 +333,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -335,6 +342,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,6 +387,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -385,6 +396,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisLocationRequest(
+    hrisLocation: new Shared\HrisLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -527,6 +539,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -535,6 +548,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -577,6 +593,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -585,6 +602,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisLocationRequest(
+    hrisLocation: new Shared\HrisLocation(),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| `connectionId`                                                | *string*                                                      | :heavy_check_mark:                                            | ID of the connection                                          |
-| `id`                                                          | *string*                                                      | :heavy_check_mark:                                            | ID of the Note                                                |
-| `ticketingNote`                                               | [?Shared\TicketingNote](../../Models/Shared/TicketingNote.md) | :heavy_minus_sign:                                            | N/A                                                           |
-| `fields`                                                      | array<*string*>                                               | :heavy_minus_sign:                                            | Comma-delimited fields to return                              |
+| Field                                                        | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `ticketingNote`                                              | [Shared\TicketingNote](../../Models/Shared/TicketingNote.md) | :heavy_check_mark:                                           | N/A                                                          |
+| `connectionId`                                               | *string*                                                     | :heavy_check_mark:                                           | ID of the connection                                         |
+| `id`                                                         | *string*                                                     | :heavy_check_mark:                                           | ID of the Note                                               |
+| `fields`                                                     | array<*string*>                                              | :heavy_minus_sign:                                           | Comma-delimited fields to return                             |

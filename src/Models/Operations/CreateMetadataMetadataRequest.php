@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMetadataMetadataRequest
 {
     /**
+     *
+     * @var Shared\MetadataMetadata $metadataMetadata
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\MetadataMetadata $metadataMetadata;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\MetadataMetadata $metadataMetadata
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MetadataMetadata $metadataMetadata = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateMetadataMetadataRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\MetadataMetadata  $metadataMetadata
      * @param  string  $connectionId
-     * @param  ?Shared\MetadataMetadata  $metadataMetadata
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\MetadataMetadata $metadataMetadata = null, ?array $fields = null)
+    public function __construct(Shared\MetadataMetadata $metadataMetadata, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->metadataMetadata = $metadataMetadata;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

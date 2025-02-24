@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateTicketingNoteRequest
 {
     /**
+     *
+     * @var Shared\TicketingNote $ticketingNote
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\TicketingNote $ticketingNote;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\TicketingNote $ticketingNote
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\TicketingNote $ticketingNote = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateTicketingNoteRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\TicketingNote  $ticketingNote
      * @param  string  $connectionId
-     * @param  ?Shared\TicketingNote  $ticketingNote
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\TicketingNote $ticketingNote = null, ?array $fields = null)
+    public function __construct(Shared\TicketingNote $ticketingNote, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->ticketingNote = $ticketingNote;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

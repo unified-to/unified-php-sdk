@@ -37,6 +37,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -45,6 +46,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -86,6 +90,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,6 +99,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsPageRequest(
+    kmsPage: new Shared\KmsPage(
+        title: '<value>',
+        type: Shared\KmsPageType::Html,
+    ),
     connectionId: '<id>',
 );
 
@@ -135,6 +144,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -143,6 +153,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsSpaceRequest(
+    kmsSpace: new Shared\KmsSpace(
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -481,6 +494,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -489,6 +503,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -531,6 +548,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -539,6 +557,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsPageRequest(
+    kmsPage: new Shared\KmsPage(
+        title: '<value>',
+        type: Shared\KmsPageType::Text,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -581,6 +603,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -589,6 +612,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsSpaceRequest(
+    kmsSpace: new Shared\KmsSpace(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -781,6 +807,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -789,6 +816,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -831,6 +861,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -839,6 +870,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsPageRequest(
+    kmsPage: new Shared\KmsPage(
+        title: '<value>',
+        type: Shared\KmsPageType::Other,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -881,6 +916,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -889,6 +925,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsSpaceRequest(
+    kmsSpace: new Shared\KmsSpace(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAtsCandidateRequest
 {
     /**
+     *
+     * @var Shared\AtsCandidate $atsCandidate
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AtsCandidate $atsCandidate;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateAtsCandidateRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AtsCandidate $atsCandidate
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsCandidate $atsCandidate = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateAtsCandidateRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AtsCandidate  $atsCandidate
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AtsCandidate  $atsCandidate
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AtsCandidate $atsCandidate = null, ?array $fields = null)
+    public function __construct(Shared\AtsCandidate $atsCandidate, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->atsCandidate = $atsCandidate;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->atsCandidate = $atsCandidate;
         $this->fields = $fields;
     }
 }

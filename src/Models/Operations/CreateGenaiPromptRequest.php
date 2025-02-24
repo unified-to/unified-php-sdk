@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateGenaiPromptRequest
 {
     /**
+     *
+     * @var Shared\GenaiPrompt $genaiPrompt
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\GenaiPrompt $genaiPrompt;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\GenaiPrompt $genaiPrompt
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\GenaiPrompt $genaiPrompt = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateGenaiPromptRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\GenaiPrompt  $genaiPrompt
      * @param  string  $connectionId
-     * @param  ?Shared\GenaiPrompt  $genaiPrompt
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\GenaiPrompt $genaiPrompt = null, ?array $fields = null)
+    public function __construct(Shared\GenaiPrompt $genaiPrompt, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->genaiPrompt = $genaiPrompt;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAtsDocumentRequest
 {
     /**
+     *
+     * @var Shared\AtsDocument $atsDocument
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AtsDocument $atsDocument;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchAtsDocumentRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AtsDocument $atsDocument
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsDocument $atsDocument = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchAtsDocumentRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AtsDocument  $atsDocument
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AtsDocument  $atsDocument
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AtsDocument $atsDocument = null, ?array $fields = null)
+    public function __construct(Shared\AtsDocument $atsDocument, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->atsDocument = $atsDocument;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->atsDocument = $atsDocument;
         $this->fields = $fields;
     }
 }

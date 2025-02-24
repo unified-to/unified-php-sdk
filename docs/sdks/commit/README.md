@@ -25,6 +25,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -33,6 +34,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateRepoCommitRequest(
+    repoCommit: new Shared\RepoCommit(
+        repoId: '<id>',
+        userId: '<id>',
+    ),
     connectionId: '<id>',
 );
 
@@ -173,6 +178,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -181,6 +187,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchRepoCommitRequest(
+    repoCommit: new Shared\RepoCommit(
+        repoId: '<id>',
+        userId: '<id>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -273,6 +283,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -281,6 +292,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateRepoCommitRequest(
+    repoCommit: new Shared\RepoCommit(
+        repoId: '<id>',
+        userId: '<id>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

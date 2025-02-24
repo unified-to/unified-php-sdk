@@ -31,6 +31,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -39,6 +40,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisGroupRequest(
+    hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
 );
 
@@ -80,6 +82,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -88,6 +91,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateScimGroupsRequest(
+    scimGroup: new Shared\ScimGroup(
+        displayName: 'Bert89',
+    ),
     connectionId: '<id>',
 );
 
@@ -327,6 +333,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -335,6 +342,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisGroupRequest(
+    hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,6 +385,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -385,6 +394,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchScimGroupsRequest(
+    scimGroup: new Shared\ScimGroup(
+        displayName: 'Damon_Rutherford93',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -527,6 +539,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -535,6 +548,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisGroupRequest(
+    hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -577,6 +591,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -585,6 +600,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateScimGroupsRequest(
+    scimGroup: new Shared\ScimGroup(
+        displayName: 'Frederic.Reichel',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

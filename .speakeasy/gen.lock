@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c0d6af0ca0a33fa3f44a1fca666d6fae
+  docChecksum: 3c83ac41ca19a0aa4a6ad1896f8a1398
   docVersion: "1.0"
   speakeasyVersion: 1.501.0
   generationVersion: 2.522.1
-  releaseVersion: 1.1.37
-  configChecksum: b872c5854ad31223edd5b1efe91cdbf9
+  releaseVersion: 1.1.38
+  configChecksum: f42c15db458f7137c39b9bc5de3c72eb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -2593,6 +2593,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2602,6 +2604,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -2611,6 +2615,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2620,6 +2626,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2629,6 +2637,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2638,6 +2648,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2647,6 +2659,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2809,6 +2823,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2819,6 +2835,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -2829,6 +2847,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2839,6 +2859,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2849,6 +2871,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2859,6 +2883,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2869,6 +2895,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2921,6 +2949,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2931,6 +2961,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -2941,6 +2973,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2951,6 +2985,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2961,6 +2997,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2971,6 +3009,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2981,6 +3021,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2990,6 +3032,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -2999,6 +3043,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3047,6 +3093,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3057,6 +3105,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3079,6 +3129,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3089,6 +3141,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3098,6 +3152,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3127,6 +3183,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3143,6 +3201,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3152,6 +3212,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3161,6 +3223,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3170,6 +3234,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3179,6 +3245,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3188,6 +3256,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3197,6 +3267,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3206,6 +3278,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3377,6 +3451,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3387,6 +3463,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3397,6 +3475,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3407,6 +3487,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3417,6 +3499,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3427,6 +3511,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3437,6 +3523,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3489,6 +3577,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3499,6 +3589,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3509,6 +3601,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3519,6 +3613,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3529,6 +3625,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3539,6 +3637,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3549,6 +3649,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3558,6 +3660,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3567,6 +3671,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3624,6 +3730,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3634,6 +3742,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3656,6 +3766,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3666,6 +3778,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3675,6 +3789,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3684,6 +3800,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"available": 5165.08}
       responses:
         "200":
           application/json: {"available": 5165.08}
@@ -3693,6 +3811,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3702,6 +3822,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3788,6 +3910,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3798,6 +3922,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"available": 615.23}
       responses:
         "200":
           application/json: {"available": 615.23}
@@ -3808,6 +3934,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3818,6 +3946,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3852,6 +3982,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3862,6 +3994,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"available": 9360.02}
       responses:
         "200":
           application/json: {"available": 9360.02}
@@ -3872,6 +4006,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3882,6 +4018,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -3891,6 +4029,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3920,6 +4060,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3936,6 +4078,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3945,6 +4089,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3954,6 +4100,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3963,6 +4111,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -3972,6 +4122,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4058,6 +4210,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4068,6 +4222,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4078,6 +4234,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4088,6 +4246,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4122,6 +4282,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4132,6 +4294,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4142,6 +4306,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4152,6 +4318,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4170,6 +4338,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4188,6 +4358,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4197,6 +4369,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4283,6 +4457,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4293,6 +4469,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4315,6 +4493,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4325,6 +4505,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4333,6 +4515,8 @@ examples:
       parameters:
         path:
           connection_id: "<id>"
+      requestBody:
+        application/json: {"displayName": "Bert89"}
       responses:
         "200":
           application/json: {"displayName": "Bert89"}
@@ -4360,6 +4544,8 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      requestBody:
+        application/json: {"displayName": "Damon_Rutherford93"}
       responses:
         "200":
           application/json: {"displayName": "Damon_Rutherford93"}
@@ -4375,6 +4561,8 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      requestBody:
+        application/json: {"displayName": "Frederic.Reichel"}
       responses:
         "200":
           application/json: {"displayName": "Frederic.Reichel"}
@@ -4384,6 +4572,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
       responses:
         "200":
           application/json: {"content": "<value>"}
@@ -4393,6 +4583,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"title": "<value>", "type": "HTML"}
       responses:
         "200":
           application/json: {"download_url": "https://bitter-adult.biz/", "title": "<value>", "type": "HTML"}
@@ -4402,6 +4594,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "parent_space_id": "sp"}
       responses:
         "200":
           application/json: {"name": "<value>", "parent_space_id": "sp"}
@@ -4469,6 +4663,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
       responses:
         "200":
           application/json: {"content": "<value>"}
@@ -4479,6 +4675,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"title": "<value>", "type": "TEXT"}
       responses:
         "200":
           application/json: {"download_url": "https://evil-tackle.info", "title": "<value>", "type": "MARKDOWN"}
@@ -4489,6 +4687,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "parent_space_id": "sp"}
       responses:
         "200":
           application/json: {"name": "<value>", "parent_space_id": "sp"}
@@ -4517,6 +4717,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
       responses:
         "200":
           application/json: {"content": "<value>"}
@@ -4527,6 +4729,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"title": "<value>", "type": "OTHER"}
       responses:
         "200":
           application/json: {"download_url": "https://salty-devil.com", "title": "<value>", "type": "TEXT"}
@@ -4537,6 +4741,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "parent_space_id": "sp"}
       responses:
         "200":
           application/json: {"name": "<value>", "parent_space_id": "sp"}
@@ -4546,6 +4752,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"task_id": "<id>", "text": "<value>"}
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
@@ -4575,6 +4783,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"task_id": "<id>", "text": "<value>"}
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
@@ -4591,6 +4801,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"task_id": "<id>", "text": "<value>"}
       responses:
         "200":
           application/json: {"task_id": "<id>", "text": "<value>"}
@@ -4600,6 +4812,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"course_id": "<id>", "name": "<value>"}
       responses:
         "200":
           application/json: {"course_id": "<id>", "name": "<value>"}
@@ -4609,6 +4823,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -4618,6 +4834,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4627,6 +4845,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4713,6 +4933,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"course_id": "<id>", "name": "<value>"}
       responses:
         "200":
           application/json: {"course_id": "<id>", "name": "<value>"}
@@ -4723,6 +4945,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -4733,6 +4957,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4743,6 +4969,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4777,6 +5005,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"course_id": "<id>", "name": "<value>"}
       responses:
         "200":
           application/json: {"course_id": "<id>", "name": "<value>"}
@@ -4787,6 +5017,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -4797,6 +5029,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4807,6 +5041,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4816,6 +5052,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4825,6 +5063,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4873,6 +5113,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4883,6 +5125,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4905,6 +5149,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4915,6 +5161,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4924,6 +5172,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4972,6 +5222,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4988,6 +5240,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -4997,6 +5251,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "object_type": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
@@ -5026,6 +5282,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "object_type": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
@@ -5042,6 +5300,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "object_type": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
@@ -5152,6 +5412,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5161,6 +5423,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -5170,6 +5434,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5275,6 +5541,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5285,6 +5553,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -5295,6 +5565,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5323,6 +5595,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5333,6 +5607,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"currency": "USD"}
       responses:
         "200":
           application/json: {"currency": "USD"}
@@ -5343,6 +5619,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5352,6 +5630,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "repo_id": "<id>"}
       responses:
         "200":
           application/json: {"name": "<value>", "repo_id": "<id>"}
@@ -5361,6 +5641,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"repo_id": "<id>", "user_id": "<id>"}
       responses:
         "200":
           application/json: {"repo_id": "<id>", "user_id": "<id>"}
@@ -5370,6 +5652,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5379,6 +5663,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -5465,6 +5751,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "repo_id": "<id>"}
       responses:
         "200":
           application/json: {"name": "<value>", "repo_id": "<id>"}
@@ -5475,6 +5763,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"repo_id": "<id>", "user_id": "<id>"}
       responses:
         "200":
           application/json: {"repo_id": "<id>", "user_id": "<id>"}
@@ -5485,6 +5775,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5495,6 +5787,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -5529,6 +5823,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>", "repo_id": "<id>"}
       responses:
         "200":
           application/json: {"name": "<value>", "repo_id": "<id>"}
@@ -5539,6 +5835,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"repo_id": "<id>", "user_id": "<id>"}
       responses:
         "200":
           application/json: {"repo_id": "<id>", "user_id": "<id>"}
@@ -5549,6 +5847,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5559,6 +5859,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
       responses:
         "200":
           application/json: {"name": "<value>"}
@@ -5568,6 +5870,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5595,6 +5899,8 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5610,6 +5916,8 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5619,6 +5927,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5648,6 +5958,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5664,6 +5976,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5673,6 +5987,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5682,6 +5998,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5730,6 +6048,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5740,6 +6060,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5762,6 +6084,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5772,6 +6096,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5781,6 +6107,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5790,6 +6118,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5799,6 +6129,8 @@ examples:
         path:
           connection_id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5866,6 +6198,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5876,6 +6210,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5886,6 +6222,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5914,6 +6252,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5924,6 +6264,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5934,6 +6276,8 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+      requestBody:
+        application/json: {}
       responses:
         "200":
           application/json: {}
@@ -5948,11 +6292,15 @@ examples:
           application/json: [{}]
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
+      requestBody:
+        application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
       responses:
         "200":
           application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
+      requestBody:
+        application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "object_type": "hris_employee"}
       responses:
         "200":
           application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "hook_url": "https://blind-platypus.org/", "object_type": "crm_deal"}
@@ -6029,6 +6377,8 @@ examples:
       parameters:
         path:
           id: "<id>"
+      requestBody:
+        application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_type": "<value>", "permissions": []}
       responses:
         "200":
           application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
@@ -6037,6 +6387,8 @@ examples:
       parameters:
         path:
           id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "object_type": "crm_deal"}
       responses:
         "200":
           application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "hook_url": "https://calculating-habit.name/", "object_type": "commerce_collection"}
@@ -6060,6 +6412,8 @@ examples:
       parameters:
         path:
           id: "<id>"
+      requestBody:
+        application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_type": "<value>", "permissions": []}
       responses:
         "200":
           application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
@@ -6068,6 +6422,8 @@ examples:
       parameters:
         path:
           id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "object_type": "payment_link"}
       responses:
         "200":
           application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "hook_url": "https://glaring-postbox.info/", "object_type": "lms_course"}

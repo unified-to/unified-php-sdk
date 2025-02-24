@@ -31,6 +31,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -39,6 +40,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -80,6 +84,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -88,6 +93,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -327,6 +336,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -335,6 +345,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,6 +390,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -385,6 +399,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -527,6 +545,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -535,6 +554,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(
+        content: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -577,6 +599,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -585,6 +608,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskCommentRequest(
+    taskComment: new Shared\TaskComment(
+        taskId: '<id>',
+        text: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

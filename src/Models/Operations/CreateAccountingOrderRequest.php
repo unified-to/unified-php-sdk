@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingOrderRequest
 {
     /**
+     *
+     * @var Shared\AccountingOrder $accountingOrder
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingOrder $accountingOrder;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\AccountingOrder $accountingOrder
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingOrder $accountingOrder = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateAccountingOrderRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingOrder  $accountingOrder
      * @param  string  $connectionId
-     * @param  ?Shared\AccountingOrder  $accountingOrder
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\AccountingOrder $accountingOrder = null, ?array $fields = null)
+    public function __construct(Shared\AccountingOrder $accountingOrder, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->accountingOrder = $accountingOrder;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

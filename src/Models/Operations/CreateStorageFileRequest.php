@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateStorageFileRequest
 {
     /**
+     *
+     * @var Shared\StorageFile $storageFile
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\StorageFile $storageFile;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\StorageFile $storageFile
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\StorageFile $storageFile = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateStorageFileRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\StorageFile  $storageFile
      * @param  string  $connectionId
-     * @param  ?Shared\StorageFile  $storageFile
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\StorageFile $storageFile = null, ?array $fields = null)
+    public function __construct(Shared\StorageFile $storageFile, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->storageFile = $storageFile;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

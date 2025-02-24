@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateRepoPullrequestRequest
 {
     /**
+     *
+     * @var Shared\RepoPullrequest $repoPullrequest
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoPullrequest $repoPullrequest;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoPullrequest $repoPullrequest = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateRepoPullrequestRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoPullrequest  $repoPullrequest
      * @param  string  $connectionId
-     * @param  ?Shared\RepoPullrequest  $repoPullrequest
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\RepoPullrequest $repoPullrequest = null, ?array $fields = null)
+    public function __construct(Shared\RepoPullrequest $repoPullrequest, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->repoPullrequest = $repoPullrequest;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

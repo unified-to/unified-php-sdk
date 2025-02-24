@@ -63,6 +63,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -71,6 +72,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingAccountRequest(
+    accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
 );
 
@@ -112,6 +114,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -120,6 +123,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingContactRequest(
+    accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
 );
 
@@ -161,6 +165,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -169,6 +174,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingInvoiceRequest(
+    accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
 );
 
@@ -210,6 +216,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -218,6 +225,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingJournalRequest(
+    accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
 );
 
@@ -259,6 +267,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -267,6 +276,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingOrderRequest(
+    accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
 );
 
@@ -308,6 +318,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -316,6 +327,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTaxrateRequest(
+    accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
 );
 
@@ -357,6 +369,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -365,6 +378,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTransactionRequest(
+    accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
 );
 
@@ -1198,6 +1212,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1206,6 +1221,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingAccountRequest(
+    accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1248,6 +1264,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1256,6 +1273,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingContactRequest(
+    accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1298,6 +1316,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1306,6 +1325,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingInvoiceRequest(
+    accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1348,6 +1368,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1356,6 +1377,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingJournalRequest(
+    accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1398,6 +1420,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1406,6 +1429,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingOrderRequest(
+    accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1448,6 +1472,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1456,6 +1481,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTaxrateRequest(
+    accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1498,6 +1524,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1506,6 +1533,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTransactionRequest(
+    accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1898,6 +1926,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1906,6 +1935,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingAccountRequest(
+    accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1948,6 +1978,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1956,6 +1987,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingContactRequest(
+    accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1998,6 +2030,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2006,6 +2039,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingInvoiceRequest(
+    accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2048,6 +2082,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2056,6 +2091,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingJournalRequest(
+    accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2098,6 +2134,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2106,6 +2143,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingOrderRequest(
+    accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2148,6 +2186,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2156,6 +2195,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTaxrateRequest(
+    accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2198,6 +2238,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2206,6 +2247,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTransactionRequest(
+    accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
     id: '<id>',
 );

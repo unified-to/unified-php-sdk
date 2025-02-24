@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchMetadataMetadataRequest
 {
     /**
+     *
+     * @var Shared\MetadataMetadata $metadataMetadata
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\MetadataMetadata $metadataMetadata;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchMetadataMetadataRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\MetadataMetadata $metadataMetadata
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MetadataMetadata $metadataMetadata = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchMetadataMetadataRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\MetadataMetadata  $metadataMetadata
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\MetadataMetadata  $metadataMetadata
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\MetadataMetadata $metadataMetadata = null, ?array $fields = null)
+    public function __construct(Shared\MetadataMetadata $metadataMetadata, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->metadataMetadata = $metadataMetadata;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->metadataMetadata = $metadataMetadata;
         $this->fields = $fields;
     }
 }

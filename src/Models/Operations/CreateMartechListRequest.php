@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateMartechListRequest
 {
     /**
+     * Mailing List
+     *
+     * @var Shared\MarketingList $marketingList
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\MarketingList $marketingList;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * Mailing List
-     *
-     * @var ?Shared\MarketingList $marketingList
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MarketingList $marketingList = null;
 
     /**
      * Comma-delimited fields to return
@@ -37,15 +37,15 @@ class CreateMartechListRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\MarketingList  $marketingList
      * @param  string  $connectionId
-     * @param  ?Shared\MarketingList  $marketingList
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\MarketingList $marketingList = null, ?array $fields = null)
+    public function __construct(Shared\MarketingList $marketingList, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->marketingList = $marketingList;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

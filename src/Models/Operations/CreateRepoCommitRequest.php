@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateRepoCommitRequest
 {
     /**
+     *
+     * @var Shared\RepoCommit $repoCommit
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\RepoCommit $repoCommit;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\RepoCommit $repoCommit
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\RepoCommit $repoCommit = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateRepoCommitRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\RepoCommit  $repoCommit
      * @param  string  $connectionId
-     * @param  ?Shared\RepoCommit  $repoCommit
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\RepoCommit $repoCommit = null, ?array $fields = null)
+    public function __construct(Shared\RepoCommit $repoCommit, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->repoCommit = $repoCommit;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

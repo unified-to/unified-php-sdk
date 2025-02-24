@@ -176,6 +176,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -184,6 +185,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUnifiedConnectionRequest(
+    connection: new Shared\Connection(
+        categories: [
+            Shared\PropertyConnectionCategories::Genai,
+        ],
+        integrationType: '<value>',
+        permissions: [
+            Shared\PropertyConnectionPermissions::MetadataMetadataWrite,
+        ],
+    ),
     id: '<id>',
 );
 
@@ -274,6 +284,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -282,6 +293,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUnifiedConnectionRequest(
+    connection: new Shared\Connection(
+        categories: [
+            Shared\PropertyConnectionCategories::Task,
+        ],
+        integrationType: '<value>',
+        permissions: [
+            Shared\PropertyConnectionPermissions::RepoPullrequestWrite,
+        ],
+    ),
     id: '<id>',
 );
 

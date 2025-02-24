@@ -27,6 +27,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateUnifiedWebhookRequest();
+$request = new Operations\CreateUnifiedWebhookRequest(
+    webhook: new Shared\Webhook(
+        connectionId: '<id>',
+        event: Shared\Event::Created,
+        objectType: Shared\ObjectType::HrisEmployee,
+    ),
+);
 
 $response = $sdk->webhook->createUnifiedWebhook(
     request: $request
@@ -170,6 +177,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -178,6 +186,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUnifiedWebhookRequest(
+    webhook: new Shared\Webhook(
+        connectionId: '<id>',
+        event: Shared\Event::Deleted,
+        objectType: Shared\ObjectType::CrmDeal,
+    ),
     id: '<id>',
 );
 
@@ -317,6 +330,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -325,6 +339,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUnifiedWebhookRequest(
+    webhook: new Shared\Webhook(
+        connectionId: '<id>',
+        event: Shared\Event::Created,
+        objectType: Shared\ObjectType::PaymentLink,
+    ),
     id: '<id>',
 );
 

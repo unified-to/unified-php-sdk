@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateScimUsersRequest
 {
     /**
+     *
+     * @var Shared\ScimUser $scimUser
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\ScimUser $scimUser;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,22 +36,15 @@ class UpdateScimUsersRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\ScimUser $scimUser
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\ScimUser $scimUser = null;
-
-    /**
+     * @param  Shared\ScimUser  $scimUser
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\ScimUser  $scimUser
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\ScimUser $scimUser = null)
+    public function __construct(Shared\ScimUser $scimUser, string $connectionId, string $id)
     {
+        $this->scimUser = $scimUser;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->scimUser = $scimUser;
     }
 }

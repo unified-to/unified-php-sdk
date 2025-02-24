@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmEventRequest
 {
     /**
+     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
+     *
+     * @var Shared\CrmEvent $crmEvent
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CrmEvent $crmEvent;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-     *
-     * @var ?Shared\CrmEvent $crmEvent
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmEvent $crmEvent = null;
 
     /**
      * Comma-delimited fields to return
@@ -37,15 +37,15 @@ class CreateCrmEventRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CrmEvent  $crmEvent
      * @param  string  $connectionId
-     * @param  ?Shared\CrmEvent  $crmEvent
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\CrmEvent $crmEvent = null, ?array $fields = null)
+    public function __construct(Shared\CrmEvent $crmEvent, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->crmEvent = $crmEvent;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

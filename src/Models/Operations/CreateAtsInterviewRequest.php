@@ -13,19 +13,19 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAtsInterviewRequest
 {
     /**
+     *
+     * @var Shared\AtsInterview $atsInterview
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AtsInterview $atsInterview;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     *
-     * @var ?Shared\AtsInterview $atsInterview
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsInterview $atsInterview = null;
 
     /**
      * Comma-delimited fields to return
@@ -36,15 +36,15 @@ class CreateAtsInterviewRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AtsInterview  $atsInterview
      * @param  string  $connectionId
-     * @param  ?Shared\AtsInterview  $atsInterview
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\AtsInterview $atsInterview = null, ?array $fields = null)
+    public function __construct(Shared\AtsInterview $atsInterview, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->atsInterview = $atsInterview;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

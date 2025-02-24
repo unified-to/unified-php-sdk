@@ -13,20 +13,20 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateCrmDealRequest
 {
     /**
+     * A deal represents an opportunity with companies and/or contacts
+     *
+     * @var Shared\CrmDeal $crmDeal
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\CrmDeal $crmDeal;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * A deal represents an opportunity with companies and/or contacts
-     *
-     * @var ?Shared\CrmDeal $crmDeal
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\CrmDeal $crmDeal = null;
 
     /**
      * Comma-delimited fields to return
@@ -37,15 +37,15 @@ class CreateCrmDealRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\CrmDeal  $crmDeal
      * @param  string  $connectionId
-     * @param  ?Shared\CrmDeal  $crmDeal
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?Shared\CrmDeal $crmDeal = null, ?array $fields = null)
+    public function __construct(Shared\CrmDeal $crmDeal, string $connectionId, ?array $fields = null)
     {
-        $this->connectionId = $connectionId;
         $this->crmDeal = $crmDeal;
+        $this->connectionId = $connectionId;
         $this->fields = $fields;
     }
 }

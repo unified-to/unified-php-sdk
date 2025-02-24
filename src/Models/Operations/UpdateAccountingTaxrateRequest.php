@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateAccountingTaxrateRequest
 {
     /**
+     *
+     * @var Shared\AccountingTaxrate $accountingTaxrate
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AccountingTaxrate $accountingTaxrate;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class UpdateAccountingTaxrateRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AccountingTaxrate $accountingTaxrate
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AccountingTaxrate $accountingTaxrate = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class UpdateAccountingTaxrateRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AccountingTaxrate  $accountingTaxrate
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AccountingTaxrate $accountingTaxrate = null, ?array $fields = null)
+    public function __construct(Shared\AccountingTaxrate $accountingTaxrate, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->accountingTaxrate = $accountingTaxrate;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->accountingTaxrate = $accountingTaxrate;
         $this->fields = $fields;
     }
 }

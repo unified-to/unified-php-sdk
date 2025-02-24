@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchAtsApplicationRequest
 {
     /**
+     *
+     * @var Shared\AtsApplication $atsApplication
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\AtsApplication $atsApplication;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchAtsApplicationRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\AtsApplication $atsApplication
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\AtsApplication $atsApplication = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchAtsApplicationRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\AtsApplication  $atsApplication
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\AtsApplication  $atsApplication
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\AtsApplication $atsApplication = null, ?array $fields = null)
+    public function __construct(Shared\AtsApplication $atsApplication, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->atsApplication = $atsApplication;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->atsApplication = $atsApplication;
         $this->fields = $fields;
     }
 }

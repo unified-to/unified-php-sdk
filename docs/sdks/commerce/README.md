@@ -43,6 +43,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -51,6 +52,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceCollectionRequest(
+    commerceCollection: new Shared\CommerceCollection(
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -92,6 +96,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -100,6 +105,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceInventoryRequest(
+    commerceInventory: new Shared\CommerceInventory(
+        available: 5165.08,
+    ),
     connectionId: '<id>',
 );
 
@@ -141,6 +149,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -149,6 +158,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceItemRequest(
+    commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
 );
 
@@ -190,6 +200,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -198,6 +209,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
 );
 
@@ -635,6 +649,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -643,6 +658,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceCollectionRequest(
+    commerceCollection: new Shared\CommerceCollection(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -685,6 +703,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -693,6 +712,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceInventoryRequest(
+    commerceInventory: new Shared\CommerceInventory(
+        available: 615.23,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -735,6 +757,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -743,6 +766,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceItemRequest(
+    commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -785,6 +809,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -793,6 +818,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1035,6 +1063,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1043,6 +1072,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceCollectionRequest(
+    commerceCollection: new Shared\CommerceCollection(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1085,6 +1117,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1093,6 +1126,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceInventoryRequest(
+    commerceInventory: new Shared\CommerceInventory(
+        available: 9360.02,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1135,6 +1171,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1143,6 +1180,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceItemRequest(
+    commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1185,6 +1223,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1193,6 +1232,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(
+        name: '<value>',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

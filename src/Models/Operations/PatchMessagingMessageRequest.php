@@ -13,6 +13,13 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchMessagingMessageRequest
 {
     /**
+     *
+     * @var Shared\MessagingMessage $messagingMessage
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\MessagingMessage $messagingMessage;
+
+    /**
      * ID of the connection
      *
      * @var string $connectionId
@@ -29,13 +36,6 @@ class PatchMessagingMessageRequest
     public string $id;
 
     /**
-     *
-     * @var ?Shared\MessagingMessage $messagingMessage
-     */
-    #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?Shared\MessagingMessage $messagingMessage = null;
-
-    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -44,17 +44,17 @@ class PatchMessagingMessageRequest
     public ?array $fields = null;
 
     /**
+     * @param  Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?Shared\MessagingMessage  $messagingMessage
      * @param  ?array<string>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?Shared\MessagingMessage $messagingMessage = null, ?array $fields = null)
+    public function __construct(Shared\MessagingMessage $messagingMessage, string $connectionId, string $id, ?array $fields = null)
     {
+        $this->messagingMessage = $messagingMessage;
         $this->connectionId = $connectionId;
         $this->id = $id;
-        $this->messagingMessage = $messagingMessage;
         $this->fields = $fields;
     }
 }
