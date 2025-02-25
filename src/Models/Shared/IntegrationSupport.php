@@ -131,6 +131,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?ListEndLe $listEndLe
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_end_le')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListEndLe|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListEndLe $listEndLe = null;
+
+    /**
+     *
      * @var ?ListInstructorId $listInstructorId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_instructor_id')]
@@ -344,6 +353,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListSpaceId $listSpaceId = null;
+
+    /**
+     *
+     * @var ?ListStartGte $listStartGte
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_start_gte')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListStartGte|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListStartGte $listStartGte = null;
 
     /**
      *
@@ -624,6 +642,7 @@ class IntegrationSupport
      * @param  ?ListCourseId  $listCourseId
      * @param  ?ListCustomerId  $listCustomerId
      * @param  ?ListDealId  $listDealId
+     * @param  ?ListEndLe  $listEndLe
      * @param  ?ListInstructorId  $listInstructorId
      * @param  ?ListInterviewId  $listInterviewId
      * @param  ?ListInvoiceId  $listInvoiceId
@@ -648,6 +667,7 @@ class IntegrationSupport
      * @param  ?ListSortByName  $listSortByName
      * @param  ?ListSortByUpdatedAt  $listSortByUpdatedAt
      * @param  ?ListSpaceId  $listSpaceId
+     * @param  ?ListStartGte  $listStartGte
      * @param  ?ListStudentId  $listStudentId
      * @param  ?ListTaskId  $listTaskId
      * @param  ?ListTicketId  $listTicketId
@@ -679,7 +699,7 @@ class IntegrationSupport
      * @param  ?PropertyIntegrationSupportWebhookEvents  $webhookEvents
      * @phpstan-pure
      */
-    public function __construct(?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListApplicationId $listApplicationId = null, ?ListCandidateId $listCandidateId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListDealId $listDealId = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrgId $listOrgId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListProjectId $listProjectId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListRepoId $listRepoId = null, ?ListRootId $listRootId = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSpaceId $listSpaceId = null, ?ListStudentId $listStudentId = null, ?ListTaskId $listTaskId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?array $methods = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?array $outboundFields = null, ?array $rawObjects = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
+    public function __construct(?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListApplicationId $listApplicationId = null, ?ListCandidateId $listCandidateId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListDealId $listDealId = null, ?ListEndLe $listEndLe = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrgId $listOrgId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListProjectId $listProjectId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListRepoId $listRepoId = null, ?ListRootId $listRootId = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStudentId $listStudentId = null, ?ListTaskId $listTaskId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?array $methods = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?array $outboundFields = null, ?array $rawObjects = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
     {
         $this->fromWebhook = $fromWebhook;
         $this->inboundFields = $inboundFields;
@@ -694,6 +714,7 @@ class IntegrationSupport
         $this->listCourseId = $listCourseId;
         $this->listCustomerId = $listCustomerId;
         $this->listDealId = $listDealId;
+        $this->listEndLe = $listEndLe;
         $this->listInstructorId = $listInstructorId;
         $this->listInterviewId = $listInterviewId;
         $this->listInvoiceId = $listInvoiceId;
@@ -718,6 +739,7 @@ class IntegrationSupport
         $this->listSortByName = $listSortByName;
         $this->listSortByUpdatedAt = $listSortByUpdatedAt;
         $this->listSpaceId = $listSpaceId;
+        $this->listStartGte = $listStartGte;
         $this->listStudentId = $listStudentId;
         $this->listTaskId = $listTaskId;
         $this->listTicketId = $listTicketId;

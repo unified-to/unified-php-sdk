@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3c83ac41ca19a0aa4a6ad1896f8a1398
+  docChecksum: 9075a5eee0d5e437f7630ea01fb59832
   docVersion: "1.0"
-  speakeasyVersion: 1.501.0
-  generationVersion: 2.522.1
-  releaseVersion: 1.1.38
-  configChecksum: f42c15db458f7137c39b9bc5de3c72eb
+  speakeasyVersion: 1.502.0
+  generationVersion: 2.524.1
+  releaseVersion: 1.1.39
+  configChecksum: 51ae47ff6efdb115f6b1b825e7029c9e
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.14
+    core: 3.7.15
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.1
@@ -987,6 +987,7 @@ generatedFiles:
   - docs/Models/Shared/ListCourseId.md
   - docs/Models/Shared/ListCustomerId.md
   - docs/Models/Shared/ListDealId.md
+  - docs/Models/Shared/ListEndLe.md
   - docs/Models/Shared/ListInstructorId.md
   - docs/Models/Shared/ListInterviewId.md
   - docs/Models/Shared/ListInvoiceId.md
@@ -1011,6 +1012,7 @@ generatedFiles:
   - docs/Models/Shared/ListSortByName.md
   - docs/Models/Shared/ListSortByUpdatedAt.md
   - docs/Models/Shared/ListSpaceId.md
+  - docs/Models/Shared/ListStartGte.md
   - docs/Models/Shared/ListStudentId.md
   - docs/Models/Shared/ListTaskId.md
   - docs/Models/Shared/ListTicketId.md
@@ -2314,6 +2316,7 @@ generatedFiles:
   - src/Models/Shared/ListCourseId.php
   - src/Models/Shared/ListCustomerId.php
   - src/Models/Shared/ListDealId.php
+  - src/Models/Shared/ListEndLe.php
   - src/Models/Shared/ListInstructorId.php
   - src/Models/Shared/ListInterviewId.php
   - src/Models/Shared/ListInvoiceId.php
@@ -2338,6 +2341,7 @@ generatedFiles:
   - src/Models/Shared/ListSortByName.php
   - src/Models/Shared/ListSortByUpdatedAt.php
   - src/Models/Shared/ListSpaceId.php
+  - src/Models/Shared/ListStartGte.php
   - src/Models/Shared/ListStudentId.php
   - src/Models/Shared/ListTaskId.php
   - src/Models/Shared/ListTicketId.php
