@@ -27,6 +27,13 @@ class ListMessagingMessagesRequest
     public ?string $channelId = null;
 
     /**
+     *
+     * @var ?string $endLe
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
+    public ?string $endLe = null;
+
+    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -78,6 +85,13 @@ class ListMessagingMessagesRequest
     public ?string $sort = null;
 
     /**
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -88,6 +102,7 @@ class ListMessagingMessagesRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $channelId
+     * @param  ?string  $endLe
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -95,13 +110,15 @@ class ListMessagingMessagesRequest
      * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?string $startGte = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
+        $this->endLe = $endLe;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
@@ -109,6 +126,7 @@ class ListMessagingMessagesRequest
         $this->parentId = $parentId;
         $this->query = $query;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
     }
 }
