@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: eed3e21cce15d18d6d589ec03e5be2ce
+  docChecksum: a642c7bece4e0a94752d9efa149625ea
   docVersion: "1.0"
-  speakeasyVersion: 1.504.1
-  generationVersion: 2.529.2
-  releaseVersion: 1.1.40
-  configChecksum: 1fbbf3e1bd55317f415d5a110a49654c
+  speakeasyVersion: 1.505.1
+  generationVersion: 2.531.0
+  releaseVersion: 1.1.41
+  configChecksum: 2d9511870182104583dbac390ba4f851
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -849,6 +849,8 @@ generatedFiles:
   - docs/Models/Shared/AtsApplicationRaw.md
   - docs/Models/Shared/AtsApplicationStatus.md
   - docs/Models/Shared/AtsCandidate.md
+  - docs/Models/Shared/AtsCandidateEducation.md
+  - docs/Models/Shared/AtsCandidateExperience.md
   - docs/Models/Shared/AtsCandidateRaw.md
   - docs/Models/Shared/AtsCompany.md
   - docs/Models/Shared/AtsCompanyRaw.md
@@ -2178,6 +2180,8 @@ generatedFiles:
   - src/Models/Shared/AtsApplicationRaw.php
   - src/Models/Shared/AtsApplicationStatus.php
   - src/Models/Shared/AtsCandidate.php
+  - src/Models/Shared/AtsCandidateEducation.php
+  - src/Models/Shared/AtsCandidateExperience.php
   - src/Models/Shared/AtsCandidateRaw.php
   - src/Models/Shared/AtsCompany.php
   - src/Models/Shared/AtsCompanyRaw.php

@@ -53,6 +53,16 @@ class AtsCandidate
     public ?\DateTime $dateOfBirth = null;
 
     /**
+     * $education
+     *
+     * @var ?array<AtsCandidateEducation> $education
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('education')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCandidateEducation>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $education = null;
+
+    /**
      * $emails
      *
      * @var ?array<AtsEmail> $emails
@@ -61,6 +71,16 @@ class AtsCandidate
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
+
+    /**
+     * $experiences
+     *
+     * @var ?array<AtsCandidateExperience> $experiences
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('experiences')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCandidateExperience>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $experiences = null;
 
     /**
      *
@@ -121,6 +141,16 @@ class AtsCandidate
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCandidateRaw|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AtsCandidateRaw $raw = null;
+
+    /**
+     * $skills
+     *
+     * @var ?array<string> $skills
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('skills')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $skills = null;
 
     /**
      * $sources
@@ -190,7 +220,9 @@ class AtsCandidate
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $dateOfBirth
+     * @param  ?array<AtsCandidateEducation>  $education
      * @param  ?array<AtsEmail>  $emails
+     * @param  ?array<AtsCandidateExperience>  $experiences
      * @param  ?string  $externalIdentifier
      * @param  ?string  $id
      * @param  ?string  $imageUrl
@@ -198,6 +230,7 @@ class AtsCandidate
      * @param  ?string  $name
      * @param  ?Origin  $origin
      * @param  ?AtsCandidateRaw  $raw
+     * @param  ?array<string>  $skills
      * @param  ?array<string>  $sources
      * @param  ?array<string>  $tags
      * @param  ?array<AtsTelephone>  $telephones
@@ -207,14 +240,16 @@ class AtsCandidate
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?AtsCandidateRaw $raw = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?string $name = null, ?Origin $origin = null, ?AtsCandidateRaw $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
         $this->companyName = $companyName;
         $this->createdAt = $createdAt;
         $this->dateOfBirth = $dateOfBirth;
+        $this->education = $education;
         $this->emails = $emails;
+        $this->experiences = $experiences;
         $this->externalIdentifier = $externalIdentifier;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
@@ -222,6 +257,7 @@ class AtsCandidate
         $this->name = $name;
         $this->origin = $origin;
         $this->raw = $raw;
+        $this->skills = $skills;
         $this->sources = $sources;
         $this->tags = $tags;
         $this->telephones = $telephones;
