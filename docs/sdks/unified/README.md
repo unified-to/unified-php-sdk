@@ -48,11 +48,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Repo,
+        Shared\PropertyConnectionCategories::Metadata,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmLeadRead,
+        Shared\PropertyConnectionPermissions::MartechListRead,
     ],
 );
 
@@ -106,7 +106,7 @@ $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::HrisEmployee,
+        objectType: Shared\ObjectType::HrisPayslip,
     ),
 );
 
@@ -640,11 +640,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Genai,
+            Shared\PropertyConnectionCategories::Messaging,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::MetadataMetadataWrite,
+            Shared\PropertyConnectionPermissions::CalendarRecordingWrite,
         ],
     ),
     id: '<id>',
@@ -700,7 +700,7 @@ $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::CrmDeal,
+        objectType: Shared\ObjectType::CrmLead,
     ),
     id: '<id>',
 );
@@ -901,11 +901,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Task,
+            Shared\PropertyConnectionCategories::Scim,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::RepoPullrequestWrite,
+            Shared\PropertyConnectionPermissions::CalendarLinkWrite,
         ],
     ),
     id: '<id>',
@@ -961,7 +961,7 @@ $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentLink,
+        objectType: Shared\ObjectType::PaymentPayout,
     ),
     id: '<id>',
 );

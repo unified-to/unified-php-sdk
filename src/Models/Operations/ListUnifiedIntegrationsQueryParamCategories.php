@@ -32,4 +32,5 @@ enum ListUnifiedIntegrationsQueryParamCategories: string
     case Lms = 'lms';
     case Repo = 'repo';
     case Metadata = 'metadata';
+    case Calendar = 'calendar';
 }

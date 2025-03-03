@@ -141,4 +141,14 @@ enum Scopes: string
     case RepoPullrequestWrite = 'repo_pullrequest_write';
     case MetadataMetadataRead = 'metadata_metadata_read';
     case MetadataMetadataWrite = 'metadata_metadata_write';
+    case CalendarCalendarRead = 'calendar_calendar_read';
+    case CalendarCalendarWrite = 'calendar_calendar_write';
+    case CalendarEventRead = 'calendar_event_read';
+    case CalendarEventWrite = 'calendar_event_write';
+    case CalendarBusyRead = 'calendar_busy_read';
+    case CalendarBusyWrite = 'calendar_busy_write';
+    case CalendarLinkRead = 'calendar_link_read';
+    case CalendarLinkWrite = 'calendar_link_write';
+    case CalendarRecordingRead = 'calendar_recording_read';
+    case CalendarRecordingWrite = 'calendar_recording_write';
 }

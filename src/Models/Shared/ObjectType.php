@@ -82,4 +82,9 @@ enum ObjectType: string
     case RepoCommit = 'repo_commit';
     case RepoPullrequest = 'repo_pullrequest';
     case MetadataMetadata = 'metadata_metadata';
+    case CalendarCalendar = 'calendar_calendar';
+    case CalendarEvent = 'calendar_event';
+    case CalendarBusy = 'calendar_busy';
+    case CalendarLink = 'calendar_link';
+    case CalendarRecording = 'calendar_recording';
 }

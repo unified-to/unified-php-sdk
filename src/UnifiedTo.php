@@ -58,6 +58,16 @@ class UnifiedTo
 
     public Scorecard $scorecard;
 
+    public Calendar $calendar;
+
+    public Busy $busy;
+
+    public Event $event;
+
+    public Link $link;
+
+    public Recording $recording;
+
     public Commerce $commerce;
 
     public Collection $collection;
@@ -71,8 +81,6 @@ class UnifiedTo
     public Crm $crm;
 
     public Deal $deal;
-
-    public Event $event;
 
     public Lead $lead;
 
@@ -133,8 +141,6 @@ class UnifiedTo
     public Passthrough $passthrough;
 
     public Payment $payment;
-
-    public Link $link;
 
     public Payout $payout;
 
@@ -227,6 +233,11 @@ class UnifiedTo
         $this->interview = new Interview($this->sdkConfiguration);
         $this->job = new Job($this->sdkConfiguration);
         $this->scorecard = new Scorecard($this->sdkConfiguration);
+        $this->calendar = new Calendar($this->sdkConfiguration);
+        $this->busy = new Busy($this->sdkConfiguration);
+        $this->event = new Event($this->sdkConfiguration);
+        $this->link = new Link($this->sdkConfiguration);
+        $this->recording = new Recording($this->sdkConfiguration);
         $this->commerce = new Commerce($this->sdkConfiguration);
         $this->collection = new Collection($this->sdkConfiguration);
         $this->inventory = new Inventory($this->sdkConfiguration);
@@ -234,7 +245,6 @@ class UnifiedTo
         $this->location = new Location($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
-        $this->event = new Event($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);
         $this->pipeline = new Pipeline($this->sdkConfiguration);
         $this->enrich = new Enrich($this->sdkConfiguration);
@@ -265,7 +275,6 @@ class UnifiedTo
         $this->metadata = new Metadata($this->sdkConfiguration);
         $this->passthrough = new Passthrough($this->sdkConfiguration);
         $this->payment = new Payment($this->sdkConfiguration);
-        $this->link = new Link($this->sdkConfiguration);
         $this->payout = new Payout($this->sdkConfiguration);
         $this->refund = new Refund($this->sdkConfiguration);
         $this->subscription = new Subscription($this->sdkConfiguration);

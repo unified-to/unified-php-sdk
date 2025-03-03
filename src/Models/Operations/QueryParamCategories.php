@@ -32,4 +32,5 @@ enum QueryParamCategories: string
     case Lms = 'lms';
     case Repo = 'repo';
     case Metadata = 'metadata';
+    case Calendar = 'calendar';
 }

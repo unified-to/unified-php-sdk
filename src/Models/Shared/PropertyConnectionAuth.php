@@ -202,6 +202,14 @@ class PropertyConnectionAuth
     public ?string $tokenUrl = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userId = null;
+
+    /**
      * @param  ?string  $accessToken
      * @param  ?string  $apiUrl
      * @param  ?string  $appId
@@ -225,9 +233,10 @@ class PropertyConnectionAuth
      * @param  ?string  $state
      * @param  ?string  $token
      * @param  ?string  $tokenUrl
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?PropertyConnectionAuthMeta $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null)
+    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?PropertyConnectionAuthMeta $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null, ?string $userId = null)
     {
         $this->accessToken = $accessToken;
         $this->apiUrl = $apiUrl;
@@ -252,5 +261,6 @@ class PropertyConnectionAuth
         $this->state = $state;
         $this->token = $token;
         $this->tokenUrl = $tokenUrl;
+        $this->userId = $userId;
     }
 }
