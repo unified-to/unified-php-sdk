@@ -44,6 +44,14 @@ class CalendarCalendar
 
     /**
      *
+     * @var ?bool $primary
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('primary')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $primary = null;
+
+    /**
+     *
      * @var ?CalendarCalendarRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
@@ -72,17 +80,19 @@ class CalendarCalendar
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?bool  $primary
      * @param  ?CalendarCalendarRaw  $raw
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?CalendarCalendarRaw $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $primary = null, ?CalendarCalendarRaw $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
+        $this->primary = $primary;
         $this->raw = $raw;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;
