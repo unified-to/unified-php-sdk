@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 03fb3687a9211f1c85a85fd634fa1c98
+  docChecksum: 469567133059289c1dda4dbb71768014
   docVersion: "1.0"
-  speakeasyVersion: 1.509.1
-  generationVersion: 2.539.1
-  releaseVersion: 1.1.43
-  configChecksum: 477cc8a503c6ed7c6ae914619a50f1dd
+  speakeasyVersion: 1.510.0
+  generationVersion: 2.541.0
+  releaseVersion: 1.2.0
+  configChecksum: bd54c8cf044e74658c21d2bad8596be2
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.7.9
+    core: 3.8.0
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.1
@@ -720,7 +720,6 @@ generatedFiles:
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
-  - docs/Models/Operations/Scopes.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
@@ -2119,7 +2118,6 @@ generatedFiles:
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
-  - src/Models/Operations/Scopes.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
   - src/Models/Operations/UpdateAccountingContactRequest.php

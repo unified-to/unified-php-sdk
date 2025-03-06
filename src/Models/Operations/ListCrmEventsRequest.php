@@ -50,6 +50,13 @@ class ListCrmEventsRequest
 
     /**
      *
+     * @var ?string $leadId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=lead_id')]
+    public ?string $leadId = null;
+
+    /**
+     *
      * @var ?float $limit
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
@@ -112,6 +119,7 @@ class ListCrmEventsRequest
      * @param  ?string  $contactId
      * @param  ?string  $dealId
      * @param  ?array<string>  $fields
+     * @param  ?string  $leadId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -122,13 +130,14 @@ class ListCrmEventsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?string $leadId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
         $this->contactId = $contactId;
         $this->dealId = $dealId;
         $this->fields = $fields;
+        $this->leadId = $leadId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

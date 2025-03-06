@@ -68,7 +68,7 @@ class GetUnifiedIntegrationAuthRequest
     /**
      * $scopes
      *
-     * @var ?array<Scopes> $scopes
+     * @var ?array<string> $scopes
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=scopes')]
     public ?array $scopes = null;
@@ -104,7 +104,7 @@ class GetUnifiedIntegrationAuthRequest
      * @param  ?string  $failureRedirect
      * @param  ?string  $lang
      * @param  ?bool  $redirect
-     * @param  ?array<Scopes>  $scopes
+     * @param  ?array<string>  $scopes
      * @param  ?string  $state
      * @param  ?string  $subdomain
      * @param  ?string  $successRedirect
