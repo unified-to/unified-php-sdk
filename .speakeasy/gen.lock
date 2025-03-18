@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 469567133059289c1dda4dbb71768014
+  docChecksum: fa3dba9630fbcda044134e4fb89d5cd7
   docVersion: "1.0"
-  speakeasyVersion: 1.510.0
-  generationVersion: 2.541.0
-  releaseVersion: 1.2.0
-  configChecksum: bd54c8cf044e74658c21d2bad8596be2
+  speakeasyVersion: 1.519.0
+  generationVersion: 2.552.1
+  releaseVersion: 1.2.1
+  configChecksum: 5f79abce24021f06b37315c4ec59a872
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1054,6 +1054,7 @@ generatedFiles:
   - docs/Models/Shared/ListItemId.md
   - docs/Models/Shared/ListItemVariantId.md
   - docs/Models/Shared/ListJobId.md
+  - docs/Models/Shared/ListLeadId.md
   - docs/Models/Shared/ListLimit.md
   - docs/Models/Shared/ListLinkId.md
   - docs/Models/Shared/ListListId.md
@@ -2452,6 +2453,7 @@ generatedFiles:
   - src/Models/Shared/ListItemId.php
   - src/Models/Shared/ListItemVariantId.php
   - src/Models/Shared/ListJobId.php
+  - src/Models/Shared/ListLeadId.php
   - src/Models/Shared/ListLimit.php
   - src/Models/Shared/ListLinkId.php
   - src/Models/Shared/ListListId.php
