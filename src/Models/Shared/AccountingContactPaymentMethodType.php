@@ -18,4 +18,6 @@ enum AccountingContactPaymentMethodType: string
     case Ideal = 'IDEAL';
     case Other = 'OTHER';
     case Paypal = 'PAYPAL';
+    case Wire = 'WIRE';
+    case Check = 'CHECK';
 }
