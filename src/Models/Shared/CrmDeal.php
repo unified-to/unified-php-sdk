@@ -81,6 +81,16 @@ class CrmDeal
     public ?string $lostReason = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -188,6 +198,7 @@ class CrmDeal
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $lostReason
+     * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $pipeline
      * @param  ?string  $pipelineId
@@ -202,7 +213,7 @@ class CrmDeal
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?CrmDealRaw $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?CrmDealRaw $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
@@ -212,6 +223,7 @@ class CrmDeal
         $this->currency = $currency;
         $this->id = $id;
         $this->lostReason = $lostReason;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->pipeline = $pipeline;
         $this->pipelineId = $pipelineId;

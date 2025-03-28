@@ -20,12 +20,12 @@ class CommerceItemMetadata
 
     /**
      *
-     * @var ?ExtraData $extraData
+     * @var ?CommerceItemMetadataExtraData $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ExtraData|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMetadataExtraData|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?ExtraData $extraData = null;
+    public ?CommerceItemMetadataExtraData $extraData = null;
 
     /**
      *
@@ -53,23 +53,23 @@ class CommerceItemMetadata
 
     /**
      *
-     * @var ?Value $value
+     * @var ?CommerceItemMetadataValue $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Value|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMetadataValue|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Value $value = null;
+    public ?CommerceItemMetadataValue $value = null;
 
     /**
      * @param  string  $key
-     * @param  ?ExtraData  $extraData
+     * @param  ?CommerceItemMetadataExtraData  $extraData
      * @param  ?string  $id
      * @param  ?string  $namespace
      * @param  ?string  $type
-     * @param  ?Value  $value
+     * @param  ?CommerceItemMetadataValue  $value
      * @phpstan-pure
      */
-    public function __construct(string $key, ?ExtraData $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?Value $value = null)
+    public function __construct(string $key, ?CommerceItemMetadataExtraData $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?CommerceItemMetadataValue $value = null)
     {
         $this->key = $key;
         $this->extraData = $extraData;

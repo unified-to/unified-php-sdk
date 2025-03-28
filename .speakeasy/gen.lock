@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 34e2f659b85467cb5f9d62c4f5261dd8
+  docChecksum: d7c4d10aa3021eb73869b5af504ea3df
   docVersion: "1.0"
-  speakeasyVersion: 1.523.0
-  generationVersion: 2.559.0
-  releaseVersion: 1.2.2
-  configChecksum: 03f48106d7aa4a317faa0673b2578ced
+  speakeasyVersion: 1.525.2
+  generationVersion: 2.562.3
+  releaseVersion: 1.2.3
+  configChecksum: 05ebcb6bb327757841ddb7a803a071df
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -913,6 +913,7 @@ generatedFiles:
   - docs/Models/Shared/AtsJobQuestionType.md
   - docs/Models/Shared/AtsJobRaw.md
   - docs/Models/Shared/AtsJobStatus.md
+  - docs/Models/Shared/AtsMetadata.md
   - docs/Models/Shared/AtsOffer.md
   - docs/Models/Shared/AtsOfferRaw.md
   - docs/Models/Shared/AtsOfferStatus.md
@@ -948,6 +949,8 @@ generatedFiles:
   - docs/Models/Shared/CommerceItemMedia.md
   - docs/Models/Shared/CommerceItemMediaType.md
   - docs/Models/Shared/CommerceItemMetadata.md
+  - docs/Models/Shared/CommerceItemMetadataExtraData.md
+  - docs/Models/Shared/CommerceItemMetadataValue.md
   - docs/Models/Shared/CommerceItemOption.md
   - docs/Models/Shared/CommerceItemPrice.md
   - docs/Models/Shared/CommerceItemRaw.md
@@ -972,6 +975,9 @@ generatedFiles:
   - docs/Models/Shared/CrmEventType.md
   - docs/Models/Shared/CrmLead.md
   - docs/Models/Shared/CrmLeadRaw.md
+  - docs/Models/Shared/CrmMetadata.md
+  - docs/Models/Shared/CrmMetadataExtraData.md
+  - docs/Models/Shared/CrmMetadataValue.md
   - docs/Models/Shared/CrmPipeline.md
   - docs/Models/Shared/CrmPipelineRaw.md
   - docs/Models/Shared/CrmStage.md
@@ -1013,6 +1019,9 @@ generatedFiles:
   - docs/Models/Shared/HrisGroupType.md
   - docs/Models/Shared/HrisLocation.md
   - docs/Models/Shared/HrisLocationRaw.md
+  - docs/Models/Shared/HrisMetadata.md
+  - docs/Models/Shared/HrisMetadataExtraData.md
+  - docs/Models/Shared/HrisMetadataValue.md
   - docs/Models/Shared/HrisPayslip.md
   - docs/Models/Shared/HrisPayslipDetail.md
   - docs/Models/Shared/HrisPayslipDetailType.md
@@ -2312,6 +2321,7 @@ generatedFiles:
   - src/Models/Shared/AtsJobQuestionType.php
   - src/Models/Shared/AtsJobRaw.php
   - src/Models/Shared/AtsJobStatus.php
+  - src/Models/Shared/AtsMetadata.php
   - src/Models/Shared/AtsOffer.php
   - src/Models/Shared/AtsOfferRaw.php
   - src/Models/Shared/AtsOfferStatus.php
@@ -2347,6 +2357,8 @@ generatedFiles:
   - src/Models/Shared/CommerceItemMedia.php
   - src/Models/Shared/CommerceItemMediaType.php
   - src/Models/Shared/CommerceItemMetadata.php
+  - src/Models/Shared/CommerceItemMetadataExtraData.php
+  - src/Models/Shared/CommerceItemMetadataValue.php
   - src/Models/Shared/CommerceItemOption.php
   - src/Models/Shared/CommerceItemPrice.php
   - src/Models/Shared/CommerceItemRaw.php
@@ -2371,6 +2383,9 @@ generatedFiles:
   - src/Models/Shared/CrmEventType.php
   - src/Models/Shared/CrmLead.php
   - src/Models/Shared/CrmLeadRaw.php
+  - src/Models/Shared/CrmMetadata.php
+  - src/Models/Shared/CrmMetadataExtraData.php
+  - src/Models/Shared/CrmMetadataValue.php
   - src/Models/Shared/CrmPipeline.php
   - src/Models/Shared/CrmPipelineRaw.php
   - src/Models/Shared/CrmStage.php
@@ -2412,6 +2427,9 @@ generatedFiles:
   - src/Models/Shared/HrisGroupType.php
   - src/Models/Shared/HrisLocation.php
   - src/Models/Shared/HrisLocationRaw.php
+  - src/Models/Shared/HrisMetadata.php
+  - src/Models/Shared/HrisMetadataExtraData.php
+  - src/Models/Shared/HrisMetadataValue.php
   - src/Models/Shared/HrisPayslip.php
   - src/Models/Shared/HrisPayslipDetail.php
   - src/Models/Shared/HrisPayslipDetailType.php

@@ -86,6 +86,16 @@ class CrmContact
     public ?array $linkUrls = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -145,6 +155,7 @@ class CrmContact
      * @param  ?array<CrmEmail>  $emails
      * @param  ?string  $id
      * @param  ?array<string>  $linkUrls
+     * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?CrmContactRaw  $raw
      * @param  ?array<CrmTelephone>  $telephones
@@ -153,7 +164,7 @@ class CrmContact
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?string $name = null, ?CrmContactRaw $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?CrmContactRaw $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->company = $company;
@@ -163,6 +174,7 @@ class CrmContact
         $this->emails = $emails;
         $this->id = $id;
         $this->linkUrls = $linkUrls;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;

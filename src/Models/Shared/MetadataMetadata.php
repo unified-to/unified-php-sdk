@@ -53,10 +53,10 @@ class MetadataMetadata
     /**
      * $objects
      *
-     * @var ?array<string, string> $objects
+     * @var ?array<string, mixed> $objects
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('objects')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $objects = null;
 
@@ -101,7 +101,7 @@ class MetadataMetadata
      * @param  ?\DateTime  $createdAt
      * @param  ?Format  $format
      * @param  ?string  $id
-     * @param  ?array<string, string>  $objects
+     * @param  ?array<string, mixed>  $objects
      * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
      * @param  ?MetadataMetadataRaw  $raw

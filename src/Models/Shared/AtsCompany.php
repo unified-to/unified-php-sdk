@@ -44,6 +44,16 @@ class AtsCompany
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $parentId
      */
@@ -99,6 +109,7 @@ class AtsCompany
      * @param  ?PropertyAtsCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<AtsMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?string  $phone
      * @param  ?AtsCompanyRaw  $raw
@@ -107,12 +118,13 @@ class AtsCompany
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $parentId = null, ?string $phone = null, ?AtsCompanyRaw $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $parentId = null, ?string $phone = null, ?AtsCompanyRaw $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
         $this->name = $name;
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->parentId = $parentId;
         $this->phone = $phone;
         $this->raw = $raw;

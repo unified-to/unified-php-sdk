@@ -110,6 +110,16 @@ class CrmCompany
     public ?array $linkUrls = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -192,6 +202,7 @@ class CrmCompany
      * @param  ?string  $industry
      * @param  ?bool  $isActive
      * @param  ?array<string>  $linkUrls
+     * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?CrmCompanyRaw  $raw
      * @param  ?array<string>  $tags
@@ -202,7 +213,7 @@ class CrmCompany
      * @param  ?array<string>  $websites
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?CrmCompanyRaw $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?CrmCompanyRaw $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
         $this->address = $address;
         $this->contactIds = $contactIds;
@@ -215,6 +226,7 @@ class CrmCompany
         $this->industry = $industry;
         $this->isActive = $isActive;
         $this->linkUrls = $linkUrls;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->tags = $tags;

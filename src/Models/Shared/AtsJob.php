@@ -119,6 +119,16 @@ class AtsJob
     public ?string $languageLocale = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -221,6 +231,7 @@ class AtsJob
      * @param  ?array<string>  $hiringManagerIds
      * @param  ?string  $id
      * @param  ?string  $languageLocale
+     * @param  ?array<AtsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $numberOfOpenings
      * @param  ?array<AtsJobPosting>  $postings
@@ -233,7 +244,7 @@ class AtsJob
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?AtsJobRaw $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?AtsJobRaw $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->addresses = $addresses;
         $this->closedAt = $closedAt;
@@ -247,6 +258,7 @@ class AtsJob
         $this->hiringManagerIds = $hiringManagerIds;
         $this->id = $id;
         $this->languageLocale = $languageLocale;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->numberOfOpenings = $numberOfOpenings;
         $this->postings = $postings;

@@ -1,0 +1,13 @@
+# HrisMetadata
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `key`                                                                         | *string*                                                                      | :heavy_check_mark:                                                            | N/A                                                                           |
+| `extraData`                                                                   | [?Shared\HrisMetadataExtraData](../../Models/Shared/HrisMetadataExtraData.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `id`                                                                          | *?string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `namespace`                                                                   | *?string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `type`                                                                        | *?string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `value`                                                                       | [?Shared\HrisMetadataValue](../../Models/Shared/HrisMetadataValue.md)         | :heavy_minus_sign:                                                            | N/A                                                                           |

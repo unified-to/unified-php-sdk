@@ -97,6 +97,16 @@ class CrmLead
     public ?array $linkUrls = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -166,6 +176,7 @@ class CrmLead
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?array<string>  $linkUrls
+     * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?CrmLeadRaw  $raw
      * @param  ?string  $source
@@ -175,7 +186,7 @@ class CrmLead
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?string $name = null, ?CrmLeadRaw $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?CrmLeadRaw $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -187,6 +198,7 @@ class CrmLead
         $this->id = $id;
         $this->isActive = $isActive;
         $this->linkUrls = $linkUrls;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->source = $source;

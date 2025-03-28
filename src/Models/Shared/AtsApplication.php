@@ -70,6 +70,16 @@ class AtsApplication
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $offers
      *
      * @var ?array<AtsOffer> $offers
@@ -145,6 +155,7 @@ class AtsApplication
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $jobId
+     * @param  ?array<AtsMetadata>  $metadata
      * @param  ?array<AtsOffer>  $offers
      * @param  ?string  $originalStatus
      * @param  ?AtsApplicationRaw  $raw
@@ -155,7 +166,7 @@ class AtsApplication
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $offers = null, ?string $originalStatus = null, ?AtsApplicationRaw $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?AtsApplicationRaw $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;
@@ -164,6 +175,7 @@ class AtsApplication
         $this->hiredAt = $hiredAt;
         $this->id = $id;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->offers = $offers;
         $this->originalStatus = $originalStatus;
         $this->raw = $raw;
