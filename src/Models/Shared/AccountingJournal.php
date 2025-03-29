@@ -55,6 +55,14 @@ class AccountingJournal
 
     /**
      *
+     * @var ?\DateTime $postedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('posted_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $postedAt = null;
+
+    /**
+     *
      * @var ?AccountingJournalRaw $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
@@ -100,6 +108,7 @@ class AccountingJournal
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?array<AccountingJournalLineitem>  $lineitems
+     * @param  ?\DateTime  $postedAt
      * @param  ?AccountingJournalRaw  $raw
      * @param  ?string  $reference
      * @param  ?float  $taxAmount
@@ -107,13 +116,14 @@ class AccountingJournal
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?AccountingJournalRaw $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?AccountingJournalRaw $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->reference = $reference;
         $this->taxAmount = $taxAmount;
