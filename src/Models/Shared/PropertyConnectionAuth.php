@@ -119,13 +119,14 @@ class PropertyConnectionAuth
     public ?string $key = null;
 
     /**
+     * $meta
      *
-     * @var ?PropertyConnectionAuthMeta $meta
+     * @var ?array<string, mixed> $meta
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuthMeta|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyConnectionAuthMeta $meta = null;
+    public ?array $meta = null;
 
     /**
      *
@@ -223,7 +224,7 @@ class PropertyConnectionAuth
      * @param  ?float  $expiresIn
      * @param  ?\DateTime  $expiryDate
      * @param  ?string  $key
-     * @param  ?PropertyConnectionAuthMeta  $meta
+     * @param  ?array<string, mixed>  $meta
      * @param  ?string  $name
      * @param  ?array<string>  $otherAuthInfo
      * @param  ?string  $pem
@@ -236,7 +237,7 @@ class PropertyConnectionAuth
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?PropertyConnectionAuthMeta $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null, ?string $userId = null)
+    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?array $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null, ?string $userId = null)
     {
         $this->accessToken = $accessToken;
         $this->apiUrl = $apiUrl;

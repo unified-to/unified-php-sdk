@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 9857048e17c51b706f1f1755ce5dafdc
+  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
   docVersion: "1.0"
-  speakeasyVersion: 1.526.0
-  generationVersion: 2.563.0
-  releaseVersion: 1.2.4
-  configChecksum: 69cac00a8c10aeacc73cd59906d8854b
+  speakeasyVersion: 1.526.6
+  generationVersion: 2.563.1
+  releaseVersion: 1.2.5
+  configChecksum: 22643302c9d94eb16e844c7f39698ae8
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1107,7 +1107,6 @@ generatedFiles:
   - docs/Models/Shared/MessagingChannel.md
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/MessagingMessage.md
-  - docs/Models/Shared/Meta.md
   - docs/Models/Shared/MetadataMetadata.md
   - docs/Models/Shared/MetadataMetadataRaw.md
   - docs/Models/Shared/NativeWebhookParentId.md
@@ -1143,7 +1142,6 @@ generatedFiles:
   - docs/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
   - docs/Models/Shared/PropertyConnectionAuth.md
-  - docs/Models/Shared/PropertyConnectionAuthMeta.md
   - docs/Models/Shared/PropertyConnectionCategories.md
   - docs/Models/Shared/PropertyConnectionPermissions.md
   - docs/Models/Shared/PropertyCrmCompanyAddress.md
@@ -2515,7 +2513,6 @@ generatedFiles:
   - src/Models/Shared/MessagingChannel.php
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/MessagingMessage.php
-  - src/Models/Shared/Meta.php
   - src/Models/Shared/MetadataMetadata.php
   - src/Models/Shared/MetadataMetadataRaw.php
   - src/Models/Shared/NativeWebhookParentId.php
@@ -2551,7 +2548,6 @@ generatedFiles:
   - src/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
   - src/Models/Shared/PropertyConnectionAuth.php
-  - src/Models/Shared/PropertyConnectionAuthMeta.php
   - src/Models/Shared/PropertyConnectionCategories.php
   - src/Models/Shared/PropertyConnectionPermissions.php
   - src/Models/Shared/PropertyCrmCompanyAddress.php
