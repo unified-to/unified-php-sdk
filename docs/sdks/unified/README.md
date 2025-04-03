@@ -52,7 +52,7 @@ $request = new Shared\Connection(
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::MartechListRead,
+        Shared\PropertyConnectionPermissions::CrmPipelineWrite,
     ],
 );
 
@@ -961,7 +961,7 @@ $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentPayout,
+        objectType: Shared\ObjectType::PaymentLink,
     ),
     id: '<id>',
 );

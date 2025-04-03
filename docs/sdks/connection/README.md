@@ -38,7 +38,7 @@ $request = new Shared\Connection(
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::MartechListRead,
+        Shared\PropertyConnectionPermissions::CrmPipelineWrite,
     ],
 );
 

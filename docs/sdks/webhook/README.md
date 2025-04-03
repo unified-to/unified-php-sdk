@@ -342,7 +342,7 @@ $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentPayout,
+        objectType: Shared\ObjectType::PaymentLink,
     ),
     id: '<id>',
 );

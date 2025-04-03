@@ -447,10 +447,10 @@ class IntegrationSupport
     /**
      * $methods
      *
-     * @var ?array<string, bool> $methods
+     * @var ?array<string, mixed> $methods
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('methods')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, bool>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $methods = null;
 
@@ -704,7 +704,7 @@ class IntegrationSupport
      * @param  ?ListType  $listType
      * @param  ?ListUpdatedGte  $listUpdatedGte
      * @param  ?ListUserId  $listUserId
-     * @param  ?array<string, bool>  $methods
+     * @param  ?array<string, mixed>  $methods
      * @param  ?NativeWebhookParentId  $nativeWebhookParentId
      * @param  ?NativeWebhookProjectId  $nativeWebhookProjectId
      * @param  ?array<string, mixed>  $outboundFields

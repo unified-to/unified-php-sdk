@@ -34,6 +34,8 @@ class UnifiedTo
 
     public Organization $organization;
 
+    public Report $report;
+
     public Taxrate $taxrate;
 
     public Transaction $transaction;
@@ -221,6 +223,7 @@ class UnifiedTo
         $this->journal = new Journal($this->sdkConfiguration);
         $this->order = new Order($this->sdkConfiguration);
         $this->organization = new Organization($this->sdkConfiguration);
+        $this->report = new Report($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);

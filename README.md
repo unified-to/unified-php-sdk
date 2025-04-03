@@ -122,6 +122,7 @@ if ($response->accountingAccount !== null) {
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
+* [getAccountingReport](docs/sdks/accounting/README.md#getaccountingreport) - Retrieve a report
 * [getAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
@@ -130,6 +131,7 @@ if ($response->accountingAccount !== null) {
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
+* [listAccountingReports](docs/sdks/accounting/README.md#listaccountingreports) - List all reports
 * [listAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
@@ -961,6 +963,11 @@ if ($response->accountingAccount !== null) {
 * [updateRepoOrganization](docs/sdks/repo/README.md#updaterepoorganization) - Update an organization
 * [updateRepoPullrequest](docs/sdks/repo/README.md#updaterepopullrequest) - Update a pullrequest
 * [updateRepoRepository](docs/sdks/repo/README.md#updatereporepository) - Update a repository
+
+### [report](docs/sdks/report/README.md)
+
+* [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
+* [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 
 ### [repository](docs/sdks/repository/README.md)
 

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
+  docChecksum: 17d655d886642d9b7380dfa9cd15cb96
   docVersion: "1.0"
-  speakeasyVersion: 1.526.6
-  generationVersion: 2.563.1
-  releaseVersion: 1.2.5
-  configChecksum: 22643302c9d94eb16e844c7f39698ae8
+  speakeasyVersion: 1.528.1
+  generationVersion: 2.565.1
+  releaseVersion: 1.2.6
+  configChecksum: 7df61c388ef70aa2a25e0444cb4bb54f
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.1
+    core: 3.8.2
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.1
@@ -166,6 +166,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingOrderResponse.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
+  - docs/Models/Operations/GetAccountingReportRequest.md
+  - docs/Models/Operations/GetAccountingReportResponse.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
   - docs/Models/Operations/GetAccountingTaxrateResponse.md
   - docs/Models/Operations/GetAccountingTransactionRequest.md
@@ -312,6 +314,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingOrdersResponse.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
+  - docs/Models/Operations/ListAccountingReportsRequest.md
+  - docs/Models/Operations/ListAccountingReportsResponse.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
   - docs/Models/Operations/ListAccountingTaxratesResponse.md
   - docs/Models/Operations/ListAccountingTransactionsRequest.md
@@ -871,6 +875,9 @@ generatedFiles:
   - docs/Models/Shared/AccountingOrderType.md
   - docs/Models/Shared/AccountingOrganization.md
   - docs/Models/Shared/AccountingOrganizationRaw.md
+  - docs/Models/Shared/AccountingReport.md
+  - docs/Models/Shared/AccountingReportRaw.md
+  - docs/Models/Shared/AccountingReportType.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/AccountingTaxrateRaw.md
   - docs/Models/Shared/AccountingTelephone.md
@@ -1335,6 +1342,7 @@ generatedFiles:
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
+  - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1572,6 +1580,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingOrderResponse.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
+  - src/Models/Operations/GetAccountingReportRequest.php
+  - src/Models/Operations/GetAccountingReportResponse.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
   - src/Models/Operations/GetAccountingTaxrateResponse.php
   - src/Models/Operations/GetAccountingTransactionRequest.php
@@ -1718,6 +1728,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingOrdersResponse.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
+  - src/Models/Operations/ListAccountingReportsRequest.php
+  - src/Models/Operations/ListAccountingReportsResponse.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
   - src/Models/Operations/ListAccountingTaxratesResponse.php
   - src/Models/Operations/ListAccountingTransactionsRequest.php
@@ -2277,6 +2289,9 @@ generatedFiles:
   - src/Models/Shared/AccountingOrderType.php
   - src/Models/Shared/AccountingOrganization.php
   - src/Models/Shared/AccountingOrganizationRaw.php
+  - src/Models/Shared/AccountingReport.php
+  - src/Models/Shared/AccountingReportRaw.php
+  - src/Models/Shared/AccountingReportType.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/AccountingTaxrateRaw.php
   - src/Models/Shared/AccountingTelephone.php
@@ -2685,6 +2700,7 @@ generatedFiles:
   - src/Recording.php
   - src/Refund.php
   - src/Repo.php
+  - src/Report.php
   - src/Repository.php
   - src/SDKConfiguration.php
   - src/Scim.php
@@ -6804,5 +6820,24 @@ examples:
       responses:
         "200":
           application/json: {"url": "https://standard-birth.info/"}
+  getAccountingReport:
+    speakeasy-default-get-accounting-report:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listAccountingReports:
+    speakeasy-default-list-accounting-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
 examplesVersion: 1.0.0
 generatedTests: {}
