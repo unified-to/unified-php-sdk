@@ -89,6 +89,14 @@ class MetadataMetadata
 
     /**
      *
+     * @var ?string $slug
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('slug')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $slug = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -105,10 +113,11 @@ class MetadataMetadata
      * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
      * @param  ?MetadataMetadataRaw  $raw
+     * @param  ?string  $slug
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?MetadataMetadataRaw $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?MetadataMetadataRaw $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;
@@ -119,6 +128,7 @@ class MetadataMetadata
         $this->options = $options;
         $this->originalFormat = $originalFormat;
         $this->raw = $raw;
+        $this->slug = $slug;
         $this->updatedAt = $updatedAt;
     }
 }

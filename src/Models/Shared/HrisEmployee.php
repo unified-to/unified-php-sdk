@@ -270,6 +270,30 @@ class HrisEmployee
     public ?string $ssnSin = null;
 
     /**
+     *
+     * @var ?float $storageQuotaAllocated
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('storage_quota_allocated')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $storageQuotaAllocated = null;
+
+    /**
+     *
+     * @var ?float $storageQuotaAvailable
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('storage_quota_available')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $storageQuotaAvailable = null;
+
+    /**
+     *
+     * @var ?float $storageQuotaUsed
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('storage_quota_used')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $storageQuotaUsed = null;
+
+    /**
      * $telephones
      *
      * @var ?array<HrisTelephone> $telephones
@@ -342,6 +366,9 @@ class HrisEmployee
      * @param  ?HrisEmployeeRaw  $raw
      * @param  ?string  $salutation
      * @param  ?string  $ssnSin
+     * @param  ?float  $storageQuotaAllocated
+     * @param  ?float  $storageQuotaAvailable
+     * @param  ?float  $storageQuotaUsed
      * @param  ?array<HrisTelephone>  $telephones
      * @param  ?\DateTime  $terminatedAt
      * @param  ?string  $timezone
@@ -349,7 +376,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?HrisEmployeeRaw $raw = null, ?string $salutation = null, ?string $ssnSin = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?HrisEmployeeRaw $raw = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -381,6 +408,9 @@ class HrisEmployee
         $this->raw = $raw;
         $this->salutation = $salutation;
         $this->ssnSin = $ssnSin;
+        $this->storageQuotaAllocated = $storageQuotaAllocated;
+        $this->storageQuotaAvailable = $storageQuotaAvailable;
+        $this->storageQuotaUsed = $storageQuotaUsed;
         $this->telephones = $telephones;
         $this->terminatedAt = $terminatedAt;
         $this->timezone = $timezone;
