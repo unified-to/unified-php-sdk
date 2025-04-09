@@ -9,23 +9,16 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CommerceItemMetadata
+class CommerceMetadata
 {
     /**
      *
-     * @var string $key
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
-    public string $key;
-
-    /**
-     *
-     * @var ?CommerceItemMetadataExtraData $extraData
+     * @var ?CommerceMetadataExtraData $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMetadataExtraData|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataExtraData|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceItemMetadataExtraData $extraData = null;
+    public ?CommerceMetadataExtraData $extraData = null;
 
     /**
      *
@@ -37,11 +30,27 @@ class CommerceItemMetadata
 
     /**
      *
+     * @var ?string $key
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $key = null;
+
+    /**
+     *
      * @var ?string $namespace
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('namespace')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $namespace = null;
+
+    /**
+     *
+     * @var ?string $slug
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('slug')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $slug = null;
 
     /**
      *
@@ -53,28 +62,30 @@ class CommerceItemMetadata
 
     /**
      *
-     * @var ?CommerceItemMetadataValue $value
+     * @var ?CommerceMetadataValue $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMetadataValue|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataValue|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceItemMetadataValue $value = null;
+    public ?CommerceMetadataValue $value = null;
 
     /**
-     * @param  string  $key
-     * @param  ?CommerceItemMetadataExtraData  $extraData
+     * @param  ?CommerceMetadataExtraData  $extraData
      * @param  ?string  $id
+     * @param  ?string  $key
      * @param  ?string  $namespace
+     * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  ?CommerceItemMetadataValue  $value
+     * @param  ?CommerceMetadataValue  $value
      * @phpstan-pure
      */
-    public function __construct(string $key, ?CommerceItemMetadataExtraData $extraData = null, ?string $id = null, ?string $namespace = null, ?string $type = null, ?CommerceItemMetadataValue $value = null)
+    public function __construct(?CommerceMetadataExtraData $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, ?CommerceMetadataValue $value = null)
     {
-        $this->key = $key;
         $this->extraData = $extraData;
         $this->id = $id;
+        $this->key = $key;
         $this->namespace = $namespace;
+        $this->slug = $slug;
         $this->type = $type;
         $this->value = $value;
     }

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CommerceItemMetadataExtraData
+class CommerceMetadataExtraData
 {
 
     public function __construct()

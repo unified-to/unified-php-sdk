@@ -82,10 +82,10 @@ class CommerceItem
     /**
      * $metadata
      *
-     * @var ?array<CommerceItemMetadata> $metadata
+     * @var ?array<CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
 
@@ -183,7 +183,7 @@ class CommerceItem
      * @param  ?bool  $isActive
      * @param  ?bool  $isTaxable
      * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceItemMetadata>  $metadata
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName

@@ -45,10 +45,10 @@ class CommerceItemMedia
     /**
      * $metadata
      *
-     * @var ?array<CommerceItemMetadata> $metadata
+     * @var ?array<CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
 
@@ -82,7 +82,7 @@ class CommerceItemMedia
      * @param  ?string  $alt
      * @param  ?float  $height
      * @param  ?string  $id
-     * @param  ?array<CommerceItemMetadata>  $metadata
+     * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?float  $position
      * @param  ?CommerceItemMediaType  $type
      * @param  ?float  $width
