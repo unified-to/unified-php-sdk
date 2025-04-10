@@ -38,7 +38,7 @@ $request = new Shared\Connection(
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmPipelineWrite,
+        Shared\PropertyConnectionPermissions::MartechListRead,
     ],
 );
 
@@ -191,7 +191,7 @@ $request = new Operations\PatchUnifiedConnectionRequest(
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::CalendarRecordingWrite,
+            Shared\PropertyConnectionPermissions::EnrichCompanyRead,
         ],
     ),
     id: '<id>',
@@ -299,7 +299,7 @@ $request = new Operations\UpdateUnifiedConnectionRequest(
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::CalendarLinkWrite,
+            Shared\PropertyConnectionPermissions::CalendarRecordingWrite,
         ],
     ),
     id: '<id>',
