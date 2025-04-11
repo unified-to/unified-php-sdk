@@ -116,13 +116,14 @@ class CalendarEvent
     public ?PropertyCalendarEventOrganizer $organizer = null;
 
     /**
+     * $raw
      *
-     * @var ?CalendarEventRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CalendarEventRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -171,14 +172,14 @@ class CalendarEvent
      * @param  ?string  $location
      * @param  ?string  $notes
      * @param  ?PropertyCalendarEventOrganizer  $organizer
-     * @param  ?CalendarEventRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?CalendarEventStatus  $status
      * @param  ?string  $timezone
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $endAt, string $startAt, string $subject, ?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?CalendarEventRaw $raw = null, ?CalendarEventStatus $status = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(string $endAt, string $startAt, string $subject, ?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?CalendarEventStatus $status = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->endAt = $endAt;
         $this->startAt = $startAt;

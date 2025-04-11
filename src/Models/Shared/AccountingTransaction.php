@@ -104,13 +104,14 @@ class AccountingTransaction
     public ?string $paymentTerms = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingTransactionRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTransactionRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingTransactionRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -180,7 +181,7 @@ class AccountingTransaction
      * @param  ?string  $memo
      * @param  ?string  $paymentMethod
      * @param  ?string  $paymentTerms
-     * @param  ?AccountingTransactionRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $splitAccountId
      * @param  ?float  $subTotalAmount
@@ -190,7 +191,7 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?AccountingTransactionRaw $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->contactId = $contactId;

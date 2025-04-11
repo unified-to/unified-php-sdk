@@ -59,13 +59,14 @@ class CommerceInventory
     public ?string $locationId = null;
 
     /**
+     * $raw
      *
-     * @var ?CommerceInventoryRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceInventoryRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceInventoryRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -82,11 +83,11 @@ class CommerceInventory
      * @param  ?string  $itemOptionId
      * @param  ?string  $itemVariantId
      * @param  ?string  $locationId
-     * @param  ?CommerceInventoryRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(float $available, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?CommerceInventoryRaw $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(float $available, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->available = $available;
         $this->id = $id;

@@ -76,13 +76,14 @@ class AtsInterview
     public ?string $location = null;
 
     /**
+     * $raw
      *
-     * @var ?AtsInterviewRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsInterviewRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AtsInterviewRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -128,14 +129,14 @@ class AtsInterview
      * @param  ?string  $id
      * @param  ?string  $jobId
      * @param  ?string  $location
-     * @param  ?AtsInterviewRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?AtsInterviewStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $externalEventXref = null, ?string $id = null, ?string $jobId = null, ?string $location = null, ?AtsInterviewRaw $raw = null, ?\DateTime $startAt = null, ?AtsInterviewStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $externalEventXref = null, ?string $id = null, ?string $jobId = null, ?string $location = null, ?array $raw = null, ?\DateTime $startAt = null, ?AtsInterviewStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;

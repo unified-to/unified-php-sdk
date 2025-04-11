@@ -123,13 +123,14 @@ class AtsActivity
     public ?string $jobId = null;
 
     /**
+     * $raw
      *
-     * @var ?AtsActivityRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsActivityRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AtsActivityRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -198,7 +199,7 @@ class AtsActivity
      * @param  ?string  $interviewId
      * @param  ?bool  $isPrivate
      * @param  ?string  $jobId
-     * @param  ?AtsActivityRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $subType
      * @param  ?string  $title
      * @param  ?array<AtsEmail>  $to
@@ -207,7 +208,7 @@ class AtsActivity
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?AtsActivityRaw $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;

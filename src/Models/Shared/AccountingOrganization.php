@@ -76,13 +76,14 @@ class AccountingOrganization
     public ?string $organizationCode = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingOrganizationRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingOrganizationRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingOrganizationRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -125,14 +126,14 @@ class AccountingOrganization
      * @param  ?string  $id
      * @param  ?string  $legalName
      * @param  ?string  $organizationCode
-     * @param  ?AccountingOrganizationRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taxNumber
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?AccountingOrganizationRaw $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(string $name, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
         $this->name = $name;
         $this->address = $address;

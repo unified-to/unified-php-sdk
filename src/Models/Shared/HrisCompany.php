@@ -53,13 +53,14 @@ class HrisCompany
     public ?string $name = null;
 
     /**
+     * $raw
      *
-     * @var ?HrisCompanyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompanyRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?HrisCompanyRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -75,11 +76,11 @@ class HrisCompany
      * @param  ?string  $id
      * @param  ?string  $legalName
      * @param  ?string  $name
-     * @param  ?HrisCompanyRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?HrisCompanyRaw $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;

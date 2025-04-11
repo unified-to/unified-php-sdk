@@ -123,13 +123,14 @@ class CrmDeal
     public ?float $probability = null;
 
     /**
+     * $raw
      *
-     * @var ?CrmDealRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmDealRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmDealRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -203,7 +204,7 @@ class CrmDeal
      * @param  ?string  $pipeline
      * @param  ?string  $pipelineId
      * @param  ?float  $probability
-     * @param  ?CrmDealRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
      * @param  ?string  $stage
      * @param  ?string  $stageId
@@ -213,7 +214,7 @@ class CrmDeal
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?CrmDealRaw $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;

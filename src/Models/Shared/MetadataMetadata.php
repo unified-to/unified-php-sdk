@@ -79,13 +79,14 @@ class MetadataMetadata
     public ?string $originalFormat = null;
 
     /**
+     * $raw
      *
-     * @var ?MetadataMetadataRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?MetadataMetadataRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -112,12 +113,12 @@ class MetadataMetadata
      * @param  ?array<string, mixed>  $objects
      * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
-     * @param  ?MetadataMetadataRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?MetadataMetadataRaw $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;

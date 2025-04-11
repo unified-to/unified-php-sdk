@@ -71,13 +71,14 @@ class AccountingOrder
     public ?array $lineitems = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingOrderRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingOrderRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingOrderRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -130,7 +131,7 @@ class AccountingOrder
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?array<AccountingLineitem>  $lineitems
-     * @param  ?AccountingOrderRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?PropertyAccountingOrderShippingAddress  $shippingAddress
      * @param  ?AccountingOrderStatus  $status
      * @param  ?float  $totalAmount
@@ -138,7 +139,7 @@ class AccountingOrder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingOrderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?AccountingOrderRaw $raw = null, ?PropertyAccountingOrderShippingAddress $shippingAddress = null, ?AccountingOrderStatus $status = null, ?float $totalAmount = null, ?AccountingOrderType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingOrderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?array $raw = null, ?PropertyAccountingOrderShippingAddress $shippingAddress = null, ?AccountingOrderStatus $status = null, ?float $totalAmount = null, ?AccountingOrderType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;

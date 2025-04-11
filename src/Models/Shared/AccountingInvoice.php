@@ -143,13 +143,14 @@ class AccountingInvoice
     public ?\DateTime $postedAt = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingInvoiceRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingInvoiceRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -242,7 +243,7 @@ class AccountingInvoice
      * @param  ?\DateTime  $paidAt
      * @param  ?PaymentCollectionMethod  $paymentCollectionMethod
      * @param  ?\DateTime  $postedAt
-     * @param  ?AccountingInvoiceRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?float  $refundAmount
      * @param  ?string  $refundReason
      * @param  ?\DateTime  $refundedAt
@@ -254,7 +255,7 @@ class AccountingInvoice
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?\DateTime $invoiceAt = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?AccountingInvoiceRaw $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?\DateTime $invoiceAt = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->balanceAmount = $balanceAmount;
         $this->cancelledAt = $cancelledAt;

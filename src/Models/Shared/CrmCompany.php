@@ -128,13 +128,14 @@ class CrmCompany
     public ?string $name = null;
 
     /**
+     * $raw
      *
-     * @var ?CrmCompanyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmCompanyRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmCompanyRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      * $tags
@@ -204,7 +205,7 @@ class CrmCompany
      * @param  ?array<string>  $linkUrls
      * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?CrmCompanyRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?array<CrmTelephone>  $telephones
      * @param  ?string  $timezone
@@ -213,7 +214,7 @@ class CrmCompany
      * @param  ?array<string>  $websites
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?CrmCompanyRaw $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
         $this->address = $address;
         $this->contactIds = $contactIds;

@@ -60,13 +60,14 @@ class AccountingReport
     public ?string $id = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingReportRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingReportRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingReportRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -100,13 +101,13 @@ class AccountingReport
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $group
      * @param  ?string  $id
-     * @param  ?AccountingReportRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $subgroup
      * @param  ?AccountingReportType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $group = null, ?string $id = null, ?AccountingReportRaw $raw = null, ?string $subgroup = null, ?AccountingReportType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $group = null, ?string $id = null, ?array $raw = null, ?string $subgroup = null, ?AccountingReportType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->amount = $amount;

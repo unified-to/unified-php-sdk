@@ -76,13 +76,14 @@ class AtsDocument
     public ?string $jobId = null;
 
     /**
+     * $raw
      *
-     * @var ?AtsDocumentRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsDocumentRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AtsDocumentRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -118,13 +119,13 @@ class AtsDocument
      * @param  ?string  $filename
      * @param  ?string  $id
      * @param  ?string  $jobId
-     * @param  ?AtsDocumentRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?AtsDocumentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?AtsDocumentRaw $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?array $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;

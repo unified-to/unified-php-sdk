@@ -136,13 +136,14 @@ class CrmEvent
     public ?PropertyCrmEventPageView $pageView = null;
 
     /**
+     * $raw
      *
-     * @var ?CrmEventRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmEventRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      * The task object, when type = task
@@ -193,14 +194,14 @@ class CrmEvent
      * @param  ?PropertyCrmEventMeeting  $meeting
      * @param  ?PropertyCrmEventNote  $note
      * @param  ?PropertyCrmEventPageView  $pageView
-     * @param  ?CrmEventRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?PropertyCrmEventTask  $task
      * @param  ?CrmEventType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?CrmEventRaw $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->call = $call;
         $this->companyIds = $companyIds;

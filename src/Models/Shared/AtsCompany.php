@@ -70,13 +70,14 @@ class AtsCompany
     public ?string $phone = null;
 
     /**
+     * $raw
      *
-     * @var ?AtsCompanyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompanyRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AtsCompanyRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      * $recruiterIds
@@ -112,13 +113,13 @@ class AtsCompany
      * @param  ?array<AtsMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?string  $phone
-     * @param  ?AtsCompanyRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $recruiterIds
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $parentId = null, ?string $phone = null, ?AtsCompanyRaw $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
         $this->name = $name;
         $this->address = $address;

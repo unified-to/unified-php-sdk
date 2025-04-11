@@ -12,12 +12,13 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisPayslip
 {
     /**
+     * $raw
      *
-     * @var HrisPayslipRaw $raw
+     * @var array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipRaw')]
-    public HrisPayslipRaw $raw;
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>')]
+    public array $raw;
 
     /**
      *
@@ -127,7 +128,7 @@ class HrisPayslip
     public ?string $userId = null;
 
     /**
-     * @param  HrisPayslipRaw  $raw
+     * @param  array<string, mixed>  $raw
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -143,7 +144,7 @@ class HrisPayslip
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(HrisPayslipRaw $raw, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(array $raw, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->raw = $raw;
         $this->companyId = $companyId;

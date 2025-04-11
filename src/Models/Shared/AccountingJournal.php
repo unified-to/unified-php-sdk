@@ -62,13 +62,14 @@ class AccountingJournal
     public ?\DateTime $postedAt = null;
 
     /**
+     * $raw
      *
-     * @var ?AccountingJournalRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingJournalRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountingJournalRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -109,14 +110,14 @@ class AccountingJournal
      * @param  ?string  $id
      * @param  ?array<AccountingJournalLineitem>  $lineitems
      * @param  ?\DateTime  $postedAt
-     * @param  ?AccountingJournalRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?AccountingJournalRaw $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;

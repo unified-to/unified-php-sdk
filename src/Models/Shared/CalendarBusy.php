@@ -42,13 +42,14 @@ class CalendarBusy
     public ?string $id = null;
 
     /**
+     * $raw
      *
-     * @var ?CalendarBusyRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarBusyRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CalendarBusyRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -63,11 +64,11 @@ class CalendarBusy
      * @param  \DateTime  $startAt
      * @param  ?string  $description
      * @param  ?string  $id
-     * @param  ?CalendarBusyRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $timezone
      * @phpstan-pure
      */
-    public function __construct(\DateTime $endAt, \DateTime $startAt, ?string $description = null, ?string $id = null, ?CalendarBusyRaw $raw = null, ?string $timezone = null)
+    public function __construct(\DateTime $endAt, \DateTime $startAt, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $timezone = null)
     {
         $this->endAt = $endAt;
         $this->startAt = $startAt;

@@ -112,13 +112,14 @@ class CommerceCollection
     public ?string $publicName = null;
 
     /**
+     * $raw
      *
-     * @var ?CommerceCollectionRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceCollectionRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceCollectionRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      * $tags
@@ -160,13 +161,13 @@ class CommerceCollection
      * @param  ?string  $parentId
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
-     * @param  ?CommerceCollectionRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?CommerceCollectionType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?CommerceCollectionRaw $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;

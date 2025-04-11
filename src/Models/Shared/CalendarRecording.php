@@ -62,13 +62,14 @@ class CalendarRecording
     public ?array $media = null;
 
     /**
+     * $raw
      *
-     * @var ?CalendarRecordingRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarRecordingRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CalendarRecordingRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -101,13 +102,13 @@ class CalendarRecording
      * @param  ?\DateTime  $expiresAt
      * @param  ?string  $id
      * @param  ?array<CalendarRecordingMedia>  $media
-     * @param  ?CalendarRecordingRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $eventId = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?CalendarRecordingRaw $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $eventId = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;

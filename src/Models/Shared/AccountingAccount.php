@@ -93,13 +93,14 @@ class AccountingAccount
     public ?string $parentAccountId = null;
 
     /**
+     * $raw
      *
-     * @var ?Raw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Raw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Raw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -162,7 +163,7 @@ class AccountingAccount
      * @param  ?bool  $isPayable
      * @param  ?string  $name
      * @param  ?string  $parentAccountId
-     * @param  ?Raw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $section
      * @param  ?Status  $status
      * @param  ?string  $subgroup
@@ -171,7 +172,7 @@ class AccountingAccount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?Raw $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;

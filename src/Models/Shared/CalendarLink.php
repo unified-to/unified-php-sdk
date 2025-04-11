@@ -83,13 +83,14 @@ class CalendarLink
     public ?string $priceCurrency = null;
 
     /**
+     * $raw
      *
-     * @var ?CalendarLinkRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarLinkRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CalendarLinkRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -109,11 +110,11 @@ class CalendarLink
      * @param  ?string  $name
      * @param  ?float  $priceAmount
      * @param  ?string  $priceCurrency
-     * @param  ?CalendarLinkRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $url, ?string $createdAt = null, ?string $description = null, ?float $duration = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $priceAmount = null, ?string $priceCurrency = null, ?CalendarLinkRaw $raw = null, ?string $updatedAt = null)
+    public function __construct(string $url, ?string $createdAt = null, ?string $description = null, ?float $duration = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $priceAmount = null, ?string $priceCurrency = null, ?array $raw = null, ?string $updatedAt = null)
     {
         $this->url = $url;
         $this->createdAt = $createdAt;

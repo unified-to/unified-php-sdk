@@ -75,13 +75,14 @@ class HrisTimeoff
     public ?string $id = null;
 
     /**
+     * $raw
      *
-     * @var ?HrisTimeoffRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?HrisTimeoffRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -126,14 +127,14 @@ class HrisTimeoff
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
-     * @param  ?HrisTimeoffRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?HrisTimeoffStatus  $status
      * @param  ?HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?HrisTimeoffRaw $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $raw = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->startAt = $startAt;
         $this->approvedAt = $approvedAt;

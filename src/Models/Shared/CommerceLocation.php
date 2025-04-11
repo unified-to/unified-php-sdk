@@ -60,13 +60,14 @@ class CommerceLocation
     public ?bool $isActive = null;
 
     /**
+     * $raw
      *
-     * @var ?CommerceLocationRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceLocationRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceLocationRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      *
@@ -83,11 +84,11 @@ class CommerceLocation
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
-     * @param  ?CommerceLocationRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?CommerceLocationRaw $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->address = $address;

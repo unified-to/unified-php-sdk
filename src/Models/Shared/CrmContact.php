@@ -104,13 +104,14 @@ class CrmContact
     public ?string $name = null;
 
     /**
+     * $raw
      *
-     * @var ?CrmContactRaw $raw
+     * @var ?array<string, mixed> $raw
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmContactRaw|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmContactRaw $raw = null;
+    public ?array $raw = null;
 
     /**
      * An array of telephones for this contact
@@ -157,14 +158,14 @@ class CrmContact
      * @param  ?array<string>  $linkUrls
      * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?CrmContactRaw  $raw
+     * @param  ?array<string, mixed>  $raw
      * @param  ?array<CrmTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?CrmContactRaw $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->company = $company;
