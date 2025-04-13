@@ -1239,6 +1239,7 @@ You can override the default server globally using the `setServerIndex(int $serv
 | --- | --------------------------- | -------------------------- |
 | 0   | `https://api.unified.to`    | North American data region |
 | 1   | `https://api-eu.unified.to` | European data region       |
+| 2   | `https://api-au.unified.to` | Australian data region     |
 
 #### Example
 
@@ -1252,7 +1253,7 @@ use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
-    ->setServerIndex(1)
+    ->setServerIndex(2)
     ->setSecurity(
         '<YOUR_API_KEY_HERE>'
     )

@@ -18,6 +18,8 @@ class UnifiedTo
         'https://api.unified.to',
         /** European data region */
         'https://api-eu.unified.to',
+        /** Australian data region */
+        'https://api-au.unified.to',
     ];
 
     public Accounting $accounting;
