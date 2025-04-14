@@ -11,6 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum KmsCommentType: string
 {
-    case PageInline = 'PAGE-INLINE';
+    case PageInline = 'PAGE_INLINE';
     case Page = 'PAGE';
 }
