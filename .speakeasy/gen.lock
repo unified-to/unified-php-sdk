@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f8c33b302b35d5dce19e700a53e8ea50
+  docChecksum: ce6ebc30e4ad046db9275dc804220d8b
   docVersion: "1.0"
-  speakeasyVersion: 1.531.4
-  generationVersion: 2.570.4
-  releaseVersion: 1.2.12
-  configChecksum: 9911b24648dd77deb12d705f43595268
+  speakeasyVersion: 1.533.0
+  generationVersion: 2.578.0
+  releaseVersion: 1.2.13
+  configChecksum: ca8ca34176a43808d136a74305863950
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -855,6 +855,7 @@ generatedFiles:
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
   - docs/Models/Shared/AccountingAccount.md
+  - docs/Models/Shared/AccountingAttachment.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingContactPaymentMethodType.md
@@ -2228,6 +2229,7 @@ generatedFiles:
   - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
   - src/Models/Shared/AccountingAccount.php
+  - src/Models/Shared/AccountingAttachment.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingContactPaymentMethodType.php
