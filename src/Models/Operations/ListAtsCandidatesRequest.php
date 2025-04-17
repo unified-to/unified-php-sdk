@@ -29,13 +29,6 @@ class ListAtsCandidatesRequest
 
     /**
      *
-     * @var ?string $jobId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
-    public ?string $jobId = null;
-
-    /**
-     *
      * @var ?float $limit
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
@@ -81,7 +74,6 @@ class ListAtsCandidatesRequest
     /**
      * @param  string  $connectionId
      * @param  ?array<string>  $fields
-     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -90,11 +82,10 @@ class ListAtsCandidatesRequest
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
-        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
