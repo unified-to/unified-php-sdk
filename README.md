@@ -474,6 +474,15 @@ if ($response->accountingAccount !== null) {
 * [removeCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [updateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
+### [device](docs/sdks/device/README.md)
+
+* [createHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
+* [getHrisDevice](docs/sdks/device/README.md#gethrisdevice) - Retrieve a device
+* [listHrisDevices](docs/sdks/device/README.md#listhrisdevices) - List all devices
+* [patchHrisDevice](docs/sdks/device/README.md#patchhrisdevice) - Update a device
+* [removeHrisDevice](docs/sdks/device/README.md#removehrisdevice) - Remove a device
+* [updateHrisDevice](docs/sdks/device/README.md#updatehrisdevice) - Update a device
+
 ### [document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
@@ -544,30 +553,36 @@ if ($response->accountingAccount !== null) {
 ### [hris](docs/sdks/hris/README.md)
 
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
+* [createHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
+* [getHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
+* [listHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
+* [patchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
+* [removeHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
+* [updateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location

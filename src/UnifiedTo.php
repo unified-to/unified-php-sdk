@@ -102,6 +102,8 @@ class UnifiedTo
 
     public Hris $hris;
 
+    public Device $device;
+
     public Employee $employee;
 
     public Group $group;
@@ -258,6 +260,7 @@ class UnifiedTo
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
+        $this->device = new Device($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);

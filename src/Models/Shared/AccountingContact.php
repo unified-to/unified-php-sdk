@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingContact
 {
     /**
+     * $associatedContacts
+     *
+     * @var ?array<AccountingAssociatedContact> $associatedContacts
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('associated_contacts')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $associatedContacts = null;
+
+    /**
      *
      * @var ?PropertyAccountingContactBillingAddress $billingAddress
      */
@@ -175,6 +185,7 @@ class AccountingContact
     public ?string $currency = null;
 
     /**
+     * @param  ?array<AccountingAssociatedContact>  $associatedContacts
      * @param  ?PropertyAccountingContactBillingAddress  $billingAddress
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
@@ -196,8 +207,9 @@ class AccountingContact
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?array $associatedContacts = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
+        $this->associatedContacts = $associatedContacts;
         $this->billingAddress = $billingAddress;
         $this->companyName = $companyName;
         $this->createdAt = $createdAt;

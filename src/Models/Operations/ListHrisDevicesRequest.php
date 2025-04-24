@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListStorageFilesRequest
+class ListHrisDevicesRequest
 {
     /**
      * ID of the connection
@@ -49,13 +49,6 @@ class ListStorageFilesRequest
     public ?string $order = null;
 
     /**
-     *
-     * @var ?string $parentId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
-    public ?string $parentId = null;
-
-    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -71,13 +64,6 @@ class ListStorageFilesRequest
     public ?string $sort = null;
 
     /**
-     *
-     * @var ?string $type
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
-    public ?string $type = null;
-
-    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?\DateTime $updatedGte
@@ -86,29 +72,34 @@ class ListStorageFilesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+
+    /**
      * @param  string  $connectionId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
-     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $sort
-     * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
-        $this->parentId = $parentId;
         $this->query = $query;
         $this->sort = $sort;
-        $this->type = $type;
         $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

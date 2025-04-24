@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 55f4dd2a712f44154e41aa0daba1b8ca
+  docChecksum: 8813ee1f8602d4e03a2488861b978482
   docVersion: "1.0"
-  speakeasyVersion: 1.533.0
-  generationVersion: 2.578.0
-  releaseVersion: 1.2.14
-  configChecksum: c2c0a9a16d5ccec710706e34bee6f02d
+  speakeasyVersion: 1.538.0
+  generationVersion: 2.591.1
+  releaseVersion: 1.2.15
+  configChecksum: 0c1231e04a340f70c322d1fe8def4dfe
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -83,6 +83,8 @@ generatedFiles:
   - docs/Models/Operations/CreateGenaiPromptResponse.md
   - docs/Models/Operations/CreateHrisCompanyRequest.md
   - docs/Models/Operations/CreateHrisCompanyResponse.md
+  - docs/Models/Operations/CreateHrisDeviceRequest.md
+  - docs/Models/Operations/CreateHrisDeviceResponse.md
   - docs/Models/Operations/CreateHrisEmployeeRequest.md
   - docs/Models/Operations/CreateHrisEmployeeResponse.md
   - docs/Models/Operations/CreateHrisGroupRequest.md
@@ -218,6 +220,8 @@ generatedFiles:
   - docs/Models/Operations/GetCrmPipelineResponse.md
   - docs/Models/Operations/GetHrisCompanyRequest.md
   - docs/Models/Operations/GetHrisCompanyResponse.md
+  - docs/Models/Operations/GetHrisDeviceRequest.md
+  - docs/Models/Operations/GetHrisDeviceResponse.md
   - docs/Models/Operations/GetHrisEmployeeRequest.md
   - docs/Models/Operations/GetHrisEmployeeResponse.md
   - docs/Models/Operations/GetHrisGroupRequest.md
@@ -376,6 +380,8 @@ generatedFiles:
   - docs/Models/Operations/ListGenaiModelsResponse.md
   - docs/Models/Operations/ListHrisCompaniesRequest.md
   - docs/Models/Operations/ListHrisCompaniesResponse.md
+  - docs/Models/Operations/ListHrisDevicesRequest.md
+  - docs/Models/Operations/ListHrisDevicesResponse.md
   - docs/Models/Operations/ListHrisEmployeesRequest.md
   - docs/Models/Operations/ListHrisEmployeesResponse.md
   - docs/Models/Operations/ListHrisGroupsRequest.md
@@ -523,6 +529,8 @@ generatedFiles:
   - docs/Models/Operations/PatchCrmPipelineResponse.md
   - docs/Models/Operations/PatchHrisCompanyRequest.md
   - docs/Models/Operations/PatchHrisCompanyResponse.md
+  - docs/Models/Operations/PatchHrisDeviceRequest.md
+  - docs/Models/Operations/PatchHrisDeviceResponse.md
   - docs/Models/Operations/PatchHrisEmployeeRequest.md
   - docs/Models/Operations/PatchHrisEmployeeResponse.md
   - docs/Models/Operations/PatchHrisGroupRequest.md
@@ -654,6 +662,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveCrmPipelineResponse.md
   - docs/Models/Operations/RemoveHrisCompanyRequest.md
   - docs/Models/Operations/RemoveHrisCompanyResponse.md
+  - docs/Models/Operations/RemoveHrisDeviceRequest.md
+  - docs/Models/Operations/RemoveHrisDeviceResponse.md
   - docs/Models/Operations/RemoveHrisEmployeeRequest.md
   - docs/Models/Operations/RemoveHrisEmployeeResponse.md
   - docs/Models/Operations/RemoveHrisGroupRequest.md
@@ -780,6 +790,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateCrmPipelineResponse.md
   - docs/Models/Operations/UpdateHrisCompanyRequest.md
   - docs/Models/Operations/UpdateHrisCompanyResponse.md
+  - docs/Models/Operations/UpdateHrisDeviceRequest.md
+  - docs/Models/Operations/UpdateHrisDeviceResponse.md
   - docs/Models/Operations/UpdateHrisEmployeeRequest.md
   - docs/Models/Operations/UpdateHrisEmployeeResponse.md
   - docs/Models/Operations/UpdateHrisGroupRequest.md
@@ -855,6 +867,7 @@ generatedFiles:
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
   - docs/Models/Shared/AccountingAccount.md
+  - docs/Models/Shared/AccountingAssociatedContact.md
   - docs/Models/Shared/AccountingAttachment.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
@@ -902,6 +915,8 @@ generatedFiles:
   - docs/Models/Shared/AtsInterview.md
   - docs/Models/Shared/AtsInterviewStatus.md
   - docs/Models/Shared/AtsJob.md
+  - docs/Models/Shared/AtsJobOpening.md
+  - docs/Models/Shared/AtsJobOpeningStatus.md
   - docs/Models/Shared/AtsJobPosting.md
   - docs/Models/Shared/AtsJobQuestion.md
   - docs/Models/Shared/AtsJobQuestionType.md
@@ -982,6 +997,7 @@ generatedFiles:
   - docs/Models/Shared/HrisCompensation.md
   - docs/Models/Shared/HrisCompensationFrequency.md
   - docs/Models/Shared/HrisCompensationType.md
+  - docs/Models/Shared/HrisDevice.md
   - docs/Models/Shared/HrisEmail.md
   - docs/Models/Shared/HrisEmailType.md
   - docs/Models/Shared/HrisEmployee.md
@@ -1256,6 +1272,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
@@ -1351,6 +1368,7 @@ generatedFiles:
   - src/Crm.php
   - src/Customer.php
   - src/Deal.php
+  - src/Device.php
   - src/Document.php
   - src/Employee.php
   - src/Enrich.php
@@ -1457,6 +1475,8 @@ generatedFiles:
   - src/Models/Operations/CreateGenaiPromptResponse.php
   - src/Models/Operations/CreateHrisCompanyRequest.php
   - src/Models/Operations/CreateHrisCompanyResponse.php
+  - src/Models/Operations/CreateHrisDeviceRequest.php
+  - src/Models/Operations/CreateHrisDeviceResponse.php
   - src/Models/Operations/CreateHrisEmployeeRequest.php
   - src/Models/Operations/CreateHrisEmployeeResponse.php
   - src/Models/Operations/CreateHrisGroupRequest.php
@@ -1592,6 +1612,8 @@ generatedFiles:
   - src/Models/Operations/GetCrmPipelineResponse.php
   - src/Models/Operations/GetHrisCompanyRequest.php
   - src/Models/Operations/GetHrisCompanyResponse.php
+  - src/Models/Operations/GetHrisDeviceRequest.php
+  - src/Models/Operations/GetHrisDeviceResponse.php
   - src/Models/Operations/GetHrisEmployeeRequest.php
   - src/Models/Operations/GetHrisEmployeeResponse.php
   - src/Models/Operations/GetHrisGroupRequest.php
@@ -1750,6 +1772,8 @@ generatedFiles:
   - src/Models/Operations/ListGenaiModelsResponse.php
   - src/Models/Operations/ListHrisCompaniesRequest.php
   - src/Models/Operations/ListHrisCompaniesResponse.php
+  - src/Models/Operations/ListHrisDevicesRequest.php
+  - src/Models/Operations/ListHrisDevicesResponse.php
   - src/Models/Operations/ListHrisEmployeesRequest.php
   - src/Models/Operations/ListHrisEmployeesResponse.php
   - src/Models/Operations/ListHrisGroupsRequest.php
@@ -1897,6 +1921,8 @@ generatedFiles:
   - src/Models/Operations/PatchCrmPipelineResponse.php
   - src/Models/Operations/PatchHrisCompanyRequest.php
   - src/Models/Operations/PatchHrisCompanyResponse.php
+  - src/Models/Operations/PatchHrisDeviceRequest.php
+  - src/Models/Operations/PatchHrisDeviceResponse.php
   - src/Models/Operations/PatchHrisEmployeeRequest.php
   - src/Models/Operations/PatchHrisEmployeeResponse.php
   - src/Models/Operations/PatchHrisGroupRequest.php
@@ -2028,6 +2054,8 @@ generatedFiles:
   - src/Models/Operations/RemoveCrmPipelineResponse.php
   - src/Models/Operations/RemoveHrisCompanyRequest.php
   - src/Models/Operations/RemoveHrisCompanyResponse.php
+  - src/Models/Operations/RemoveHrisDeviceRequest.php
+  - src/Models/Operations/RemoveHrisDeviceResponse.php
   - src/Models/Operations/RemoveHrisEmployeeRequest.php
   - src/Models/Operations/RemoveHrisEmployeeResponse.php
   - src/Models/Operations/RemoveHrisGroupRequest.php
@@ -2154,6 +2182,8 @@ generatedFiles:
   - src/Models/Operations/UpdateCrmPipelineResponse.php
   - src/Models/Operations/UpdateHrisCompanyRequest.php
   - src/Models/Operations/UpdateHrisCompanyResponse.php
+  - src/Models/Operations/UpdateHrisDeviceRequest.php
+  - src/Models/Operations/UpdateHrisDeviceResponse.php
   - src/Models/Operations/UpdateHrisEmployeeRequest.php
   - src/Models/Operations/UpdateHrisEmployeeResponse.php
   - src/Models/Operations/UpdateHrisGroupRequest.php
@@ -2229,6 +2259,7 @@ generatedFiles:
   - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
   - src/Models/Shared/AccountingAccount.php
+  - src/Models/Shared/AccountingAssociatedContact.php
   - src/Models/Shared/AccountingAttachment.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
@@ -2276,6 +2307,8 @@ generatedFiles:
   - src/Models/Shared/AtsInterview.php
   - src/Models/Shared/AtsInterviewStatus.php
   - src/Models/Shared/AtsJob.php
+  - src/Models/Shared/AtsJobOpening.php
+  - src/Models/Shared/AtsJobOpeningStatus.php
   - src/Models/Shared/AtsJobPosting.php
   - src/Models/Shared/AtsJobQuestion.php
   - src/Models/Shared/AtsJobQuestionType.php
@@ -2356,6 +2389,7 @@ generatedFiles:
   - src/Models/Shared/HrisCompensation.php
   - src/Models/Shared/HrisCompensationFrequency.php
   - src/Models/Shared/HrisCompensationType.php
+  - src/Models/Shared/HrisDevice.php
   - src/Models/Shared/HrisEmail.php
   - src/Models/Shared/HrisEmailType.php
   - src/Models/Shared/HrisEmployee.php
@@ -6759,5 +6793,65 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisDevice:
+    speakeasy-default-create-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getHrisDevice:
+    speakeasy-default-get-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  listHrisDevices:
+    speakeasy-default-list-hris-devices:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}]
+  patchHrisDevice:
+    speakeasy-default-patch-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeHrisDevice:
+    speakeasy-default-remove-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisDevice:
+    speakeasy-default-update-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}
