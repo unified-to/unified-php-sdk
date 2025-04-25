@@ -20,6 +20,13 @@ class ListAccountingReportsRequest
     public string $connectionId;
 
     /**
+     *
+     * @var ?string $endLe
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
+    public ?string $endLe = null;
+
+    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -65,6 +72,13 @@ class ListAccountingReportsRequest
 
     /**
      *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
+     *
      * @var ?string $type
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
@@ -80,25 +94,29 @@ class ListAccountingReportsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $endLe
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->endLe = $endLe;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->type = $type;
         $this->updatedGte = $updatedGte;
     }

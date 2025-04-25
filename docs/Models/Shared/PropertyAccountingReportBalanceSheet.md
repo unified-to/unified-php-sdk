@@ -1,0 +1,11 @@
+# PropertyAccountingReportBalanceSheet
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `assets`                                                                                      | array<[Shared\AccountingBalanceSheetItem](../../Models/Shared/AccountingBalanceSheetItem.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `equity`                                                                                      | array<[Shared\AccountingBalanceSheetItem](../../Models/Shared/AccountingBalanceSheetItem.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `liabilities`                                                                                 | array<[Shared\AccountingBalanceSheetItem](../../Models/Shared/AccountingBalanceSheetItem.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `netAssetsAmount`                                                                             | *?float*                                                                                      | :heavy_minus_sign:                                                                            | N/A                                                                                           |

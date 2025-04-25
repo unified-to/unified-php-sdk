@@ -13,27 +13,12 @@ class AccountingReport
 {
     /**
      *
-     * @var ?string $accountId
+     * @var ?PropertyAccountingReportBalanceSheet $balanceSheet
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('account_id')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('balance_sheet')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportBalanceSheet|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $accountId = null;
-
-    /**
-     *
-     * @var ?float $amount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('amount')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $amount = null;
-
-    /**
-     *
-     * @var ?string $contactId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $contactId = null;
+    public ?PropertyAccountingReportBalanceSheet $balanceSheet = null;
 
     /**
      *
@@ -45,11 +30,19 @@ class AccountingReport
 
     /**
      *
-     * @var ?string $group
+     * @var ?string $currency
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('group')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $group = null;
+    public ?string $currency = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
 
     /**
      *
@@ -58,6 +51,23 @@ class AccountingReport
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
+     * @var ?PropertyAccountingReportProfitAndLoss $profitAndLoss
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('profit_and_loss')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportProfitAndLoss|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAccountingReportProfitAndLoss $profitAndLoss = null;
 
     /**
      * $raw
@@ -71,11 +81,20 @@ class AccountingReport
 
     /**
      *
-     * @var ?string $subgroup
+     * @var ?\DateTime $startAt
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('subgroup')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $subgroup = null;
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
+     * @var ?PropertyAccountingReportTrialBalance $trialBalance
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('trial_balance')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportTrialBalance|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAccountingReportTrialBalance $trialBalance = null;
 
     /**
      *
@@ -95,28 +114,32 @@ class AccountingReport
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?string  $accountId
-     * @param  ?float  $amount
-     * @param  ?string  $contactId
+     * @param  ?PropertyAccountingReportBalanceSheet  $balanceSheet
      * @param  ?\DateTime  $createdAt
-     * @param  ?string  $group
+     * @param  ?string  $currency
+     * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?PropertyAccountingReportProfitAndLoss  $profitAndLoss
      * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $subgroup
+     * @param  ?\DateTime  $startAt
+     * @param  ?PropertyAccountingReportTrialBalance  $trialBalance
      * @param  ?AccountingReportType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $group = null, ?string $id = null, ?array $raw = null, ?string $subgroup = null, ?AccountingReportType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAccountingReportBalanceSheet $balanceSheet = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $name = null, ?PropertyAccountingReportProfitAndLoss $profitAndLoss = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAccountingReportTrialBalance $trialBalance = null, ?AccountingReportType $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->accountId = $accountId;
-        $this->amount = $amount;
-        $this->contactId = $contactId;
+        $this->balanceSheet = $balanceSheet;
         $this->createdAt = $createdAt;
-        $this->group = $group;
+        $this->currency = $currency;
+        $this->endAt = $endAt;
         $this->id = $id;
+        $this->name = $name;
+        $this->profitAndLoss = $profitAndLoss;
         $this->raw = $raw;
-        $this->subgroup = $subgroup;
+        $this->startAt = $startAt;
+        $this->trialBalance = $trialBalance;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
     }

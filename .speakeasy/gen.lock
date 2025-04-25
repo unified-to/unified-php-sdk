@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 8813ee1f8602d4e03a2488861b978482
+  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
   docVersion: "1.0"
-  speakeasyVersion: 1.538.0
+  speakeasyVersion: 1.539.2
   generationVersion: 2.591.1
-  releaseVersion: 1.2.15
-  configChecksum: 0c1231e04a340f70c322d1fe8def4dfe
+  releaseVersion: 1.2.16
+  configChecksum: acc9431522da1693b94be37ad3d2c781
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -869,6 +869,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingAccount.md
   - docs/Models/Shared/AccountingAssociatedContact.md
   - docs/Models/Shared/AccountingAttachment.md
+  - docs/Models/Shared/AccountingBalanceSheetItem.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingContactPaymentMethodType.md
@@ -884,6 +885,8 @@ generatedFiles:
   - docs/Models/Shared/AccountingOrderStatus.md
   - docs/Models/Shared/AccountingOrderType.md
   - docs/Models/Shared/AccountingOrganization.md
+  - docs/Models/Shared/AccountingProfitAndLossCategory.md
+  - docs/Models/Shared/AccountingProfitAndLossSubcategory.md
   - docs/Models/Shared/AccountingReport.md
   - docs/Models/Shared/AccountingReportType.md
   - docs/Models/Shared/AccountingTaxrate.md
@@ -892,6 +895,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingTransaction.md
   - docs/Models/Shared/AccountingTransactionContact.md
   - docs/Models/Shared/AccountingTransactionLineItem.md
+  - docs/Models/Shared/AccountingTrialBalanceSubItem.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/ApiCallType.md
   - docs/Models/Shared/AtsActivity.md
@@ -1110,11 +1114,15 @@ generatedFiles:
   - docs/Models/Shared/PaymentSubscriptionStatus.md
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/Priority.md
+  - docs/Models/Shared/PropertyAccountingBalanceSheetItemSubItems.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderBillingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
+  - docs/Models/Shared/PropertyAccountingReportBalanceSheet.md
+  - docs/Models/Shared/PropertyAccountingReportProfitAndLoss.md
+  - docs/Models/Shared/PropertyAccountingReportTrialBalance.md
   - docs/Models/Shared/PropertyAtsActivityFrom.md
   - docs/Models/Shared/PropertyAtsActivityFromType.md
   - docs/Models/Shared/PropertyAtsCandidateAddress.md
@@ -2261,6 +2269,7 @@ generatedFiles:
   - src/Models/Shared/AccountingAccount.php
   - src/Models/Shared/AccountingAssociatedContact.php
   - src/Models/Shared/AccountingAttachment.php
+  - src/Models/Shared/AccountingBalanceSheetItem.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingContactPaymentMethodType.php
@@ -2276,6 +2285,8 @@ generatedFiles:
   - src/Models/Shared/AccountingOrderStatus.php
   - src/Models/Shared/AccountingOrderType.php
   - src/Models/Shared/AccountingOrganization.php
+  - src/Models/Shared/AccountingProfitAndLossCategory.php
+  - src/Models/Shared/AccountingProfitAndLossSubcategory.php
   - src/Models/Shared/AccountingReport.php
   - src/Models/Shared/AccountingReportType.php
   - src/Models/Shared/AccountingTaxrate.php
@@ -2284,6 +2295,7 @@ generatedFiles:
   - src/Models/Shared/AccountingTransaction.php
   - src/Models/Shared/AccountingTransactionContact.php
   - src/Models/Shared/AccountingTransactionLineItem.php
+  - src/Models/Shared/AccountingTrialBalanceSubItem.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/ApiCallType.php
   - src/Models/Shared/AtsActivity.php
@@ -2502,11 +2514,15 @@ generatedFiles:
   - src/Models/Shared/PaymentSubscriptionStatus.php
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/Priority.php
+  - src/Models/Shared/PropertyAccountingBalanceSheetItemSubItems.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrderBillingAddress.php
   - src/Models/Shared/PropertyAccountingOrderShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
+  - src/Models/Shared/PropertyAccountingReportBalanceSheet.php
+  - src/Models/Shared/PropertyAccountingReportProfitAndLoss.php
+  - src/Models/Shared/PropertyAccountingReportTrialBalance.php
   - src/Models/Shared/PropertyAtsActivityFrom.php
   - src/Models/Shared/PropertyAtsActivityFromType.php
   - src/Models/Shared/PropertyAtsCandidateAddress.php
