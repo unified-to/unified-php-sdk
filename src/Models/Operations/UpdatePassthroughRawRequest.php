@@ -35,15 +35,25 @@ class UpdatePassthroughRawRequest
     public ?string $requestBody = null;
 
     /**
+     * $query
+     *
+     * @var ?array<string, mixed> $query
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
+    public ?array $query = null;
+
+    /**
      * @param  string  $connectionId
      * @param  string  $path
      * @param  ?string  $requestBody
+     * @param  ?array<string, mixed>  $query
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $path, ?string $requestBody = null)
+    public function __construct(string $connectionId, string $path, ?string $requestBody = null, ?array $query = null)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;
         $this->requestBody = $requestBody;
+        $this->query = $query;
     }
 }

@@ -55,7 +55,7 @@ class UcContact
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this contact
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */

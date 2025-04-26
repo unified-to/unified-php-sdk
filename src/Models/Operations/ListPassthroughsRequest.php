@@ -27,13 +27,23 @@ class ListPassthroughsRequest
     public string $path;
 
     /**
+     * $query
+     *
+     * @var ?array<string, mixed> $query
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
+    public ?array $query = null;
+
+    /**
      * @param  string  $connectionId
      * @param  string  $path
+     * @param  ?array<string, mixed>  $query
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $path)
+    public function __construct(string $connectionId, string $path, ?array $query = null)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;
+        $this->query = $query;
     }
 }

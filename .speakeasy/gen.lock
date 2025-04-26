@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
+  docChecksum: e254ae145e90e83e726dc49d774763d7
   docVersion: "1.0"
-  speakeasyVersion: 1.539.2
-  generationVersion: 2.591.1
-  releaseVersion: 1.2.16
-  configChecksum: acc9431522da1693b94be37ad3d2c781
+  speakeasyVersion: 1.540.0
+  generationVersion: 2.593.3
+  releaseVersion: 1.2.17
+  configChecksum: c414b990638498c686c07d3f581594e4
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -151,8 +151,12 @@ generatedFiles:
   - docs/Models/Operations/CreateTicketingNoteResponse.md
   - docs/Models/Operations/CreateTicketingTicketRequest.md
   - docs/Models/Operations/CreateTicketingTicketResponse.md
+  - docs/Models/Operations/CreateUcCommentRequest.md
+  - docs/Models/Operations/CreateUcCommentResponse.md
   - docs/Models/Operations/CreateUcContactRequest.md
   - docs/Models/Operations/CreateUcContactResponse.md
+  - docs/Models/Operations/CreateUcRecordingRequest.md
+  - docs/Models/Operations/CreateUcRecordingResponse.md
   - docs/Models/Operations/CreateUnifiedConnectionResponse.md
   - docs/Models/Operations/CreateUnifiedWebhookRequest.md
   - docs/Models/Operations/CreateUnifiedWebhookResponse.md
@@ -294,8 +298,12 @@ generatedFiles:
   - docs/Models/Operations/GetTicketingNoteResponse.md
   - docs/Models/Operations/GetTicketingTicketRequest.md
   - docs/Models/Operations/GetTicketingTicketResponse.md
+  - docs/Models/Operations/GetUcCommentRequest.md
+  - docs/Models/Operations/GetUcCommentResponse.md
   - docs/Models/Operations/GetUcContactRequest.md
   - docs/Models/Operations/GetUcContactResponse.md
+  - docs/Models/Operations/GetUcRecordingRequest.md
+  - docs/Models/Operations/GetUcRecordingResponse.md
   - docs/Models/Operations/GetUnifiedApicallRequest.md
   - docs/Models/Operations/GetUnifiedApicallResponse.md
   - docs/Models/Operations/GetUnifiedConnectionRequest.md
@@ -458,8 +466,12 @@ generatedFiles:
   - docs/Models/Operations/ListTicketingTicketsResponse.md
   - docs/Models/Operations/ListUcCallsRequest.md
   - docs/Models/Operations/ListUcCallsResponse.md
+  - docs/Models/Operations/ListUcCommentsRequest.md
+  - docs/Models/Operations/ListUcCommentsResponse.md
   - docs/Models/Operations/ListUcContactsRequest.md
   - docs/Models/Operations/ListUcContactsResponse.md
+  - docs/Models/Operations/ListUcRecordingsRequest.md
+  - docs/Models/Operations/ListUcRecordingsResponse.md
   - docs/Models/Operations/ListUnifiedApicallsRequest.md
   - docs/Models/Operations/ListUnifiedApicallsResponse.md
   - docs/Models/Operations/ListUnifiedConnectionsRequest.md
@@ -597,8 +609,12 @@ generatedFiles:
   - docs/Models/Operations/PatchTicketingNoteResponse.md
   - docs/Models/Operations/PatchTicketingTicketRequest.md
   - docs/Models/Operations/PatchTicketingTicketResponse.md
+  - docs/Models/Operations/PatchUcCommentRequest.md
+  - docs/Models/Operations/PatchUcCommentResponse.md
   - docs/Models/Operations/PatchUcContactRequest.md
   - docs/Models/Operations/PatchUcContactResponse.md
+  - docs/Models/Operations/PatchUcRecordingRequest.md
+  - docs/Models/Operations/PatchUcRecordingResponse.md
   - docs/Models/Operations/PatchUnifiedConnectionRequest.md
   - docs/Models/Operations/PatchUnifiedConnectionResponse.md
   - docs/Models/Operations/PatchUnifiedWebhookRequest.md
@@ -728,8 +744,12 @@ generatedFiles:
   - docs/Models/Operations/RemoveTicketingNoteResponse.md
   - docs/Models/Operations/RemoveTicketingTicketRequest.md
   - docs/Models/Operations/RemoveTicketingTicketResponse.md
+  - docs/Models/Operations/RemoveUcCommentRequest.md
+  - docs/Models/Operations/RemoveUcCommentResponse.md
   - docs/Models/Operations/RemoveUcContactRequest.md
   - docs/Models/Operations/RemoveUcContactResponse.md
+  - docs/Models/Operations/RemoveUcRecordingRequest.md
+  - docs/Models/Operations/RemoveUcRecordingResponse.md
   - docs/Models/Operations/RemoveUnifiedConnectionRequest.md
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
@@ -858,8 +878,12 @@ generatedFiles:
   - docs/Models/Operations/UpdateTicketingNoteResponse.md
   - docs/Models/Operations/UpdateTicketingTicketRequest.md
   - docs/Models/Operations/UpdateTicketingTicketResponse.md
+  - docs/Models/Operations/UpdateUcCommentRequest.md
+  - docs/Models/Operations/UpdateUcCommentResponse.md
   - docs/Models/Operations/UpdateUcContactRequest.md
   - docs/Models/Operations/UpdateUcContactResponse.md
+  - docs/Models/Operations/UpdateUcRecordingRequest.md
+  - docs/Models/Operations/UpdateUcRecordingResponse.md
   - docs/Models/Operations/UpdateUnifiedConnectionRequest.md
   - docs/Models/Operations/UpdateUnifiedConnectionResponse.md
   - docs/Models/Operations/UpdateUnifiedWebhookRequest.md
@@ -1035,6 +1059,7 @@ generatedFiles:
   - docs/Models/Shared/ListAccountId.md
   - docs/Models/Shared/ListApplicationId.md
   - docs/Models/Shared/ListCalendarId.md
+  - docs/Models/Shared/ListCallId.md
   - docs/Models/Shared/ListCandidateId.md
   - docs/Models/Shared/ListChannelId.md
   - docs/Models/Shared/ListClassId.md
@@ -1234,9 +1259,13 @@ generatedFiles:
   - docs/Models/Shared/TicketingTicketStatus.md
   - docs/Models/Shared/Type.md
   - docs/Models/Shared/UcCall.md
+  - docs/Models/Shared/UcComment.md
   - docs/Models/Shared/UcContact.md
   - docs/Models/Shared/UcEmail.md
   - docs/Models/Shared/UcEmailType.md
+  - docs/Models/Shared/UcRecording.md
+  - docs/Models/Shared/UcRecordingMedia.md
+  - docs/Models/Shared/UcRecordingTranscript.md
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcTelephoneType.md
   - docs/Models/Shared/Value.md
@@ -1551,8 +1580,12 @@ generatedFiles:
   - src/Models/Operations/CreateTicketingNoteResponse.php
   - src/Models/Operations/CreateTicketingTicketRequest.php
   - src/Models/Operations/CreateTicketingTicketResponse.php
+  - src/Models/Operations/CreateUcCommentRequest.php
+  - src/Models/Operations/CreateUcCommentResponse.php
   - src/Models/Operations/CreateUcContactRequest.php
   - src/Models/Operations/CreateUcContactResponse.php
+  - src/Models/Operations/CreateUcRecordingRequest.php
+  - src/Models/Operations/CreateUcRecordingResponse.php
   - src/Models/Operations/CreateUnifiedConnectionResponse.php
   - src/Models/Operations/CreateUnifiedWebhookRequest.php
   - src/Models/Operations/CreateUnifiedWebhookResponse.php
@@ -1694,8 +1727,12 @@ generatedFiles:
   - src/Models/Operations/GetTicketingNoteResponse.php
   - src/Models/Operations/GetTicketingTicketRequest.php
   - src/Models/Operations/GetTicketingTicketResponse.php
+  - src/Models/Operations/GetUcCommentRequest.php
+  - src/Models/Operations/GetUcCommentResponse.php
   - src/Models/Operations/GetUcContactRequest.php
   - src/Models/Operations/GetUcContactResponse.php
+  - src/Models/Operations/GetUcRecordingRequest.php
+  - src/Models/Operations/GetUcRecordingResponse.php
   - src/Models/Operations/GetUnifiedApicallRequest.php
   - src/Models/Operations/GetUnifiedApicallResponse.php
   - src/Models/Operations/GetUnifiedConnectionRequest.php
@@ -1858,8 +1895,12 @@ generatedFiles:
   - src/Models/Operations/ListTicketingTicketsResponse.php
   - src/Models/Operations/ListUcCallsRequest.php
   - src/Models/Operations/ListUcCallsResponse.php
+  - src/Models/Operations/ListUcCommentsRequest.php
+  - src/Models/Operations/ListUcCommentsResponse.php
   - src/Models/Operations/ListUcContactsRequest.php
   - src/Models/Operations/ListUcContactsResponse.php
+  - src/Models/Operations/ListUcRecordingsRequest.php
+  - src/Models/Operations/ListUcRecordingsResponse.php
   - src/Models/Operations/ListUnifiedApicallsRequest.php
   - src/Models/Operations/ListUnifiedApicallsResponse.php
   - src/Models/Operations/ListUnifiedConnectionsRequest.php
@@ -1997,8 +2038,12 @@ generatedFiles:
   - src/Models/Operations/PatchTicketingNoteResponse.php
   - src/Models/Operations/PatchTicketingTicketRequest.php
   - src/Models/Operations/PatchTicketingTicketResponse.php
+  - src/Models/Operations/PatchUcCommentRequest.php
+  - src/Models/Operations/PatchUcCommentResponse.php
   - src/Models/Operations/PatchUcContactRequest.php
   - src/Models/Operations/PatchUcContactResponse.php
+  - src/Models/Operations/PatchUcRecordingRequest.php
+  - src/Models/Operations/PatchUcRecordingResponse.php
   - src/Models/Operations/PatchUnifiedConnectionRequest.php
   - src/Models/Operations/PatchUnifiedConnectionResponse.php
   - src/Models/Operations/PatchUnifiedWebhookRequest.php
@@ -2128,8 +2173,12 @@ generatedFiles:
   - src/Models/Operations/RemoveTicketingNoteResponse.php
   - src/Models/Operations/RemoveTicketingTicketRequest.php
   - src/Models/Operations/RemoveTicketingTicketResponse.php
+  - src/Models/Operations/RemoveUcCommentRequest.php
+  - src/Models/Operations/RemoveUcCommentResponse.php
   - src/Models/Operations/RemoveUcContactRequest.php
   - src/Models/Operations/RemoveUcContactResponse.php
+  - src/Models/Operations/RemoveUcRecordingRequest.php
+  - src/Models/Operations/RemoveUcRecordingResponse.php
   - src/Models/Operations/RemoveUnifiedConnectionRequest.php
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
@@ -2258,8 +2307,12 @@ generatedFiles:
   - src/Models/Operations/UpdateTicketingNoteResponse.php
   - src/Models/Operations/UpdateTicketingTicketRequest.php
   - src/Models/Operations/UpdateTicketingTicketResponse.php
+  - src/Models/Operations/UpdateUcCommentRequest.php
+  - src/Models/Operations/UpdateUcCommentResponse.php
   - src/Models/Operations/UpdateUcContactRequest.php
   - src/Models/Operations/UpdateUcContactResponse.php
+  - src/Models/Operations/UpdateUcRecordingRequest.php
+  - src/Models/Operations/UpdateUcRecordingResponse.php
   - src/Models/Operations/UpdateUnifiedConnectionRequest.php
   - src/Models/Operations/UpdateUnifiedConnectionResponse.php
   - src/Models/Operations/UpdateUnifiedWebhookRequest.php
@@ -2435,6 +2488,7 @@ generatedFiles:
   - src/Models/Shared/ListAccountId.php
   - src/Models/Shared/ListApplicationId.php
   - src/Models/Shared/ListCalendarId.php
+  - src/Models/Shared/ListCallId.php
   - src/Models/Shared/ListCandidateId.php
   - src/Models/Shared/ListChannelId.php
   - src/Models/Shared/ListClassId.php
@@ -2634,9 +2688,13 @@ generatedFiles:
   - src/Models/Shared/TicketingTicketStatus.php
   - src/Models/Shared/Type.php
   - src/Models/Shared/UcCall.php
+  - src/Models/Shared/UcComment.php
   - src/Models/Shared/UcContact.php
   - src/Models/Shared/UcEmail.php
   - src/Models/Shared/UcEmailType.php
+  - src/Models/Shared/UcRecording.php
+  - src/Models/Shared/UcRecordingMedia.php
+  - src/Models/Shared/UcRecordingTranscript.php
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcTelephoneType.php
   - src/Models/Shared/Value.php
@@ -5738,6 +5796,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/opt/lib"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5750,6 +5809,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5763,6 +5823,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/selinux"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5776,6 +5837,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/home/user"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5788,6 +5850,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/mail"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5801,6 +5864,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/Applications"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5814,6 +5878,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5826,6 +5891,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/System"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -6869,5 +6935,125 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createUcRecording:
+    speakeasy-default-create-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getUcRecording:
+    speakeasy-default-get-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listUcRecordings:
+    speakeasy-default-list-uc-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchUcRecording:
+    speakeasy-default-patch-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeUcRecording:
+    speakeasy-default-remove-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcRecording:
+    speakeasy-default-update-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createUcComment:
+    speakeasy-default-create-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  getUcComment:
+    speakeasy-default-get-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  listUcComments:
+    speakeasy-default-list-uc-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"content": "<value>"}, {"content": "<value>"}]
+  patchUcComment:
+    speakeasy-default-patch-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  removeUcComment:
+    speakeasy-default-remove-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcComment:
+    speakeasy-default-update-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

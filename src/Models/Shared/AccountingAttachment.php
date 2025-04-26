@@ -13,24 +13,19 @@ class AccountingAttachment
 {
     /**
      *
-     * @var string $downloadUrl
+     * @var ?string $downloadUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('download_url')]
-    public string $downloadUrl;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $downloadUrl = null;
 
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    public string $id;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -41,17 +36,25 @@ class AccountingAttachment
     public ?string $mimeType = null;
 
     /**
-     * @param  string  $downloadUrl
-     * @param  string  $id
-     * @param  string  $name
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     * @param  ?string  $downloadUrl
+     * @param  ?string  $id
      * @param  ?string  $mimeType
+     * @param  ?string  $name
      * @phpstan-pure
      */
-    public function __construct(string $downloadUrl, string $id, string $name, ?string $mimeType = null)
+    public function __construct(?string $downloadUrl = null, ?string $id = null, ?string $mimeType = null, ?string $name = null)
     {
         $this->downloadUrl = $downloadUrl;
         $this->id = $id;
-        $this->name = $name;
         $this->mimeType = $mimeType;
+        $this->name = $name;
     }
 }

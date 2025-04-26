@@ -313,16 +313,22 @@ if ($response->accountingAccount !== null) {
 
 * [createKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
 * [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
+* [createUcComment](docs/sdks/comment/README.md#createuccomment) - Create a comment
 * [getKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
 * [getTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
+* [getUcComment](docs/sdks/comment/README.md#getuccomment) - Retrieve a comment
 * [listKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
 * [listTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
+* [listUcComments](docs/sdks/comment/README.md#listuccomments) - List all comments
 * [patchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
 * [patchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
+* [patchUcComment](docs/sdks/comment/README.md#patchuccomment) - Update a comment
 * [removeKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
 * [removeTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
+* [removeUcComment](docs/sdks/comment/README.md#removeuccomment) - Remove a comment
 * [updateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
 * [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
+* [updateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
 ### [commerce](docs/sdks/commerce/README.md)
 
@@ -938,8 +944,14 @@ if ($response->accountingAccount !== null) {
 
 ### [recording](docs/sdks/recording/README.md)
 
+* [createUcRecording](docs/sdks/recording/README.md#createucrecording) - Create a recording
 * [getCalendarRecording](docs/sdks/recording/README.md#getcalendarrecording) - Retrieve a recording
+* [getUcRecording](docs/sdks/recording/README.md#getucrecording) - Retrieve a recording
 * [listCalendarRecordings](docs/sdks/recording/README.md#listcalendarrecordings) - List all recordings
+* [listUcRecordings](docs/sdks/recording/README.md#listucrecordings) - List all recordings
+* [patchUcRecording](docs/sdks/recording/README.md#patchucrecording) - Update a recording
+* [removeUcRecording](docs/sdks/recording/README.md#removeucrecording) - Remove a recording
+* [updateUcRecording](docs/sdks/recording/README.md#updateucrecording) - Update a recording
 
 ### [refund](docs/sdks/refund/README.md)
 
@@ -1129,13 +1141,25 @@ if ($response->accountingAccount !== null) {
 
 ### [uc](docs/sdks/uc/README.md)
 
+* [createUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
+* [createUcRecording](docs/sdks/uc/README.md#createucrecording) - Create a recording
+* [getUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [getUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
+* [getUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording
 * [listUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
+* [listUcComments](docs/sdks/uc/README.md#listuccomments) - List all comments
 * [listUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
+* [listUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
+* [patchUcComment](docs/sdks/uc/README.md#patchuccomment) - Update a comment
 * [patchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
+* [patchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
+* [removeUcComment](docs/sdks/uc/README.md#removeuccomment) - Remove a comment
 * [removeUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
+* [removeUcRecording](docs/sdks/uc/README.md#removeucrecording) - Remove a recording
+* [updateUcComment](docs/sdks/uc/README.md#updateuccomment) - Update a comment
 * [updateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
+* [updateUcRecording](docs/sdks/uc/README.md#updateucrecording) - Update a recording
 
 ### [unified](docs/sdks/unified/README.md)
 

@@ -44,7 +44,7 @@ class UcCall
     public ?string $id = null;
 
     /**
-     * The raw data returned by the integration for this call
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */

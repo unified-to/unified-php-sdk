@@ -35,15 +35,25 @@ class PatchPassthroughJsonRequest
     public mixed $requestBody = null;
 
     /**
+     * $query
+     *
+     * @var ?array<string, mixed> $query
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=query')]
+    public ?array $query = null;
+
+    /**
      * @param  string  $connectionId
      * @param  string  $path
      * @param  mixed  $requestBody
+     * @param  ?array<string, mixed>  $query
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $path, mixed $requestBody = null)
+    public function __construct(string $connectionId, string $path, mixed $requestBody = null, ?array $query = null)
     {
         $this->connectionId = $connectionId;
         $this->path = $path;
         $this->requestBody = $requestBody;
+        $this->query = $query;
     }
 }

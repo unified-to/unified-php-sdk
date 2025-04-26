@@ -100,6 +100,9 @@ enum PropertyConnectionPermissions: string
     case UcCallRead = 'uc_call_read';
     case UcContactRead = 'uc_contact_read';
     case UcContactWrite = 'uc_contact_write';
+    case UcCommentRead = 'uc_comment_read';
+    case UcCommentWrite = 'uc_comment_write';
+    case UcRecordingRead = 'uc_recording_read';
     case StorageFileRead = 'storage_file_read';
     case StorageFileWrite = 'storage_file_write';
     case Webhook = 'webhook';

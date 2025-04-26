@@ -59,6 +59,8 @@ enum ObjectType: string
     case TicketingCustomer = 'ticketing_customer';
     case UcContact = 'uc_contact';
     case UcCall = 'uc_call';
+    case UcComment = 'uc_comment';
+    case UcRecording = 'uc_recording';
     case EnrichPerson = 'enrich_person';
     case EnrichCompany = 'enrich_company';
     case StorageFile = 'storage_file';

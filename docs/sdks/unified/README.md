@@ -52,7 +52,7 @@ $request = new Shared\Connection(
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::MartechListRead,
+        Shared\PropertyConnectionPermissions::MartechMemberRead,
     ],
 );
 
@@ -106,7 +106,7 @@ $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::HrisPayslip,
+        objectType: Shared\ObjectType::HrisTimeoff,
     ),
 );
 
@@ -700,7 +700,7 @@ $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::CrmLead,
+        objectType: Shared\ObjectType::CrmPipeline,
     ),
     id: '<id>',
 );
@@ -961,7 +961,7 @@ $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentLink,
+        objectType: Shared\ObjectType::PaymentPayout,
     ),
     id: '<id>',
 );
