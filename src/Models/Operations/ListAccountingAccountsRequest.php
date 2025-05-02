@@ -49,6 +49,13 @@ class ListAccountingAccountsRequest
     public ?string $order = null;
 
     /**
+     *
+     * @var ?string $orgId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
+    public ?string $orgId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -77,18 +84,20 @@ class ListAccountingAccountsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orgId
      * @param  ?string  $query
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orgId = $orgId;
         $this->query = $query;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
