@@ -37,15 +37,25 @@ class CreateCrmDealRequest
     public ?array $fields = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      * @param  Shared\CrmDeal  $crmDeal
      * @param  string  $connectionId
      * @param  ?array<string>  $fields
+     * @param  ?string  $raw
      * @phpstan-pure
      */
-    public function __construct(Shared\CrmDeal $crmDeal, string $connectionId, ?array $fields = null)
+    public function __construct(Shared\CrmDeal $crmDeal, string $connectionId, ?array $fields = null, ?string $raw = null)
     {
         $this->crmDeal = $crmDeal;
         $this->connectionId = $connectionId;
         $this->fields = $fields;
+        $this->raw = $raw;
     }
 }

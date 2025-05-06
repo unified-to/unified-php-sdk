@@ -71,6 +71,14 @@ class ListTaskTasksRequest
     public ?string $query = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -101,12 +109,13 @@ class ListTaskTasksRequest
      * @param  ?string  $parentId
      * @param  ?string  $projectId
      * @param  ?string  $query
+     * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -116,6 +125,7 @@ class ListTaskTasksRequest
         $this->parentId = $parentId;
         $this->projectId = $projectId;
         $this->query = $query;
+        $this->raw = $raw;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;

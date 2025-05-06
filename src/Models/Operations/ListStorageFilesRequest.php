@@ -64,6 +64,14 @@ class ListStorageFilesRequest
     public ?string $query = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -93,12 +101,13 @@ class ListStorageFilesRequest
      * @param  ?string  $order
      * @param  ?string  $parentId
      * @param  ?string  $query
+     * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -107,6 +116,7 @@ class ListStorageFilesRequest
         $this->order = $order;
         $this->parentId = $parentId;
         $this->query = $query;
+        $this->raw = $raw;
         $this->sort = $sort;
         $this->type = $type;
         $this->updatedGte = $updatedGte;

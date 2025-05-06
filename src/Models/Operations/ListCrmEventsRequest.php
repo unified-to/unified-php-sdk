@@ -85,6 +85,14 @@ class ListCrmEventsRequest
     public ?string $query = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -124,13 +132,14 @@ class ListCrmEventsRequest
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
+     * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?string $leadId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?string $leadId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
@@ -142,6 +151,7 @@ class ListCrmEventsRequest
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;
+        $this->raw = $raw;
         $this->sort = $sort;
         $this->type = $type;
         $this->updatedGte = $updatedGte;

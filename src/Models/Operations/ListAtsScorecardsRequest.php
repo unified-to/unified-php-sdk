@@ -85,6 +85,14 @@ class ListAtsScorecardsRequest
     public ?string $query = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -110,11 +118,12 @@ class ListAtsScorecardsRequest
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
+     * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;
@@ -126,6 +135,7 @@ class ListAtsScorecardsRequest
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;
+        $this->raw = $raw;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }

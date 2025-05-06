@@ -36,15 +36,25 @@ class CreateHrisGroupRequest
     public ?array $fields = null;
 
     /**
+     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+     *
+     * @var ?string $raw
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=raw')]
+    public ?string $raw = null;
+
+    /**
      * @param  Shared\HrisGroup  $hrisGroup
      * @param  string  $connectionId
      * @param  ?array<string>  $fields
+     * @param  ?string  $raw
      * @phpstan-pure
      */
-    public function __construct(Shared\HrisGroup $hrisGroup, string $connectionId, ?array $fields = null)
+    public function __construct(Shared\HrisGroup $hrisGroup, string $connectionId, ?array $fields = null, ?string $raw = null)
     {
         $this->hrisGroup = $hrisGroup;
         $this->connectionId = $connectionId;
         $this->fields = $fields;
+        $this->raw = $raw;
     }
 }
