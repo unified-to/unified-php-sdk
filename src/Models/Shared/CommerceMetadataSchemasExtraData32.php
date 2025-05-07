@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CrmMetadataValue
+class CommerceMetadataSchemasExtraData32
 {
 
     public function __construct()

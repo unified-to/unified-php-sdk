@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class HrisMetadataExtraData
+class CommerceMetadataSchemas1
 {
 
     public function __construct()

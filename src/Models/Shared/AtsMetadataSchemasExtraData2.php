@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class ExtraData
+class AtsMetadataSchemasExtraData2
 {
 
     public function __construct()

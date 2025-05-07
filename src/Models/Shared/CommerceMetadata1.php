@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CommerceMetadataValue
+class CommerceMetadata1
 {
 
     public function __construct()

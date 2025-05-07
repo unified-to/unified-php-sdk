@@ -13,12 +13,12 @@ class CrmMetadata
 {
     /**
      *
-     * @var ?CrmMetadataExtraData $extraData
+     * @var CrmMetadata1|string|CrmMetadataSchemasExtraData22|float|CrmMetadataSchemasExtraData32|bool|CrmMetadataSchemasExtraData2|array<mixed>|CrmMetadataSchemasExtraData52|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmMetadataExtraData|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmMetadata1|string|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasExtraData52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmMetadataExtraData $extraData = null;
+    public CrmMetadata1|string|CrmMetadataSchemasExtraData22|float|CrmMetadataSchemasExtraData32|bool|CrmMetadataSchemasExtraData2|array|CrmMetadataSchemasExtraData52|null $extraData = null;
 
     /**
      *
@@ -62,24 +62,24 @@ class CrmMetadata
 
     /**
      *
-     * @var ?CrmMetadataValue $value
+     * @var CrmMetadataSchemas1|string|CrmMetadataSchemasValue2|float|CrmMetadataSchemasValue32|bool|CrmMetadataSchemasValue42|array<mixed>|CrmMetadataSchemasValue52|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmMetadataValue|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\CrmMetadataSchemasValue52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmMetadataValue $value = null;
+    public CrmMetadataSchemas1|string|CrmMetadataSchemasValue2|float|CrmMetadataSchemasValue32|bool|CrmMetadataSchemasValue42|array|CrmMetadataSchemasValue52|null $value = null;
 
     /**
-     * @param  ?CrmMetadataExtraData  $extraData
+     * @param  CrmMetadata1|string|CrmMetadataSchemasExtraData22|float|CrmMetadataSchemasExtraData32|bool|CrmMetadataSchemasExtraData2|array<mixed>|CrmMetadataSchemasExtraData52|null  $extraData
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  ?CrmMetadataValue  $value
+     * @param  CrmMetadataSchemas1|string|CrmMetadataSchemasValue2|float|CrmMetadataSchemasValue32|bool|CrmMetadataSchemasValue42|array<mixed>|CrmMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(?CrmMetadataExtraData $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, ?CrmMetadataValue $value = null)
+    public function __construct(CrmMetadata1|string|CrmMetadataSchemasExtraData22|float|CrmMetadataSchemasExtraData32|bool|CrmMetadataSchemasExtraData2|array|CrmMetadataSchemasExtraData52|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, CrmMetadataSchemas1|string|CrmMetadataSchemasValue2|float|CrmMetadataSchemasValue32|bool|CrmMetadataSchemasValue42|array|CrmMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
         $this->id = $id;

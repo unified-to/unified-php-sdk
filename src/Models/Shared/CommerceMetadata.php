@@ -13,12 +13,12 @@ class CommerceMetadata
 {
     /**
      *
-     * @var ?CommerceMetadataExtraData $extraData
+     * @var CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array<mixed>|CommerceMetadataSchemasExtraData52|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataExtraData|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadata1|string|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasExtraData52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceMetadataExtraData $extraData = null;
+    public CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array|CommerceMetadataSchemasExtraData52|null $extraData = null;
 
     /**
      *
@@ -62,24 +62,24 @@ class CommerceMetadata
 
     /**
      *
-     * @var ?CommerceMetadataValue $value
+     * @var CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array<mixed>|CommerceMetadataSchemasValue52|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataValue|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\CommerceMetadataSchemasValue52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CommerceMetadataValue $value = null;
+    public CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array|CommerceMetadataSchemasValue52|null $value = null;
 
     /**
-     * @param  ?CommerceMetadataExtraData  $extraData
+     * @param  CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array<mixed>|CommerceMetadataSchemasExtraData52|null  $extraData
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  ?CommerceMetadataValue  $value
+     * @param  CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array<mixed>|CommerceMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(?CommerceMetadataExtraData $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, ?CommerceMetadataValue $value = null)
+    public function __construct(CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array|CommerceMetadataSchemasExtraData52|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array|CommerceMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
         $this->id = $id;

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class Value
+class HrisMetadataSchemasValue42
 {
 
     public function __construct()

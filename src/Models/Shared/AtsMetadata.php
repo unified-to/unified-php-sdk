@@ -13,12 +13,12 @@ class AtsMetadata
 {
     /**
      *
-     * @var ?ExtraData $extraData
+     * @var One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array<mixed>|AtsMetadataSchemasExtraData2|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ExtraData|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\One|string|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\AtsMetadataSchemas2|array<mixed>|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasExtraData2|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?ExtraData $extraData = null;
+    public One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array|AtsMetadataSchemasExtraData2|null $extraData = null;
 
     /**
      *
@@ -62,24 +62,24 @@ class AtsMetadata
 
     /**
      *
-     * @var ?Value $value
+     * @var AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array<mixed>|AtsMetadataSchemasValue52|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Value|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsMetadata1|string|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\AtsMetadataSchemasValue52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Value $value = null;
+    public AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array|AtsMetadataSchemasValue52|null $value = null;
 
     /**
-     * @param  ?ExtraData  $extraData
+     * @param  One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array<mixed>|AtsMetadataSchemasExtraData2|null  $extraData
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  ?Value  $value
+     * @param  AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array<mixed>|AtsMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(?ExtraData $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, ?Value $value = null)
+    public function __construct(One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array|AtsMetadataSchemasExtraData2|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array|AtsMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
         $this->id = $id;
