@@ -20,6 +20,7 @@ class ListLmsInstructorsRequest
     public string $connectionId;
 
     /**
+     * The class ID to filter by
      *
      * @var ?string $classId
      */
@@ -27,6 +28,7 @@ class ListLmsInstructorsRequest
     public ?string $classId = null;
 
     /**
+     * The company ID to filter by
      *
      * @var ?string $companyId
      */
@@ -34,6 +36,7 @@ class ListLmsInstructorsRequest
     public ?string $companyId = null;
 
     /**
+     * The course ID to filter by
      *
      * @var ?string $courseId
      */
@@ -56,6 +59,7 @@ class ListLmsInstructorsRequest
     public ?float $limit = null;
 
     /**
+     * The location ID to filter by
      *
      * @var ?string $locationId
      */
@@ -94,13 +98,6 @@ class ListLmsInstructorsRequest
 
     /**
      *
-     * @var ?string $sessionId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=session_id')]
-    public ?string $sessionId = null;
-
-    /**
-     *
      * @var ?string $sort
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
@@ -126,12 +123,11 @@ class ListLmsInstructorsRequest
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $raw
-     * @param  ?string  $sessionId
      * @param  ?string  $sort
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sessionId = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->classId = $classId;
@@ -144,7 +140,6 @@ class ListLmsInstructorsRequest
         $this->order = $order;
         $this->query = $query;
         $this->raw = $raw;
-        $this->sessionId = $sessionId;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
     }

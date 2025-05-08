@@ -20,6 +20,7 @@ class ListRepoCommitsRequest
     public string $connectionId;
 
     /**
+     * The repo branch ID to filter by
      *
      * @var ?string $branchId
      */
@@ -72,6 +73,7 @@ class ListRepoCommitsRequest
     public ?string $raw = null;
 
     /**
+     * The repo ID to filter by
      *
      * @var ?string $repoId
      */

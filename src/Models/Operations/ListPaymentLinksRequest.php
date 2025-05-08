@@ -20,6 +20,7 @@ class ListPaymentLinksRequest
     public string $connectionId;
 
     /**
+     * The contact ID to filter by
      *
      * @var ?string $contactId
      */
@@ -56,6 +57,7 @@ class ListPaymentLinksRequest
     public ?string $order = null;
 
     /**
+     * The payment ID to filter by
      *
      * @var ?string $paymentId
      */

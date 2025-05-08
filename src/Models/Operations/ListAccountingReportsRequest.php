@@ -20,6 +20,7 @@ class ListAccountingReportsRequest
     public string $connectionId;
 
     /**
+     * The end date to filter by
      *
      * @var ?string $endLe
      */
@@ -79,6 +80,7 @@ class ListAccountingReportsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by
      *
      * @var ?string $startGte
      */

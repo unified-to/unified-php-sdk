@@ -49,6 +49,7 @@ class ListKmsSpacesRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */

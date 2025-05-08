@@ -20,6 +20,7 @@ class ListLmsClassesRequest
     public string $connectionId;
 
     /**
+     * The course ID to filter by
      *
      * @var ?string $courseId
      */
@@ -42,6 +43,7 @@ class ListLmsClassesRequest
     public ?float $limit = null;
 
     /**
+     * The location ID to filter by
      *
      * @var ?string $locationId
      */

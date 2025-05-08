@@ -336,26 +336,32 @@ if ($response->accountingAccount !== null) {
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [createCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [createCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
+* [createCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [getCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
+* [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [listCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
+* [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [patchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
+* [patchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [removeCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [removeCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
+* [removeCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [updateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
+* [updateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 
 ### [commit](docs/sdks/commit/README.md)
 
@@ -1004,6 +1010,15 @@ if ($response->accountingAccount !== null) {
 * [patchRepoRepository](docs/sdks/repository/README.md#patchreporepository) - Update a repository
 * [removeRepoRepository](docs/sdks/repository/README.md#removereporepository) - Remove a repository
 * [updateRepoRepository](docs/sdks/repository/README.md#updatereporepository) - Update a repository
+
+### [review](docs/sdks/review/README.md)
+
+* [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
+* [getCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
+* [listCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
+* [patchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
+* [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
+* [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
 
 ### [scim](docs/sdks/scim/README.md)
 

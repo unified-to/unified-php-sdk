@@ -20,6 +20,7 @@ class ListCalendarRecordingsRequest
     public string $connectionId;
 
     /**
+     * The end date to filter by
      *
      * @var ?string $endLe
      */
@@ -27,6 +28,7 @@ class ListCalendarRecordingsRequest
     public ?string $endLe = null;
 
     /**
+     * The event ID to filter by
      *
      * @var ?string $eventId
      */
@@ -86,6 +88,7 @@ class ListCalendarRecordingsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by
      *
      * @var ?string $startGte
      */

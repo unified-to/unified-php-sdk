@@ -20,6 +20,7 @@ class ListUcCommentsRequest
     public string $connectionId;
 
     /**
+     * The call ID to filter by
      *
      * @var ?string $callId
      */
@@ -87,6 +88,7 @@ class ListUcCommentsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

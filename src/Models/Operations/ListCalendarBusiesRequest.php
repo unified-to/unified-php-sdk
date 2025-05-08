@@ -20,6 +20,7 @@ class ListCalendarBusiesRequest
     public string $connectionId;
 
     /**
+     * The calendar ID to filter by
      *
      * @var ?string $calendarId
      */
@@ -27,6 +28,7 @@ class ListCalendarBusiesRequest
     public ?string $calendarId = null;
 
     /**
+     * The end date to filter by
      *
      * @var ?string $endLe
      */
@@ -86,6 +88,7 @@ class ListCalendarBusiesRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by
      *
      * @var ?string $startGte
      */

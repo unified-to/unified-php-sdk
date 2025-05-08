@@ -20,6 +20,7 @@ class ListUcRecordingsRequest
     public string $connectionId;
 
     /**
+     * The call ID to filter by
      *
      * @var ?string $callId
      */
@@ -27,6 +28,15 @@ class ListUcRecordingsRequest
     public ?string $callId = null;
 
     /**
+     * The contact ID to filter by
+     *
+     * @var ?string $contactId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
+    public ?string $contactId = null;
+
+    /**
+     * The end date to filter by
      *
      * @var ?string $endLe
      */
@@ -86,6 +96,7 @@ class ListUcRecordingsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by
      *
      * @var ?string $startGte
      */
@@ -101,6 +112,7 @@ class ListUcRecordingsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */
@@ -110,6 +122,7 @@ class ListUcRecordingsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $callId
+     * @param  ?string  $contactId
      * @param  ?string  $endLe
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -123,10 +136,11 @@ class ListUcRecordingsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $callId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $callId = null, ?string $contactId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?\DateTime $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->callId = $callId;
+        $this->contactId = $contactId;
         $this->endLe = $endLe;
         $this->fields = $fields;
         $this->limit = $limit;

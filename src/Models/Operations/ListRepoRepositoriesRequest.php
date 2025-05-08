@@ -49,6 +49,7 @@ class ListRepoRepositoriesRequest
     public ?string $order = null;
 
     /**
+     * The org ID to filter by
      *
      * @var ?string $orgId
      */

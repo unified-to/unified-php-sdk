@@ -82,6 +82,8 @@ class UnifiedTo
 
     public Location $location;
 
+    public Review $review;
+
     public Crm $crm;
 
     public Deal $deal;
@@ -250,6 +252,7 @@ class UnifiedTo
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
+        $this->review = new Review($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);

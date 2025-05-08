@@ -72,6 +72,7 @@ class ListTaskCommentsRequest
     public ?string $sort = null;
 
     /**
+     * The task ID to filter by
      *
      * @var ?string $taskId
      */

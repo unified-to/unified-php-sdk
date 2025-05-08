@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 2625a6ddd69ded1a0dfa97e04747a5af
+  docChecksum: 1cbf51aa4a732ad7a3160606fa7ef127
   docVersion: "1.0"
   speakeasyVersion: 1.542.3
   generationVersion: 2.597.9
-  releaseVersion: 1.3.0
-  configChecksum: 59c453eb71bea23c9d1a36b37362fb8e
+  releaseVersion: 1.3.1
+  configChecksum: 8f4baf84e180f7f64cdef76ce6a9c520
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -68,6 +68,8 @@ generatedFiles:
   - docs/Models/Operations/CreateCommerceItemResponse.md
   - docs/Models/Operations/CreateCommerceLocationRequest.md
   - docs/Models/Operations/CreateCommerceLocationResponse.md
+  - docs/Models/Operations/CreateCommerceReviewRequest.md
+  - docs/Models/Operations/CreateCommerceReviewResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCrmContactRequest.md
@@ -211,6 +213,8 @@ generatedFiles:
   - docs/Models/Operations/GetCommerceItemResponse.md
   - docs/Models/Operations/GetCommerceLocationRequest.md
   - docs/Models/Operations/GetCommerceLocationResponse.md
+  - docs/Models/Operations/GetCommerceReviewRequest.md
+  - docs/Models/Operations/GetCommerceReviewResponse.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
   - docs/Models/Operations/GetCrmContactRequest.md
@@ -369,6 +373,8 @@ generatedFiles:
   - docs/Models/Operations/ListCommerceItemsResponse.md
   - docs/Models/Operations/ListCommerceLocationsRequest.md
   - docs/Models/Operations/ListCommerceLocationsResponse.md
+  - docs/Models/Operations/ListCommerceReviewsRequest.md
+  - docs/Models/Operations/ListCommerceReviewsResponse.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
   - docs/Models/Operations/ListCrmContactsRequest.md
@@ -528,6 +534,8 @@ generatedFiles:
   - docs/Models/Operations/PatchCommerceItemResponse.md
   - docs/Models/Operations/PatchCommerceLocationRequest.md
   - docs/Models/Operations/PatchCommerceLocationResponse.md
+  - docs/Models/Operations/PatchCommerceReviewRequest.md
+  - docs/Models/Operations/PatchCommerceReviewResponse.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
   - docs/Models/Operations/PatchCrmContactRequest.md
@@ -665,6 +673,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveCommerceItemResponse.md
   - docs/Models/Operations/RemoveCommerceLocationRequest.md
   - docs/Models/Operations/RemoveCommerceLocationResponse.md
+  - docs/Models/Operations/RemoveCommerceReviewRequest.md
+  - docs/Models/Operations/RemoveCommerceReviewResponse.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
   - docs/Models/Operations/RemoveCrmContactRequest.md
@@ -797,6 +807,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateCommerceItemResponse.md
   - docs/Models/Operations/UpdateCommerceLocationRequest.md
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
+  - docs/Models/Operations/UpdateCommerceReviewRequest.md
+  - docs/Models/Operations/UpdateCommerceReviewResponse.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
   - docs/Models/Operations/UpdateCrmContactRequest.md
@@ -1013,6 +1025,10 @@ generatedFiles:
   - docs/Models/Shared/CommerceMetadataSchemasValue42.md
   - docs/Models/Shared/CommerceMetadataSchemasValue52.md
   - docs/Models/Shared/CommerceMetadataValue.md
+  - docs/Models/Shared/CommerceReview.md
+  - docs/Models/Shared/CommerceReviewComment.md
+  - docs/Models/Shared/CommerceReviewCommentStatus.md
+  - docs/Models/Shared/CommerceReviewStatus.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/ContentType.md
   - docs/Models/Shared/CrmCompany.md
@@ -1431,6 +1447,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/review/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
@@ -1569,6 +1586,8 @@ generatedFiles:
   - src/Models/Operations/CreateCommerceItemResponse.php
   - src/Models/Operations/CreateCommerceLocationRequest.php
   - src/Models/Operations/CreateCommerceLocationResponse.php
+  - src/Models/Operations/CreateCommerceReviewRequest.php
+  - src/Models/Operations/CreateCommerceReviewResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
   - src/Models/Operations/CreateCrmContactRequest.php
@@ -1712,6 +1731,8 @@ generatedFiles:
   - src/Models/Operations/GetCommerceItemResponse.php
   - src/Models/Operations/GetCommerceLocationRequest.php
   - src/Models/Operations/GetCommerceLocationResponse.php
+  - src/Models/Operations/GetCommerceReviewRequest.php
+  - src/Models/Operations/GetCommerceReviewResponse.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
   - src/Models/Operations/GetCrmContactRequest.php
@@ -1870,6 +1891,8 @@ generatedFiles:
   - src/Models/Operations/ListCommerceItemsResponse.php
   - src/Models/Operations/ListCommerceLocationsRequest.php
   - src/Models/Operations/ListCommerceLocationsResponse.php
+  - src/Models/Operations/ListCommerceReviewsRequest.php
+  - src/Models/Operations/ListCommerceReviewsResponse.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
   - src/Models/Operations/ListCrmContactsRequest.php
@@ -2029,6 +2052,8 @@ generatedFiles:
   - src/Models/Operations/PatchCommerceItemResponse.php
   - src/Models/Operations/PatchCommerceLocationRequest.php
   - src/Models/Operations/PatchCommerceLocationResponse.php
+  - src/Models/Operations/PatchCommerceReviewRequest.php
+  - src/Models/Operations/PatchCommerceReviewResponse.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
   - src/Models/Operations/PatchCrmContactRequest.php
@@ -2166,6 +2191,8 @@ generatedFiles:
   - src/Models/Operations/RemoveCommerceItemResponse.php
   - src/Models/Operations/RemoveCommerceLocationRequest.php
   - src/Models/Operations/RemoveCommerceLocationResponse.php
+  - src/Models/Operations/RemoveCommerceReviewRequest.php
+  - src/Models/Operations/RemoveCommerceReviewResponse.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
   - src/Models/Operations/RemoveCrmContactRequest.php
@@ -2298,6 +2325,8 @@ generatedFiles:
   - src/Models/Operations/UpdateCommerceItemResponse.php
   - src/Models/Operations/UpdateCommerceLocationRequest.php
   - src/Models/Operations/UpdateCommerceLocationResponse.php
+  - src/Models/Operations/UpdateCommerceReviewRequest.php
+  - src/Models/Operations/UpdateCommerceReviewResponse.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
   - src/Models/Operations/UpdateCrmContactRequest.php
@@ -2500,6 +2529,10 @@ generatedFiles:
   - src/Models/Shared/CommerceMetadataSchemasValue32.php
   - src/Models/Shared/CommerceMetadataSchemasValue42.php
   - src/Models/Shared/CommerceMetadataSchemasValue52.php
+  - src/Models/Shared/CommerceReview.php
+  - src/Models/Shared/CommerceReviewComment.php
+  - src/Models/Shared/CommerceReviewCommentStatus.php
+  - src/Models/Shared/CommerceReviewStatus.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/ContentType.php
   - src/Models/Shared/CrmCompany.php
@@ -2835,6 +2868,7 @@ generatedFiles:
   - src/Repo.php
   - src/Report.php
   - src/Repository.php
+  - src/Review.php
   - src/SDKConfiguration.php
   - src/Scim.php
   - src/Scorecard.php
@@ -7160,5 +7194,65 @@ examples:
       responses:
         "200":
           application/json: {"content": "<value>"}
+  createCommerceReview:
+    speakeasy-default-create-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  getCommerceReview:
+    speakeasy-default-get-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  listCommerceReviews:
+    speakeasy-default-list-commerce-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"item_id": "<id>"}, {"item_id": "<id>"}, {"item_id": "<id>"}]
+  patchCommerceReview:
+    speakeasy-default-patch-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  removeCommerceReview:
+    speakeasy-default-remove-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceReview:
+    speakeasy-default-update-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
 examplesVersion: 1.0.1
 generatedTests: {}

@@ -35,6 +35,7 @@ class ListMartechMembersRequest
     public ?float $limit = null;
 
     /**
+     * The list ID to filter by
      *
      * @var ?string $listId
      */

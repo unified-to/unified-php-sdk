@@ -49,6 +49,7 @@ class ListTaskTasksRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */
@@ -56,6 +57,7 @@ class ListTaskTasksRequest
     public ?string $parentId = null;
 
     /**
+     * The project ID to filter by
      *
      * @var ?string $projectId
      */
@@ -94,6 +96,7 @@ class ListTaskTasksRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

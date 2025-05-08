@@ -72,6 +72,7 @@ class ListMetadataMetadatasRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
      *
      * @var ?string $type
      */

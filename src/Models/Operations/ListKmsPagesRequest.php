@@ -49,6 +49,7 @@ class ListKmsPagesRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */
@@ -79,6 +80,7 @@ class ListKmsPagesRequest
     public ?string $sort = null;
 
     /**
+     * The space ID to filter by
      *
      * @var ?string $spaceId
      */

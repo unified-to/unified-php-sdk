@@ -20,6 +20,7 @@ class ListTicketingNotesRequest
     public string $connectionId;
 
     /**
+     * The customer ID to filter by
      *
      * @var ?string $customerId
      */
@@ -79,6 +80,7 @@ class ListTicketingNotesRequest
     public ?string $sort = null;
 
     /**
+     * The ticket ID to filter by
      *
      * @var ?string $ticketId
      */

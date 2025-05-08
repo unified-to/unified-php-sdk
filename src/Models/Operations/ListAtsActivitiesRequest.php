@@ -20,6 +20,7 @@ class ListAtsActivitiesRequest
     public string $connectionId;
 
     /**
+     * The application ID to filter by
      *
      * @var ?string $applicationId
      */
@@ -27,6 +28,7 @@ class ListAtsActivitiesRequest
     public ?string $applicationId = null;
 
     /**
+     * The candidate ID to filter by
      *
      * @var ?string $candidateId
      */
@@ -34,6 +36,7 @@ class ListAtsActivitiesRequest
     public ?string $candidateId = null;
 
     /**
+     * The document ID to filter by
      *
      * @var ?string $documentId
      */
@@ -49,6 +52,7 @@ class ListAtsActivitiesRequest
     public ?array $fields = null;
 
     /**
+     * The interview ID to filter by
      *
      * @var ?string $interviewId
      */
@@ -56,6 +60,7 @@ class ListAtsActivitiesRequest
     public ?string $interviewId = null;
 
     /**
+     * The job ID to filter by
      *
      * @var ?string $jobId
      */
@@ -115,6 +120,7 @@ class ListAtsActivitiesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

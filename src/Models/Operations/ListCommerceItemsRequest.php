@@ -20,6 +20,7 @@ class ListCommerceItemsRequest
     public string $connectionId;
 
     /**
+     * The collection ID to filter by
      *
      * @var ?string $collectionId
      */

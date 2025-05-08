@@ -20,6 +20,7 @@ class ListAtsScorecardsRequest
     public string $connectionId;
 
     /**
+     * The application ID to filter by
      *
      * @var ?string $applicationId
      */
@@ -27,6 +28,7 @@ class ListAtsScorecardsRequest
     public ?string $applicationId = null;
 
     /**
+     * The candidate ID to filter by
      *
      * @var ?string $candidateId
      */
@@ -42,6 +44,7 @@ class ListAtsScorecardsRequest
     public ?array $fields = null;
 
     /**
+     * The interview ID to filter by
      *
      * @var ?string $interviewId
      */
@@ -49,6 +52,7 @@ class ListAtsScorecardsRequest
     public ?string $interviewId = null;
 
     /**
+     * The job ID to filter by
      *
      * @var ?string $jobId
      */

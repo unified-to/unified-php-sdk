@@ -49,6 +49,7 @@ class ListStorageFilesRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */
@@ -79,6 +80,7 @@ class ListStorageFilesRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
      *
      * @var ?string $type
      */

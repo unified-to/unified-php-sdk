@@ -49,6 +49,7 @@ class ListTaskProjectsRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */

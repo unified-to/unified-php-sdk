@@ -20,6 +20,7 @@ class ListAtsApplicationsRequest
     public string $connectionId;
 
     /**
+     * The candidate ID to filter by
      *
      * @var ?string $candidateId
      */
@@ -35,6 +36,7 @@ class ListAtsApplicationsRequest
     public ?array $fields = null;
 
     /**
+     * The job ID to filter by
      *
      * @var ?string $jobId
      */

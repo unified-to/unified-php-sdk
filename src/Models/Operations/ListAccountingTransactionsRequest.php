@@ -20,6 +20,7 @@ class ListAccountingTransactionsRequest
     public string $connectionId;
 
     /**
+     * The contact ID to filter by
      *
      * @var ?string $contactId
      */

@@ -20,6 +20,7 @@ class ListPaymentPaymentsRequest
     public string $connectionId;
 
     /**
+     * The contact ID to filter by
      *
      * @var ?string $contactId
      */
@@ -35,6 +36,7 @@ class ListPaymentPaymentsRequest
     public ?array $fields = null;
 
     /**
+     * The invoice ID to filter by
      *
      * @var ?string $invoiceId
      */

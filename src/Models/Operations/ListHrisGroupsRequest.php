@@ -20,6 +20,7 @@ class ListHrisGroupsRequest
     public string $connectionId;
 
     /**
+     * The company ID to filter by
      *
      * @var ?string $companyId
      */

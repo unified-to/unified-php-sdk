@@ -49,6 +49,7 @@ class ListKmsCommentsRequest
     public ?string $order = null;
 
     /**
+     * The page ID to filter by
      *
      * @var ?string $pageId
      */
@@ -56,6 +57,7 @@ class ListKmsCommentsRequest
     public ?string $pageId = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */
@@ -86,6 +88,7 @@ class ListKmsCommentsRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
      *
      * @var ?string $type
      */

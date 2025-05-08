@@ -20,6 +20,7 @@ class ListHrisPayslipsRequest
     public string $connectionId;
 
     /**
+     * The company ID to filter by
      *
      * @var ?string $companyId
      */
@@ -87,6 +88,7 @@ class ListHrisPayslipsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

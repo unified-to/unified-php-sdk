@@ -20,6 +20,7 @@ class ListCrmLeadsRequest
     public string $connectionId;
 
     /**
+     * The company ID to filter by
      *
      * @var ?string $companyId
      */
@@ -27,6 +28,7 @@ class ListCrmLeadsRequest
     public ?string $companyId = null;
 
     /**
+     * The contact ID to filter by
      *
      * @var ?string $contactId
      */
@@ -94,6 +96,7 @@ class ListCrmLeadsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

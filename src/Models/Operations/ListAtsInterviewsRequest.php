@@ -20,6 +20,7 @@ class ListAtsInterviewsRequest
     public string $connectionId;
 
     /**
+     * The application ID to filter by
      *
      * @var ?string $applicationId
      */

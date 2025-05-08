@@ -49,6 +49,7 @@ class ListPaymentRefundsRequest
     public ?string $order = null;
 
     /**
+     * The payment ID to filter by
      *
      * @var ?string $paymentId
      */

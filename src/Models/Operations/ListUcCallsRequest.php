@@ -20,6 +20,7 @@ class ListUcCallsRequest
     public string $connectionId;
 
     /**
+     * The contact ID to filter by
      *
      * @var ?string $contactId
      */
@@ -87,6 +88,7 @@ class ListUcCallsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

@@ -28,6 +28,7 @@ class ListCommerceInventoriesRequest
     public ?array $fields = null;
 
     /**
+     * The item variant ID to filter by
      *
      * @var ?string $itemVariantId
      */
@@ -42,6 +43,7 @@ class ListCommerceInventoriesRequest
     public ?float $limit = null;
 
     /**
+     * The location ID to filter by
      *
      * @var ?string $locationId
      */

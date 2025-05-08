@@ -20,6 +20,7 @@ class ListMessagingMessagesRequest
     public string $connectionId;
 
     /**
+     * The channel ID to filter by
      *
      * @var ?string $channelId
      */
@@ -27,6 +28,7 @@ class ListMessagingMessagesRequest
     public ?string $channelId = null;
 
     /**
+     * The end date to filter by
      *
      * @var ?string $endLe
      */
@@ -63,6 +65,7 @@ class ListMessagingMessagesRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
      *
      * @var ?string $parentId
      */
@@ -93,6 +96,7 @@ class ListMessagingMessagesRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by
      *
      * @var ?string $startGte
      */

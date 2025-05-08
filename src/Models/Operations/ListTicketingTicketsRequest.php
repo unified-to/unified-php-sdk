@@ -20,6 +20,7 @@ class ListTicketingTicketsRequest
     public string $connectionId;
 
     /**
+     * The customer ID to filter by
      *
      * @var ?string $customerId
      */
@@ -87,6 +88,7 @@ class ListTicketingTicketsRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

@@ -65,6 +65,7 @@ class ListRepoBranchesRequest
     public ?string $raw = null;
 
     /**
+     * The repo ID to filter by
      *
      * @var ?string $repoId
      */

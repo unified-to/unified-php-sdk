@@ -80,6 +80,7 @@ class ListHrisDevicesRequest
     public ?\DateTime $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
      *
      * @var ?string $userId
      */

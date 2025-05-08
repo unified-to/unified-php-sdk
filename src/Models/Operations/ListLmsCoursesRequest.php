@@ -20,6 +20,7 @@ class ListLmsCoursesRequest
     public string $connectionId;
 
     /**
+     * The class ID to filter by
      *
      * @var ?string $classId
      */
@@ -27,6 +28,7 @@ class ListLmsCoursesRequest
     public ?string $classId = null;
 
     /**
+     * The company ID to filter by
      *
      * @var ?string $companyId
      */
@@ -34,6 +36,7 @@ class ListLmsCoursesRequest
     public ?string $companyId = null;
 
     /**
+     * The course ID to filter by
      *
      * @var ?string $courseId
      */
