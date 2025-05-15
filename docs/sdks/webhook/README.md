@@ -189,7 +189,7 @@ $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::CrmPipeline,
+        objectType: Shared\ObjectType::CrmLead,
     ),
     id: '<id>',
 );

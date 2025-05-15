@@ -44,14 +44,13 @@ class Integration
     public ?float $activeHealthyConnections = null;
 
     /**
-     * $api
      *
-     * @var ?array<string, mixed> $api
+     * @var Integration1|string|IntegrationSchemasApi22|float|IntegrationSchemasApi32|bool|IntegrationSchemasApi2|array<mixed>|IntegrationSchemasApi52|null $api
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('api')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Integration1|string|\Unified\Unified_to\Models\Shared\IntegrationSchemasApi22|float|\Unified\Unified_to\Models\Shared\IntegrationSchemasApi32|bool|\Unified\Unified_to\Models\Shared\IntegrationSchemasApi2|array<mixed>|\Unified\Unified_to\Models\Shared\IntegrationSchemasApi52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $api = null;
+    public Integration1|string|IntegrationSchemasApi22|float|IntegrationSchemasApi32|bool|IntegrationSchemasApi2|array|IntegrationSchemasApi52|null $api = null;
 
     /**
      *
@@ -135,6 +134,15 @@ class Integration
 
     /**
      *
+     * @var IntegrationSchemas1|string|IntegrationSchemasPartnership2|float|IntegrationSchemasPartnership32|bool|IntegrationSchemasPartnership42|array<mixed>|IntegrationSchemasPartnership52|null $partnership
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('partnership')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IntegrationSchemas1|string|\Unified\Unified_to\Models\Shared\IntegrationSchemasPartnership2|float|\Unified\Unified_to\Models\Shared\IntegrationSchemasPartnership32|bool|\Unified\Unified_to\Models\Shared\IntegrationSchemasPartnership42|array<mixed>|\Unified\Unified_to\Models\Shared\IntegrationSchemasPartnership52|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public IntegrationSchemas1|string|IntegrationSchemasPartnership2|float|IntegrationSchemasPartnership32|bool|IntegrationSchemasPartnership42|array|IntegrationSchemasPartnership52|null $partnership = null;
+
+    /**
+     *
      * @var ?float $popularity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('popularity')]
@@ -150,12 +158,21 @@ class Integration
     public ?string $rateLimitDescription = null;
 
     /**
+     *
+     * @var IntegrationSchemasSandbox1|string|IntegrationSchemasSandbox22|float|IntegrationSchemasSandbox32|bool|IntegrationSchemasSandbox42|array<mixed>|IntegrationSchemasSandbox52|null $sandbox
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sandbox')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1|string|\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox22|float|\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox32|bool|\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox42|array<mixed>|\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox52|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public IntegrationSchemasSandbox1|string|IntegrationSchemasSandbox22|float|IntegrationSchemasSandbox32|bool|IntegrationSchemasSandbox42|array|IntegrationSchemasSandbox52|null $sandbox = null;
+
+    /**
      * $support
      *
-     * @var ?array<string, IntegrationSupport> $support
+     * @var ?array<string, mixed> $support
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('support')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $support = null;
 
@@ -216,7 +233,7 @@ class Integration
      * @param  string  $name
      * @param  string  $type
      * @param  ?float  $activeHealthyConnections
-     * @param  ?array<string, mixed>  $api
+     * @param  Integration1|string|IntegrationSchemasApi22|float|IntegrationSchemasApi32|bool|IntegrationSchemasApi2|array<mixed>|IntegrationSchemasApi52|null  $api
      * @param  ?string  $apiDocsUrl
      * @param  ?bool  $beta
      * @param  ?string  $color
@@ -227,9 +244,11 @@ class Integration
      * @param  ?bool  $inProgress
      * @param  ?bool  $isActive
      * @param  ?string  $logoUrl
+     * @param  IntegrationSchemas1|string|IntegrationSchemasPartnership2|float|IntegrationSchemasPartnership32|bool|IntegrationSchemasPartnership42|array<mixed>|IntegrationSchemasPartnership52|null  $partnership
      * @param  ?float  $popularity
      * @param  ?string  $rateLimitDescription
-     * @param  ?array<string, IntegrationSupport>  $support
+     * @param  IntegrationSchemasSandbox1|string|IntegrationSchemasSandbox22|float|IntegrationSchemasSandbox32|bool|IntegrationSchemasSandbox42|array<mixed>|IntegrationSchemasSandbox52|null  $sandbox
+     * @param  ?array<string, mixed>  $support
      * @param  ?\DateTime  $testedAt
      * @param  ?string  $textColor
      * @param  ?array<string>  $tokenInstructions
@@ -238,7 +257,7 @@ class Integration
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, ?array $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, Integration1|string|IntegrationSchemasApi22|float|IntegrationSchemasApi32|bool|IntegrationSchemasApi2|array|IntegrationSchemasApi52|null $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, IntegrationSchemas1|string|IntegrationSchemasPartnership2|float|IntegrationSchemasPartnership32|bool|IntegrationSchemasPartnership42|array|IntegrationSchemasPartnership52|null $partnership = null, ?float $popularity = null, ?string $rateLimitDescription = null, IntegrationSchemasSandbox1|string|IntegrationSchemasSandbox22|float|IntegrationSchemasSandbox32|bool|IntegrationSchemasSandbox42|array|IntegrationSchemasSandbox52|null $sandbox = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->categories = $categories;
         $this->name = $name;
@@ -255,8 +274,10 @@ class Integration
         $this->inProgress = $inProgress;
         $this->isActive = $isActive;
         $this->logoUrl = $logoUrl;
+        $this->partnership = $partnership;
         $this->popularity = $popularity;
         $this->rateLimitDescription = $rateLimitDescription;
+        $this->sandbox = $sandbox;
         $this->support = $support;
         $this->testedAt = $testedAt;
         $this->textColor = $textColor;

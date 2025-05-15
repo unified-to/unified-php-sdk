@@ -1340,7 +1340,7 @@ use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
-    ->setServerURL('https://api.unified.to')
+    ->setServerURL('https://api-au.unified.to')
     ->setSecurity(
         '<YOUR_API_KEY_HERE>'
     )
