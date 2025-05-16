@@ -49,6 +49,14 @@ class ListTaskProjectsRequest
     public ?string $order = null;
 
     /**
+     * The org ID to filter by
+     *
+     * @var ?string $orgId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
+    public ?string $orgId = null;
+
+    /**
      * The parent ID to filter by
      *
      * @var ?string $parentId
@@ -93,6 +101,7 @@ class ListTaskProjectsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orgId
      * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
@@ -100,13 +109,14 @@ class ListTaskProjectsRequest
      * @param  ?\DateTime  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orgId = $orgId;
         $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
