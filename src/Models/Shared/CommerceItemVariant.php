@@ -175,10 +175,10 @@ class CommerceItemVariant
     /**
      * $tags
      *
-     * @var ?array<string> $tags
+     * @var ?array<PropertyCommerceItemVariantTags> $tags
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyCommerceItemVariantTags>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
@@ -235,7 +235,7 @@ class CommerceItemVariant
      * @param  ?bool  $requiresShipping
      * @param  ?SizeUnit  $sizeUnit
      * @param  ?string  $sku
-     * @param  ?array<string>  $tags
+     * @param  ?array<PropertyCommerceItemVariantTags>  $tags
      * @param  ?float  $totalStock
      * @param  ?float  $weight
      * @param  ?WeightUnit  $weightUnit

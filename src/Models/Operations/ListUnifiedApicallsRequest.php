@@ -97,10 +97,10 @@ class ListUnifiedApicallsRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * Filter the results to just this webhook
@@ -122,11 +122,11 @@ class ListUnifiedApicallsRequest
      * @param  ?string  $order
      * @param  ?string  $sort
      * @param  ?string  $type
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @param  ?string  $webhookId
      * @phpstan-pure
      */
-    public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?bool $isBillable = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $webhookId = null)
+    public function __construct(?string $connectionId = null, ?string $env = null, ?bool $error = null, ?string $externalXref = null, ?string $integrationType = null, ?bool $isBillable = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null, ?string $webhookId = null)
     {
         $this->connectionId = $connectionId;
         $this->env = $env;

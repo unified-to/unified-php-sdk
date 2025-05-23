@@ -34,11 +34,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Metadata,
+        Shared\PropertyConnectionCategories::Passthrough,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::MartechListWrite,
+        Shared\PropertyConnectionPermissions::CrmContactWrite,
     ],
 );
 
@@ -187,11 +187,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Messaging,
+            Shared\PropertyConnectionCategories::Uc,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::EnrichCompanyRead,
+            Shared\PropertyConnectionPermissions::TicketingCustomerWrite,
         ],
     ),
     id: '<id>',
@@ -295,11 +295,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Scim,
+            Shared\PropertyConnectionCategories::Hris,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::CalendarRecordingWrite,
+            Shared\PropertyConnectionPermissions::HrisDeviceRead,
         ],
     ),
     id: '<id>',

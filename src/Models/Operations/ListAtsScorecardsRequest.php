@@ -106,10 +106,10 @@ class ListAtsScorecardsRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * @param  string  $connectionId
@@ -124,10 +124,10 @@ class ListAtsScorecardsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;

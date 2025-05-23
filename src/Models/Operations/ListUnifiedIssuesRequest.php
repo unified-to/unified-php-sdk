@@ -42,20 +42,20 @@ class ListUnifiedIssuesRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->limit = $limit;
         $this->offset = $offset;

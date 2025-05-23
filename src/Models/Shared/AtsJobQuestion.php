@@ -45,10 +45,10 @@ class AtsJobQuestion
     /**
      * $options
      *
-     * @var ?array<string> $options
+     * @var ?array<PropertyAtsJobQuestionOptions> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsJobQuestionOptions>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
 
@@ -73,7 +73,7 @@ class AtsJobQuestion
      * @param  AtsJobQuestionType  $type
      * @param  ?string  $description
      * @param  ?string  $id
-     * @param  ?array<string>  $options
+     * @param  ?array<PropertyAtsJobQuestionOptions>  $options
      * @param  ?string  $prompt
      * @param  ?bool  $required
      * @phpstan-pure

@@ -65,10 +65,10 @@ class ListUnifiedConnectionsRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * @param  ?array<Categories>  $categories
@@ -78,10 +78,10 @@ class ListUnifiedConnectionsRequest
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?string $env = null, ?string $externalXref = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?array $categories = null, ?string $env = null, ?string $externalXref = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->categories = $categories;
         $this->env = $env;

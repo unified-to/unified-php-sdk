@@ -126,6 +126,24 @@ class CalendarEvent
     public ?array $raw = null;
 
     /**
+     * $recurrence
+     *
+     * @var ?array<CalendarEventRecurrence> $recurrence
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('recurrence')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $recurrence = null;
+
+    /**
+     *
+     * @var ?string $recurringEventId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_event_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $recurringEventId = null;
+
+    /**
      *
      * @var ?CalendarEventStatus $status
      */
@@ -173,13 +191,15 @@ class CalendarEvent
      * @param  ?string  $notes
      * @param  ?PropertyCalendarEventOrganizer  $organizer
      * @param  ?array<string, mixed>  $raw
+     * @param  ?array<CalendarEventRecurrence>  $recurrence
+     * @param  ?string  $recurringEventId
      * @param  ?CalendarEventStatus  $status
      * @param  ?string  $timezone
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $endAt, string $startAt, string $subject, ?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?CalendarEventStatus $status = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(string $endAt, string $startAt, string $subject, ?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?CalendarEventStatus $status = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->endAt = $endAt;
         $this->startAt = $startAt;
@@ -195,6 +215,8 @@ class CalendarEvent
         $this->notes = $notes;
         $this->organizer = $organizer;
         $this->raw = $raw;
+        $this->recurrence = $recurrence;
+        $this->recurringEventId = $recurringEventId;
         $this->status = $status;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;

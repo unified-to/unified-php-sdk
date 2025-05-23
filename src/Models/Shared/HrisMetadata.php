@@ -22,6 +22,15 @@ class HrisMetadata
 
     /**
      *
+     * @var ?HrisMetadataFormat $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisMetadataFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?HrisMetadataFormat $format = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -71,6 +80,7 @@ class HrisMetadata
 
     /**
      * @param  HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array<mixed>|HrisMetadataSchemasExtraData52|null  $extraData
+     * @param  ?HrisMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
@@ -79,9 +89,10 @@ class HrisMetadata
      * @param  HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array<mixed>|HrisMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array|HrisMetadataSchemasExtraData52|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array|HrisMetadataSchemasValue52|null $value = null)
+    public function __construct(HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array|HrisMetadataSchemasExtraData52|null $extraData = null, ?HrisMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array|HrisMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
+        $this->format = $format;
         $this->id = $id;
         $this->key = $key;
         $this->namespace = $namespace;

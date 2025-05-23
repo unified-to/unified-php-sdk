@@ -112,12 +112,20 @@ class ListAtsActivitiesRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * The user/employee ID to filter by
@@ -141,11 +149,12 @@ class ListAtsActivitiesRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $type
+     * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?string $documentId = null, ?array $fields = null, ?string $interviewId = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;
@@ -160,6 +169,7 @@ class ListAtsActivitiesRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
     }

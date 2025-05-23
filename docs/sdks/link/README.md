@@ -41,7 +41,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateCalendarLinkRequest(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://sturdy-begonia.biz/',
+        url: 'https://misguided-thongs.info',
     ),
     connectionId: '<id>',
 );
@@ -343,7 +343,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchCalendarLinkRequest(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://curly-skyline.biz/',
+        url: 'https://warm-hexagon.name/',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -549,7 +549,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateCalendarLinkRequest(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://quiet-coordination.name',
+        url: 'https://partial-hydrocarbon.info',
     ),
     connectionId: '<id>',
     id: '<id>',

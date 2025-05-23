@@ -36,7 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
         title: '<value>',
-        type: Shared\KmsPageType::Html,
+        type: Shared\KmsPageType::Text,
     ),
     connectionId: '<id>',
 );
@@ -189,7 +189,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchKmsPageRequest(
     kmsPage: new Shared\KmsPage(
         title: '<value>',
-        type: Shared\KmsPageType::Text,
+        type: Shared\KmsPageType::Other,
     ),
     connectionId: '<id>',
     id: '<id>',

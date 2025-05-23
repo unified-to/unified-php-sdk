@@ -36,7 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreatePassthroughJsonRequest(
     connectionId: '<id>',
-    path: '/opt/lib',
+    path: '/var/log',
 );
 
 $response = $sdk->passthrough->createPassthroughJson(
@@ -86,7 +86,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreatePassthroughRawRequest(
     connectionId: '<id>',
-    path: '/etc/namedb',
+    path: '/var/log',
 );
 
 $response = $sdk->passthrough->createPassthroughRaw(
@@ -136,7 +136,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\ListPassthroughsRequest(
     connectionId: '<id>',
-    path: '/selinux',
+    path: '/System',
 );
 
 $response = $sdk->passthrough->listPassthroughs(
@@ -186,7 +186,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchPassthroughJsonRequest(
     connectionId: '<id>',
-    path: '/home/user',
+    path: '/System',
 );
 
 $response = $sdk->passthrough->patchPassthroughJson(
@@ -236,7 +236,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchPassthroughRawRequest(
     connectionId: '<id>',
-    path: '/etc/mail',
+    path: '/System',
 );
 
 $response = $sdk->passthrough->patchPassthroughRaw(
@@ -286,7 +286,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\RemovePassthroughRequest(
     connectionId: '<id>',
-    path: '/Applications',
+    path: '/bin',
 );
 
 $response = $sdk->passthrough->removePassthrough(
@@ -336,7 +336,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdatePassthroughJsonRequest(
     connectionId: '<id>',
-    path: '/etc/namedb',
+    path: '/var/tmp',
 );
 
 $response = $sdk->passthrough->updatePassthroughJson(
@@ -386,7 +386,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdatePassthroughRawRequest(
     connectionId: '<id>',
-    path: '/System',
+    path: '/var/tmp',
 );
 
 $response = $sdk->passthrough->updatePassthroughRaw(

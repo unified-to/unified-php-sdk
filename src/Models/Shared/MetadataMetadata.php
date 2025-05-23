@@ -35,12 +35,12 @@ class MetadataMetadata
 
     /**
      *
-     * @var ?Format $format
+     * @var ?MetadataMetadataFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Format|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataFormat|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Format $format = null;
+    public ?MetadataMetadataFormat $format = null;
 
     /**
      *
@@ -63,10 +63,10 @@ class MetadataMetadata
     /**
      * $options
      *
-     * @var ?array<string> $options
+     * @var ?array<PropertyMetadataMetadataOptions> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyMetadataMetadataOptions>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
 
@@ -108,17 +108,17 @@ class MetadataMetadata
      * @param  string  $name
      * @param  string  $objectType
      * @param  ?\DateTime  $createdAt
-     * @param  ?Format  $format
+     * @param  ?MetadataMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $objects
-     * @param  ?array<string>  $options
+     * @param  ?array<PropertyMetadataMetadataOptions>  $options
      * @param  ?string  $originalFormat
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?Format $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?MetadataMetadataFormat $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;

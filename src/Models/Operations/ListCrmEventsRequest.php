@@ -113,10 +113,10 @@ class ListCrmEventsRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * The user/employee ID to filter by
@@ -140,11 +140,11 @@ class ListCrmEventsRequest
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $type
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?string $leadId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?\DateTime $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?string $dealId = null, ?array $fields = null, ?string $leadId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;

@@ -22,6 +22,15 @@ class CommerceMetadata
 
     /**
      *
+     * @var ?CommerceMetadataFormat $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CommerceMetadataFormat $format = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -71,6 +80,7 @@ class CommerceMetadata
 
     /**
      * @param  CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array<mixed>|CommerceMetadataSchemasExtraData52|null  $extraData
+     * @param  ?CommerceMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
@@ -79,9 +89,10 @@ class CommerceMetadata
      * @param  CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array<mixed>|CommerceMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array|CommerceMetadataSchemasExtraData52|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array|CommerceMetadataSchemasValue52|null $value = null)
+    public function __construct(CommerceMetadata1|string|CommerceMetadataSchemasExtraData22|float|CommerceMetadataSchemasExtraData32|bool|CommerceMetadataSchemasExtraData2|array|CommerceMetadataSchemasExtraData52|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, CommerceMetadataSchemas1|string|CommerceMetadataSchemasValue2|float|CommerceMetadataSchemasValue32|bool|CommerceMetadataSchemasValue42|array|CommerceMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
+        $this->format = $format;
         $this->id = $id;
         $this->key = $key;
         $this->namespace = $namespace;

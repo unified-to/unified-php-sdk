@@ -48,11 +48,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Shared\Connection(
     categories: [
-        Shared\PropertyConnectionCategories::Metadata,
+        Shared\PropertyConnectionCategories::Passthrough,
     ],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::MartechListWrite,
+        Shared\PropertyConnectionPermissions::CrmContactWrite,
     ],
 );
 
@@ -106,7 +106,7 @@ $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::HrisTimeoff,
+        objectType: Shared\ObjectType::AtsScorecard,
     ),
 );
 
@@ -640,11 +640,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Messaging,
+            Shared\PropertyConnectionCategories::Uc,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::EnrichCompanyRead,
+            Shared\PropertyConnectionPermissions::TicketingCustomerWrite,
         ],
     ),
     id: '<id>',
@@ -699,8 +699,8 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::CrmLead,
+        event: Shared\Event::Updated,
+        objectType: Shared\ObjectType::TicketingCustomer,
     ),
     id: '<id>',
 );
@@ -901,11 +901,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Scim,
+            Shared\PropertyConnectionCategories::Hris,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::CalendarRecordingWrite,
+            Shared\PropertyConnectionPermissions::HrisDeviceRead,
         ],
     ),
     id: '<id>',
@@ -960,8 +960,8 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentPayout,
+        event: Shared\Event::Deleted,
+        objectType: Shared\ObjectType::MessagingChannel,
     ),
     id: '<id>',
 );

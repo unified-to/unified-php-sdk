@@ -22,10 +22,10 @@ class ListUnifiedWebhooksRequest
     /**
      * Return only results whose created date is equal or less to this value
      *
-     * @var ?\DateTime $createdLte
+     * @var ?string $createdLte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_lte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $createdLte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_lte')]
+    public ?string $createdLte = null;
 
     /**
      *
@@ -81,14 +81,14 @@ class ListUnifiedWebhooksRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * @param  ?string  $connectionId
-     * @param  ?\DateTime  $createdLte
+     * @param  ?string  $createdLte
      * @param  ?string  $env
      * @param  ?string  $integrationType
      * @param  ?float  $limit
@@ -96,10 +96,10 @@ class ListUnifiedWebhooksRequest
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?string $connectionId = null, ?\DateTime $createdLte = null, ?string $env = null, ?string $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?string $createdLte = null, ?string $env = null, ?string $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->createdLte = $createdLte;

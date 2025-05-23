@@ -41,7 +41,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateScimGroupsRequest(
     scimGroup: new Shared\ScimGroup(
-        displayName: 'Bert89',
+        displayName: 'Nina.Tremblay',
     ),
     connectionId: '<id>',
 );
@@ -343,7 +343,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchScimGroupsRequest(
     scimGroup: new Shared\ScimGroup(
-        displayName: 'Damon_Rutherford93',
+        displayName: 'Newell.Hoeger',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -549,7 +549,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateScimGroupsRequest(
     scimGroup: new Shared\ScimGroup(
-        displayName: 'Frederic.Reichel',
+        displayName: 'Reynold90',
     ),
     connectionId: '<id>',
     id: '<id>',

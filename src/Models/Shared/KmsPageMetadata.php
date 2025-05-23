@@ -13,10 +13,53 @@ class KmsPageMetadata
 {
     /**
      *
-     * @var string $name
+     * @var KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array<mixed>|KmsPageMetadataSchemasExtraData52|null $extraData
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
+    #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData52|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array|KmsPageMetadataSchemasExtraData52|null $extraData = null;
+
+    /**
+     *
+     * @var ?KmsPageMetadataFormat $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadataFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?KmsPageMetadataFormat $format = null;
+
+    /**
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $key
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $key = null;
+
+    /**
+     *
+     * @var ?string $namespace
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('namespace')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $namespace = null;
+
+    /**
+     *
+     * @var ?string $slug
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('slug')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $slug = null;
 
     /**
      *
@@ -28,21 +71,32 @@ class KmsPageMetadata
 
     /**
      *
-     * @var ?string $value
+     * @var KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array<mixed>|KmsPageMetadataSchemasValue52|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue52|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $value = null;
+    public KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array|KmsPageMetadataSchemasValue52|null $value = null;
 
     /**
-     * @param  string  $name
+     * @param  KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array<mixed>|KmsPageMetadataSchemasExtraData52|null  $extraData
+     * @param  ?KmsPageMetadataFormat  $format
+     * @param  ?string  $id
+     * @param  ?string  $key
+     * @param  ?string  $namespace
+     * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  ?string  $value
+     * @param  KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array<mixed>|KmsPageMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(string $name, ?string $type = null, ?string $value = null)
+    public function __construct(KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array|KmsPageMetadataSchemasExtraData52|null $extraData = null, ?KmsPageMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array|KmsPageMetadataSchemasValue52|null $value = null)
     {
-        $this->name = $name;
+        $this->extraData = $extraData;
+        $this->format = $format;
+        $this->id = $id;
+        $this->key = $key;
+        $this->namespace = $namespace;
+        $this->slug = $slug;
         $this->type = $type;
         $this->value = $value;
     }

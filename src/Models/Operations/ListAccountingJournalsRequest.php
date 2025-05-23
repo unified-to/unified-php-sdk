@@ -49,6 +49,14 @@ class ListAccountingJournalsRequest
     public ?string $order = null;
 
     /**
+     * The org ID to filter by
+     *
+     * @var ?string $orgId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
+    public ?string $orgId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -74,10 +82,10 @@ class ListAccountingJournalsRequest
     /**
      * Return only results whose updated date is equal or greater to this value
      *
-     * @var ?\DateTime $updatedGte
+     * @var ?string $updatedGte
      */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $updatedGte = null;
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=updated_gte')]
+    public ?string $updatedGte = null;
 
     /**
      * @param  string  $connectionId
@@ -85,19 +93,21 @@ class ListAccountingJournalsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orgId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?\DateTime  $updatedGte
+     * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?\DateTime $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orgId = $orgId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

@@ -22,6 +22,15 @@ class AtsMetadata
 
     /**
      *
+     * @var ?Format $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Format|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?Format $format = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -71,6 +80,7 @@ class AtsMetadata
 
     /**
      * @param  One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array<mixed>|AtsMetadataSchemasExtraData2|null  $extraData
+     * @param  ?Format  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
@@ -79,9 +89,10 @@ class AtsMetadata
      * @param  AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array<mixed>|AtsMetadataSchemasValue52|null  $value
      * @phpstan-pure
      */
-    public function __construct(One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array|AtsMetadataSchemasExtraData2|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array|AtsMetadataSchemasValue52|null $value = null)
+    public function __construct(One|string|AtsMetadataSchemasExtraData22|float|AtsMetadataSchemasExtraData32|bool|AtsMetadataSchemas2|array|AtsMetadataSchemasExtraData2|null $extraData = null, ?Format $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, AtsMetadata1|string|AtsMetadataSchemasValue2|float|AtsMetadataSchemasValue32|bool|AtsMetadataSchemasValue42|array|AtsMetadataSchemasValue52|null $value = null)
     {
         $this->extraData = $extraData;
+        $this->format = $format;
         $this->id = $id;
         $this->key = $key;
         $this->namespace = $namespace;

@@ -35,7 +35,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
-        available: 5165.08,
+        available: 7463.62,
     ),
     connectionId: '<id>',
 );
@@ -187,7 +187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
-        available: 615.23,
+        available: 7859.84,
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -291,7 +291,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
-        available: 9360.02,
+        available: 4497.29,
     ),
     connectionId: '<id>',
     id: '<id>',

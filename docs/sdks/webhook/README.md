@@ -39,7 +39,7 @@ $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::HrisTimeoff,
+        objectType: Shared\ObjectType::AtsScorecard,
     ),
 );
 
@@ -188,8 +188,8 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::CrmLead,
+        event: Shared\Event::Updated,
+        objectType: Shared\ObjectType::TicketingCustomer,
     ),
     id: '<id>',
 );
@@ -341,8 +341,8 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Created,
-        objectType: Shared\ObjectType::PaymentPayout,
+        event: Shared\Event::Deleted,
+        objectType: Shared\ObjectType::MessagingChannel,
     ),
     id: '<id>',
 );
