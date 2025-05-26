@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListHrisTimeoffsRequest
+class ListHrisTimeshiftsRequest
 {
     /**
      * ID of the connection
@@ -49,6 +49,14 @@ class ListHrisTimeoffsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
+
+    /**
+     * The location ID to filter by
+     *
+     * @var ?string $locationId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
+    public ?string $locationId = null;
 
     /**
      *
@@ -117,6 +125,7 @@ class ListHrisTimeoffsRequest
      * @param  ?string  $endLe
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
+     * @param  ?string  $locationId
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
@@ -127,13 +136,14 @@ class ListHrisTimeoffsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
         $this->endLe = $endLe;
         $this->fields = $fields;
         $this->limit = $limit;
+        $this->locationId = $locationId;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;

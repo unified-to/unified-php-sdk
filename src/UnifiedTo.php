@@ -114,6 +114,8 @@ class UnifiedTo
 
     public Timeoff $timeoff;
 
+    public Timeshift $timeshift;
+
     public Kms $kms;
 
     public Comment $comment;
@@ -268,6 +270,7 @@ class UnifiedTo
         $this->group = new Group($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
+        $this->timeshift = new Timeshift($this->sdkConfiguration);
         $this->kms = new Kms($this->sdkConfiguration);
         $this->comment = new Comment($this->sdkConfiguration);
         $this->page = new Page($this->sdkConfiguration);

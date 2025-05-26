@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0410d1777305583960db5f8722b2f00f
+  docChecksum: 22dac4e470df3ae38d82ad39b894304a
   docVersion: "1.0"
-  speakeasyVersion: 1.550.0
+  speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 1.3.4
-  configChecksum: a721c7584c8f417d13297f902ddaf0da
+  releaseVersion: 1.3.5
+  configChecksum: d64619a4792acd2c73da4a3c438bf96b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -94,6 +94,8 @@ generatedFiles:
   - docs/Models/Operations/CreateHrisGroupResponse.md
   - docs/Models/Operations/CreateHrisLocationRequest.md
   - docs/Models/Operations/CreateHrisLocationResponse.md
+  - docs/Models/Operations/CreateHrisTimeshiftRequest.md
+  - docs/Models/Operations/CreateHrisTimeshiftResponse.md
   - docs/Models/Operations/CreateKmsCommentRequest.md
   - docs/Models/Operations/CreateKmsCommentResponse.md
   - docs/Models/Operations/CreateKmsPageRequest.md
@@ -241,6 +243,8 @@ generatedFiles:
   - docs/Models/Operations/GetHrisPayslipResponse.md
   - docs/Models/Operations/GetHrisTimeoffRequest.md
   - docs/Models/Operations/GetHrisTimeoffResponse.md
+  - docs/Models/Operations/GetHrisTimeshiftRequest.md
+  - docs/Models/Operations/GetHrisTimeshiftResponse.md
   - docs/Models/Operations/GetKmsCommentRequest.md
   - docs/Models/Operations/GetKmsCommentResponse.md
   - docs/Models/Operations/GetKmsPageRequest.md
@@ -407,6 +411,8 @@ generatedFiles:
   - docs/Models/Operations/ListHrisPayslipsResponse.md
   - docs/Models/Operations/ListHrisTimeoffsRequest.md
   - docs/Models/Operations/ListHrisTimeoffsResponse.md
+  - docs/Models/Operations/ListHrisTimeshiftsRequest.md
+  - docs/Models/Operations/ListHrisTimeshiftsResponse.md
   - docs/Models/Operations/ListKmsCommentsRequest.md
   - docs/Models/Operations/ListKmsCommentsResponse.md
   - docs/Models/Operations/ListKmsPagesRequest.md
@@ -558,6 +564,8 @@ generatedFiles:
   - docs/Models/Operations/PatchHrisGroupResponse.md
   - docs/Models/Operations/PatchHrisLocationRequest.md
   - docs/Models/Operations/PatchHrisLocationResponse.md
+  - docs/Models/Operations/PatchHrisTimeshiftRequest.md
+  - docs/Models/Operations/PatchHrisTimeshiftResponse.md
   - docs/Models/Operations/PatchKmsCommentRequest.md
   - docs/Models/Operations/PatchKmsCommentResponse.md
   - docs/Models/Operations/PatchKmsPageRequest.md
@@ -697,6 +705,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveHrisGroupResponse.md
   - docs/Models/Operations/RemoveHrisLocationRequest.md
   - docs/Models/Operations/RemoveHrisLocationResponse.md
+  - docs/Models/Operations/RemoveHrisTimeshiftRequest.md
+  - docs/Models/Operations/RemoveHrisTimeshiftResponse.md
   - docs/Models/Operations/RemoveKmsCommentRequest.md
   - docs/Models/Operations/RemoveKmsCommentResponse.md
   - docs/Models/Operations/RemoveKmsPageRequest.md
@@ -831,6 +841,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateHrisGroupResponse.md
   - docs/Models/Operations/UpdateHrisLocationRequest.md
   - docs/Models/Operations/UpdateHrisLocationResponse.md
+  - docs/Models/Operations/UpdateHrisTimeshiftRequest.md
+  - docs/Models/Operations/UpdateHrisTimeshiftResponse.md
   - docs/Models/Operations/UpdateKmsCommentRequest.md
   - docs/Models/Operations/UpdateKmsCommentResponse.md
   - docs/Models/Operations/UpdateKmsPageRequest.md
@@ -1135,6 +1147,7 @@ generatedFiles:
   - docs/Models/Shared/HrisTimeoff.md
   - docs/Models/Shared/HrisTimeoffStatus.md
   - docs/Models/Shared/HrisTimeoffType.md
+  - docs/Models/Shared/HrisTimeshift.md
   - docs/Models/Shared/Integration.md
   - docs/Models/Shared/Integration1.md
   - docs/Models/Shared/Integration2.md
@@ -1459,6 +1472,7 @@ generatedFiles:
   - docs/sdks/ticket/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
@@ -1612,6 +1626,8 @@ generatedFiles:
   - src/Models/Operations/CreateHrisGroupResponse.php
   - src/Models/Operations/CreateHrisLocationRequest.php
   - src/Models/Operations/CreateHrisLocationResponse.php
+  - src/Models/Operations/CreateHrisTimeshiftRequest.php
+  - src/Models/Operations/CreateHrisTimeshiftResponse.php
   - src/Models/Operations/CreateKmsCommentRequest.php
   - src/Models/Operations/CreateKmsCommentResponse.php
   - src/Models/Operations/CreateKmsPageRequest.php
@@ -1759,6 +1775,8 @@ generatedFiles:
   - src/Models/Operations/GetHrisPayslipResponse.php
   - src/Models/Operations/GetHrisTimeoffRequest.php
   - src/Models/Operations/GetHrisTimeoffResponse.php
+  - src/Models/Operations/GetHrisTimeshiftRequest.php
+  - src/Models/Operations/GetHrisTimeshiftResponse.php
   - src/Models/Operations/GetKmsCommentRequest.php
   - src/Models/Operations/GetKmsCommentResponse.php
   - src/Models/Operations/GetKmsPageRequest.php
@@ -1925,6 +1943,8 @@ generatedFiles:
   - src/Models/Operations/ListHrisPayslipsResponse.php
   - src/Models/Operations/ListHrisTimeoffsRequest.php
   - src/Models/Operations/ListHrisTimeoffsResponse.php
+  - src/Models/Operations/ListHrisTimeshiftsRequest.php
+  - src/Models/Operations/ListHrisTimeshiftsResponse.php
   - src/Models/Operations/ListKmsCommentsRequest.php
   - src/Models/Operations/ListKmsCommentsResponse.php
   - src/Models/Operations/ListKmsPagesRequest.php
@@ -2076,6 +2096,8 @@ generatedFiles:
   - src/Models/Operations/PatchHrisGroupResponse.php
   - src/Models/Operations/PatchHrisLocationRequest.php
   - src/Models/Operations/PatchHrisLocationResponse.php
+  - src/Models/Operations/PatchHrisTimeshiftRequest.php
+  - src/Models/Operations/PatchHrisTimeshiftResponse.php
   - src/Models/Operations/PatchKmsCommentRequest.php
   - src/Models/Operations/PatchKmsCommentResponse.php
   - src/Models/Operations/PatchKmsPageRequest.php
@@ -2215,6 +2237,8 @@ generatedFiles:
   - src/Models/Operations/RemoveHrisGroupResponse.php
   - src/Models/Operations/RemoveHrisLocationRequest.php
   - src/Models/Operations/RemoveHrisLocationResponse.php
+  - src/Models/Operations/RemoveHrisTimeshiftRequest.php
+  - src/Models/Operations/RemoveHrisTimeshiftResponse.php
   - src/Models/Operations/RemoveKmsCommentRequest.php
   - src/Models/Operations/RemoveKmsCommentResponse.php
   - src/Models/Operations/RemoveKmsPageRequest.php
@@ -2349,6 +2373,8 @@ generatedFiles:
   - src/Models/Operations/UpdateHrisGroupResponse.php
   - src/Models/Operations/UpdateHrisLocationRequest.php
   - src/Models/Operations/UpdateHrisLocationResponse.php
+  - src/Models/Operations/UpdateHrisTimeshiftRequest.php
+  - src/Models/Operations/UpdateHrisTimeshiftResponse.php
   - src/Models/Operations/UpdateKmsCommentRequest.php
   - src/Models/Operations/UpdateKmsCommentResponse.php
   - src/Models/Operations/UpdateKmsPageRequest.php
@@ -2615,6 +2641,7 @@ generatedFiles:
   - src/Models/Shared/HrisTimeoff.php
   - src/Models/Shared/HrisTimeoffStatus.php
   - src/Models/Shared/HrisTimeoffType.php
+  - src/Models/Shared/HrisTimeshift.php
   - src/Models/Shared/Integration.php
   - src/Models/Shared/Integration1.php
   - src/Models/Shared/IntegrationSchemas1.php
@@ -2856,6 +2883,7 @@ generatedFiles:
   - src/Ticket.php
   - src/Ticketing.php
   - src/Timeoff.php
+  - src/Timeshift.php
   - src/Transaction.php
   - src/Uc.php
   - src/Unified.php
@@ -6880,5 +6908,60 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisTimeshift:
+    speakeasy-default-create-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisTimeshift:
+    speakeasy-default-get-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisTimeshifts:
+    speakeasy-default-list-hris-timeshifts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchHrisTimeshift:
+    speakeasy-default-patch-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisTimeshift:
+    speakeasy-default-remove-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisTimeshift:
+    speakeasy-default-update-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

@@ -569,6 +569,7 @@ if ($response->accountingAccount !== null) {
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [getHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
@@ -576,6 +577,7 @@ if ($response->accountingAccount !== null) {
 * [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
+* [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [listHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
@@ -583,21 +585,25 @@ if ($response->accountingAccount !== null) {
 * [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
+* [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [patchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [removeHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [updateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
 ### [instructor](docs/sdks/instructor/README.md)
 
@@ -1144,6 +1150,15 @@ if ($response->accountingAccount !== null) {
 
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
+
+### [timeshift](docs/sdks/timeshift/README.md)
+
+* [createHrisTimeshift](docs/sdks/timeshift/README.md#createhristimeshift) - Create a timeshift
+* [getHrisTimeshift](docs/sdks/timeshift/README.md#gethristimeshift) - Retrieve a timeshift
+* [listHrisTimeshifts](docs/sdks/timeshift/README.md#listhristimeshifts) - List all timeshifts
+* [patchHrisTimeshift](docs/sdks/timeshift/README.md#patchhristimeshift) - Update a timeshift
+* [removeHrisTimeshift](docs/sdks/timeshift/README.md#removehristimeshift) - Remove a timeshift
+* [updateHrisTimeshift](docs/sdks/timeshift/README.md#updatehristimeshift) - Update a timeshift
 
 ### [transaction](docs/sdks/transaction/README.md)
 
