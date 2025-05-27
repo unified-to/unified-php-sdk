@@ -67,6 +67,14 @@ class MessagingMessage
     public ?array $destinationMembers = null;
 
     /**
+     *
+     * @var ?bool $hasChildren
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_children')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasChildren = null;
+
+    /**
      * $hiddenMembers
      *
      * @var ?array<MessagingMember> $hiddenMembers
@@ -175,6 +183,7 @@ class MessagingMessage
      * @param  ?array<string>  $channelIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<MessagingMember>  $destinationMembers
+     * @param  ?bool  $hasChildren
      * @param  ?array<MessagingMember>  $hiddenMembers
      * @param  ?string  $id
      * @param  ?array<MessagingMember>  $mentionedMembers
@@ -189,7 +198,7 @@ class MessagingMessage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $parentMessageId = null, ?array $raw = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
@@ -197,6 +206,7 @@ class MessagingMessage
         $this->channelIds = $channelIds;
         $this->createdAt = $createdAt;
         $this->destinationMembers = $destinationMembers;
+        $this->hasChildren = $hasChildren;
         $this->hiddenMembers = $hiddenMembers;
         $this->id = $id;
         $this->mentionedMembers = $mentionedMembers;
