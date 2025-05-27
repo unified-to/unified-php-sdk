@@ -12,27 +12,6 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarEvent
 {
     /**
-     *
-     * @var string $endAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
-    public string $endAt;
-
-    /**
-     *
-     * @var string $startAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
-    public string $startAt;
-
-    /**
-     *
-     * @var string $subject
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
-    public string $subject;
-
-    /**
      * $attendees
      *
      * @var ?array<CalendarAttendee> $attendees
@@ -57,6 +36,14 @@ class CalendarEvent
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $createdAt = null;
+
+    /**
+     *
+     * @var ?string $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $endAt = null;
 
     /**
      *
@@ -145,12 +132,28 @@ class CalendarEvent
 
     /**
      *
+     * @var ?string $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $startAt = null;
+
+    /**
+     *
      * @var ?CalendarEventStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CalendarEventStatus $status = null;
+
+    /**
+     *
+     * @var ?string $subject
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $subject = null;
 
     /**
      *
@@ -177,12 +180,10 @@ class CalendarEvent
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $endAt
-     * @param  string  $startAt
-     * @param  string  $subject
      * @param  ?array<CalendarAttendee>  $attendees
      * @param  ?string  $calendarId
      * @param  ?string  $createdAt
+     * @param  ?string  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isAllDay
      * @param  ?bool  $isFree
@@ -193,20 +194,20 @@ class CalendarEvent
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<CalendarEventRecurrence>  $recurrence
      * @param  ?string  $recurringEventId
+     * @param  ?string  $startAt
      * @param  ?CalendarEventStatus  $status
+     * @param  ?string  $subject
      * @param  ?string  $timezone
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $endAt, string $startAt, string $subject, ?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?CalendarEventStatus $status = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $endAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
-        $this->endAt = $endAt;
-        $this->startAt = $startAt;
-        $this->subject = $subject;
         $this->attendees = $attendees;
         $this->calendarId = $calendarId;
         $this->createdAt = $createdAt;
+        $this->endAt = $endAt;
         $this->id = $id;
         $this->isAllDay = $isAllDay;
         $this->isFree = $isFree;
@@ -217,7 +218,9 @@ class CalendarEvent
         $this->raw = $raw;
         $this->recurrence = $recurrence;
         $this->recurringEventId = $recurringEventId;
+        $this->startAt = $startAt;
         $this->status = $status;
+        $this->subject = $subject;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;
         $this->webUrl = $webUrl;

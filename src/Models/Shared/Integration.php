@@ -195,10 +195,10 @@ class Integration
     /**
      * instructions for the user on how to find the token/key
      *
-     * @var ?array<PropertyIntegrationTokenInstructions> $tokenInstructions
+     * @var ?array<string> $tokenInstructions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('token_instructions')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationTokenInstructions>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tokenInstructions = null;
 
@@ -251,7 +251,7 @@ class Integration
      * @param  ?array<string, mixed>  $support
      * @param  ?\DateTime  $testedAt
      * @param  ?string  $textColor
-     * @param  ?array<PropertyIntegrationTokenInstructions>  $tokenInstructions
+     * @param  ?array<string>  $tokenInstructions
      * @param  ?array<string>  $tokenNames
      * @param  ?string  $updatedAt
      * @param  ?string  $webUrl

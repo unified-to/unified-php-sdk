@@ -58,10 +58,10 @@ class AtsJob
     /**
      * @deprecated Use `groups` instead
      *
-     * @var ?array<PropertyAtsJobDepartments> $departments
+     * @var ?array<string> $departments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('departments')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsJobDepartments>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $departments = null;
 
@@ -167,10 +167,10 @@ class AtsJob
     /**
      * URLs for pages containing public listings for the job
      *
-     * @var ?array<PropertyAtsJobPublicJobUrls> $publicJobUrls
+     * @var ?array<string> $publicJobUrls
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('public_job_urls')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsJobPublicJobUrls>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $publicJobUrls = null;
 
@@ -235,7 +235,7 @@ class AtsJob
      * @param  ?string  $companyId
      * @param  ?array<AtsCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<PropertyAtsJobDepartments>  $departments
+     * @param  ?array<string>  $departments
      * @param  ?string  $description
      * @param  ?EmploymentType  $employmentType
      * @param  ?array<AtsGroup>  $groups
@@ -247,7 +247,7 @@ class AtsJob
      * @param  ?float  $numberOfOpenings
      * @param  ?array<AtsJobOpening>  $openings
      * @param  ?array<AtsJobPosting>  $postings
-     * @param  ?array<PropertyAtsJobPublicJobUrls>  $publicJobUrls
+     * @param  ?array<string>  $publicJobUrls
      * @param  ?array<AtsJobQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $recruiterIds

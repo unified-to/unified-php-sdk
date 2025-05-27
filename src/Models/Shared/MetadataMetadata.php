@@ -63,10 +63,10 @@ class MetadataMetadata
     /**
      * $options
      *
-     * @var ?array<PropertyMetadataMetadataOptions> $options
+     * @var ?array<string> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyMetadataMetadataOptions>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
 
@@ -111,7 +111,7 @@ class MetadataMetadata
      * @param  ?MetadataMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $objects
-     * @param  ?array<PropertyMetadataMetadataOptions>  $options
+     * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug

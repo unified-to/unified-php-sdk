@@ -21,10 +21,10 @@ class CommerceItemOption
     /**
      * $values
      *
-     * @var array<PropertyCommerceItemOptionValues> $values
+     * @var array<string> $values
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('values')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyCommerceItemOptionValues>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
     public array $values;
 
     /**
@@ -45,7 +45,7 @@ class CommerceItemOption
 
     /**
      * @param  string  $name
-     * @param  array<PropertyCommerceItemOptionValues>  $values
+     * @param  array<string>  $values
      * @param  ?string  $id
      * @param  ?float  $position
      * @phpstan-pure

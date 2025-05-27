@@ -14,10 +14,10 @@ class AtsApplicationAnswer
     /**
      * $answers
      *
-     * @var array<PropertyAtsApplicationAnswerAnswers> $answers
+     * @var array<string> $answers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsApplicationAnswerAnswers>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
     public array $answers;
 
     /**
@@ -28,7 +28,7 @@ class AtsApplicationAnswer
     public string $questionId;
 
     /**
-     * @param  array<PropertyAtsApplicationAnswerAnswers>  $answers
+     * @param  array<string>  $answers
      * @param  string  $questionId
      * @phpstan-pure
      */

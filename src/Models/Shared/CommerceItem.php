@@ -134,10 +134,10 @@ class CommerceItem
     /**
      * $tags
      *
-     * @var ?array<PropertyCommerceItemTags> $tags
+     * @var ?array<string> $tags
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyCommerceItemTags>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
@@ -190,7 +190,7 @@ class CommerceItem
      * @param  ?string  $publicName
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
-     * @param  ?array<PropertyCommerceItemTags>  $tags
+     * @param  ?array<string>  $tags
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<CommerceItemVariant>  $variants

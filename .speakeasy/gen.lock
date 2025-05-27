@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5d7224eae5351ceaef9292fed7b8c35a
+  docChecksum: d14d19d0a1732100e72235d3371aa316
   docVersion: "1.0"
-  speakeasyVersion: 1.551.0
+  speakeasyVersion: 1.552.0
   generationVersion: 2.610.0
-  releaseVersion: 1.3.6
-  configChecksum: ec9d2248341d0b3868b17f9ead17117a
+  releaseVersion: 1.3.7
+  configChecksum: c2ea4a547180b3a82aef855806cdb14e
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1254,26 +1254,14 @@ generatedFiles:
   - docs/Models/Shared/PropertyAccountingReportTrialBalance.md
   - docs/Models/Shared/PropertyAtsActivityFrom.md
   - docs/Models/Shared/PropertyAtsActivityFromType.md
-  - docs/Models/Shared/PropertyAtsApplicationAnswerAnswers.md
   - docs/Models/Shared/PropertyAtsCandidateAddress.md
-  - docs/Models/Shared/PropertyAtsCandidateLinkUrls.md
-  - docs/Models/Shared/PropertyAtsCandidateSkills.md
-  - docs/Models/Shared/PropertyAtsCandidateSources.md
-  - docs/Models/Shared/PropertyAtsCandidateTags.md
   - docs/Models/Shared/PropertyAtsCompanyAddress.md
-  - docs/Models/Shared/PropertyAtsJobDepartments.md
   - docs/Models/Shared/PropertyAtsJobPostingAddress.md
-  - docs/Models/Shared/PropertyAtsJobPublicJobUrls.md
-  - docs/Models/Shared/PropertyAtsJobQuestionOptions.md
   - docs/Models/Shared/PropertyCalendarEventOrganizer.md
   - docs/Models/Shared/PropertyCalendarEventOrganizerStatus.md
   - docs/Models/Shared/PropertyCalendarEventRecurrenceOnDays.md
   - docs/Models/Shared/PropertyCalendarRecordingTranscriptAttendee.md
   - docs/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.md
-  - docs/Models/Shared/PropertyCommerceCollectionTags.md
-  - docs/Models/Shared/PropertyCommerceItemOptionValues.md
-  - docs/Models/Shared/PropertyCommerceItemTags.md
-  - docs/Models/Shared/PropertyCommerceItemVariantTags.md
   - docs/Models/Shared/PropertyCommerceLocationAddress.md
   - docs/Models/Shared/PropertyConnectionAuth.md
   - docs/Models/Shared/PropertyConnectionCategories.md
@@ -1297,10 +1285,8 @@ generatedFiles:
   - docs/Models/Shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/Models/Shared/PropertyHrisLocationAddress.md
   - docs/Models/Shared/PropertyIntegrationCategories.md
-  - docs/Models/Shared/PropertyIntegrationTokenInstructions.md
   - docs/Models/Shared/PropertyLmsStudentAddress.md
   - docs/Models/Shared/PropertyMessagingMessageAuthorMember.md
-  - docs/Models/Shared/PropertyMetadataMetadataOptions.md
   - docs/Models/Shared/PropertyScimGroupMeta.md
   - docs/Models/Shared/PropertyScimGroupSchemas.md
   - docs/Models/Shared/PropertyScimUserMeta.md
@@ -2725,26 +2711,14 @@ generatedFiles:
   - src/Models/Shared/PropertyAccountingReportTrialBalance.php
   - src/Models/Shared/PropertyAtsActivityFrom.php
   - src/Models/Shared/PropertyAtsActivityFromType.php
-  - src/Models/Shared/PropertyAtsApplicationAnswerAnswers.php
   - src/Models/Shared/PropertyAtsCandidateAddress.php
-  - src/Models/Shared/PropertyAtsCandidateLinkUrls.php
-  - src/Models/Shared/PropertyAtsCandidateSkills.php
-  - src/Models/Shared/PropertyAtsCandidateSources.php
-  - src/Models/Shared/PropertyAtsCandidateTags.php
   - src/Models/Shared/PropertyAtsCompanyAddress.php
-  - src/Models/Shared/PropertyAtsJobDepartments.php
   - src/Models/Shared/PropertyAtsJobPostingAddress.php
-  - src/Models/Shared/PropertyAtsJobPublicJobUrls.php
-  - src/Models/Shared/PropertyAtsJobQuestionOptions.php
   - src/Models/Shared/PropertyCalendarEventOrganizer.php
   - src/Models/Shared/PropertyCalendarEventOrganizerStatus.php
   - src/Models/Shared/PropertyCalendarEventRecurrenceOnDays.php
   - src/Models/Shared/PropertyCalendarRecordingTranscriptAttendee.php
   - src/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.php
-  - src/Models/Shared/PropertyCommerceCollectionTags.php
-  - src/Models/Shared/PropertyCommerceItemOptionValues.php
-  - src/Models/Shared/PropertyCommerceItemTags.php
-  - src/Models/Shared/PropertyCommerceItemVariantTags.php
   - src/Models/Shared/PropertyCommerceLocationAddress.php
   - src/Models/Shared/PropertyConnectionAuth.php
   - src/Models/Shared/PropertyConnectionCategories.php
@@ -2768,10 +2742,8 @@ generatedFiles:
   - src/Models/Shared/PropertyHrisEmployeeEmployeeRoles.php
   - src/Models/Shared/PropertyHrisLocationAddress.php
   - src/Models/Shared/PropertyIntegrationCategories.php
-  - src/Models/Shared/PropertyIntegrationTokenInstructions.php
   - src/Models/Shared/PropertyLmsStudentAddress.php
   - src/Models/Shared/PropertyMessagingMessageAuthorMember.php
-  - src/Models/Shared/PropertyMetadataMetadataOptions.php
   - src/Models/Shared/PropertyScimGroupMeta.php
   - src/Models/Shared/PropertyScimGroupSchemas.php
   - src/Models/Shared/PropertyScimUserMeta.php
@@ -4055,10 +4027,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   createCalendarLink:
     speakeasy-default-create-calendar-link:
       parameters:
@@ -4086,7 +4058,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   getCalendarLink:
     speakeasy-default-get-calendar-link:
       parameters:
@@ -4163,10 +4135,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   patchCalendarLink:
     speakeasy-default-patch-calendar-link:
       parameters:
@@ -4214,10 +4186,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   updateCalendarLink:
     speakeasy-default-update-calendar-link:
       parameters:

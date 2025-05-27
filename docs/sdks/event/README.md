@@ -40,11 +40,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCalendarEventRequest(
-    calendarEvent: new Shared\CalendarEvent(
-        endAt: '<value>',
-        startAt: '<value>',
-        subject: '<value>',
-    ),
+    calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
 );
 
@@ -344,11 +340,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCalendarEventRequest(
-    calendarEvent: new Shared\CalendarEvent(
-        endAt: '<value>',
-        startAt: '<value>',
-        subject: '<value>',
-    ),
+    calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -552,11 +544,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCalendarEventRequest(
-    calendarEvent: new Shared\CalendarEvent(
-        endAt: '<value>',
-        startAt: '<value>',
-        subject: '<value>',
-    ),
+    calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
     id: '<id>',
 );

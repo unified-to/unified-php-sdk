@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `answers`                                                                                                       | array<[Shared\PropertyAtsApplicationAnswerAnswers](../../Models/Shared/PropertyAtsApplicationAnswerAnswers.md)> | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
-| `questionId`                                                                                                    | *string*                                                                                                        | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `answers`          | array<*string*>    | :heavy_check_mark: | N/A                |
+| `questionId`       | *string*           | :heavy_check_mark: | N/A                |

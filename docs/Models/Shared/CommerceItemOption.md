@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `id`                                                                                                      | *?string*                                                                                                 | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
-| `name`                                                                                                    | *string*                                                                                                  | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
-| `position`                                                                                                | *?float*                                                                                                  | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
-| `values`                                                                                                  | array<[Shared\PropertyCommerceItemOptionValues](../../Models/Shared/PropertyCommerceItemOptionValues.md)> | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *?string*          | :heavy_minus_sign: | N/A                |
+| `name`             | *string*           | :heavy_check_mark: | N/A                |
+| `position`         | *?float*           | :heavy_minus_sign: | N/A                |
+| `values`           | array<*string*>    | :heavy_check_mark: | N/A                |

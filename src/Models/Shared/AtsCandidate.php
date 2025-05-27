@@ -109,10 +109,10 @@ class AtsCandidate
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
      *
-     * @var ?array<PropertyAtsCandidateLinkUrls> $linkUrls
+     * @var ?array<string> $linkUrls
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('link_urls')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsCandidateLinkUrls>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $linkUrls = null;
 
@@ -156,30 +156,30 @@ class AtsCandidate
     /**
      * $skills
      *
-     * @var ?array<PropertyAtsCandidateSkills> $skills
+     * @var ?array<string> $skills
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('skills')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsCandidateSkills>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $skills = null;
 
     /**
      * $sources
      *
-     * @var ?array<PropertyAtsCandidateSources> $sources
+     * @var ?array<string> $sources
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sources')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsCandidateSources>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $sources = null;
 
     /**
      * $tags
      *
-     * @var ?array<PropertyAtsCandidateTags> $tags
+     * @var ?array<string> $tags
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAtsCandidateTags>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
 
@@ -237,14 +237,14 @@ class AtsCandidate
      * @param  ?string  $externalIdentifier
      * @param  ?string  $id
      * @param  ?string  $imageUrl
-     * @param  ?array<PropertyAtsCandidateLinkUrls>  $linkUrls
+     * @param  ?array<string>  $linkUrls
      * @param  ?array<AtsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?Origin  $origin
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<PropertyAtsCandidateSkills>  $skills
-     * @param  ?array<PropertyAtsCandidateSources>  $sources
-     * @param  ?array<PropertyAtsCandidateTags>  $tags
+     * @param  ?array<string>  $skills
+     * @param  ?array<string>  $sources
+     * @param  ?array<string>  $tags
      * @param  ?array<AtsTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
