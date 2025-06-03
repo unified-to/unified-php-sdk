@@ -191,7 +191,7 @@ $request = new Operations\PatchUnifiedConnectionRequest(
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::TicketingCustomerWrite,
+            Shared\PropertyConnectionPermissions::TicketingTicketRead,
         ],
     ),
     id: '<id>',
@@ -299,7 +299,7 @@ $request = new Operations\UpdateUnifiedConnectionRequest(
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::HrisDeviceRead,
+            Shared\PropertyConnectionPermissions::HrisLocationWrite,
         ],
     ),
     id: '<id>',

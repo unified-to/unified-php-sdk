@@ -93,6 +93,8 @@ enum PropertyConnectionPermissions: string
     case HrisPayslipWrite = 'hris_payslip_write';
     case HrisTimeoffRead = 'hris_timeoff_read';
     case HrisTimeoffWrite = 'hris_timeoff_write';
+    case HrisTimeshiftRead = 'hris_timeshift_read';
+    case HrisTimeshiftWrite = 'hris_timeshift_write';
     case HrisCompanyRead = 'hris_company_read';
     case HrisCompanyWrite = 'hris_company_write';
     case HrisLocationRead = 'hris_location_read';
@@ -155,7 +157,6 @@ enum PropertyConnectionPermissions: string
     case CalendarEventRead = 'calendar_event_read';
     case CalendarEventWrite = 'calendar_event_write';
     case CalendarBusyRead = 'calendar_busy_read';
-    case CalendarBusyWrite = 'calendar_busy_write';
     case CalendarLinkRead = 'calendar_link_read';
     case CalendarLinkWrite = 'calendar_link_write';
     case CalendarRecordingRead = 'calendar_recording_read';

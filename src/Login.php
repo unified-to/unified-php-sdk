@@ -54,7 +54,7 @@ class Login
      */
     public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationLoginResponse
     {
-        $baseUrl = $this->sdkConfiguration->getServerUrl();
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationLoginRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
@@ -63,7 +63,7 @@ class Login
         $httpOptions['headers']['Accept'] = 'text/plain';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($baseUrl, 'getUnifiedIntegrationLogin', [], $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUnifiedIntegrationLogin', [], $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
