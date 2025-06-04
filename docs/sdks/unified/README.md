@@ -47,12 +47,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Shared\Connection(
-    categories: [
-        Shared\PropertyConnectionCategories::Passthrough,
-    ],
+    categories: [],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmContactWrite,
+        Shared\PropertyConnectionPermissions::EnrichCompanyRead,
     ],
 );
 
@@ -344,7 +342,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -352,7 +349,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedApicallsRequest();
+
 
 $response = $sdk->unified->listUnifiedApicalls(
     request: $request
@@ -391,7 +388,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -399,7 +395,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedConnectionsRequest();
+
 
 $response = $sdk->unified->listUnifiedConnections(
     request: $request
@@ -487,7 +483,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -495,7 +490,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedIntegrationsRequest();
+
 
 $response = $sdk->unified->listUnifiedIntegrations(
     request: $request
@@ -534,7 +529,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -542,7 +536,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedIssuesRequest();
+
 
 $response = $sdk->unified->listUnifiedIssues(
     request: $request
@@ -581,7 +575,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -589,7 +582,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedWebhooksRequest();
+
 
 $response = $sdk->unified->listUnifiedWebhooks(
     request: $request
@@ -640,11 +633,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Uc,
+            Shared\PropertyConnectionCategories::Storage,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::TicketingTicketRead,
+            Shared\PropertyConnectionPermissions::UcContactWrite,
         ],
     ),
     id: '<id>',
@@ -900,12 +893,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateUnifiedConnectionRequest(
     connection: new Shared\Connection(
-        categories: [
-            Shared\PropertyConnectionCategories::Hris,
-        ],
+        categories: [],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::HrisLocationWrite,
+            Shared\PropertyConnectionPermissions::CommerceReviewRead,
+            Shared\PropertyConnectionPermissions::CalendarCalendarRead,
         ],
     ),
     id: '<id>',

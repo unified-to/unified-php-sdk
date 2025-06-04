@@ -93,6 +93,14 @@ class AccountingAccount
     public ?string $parentAccountId = null;
 
     /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -163,6 +171,7 @@ class AccountingAccount
      * @param  ?bool  $isPayable
      * @param  ?string  $name
      * @param  ?string  $parentAccountId
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $section
      * @param  ?Status  $status
@@ -172,7 +181,7 @@ class AccountingAccount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentAccountId = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
@@ -184,6 +193,7 @@ class AccountingAccount
         $this->isPayable = $isPayable;
         $this->name = $name;
         $this->parentAccountId = $parentAccountId;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->section = $section;
         $this->status = $status;

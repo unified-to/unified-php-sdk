@@ -19,7 +19,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -27,7 +26,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedIssuesRequest();
+
 
 $response = $sdk->issue->listUnifiedIssues(
     request: $request

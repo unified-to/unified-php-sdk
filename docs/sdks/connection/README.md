@@ -33,12 +33,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Shared\Connection(
-    categories: [
-        Shared\PropertyConnectionCategories::Passthrough,
-    ],
+    categories: [],
     integrationType: '<value>',
     permissions: [
-        Shared\PropertyConnectionPermissions::CrmContactWrite,
+        Shared\PropertyConnectionPermissions::EnrichCompanyRead,
     ],
 );
 
@@ -128,7 +126,6 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -136,7 +133,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUnifiedConnectionsRequest();
+
 
 $response = $sdk->connection->listUnifiedConnections(
     request: $request
@@ -187,11 +184,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedConnectionRequest(
     connection: new Shared\Connection(
         categories: [
-            Shared\PropertyConnectionCategories::Uc,
+            Shared\PropertyConnectionCategories::Storage,
         ],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::TicketingTicketRead,
+            Shared\PropertyConnectionPermissions::UcContactWrite,
         ],
     ),
     id: '<id>',
@@ -294,12 +291,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateUnifiedConnectionRequest(
     connection: new Shared\Connection(
-        categories: [
-            Shared\PropertyConnectionCategories::Hris,
-        ],
+        categories: [],
         integrationType: '<value>',
         permissions: [
-            Shared\PropertyConnectionPermissions::HrisLocationWrite,
+            Shared\PropertyConnectionPermissions::CommerceReviewRead,
+            Shared\PropertyConnectionPermissions::CalendarCalendarRead,
         ],
     ),
     id: '<id>',

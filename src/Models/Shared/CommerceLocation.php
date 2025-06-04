@@ -37,6 +37,14 @@ class CommerceLocation
 
     /**
      *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
@@ -60,6 +68,22 @@ class CommerceLocation
     public ?bool $isActive = null;
 
     /**
+     *
+     * @var ?string $languageLocale
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('language_locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $languageLocale = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -81,21 +105,27 @@ class CommerceLocation
      * @param  string  $name
      * @param  ?PropertyCommerceLocationAddress  $address
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $languageLocale
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $languageLocale = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->address = $address;
         $this->createdAt = $createdAt;
+        $this->currency = $currency;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->languageLocale = $languageLocale;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
     }
