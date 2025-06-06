@@ -104,6 +104,14 @@ class ListCalendarBusiesRequest
     public ?string $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by
+     *
+     * @var ?string $userId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+
+    /**
      * @param  string  $connectionId
      * @param  ?string  $calendarId
      * @param  ?string  $endLe
@@ -116,9 +124,10 @@ class ListCalendarBusiesRequest
      * @param  ?string  $sort
      * @param  ?string  $startGte
      * @param  ?string  $updatedGte
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
@@ -132,5 +141,6 @@ class ListCalendarBusiesRequest
         $this->sort = $sort;
         $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

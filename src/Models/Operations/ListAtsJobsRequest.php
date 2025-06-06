@@ -20,6 +20,14 @@ class ListAtsJobsRequest
     public string $connectionId;
 
     /**
+     * The company ID to filter by
+     *
+     * @var ?string $companyId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
+    public ?string $companyId = null;
+
+    /**
      * Comma-delimited fields to return
      *
      * @var ?array<string> $fields
@@ -89,6 +97,7 @@ class ListAtsJobsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $companyId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -100,9 +109,10 @@ class ListAtsJobsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
+        $this->companyId = $companyId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
