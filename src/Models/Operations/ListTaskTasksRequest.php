@@ -88,6 +88,14 @@ class ListTaskTasksRequest
     public ?string $sort = null;
 
     /**
+     * The status to filter by
+     *
+     * @var ?string $status
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=status')]
+    public ?string $status = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?string $updatedGte
@@ -114,11 +122,12 @@ class ListTaskTasksRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $status
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -130,6 +139,7 @@ class ListTaskTasksRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->status = $status;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
     }
