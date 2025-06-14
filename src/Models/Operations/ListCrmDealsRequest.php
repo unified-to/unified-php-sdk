@@ -65,6 +65,14 @@ class ListCrmDealsRequest
     public ?string $order = null;
 
     /**
+     * The pipeline ID to filter by
+     *
+     * @var ?string $pipelineId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=pipeline_id')]
+    public ?string $pipelineId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -111,6 +119,7 @@ class ListCrmDealsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $pipelineId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
@@ -118,7 +127,7 @@ class ListCrmDealsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $pipelineId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
@@ -127,6 +136,7 @@ class ListCrmDealsRequest
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->pipelineId = $pipelineId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

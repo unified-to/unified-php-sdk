@@ -39,6 +39,14 @@ class TaskProject
 
     /**
      *
+     * @var ?bool $hasChildren
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_children')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasChildren = null;
+
+    /**
+     *
      * @var ?bool $hasTasks
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('has_tasks')]
@@ -101,6 +109,7 @@ class TaskProject
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?array<string>  $groupIds
+     * @param  ?bool  $hasChildren
      * @param  ?bool  $hasTasks
      * @param  ?string  $id
      * @param  ?string  $name
@@ -110,11 +119,12 @@ class TaskProject
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?bool $hasTasks = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?array $groupIds = null, ?bool $hasChildren = null, ?bool $hasTasks = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->groupIds = $groupIds;
+        $this->hasChildren = $hasChildren;
         $this->hasTasks = $hasTasks;
         $this->id = $id;
         $this->name = $name;

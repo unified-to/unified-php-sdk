@@ -47,6 +47,14 @@ class CalendarEvent
 
     /**
      *
+     * @var ?bool $hasConference
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_conference')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasConference = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -184,6 +192,7 @@ class CalendarEvent
      * @param  ?string  $calendarId
      * @param  ?string  $createdAt
      * @param  ?string  $endAt
+     * @param  ?bool  $hasConference
      * @param  ?string  $id
      * @param  ?bool  $isAllDay
      * @param  ?bool  $isFree
@@ -202,12 +211,13 @@ class CalendarEvent
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $endAt = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->attendees = $attendees;
         $this->calendarId = $calendarId;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
+        $this->hasConference = $hasConference;
         $this->id = $id;
         $this->isAllDay = $isAllDay;
         $this->isFree = $isFree;
