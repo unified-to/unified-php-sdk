@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarEvent
 {
     /**
+     * $attachments
+     *
+     * @var ?array<CalendarAttachment> $attachments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarAttachment>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachments = null;
+
+    /**
      * $attendees
      *
      * @var ?array<CalendarAttendee> $attendees
@@ -28,6 +38,16 @@ class CalendarEvent
     #[\Speakeasy\Serializer\Annotation\SerializedName('calendar_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $calendarId = null;
+
+    /**
+     * $conference
+     *
+     * @var ?array<CalendarConference> $conference
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('conference')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarConference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $conference = null;
 
     /**
      *
@@ -188,8 +208,10 @@ class CalendarEvent
     public ?string $webUrl = null;
 
     /**
+     * @param  ?array<CalendarAttachment>  $attachments
      * @param  ?array<CalendarAttendee>  $attendees
      * @param  ?string  $calendarId
+     * @param  ?array<CalendarConference>  $conference
      * @param  ?string  $createdAt
      * @param  ?string  $endAt
      * @param  ?bool  $hasConference
@@ -211,10 +233,12 @@ class CalendarEvent
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attendees = null, ?string $calendarId = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?array $attendees = null, ?string $calendarId = null, ?array $conference = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
+        $this->attachments = $attachments;
         $this->attendees = $attendees;
         $this->calendarId = $calendarId;
+        $this->conference = $conference;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->hasConference = $hasConference;
