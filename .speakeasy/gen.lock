@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: eefce76fdb52f66af4668d4a91100b69
+  docChecksum: 1ed136fdd156254f45506d66d75335d4
   docVersion: "1.0"
-  speakeasyVersion: 1.568.1
-  generationVersion: 2.634.1
-  releaseVersion: 1.3.15
-  configChecksum: fa229d13cf11b7395983f1e3bf2df4f1
+  speakeasyVersion: 1.570.2
+  generationVersion: 2.638.5
+  releaseVersion: 1.3.16
+  configChecksum: 6311b8b3f9b6243c1290e361f31874fd
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1344,6 +1344,28 @@ generatedFiles:
   - docs/Models/Shared/StorageFileType.md
   - docs/Models/Shared/StoragePermission.md
   - docs/Models/Shared/TaskComment.md
+  - docs/Models/Shared/TaskMetadata.md
+  - docs/Models/Shared/TaskMetadata1.md
+  - docs/Models/Shared/TaskMetadata2.md
+  - docs/Models/Shared/TaskMetadata3.md
+  - docs/Models/Shared/TaskMetadata4.md
+  - docs/Models/Shared/TaskMetadata5.md
+  - docs/Models/Shared/TaskMetadataExtraData.md
+  - docs/Models/Shared/TaskMetadataFormat.md
+  - docs/Models/Shared/TaskMetadataSchemas1.md
+  - docs/Models/Shared/TaskMetadataSchemas2.md
+  - docs/Models/Shared/TaskMetadataSchemas3.md
+  - docs/Models/Shared/TaskMetadataSchemas4.md
+  - docs/Models/Shared/TaskMetadataSchemas5.md
+  - docs/Models/Shared/TaskMetadataSchemasExtraData2.md
+  - docs/Models/Shared/TaskMetadataSchemasExtraData22.md
+  - docs/Models/Shared/TaskMetadataSchemasExtraData32.md
+  - docs/Models/Shared/TaskMetadataSchemasExtraData52.md
+  - docs/Models/Shared/TaskMetadataSchemasValue2.md
+  - docs/Models/Shared/TaskMetadataSchemasValue32.md
+  - docs/Models/Shared/TaskMetadataSchemasValue42.md
+  - docs/Models/Shared/TaskMetadataSchemasValue52.md
+  - docs/Models/Shared/TaskMetadataValue.md
   - docs/Models/Shared/TaskProject.md
   - docs/Models/Shared/TaskTask.md
   - docs/Models/Shared/TaskTaskStatus.md
@@ -2802,6 +2824,18 @@ generatedFiles:
   - src/Models/Shared/StorageFileType.php
   - src/Models/Shared/StoragePermission.php
   - src/Models/Shared/TaskComment.php
+  - src/Models/Shared/TaskMetadata.php
+  - src/Models/Shared/TaskMetadata1.php
+  - src/Models/Shared/TaskMetadataFormat.php
+  - src/Models/Shared/TaskMetadataSchemas1.php
+  - src/Models/Shared/TaskMetadataSchemasExtraData2.php
+  - src/Models/Shared/TaskMetadataSchemasExtraData22.php
+  - src/Models/Shared/TaskMetadataSchemasExtraData32.php
+  - src/Models/Shared/TaskMetadataSchemasExtraData52.php
+  - src/Models/Shared/TaskMetadataSchemasValue2.php
+  - src/Models/Shared/TaskMetadataSchemasValue32.php
+  - src/Models/Shared/TaskMetadataSchemasValue42.php
+  - src/Models/Shared/TaskMetadataSchemasValue52.php
   - src/Models/Shared/TaskProject.php
   - src/Models/Shared/TaskTask.php
   - src/Models/Shared/TaskTaskStatus.php

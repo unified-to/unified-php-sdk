@@ -92,6 +92,16 @@ class TaskTask
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<TaskMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TaskMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -186,6 +196,7 @@ class TaskTask
      * @param  ?array<string>  $followerUserIds
      * @param  ?array<string>  $groupIds
      * @param  ?string  $id
+     * @param  ?array<TaskMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $notes
      * @param  ?string  $parentId
@@ -198,7 +209,7 @@ class TaskTask
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?string $id = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->assignedUserIds = $assignedUserIds;
         $this->attachmentIds = $attachmentIds;
@@ -209,6 +220,7 @@ class TaskTask
         $this->followerUserIds = $followerUserIds;
         $this->groupIds = $groupIds;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->notes = $notes;
         $this->parentId = $parentId;
