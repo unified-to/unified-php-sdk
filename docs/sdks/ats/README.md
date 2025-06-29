@@ -8,6 +8,7 @@
 * [createAtsActivity](#createatsactivity) - Create an activity
 * [createAtsApplication](#createatsapplication) - Create an application
 * [createAtsCandidate](#createatscandidate) - Create a candidate
+* [createAtsCompany](#createatscompany) - Create a company
 * [createAtsDocument](#createatsdocument) - Create a document
 * [createAtsInterview](#createatsinterview) - Create an interview
 * [createAtsJob](#createatsjob) - Create a job
@@ -32,6 +33,7 @@
 * [patchAtsActivity](#patchatsactivity) - Update an activity
 * [patchAtsApplication](#patchatsapplication) - Update an application
 * [patchAtsCandidate](#patchatscandidate) - Update a candidate
+* [patchAtsCompany](#patchatscompany) - Update a company
 * [patchAtsDocument](#patchatsdocument) - Update a document
 * [patchAtsInterview](#patchatsinterview) - Update an interview
 * [patchAtsJob](#patchatsjob) - Update a job
@@ -39,6 +41,7 @@
 * [removeAtsActivity](#removeatsactivity) - Remove an activity
 * [removeAtsApplication](#removeatsapplication) - Remove an application
 * [removeAtsCandidate](#removeatscandidate) - Remove a candidate
+* [removeAtsCompany](#removeatscompany) - Remove a company
 * [removeAtsDocument](#removeatsdocument) - Remove a document
 * [removeAtsInterview](#removeatsinterview) - Remove an interview
 * [removeAtsJob](#removeatsjob) - Remove a job
@@ -46,6 +49,7 @@
 * [updateAtsActivity](#updateatsactivity) - Update an activity
 * [updateAtsApplication](#updateatsapplication) - Update an application
 * [updateAtsCandidate](#updateatscandidate) - Update a candidate
+* [updateAtsCompany](#updateatscompany) - Update a company
 * [updateAtsDocument](#updateatsdocument) - Update a document
 * [updateAtsInterview](#updateatsinterview) - Update an interview
 * [updateAtsJob](#updateatsjob) - Update a job
@@ -197,6 +201,59 @@ if ($response->atsCandidate !== null) {
 ### Response
 
 **[?Operations\CreateAtsCandidateResponse](../../Models/Operations/CreateAtsCandidateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAtsCompany
+
+Create a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ats->createAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateAtsCompanyRequest](../../Models/Operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\CreateAtsCompanyResponse](../../Models/Operations/CreateAtsCompanyResponse.md)**
 
 ### Errors
 
@@ -1405,6 +1462,60 @@ if ($response->atsCandidate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchAtsCompany
+
+Update a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchAtsCompanyRequest](../../Models/Operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchAtsCompanyResponse](../../Models/Operations/PatchAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchAtsDocument
 
 Update a document
@@ -1763,6 +1874,56 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeAtsCompany
+
+Remove a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsCompanyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->removeAtsCompany(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveAtsCompanyRequest](../../Models/Operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveAtsCompanyResponse](../../Models/Operations/RemoveAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeAtsDocument
 
 Remove a document
@@ -2112,6 +2273,60 @@ if ($response->atsCandidate !== null) {
 ### Response
 
 **[?Operations\UpdateAtsCandidateResponse](../../Models/Operations/UpdateAtsCandidateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAtsCompany
+
+Update a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->updateAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\UpdateAtsCompanyRequest](../../Models/Operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\UpdateAtsCompanyResponse](../../Models/Operations/UpdateAtsCompanyResponse.md)**
 
 ### Errors
 

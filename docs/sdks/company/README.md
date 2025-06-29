@@ -5,6 +5,7 @@
 
 ### Available Operations
 
+* [createAtsCompany](#createatscompany) - Create a company
 * [createCrmCompany](#createcrmcompany) - Create a company
 * [createHrisCompany](#createhriscompany) - Create a company
 * [getAtsCompany](#getatscompany) - Retrieve a company
@@ -14,12 +15,68 @@
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
 * [listHrisCompanies](#listhriscompanies) - List all companies
+* [patchAtsCompany](#patchatscompany) - Update a company
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchHrisCompany](#patchhriscompany) - Update a company
+* [removeAtsCompany](#removeatscompany) - Remove a company
 * [removeCrmCompany](#removecrmcompany) - Remove a company
 * [removeHrisCompany](#removehriscompany) - Remove a company
+* [updateAtsCompany](#updateatscompany) - Update a company
 * [updateCrmCompany](#updatecrmcompany) - Update a company
 * [updateHrisCompany](#updatehriscompany) - Update a company
+
+## createAtsCompany
+
+Create a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->company->createAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateAtsCompanyRequest](../../Models/Operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\CreateAtsCompanyResponse](../../Models/Operations/CreateAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createCrmCompany
 
@@ -469,6 +526,60 @@ if ($response->hrisCompanies !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchAtsCompany
+
+Update a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->company->patchAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchAtsCompanyRequest](../../Models/Operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchAtsCompanyResponse](../../Models/Operations/PatchAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchCrmCompany
 
 Update a company
@@ -573,6 +684,56 @@ if ($response->hrisCompany !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeAtsCompany
+
+Remove a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsCompanyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->company->removeAtsCompany(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveAtsCompanyRequest](../../Models/Operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveAtsCompanyResponse](../../Models/Operations/RemoveAtsCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeCrmCompany
 
 Remove a company
@@ -666,6 +827,60 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveHrisCompanyResponse](../../Models/Operations/RemoveHrisCompanyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAtsCompany
+
+Update a company
+
+### Example Usage
+
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAtsCompanyRequest(
+    atsCompany: new Shared\AtsCompany(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->company->updateAtsCompany(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\UpdateAtsCompanyRequest](../../Models/Operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\UpdateAtsCompanyResponse](../../Models/Operations/UpdateAtsCompanyResponse.md)**
 
 ### Errors
 

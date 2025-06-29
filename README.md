@@ -188,6 +188,7 @@ if ($response->accountingAccount !== null) {
 * [createAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
 * [createAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
 * [createAtsCandidate](docs/sdks/ats/README.md#createatscandidate) - Create a candidate
+* [createAtsCompany](docs/sdks/ats/README.md#createatscompany) - Create a company
 * [createAtsDocument](docs/sdks/ats/README.md#createatsdocument) - Create a document
 * [createAtsInterview](docs/sdks/ats/README.md#createatsinterview) - Create an interview
 * [createAtsJob](docs/sdks/ats/README.md#createatsjob) - Create a job
@@ -212,6 +213,7 @@ if ($response->accountingAccount !== null) {
 * [patchAtsActivity](docs/sdks/ats/README.md#patchatsactivity) - Update an activity
 * [patchAtsApplication](docs/sdks/ats/README.md#patchatsapplication) - Update an application
 * [patchAtsCandidate](docs/sdks/ats/README.md#patchatscandidate) - Update a candidate
+* [patchAtsCompany](docs/sdks/ats/README.md#patchatscompany) - Update a company
 * [patchAtsDocument](docs/sdks/ats/README.md#patchatsdocument) - Update a document
 * [patchAtsInterview](docs/sdks/ats/README.md#patchatsinterview) - Update an interview
 * [patchAtsJob](docs/sdks/ats/README.md#patchatsjob) - Update a job
@@ -219,6 +221,7 @@ if ($response->accountingAccount !== null) {
 * [removeAtsActivity](docs/sdks/ats/README.md#removeatsactivity) - Remove an activity
 * [removeAtsApplication](docs/sdks/ats/README.md#removeatsapplication) - Remove an application
 * [removeAtsCandidate](docs/sdks/ats/README.md#removeatscandidate) - Remove a candidate
+* [removeAtsCompany](docs/sdks/ats/README.md#removeatscompany) - Remove a company
 * [removeAtsDocument](docs/sdks/ats/README.md#removeatsdocument) - Remove a document
 * [removeAtsInterview](docs/sdks/ats/README.md#removeatsinterview) - Remove an interview
 * [removeAtsJob](docs/sdks/ats/README.md#removeatsjob) - Remove a job
@@ -226,6 +229,7 @@ if ($response->accountingAccount !== null) {
 * [updateAtsActivity](docs/sdks/ats/README.md#updateatsactivity) - Update an activity
 * [updateAtsApplication](docs/sdks/ats/README.md#updateatsapplication) - Update an application
 * [updateAtsCandidate](docs/sdks/ats/README.md#updateatscandidate) - Update a candidate
+* [updateAtsCompany](docs/sdks/ats/README.md#updateatscompany) - Update a company
 * [updateAtsDocument](docs/sdks/ats/README.md#updateatsdocument) - Update a document
 * [updateAtsInterview](docs/sdks/ats/README.md#updateatsinterview) - Update an interview
 * [updateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
@@ -374,6 +378,7 @@ if ($response->accountingAccount !== null) {
 
 ### [company](docs/sdks/company/README.md)
 
+* [createAtsCompany](docs/sdks/company/README.md#createatscompany) - Create a company
 * [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
 * [createHrisCompany](docs/sdks/company/README.md#createhriscompany) - Create a company
 * [getAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
@@ -383,10 +388,13 @@ if ($response->accountingAccount !== null) {
 * [listCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
 * [listEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [listHrisCompanies](docs/sdks/company/README.md#listhriscompanies) - List all companies
+* [patchAtsCompany](docs/sdks/company/README.md#patchatscompany) - Update a company
 * [patchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
 * [patchHrisCompany](docs/sdks/company/README.md#patchhriscompany) - Update a company
+* [removeAtsCompany](docs/sdks/company/README.md#removeatscompany) - Remove a company
 * [removeCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
 * [removeHrisCompany](docs/sdks/company/README.md#removehriscompany) - Remove a company
+* [updateAtsCompany](docs/sdks/company/README.md#updateatscompany) - Update a company
 * [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [updateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 

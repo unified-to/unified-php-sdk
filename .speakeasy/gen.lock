@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 1ed136fdd156254f45506d66d75335d4
+  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
   docVersion: "1.0"
-  speakeasyVersion: 1.570.2
-  generationVersion: 2.638.5
-  releaseVersion: 1.3.16
-  configChecksum: 6311b8b3f9b6243c1290e361f31874fd
+  speakeasyVersion: 1.571.1
+  generationVersion: 2.640.2
+  releaseVersion: 1.3.17
+  configChecksum: c1acee0a944b766e5c313ce878174a09
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -46,6 +46,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAtsApplicationResponse.md
   - docs/Models/Operations/CreateAtsCandidateRequest.md
   - docs/Models/Operations/CreateAtsCandidateResponse.md
+  - docs/Models/Operations/CreateAtsCompanyRequest.md
+  - docs/Models/Operations/CreateAtsCompanyResponse.md
   - docs/Models/Operations/CreateAtsDocumentRequest.md
   - docs/Models/Operations/CreateAtsDocumentResponse.md
   - docs/Models/Operations/CreateAtsInterviewRequest.md
@@ -518,6 +520,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAtsApplicationResponse.md
   - docs/Models/Operations/PatchAtsCandidateRequest.md
   - docs/Models/Operations/PatchAtsCandidateResponse.md
+  - docs/Models/Operations/PatchAtsCompanyRequest.md
+  - docs/Models/Operations/PatchAtsCompanyResponse.md
   - docs/Models/Operations/PatchAtsDocumentRequest.md
   - docs/Models/Operations/PatchAtsDocumentResponse.md
   - docs/Models/Operations/PatchAtsInterviewRequest.md
@@ -659,6 +663,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAtsApplicationResponse.md
   - docs/Models/Operations/RemoveAtsCandidateRequest.md
   - docs/Models/Operations/RemoveAtsCandidateResponse.md
+  - docs/Models/Operations/RemoveAtsCompanyRequest.md
+  - docs/Models/Operations/RemoveAtsCompanyResponse.md
   - docs/Models/Operations/RemoveAtsDocumentRequest.md
   - docs/Models/Operations/RemoveAtsDocumentResponse.md
   - docs/Models/Operations/RemoveAtsInterviewRequest.md
@@ -795,6 +801,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateAtsApplicationResponse.md
   - docs/Models/Operations/UpdateAtsCandidateRequest.md
   - docs/Models/Operations/UpdateAtsCandidateResponse.md
+  - docs/Models/Operations/UpdateAtsCompanyRequest.md
+  - docs/Models/Operations/UpdateAtsCompanyResponse.md
   - docs/Models/Operations/UpdateAtsDocumentRequest.md
   - docs/Models/Operations/UpdateAtsDocumentResponse.md
   - docs/Models/Operations/UpdateAtsInterviewRequest.md
@@ -1588,6 +1596,8 @@ generatedFiles:
   - src/Models/Operations/CreateAtsApplicationResponse.php
   - src/Models/Operations/CreateAtsCandidateRequest.php
   - src/Models/Operations/CreateAtsCandidateResponse.php
+  - src/Models/Operations/CreateAtsCompanyRequest.php
+  - src/Models/Operations/CreateAtsCompanyResponse.php
   - src/Models/Operations/CreateAtsDocumentRequest.php
   - src/Models/Operations/CreateAtsDocumentResponse.php
   - src/Models/Operations/CreateAtsInterviewRequest.php
@@ -2060,6 +2070,8 @@ generatedFiles:
   - src/Models/Operations/PatchAtsApplicationResponse.php
   - src/Models/Operations/PatchAtsCandidateRequest.php
   - src/Models/Operations/PatchAtsCandidateResponse.php
+  - src/Models/Operations/PatchAtsCompanyRequest.php
+  - src/Models/Operations/PatchAtsCompanyResponse.php
   - src/Models/Operations/PatchAtsDocumentRequest.php
   - src/Models/Operations/PatchAtsDocumentResponse.php
   - src/Models/Operations/PatchAtsInterviewRequest.php
@@ -2201,6 +2213,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAtsApplicationResponse.php
   - src/Models/Operations/RemoveAtsCandidateRequest.php
   - src/Models/Operations/RemoveAtsCandidateResponse.php
+  - src/Models/Operations/RemoveAtsCompanyRequest.php
+  - src/Models/Operations/RemoveAtsCompanyResponse.php
   - src/Models/Operations/RemoveAtsDocumentRequest.php
   - src/Models/Operations/RemoveAtsDocumentResponse.php
   - src/Models/Operations/RemoveAtsInterviewRequest.php
@@ -2337,6 +2351,8 @@ generatedFiles:
   - src/Models/Operations/UpdateAtsApplicationResponse.php
   - src/Models/Operations/UpdateAtsCandidateRequest.php
   - src/Models/Operations/UpdateAtsCandidateResponse.php
+  - src/Models/Operations/UpdateAtsCompanyRequest.php
+  - src/Models/Operations/UpdateAtsCompanyResponse.php
   - src/Models/Operations/UpdateAtsDocumentRequest.php
   - src/Models/Operations/UpdateAtsDocumentResponse.php
   - src/Models/Operations/UpdateAtsInterviewRequest.php
@@ -6973,5 +6989,43 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAtsCompany:
+    speakeasy-default-create-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchAtsCompany:
+    speakeasy-default-patch-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeAtsCompany:
+    speakeasy-default-remove-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAtsCompany:
+    speakeasy-default-update-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}
