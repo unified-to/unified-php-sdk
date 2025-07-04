@@ -12,7 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyAccountingReportProfitAndLoss
 {
     /**
-     * $costOfGoodsSold
+     * @deprecated
      *
      * @var ?array<AccountingProfitAndLossCategory> $costOfGoodsSold
      */
@@ -22,7 +22,25 @@ class PropertyAccountingReportProfitAndLoss
     public ?array $costOfGoodsSold = null;
 
     /**
-     * $expenses
+     * $costOfGoodsSoldSections
+     *
+     * @var ?array<AccountingProfitAndLossSection> $costOfGoodsSoldSections
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold_sections')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $costOfGoodsSoldSections = null;
+
+    /**
+     *
+     * @var ?float $costOfGoodsSoldTotalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold_total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $costOfGoodsSoldTotalAmount = null;
+
+    /**
+     * @deprecated
      *
      * @var ?array<AccountingProfitAndLossCategory> $expenses
      */
@@ -30,6 +48,24 @@ class PropertyAccountingReportProfitAndLoss
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossCategory>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $expenses = null;
+
+    /**
+     * $expensesSections
+     *
+     * @var ?array<AccountingProfitAndLossSection> $expensesSections
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('expenses_sections')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $expensesSections = null;
+
+    /**
+     *
+     * @var ?float $expensesTotalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('expenses_total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $expensesTotalAmount = null;
 
     /**
      *
@@ -40,7 +76,7 @@ class PropertyAccountingReportProfitAndLoss
     public ?float $grossProfitAmount = null;
 
     /**
-     * $income
+     * @deprecated
      *
      * @var ?array<AccountingProfitAndLossCategory> $income
      */
@@ -48,6 +84,32 @@ class PropertyAccountingReportProfitAndLoss
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossCategory>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $income = null;
+
+    /**
+     * $incomeSections
+     *
+     * @var ?array<AccountingProfitAndLossSection> $incomeSections
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('income_sections')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $incomeSections = null;
+
+    /**
+     *
+     * @var ?float $incomeTotalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('income_total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $incomeTotalAmount = null;
+
+    /**
+     *
+     * @var ?float $netIncomeAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('net_income_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $netIncomeAmount = null;
 
     /**
      *
@@ -59,18 +121,32 @@ class PropertyAccountingReportProfitAndLoss
 
     /**
      * @param  ?array<AccountingProfitAndLossCategory>  $costOfGoodsSold
+     * @param  ?array<AccountingProfitAndLossSection>  $costOfGoodsSoldSections
+     * @param  ?float  $costOfGoodsSoldTotalAmount
      * @param  ?array<AccountingProfitAndLossCategory>  $expenses
+     * @param  ?array<AccountingProfitAndLossSection>  $expensesSections
+     * @param  ?float  $expensesTotalAmount
      * @param  ?float  $grossProfitAmount
      * @param  ?array<AccountingProfitAndLossCategory>  $income
+     * @param  ?array<AccountingProfitAndLossSection>  $incomeSections
+     * @param  ?float  $incomeTotalAmount
+     * @param  ?float  $netIncomeAmount
      * @param  ?float  $netProfitAmount
      * @phpstan-pure
      */
-    public function __construct(?array $costOfGoodsSold = null, ?array $expenses = null, ?float $grossProfitAmount = null, ?array $income = null, ?float $netProfitAmount = null)
+    public function __construct(?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null)
     {
         $this->costOfGoodsSold = $costOfGoodsSold;
+        $this->costOfGoodsSoldSections = $costOfGoodsSoldSections;
+        $this->costOfGoodsSoldTotalAmount = $costOfGoodsSoldTotalAmount;
         $this->expenses = $expenses;
+        $this->expensesSections = $expensesSections;
+        $this->expensesTotalAmount = $expensesTotalAmount;
         $this->grossProfitAmount = $grossProfitAmount;
         $this->income = $income;
+        $this->incomeSections = $incomeSections;
+        $this->incomeTotalAmount = $incomeTotalAmount;
+        $this->netIncomeAmount = $netIncomeAmount;
         $this->netProfitAmount = $netProfitAmount;
     }
 }
