@@ -14,20 +14,20 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * @deprecated
      *
-     * @var ?array<AccountingProfitAndLossCategory> $costOfGoodsSold
+     * @var ?array<AccountingProfitlossCategory> $costOfGoodsSold
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossCategory>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $costOfGoodsSold = null;
 
     /**
      * $costOfGoodsSoldSections
      *
-     * @var ?array<AccountingProfitAndLossSection> $costOfGoodsSoldSections
+     * @var ?array<AccountingProfitlossSection> $costOfGoodsSoldSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold_sections')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $costOfGoodsSoldSections = null;
 
@@ -40,22 +40,46 @@ class PropertyAccountingReportProfitAndLoss
     public ?float $costOfGoodsSoldTotalAmount = null;
 
     /**
+     *
+     * @var ?\DateTime $createdAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
+
+    /**
      * @deprecated
      *
-     * @var ?array<AccountingProfitAndLossCategory> $expenses
+     * @var ?array<AccountingProfitlossCategory> $expenses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('expenses')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossCategory>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $expenses = null;
 
     /**
      * $expensesSections
      *
-     * @var ?array<AccountingProfitAndLossSection> $expensesSections
+     * @var ?array<AccountingProfitlossSection> $expensesSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('expenses_sections')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $expensesSections = null;
 
@@ -76,22 +100,30 @@ class PropertyAccountingReportProfitAndLoss
     public ?float $grossProfitAmount = null;
 
     /**
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
      * @deprecated
      *
-     * @var ?array<AccountingProfitAndLossCategory> $income
+     * @var ?array<AccountingProfitlossCategory> $income
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('income')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossCategory>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $income = null;
 
     /**
      * $incomeSections
      *
-     * @var ?array<AccountingProfitAndLossSection> $incomeSections
+     * @var ?array<AccountingProfitlossSection> $incomeSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('income_sections')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitAndLossSection>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $incomeSections = null;
 
@@ -102,6 +134,14 @@ class PropertyAccountingReportProfitAndLoss
     #[\Speakeasy\Serializer\Annotation\SerializedName('income_total_amount')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $incomeTotalAmount = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      *
@@ -120,33 +160,75 @@ class PropertyAccountingReportProfitAndLoss
     public ?float $netProfitAmount = null;
 
     /**
-     * @param  ?array<AccountingProfitAndLossCategory>  $costOfGoodsSold
-     * @param  ?array<AccountingProfitAndLossSection>  $costOfGoodsSoldSections
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $updatedAt = null;
+
+    /**
+     * @param  ?array<AccountingProfitlossCategory>  $costOfGoodsSold
+     * @param  ?array<AccountingProfitlossSection>  $costOfGoodsSoldSections
      * @param  ?float  $costOfGoodsSoldTotalAmount
-     * @param  ?array<AccountingProfitAndLossCategory>  $expenses
-     * @param  ?array<AccountingProfitAndLossSection>  $expensesSections
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?\DateTime  $endAt
+     * @param  ?array<AccountingProfitlossCategory>  $expenses
+     * @param  ?array<AccountingProfitlossSection>  $expensesSections
      * @param  ?float  $expensesTotalAmount
      * @param  ?float  $grossProfitAmount
-     * @param  ?array<AccountingProfitAndLossCategory>  $income
-     * @param  ?array<AccountingProfitAndLossSection>  $incomeSections
+     * @param  ?string  $id
+     * @param  ?array<AccountingProfitlossCategory>  $income
+     * @param  ?array<AccountingProfitlossSection>  $incomeSections
      * @param  ?float  $incomeTotalAmount
+     * @param  ?string  $name
      * @param  ?float  $netIncomeAmount
      * @param  ?float  $netProfitAmount
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
+     * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null)
+    public function __construct(?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?string $id = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->costOfGoodsSold = $costOfGoodsSold;
         $this->costOfGoodsSoldSections = $costOfGoodsSoldSections;
         $this->costOfGoodsSoldTotalAmount = $costOfGoodsSoldTotalAmount;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->endAt = $endAt;
         $this->expenses = $expenses;
         $this->expensesSections = $expensesSections;
         $this->expensesTotalAmount = $expensesTotalAmount;
         $this->grossProfitAmount = $grossProfitAmount;
+        $this->id = $id;
         $this->income = $income;
         $this->incomeSections = $incomeSections;
         $this->incomeTotalAmount = $incomeTotalAmount;
+        $this->name = $name;
         $this->netIncomeAmount = $netIncomeAmount;
         $this->netProfitAmount = $netProfitAmount;
+        $this->raw = $raw;
+        $this->startAt = $startAt;
+        $this->updatedAt = $updatedAt;
     }
 }

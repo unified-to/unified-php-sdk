@@ -26,7 +26,13 @@ class UnifiedTo
 
     public Account $account;
 
+    public Balancesheet $balancesheet;
+
+    public Bill $bill;
+
     public Contact $contact;
+
+    public Creditmemo $creditmemo;
 
     public Invoice $invoice;
 
@@ -36,11 +42,19 @@ class UnifiedTo
 
     public Organization $organization;
 
+    public Profitloss $profitloss;
+
+    public Purchaseorder $purchaseorder;
+
     public Report $report;
+
+    public Salesorder $salesorder;
 
     public Taxrate $taxrate;
 
     public Transaction $transaction;
+
+    public Trialbalance $trialbalance;
 
     public Ats $ats;
 
@@ -226,14 +240,21 @@ class UnifiedTo
     ) {
         $this->accounting = new Accounting($this->sdkConfiguration);
         $this->account = new Account($this->sdkConfiguration);
+        $this->balancesheet = new Balancesheet($this->sdkConfiguration);
+        $this->bill = new Bill($this->sdkConfiguration);
         $this->contact = new Contact($this->sdkConfiguration);
+        $this->creditmemo = new Creditmemo($this->sdkConfiguration);
         $this->invoice = new Invoice($this->sdkConfiguration);
         $this->journal = new Journal($this->sdkConfiguration);
         $this->order = new Order($this->sdkConfiguration);
         $this->organization = new Organization($this->sdkConfiguration);
+        $this->profitloss = new Profitloss($this->sdkConfiguration);
+        $this->purchaseorder = new Purchaseorder($this->sdkConfiguration);
         $this->report = new Report($this->sdkConfiguration);
+        $this->salesorder = new Salesorder($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
+        $this->trialbalance = new Trialbalance($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
         $this->activity = new Activity($this->sdkConfiguration);
         $this->application = new Application($this->sdkConfiguration);

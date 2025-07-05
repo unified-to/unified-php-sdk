@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: cfcf5e019d822f732c2d765252728b21
+  docChecksum: df14941bc85aac484869c35ad39aa806
   docVersion: "1.0"
-  speakeasyVersion: 1.575.4
+  speakeasyVersion: 1.575.5
   generationVersion: 2.648.7
-  releaseVersion: 1.3.19
-  configChecksum: fe72c7bb2db43a86263ee6923726e449
+  releaseVersion: 1.3.20
+  configChecksum: f58600c21f7ef9b186854754428492ef
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -28,14 +28,22 @@ generatedFiles:
   - docs/Models/Operations/Categories.md
   - docs/Models/Operations/CreateAccountingAccountRequest.md
   - docs/Models/Operations/CreateAccountingAccountResponse.md
+  - docs/Models/Operations/CreateAccountingBillRequest.md
+  - docs/Models/Operations/CreateAccountingBillResponse.md
   - docs/Models/Operations/CreateAccountingContactRequest.md
   - docs/Models/Operations/CreateAccountingContactResponse.md
+  - docs/Models/Operations/CreateAccountingCreditmemoRequest.md
+  - docs/Models/Operations/CreateAccountingCreditmemoResponse.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
   - docs/Models/Operations/CreateAccountingJournalRequest.md
   - docs/Models/Operations/CreateAccountingJournalResponse.md
   - docs/Models/Operations/CreateAccountingOrderRequest.md
   - docs/Models/Operations/CreateAccountingOrderResponse.md
+  - docs/Models/Operations/CreateAccountingPurchaseorderRequest.md
+  - docs/Models/Operations/CreateAccountingPurchaseorderResponse.md
+  - docs/Models/Operations/CreateAccountingSalesorderRequest.md
+  - docs/Models/Operations/CreateAccountingSalesorderResponse.md
   - docs/Models/Operations/CreateAccountingTaxrateRequest.md
   - docs/Models/Operations/CreateAccountingTaxrateResponse.md
   - docs/Models/Operations/CreateAccountingTransactionRequest.md
@@ -169,8 +177,14 @@ generatedFiles:
   - docs/Models/Operations/CreateUnifiedWebhookResponse.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
+  - docs/Models/Operations/GetAccountingBalancesheetRequest.md
+  - docs/Models/Operations/GetAccountingBalancesheetResponse.md
+  - docs/Models/Operations/GetAccountingBillRequest.md
+  - docs/Models/Operations/GetAccountingBillResponse.md
   - docs/Models/Operations/GetAccountingContactRequest.md
   - docs/Models/Operations/GetAccountingContactResponse.md
+  - docs/Models/Operations/GetAccountingCreditmemoRequest.md
+  - docs/Models/Operations/GetAccountingCreditmemoResponse.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
   - docs/Models/Operations/GetAccountingJournalRequest.md
@@ -179,12 +193,20 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingOrderResponse.md
   - docs/Models/Operations/GetAccountingOrganizationRequest.md
   - docs/Models/Operations/GetAccountingOrganizationResponse.md
+  - docs/Models/Operations/GetAccountingProfitlossRequest.md
+  - docs/Models/Operations/GetAccountingProfitlossResponse.md
+  - docs/Models/Operations/GetAccountingPurchaseorderRequest.md
+  - docs/Models/Operations/GetAccountingPurchaseorderResponse.md
   - docs/Models/Operations/GetAccountingReportRequest.md
   - docs/Models/Operations/GetAccountingReportResponse.md
+  - docs/Models/Operations/GetAccountingSalesorderRequest.md
+  - docs/Models/Operations/GetAccountingSalesorderResponse.md
   - docs/Models/Operations/GetAccountingTaxrateRequest.md
   - docs/Models/Operations/GetAccountingTaxrateResponse.md
   - docs/Models/Operations/GetAccountingTransactionRequest.md
   - docs/Models/Operations/GetAccountingTransactionResponse.md
+  - docs/Models/Operations/GetAccountingTrialbalanceRequest.md
+  - docs/Models/Operations/GetAccountingTrialbalanceResponse.md
   - docs/Models/Operations/GetAtsActivityRequest.md
   - docs/Models/Operations/GetAtsActivityResponse.md
   - docs/Models/Operations/GetAtsApplicationRequest.md
@@ -327,8 +349,14 @@ generatedFiles:
   - docs/Models/Operations/GetUnifiedWebhookResponse.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
+  - docs/Models/Operations/ListAccountingBalancesheetsRequest.md
+  - docs/Models/Operations/ListAccountingBalancesheetsResponse.md
+  - docs/Models/Operations/ListAccountingBillsRequest.md
+  - docs/Models/Operations/ListAccountingBillsResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
   - docs/Models/Operations/ListAccountingContactsResponse.md
+  - docs/Models/Operations/ListAccountingCreditmemoesRequest.md
+  - docs/Models/Operations/ListAccountingCreditmemoesResponse.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
   - docs/Models/Operations/ListAccountingJournalsRequest.md
@@ -337,12 +365,20 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingOrdersResponse.md
   - docs/Models/Operations/ListAccountingOrganizationsRequest.md
   - docs/Models/Operations/ListAccountingOrganizationsResponse.md
+  - docs/Models/Operations/ListAccountingProfitlossesRequest.md
+  - docs/Models/Operations/ListAccountingProfitlossesResponse.md
+  - docs/Models/Operations/ListAccountingPurchaseordersRequest.md
+  - docs/Models/Operations/ListAccountingPurchaseordersResponse.md
   - docs/Models/Operations/ListAccountingReportsRequest.md
   - docs/Models/Operations/ListAccountingReportsResponse.md
+  - docs/Models/Operations/ListAccountingSalesordersRequest.md
+  - docs/Models/Operations/ListAccountingSalesordersResponse.md
   - docs/Models/Operations/ListAccountingTaxratesRequest.md
   - docs/Models/Operations/ListAccountingTaxratesResponse.md
   - docs/Models/Operations/ListAccountingTransactionsRequest.md
   - docs/Models/Operations/ListAccountingTransactionsResponse.md
+  - docs/Models/Operations/ListAccountingTrialbalancesRequest.md
+  - docs/Models/Operations/ListAccountingTrialbalancesResponse.md
   - docs/Models/Operations/ListAtsActivitiesRequest.md
   - docs/Models/Operations/ListAtsActivitiesResponse.md
   - docs/Models/Operations/ListAtsApplicationsRequest.md
@@ -502,14 +538,22 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
+  - docs/Models/Operations/PatchAccountingBillRequest.md
+  - docs/Models/Operations/PatchAccountingBillResponse.md
   - docs/Models/Operations/PatchAccountingContactRequest.md
   - docs/Models/Operations/PatchAccountingContactResponse.md
+  - docs/Models/Operations/PatchAccountingCreditmemoRequest.md
+  - docs/Models/Operations/PatchAccountingCreditmemoResponse.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
   - docs/Models/Operations/PatchAccountingJournalRequest.md
   - docs/Models/Operations/PatchAccountingJournalResponse.md
   - docs/Models/Operations/PatchAccountingOrderRequest.md
   - docs/Models/Operations/PatchAccountingOrderResponse.md
+  - docs/Models/Operations/PatchAccountingPurchaseorderRequest.md
+  - docs/Models/Operations/PatchAccountingPurchaseorderResponse.md
+  - docs/Models/Operations/PatchAccountingSalesorderRequest.md
+  - docs/Models/Operations/PatchAccountingSalesorderResponse.md
   - docs/Models/Operations/PatchAccountingTaxrateRequest.md
   - docs/Models/Operations/PatchAccountingTaxrateResponse.md
   - docs/Models/Operations/PatchAccountingTransactionRequest.md
@@ -645,14 +689,22 @@ generatedFiles:
   - docs/Models/Operations/QueryParamCategories.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
+  - docs/Models/Operations/RemoveAccountingBillRequest.md
+  - docs/Models/Operations/RemoveAccountingBillResponse.md
   - docs/Models/Operations/RemoveAccountingContactRequest.md
   - docs/Models/Operations/RemoveAccountingContactResponse.md
+  - docs/Models/Operations/RemoveAccountingCreditmemoRequest.md
+  - docs/Models/Operations/RemoveAccountingCreditmemoResponse.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
   - docs/Models/Operations/RemoveAccountingJournalRequest.md
   - docs/Models/Operations/RemoveAccountingJournalResponse.md
   - docs/Models/Operations/RemoveAccountingOrderRequest.md
   - docs/Models/Operations/RemoveAccountingOrderResponse.md
+  - docs/Models/Operations/RemoveAccountingPurchaseorderRequest.md
+  - docs/Models/Operations/RemoveAccountingPurchaseorderResponse.md
+  - docs/Models/Operations/RemoveAccountingSalesorderRequest.md
+  - docs/Models/Operations/RemoveAccountingSalesorderResponse.md
   - docs/Models/Operations/RemoveAccountingTaxrateRequest.md
   - docs/Models/Operations/RemoveAccountingTaxrateResponse.md
   - docs/Models/Operations/RemoveAccountingTransactionRequest.md
@@ -783,14 +835,22 @@ generatedFiles:
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
+  - docs/Models/Operations/UpdateAccountingBillRequest.md
+  - docs/Models/Operations/UpdateAccountingBillResponse.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
   - docs/Models/Operations/UpdateAccountingContactResponse.md
+  - docs/Models/Operations/UpdateAccountingCreditmemoRequest.md
+  - docs/Models/Operations/UpdateAccountingCreditmemoResponse.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
   - docs/Models/Operations/UpdateAccountingJournalRequest.md
   - docs/Models/Operations/UpdateAccountingJournalResponse.md
   - docs/Models/Operations/UpdateAccountingOrderRequest.md
   - docs/Models/Operations/UpdateAccountingOrderResponse.md
+  - docs/Models/Operations/UpdateAccountingPurchaseorderRequest.md
+  - docs/Models/Operations/UpdateAccountingPurchaseorderResponse.md
+  - docs/Models/Operations/UpdateAccountingSalesorderRequest.md
+  - docs/Models/Operations/UpdateAccountingSalesorderResponse.md
   - docs/Models/Operations/UpdateAccountingTaxrateRequest.md
   - docs/Models/Operations/UpdateAccountingTaxrateResponse.md
   - docs/Models/Operations/UpdateAccountingTransactionRequest.md
@@ -926,13 +986,20 @@ generatedFiles:
   - docs/Models/Shared/AccountingAccount.md
   - docs/Models/Shared/AccountingAssociatedContact.md
   - docs/Models/Shared/AccountingAttachment.md
-  - docs/Models/Shared/AccountingBalanceSheetItem.md
+  - docs/Models/Shared/AccountingBalancesheet.md
+  - docs/Models/Shared/AccountingBalancesheetItem.md
+  - docs/Models/Shared/AccountingBill.md
+  - docs/Models/Shared/AccountingBillStatus.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingContactPaymentMethodType.md
+  - docs/Models/Shared/AccountingCreditmemo.md
+  - docs/Models/Shared/AccountingCreditmemoPaymentCollectionMethod.md
+  - docs/Models/Shared/AccountingCreditmemoStatus.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/AccountingEmailType.md
   - docs/Models/Shared/AccountingInvoice.md
+  - docs/Models/Shared/AccountingInvoicePaymentCollectionMethod.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
   - docs/Models/Shared/AccountingInvoiceType.md
   - docs/Models/Shared/AccountingJournal.md
@@ -942,19 +1009,25 @@ generatedFiles:
   - docs/Models/Shared/AccountingOrderStatus.md
   - docs/Models/Shared/AccountingOrderType.md
   - docs/Models/Shared/AccountingOrganization.md
-  - docs/Models/Shared/AccountingProfitAndLossAccount.md
-  - docs/Models/Shared/AccountingProfitAndLossCategory.md
-  - docs/Models/Shared/AccountingProfitAndLossSection.md
-  - docs/Models/Shared/AccountingProfitAndLossSubcategory.md
+  - docs/Models/Shared/AccountingProfitloss.md
+  - docs/Models/Shared/AccountingProfitlossAccount.md
+  - docs/Models/Shared/AccountingProfitlossCategory.md
+  - docs/Models/Shared/AccountingProfitlossSection.md
+  - docs/Models/Shared/AccountingProfitlossSubcategory.md
+  - docs/Models/Shared/AccountingPurchaseorder.md
+  - docs/Models/Shared/AccountingPurchaseorderStatus.md
   - docs/Models/Shared/AccountingReport.md
   - docs/Models/Shared/AccountingReportType.md
+  - docs/Models/Shared/AccountingSalesorder.md
+  - docs/Models/Shared/AccountingSalesorderStatus.md
   - docs/Models/Shared/AccountingTaxrate.md
   - docs/Models/Shared/AccountingTelephone.md
   - docs/Models/Shared/AccountingTelephoneType.md
   - docs/Models/Shared/AccountingTransaction.md
   - docs/Models/Shared/AccountingTransactionContact.md
   - docs/Models/Shared/AccountingTransactionLineItem.md
-  - docs/Models/Shared/AccountingTrialBalanceSubItem.md
+  - docs/Models/Shared/AccountingTrialbalance.md
+  - docs/Models/Shared/AccountingTrialbalanceSubItem.md
   - docs/Models/Shared/Api.md
   - docs/Models/Shared/ApiCall.md
   - docs/Models/Shared/ApiCallType.md
@@ -1256,15 +1329,19 @@ generatedFiles:
   - docs/Models/Shared/PaymentSubscriptionStatus.md
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/Priority.md
-  - docs/Models/Shared/PropertyAccountingBalanceSheetItemSubItems.md
+  - docs/Models/Shared/PropertyAccountingBalancesheetItemSubItems.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderBillingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrganizationAddress.md
+  - docs/Models/Shared/PropertyAccountingPurchaseorderBillingAddress.md
+  - docs/Models/Shared/PropertyAccountingPurchaseorderShippingAddress.md
   - docs/Models/Shared/PropertyAccountingReportBalanceSheet.md
   - docs/Models/Shared/PropertyAccountingReportProfitAndLoss.md
   - docs/Models/Shared/PropertyAccountingReportTrialBalance.md
+  - docs/Models/Shared/PropertyAccountingSalesorderBillingAddress.md
+  - docs/Models/Shared/PropertyAccountingSalesorderShippingAddress.md
   - docs/Models/Shared/PropertyAtsActivityFrom.md
   - docs/Models/Shared/PropertyAtsActivityFromType.md
   - docs/Models/Shared/PropertyAtsCandidateAddress.md
@@ -1415,6 +1492,8 @@ generatedFiles:
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
+  - docs/sdks/balancesheet/README.md
+  - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
   - docs/sdks/calendar/README.md
@@ -1430,6 +1509,7 @@ generatedFiles:
   - docs/sdks/connection/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/course/README.md
+  - docs/sdks/creditmemo/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
@@ -1474,15 +1554,18 @@ generatedFiles:
   - docs/sdks/payslip/README.md
   - docs/sdks/person/README.md
   - docs/sdks/pipeline/README.md
+  - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/purchaseorder/README.md
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
@@ -1496,6 +1579,7 @@ generatedFiles:
   - docs/sdks/timeoff/README.md
   - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
+  - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
@@ -1513,6 +1597,8 @@ generatedFiles:
   - src/Applicationstatus.php
   - src/Ats.php
   - src/Auth.php
+  - src/Balancesheet.php
+  - src/Bill.php
   - src/Branch.php
   - src/Busy.php
   - src/Calendar.php
@@ -1528,6 +1614,7 @@ generatedFiles:
   - src/Connection.php
   - src/Contact.php
   - src/Course.php
+  - src/Creditmemo.php
   - src/Crm.php
   - src/Customer.php
   - src/Deal.php
@@ -1582,14 +1669,22 @@ generatedFiles:
   - src/Models/Operations/Categories.php
   - src/Models/Operations/CreateAccountingAccountRequest.php
   - src/Models/Operations/CreateAccountingAccountResponse.php
+  - src/Models/Operations/CreateAccountingBillRequest.php
+  - src/Models/Operations/CreateAccountingBillResponse.php
   - src/Models/Operations/CreateAccountingContactRequest.php
   - src/Models/Operations/CreateAccountingContactResponse.php
+  - src/Models/Operations/CreateAccountingCreditmemoRequest.php
+  - src/Models/Operations/CreateAccountingCreditmemoResponse.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
   - src/Models/Operations/CreateAccountingJournalRequest.php
   - src/Models/Operations/CreateAccountingJournalResponse.php
   - src/Models/Operations/CreateAccountingOrderRequest.php
   - src/Models/Operations/CreateAccountingOrderResponse.php
+  - src/Models/Operations/CreateAccountingPurchaseorderRequest.php
+  - src/Models/Operations/CreateAccountingPurchaseorderResponse.php
+  - src/Models/Operations/CreateAccountingSalesorderRequest.php
+  - src/Models/Operations/CreateAccountingSalesorderResponse.php
   - src/Models/Operations/CreateAccountingTaxrateRequest.php
   - src/Models/Operations/CreateAccountingTaxrateResponse.php
   - src/Models/Operations/CreateAccountingTransactionRequest.php
@@ -1723,8 +1818,14 @@ generatedFiles:
   - src/Models/Operations/CreateUnifiedWebhookResponse.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
+  - src/Models/Operations/GetAccountingBalancesheetRequest.php
+  - src/Models/Operations/GetAccountingBalancesheetResponse.php
+  - src/Models/Operations/GetAccountingBillRequest.php
+  - src/Models/Operations/GetAccountingBillResponse.php
   - src/Models/Operations/GetAccountingContactRequest.php
   - src/Models/Operations/GetAccountingContactResponse.php
+  - src/Models/Operations/GetAccountingCreditmemoRequest.php
+  - src/Models/Operations/GetAccountingCreditmemoResponse.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
   - src/Models/Operations/GetAccountingJournalRequest.php
@@ -1733,12 +1834,20 @@ generatedFiles:
   - src/Models/Operations/GetAccountingOrderResponse.php
   - src/Models/Operations/GetAccountingOrganizationRequest.php
   - src/Models/Operations/GetAccountingOrganizationResponse.php
+  - src/Models/Operations/GetAccountingProfitlossRequest.php
+  - src/Models/Operations/GetAccountingProfitlossResponse.php
+  - src/Models/Operations/GetAccountingPurchaseorderRequest.php
+  - src/Models/Operations/GetAccountingPurchaseorderResponse.php
   - src/Models/Operations/GetAccountingReportRequest.php
   - src/Models/Operations/GetAccountingReportResponse.php
+  - src/Models/Operations/GetAccountingSalesorderRequest.php
+  - src/Models/Operations/GetAccountingSalesorderResponse.php
   - src/Models/Operations/GetAccountingTaxrateRequest.php
   - src/Models/Operations/GetAccountingTaxrateResponse.php
   - src/Models/Operations/GetAccountingTransactionRequest.php
   - src/Models/Operations/GetAccountingTransactionResponse.php
+  - src/Models/Operations/GetAccountingTrialbalanceRequest.php
+  - src/Models/Operations/GetAccountingTrialbalanceResponse.php
   - src/Models/Operations/GetAtsActivityRequest.php
   - src/Models/Operations/GetAtsActivityResponse.php
   - src/Models/Operations/GetAtsApplicationRequest.php
@@ -1881,8 +1990,14 @@ generatedFiles:
   - src/Models/Operations/GetUnifiedWebhookResponse.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
+  - src/Models/Operations/ListAccountingBalancesheetsRequest.php
+  - src/Models/Operations/ListAccountingBalancesheetsResponse.php
+  - src/Models/Operations/ListAccountingBillsRequest.php
+  - src/Models/Operations/ListAccountingBillsResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
   - src/Models/Operations/ListAccountingContactsResponse.php
+  - src/Models/Operations/ListAccountingCreditmemoesRequest.php
+  - src/Models/Operations/ListAccountingCreditmemoesResponse.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
   - src/Models/Operations/ListAccountingJournalsRequest.php
@@ -1891,12 +2006,20 @@ generatedFiles:
   - src/Models/Operations/ListAccountingOrdersResponse.php
   - src/Models/Operations/ListAccountingOrganizationsRequest.php
   - src/Models/Operations/ListAccountingOrganizationsResponse.php
+  - src/Models/Operations/ListAccountingProfitlossesRequest.php
+  - src/Models/Operations/ListAccountingProfitlossesResponse.php
+  - src/Models/Operations/ListAccountingPurchaseordersRequest.php
+  - src/Models/Operations/ListAccountingPurchaseordersResponse.php
   - src/Models/Operations/ListAccountingReportsRequest.php
   - src/Models/Operations/ListAccountingReportsResponse.php
+  - src/Models/Operations/ListAccountingSalesordersRequest.php
+  - src/Models/Operations/ListAccountingSalesordersResponse.php
   - src/Models/Operations/ListAccountingTaxratesRequest.php
   - src/Models/Operations/ListAccountingTaxratesResponse.php
   - src/Models/Operations/ListAccountingTransactionsRequest.php
   - src/Models/Operations/ListAccountingTransactionsResponse.php
+  - src/Models/Operations/ListAccountingTrialbalancesRequest.php
+  - src/Models/Operations/ListAccountingTrialbalancesResponse.php
   - src/Models/Operations/ListAtsActivitiesRequest.php
   - src/Models/Operations/ListAtsActivitiesResponse.php
   - src/Models/Operations/ListAtsApplicationsRequest.php
@@ -2056,14 +2179,22 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
+  - src/Models/Operations/PatchAccountingBillRequest.php
+  - src/Models/Operations/PatchAccountingBillResponse.php
   - src/Models/Operations/PatchAccountingContactRequest.php
   - src/Models/Operations/PatchAccountingContactResponse.php
+  - src/Models/Operations/PatchAccountingCreditmemoRequest.php
+  - src/Models/Operations/PatchAccountingCreditmemoResponse.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
   - src/Models/Operations/PatchAccountingJournalRequest.php
   - src/Models/Operations/PatchAccountingJournalResponse.php
   - src/Models/Operations/PatchAccountingOrderRequest.php
   - src/Models/Operations/PatchAccountingOrderResponse.php
+  - src/Models/Operations/PatchAccountingPurchaseorderRequest.php
+  - src/Models/Operations/PatchAccountingPurchaseorderResponse.php
+  - src/Models/Operations/PatchAccountingSalesorderRequest.php
+  - src/Models/Operations/PatchAccountingSalesorderResponse.php
   - src/Models/Operations/PatchAccountingTaxrateRequest.php
   - src/Models/Operations/PatchAccountingTaxrateResponse.php
   - src/Models/Operations/PatchAccountingTransactionRequest.php
@@ -2199,14 +2330,22 @@ generatedFiles:
   - src/Models/Operations/QueryParamCategories.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
+  - src/Models/Operations/RemoveAccountingBillRequest.php
+  - src/Models/Operations/RemoveAccountingBillResponse.php
   - src/Models/Operations/RemoveAccountingContactRequest.php
   - src/Models/Operations/RemoveAccountingContactResponse.php
+  - src/Models/Operations/RemoveAccountingCreditmemoRequest.php
+  - src/Models/Operations/RemoveAccountingCreditmemoResponse.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
   - src/Models/Operations/RemoveAccountingJournalRequest.php
   - src/Models/Operations/RemoveAccountingJournalResponse.php
   - src/Models/Operations/RemoveAccountingOrderRequest.php
   - src/Models/Operations/RemoveAccountingOrderResponse.php
+  - src/Models/Operations/RemoveAccountingPurchaseorderRequest.php
+  - src/Models/Operations/RemoveAccountingPurchaseorderResponse.php
+  - src/Models/Operations/RemoveAccountingSalesorderRequest.php
+  - src/Models/Operations/RemoveAccountingSalesorderResponse.php
   - src/Models/Operations/RemoveAccountingTaxrateRequest.php
   - src/Models/Operations/RemoveAccountingTaxrateResponse.php
   - src/Models/Operations/RemoveAccountingTransactionRequest.php
@@ -2337,14 +2476,22 @@ generatedFiles:
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
+  - src/Models/Operations/UpdateAccountingBillRequest.php
+  - src/Models/Operations/UpdateAccountingBillResponse.php
   - src/Models/Operations/UpdateAccountingContactRequest.php
   - src/Models/Operations/UpdateAccountingContactResponse.php
+  - src/Models/Operations/UpdateAccountingCreditmemoRequest.php
+  - src/Models/Operations/UpdateAccountingCreditmemoResponse.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
   - src/Models/Operations/UpdateAccountingJournalRequest.php
   - src/Models/Operations/UpdateAccountingJournalResponse.php
   - src/Models/Operations/UpdateAccountingOrderRequest.php
   - src/Models/Operations/UpdateAccountingOrderResponse.php
+  - src/Models/Operations/UpdateAccountingPurchaseorderRequest.php
+  - src/Models/Operations/UpdateAccountingPurchaseorderResponse.php
+  - src/Models/Operations/UpdateAccountingSalesorderRequest.php
+  - src/Models/Operations/UpdateAccountingSalesorderResponse.php
   - src/Models/Operations/UpdateAccountingTaxrateRequest.php
   - src/Models/Operations/UpdateAccountingTaxrateResponse.php
   - src/Models/Operations/UpdateAccountingTransactionRequest.php
@@ -2480,13 +2627,20 @@ generatedFiles:
   - src/Models/Shared/AccountingAccount.php
   - src/Models/Shared/AccountingAssociatedContact.php
   - src/Models/Shared/AccountingAttachment.php
-  - src/Models/Shared/AccountingBalanceSheetItem.php
+  - src/Models/Shared/AccountingBalancesheet.php
+  - src/Models/Shared/AccountingBalancesheetItem.php
+  - src/Models/Shared/AccountingBill.php
+  - src/Models/Shared/AccountingBillStatus.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingContactPaymentMethodType.php
+  - src/Models/Shared/AccountingCreditmemo.php
+  - src/Models/Shared/AccountingCreditmemoPaymentCollectionMethod.php
+  - src/Models/Shared/AccountingCreditmemoStatus.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/AccountingEmailType.php
   - src/Models/Shared/AccountingInvoice.php
+  - src/Models/Shared/AccountingInvoicePaymentCollectionMethod.php
   - src/Models/Shared/AccountingInvoiceStatus.php
   - src/Models/Shared/AccountingInvoiceType.php
   - src/Models/Shared/AccountingJournal.php
@@ -2496,19 +2650,25 @@ generatedFiles:
   - src/Models/Shared/AccountingOrderStatus.php
   - src/Models/Shared/AccountingOrderType.php
   - src/Models/Shared/AccountingOrganization.php
-  - src/Models/Shared/AccountingProfitAndLossAccount.php
-  - src/Models/Shared/AccountingProfitAndLossCategory.php
-  - src/Models/Shared/AccountingProfitAndLossSection.php
-  - src/Models/Shared/AccountingProfitAndLossSubcategory.php
+  - src/Models/Shared/AccountingProfitloss.php
+  - src/Models/Shared/AccountingProfitlossAccount.php
+  - src/Models/Shared/AccountingProfitlossCategory.php
+  - src/Models/Shared/AccountingProfitlossSection.php
+  - src/Models/Shared/AccountingProfitlossSubcategory.php
+  - src/Models/Shared/AccountingPurchaseorder.php
+  - src/Models/Shared/AccountingPurchaseorderStatus.php
   - src/Models/Shared/AccountingReport.php
   - src/Models/Shared/AccountingReportType.php
+  - src/Models/Shared/AccountingSalesorder.php
+  - src/Models/Shared/AccountingSalesorderStatus.php
   - src/Models/Shared/AccountingTaxrate.php
   - src/Models/Shared/AccountingTelephone.php
   - src/Models/Shared/AccountingTelephoneType.php
   - src/Models/Shared/AccountingTransaction.php
   - src/Models/Shared/AccountingTransactionContact.php
   - src/Models/Shared/AccountingTransactionLineItem.php
-  - src/Models/Shared/AccountingTrialBalanceSubItem.php
+  - src/Models/Shared/AccountingTrialbalance.php
+  - src/Models/Shared/AccountingTrialbalanceSubItem.php
   - src/Models/Shared/ApiCall.php
   - src/Models/Shared/ApiCallType.php
   - src/Models/Shared/AtsActivity.php
@@ -2749,15 +2909,19 @@ generatedFiles:
   - src/Models/Shared/PaymentSubscriptionStatus.php
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/Priority.php
-  - src/Models/Shared/PropertyAccountingBalanceSheetItemSubItems.php
+  - src/Models/Shared/PropertyAccountingBalancesheetItemSubItems.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrderBillingAddress.php
   - src/Models/Shared/PropertyAccountingOrderShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrganizationAddress.php
+  - src/Models/Shared/PropertyAccountingPurchaseorderBillingAddress.php
+  - src/Models/Shared/PropertyAccountingPurchaseorderShippingAddress.php
   - src/Models/Shared/PropertyAccountingReportBalanceSheet.php
   - src/Models/Shared/PropertyAccountingReportProfitAndLoss.php
   - src/Models/Shared/PropertyAccountingReportTrialBalance.php
+  - src/Models/Shared/PropertyAccountingSalesorderBillingAddress.php
+  - src/Models/Shared/PropertyAccountingSalesorderShippingAddress.php
   - src/Models/Shared/PropertyAtsActivityFrom.php
   - src/Models/Shared/PropertyAtsActivityFromType.php
   - src/Models/Shared/PropertyAtsCandidateAddress.php
@@ -2896,9 +3060,11 @@ generatedFiles:
   - src/Payslip.php
   - src/Person.php
   - src/Pipeline.php
+  - src/Profitloss.php
   - src/Project.php
   - src/Prompt.php
   - src/Pullrequest.php
+  - src/Purchaseorder.php
   - src/Recording.php
   - src/Refund.php
   - src/Repo.php
@@ -2906,6 +3072,7 @@ generatedFiles:
   - src/Repository.php
   - src/Review.php
   - src/SDKConfiguration.php
+  - src/Salesorder.php
   - src/Scim.php
   - src/Scorecard.php
   - src/Space.php
@@ -2919,6 +3086,7 @@ generatedFiles:
   - src/Timeoff.php
   - src/Timeshift.php
   - src/Transaction.php
+  - src/Trialbalance.php
   - src/Uc.php
   - src/Unified.php
   - src/UnifiedTo.php
@@ -7035,5 +7203,276 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createAccountingBill:
+    speakeasy-default-create-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCreditmemo:
+    speakeasy-default-create-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingPurchaseorder:
+    speakeasy-default-create-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingSalesorder:
+    speakeasy-default-create-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBalancesheet:
+    speakeasy-default-get-accounting-balancesheet:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBill:
+    speakeasy-default-get-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCreditmemo:
+    speakeasy-default-get-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingProfitloss:
+    speakeasy-default-get-accounting-profitloss:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingPurchaseorder:
+    speakeasy-default-get-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingSalesorder:
+    speakeasy-default-get-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingTrialbalance:
+    speakeasy-default-get-accounting-trialbalance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingBalancesheets:
+    speakeasy-default-list-accounting-balancesheets:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingBills:
+    speakeasy-default-list-accounting-bills:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingCreditmemoes:
+    speakeasy-default-list-accounting-creditmemoes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingProfitlosses:
+    speakeasy-default-list-accounting-profitlosses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingPurchaseorders:
+    speakeasy-default-list-accounting-purchaseorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingSalesorders:
+    speakeasy-default-list-accounting-salesorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingTrialbalances:
+    speakeasy-default-list-accounting-trialbalances:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingBill:
+    speakeasy-default-patch-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingCreditmemo:
+    speakeasy-default-patch-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingPurchaseorder:
+    speakeasy-default-patch-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingSalesorder:
+    speakeasy-default-patch-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingBill:
+    speakeasy-default-remove-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingCreditmemo:
+    speakeasy-default-remove-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingPurchaseorder:
+    speakeasy-default-remove-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingSalesorder:
+    speakeasy-default-remove-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingBill:
+    speakeasy-default-update-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingCreditmemo:
+    speakeasy-default-update-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingPurchaseorder:
+    speakeasy-default-update-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingSalesorder:
+    speakeasy-default-update-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

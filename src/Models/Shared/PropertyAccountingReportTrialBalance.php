@@ -12,12 +12,70 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyAccountingReportTrialBalance
 {
     /**
+     *
+     * @var ?\DateTime $createdAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
+
+    /**
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
      * $subItems
      *
-     * @var ?array<AccountingTrialBalanceSubItem> $subItems
+     * @var ?array<AccountingTrialbalanceSubItem> $subItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTrialBalanceSubItem>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTrialbalanceSubItem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $subItems = null;
 
@@ -38,15 +96,39 @@ class PropertyAccountingReportTrialBalance
     public ?float $totalDebitAmount = null;
 
     /**
-     * @param  ?array<AccountingTrialBalanceSubItem>  $subItems
+     *
+     * @var ?\DateTime $updatedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $updatedAt = null;
+
+    /**
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?\DateTime  $endAt
+     * @param  ?string  $id
+     * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
+     * @param  ?array<AccountingTrialbalanceSubItem>  $subItems
      * @param  ?float  $totalCreditAmount
      * @param  ?float  $totalDebitAmount
+     * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $subItems = null, ?float $totalCreditAmount = null, ?float $totalDebitAmount = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?array $subItems = null, ?float $totalCreditAmount = null, ?float $totalDebitAmount = null, ?\DateTime $updatedAt = null)
     {
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->endAt = $endAt;
+        $this->id = $id;
+        $this->name = $name;
+        $this->raw = $raw;
+        $this->startAt = $startAt;
         $this->subItems = $subItems;
         $this->totalCreditAmount = $totalCreditAmount;
         $this->totalDebitAmount = $totalDebitAmount;
+        $this->updatedAt = $updatedAt;
     }
 }

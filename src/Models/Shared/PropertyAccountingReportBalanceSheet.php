@@ -14,32 +14,72 @@ class PropertyAccountingReportBalanceSheet
     /**
      * $assets
      *
-     * @var ?array<AccountingBalanceSheetItem> $assets
+     * @var ?array<AccountingBalancesheetItem> $assets
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('assets')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalanceSheetItem>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $assets = null;
 
     /**
+     *
+     * @var ?\DateTime $createdAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
+
+    /**
      * $equity
      *
-     * @var ?array<AccountingBalanceSheetItem> $equity
+     * @var ?array<AccountingBalancesheetItem> $equity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('equity')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalanceSheetItem>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $equity = null;
 
     /**
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
      * $liabilities
      *
-     * @var ?array<AccountingBalanceSheetItem> $liabilities
+     * @var ?array<AccountingBalancesheetItem> $liabilities
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('liabilities')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalanceSheetItem>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $liabilities = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      *
@@ -50,17 +90,59 @@ class PropertyAccountingReportBalanceSheet
     public ?float $netAssetsAmount = null;
 
     /**
-     * @param  ?array<AccountingBalanceSheetItem>  $assets
-     * @param  ?array<AccountingBalanceSheetItem>  $equity
-     * @param  ?array<AccountingBalanceSheetItem>  $liabilities
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
+     *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $updatedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $updatedAt = null;
+
+    /**
+     * @param  ?array<AccountingBalancesheetItem>  $assets
+     * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?\DateTime  $endAt
+     * @param  ?array<AccountingBalancesheetItem>  $equity
+     * @param  ?string  $id
+     * @param  ?array<AccountingBalancesheetItem>  $liabilities
+     * @param  ?string  $name
      * @param  ?float  $netAssetsAmount
+     * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
+     * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $assets = null, ?array $equity = null, ?array $liabilities = null, ?float $netAssetsAmount = null)
+    public function __construct(?array $assets = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $equity = null, ?string $id = null, ?array $liabilities = null, ?string $name = null, ?float $netAssetsAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->assets = $assets;
+        $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->endAt = $endAt;
         $this->equity = $equity;
+        $this->id = $id;
         $this->liabilities = $liabilities;
+        $this->name = $name;
         $this->netAssetsAmount = $netAssetsAmount;
+        $this->raw = $raw;
+        $this->startAt = $startAt;
+        $this->updatedAt = $updatedAt;
     }
 }
