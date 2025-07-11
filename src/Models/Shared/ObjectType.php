@@ -16,10 +16,17 @@ enum ObjectType: string
     case AccountingJournal = 'accounting_journal';
     case AccountingContact = 'accounting_contact';
     case AccountingInvoice = 'accounting_invoice';
+    case AccountingBill = 'accounting_bill';
+    case AccountingCreditmemo = 'accounting_creditmemo';
     case AccountingTaxrate = 'accounting_taxrate';
     case AccountingOrganization = 'accounting_organization';
     case AccountingOrder = 'accounting_order';
+    case AccountingSalesorder = 'accounting_salesorder';
+    case AccountingPurchaseorder = 'accounting_purchaseorder';
     case AccountingReport = 'accounting_report';
+    case AccountingBalancesheet = 'accounting_balancesheet';
+    case AccountingProfitloss = 'accounting_profitloss';
+    case AccountingTrialbalance = 'accounting_trialbalance';
     case PaymentPayment = 'payment_payment';
     case PaymentLink = 'payment_link';
     case PaymentPayout = 'payment_payout';
