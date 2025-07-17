@@ -18,5 +18,4 @@ enum IssueStatus: string
     case OnHold = 'ON_HOLD';
     case Validating = 'VALIDATING';
     case Rejected = 'REJECTED';
-    case UpNext = 'UP_NEXT';
 }
