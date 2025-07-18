@@ -48,7 +48,7 @@ class Connection
     /**
      * Create connection
      *
-     * Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * Used only to import existing customer credentials; use "Authorize new connection" instead
      *
      * @param  Shared\Connection  $request
      * @return Operations\CreateUnifiedConnectionResponse

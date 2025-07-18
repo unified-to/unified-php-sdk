@@ -48,7 +48,7 @@ class Unified
     /**
      * Create connection
      *
-     * Used only to import existing customer credentials; use "Create connection indirectly" instead
+     * Used only to import existing customer credentials; use "Authorize new connection" instead
      *
      * @param  Shared\Connection  $request
      * @return Operations\CreateUnifiedConnectionResponse
@@ -299,7 +299,7 @@ class Unified
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *

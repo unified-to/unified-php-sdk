@@ -45,7 +45,7 @@ class Integration
     }
 
     /**
-     * Create connection indirectly
+     * Authorize new connection
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *
