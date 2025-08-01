@@ -36,6 +36,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -90,6 +91,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```php
 declare(strict_types=1);
 
@@ -143,6 +145,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -194,6 +197,7 @@ Create a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```php
 declare(strict_types=1);
 
@@ -245,6 +249,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -295,6 +300,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -345,6 +351,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -395,6 +402,7 @@ Retrieve a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -445,6 +453,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -494,6 +503,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```php
 declare(strict_types=1);
 
@@ -543,6 +553,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -592,6 +603,7 @@ List all students
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```php
 declare(strict_types=1);
 
@@ -641,6 +653,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -696,6 +709,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -750,6 +764,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -802,6 +817,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -854,6 +870,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -904,6 +921,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -954,6 +972,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1004,6 +1023,7 @@ Remove a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1054,6 +1074,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1109,6 +1130,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1163,6 +1185,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1215,6 +1238,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -18,6 +18,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 

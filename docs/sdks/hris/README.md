@@ -52,6 +52,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -103,6 +104,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -156,6 +158,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -207,6 +210,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -258,6 +262,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -309,6 +314,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -360,6 +366,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -410,6 +417,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -460,6 +468,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -510,6 +519,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -560,6 +570,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -610,6 +621,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -660,6 +672,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -710,6 +723,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -760,6 +774,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -809,6 +824,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -858,6 +874,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -907,6 +924,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -956,6 +974,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -1005,6 +1024,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```php
 declare(strict_types=1);
 
@@ -1054,6 +1074,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -1103,6 +1124,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -1152,6 +1174,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1204,6 +1227,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1258,6 +1282,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1310,6 +1335,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1362,6 +1388,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1414,6 +1441,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1466,6 +1494,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1516,6 +1545,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1566,6 +1596,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1616,6 +1647,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1666,6 +1698,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1716,6 +1749,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1766,6 +1800,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1818,6 +1853,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1872,6 +1908,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1924,6 +1961,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1976,6 +2014,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2028,6 +2067,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 

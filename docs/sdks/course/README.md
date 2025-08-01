@@ -18,6 +18,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```php
 declare(strict_types=1);
 

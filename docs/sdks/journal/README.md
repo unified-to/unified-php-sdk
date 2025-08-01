@@ -18,6 +18,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -24,6 +24,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -77,6 +78,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -128,6 +130,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -178,6 +181,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -228,6 +232,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -277,6 +282,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -326,6 +332,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -380,6 +387,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -432,6 +440,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -482,6 +491,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 

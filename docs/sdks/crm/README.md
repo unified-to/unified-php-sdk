@@ -48,6 +48,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -99,6 +100,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -150,6 +152,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```php
 declare(strict_types=1);
 
@@ -201,6 +204,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -252,6 +256,7 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```php
 declare(strict_types=1);
 
@@ -303,6 +308,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -354,6 +360,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -404,6 +411,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -454,6 +462,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -504,6 +513,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -554,6 +564,7 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -604,6 +615,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -654,6 +666,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -703,6 +716,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -752,6 +766,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```php
 declare(strict_types=1);
 
@@ -801,6 +816,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -850,6 +866,7 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```php
 declare(strict_types=1);
 
@@ -899,6 +916,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -948,6 +966,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1000,6 +1019,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1052,6 +1072,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1104,6 +1125,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1156,6 +1178,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1208,6 +1231,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1260,6 +1284,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1310,6 +1335,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1360,6 +1386,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1410,6 +1437,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1460,6 +1488,7 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1510,6 +1539,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1560,6 +1590,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1612,6 +1643,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1664,6 +1696,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1716,6 +1749,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1768,6 +1802,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1820,6 +1855,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```php
 declare(strict_types=1);
 

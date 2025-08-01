@@ -24,6 +24,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -75,6 +76,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```php
 declare(strict_types=1);
 
@@ -128,6 +130,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -178,6 +181,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -228,6 +232,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -277,6 +282,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```php
 declare(strict_types=1);
 
@@ -326,6 +332,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -378,6 +385,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -432,6 +440,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -482,6 +491,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -584,6 +595,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 

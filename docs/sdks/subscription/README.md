@@ -18,6 +18,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 

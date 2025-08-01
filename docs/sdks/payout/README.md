@@ -14,6 +14,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```php
 declare(strict_types=1);
 

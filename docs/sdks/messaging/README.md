@@ -20,6 +20,7 @@ Create a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ Retrieve a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ List all messages
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```php
 declare(strict_types=1);
 
@@ -269,6 +274,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -321,6 +327,7 @@ Remove a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -371,6 +378,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 

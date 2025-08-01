@@ -18,6 +18,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 

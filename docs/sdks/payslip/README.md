@@ -14,6 +14,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```php
 declare(strict_types=1);
 

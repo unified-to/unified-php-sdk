@@ -31,6 +31,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +85,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -135,6 +137,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -186,6 +189,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -236,6 +240,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -286,6 +291,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -336,6 +342,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```php
 declare(strict_types=1);
 
@@ -385,6 +392,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -434,6 +442,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -483,6 +492,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -638,6 +650,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -690,6 +703,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -740,6 +754,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -790,6 +805,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -840,6 +856,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -894,6 +911,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -946,6 +964,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 

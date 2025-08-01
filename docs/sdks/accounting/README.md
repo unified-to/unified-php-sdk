@@ -7,6 +7,7 @@
 
 * [createAccountingAccount](#createaccountingaccount) - Create an account
 * [createAccountingBill](#createaccountingbill) - Create a bill
+* [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
@@ -19,6 +20,7 @@
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [getAccountingCategory](#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
@@ -35,6 +37,7 @@
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](#listaccountingbills) - List all bills
+* [listAccountingCategories](#listaccountingcategories) - List all categories
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
@@ -50,6 +53,7 @@
 * [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
 * [patchAccountingBill](#patchaccountingbill) - Update a bill
+* [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
@@ -61,6 +65,7 @@
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
 * [removeAccountingBill](#removeaccountingbill) - Remove a bill
+* [removeAccountingCategory](#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
@@ -72,6 +77,7 @@
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
 * [updateAccountingBill](#updateaccountingbill) - Update a bill
+* [updateAccountingCategory](#updateaccountingcategory) - Update a category
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
@@ -88,6 +94,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```php
 declare(strict_types=1);
 
@@ -139,6 +146,7 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -184,12 +192,65 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## createAccountingCategory
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAccountingCategoryRequest(
+    accountingCategory: new Shared\AccountingCategory(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->createAccountingCategory(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateAccountingCategoryRequest](../../Models/Operations/CreateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\CreateAccountingCategoryResponse](../../Models/Operations/CreateAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## createAccountingContact
 
 Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -241,6 +302,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -292,6 +354,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -343,6 +406,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -394,6 +458,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -445,6 +510,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -496,6 +562,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -547,6 +614,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -598,6 +666,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -649,6 +718,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -699,6 +769,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -749,6 +820,7 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -793,12 +865,64 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getAccountingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAccountingCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingCategory(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAccountingCategoryRequest](../../Models/Operations/GetAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetAccountingCategoryResponse](../../Models/Operations/GetAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getAccountingContact
 
 Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -849,6 +973,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -899,6 +1024,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -949,6 +1075,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -999,6 +1126,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1049,6 +1177,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1099,6 +1228,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1149,6 +1279,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1199,6 +1330,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1249,6 +1381,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1299,6 +1432,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1349,6 +1483,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1399,6 +1534,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1449,6 +1585,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```php
 declare(strict_types=1);
 
@@ -1498,6 +1635,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```php
 declare(strict_types=1);
 
@@ -1547,6 +1685,7 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -1590,12 +1729,63 @@ if ($response->accountingBills !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAccountingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingCategoriesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingCategories(
+    request: $request
+);
+
+if ($response->accountingCategories !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListAccountingCategoriesRequest](../../Models/Operations/ListAccountingCategoriesRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListAccountingCategoriesResponse](../../Models/Operations/ListAccountingCategoriesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAccountingContacts
 
 List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -1645,6 +1835,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -1694,6 +1885,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -1743,6 +1935,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -1792,6 +1985,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -1841,6 +2035,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -1890,6 +2085,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```php
 declare(strict_types=1);
 
@@ -1939,6 +2135,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -1988,6 +2185,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```php
 declare(strict_types=1);
 
@@ -2037,6 +2235,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -2086,6 +2285,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -2135,6 +2335,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -2184,6 +2385,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```php
 declare(strict_types=1);
 
@@ -2233,6 +2435,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2285,6 +2488,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2331,12 +2535,66 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingCategoryRequest(
+    accountingCategory: new Shared\AccountingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingCategory(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchAccountingCategoryRequest](../../Models/Operations/PatchAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\PatchAccountingCategoryResponse](../../Models/Operations/PatchAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2389,6 +2647,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2441,6 +2700,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2493,6 +2753,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2545,6 +2806,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2597,6 +2859,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2649,6 +2912,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2701,6 +2965,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2753,6 +3018,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2805,6 +3071,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2855,6 +3122,7 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2899,12 +3167,64 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeAccountingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingCategory(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveAccountingCategoryRequest](../../Models/Operations/RemoveAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveAccountingCategoryResponse](../../Models/Operations/RemoveAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeAccountingContact
 
 Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2955,6 +3275,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3005,6 +3326,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3055,6 +3377,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3105,6 +3428,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3155,6 +3479,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3205,6 +3530,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3255,6 +3581,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3305,6 +3632,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3355,6 +3683,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3407,6 +3736,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3453,12 +3783,66 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## updateAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingCategoryRequest(
+    accountingCategory: new Shared\AccountingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->updateAccountingCategory(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateAccountingCategoryRequest](../../Models/Operations/UpdateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\UpdateAccountingCategoryResponse](../../Models/Operations/UpdateAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updateAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3511,6 +3895,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3563,6 +3948,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3615,6 +4001,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3667,6 +4054,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3719,6 +4107,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3771,6 +4160,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3823,6 +4213,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3875,6 +4266,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 

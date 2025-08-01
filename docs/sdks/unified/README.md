@@ -32,6 +32,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```php
 declare(strict_types=1);
 
@@ -85,6 +86,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```php
 declare(strict_types=1);
 
@@ -139,6 +141,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -188,6 +191,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -237,6 +241,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +292,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -336,6 +342,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```php
 declare(strict_types=1);
 
@@ -382,6 +389,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```php
 declare(strict_types=1);
 
@@ -428,6 +436,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```php
 declare(strict_types=1);
 
@@ -477,6 +486,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```php
 declare(strict_types=1);
 
@@ -523,6 +533,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```php
 declare(strict_types=1);
 
@@ -569,6 +580,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```php
 declare(strict_types=1);
 
@@ -615,6 +627,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -674,6 +687,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -729,6 +743,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```php
 declare(strict_types=1);
 
@@ -778,6 +793,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -827,6 +843,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -876,6 +893,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -934,6 +952,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -989,6 +1008,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```php
 declare(strict_types=1);
 

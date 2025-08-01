@@ -18,6 +18,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 

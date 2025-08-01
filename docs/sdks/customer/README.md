@@ -18,6 +18,7 @@ Create a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all customers
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 

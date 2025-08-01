@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -83,6 +84,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -137,6 +139,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -190,6 +193,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -240,6 +244,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,6 +295,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -340,6 +346,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -389,6 +396,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -438,6 +446,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -487,6 +496,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -541,6 +551,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -596,6 +607,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -650,6 +662,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -700,6 +713,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -750,6 +764,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -800,6 +815,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -854,6 +870,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -909,6 +926,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 

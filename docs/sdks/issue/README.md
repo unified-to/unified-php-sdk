@@ -13,6 +13,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```php
 declare(strict_types=1);
 

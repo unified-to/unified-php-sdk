@@ -18,6 +18,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -18,6 +18,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 

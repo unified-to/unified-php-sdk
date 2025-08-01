@@ -18,6 +18,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -120,6 +122,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```php
 declare(strict_types=1);
 
@@ -166,6 +169,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -225,6 +229,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```php
 declare(strict_types=1);
 

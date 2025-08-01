@@ -20,6 +20,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -269,6 +274,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -321,6 +327,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -371,6 +378,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 

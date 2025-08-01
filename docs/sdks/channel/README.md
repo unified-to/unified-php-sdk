@@ -14,6 +14,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```php
 declare(strict_types=1);
 

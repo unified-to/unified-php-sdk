@@ -24,6 +24,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -77,6 +78,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -128,6 +130,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -178,6 +181,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -228,6 +232,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -277,6 +282,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -326,6 +332,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -380,6 +387,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -432,6 +440,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -482,6 +491,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 

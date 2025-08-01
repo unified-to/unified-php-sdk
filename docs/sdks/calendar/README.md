@@ -33,6 +33,7 @@ Create a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
 ```php
 declare(strict_types=1);
 
@@ -86,6 +87,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -137,6 +139,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -190,6 +193,7 @@ Retrieve a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -240,6 +244,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,6 +295,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -340,6 +346,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -390,6 +397,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```php
 declare(strict_types=1);
 
@@ -439,6 +447,7 @@ List all calendars
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
 ```php
 declare(strict_types=1);
 
@@ -488,6 +497,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -537,6 +547,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -635,6 +647,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -689,6 +702,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -741,6 +755,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -795,6 +810,7 @@ Remove a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -845,6 +861,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -895,6 +912,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -945,6 +963,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -999,6 +1018,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1051,6 +1071,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 

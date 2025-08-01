@@ -13,6 +13,7 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```php
 declare(strict_types=1);
 

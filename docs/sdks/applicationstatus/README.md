@@ -13,6 +13,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```php
 declare(strict_types=1);
 

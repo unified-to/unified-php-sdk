@@ -20,6 +20,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```php
 declare(strict_types=1);
 
@@ -74,6 +75,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -123,6 +125,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```php
 declare(strict_types=1);
 
@@ -169,6 +172,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```php
 declare(strict_types=1);
 
@@ -273,6 +278,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -322,6 +328,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -377,6 +384,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```php
 declare(strict_types=1);
 

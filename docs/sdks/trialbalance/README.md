@@ -14,6 +14,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```php
 declare(strict_types=1);
 

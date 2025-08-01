@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +85,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -135,6 +137,7 @@ Create a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
 ```php
 declare(strict_types=1);
 
@@ -186,6 +189,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -236,6 +240,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -286,6 +291,7 @@ Retrieve a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -336,6 +342,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -385,6 +392,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -434,6 +442,7 @@ List all tasks
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
 ```php
 declare(strict_types=1);
 
@@ -483,6 +492,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -538,6 +548,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -590,6 +601,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -642,6 +654,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -692,6 +705,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -742,6 +756,7 @@ Remove a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -792,6 +807,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -847,6 +863,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -899,6 +916,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
 ```php
 declare(strict_types=1);
 

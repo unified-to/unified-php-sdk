@@ -18,6 +18,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -72,6 +73,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -122,6 +124,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -226,6 +230,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -276,6 +281,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 

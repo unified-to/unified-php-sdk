@@ -18,6 +18,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 

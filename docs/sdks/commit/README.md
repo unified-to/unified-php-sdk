@@ -18,6 +18,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -72,6 +73,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -122,6 +124,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -226,6 +230,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -276,6 +281,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -24,6 +24,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -75,6 +76,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -126,6 +128,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -176,6 +179,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -226,6 +230,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -275,6 +280,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -324,6 +330,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -376,6 +383,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -428,6 +436,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -478,6 +487,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -528,6 +538,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -580,6 +591,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 

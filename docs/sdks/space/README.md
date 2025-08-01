@@ -18,6 +18,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 

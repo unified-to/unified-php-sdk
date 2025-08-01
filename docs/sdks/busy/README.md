@@ -13,6 +13,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```php
 declare(strict_types=1);
 

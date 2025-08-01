@@ -18,6 +18,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 

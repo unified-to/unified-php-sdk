@@ -20,6 +20,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPassthrough_json" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -70,6 +71,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPassthrough_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -120,6 +122,7 @@ Passthrough GET
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPassthroughs" method="get" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPassthrough_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPassthrough_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Passthrough DELETE
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePassthrough" method="delete" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -320,6 +326,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePassthrough_json" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 
@@ -370,6 +377,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePassthrough_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```php
 declare(strict_types=1);
 

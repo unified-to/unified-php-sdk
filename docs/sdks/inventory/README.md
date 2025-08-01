@@ -18,6 +18,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 

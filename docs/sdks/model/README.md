@@ -13,6 +13,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```php
 declare(strict_types=1);
 

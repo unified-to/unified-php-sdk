@@ -24,6 +24,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```php
 declare(strict_types=1);
 
@@ -77,6 +78,7 @@ Create user
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createScimUsers" method="post" path="/scim/{connection_id}/users" -->
 ```php
 declare(strict_types=1);
 
@@ -128,6 +130,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -178,6 +181,7 @@ Get user
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getScimUsers" method="get" path="/scim/{connection_id}/users/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -228,6 +232,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```php
 declare(strict_types=1);
 
@@ -277,6 +282,7 @@ List users
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listScimUsers" method="get" path="/scim/{connection_id}/users" -->
 ```php
 declare(strict_types=1);
 
@@ -326,6 +332,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -380,6 +387,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchScimUsers" method="patch" path="/scim/{connection_id}/users/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -432,6 +440,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -482,6 +491,7 @@ Delete user
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeScimUsers" method="delete" path="/scim/{connection_id}/users/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateScimUsers" method="put" path="/scim/{connection_id}/users/{id}" -->
 ```php
 declare(strict_types=1);
 

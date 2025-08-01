@@ -42,6 +42,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -95,6 +96,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -148,6 +150,7 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -199,6 +202,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -252,6 +256,7 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```php
 declare(strict_types=1);
 
@@ -305,6 +310,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -355,6 +361,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -405,6 +412,7 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -455,6 +463,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -505,6 +514,7 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -555,6 +565,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -604,6 +615,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -653,6 +665,7 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -702,6 +715,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -751,6 +765,7 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```php
 declare(strict_types=1);
 
@@ -800,6 +815,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -854,6 +870,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -908,6 +925,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -960,6 +978,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1014,6 +1033,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1068,6 +1088,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1118,6 +1139,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1168,6 +1190,7 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1218,6 +1241,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1268,6 +1292,7 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1318,6 +1343,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1372,6 +1398,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1426,6 +1453,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1478,6 +1506,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1532,6 +1561,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 

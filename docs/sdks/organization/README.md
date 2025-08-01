@@ -20,6 +20,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -269,6 +274,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -321,6 +327,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -371,6 +378,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 

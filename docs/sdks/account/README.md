@@ -18,6 +18,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 

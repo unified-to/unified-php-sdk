@@ -18,6 +18,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -71,6 +72,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +123,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -170,6 +173,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -224,6 +228,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -274,6 +279,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 

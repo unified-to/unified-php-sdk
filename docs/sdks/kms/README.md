@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -83,6 +84,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```php
 declare(strict_types=1);
 
@@ -137,6 +139,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -190,6 +193,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -240,6 +244,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,6 +295,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -340,6 +346,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -389,6 +396,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```php
 declare(strict_types=1);
 
@@ -438,6 +446,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -487,6 +496,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -541,6 +551,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -596,6 +607,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -650,6 +662,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -700,6 +713,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -750,6 +764,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -800,6 +815,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -854,6 +870,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -909,6 +926,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 

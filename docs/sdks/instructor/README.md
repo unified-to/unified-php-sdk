@@ -18,6 +18,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +70,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -119,6 +121,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +171,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +224,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +275,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 

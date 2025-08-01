@@ -20,6 +20,16 @@ class AccountingLineitem
     public ?string $accountId = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -149,6 +159,7 @@ class AccountingLineitem
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<string>  $categoryIds
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $discountAmount
      * @param  ?string  $id
@@ -167,9 +178,10 @@ class AccountingLineitem
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
+        $this->categoryIds = $categoryIds;
         $this->createdAt = $createdAt;
         $this->discountAmount = $discountAmount;
         $this->id = $id;

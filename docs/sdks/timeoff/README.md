@@ -14,6 +14,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```php
 declare(strict_types=1);
 

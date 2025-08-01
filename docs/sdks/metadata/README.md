@@ -18,6 +18,7 @@ Create a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```php
 declare(strict_types=1);
 
@@ -72,6 +73,7 @@ Retrieve a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -122,6 +124,7 @@ List all metadatas
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -226,6 +230,7 @@ Remove a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -276,6 +281,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -18,6 +18,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -72,6 +73,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -122,6 +124,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -171,6 +174,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -226,6 +230,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -276,6 +281,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 

@@ -61,6 +61,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -112,6 +113,7 @@ Create an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -163,6 +165,7 @@ Create a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -214,6 +217,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -267,6 +271,7 @@ Create a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -318,6 +323,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -369,6 +375,7 @@ Create a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -420,6 +427,7 @@ Create a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -471,6 +479,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -521,6 +530,7 @@ Retrieve an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -571,6 +581,7 @@ Retrieve a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -621,6 +632,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -671,6 +683,7 @@ Retrieve a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -721,6 +734,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -771,6 +785,7 @@ Retrieve a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -821,6 +836,7 @@ Retrieve a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -871,6 +887,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -920,6 +937,7 @@ List all applications
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -969,6 +987,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```php
 declare(strict_types=1);
 
@@ -1018,6 +1037,7 @@ List all candidates
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -1067,6 +1087,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -1116,6 +1137,7 @@ List all documents
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -1165,6 +1187,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -1214,6 +1237,7 @@ List all jobs
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -1263,6 +1287,7 @@ List all scorecards
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -1312,6 +1337,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1364,6 +1390,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1416,6 +1443,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1468,6 +1496,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1522,6 +1551,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1574,6 +1604,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1626,6 +1657,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1678,6 +1710,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1730,6 +1763,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1780,6 +1814,7 @@ Remove an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1830,6 +1865,7 @@ Remove a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1880,6 +1916,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1930,6 +1967,7 @@ Remove a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1980,6 +2018,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2030,6 +2069,7 @@ Remove a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2080,6 +2120,7 @@ Remove a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2130,6 +2171,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2182,6 +2224,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2234,6 +2277,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2286,6 +2330,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2340,6 +2385,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2392,6 +2438,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2444,6 +2491,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2496,6 +2544,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 

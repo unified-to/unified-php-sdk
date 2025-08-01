@@ -42,6 +42,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -96,6 +97,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -150,6 +152,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -201,6 +204,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -252,6 +256,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```php
 declare(strict_types=1);
 
@@ -305,6 +310,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -355,6 +361,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -405,6 +412,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -455,6 +463,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -505,6 +514,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -555,6 +565,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -604,6 +615,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -653,6 +665,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -702,6 +715,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -751,6 +765,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```php
 declare(strict_types=1);
 
@@ -800,6 +815,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -855,6 +871,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -910,6 +927,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -962,6 +980,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1014,6 +1033,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1068,6 +1088,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1118,6 +1139,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1168,6 +1190,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1218,6 +1241,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1268,6 +1292,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1318,6 +1343,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1373,6 +1399,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1428,6 +1455,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1480,6 +1508,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1532,6 +1561,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 

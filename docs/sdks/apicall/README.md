@@ -14,6 +14,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -63,6 +64,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```php
 declare(strict_types=1);
 

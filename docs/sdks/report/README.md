@@ -14,6 +14,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```php
 declare(strict_types=1);
 

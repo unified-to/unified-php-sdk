@@ -14,6 +14,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```php
 declare(strict_types=1);
 

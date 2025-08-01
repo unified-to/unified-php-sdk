@@ -14,6 +14,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```php
 declare(strict_types=1);
 

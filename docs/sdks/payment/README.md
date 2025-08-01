@@ -34,6 +34,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -85,6 +86,7 @@ Create a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
 ```php
 declare(strict_types=1);
 
@@ -136,6 +138,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -187,6 +190,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -237,6 +241,7 @@ Retrieve a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentPayment" method="get" path="/payment/{connection_id}/payment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +292,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -337,6 +343,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -387,6 +394,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -437,6 +445,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -486,6 +495,7 @@ List all payments
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentPayments" method="get" path="/payment/{connection_id}/payment" -->
 ```php
 declare(strict_types=1);
 
@@ -535,6 +545,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```php
 declare(strict_types=1);
 
@@ -584,6 +595,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```php
 declare(strict_types=1);
 
@@ -633,6 +645,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -682,6 +695,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -734,6 +748,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -786,6 +801,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -838,6 +854,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -888,6 +905,7 @@ Remove a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePaymentPayment" method="delete" path="/payment/{connection_id}/payment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -938,6 +956,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -988,6 +1007,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1040,6 +1060,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1092,6 +1113,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 

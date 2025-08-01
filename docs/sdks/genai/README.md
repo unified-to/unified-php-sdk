@@ -14,6 +14,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```php
 declare(strict_types=1);
 
@@ -65,6 +66,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```php
 declare(strict_types=1);
 

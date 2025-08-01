@@ -15,6 +15,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```php
 declare(strict_types=1);
 
@@ -65,6 +66,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```php
 declare(strict_types=1);
 
@@ -114,6 +116,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```php
 declare(strict_types=1);
 

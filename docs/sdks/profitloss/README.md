@@ -14,6 +14,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +65,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```php
 declare(strict_types=1);
 

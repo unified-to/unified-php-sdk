@@ -31,6 +31,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +85,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -135,6 +137,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -186,6 +189,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -236,6 +240,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -286,6 +291,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -336,6 +342,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -385,6 +392,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -434,6 +442,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -483,6 +492,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -532,6 +542,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -586,6 +597,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -638,6 +650,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -690,6 +703,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -740,6 +754,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -790,6 +805,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -840,6 +856,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -894,6 +911,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -946,6 +964,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 

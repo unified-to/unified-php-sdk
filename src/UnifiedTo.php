@@ -30,6 +30,8 @@ class UnifiedTo
 
     public Bill $bill;
 
+    public Category $category;
+
     public Contact $contact;
 
     public Creditmemo $creditmemo;
@@ -242,6 +244,7 @@ class UnifiedTo
         $this->account = new Account($this->sdkConfiguration);
         $this->balancesheet = new Balancesheet($this->sdkConfiguration);
         $this->bill = new Bill($this->sdkConfiguration);
+        $this->category = new Category($this->sdkConfiguration);
         $this->contact = new Contact($this->sdkConfiguration);
         $this->creditmemo = new Creditmemo($this->sdkConfiguration);
         $this->invoice = new Invoice($this->sdkConfiguration);

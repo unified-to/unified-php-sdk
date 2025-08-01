@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
+  docChecksum: 29f7859e9080ffea0b7fd7e4996b62ce
   docVersion: "1.0"
-  speakeasyVersion: 1.582.0
-  generationVersion: 2.657.1
-  releaseVersion: 1.3.23
-  configChecksum: 6c55752046806bd98cf5c13189769081
+  speakeasyVersion: 1.595.0
+  generationVersion: 2.670.1
+  releaseVersion: 1.3.24
+  configChecksum: 173b3f625e22827cf3daba84db2ae931
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.6
+    core: 3.8.9
     globalSecurity: 2.81.8
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.2
@@ -30,6 +30,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingAccountResponse.md
   - docs/Models/Operations/CreateAccountingBillRequest.md
   - docs/Models/Operations/CreateAccountingBillResponse.md
+  - docs/Models/Operations/CreateAccountingCategoryRequest.md
+  - docs/Models/Operations/CreateAccountingCategoryResponse.md
   - docs/Models/Operations/CreateAccountingContactRequest.md
   - docs/Models/Operations/CreateAccountingContactResponse.md
   - docs/Models/Operations/CreateAccountingCreditmemoRequest.md
@@ -181,6 +183,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingBalancesheetResponse.md
   - docs/Models/Operations/GetAccountingBillRequest.md
   - docs/Models/Operations/GetAccountingBillResponse.md
+  - docs/Models/Operations/GetAccountingCategoryRequest.md
+  - docs/Models/Operations/GetAccountingCategoryResponse.md
   - docs/Models/Operations/GetAccountingContactRequest.md
   - docs/Models/Operations/GetAccountingContactResponse.md
   - docs/Models/Operations/GetAccountingCreditmemoRequest.md
@@ -353,6 +357,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingBalancesheetsResponse.md
   - docs/Models/Operations/ListAccountingBillsRequest.md
   - docs/Models/Operations/ListAccountingBillsResponse.md
+  - docs/Models/Operations/ListAccountingCategoriesRequest.md
+  - docs/Models/Operations/ListAccountingCategoriesResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
   - docs/Models/Operations/ListAccountingContactsResponse.md
   - docs/Models/Operations/ListAccountingCreditmemoesRequest.md
@@ -540,6 +546,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingAccountResponse.md
   - docs/Models/Operations/PatchAccountingBillRequest.md
   - docs/Models/Operations/PatchAccountingBillResponse.md
+  - docs/Models/Operations/PatchAccountingCategoryRequest.md
+  - docs/Models/Operations/PatchAccountingCategoryResponse.md
   - docs/Models/Operations/PatchAccountingContactRequest.md
   - docs/Models/Operations/PatchAccountingContactResponse.md
   - docs/Models/Operations/PatchAccountingCreditmemoRequest.md
@@ -691,6 +699,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
   - docs/Models/Operations/RemoveAccountingBillRequest.md
   - docs/Models/Operations/RemoveAccountingBillResponse.md
+  - docs/Models/Operations/RemoveAccountingCategoryRequest.md
+  - docs/Models/Operations/RemoveAccountingCategoryResponse.md
   - docs/Models/Operations/RemoveAccountingContactRequest.md
   - docs/Models/Operations/RemoveAccountingContactResponse.md
   - docs/Models/Operations/RemoveAccountingCreditmemoRequest.md
@@ -837,6 +847,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
   - docs/Models/Operations/UpdateAccountingBillRequest.md
   - docs/Models/Operations/UpdateAccountingBillResponse.md
+  - docs/Models/Operations/UpdateAccountingCategoryRequest.md
+  - docs/Models/Operations/UpdateAccountingCategoryResponse.md
   - docs/Models/Operations/UpdateAccountingContactRequest.md
   - docs/Models/Operations/UpdateAccountingContactResponse.md
   - docs/Models/Operations/UpdateAccountingCreditmemoRequest.md
@@ -990,6 +1002,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingBalancesheetItem.md
   - docs/Models/Shared/AccountingBill.md
   - docs/Models/Shared/AccountingBillStatus.md
+  - docs/Models/Shared/AccountingCategory.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
   - docs/Models/Shared/AccountingContactPaymentMethodType.md
@@ -1500,6 +1513,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/category/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -1605,6 +1619,7 @@ generatedFiles:
   - src/Calendar.php
   - src/Call.php
   - src/Candidate.php
+  - src/Category.php
   - src/Channel.php
   - src/ClassT.php
   - src/Collection.php
@@ -1672,6 +1687,8 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingAccountResponse.php
   - src/Models/Operations/CreateAccountingBillRequest.php
   - src/Models/Operations/CreateAccountingBillResponse.php
+  - src/Models/Operations/CreateAccountingCategoryRequest.php
+  - src/Models/Operations/CreateAccountingCategoryResponse.php
   - src/Models/Operations/CreateAccountingContactRequest.php
   - src/Models/Operations/CreateAccountingContactResponse.php
   - src/Models/Operations/CreateAccountingCreditmemoRequest.php
@@ -1823,6 +1840,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingBalancesheetResponse.php
   - src/Models/Operations/GetAccountingBillRequest.php
   - src/Models/Operations/GetAccountingBillResponse.php
+  - src/Models/Operations/GetAccountingCategoryRequest.php
+  - src/Models/Operations/GetAccountingCategoryResponse.php
   - src/Models/Operations/GetAccountingContactRequest.php
   - src/Models/Operations/GetAccountingContactResponse.php
   - src/Models/Operations/GetAccountingCreditmemoRequest.php
@@ -1995,6 +2014,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingBalancesheetsResponse.php
   - src/Models/Operations/ListAccountingBillsRequest.php
   - src/Models/Operations/ListAccountingBillsResponse.php
+  - src/Models/Operations/ListAccountingCategoriesRequest.php
+  - src/Models/Operations/ListAccountingCategoriesResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
   - src/Models/Operations/ListAccountingContactsResponse.php
   - src/Models/Operations/ListAccountingCreditmemoesRequest.php
@@ -2182,6 +2203,8 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingAccountResponse.php
   - src/Models/Operations/PatchAccountingBillRequest.php
   - src/Models/Operations/PatchAccountingBillResponse.php
+  - src/Models/Operations/PatchAccountingCategoryRequest.php
+  - src/Models/Operations/PatchAccountingCategoryResponse.php
   - src/Models/Operations/PatchAccountingContactRequest.php
   - src/Models/Operations/PatchAccountingContactResponse.php
   - src/Models/Operations/PatchAccountingCreditmemoRequest.php
@@ -2333,6 +2356,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingAccountResponse.php
   - src/Models/Operations/RemoveAccountingBillRequest.php
   - src/Models/Operations/RemoveAccountingBillResponse.php
+  - src/Models/Operations/RemoveAccountingCategoryRequest.php
+  - src/Models/Operations/RemoveAccountingCategoryResponse.php
   - src/Models/Operations/RemoveAccountingContactRequest.php
   - src/Models/Operations/RemoveAccountingContactResponse.php
   - src/Models/Operations/RemoveAccountingCreditmemoRequest.php
@@ -2479,6 +2504,8 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingAccountResponse.php
   - src/Models/Operations/UpdateAccountingBillRequest.php
   - src/Models/Operations/UpdateAccountingBillResponse.php
+  - src/Models/Operations/UpdateAccountingCategoryRequest.php
+  - src/Models/Operations/UpdateAccountingCategoryResponse.php
   - src/Models/Operations/UpdateAccountingContactRequest.php
   - src/Models/Operations/UpdateAccountingContactResponse.php
   - src/Models/Operations/UpdateAccountingCreditmemoRequest.php
@@ -2632,6 +2659,7 @@ generatedFiles:
   - src/Models/Shared/AccountingBalancesheetItem.php
   - src/Models/Shared/AccountingBill.php
   - src/Models/Shared/AccountingBillStatus.php
+  - src/Models/Shared/AccountingCategory.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
   - src/Models/Shared/AccountingContactPaymentMethodType.php
@@ -7467,6 +7495,61 @@ examples:
           application/json: {}
   updateAccountingSalesorder:
     speakeasy-default-update-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCategory:
+    speakeasy-default-create-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCategory:
+    speakeasy-default-get-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCategories:
+    speakeasy-default-list-accounting-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingCategory:
+    speakeasy-default-patch-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingCategory:
+    speakeasy-default-remove-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingCategory:
+    speakeasy-default-update-accounting-category:
       parameters:
         path:
           connection_id: "<id>"

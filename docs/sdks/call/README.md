@@ -13,6 +13,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```php
 declare(strict_types=1);
 

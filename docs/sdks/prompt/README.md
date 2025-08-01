@@ -13,6 +13,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="php" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```php
 declare(strict_types=1);
 
