@@ -12,7 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingProfitloss
 {
     /**
-     * @deprecated
+     * @deprecated – use cost_of_goods_sold_sections instead
      *
      * @var ?array<AccountingProfitlossCategory> $costOfGoodsSold
      */
@@ -64,7 +64,7 @@ class AccountingProfitloss
     public ?\DateTime $endAt = null;
 
     /**
-     * @deprecated
+     * @deprecated – use expenses_sections instead
      *
      * @var ?array<AccountingProfitlossCategory> $expenses
      */
@@ -108,7 +108,7 @@ class AccountingProfitloss
     public ?string $id = null;
 
     /**
-     * @deprecated
+     * @deprecated – use income_sections instead
      *
      * @var ?array<AccountingProfitlossCategory> $income
      */
