@@ -13,12 +13,12 @@ class TaskMetadata
 {
     /**
      *
-     * @var TaskMetadata1|string|TaskMetadataSchemasExtraData22|float|TaskMetadataSchemasExtraData32|bool|TaskMetadataSchemasExtraData2|array<mixed>|TaskMetadataSchemasExtraData52|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<TaskMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskMetadata1|string|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasExtraData52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadata1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public TaskMetadata1|string|TaskMetadataSchemasExtraData22|float|TaskMetadataSchemasExtraData32|bool|TaskMetadataSchemasExtraData2|array|TaskMetadataSchemasExtraData52|null $extraData = null;
+    public array|string|float|bool|null $extraData = null;
 
     /**
      *
@@ -71,25 +71,25 @@ class TaskMetadata
 
     /**
      *
-     * @var TaskMetadataSchemas1|string|TaskMetadataSchemasValue2|float|TaskMetadataSchemasValue32|bool|TaskMetadataSchemasValue42|array<mixed>|TaskMetadataSchemasValue52|null $value
+     * @var array<string, mixed>|string|float|bool|array<TaskMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\TaskMetadataSchemasValue52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public TaskMetadataSchemas1|string|TaskMetadataSchemasValue2|float|TaskMetadataSchemasValue32|bool|TaskMetadataSchemasValue42|array|TaskMetadataSchemasValue52|null $value = null;
+    public array|string|float|bool|null $value = null;
 
     /**
-     * @param  TaskMetadata1|string|TaskMetadataSchemasExtraData22|float|TaskMetadataSchemasExtraData32|bool|TaskMetadataSchemasExtraData2|array<mixed>|TaskMetadataSchemasExtraData52|null  $extraData
+     * @param  array<string, mixed>|string|float|bool|array<TaskMetadata1|string|float|bool>|null  $extraData
      * @param  ?TaskMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  TaskMetadataSchemas1|string|TaskMetadataSchemasValue2|float|TaskMetadataSchemasValue32|bool|TaskMetadataSchemasValue42|array<mixed>|TaskMetadataSchemasValue52|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<TaskMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(TaskMetadata1|string|TaskMetadataSchemasExtraData22|float|TaskMetadataSchemasExtraData32|bool|TaskMetadataSchemasExtraData2|array|TaskMetadataSchemasExtraData52|null $extraData = null, ?TaskMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, TaskMetadataSchemas1|string|TaskMetadataSchemasValue2|float|TaskMetadataSchemasValue32|bool|TaskMetadataSchemasValue42|array|TaskMetadataSchemasValue52|null $value = null)
+    public function __construct(array|string|float|bool|null $extraData = null, ?TaskMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
     {
         $this->extraData = $extraData;
         $this->format = $format;

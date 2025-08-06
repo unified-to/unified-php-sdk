@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\Integration1`
+### `array`
 
 ```php
 /**
-* @var Shared\Integration1
+* @var array<string, mixed>
 */
-Shared\Integration1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\IntegrationSchemasApi22`
+### `string`
 
 ```php
 /**
-* @var string|Shared\IntegrationSchemasApi22
+* @var string
 */
-string|Shared\IntegrationSchemasApi22 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\IntegrationSchemasApi32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\IntegrationSchemasApi32
+* @var float
 */
-float|Shared\IntegrationSchemasApi32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\IntegrationSchemasApi2`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\IntegrationSchemasApi2
+* @var bool
 */
-bool|Shared\IntegrationSchemasApi2 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\IntegrationSchemasApi52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\IntegrationSchemasApi52
+* @var array<Shared\Integration1|string|float|bool>
 */
-array|Shared\IntegrationSchemasApi52 $value = /* values here */
+array $value = /* values here */
 ```
 

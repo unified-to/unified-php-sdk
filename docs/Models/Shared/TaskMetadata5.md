@@ -3,21 +3,39 @@
 
 ## Supported Types
 
-### `array`
+### `Shared\TaskMetadata1`
 
 ```php
 /**
-* @var array<mixed>
+* @var Shared\TaskMetadata1
 */
-array $value = /* values here */
+Shared\TaskMetadata1 $value = /* values here */
 ```
 
-### `Shared\TaskMetadataSchemasExtraData52`
+### `string`
 
 ```php
 /**
-* @var Shared\TaskMetadataSchemasExtraData52
+* @var string
 */
-Shared\TaskMetadataSchemasExtraData52 $value = /* values here */
+string $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
 ```
 

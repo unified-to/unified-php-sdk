@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\CrmMetadata1`
+### `array`
 
 ```php
 /**
-* @var Shared\CrmMetadata1
+* @var array<string, mixed>
 */
-Shared\CrmMetadata1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\CrmMetadataSchemasExtraData22`
+### `string`
 
 ```php
 /**
-* @var string|Shared\CrmMetadataSchemasExtraData22
+* @var string
 */
-string|Shared\CrmMetadataSchemasExtraData22 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\CrmMetadataSchemasExtraData32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\CrmMetadataSchemasExtraData32
+* @var float
 */
-float|Shared\CrmMetadataSchemasExtraData32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\CrmMetadataSchemasExtraData2`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\CrmMetadataSchemasExtraData2
+* @var bool
 */
-bool|Shared\CrmMetadataSchemasExtraData2 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\CrmMetadataSchemasExtraData52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\CrmMetadataSchemasExtraData52
+* @var array<Shared\CrmMetadata1|string|float|bool>
 */
-array|Shared\CrmMetadataSchemasExtraData52 $value = /* values here */
+array $value = /* values here */
 ```
 

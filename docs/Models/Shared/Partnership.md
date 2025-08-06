@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\IntegrationSchemas1`
+### `array`
 
 ```php
 /**
-* @var Shared\IntegrationSchemas1
+* @var array<string, mixed>
 */
-Shared\IntegrationSchemas1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\IntegrationSchemasPartnership2`
+### `string`
 
 ```php
 /**
-* @var string|Shared\IntegrationSchemasPartnership2
+* @var string
 */
-string|Shared\IntegrationSchemasPartnership2 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\IntegrationSchemasPartnership32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\IntegrationSchemasPartnership32
+* @var float
 */
-float|Shared\IntegrationSchemasPartnership32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\IntegrationSchemasPartnership42`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\IntegrationSchemasPartnership42
+* @var bool
 */
-bool|Shared\IntegrationSchemasPartnership42 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\IntegrationSchemasPartnership52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\IntegrationSchemasPartnership52
+* @var array<Shared\IntegrationSchemas1|string|float|bool>
 */
-array|Shared\IntegrationSchemasPartnership52 $value = /* values here */
+array $value = /* values here */
 ```
 

@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\TaskMetadataSchemas1`
+### `array`
 
 ```php
 /**
-* @var Shared\TaskMetadataSchemas1
+* @var array<string, mixed>
 */
-Shared\TaskMetadataSchemas1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\TaskMetadataSchemasValue2`
+### `string`
 
 ```php
 /**
-* @var string|Shared\TaskMetadataSchemasValue2
+* @var string
 */
-string|Shared\TaskMetadataSchemasValue2 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\TaskMetadataSchemasValue32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\TaskMetadataSchemasValue32
+* @var float
 */
-float|Shared\TaskMetadataSchemasValue32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\TaskMetadataSchemasValue42`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\TaskMetadataSchemasValue42
+* @var bool
 */
-bool|Shared\TaskMetadataSchemasValue42 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\TaskMetadataSchemasValue52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\TaskMetadataSchemasValue52
+* @var array<Shared\TaskMetadataSchemas1|string|float|bool>
 */
-array|Shared\TaskMetadataSchemasValue52 $value = /* values here */
+array $value = /* values here */
 ```
 

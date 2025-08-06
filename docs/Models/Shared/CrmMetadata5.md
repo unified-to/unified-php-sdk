@@ -3,21 +3,39 @@
 
 ## Supported Types
 
-### `array`
+### `Shared\CrmMetadata1`
 
 ```php
 /**
-* @var array<mixed>
+* @var Shared\CrmMetadata1
 */
-array $value = /* values here */
+Shared\CrmMetadata1 $value = /* values here */
 ```
 
-### `Shared\CrmMetadataSchemasExtraData52`
+### `string`
 
 ```php
 /**
-* @var Shared\CrmMetadataSchemasExtraData52
+* @var string
 */
-Shared\CrmMetadataSchemasExtraData52 $value = /* values here */
+string $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
 ```
 

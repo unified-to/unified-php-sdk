@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\IntegrationSchemasSandbox1`
+### `array`
 
 ```php
 /**
-* @var Shared\IntegrationSchemasSandbox1
+* @var array<string, mixed>
 */
-Shared\IntegrationSchemasSandbox1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\IntegrationSchemasSandbox22`
+### `string`
 
 ```php
 /**
-* @var string|Shared\IntegrationSchemasSandbox22
+* @var string
 */
-string|Shared\IntegrationSchemasSandbox22 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\IntegrationSchemasSandbox32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\IntegrationSchemasSandbox32
+* @var float
 */
-float|Shared\IntegrationSchemasSandbox32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\IntegrationSchemasSandbox42`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\IntegrationSchemasSandbox42
+* @var bool
 */
-bool|Shared\IntegrationSchemasSandbox42 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\IntegrationSchemasSandbox52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\IntegrationSchemasSandbox52
+* @var array<Shared\IntegrationSchemasSandbox1|string|float|bool>
 */
-array|Shared\IntegrationSchemasSandbox52 $value = /* values here */
+array $value = /* values here */
 ```
 

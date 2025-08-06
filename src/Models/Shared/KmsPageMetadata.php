@@ -13,12 +13,12 @@ class KmsPageMetadata
 {
     /**
      *
-     * @var KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array<mixed>|KmsPageMetadataSchemasExtraData52|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<KmsPageMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasExtraData52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array|KmsPageMetadataSchemasExtraData52|null $extraData = null;
+    public array|string|float|bool|null $extraData = null;
 
     /**
      *
@@ -71,25 +71,25 @@ class KmsPageMetadata
 
     /**
      *
-     * @var KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array<mixed>|KmsPageMetadataSchemasValue52|null $value
+     * @var array<string, mixed>|string|float|bool|array<KmsPageMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemasValue52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array|KmsPageMetadataSchemasValue52|null $value = null;
+    public array|string|float|bool|null $value = null;
 
     /**
-     * @param  KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array<mixed>|KmsPageMetadataSchemasExtraData52|null  $extraData
+     * @param  array<string, mixed>|string|float|bool|array<KmsPageMetadata1|string|float|bool>|null  $extraData
      * @param  ?KmsPageMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array<mixed>|KmsPageMetadataSchemasValue52|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<KmsPageMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(KmsPageMetadata1|string|KmsPageMetadataSchemasExtraData22|float|KmsPageMetadataSchemasExtraData32|bool|KmsPageMetadataSchemasExtraData2|array|KmsPageMetadataSchemasExtraData52|null $extraData = null, ?KmsPageMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, KmsPageMetadataSchemas1|string|KmsPageMetadataSchemasValue2|float|KmsPageMetadataSchemasValue32|bool|KmsPageMetadataSchemasValue42|array|KmsPageMetadataSchemasValue52|null $value = null)
+    public function __construct(array|string|float|bool|null $extraData = null, ?KmsPageMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
     {
         $this->extraData = $extraData;
         $this->format = $format;

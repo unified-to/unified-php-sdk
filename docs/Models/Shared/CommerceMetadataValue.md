@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\CommerceMetadataSchemas1`
+### `array`
 
 ```php
 /**
-* @var Shared\CommerceMetadataSchemas1
+* @var array<string, mixed>
 */
-Shared\CommerceMetadataSchemas1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\CommerceMetadataSchemasValue2`
+### `string`
 
 ```php
 /**
-* @var string|Shared\CommerceMetadataSchemasValue2
+* @var string
 */
-string|Shared\CommerceMetadataSchemasValue2 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\CommerceMetadataSchemasValue32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\CommerceMetadataSchemasValue32
+* @var float
 */
-float|Shared\CommerceMetadataSchemasValue32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\CommerceMetadataSchemasValue42`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\CommerceMetadataSchemasValue42
+* @var bool
 */
-bool|Shared\CommerceMetadataSchemasValue42 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\CommerceMetadataSchemasValue52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\CommerceMetadataSchemasValue52
+* @var array<Shared\CommerceMetadataSchemas1|string|float|bool>
 */
-array|Shared\CommerceMetadataSchemasValue52 $value = /* values here */
+array $value = /* values here */
 ```
 

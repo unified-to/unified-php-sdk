@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\HrisMetadata1`
+### `array`
 
 ```php
 /**
-* @var Shared\HrisMetadata1
+* @var array<string, mixed>
 */
-Shared\HrisMetadata1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\HrisMetadataSchemasExtraData22`
+### `string`
 
 ```php
 /**
-* @var string|Shared\HrisMetadataSchemasExtraData22
+* @var string
 */
-string|Shared\HrisMetadataSchemasExtraData22 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\HrisMetadataSchemasExtraData32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\HrisMetadataSchemasExtraData32
+* @var float
 */
-float|Shared\HrisMetadataSchemasExtraData32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\HrisMetadataSchemasExtraData2`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\HrisMetadataSchemasExtraData2
+* @var bool
 */
-bool|Shared\HrisMetadataSchemasExtraData2 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\HrisMetadataSchemasExtraData52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\HrisMetadataSchemasExtraData52
+* @var array<Shared\HrisMetadata1|string|float|bool>
 */
-array|Shared\HrisMetadataSchemasExtraData52 $value = /* values here */
+array $value = /* values here */
 ```
 

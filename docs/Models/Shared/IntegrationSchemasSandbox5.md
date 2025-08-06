@@ -3,21 +3,39 @@
 
 ## Supported Types
 
-### `array`
+### `Shared\IntegrationSchemasSandbox1`
 
 ```php
 /**
-* @var array<mixed>
+* @var Shared\IntegrationSchemasSandbox1
 */
-array $value = /* values here */
+Shared\IntegrationSchemasSandbox1 $value = /* values here */
 ```
 
-### `Shared\IntegrationSchemasSandbox52`
+### `string`
 
 ```php
 /**
-* @var Shared\IntegrationSchemasSandbox52
+* @var string
 */
-Shared\IntegrationSchemasSandbox52 $value = /* values here */
+string $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
 ```
 

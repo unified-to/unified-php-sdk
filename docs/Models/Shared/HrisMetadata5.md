@@ -3,21 +3,39 @@
 
 ## Supported Types
 
-### `array`
+### `Shared\HrisMetadata1`
 
 ```php
 /**
-* @var array<mixed>
+* @var Shared\HrisMetadata1
 */
-array $value = /* values here */
+Shared\HrisMetadata1 $value = /* values here */
 ```
 
-### `Shared\HrisMetadataSchemasExtraData52`
+### `string`
 
 ```php
 /**
-* @var Shared\HrisMetadataSchemasExtraData52
+* @var string
 */
-Shared\HrisMetadataSchemasExtraData52 $value = /* values here */
+string $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
 ```
 

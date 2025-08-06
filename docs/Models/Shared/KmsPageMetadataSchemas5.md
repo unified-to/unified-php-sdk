@@ -3,21 +3,39 @@
 
 ## Supported Types
 
-### `array`
+### `Shared\KmsPageMetadataSchemas1`
 
 ```php
 /**
-* @var array<mixed>
+* @var Shared\KmsPageMetadataSchemas1
 */
-array $value = /* values here */
+Shared\KmsPageMetadataSchemas1 $value = /* values here */
 ```
 
-### `Shared\KmsPageMetadataSchemasValue52`
+### `string`
 
 ```php
 /**
-* @var Shared\KmsPageMetadataSchemasValue52
+* @var string
 */
-Shared\KmsPageMetadataSchemasValue52 $value = /* values here */
+string $value = /* values here */
+```
+
+### `float`
+
+```php
+/**
+* @var float
+*/
+float $value = /* values here */
+```
+
+### `bool`
+
+```php
+/**
+* @var bool
+*/
+bool $value = /* values here */
 ```
 

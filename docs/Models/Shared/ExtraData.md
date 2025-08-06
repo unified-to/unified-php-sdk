@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\One`
+### `array`
 
 ```php
 /**
-* @var Shared\One
+* @var array<string, mixed>
 */
-Shared\One $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\AtsMetadataSchemasExtraData22`
+### `string`
 
 ```php
 /**
-* @var string|Shared\AtsMetadataSchemasExtraData22
+* @var string
 */
-string|Shared\AtsMetadataSchemasExtraData22 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\AtsMetadataSchemasExtraData32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\AtsMetadataSchemasExtraData32
+* @var float
 */
-float|Shared\AtsMetadataSchemasExtraData32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\AtsMetadataSchemas2`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\AtsMetadataSchemas2
+* @var bool
 */
-bool|Shared\AtsMetadataSchemas2 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\AtsMetadataSchemasExtraData2`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\AtsMetadataSchemasExtraData2
+* @var array<Shared\One|string|float|bool>
 */
-array|Shared\AtsMetadataSchemasExtraData2 $value = /* values here */
+array $value = /* values here */
 ```
 

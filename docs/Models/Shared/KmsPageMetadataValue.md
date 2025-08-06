@@ -3,48 +3,48 @@
 
 ## Supported Types
 
-### `Shared\KmsPageMetadataSchemas1`
+### `array`
 
 ```php
 /**
-* @var Shared\KmsPageMetadataSchemas1
+* @var array<string, mixed>
 */
-Shared\KmsPageMetadataSchemas1 $value = /* values here */
+array $value = /* values here */
 ```
 
-### `string|Shared\KmsPageMetadataSchemasValue2`
+### `string`
 
 ```php
 /**
-* @var string|Shared\KmsPageMetadataSchemasValue2
+* @var string
 */
-string|Shared\KmsPageMetadataSchemasValue2 $value = /* values here */
+string $value = /* values here */
 ```
 
-### `float|Shared\KmsPageMetadataSchemasValue32`
+### `float`
 
 ```php
 /**
-* @var float|Shared\KmsPageMetadataSchemasValue32
+* @var float
 */
-float|Shared\KmsPageMetadataSchemasValue32 $value = /* values here */
+float $value = /* values here */
 ```
 
-### `bool|Shared\KmsPageMetadataSchemasValue42`
+### `bool`
 
 ```php
 /**
-* @var bool|Shared\KmsPageMetadataSchemasValue42
+* @var bool
 */
-bool|Shared\KmsPageMetadataSchemasValue42 $value = /* values here */
+bool $value = /* values here */
 ```
 
-### `array|Shared\KmsPageMetadataSchemasValue52`
+### `array`
 
 ```php
 /**
-* @var array<mixed>|Shared\KmsPageMetadataSchemasValue52
+* @var array<Shared\KmsPageMetadataSchemas1|string|float|bool>
 */
-array|Shared\KmsPageMetadataSchemasValue52 $value = /* values here */
+array $value = /* values here */
 ```
 

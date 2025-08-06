@@ -13,12 +13,12 @@ class HrisMetadata
 {
     /**
      *
-     * @var HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array<mixed>|HrisMetadataSchemasExtraData52|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<HrisMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisMetadata1|string|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasExtraData22|float|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasExtraData32|bool|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasExtraData2|array<mixed>|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasExtraData52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\HrisMetadata1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array|HrisMetadataSchemasExtraData52|null $extraData = null;
+    public array|string|float|bool|null $extraData = null;
 
     /**
      *
@@ -71,25 +71,25 @@ class HrisMetadata
 
     /**
      *
-     * @var HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array<mixed>|HrisMetadataSchemasValue52|null $value
+     * @var array<string, mixed>|string|float|bool|array<HrisMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisMetadataSchemas1|string|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasValue2|float|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasValue32|bool|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasValue42|array<mixed>|\Unified\Unified_to\Models\Shared\HrisMetadataSchemasValue52|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\HrisMetadataSchemas1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array|HrisMetadataSchemasValue52|null $value = null;
+    public array|string|float|bool|null $value = null;
 
     /**
-     * @param  HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array<mixed>|HrisMetadataSchemasExtraData52|null  $extraData
+     * @param  array<string, mixed>|string|float|bool|array<HrisMetadata1|string|float|bool>|null  $extraData
      * @param  ?HrisMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array<mixed>|HrisMetadataSchemasValue52|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<HrisMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(HrisMetadata1|string|HrisMetadataSchemasExtraData22|float|HrisMetadataSchemasExtraData32|bool|HrisMetadataSchemasExtraData2|array|HrisMetadataSchemasExtraData52|null $extraData = null, ?HrisMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, HrisMetadataSchemas1|string|HrisMetadataSchemasValue2|float|HrisMetadataSchemasValue32|bool|HrisMetadataSchemasValue42|array|HrisMetadataSchemasValue52|null $value = null)
+    public function __construct(array|string|float|bool|null $extraData = null, ?HrisMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
     {
         $this->extraData = $extraData;
         $this->format = $format;
