@@ -47,6 +47,14 @@ class CommerceItem
 
     /**
      *
+     * @var ?string $globalCode
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('global_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $globalCode = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -180,6 +188,7 @@ class CommerceItem
      * @param  ?array<string>  $collectionIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?string  $globalCode
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?bool  $isTaxable
@@ -197,12 +206,13 @@ class CommerceItem
      * @param  ?string  $vendorName
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->globalCode = $globalCode;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->isTaxable = $isTaxable;
