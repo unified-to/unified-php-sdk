@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 585a933222a93cac4e23b48d062c4a0c
+  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
   docVersion: "1.0"
-  speakeasyVersion: 1.598.3
-  generationVersion: 2.674.3
-  releaseVersion: 1.3.27
-  configChecksum: 14fa56a463294c55394e3bbab053db7c
+  speakeasyVersion: 1.604.1
+  generationVersion: 2.683.1
+  releaseVersion: 1.3.28
+  configChecksum: 3d0d5b8489d67626232c93a831d75804
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -6855,7 +6855,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "auth_login"]}
+          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "crm_pipeline_write"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
