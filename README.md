@@ -349,6 +349,11 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingCategory](docs/sdks/category/README.md#removeaccountingcategory) - Remove a category
 * [updateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 
+### [change](docs/sdks/change/README.md)
+
+* [getTaskChange](docs/sdks/change/README.md#gettaskchange) - Retrieve a change
+* [listTaskChanges](docs/sdks/change/README.md#listtaskchanges) - List all changes
+
 ### [channel](docs/sdks/channel/README.md)
 
 * [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
@@ -1190,9 +1195,11 @@ if ($response->accountingAccount !== null) {
 * [createTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [createTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [getTaskChange](docs/sdks/task/README.md#gettaskchange) - Retrieve a change
 * [getTaskComment](docs/sdks/task/README.md#gettaskcomment) - Retrieve a comment
 * [getTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
 * [getTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [listTaskChanges](docs/sdks/task/README.md#listtaskchanges) - List all changes
 * [listTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [listTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [listTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks

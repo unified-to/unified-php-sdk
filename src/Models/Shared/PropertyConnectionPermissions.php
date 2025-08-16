@@ -141,6 +141,7 @@ enum PropertyConnectionPermissions: string
     case TaskProjectWrite = 'task_project_write';
     case TaskTaskRead = 'task_task_read';
     case TaskTaskWrite = 'task_task_write';
+    case TaskChangeRead = 'task_change_read';
     case TaskCommentRead = 'task_comment_read';
     case TaskCommentWrite = 'task_comment_write';
     case ScimUsersRead = 'scim_users_read';

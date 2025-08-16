@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
+  docChecksum: 190c325c2a6a2949d578db67163791d8
   docVersion: "1.0"
-  speakeasyVersion: 1.604.1
-  generationVersion: 2.683.1
-  releaseVersion: 1.3.28
-  configChecksum: 3d0d5b8489d67626232c93a831d75804
+  speakeasyVersion: 1.605.0
+  generationVersion: 2.684.0
+  releaseVersion: 1.3.29
+  configChecksum: fac1e2abd5f6562a2d69b8d275852169
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -323,6 +323,8 @@ generatedFiles:
   - docs/Models/Operations/GetScimUsersResponse.md
   - docs/Models/Operations/GetStorageFileRequest.md
   - docs/Models/Operations/GetStorageFileResponse.md
+  - docs/Models/Operations/GetTaskChangeRequest.md
+  - docs/Models/Operations/GetTaskChangeResponse.md
   - docs/Models/Operations/GetTaskCommentRequest.md
   - docs/Models/Operations/GetTaskCommentResponse.md
   - docs/Models/Operations/GetTaskProjectRequest.md
@@ -509,6 +511,8 @@ generatedFiles:
   - docs/Models/Operations/ListScimUsersResponse.md
   - docs/Models/Operations/ListStorageFilesRequest.md
   - docs/Models/Operations/ListStorageFilesResponse.md
+  - docs/Models/Operations/ListTaskChangesRequest.md
+  - docs/Models/Operations/ListTaskChangesResponse.md
   - docs/Models/Operations/ListTaskCommentsRequest.md
   - docs/Models/Operations/ListTaskCommentsResponse.md
   - docs/Models/Operations/ListTaskProjectsRequest.md
@@ -1356,6 +1360,8 @@ generatedFiles:
   - docs/Models/Shared/StorageFile.md
   - docs/Models/Shared/StorageFileType.md
   - docs/Models/Shared/StoragePermission.md
+  - docs/Models/Shared/TaskChange.md
+  - docs/Models/Shared/TaskChangeItem.md
   - docs/Models/Shared/TaskComment.md
   - docs/Models/Shared/TaskMetadata.md
   - docs/Models/Shared/TaskMetadata1.md
@@ -1409,6 +1415,7 @@ generatedFiles:
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/category/README.md
+  - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -1515,6 +1522,7 @@ generatedFiles:
   - src/Call.php
   - src/Candidate.php
   - src/Category.php
+  - src/Change.php
   - src/Channel.php
   - src/ClassT.php
   - src/Collection.php
@@ -1875,6 +1883,8 @@ generatedFiles:
   - src/Models/Operations/GetScimUsersResponse.php
   - src/Models/Operations/GetStorageFileRequest.php
   - src/Models/Operations/GetStorageFileResponse.php
+  - src/Models/Operations/GetTaskChangeRequest.php
+  - src/Models/Operations/GetTaskChangeResponse.php
   - src/Models/Operations/GetTaskCommentRequest.php
   - src/Models/Operations/GetTaskCommentResponse.php
   - src/Models/Operations/GetTaskProjectRequest.php
@@ -2061,6 +2071,8 @@ generatedFiles:
   - src/Models/Operations/ListScimUsersResponse.php
   - src/Models/Operations/ListStorageFilesRequest.php
   - src/Models/Operations/ListStorageFilesResponse.php
+  - src/Models/Operations/ListTaskChangesRequest.php
+  - src/Models/Operations/ListTaskChangesResponse.php
   - src/Models/Operations/ListTaskCommentsRequest.php
   - src/Models/Operations/ListTaskCommentsResponse.php
   - src/Models/Operations/ListTaskProjectsRequest.php
@@ -2883,6 +2895,8 @@ generatedFiles:
   - src/Models/Shared/StorageFile.php
   - src/Models/Shared/StorageFileType.php
   - src/Models/Shared/StoragePermission.php
+  - src/Models/Shared/TaskChange.php
+  - src/Models/Shared/TaskChangeItem.php
   - src/Models/Shared/TaskComment.php
   - src/Models/Shared/TaskMetadata.php
   - src/Models/Shared/TaskMetadata1.php
@@ -7394,5 +7408,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getTaskChange:
+    speakeasy-default-get-task-change:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTaskChanges:
+    speakeasy-default-list-task-changes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## SDK Changes Detected:
+  * `unified-to->task->getTaskChange()`: **Added**
+  * `unified-to->task->listTaskChanges()`: **Added**
+  * `unified-to->change->getTaskChange()`: **Added**
+  * `unified-to->change->listTaskChanges()`: **Added**
