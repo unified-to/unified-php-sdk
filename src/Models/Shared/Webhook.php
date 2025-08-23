@@ -61,6 +61,14 @@ class Webhook
 
     /**
      *
+     * @var ?string $dbSchema
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('db_schema')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $dbSchema = null;
+
+    /**
+     *
      * @var ?DbType $dbType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('db_type')]
@@ -210,6 +218,7 @@ class Webhook
      * @param  ?\DateTime  $checkedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $dbNamePrefix
+     * @param  ?string  $dbSchema
      * @param  ?DbType  $dbType
      * @param  ?string  $dbUrl
      * @param  ?string  $environment
@@ -229,7 +238,7 @@ class Webhook
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?string $dbSchema = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;
@@ -237,6 +246,7 @@ class Webhook
         $this->checkedAt = $checkedAt;
         $this->createdAt = $createdAt;
         $this->dbNamePrefix = $dbNamePrefix;
+        $this->dbSchema = $dbSchema;
         $this->dbType = $dbType;
         $this->dbUrl = $dbUrl;
         $this->fields = $fields;
