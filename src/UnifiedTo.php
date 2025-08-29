@@ -226,6 +226,12 @@ class UnifiedTo
 
     public Webhook $webhook;
 
+    public Verification $verification;
+
+    public Package $package;
+
+    public Request $request;
+
     /**
      * Returns a new instance of the SDK builder used to configure and create the SDK instance.
      *
@@ -344,6 +350,9 @@ class UnifiedTo
         $this->login = new Login($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
+        $this->verification = new Verification($this->sdkConfiguration);
+        $this->package = new Package($this->sdkConfiguration);
+        $this->request = new Request($this->sdkConfiguration);
         $this->initHooks();
 
     }

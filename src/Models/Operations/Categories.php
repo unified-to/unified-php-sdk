@@ -33,4 +33,5 @@ enum Categories: string
     case Repo = 'repo';
     case Metadata = 'metadata';
     case Calendar = 'calendar';
+    case Verification = 'verification';
 }

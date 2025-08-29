@@ -38,6 +38,8 @@ enum ObjectType: string
     case CommerceInventory = 'commerce_inventory';
     case CommerceLocation = 'commerce_location';
     case CommerceReview = 'commerce_review';
+    case VerificationPackage = 'verification_package';
+    case VerificationRequest = 'verification_request';
     case AtsActivity = 'ats_activity';
     case AtsApplication = 'ats_application';
     case AtsApplicationstatus = 'ats_applicationstatus';

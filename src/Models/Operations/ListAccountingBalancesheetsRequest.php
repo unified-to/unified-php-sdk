@@ -20,6 +20,22 @@ class ListAccountingBalancesheetsRequest
     public string $connectionId;
 
     /**
+     * The category ID to filter by
+     *
+     * @var ?string $categoryId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=category_id')]
+    public ?string $categoryId = null;
+
+    /**
+     * The contact ID to filter by
+     *
+     * @var ?string $contactId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
+    public ?string $contactId = null;
+
+    /**
      * The end date to filter by
      *
      * @var ?string $endLe
@@ -97,6 +113,8 @@ class ListAccountingBalancesheetsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $categoryId
+     * @param  ?string  $contactId
      * @param  ?string  $endLe
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -109,9 +127,11 @@ class ListAccountingBalancesheetsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLe = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->categoryId = $categoryId;
+        $this->contactId = $contactId;
         $this->endLe = $endLe;
         $this->fields = $fields;
         $this->limit = $limit;

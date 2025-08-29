@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
+  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
   docVersion: "1.0"
-  speakeasyVersion: 1.606.3
-  generationVersion: 2.687.1
-  releaseVersion: 1.3.30
-  configChecksum: b95626055025e4a9720927e66bc6ff78
+  speakeasyVersion: 1.606.8
+  generationVersion: 2.687.13
+  releaseVersion: 1.3.31
+  configChecksum: 00b70ab903060acb33ea51d8cc5f1412
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -177,6 +177,8 @@ generatedFiles:
   - docs/Models/Operations/CreateUnifiedConnectionResponse.md
   - docs/Models/Operations/CreateUnifiedWebhookRequest.md
   - docs/Models/Operations/CreateUnifiedWebhookResponse.md
+  - docs/Models/Operations/CreateVerificationRequestRequest.md
+  - docs/Models/Operations/CreateVerificationRequestResponse.md
   - docs/Models/Operations/GetAccountingAccountRequest.md
   - docs/Models/Operations/GetAccountingAccountResponse.md
   - docs/Models/Operations/GetAccountingBalancesheetRequest.md
@@ -353,6 +355,10 @@ generatedFiles:
   - docs/Models/Operations/GetUnifiedIntegrationLoginResponse.md
   - docs/Models/Operations/GetUnifiedWebhookRequest.md
   - docs/Models/Operations/GetUnifiedWebhookResponse.md
+  - docs/Models/Operations/GetVerificationPackageRequest.md
+  - docs/Models/Operations/GetVerificationPackageResponse.md
+  - docs/Models/Operations/GetVerificationRequestRequest.md
+  - docs/Models/Operations/GetVerificationRequestResponse.md
   - docs/Models/Operations/ListAccountingAccountsRequest.md
   - docs/Models/Operations/ListAccountingAccountsResponse.md
   - docs/Models/Operations/ListAccountingBalancesheetsRequest.md
@@ -546,6 +552,10 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedIssuesResponse.md
   - docs/Models/Operations/ListUnifiedWebhooksRequest.md
   - docs/Models/Operations/ListUnifiedWebhooksResponse.md
+  - docs/Models/Operations/ListVerificationPackagesRequest.md
+  - docs/Models/Operations/ListVerificationPackagesResponse.md
+  - docs/Models/Operations/ListVerificationRequestsRequest.md
+  - docs/Models/Operations/ListVerificationRequestsResponse.md
   - docs/Models/Operations/PatchAccountingAccountRequest.md
   - docs/Models/Operations/PatchAccountingAccountResponse.md
   - docs/Models/Operations/PatchAccountingBillRequest.md
@@ -698,6 +708,8 @@ generatedFiles:
   - docs/Models/Operations/PatchUnifiedWebhookResponse.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/PatchUnifiedWebhookTriggerResponse.md
+  - docs/Models/Operations/PatchVerificationRequestRequest.md
+  - docs/Models/Operations/PatchVerificationRequestResponse.md
   - docs/Models/Operations/QueryParamCategories.md
   - docs/Models/Operations/RemoveAccountingAccountRequest.md
   - docs/Models/Operations/RemoveAccountingAccountResponse.md
@@ -847,6 +859,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
+  - docs/Models/Operations/RemoveVerificationRequestRequest.md
+  - docs/Models/Operations/RemoveVerificationRequestResponse.md
   - docs/Models/Operations/UpdateAccountingAccountRequest.md
   - docs/Models/Operations/UpdateAccountingAccountResponse.md
   - docs/Models/Operations/UpdateAccountingBillRequest.md
@@ -999,6 +1013,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateUnifiedWebhookResponse.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerRequest.md
   - docs/Models/Operations/UpdateUnifiedWebhookTriggerResponse.md
+  - docs/Models/Operations/UpdateVerificationRequestRequest.md
+  - docs/Models/Operations/UpdateVerificationRequestResponse.md
   - docs/Models/Shared/AccountingAccount.md
   - docs/Models/Shared/AccountingAssociatedContact.md
   - docs/Models/Shared/AccountingAttachment.md
@@ -1257,6 +1273,7 @@ generatedFiles:
   - docs/Models/Shared/PaymentSubscriptionStatus.md
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/Priority.md
+  - docs/Models/Shared/ProfileGender.md
   - docs/Models/Shared/PropertyAccountingBalancesheetItemSubItems.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
@@ -1331,6 +1348,7 @@ generatedFiles:
   - docs/Models/Shared/RepoPullrequestStatus.md
   - docs/Models/Shared/RepoRepository.md
   - docs/Models/Shared/ResourceType.md
+  - docs/Models/Shared/ResponseStatus.md
   - docs/Models/Shared/Role.md
   - docs/Models/Shared/Sandbox.md
   - docs/Models/Shared/ScimAddress.md
@@ -1395,6 +1413,15 @@ generatedFiles:
   - docs/Models/Shared/UcTelephone.md
   - docs/Models/Shared/UcTelephoneType.md
   - docs/Models/Shared/Value.md
+  - docs/Models/Shared/VerificationAddress.md
+  - docs/Models/Shared/VerificationPackage.md
+  - docs/Models/Shared/VerificationPackageType.md
+  - docs/Models/Shared/VerificationParameter.md
+  - docs/Models/Shared/VerificationParameterInput.md
+  - docs/Models/Shared/VerificationParameterType.md
+  - docs/Models/Shared/VerificationRequest.md
+  - docs/Models/Shared/VerificationResponseDetail.md
+  - docs/Models/Shared/VerificationTime.md
   - docs/Models/Shared/Webhook.md
   - docs/Models/Shared/WebhookType.md
   - docs/Models/Shared/WeekStart.md
@@ -1464,6 +1491,7 @@ generatedFiles:
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
+  - docs/sdks/package/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
@@ -1481,6 +1509,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/request/README.md
   - docs/sdks/review/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
@@ -1501,6 +1530,7 @@ generatedFiles:
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
+  - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
   - phpstan.neon
   - phpunit.xml
@@ -1737,6 +1767,8 @@ generatedFiles:
   - src/Models/Operations/CreateUnifiedConnectionResponse.php
   - src/Models/Operations/CreateUnifiedWebhookRequest.php
   - src/Models/Operations/CreateUnifiedWebhookResponse.php
+  - src/Models/Operations/CreateVerificationRequestRequest.php
+  - src/Models/Operations/CreateVerificationRequestResponse.php
   - src/Models/Operations/GetAccountingAccountRequest.php
   - src/Models/Operations/GetAccountingAccountResponse.php
   - src/Models/Operations/GetAccountingBalancesheetRequest.php
@@ -1913,6 +1945,10 @@ generatedFiles:
   - src/Models/Operations/GetUnifiedIntegrationLoginResponse.php
   - src/Models/Operations/GetUnifiedWebhookRequest.php
   - src/Models/Operations/GetUnifiedWebhookResponse.php
+  - src/Models/Operations/GetVerificationPackageRequest.php
+  - src/Models/Operations/GetVerificationPackageResponse.php
+  - src/Models/Operations/GetVerificationRequestRequest.php
+  - src/Models/Operations/GetVerificationRequestResponse.php
   - src/Models/Operations/ListAccountingAccountsRequest.php
   - src/Models/Operations/ListAccountingAccountsResponse.php
   - src/Models/Operations/ListAccountingBalancesheetsRequest.php
@@ -2106,6 +2142,10 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedIssuesResponse.php
   - src/Models/Operations/ListUnifiedWebhooksRequest.php
   - src/Models/Operations/ListUnifiedWebhooksResponse.php
+  - src/Models/Operations/ListVerificationPackagesRequest.php
+  - src/Models/Operations/ListVerificationPackagesResponse.php
+  - src/Models/Operations/ListVerificationRequestsRequest.php
+  - src/Models/Operations/ListVerificationRequestsResponse.php
   - src/Models/Operations/PatchAccountingAccountRequest.php
   - src/Models/Operations/PatchAccountingAccountResponse.php
   - src/Models/Operations/PatchAccountingBillRequest.php
@@ -2258,6 +2298,8 @@ generatedFiles:
   - src/Models/Operations/PatchUnifiedWebhookResponse.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/PatchUnifiedWebhookTriggerResponse.php
+  - src/Models/Operations/PatchVerificationRequestRequest.php
+  - src/Models/Operations/PatchVerificationRequestResponse.php
   - src/Models/Operations/QueryParamCategories.php
   - src/Models/Operations/RemoveAccountingAccountRequest.php
   - src/Models/Operations/RemoveAccountingAccountResponse.php
@@ -2407,6 +2449,8 @@ generatedFiles:
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
+  - src/Models/Operations/RemoveVerificationRequestRequest.php
+  - src/Models/Operations/RemoveVerificationRequestResponse.php
   - src/Models/Operations/UpdateAccountingAccountRequest.php
   - src/Models/Operations/UpdateAccountingAccountResponse.php
   - src/Models/Operations/UpdateAccountingBillRequest.php
@@ -2559,6 +2603,8 @@ generatedFiles:
   - src/Models/Operations/UpdateUnifiedWebhookResponse.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerRequest.php
   - src/Models/Operations/UpdateUnifiedWebhookTriggerResponse.php
+  - src/Models/Operations/UpdateVerificationRequestRequest.php
+  - src/Models/Operations/UpdateVerificationRequestResponse.php
   - src/Models/Shared/AccountingAccount.php
   - src/Models/Shared/AccountingAssociatedContact.php
   - src/Models/Shared/AccountingAttachment.php
@@ -2793,6 +2839,7 @@ generatedFiles:
   - src/Models/Shared/PaymentSubscriptionStatus.php
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/Priority.php
+  - src/Models/Shared/ProfileGender.php
   - src/Models/Shared/PropertyAccountingBalancesheetItemSubItems.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
@@ -2867,6 +2914,7 @@ generatedFiles:
   - src/Models/Shared/RepoPullrequestStatus.php
   - src/Models/Shared/RepoRepository.php
   - src/Models/Shared/ResourceType.php
+  - src/Models/Shared/ResponseStatus.php
   - src/Models/Shared/Role.php
   - src/Models/Shared/ScimAddress.php
   - src/Models/Shared/ScimAddressType.php
@@ -2925,6 +2973,15 @@ generatedFiles:
   - src/Models/Shared/UcRecordingTranscript.php
   - src/Models/Shared/UcTelephone.php
   - src/Models/Shared/UcTelephoneType.php
+  - src/Models/Shared/VerificationAddress.php
+  - src/Models/Shared/VerificationPackage.php
+  - src/Models/Shared/VerificationPackageType.php
+  - src/Models/Shared/VerificationParameter.php
+  - src/Models/Shared/VerificationParameterInput.php
+  - src/Models/Shared/VerificationParameterType.php
+  - src/Models/Shared/VerificationRequest.php
+  - src/Models/Shared/VerificationResponseDetail.php
+  - src/Models/Shared/VerificationTime.php
   - src/Models/Shared/Webhook.php
   - src/Models/Shared/WebhookType.php
   - src/Models/Shared/WeekStart.php
@@ -2932,6 +2989,7 @@ generatedFiles:
   - src/Note.php
   - src/Order.php
   - src/Organization.php
+  - src/Package.php
   - src/Page.php
   - src/Passthrough.php
   - src/Payment.php
@@ -2949,6 +3007,7 @@ generatedFiles:
   - src/Repo.php
   - src/Report.php
   - src/Repository.php
+  - src/Request.php
   - src/Review.php
   - src/SDKConfiguration.php
   - src/Salesorder.php
@@ -3006,6 +3065,7 @@ generatedFiles:
   - src/Utils/SpeakeasyMetadata.php
   - src/Utils/UnionHandler.php
   - src/Utils/Utils.php
+  - src/Verification.php
   - src/Webhook.php
 examples:
   createAccountingAccount:
@@ -7425,6 +7485,78 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createVerificationRequest:
+    speakeasy-default-create-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getVerificationPackage:
+    speakeasy-default-get-verification-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+  getVerificationRequest:
+    speakeasy-default-get-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listVerificationPackages:
+    speakeasy-default-list-verification-packages:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "name": "<value>", "type": "FRAUD_PREVENTION"}]
+  listVerificationRequests:
+    speakeasy-default-list-verification-requests:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchVerificationRequest:
+    speakeasy-default-patch-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeVerificationRequest:
+    speakeasy-default-remove-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateVerificationRequest:
+    speakeasy-default-update-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n* `unified-to->unified->getUnifiedConnection()`:  `response.auth->refreshUrl` **Added**\n* `unified-to->unified->getUnifiedWebhook()`:  `response.dbSchema` **Added**\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->auth->refreshUrl` **Added**\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->dbSchema` **Added**\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->connection->getUnifiedConnection()`:  `response.auth->refreshUrl` **Added**\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->auth->refreshUrl` **Added**\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->auth->refreshUrl` **Added**\n  *  `response.auth->refreshUrl` **Added**\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.dbSchema` **Added**\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->dbSchema` **Added**\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->dbSchema` **Added**\n  *  `response.dbSchema` **Added**\n"
+releaseNotes: "## SDK Changes Detected:\n* `unified-to->verification->createVerificationRequest()`: **Added**\n* `unified-to->verification->getVerificationPackage()`: **Added**\n* `unified-to->verification->getVerificationRequest()`: **Added**\n* `unified-to->verification->listVerificationPackages()`: **Added**\n* `unified-to->verification->listVerificationRequests()`: **Added**\n* `unified-to->verification->patchVerificationRequest()`: **Added**\n* `unified-to->verification->removeVerificationRequest()`: **Added**\n* `unified-to->verification->updateVerificationRequest()`: **Added**\n* `unified-to->package->getVerificationPackage()`: **Added**\n* `unified-to->package->listVerificationPackages()`: **Added**\n* `unified-to->request->createVerificationRequest()`: **Added**\n* `unified-to->request->getVerificationRequest()`: **Added**\n* `unified-to->request->listVerificationRequests()`: **Added**\n* `unified-to->request->patchVerificationRequest()`: **Added**\n* `unified-to->request->removeVerificationRequest()`: **Added**\n* `unified-to->request->updateVerificationRequest()`: **Added**\n* `unified-to->accounting->listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to->accounting->listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to->balancesheet->listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to->profitloss->listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to->unified->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n* `unified-to->connection->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n"
