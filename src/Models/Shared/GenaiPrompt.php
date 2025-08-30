@@ -20,6 +20,14 @@ class GenaiPrompt
     public ?float $maxTokens = null;
 
     /**
+     *
+     * @var ?string $mcpUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('mcp_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $mcpUrl = null;
+
+    /**
      * $messages
      *
      * @var ?array<GenaiContent> $messages
@@ -75,6 +83,7 @@ class GenaiPrompt
 
     /**
      * @param  ?float  $maxTokens
+     * @param  ?string  $mcpUrl
      * @param  ?array<GenaiContent>  $messages
      * @param  ?string  $modelId
      * @param  ?array<string, mixed>  $raw
@@ -83,9 +92,10 @@ class GenaiPrompt
      * @param  ?float  $tokensUsed
      * @phpstan-pure
      */
-    public function __construct(?float $maxTokens = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
+    public function __construct(?float $maxTokens = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
     {
         $this->maxTokens = $maxTokens;
+        $this->mcpUrl = $mcpUrl;
         $this->messages = $messages;
         $this->modelId = $modelId;
         $this->raw = $raw;

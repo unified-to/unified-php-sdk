@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
+  docChecksum: 422074ec49c609508b54a0d217c0ad82
   docVersion: "1.0"
-  speakeasyVersion: 1.606.8
+  speakeasyVersion: 1.606.9
   generationVersion: 2.687.13
-  releaseVersion: 1.3.31
-  configChecksum: 00b70ab903060acb33ea51d8cc5f1412
+  releaseVersion: 1.3.32
+  configChecksum: 1ddbc3470bc94cd14291c823d6748891
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -7559,4 +7559,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified-to->verification->createVerificationRequest()`: **Added**\n* `unified-to->verification->getVerificationPackage()`: **Added**\n* `unified-to->verification->getVerificationRequest()`: **Added**\n* `unified-to->verification->listVerificationPackages()`: **Added**\n* `unified-to->verification->listVerificationRequests()`: **Added**\n* `unified-to->verification->patchVerificationRequest()`: **Added**\n* `unified-to->verification->removeVerificationRequest()`: **Added**\n* `unified-to->verification->updateVerificationRequest()`: **Added**\n* `unified-to->package->getVerificationPackage()`: **Added**\n* `unified-to->package->listVerificationPackages()`: **Added**\n* `unified-to->request->createVerificationRequest()`: **Added**\n* `unified-to->request->getVerificationRequest()`: **Added**\n* `unified-to->request->listVerificationRequests()`: **Added**\n* `unified-to->request->patchVerificationRequest()`: **Added**\n* `unified-to->request->removeVerificationRequest()`: **Added**\n* `unified-to->request->updateVerificationRequest()`: **Added**\n* `unified-to->accounting->listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to->accounting->listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to->balancesheet->listAccountingBalancesheets()`:  `request` **Changed**\n* `unified-to->profitloss->listAccountingProfitlosses()`:  `request` **Changed**\n* `unified-to->unified->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n* `unified-to->connection->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n"
+releaseNotes: "## SDK Changes Detected:\n* `unified-to->genai->createGenaiPrompt()`: \n  *  `request->genaiPrompt->mcpUrl` **Added**\n  *  `response.mcpUrl` **Added**\n* `unified-to->prompt->createGenaiPrompt()`: \n  *  `request->genaiPrompt->mcpUrl` **Added**\n  *  `response.mcpUrl` **Added**\n"
