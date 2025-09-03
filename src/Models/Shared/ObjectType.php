@@ -69,6 +69,7 @@ enum ObjectType: string
     case TicketingNote = 'ticketing_note';
     case TicketingTicket = 'ticketing_ticket';
     case TicketingCustomer = 'ticketing_customer';
+    case TicketingCategory = 'ticketing_category';
     case UcContact = 'uc_contact';
     case UcCall = 'uc_call';
     case UcComment = 'uc_comment';
@@ -78,6 +79,7 @@ enum ObjectType: string
     case StorageFile = 'storage_file';
     case GenaiModel = 'genai_model';
     case GenaiPrompt = 'genai_prompt';
+    case GenaiEmbedding = 'genai_embedding';
     case MessagingMessage = 'messaging_message';
     case MessagingChannel = 'messaging_channel';
     case KmsSpace = 'kms_space';

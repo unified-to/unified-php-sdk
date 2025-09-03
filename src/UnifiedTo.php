@@ -114,6 +114,8 @@ class UnifiedTo
 
     public Genai $genai;
 
+    public Embedding $embedding;
+
     public Model $model;
 
     public Prompt $prompt;
@@ -294,6 +296,7 @@ class UnifiedTo
         $this->enrich = new Enrich($this->sdkConfiguration);
         $this->person = new Person($this->sdkConfiguration);
         $this->genai = new Genai($this->sdkConfiguration);
+        $this->embedding = new Embedding($this->sdkConfiguration);
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);

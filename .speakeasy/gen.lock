@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 422074ec49c609508b54a0d217c0ad82
+  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
   docVersion: "1.0"
-  speakeasyVersion: 1.606.9
-  generationVersion: 2.687.13
-  releaseVersion: 1.3.32
-  configChecksum: 1ddbc3470bc94cd14291c823d6748891
+  speakeasyVersion: 1.607.0
+  generationVersion: 2.690.1
+  releaseVersion: 1.3.33
+  configChecksum: 2586e2cdfd3bc356eb02f5f69c23a6f7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -94,6 +94,8 @@ generatedFiles:
   - docs/Models/Operations/CreateCrmLeadResponse.md
   - docs/Models/Operations/CreateCrmPipelineRequest.md
   - docs/Models/Operations/CreateCrmPipelineResponse.md
+  - docs/Models/Operations/CreateGenaiEmbeddingRequest.md
+  - docs/Models/Operations/CreateGenaiEmbeddingResponse.md
   - docs/Models/Operations/CreateGenaiPromptRequest.md
   - docs/Models/Operations/CreateGenaiPromptResponse.md
   - docs/Models/Operations/CreateHrisCompanyRequest.md
@@ -162,6 +164,8 @@ generatedFiles:
   - docs/Models/Operations/CreateTaskProjectResponse.md
   - docs/Models/Operations/CreateTaskTaskRequest.md
   - docs/Models/Operations/CreateTaskTaskResponse.md
+  - docs/Models/Operations/CreateTicketingCategoryRequest.md
+  - docs/Models/Operations/CreateTicketingCategoryResponse.md
   - docs/Models/Operations/CreateTicketingCustomerRequest.md
   - docs/Models/Operations/CreateTicketingCustomerResponse.md
   - docs/Models/Operations/CreateTicketingNoteRequest.md
@@ -259,6 +263,8 @@ generatedFiles:
   - docs/Models/Operations/GetCrmLeadResponse.md
   - docs/Models/Operations/GetCrmPipelineRequest.md
   - docs/Models/Operations/GetCrmPipelineResponse.md
+  - docs/Models/Operations/GetGenaiModelRequest.md
+  - docs/Models/Operations/GetGenaiModelResponse.md
   - docs/Models/Operations/GetHrisCompanyRequest.md
   - docs/Models/Operations/GetHrisCompanyResponse.md
   - docs/Models/Operations/GetHrisDeviceRequest.md
@@ -333,6 +339,8 @@ generatedFiles:
   - docs/Models/Operations/GetTaskProjectResponse.md
   - docs/Models/Operations/GetTaskTaskRequest.md
   - docs/Models/Operations/GetTaskTaskResponse.md
+  - docs/Models/Operations/GetTicketingCategoryRequest.md
+  - docs/Models/Operations/GetTicketingCategoryResponse.md
   - docs/Models/Operations/GetTicketingCustomerRequest.md
   - docs/Models/Operations/GetTicketingCustomerResponse.md
   - docs/Models/Operations/GetTicketingNoteRequest.md
@@ -525,6 +533,8 @@ generatedFiles:
   - docs/Models/Operations/ListTaskProjectsResponse.md
   - docs/Models/Operations/ListTaskTasksRequest.md
   - docs/Models/Operations/ListTaskTasksResponse.md
+  - docs/Models/Operations/ListTicketingCategoriesRequest.md
+  - docs/Models/Operations/ListTicketingCategoriesResponse.md
   - docs/Models/Operations/ListTicketingCustomersRequest.md
   - docs/Models/Operations/ListTicketingCustomersResponse.md
   - docs/Models/Operations/ListTicketingNotesRequest.md
@@ -690,6 +700,8 @@ generatedFiles:
   - docs/Models/Operations/PatchTaskProjectResponse.md
   - docs/Models/Operations/PatchTaskTaskRequest.md
   - docs/Models/Operations/PatchTaskTaskResponse.md
+  - docs/Models/Operations/PatchTicketingCategoryRequest.md
+  - docs/Models/Operations/PatchTicketingCategoryResponse.md
   - docs/Models/Operations/PatchTicketingCustomerRequest.md
   - docs/Models/Operations/PatchTicketingCustomerResponse.md
   - docs/Models/Operations/PatchTicketingNoteRequest.md
@@ -843,6 +855,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveTaskProjectResponse.md
   - docs/Models/Operations/RemoveTaskTaskRequest.md
   - docs/Models/Operations/RemoveTaskTaskResponse.md
+  - docs/Models/Operations/RemoveTicketingCategoryRequest.md
+  - docs/Models/Operations/RemoveTicketingCategoryResponse.md
   - docs/Models/Operations/RemoveTicketingCustomerRequest.md
   - docs/Models/Operations/RemoveTicketingCustomerResponse.md
   - docs/Models/Operations/RemoveTicketingNoteRequest.md
@@ -995,6 +1009,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateTaskProjectResponse.md
   - docs/Models/Operations/UpdateTaskTaskRequest.md
   - docs/Models/Operations/UpdateTaskTaskResponse.md
+  - docs/Models/Operations/UpdateTicketingCategoryRequest.md
+  - docs/Models/Operations/UpdateTicketingCategoryResponse.md
   - docs/Models/Operations/UpdateTicketingCustomerRequest.md
   - docs/Models/Operations/UpdateTicketingCustomerResponse.md
   - docs/Models/Operations/UpdateTicketingNoteRequest.md
@@ -1165,6 +1181,7 @@ generatedFiles:
   - docs/Models/Shared/DbType.md
   - docs/Models/Shared/EmploymentStatus.md
   - docs/Models/Shared/EmploymentType.md
+  - docs/Models/Shared/EncondingFormat.md
   - docs/Models/Shared/EnrichCompany.md
   - docs/Models/Shared/EnrichEmail.md
   - docs/Models/Shared/EnrichEmailType.md
@@ -1179,6 +1196,8 @@ generatedFiles:
   - docs/Models/Shared/Format.md
   - docs/Models/Shared/Frequency.md
   - docs/Models/Shared/GenaiContent.md
+  - docs/Models/Shared/GenaiEmbedding.md
+  - docs/Models/Shared/GenaiEmbeddingContent.md
   - docs/Models/Shared/GenaiModel.md
   - docs/Models/Shared/GenaiPrompt.md
   - docs/Models/Shared/Gender.md
@@ -1393,6 +1412,7 @@ generatedFiles:
   - docs/Models/Shared/TaskTask.md
   - docs/Models/Shared/TaskTaskStatus.md
   - docs/Models/Shared/TaxExemption.md
+  - docs/Models/Shared/TicketingCategory.md
   - docs/Models/Shared/TicketingCustomer.md
   - docs/Models/Shared/TicketingEmail.md
   - docs/Models/Shared/TicketingEmailType.md
@@ -1459,6 +1479,7 @@ generatedFiles:
   - docs/sdks/deal/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
+  - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
@@ -1569,6 +1590,7 @@ generatedFiles:
   - src/Deal.php
   - src/Device.php
   - src/Document.php
+  - src/Embedding.php
   - src/Employee.php
   - src/Enrich.php
   - src/Event.php
@@ -1684,6 +1706,8 @@ generatedFiles:
   - src/Models/Operations/CreateCrmLeadResponse.php
   - src/Models/Operations/CreateCrmPipelineRequest.php
   - src/Models/Operations/CreateCrmPipelineResponse.php
+  - src/Models/Operations/CreateGenaiEmbeddingRequest.php
+  - src/Models/Operations/CreateGenaiEmbeddingResponse.php
   - src/Models/Operations/CreateGenaiPromptRequest.php
   - src/Models/Operations/CreateGenaiPromptResponse.php
   - src/Models/Operations/CreateHrisCompanyRequest.php
@@ -1752,6 +1776,8 @@ generatedFiles:
   - src/Models/Operations/CreateTaskProjectResponse.php
   - src/Models/Operations/CreateTaskTaskRequest.php
   - src/Models/Operations/CreateTaskTaskResponse.php
+  - src/Models/Operations/CreateTicketingCategoryRequest.php
+  - src/Models/Operations/CreateTicketingCategoryResponse.php
   - src/Models/Operations/CreateTicketingCustomerRequest.php
   - src/Models/Operations/CreateTicketingCustomerResponse.php
   - src/Models/Operations/CreateTicketingNoteRequest.php
@@ -1849,6 +1875,8 @@ generatedFiles:
   - src/Models/Operations/GetCrmLeadResponse.php
   - src/Models/Operations/GetCrmPipelineRequest.php
   - src/Models/Operations/GetCrmPipelineResponse.php
+  - src/Models/Operations/GetGenaiModelRequest.php
+  - src/Models/Operations/GetGenaiModelResponse.php
   - src/Models/Operations/GetHrisCompanyRequest.php
   - src/Models/Operations/GetHrisCompanyResponse.php
   - src/Models/Operations/GetHrisDeviceRequest.php
@@ -1923,6 +1951,8 @@ generatedFiles:
   - src/Models/Operations/GetTaskProjectResponse.php
   - src/Models/Operations/GetTaskTaskRequest.php
   - src/Models/Operations/GetTaskTaskResponse.php
+  - src/Models/Operations/GetTicketingCategoryRequest.php
+  - src/Models/Operations/GetTicketingCategoryResponse.php
   - src/Models/Operations/GetTicketingCustomerRequest.php
   - src/Models/Operations/GetTicketingCustomerResponse.php
   - src/Models/Operations/GetTicketingNoteRequest.php
@@ -2115,6 +2145,8 @@ generatedFiles:
   - src/Models/Operations/ListTaskProjectsResponse.php
   - src/Models/Operations/ListTaskTasksRequest.php
   - src/Models/Operations/ListTaskTasksResponse.php
+  - src/Models/Operations/ListTicketingCategoriesRequest.php
+  - src/Models/Operations/ListTicketingCategoriesResponse.php
   - src/Models/Operations/ListTicketingCustomersRequest.php
   - src/Models/Operations/ListTicketingCustomersResponse.php
   - src/Models/Operations/ListTicketingNotesRequest.php
@@ -2280,6 +2312,8 @@ generatedFiles:
   - src/Models/Operations/PatchTaskProjectResponse.php
   - src/Models/Operations/PatchTaskTaskRequest.php
   - src/Models/Operations/PatchTaskTaskResponse.php
+  - src/Models/Operations/PatchTicketingCategoryRequest.php
+  - src/Models/Operations/PatchTicketingCategoryResponse.php
   - src/Models/Operations/PatchTicketingCustomerRequest.php
   - src/Models/Operations/PatchTicketingCustomerResponse.php
   - src/Models/Operations/PatchTicketingNoteRequest.php
@@ -2433,6 +2467,8 @@ generatedFiles:
   - src/Models/Operations/RemoveTaskProjectResponse.php
   - src/Models/Operations/RemoveTaskTaskRequest.php
   - src/Models/Operations/RemoveTaskTaskResponse.php
+  - src/Models/Operations/RemoveTicketingCategoryRequest.php
+  - src/Models/Operations/RemoveTicketingCategoryResponse.php
   - src/Models/Operations/RemoveTicketingCustomerRequest.php
   - src/Models/Operations/RemoveTicketingCustomerResponse.php
   - src/Models/Operations/RemoveTicketingNoteRequest.php
@@ -2585,6 +2621,8 @@ generatedFiles:
   - src/Models/Operations/UpdateTaskProjectResponse.php
   - src/Models/Operations/UpdateTaskTaskRequest.php
   - src/Models/Operations/UpdateTaskTaskResponse.php
+  - src/Models/Operations/UpdateTicketingCategoryRequest.php
+  - src/Models/Operations/UpdateTicketingCategoryResponse.php
   - src/Models/Operations/UpdateTicketingCustomerRequest.php
   - src/Models/Operations/UpdateTicketingCustomerResponse.php
   - src/Models/Operations/UpdateTicketingNoteRequest.php
@@ -2745,6 +2783,7 @@ generatedFiles:
   - src/Models/Shared/DbType.php
   - src/Models/Shared/EmploymentStatus.php
   - src/Models/Shared/EmploymentType.php
+  - src/Models/Shared/EncondingFormat.php
   - src/Models/Shared/EnrichCompany.php
   - src/Models/Shared/EnrichEmail.php
   - src/Models/Shared/EnrichEmailType.php
@@ -2757,6 +2796,8 @@ generatedFiles:
   - src/Models/Shared/Format.php
   - src/Models/Shared/Frequency.php
   - src/Models/Shared/GenaiContent.php
+  - src/Models/Shared/GenaiEmbedding.php
+  - src/Models/Shared/GenaiEmbeddingContent.php
   - src/Models/Shared/GenaiModel.php
   - src/Models/Shared/GenaiPrompt.php
   - src/Models/Shared/Gender.php
@@ -2954,6 +2995,7 @@ generatedFiles:
   - src/Models/Shared/TaskTask.php
   - src/Models/Shared/TaskTaskStatus.php
   - src/Models/Shared/TaxExemption.php
+  - src/Models/Shared/TicketingCategory.php
   - src/Models/Shared/TicketingCustomer.php
   - src/Models/Shared/TicketingEmail.php
   - src/Models/Shared/TicketingEmailType.php
@@ -7557,6 +7599,80 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTicketingCategory:
+    speakeasy-default-create-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getTicketingCategory:
+    speakeasy-default-get-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTicketingCategories:
+    speakeasy-default-list-ticketing-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchTicketingCategory:
+    speakeasy-default-patch-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeTicketingCategory:
+    speakeasy-default-remove-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTicketingCategory:
+    speakeasy-default-update-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createGenaiEmbedding:
+    speakeasy-default-create-genai-embedding:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getGenaiModel:
+    speakeasy-default-get-genai-model:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified-to->genai->createGenaiPrompt()`: \n  *  `request->genaiPrompt->mcpUrl` **Added**\n  *  `response.mcpUrl` **Added**\n* `unified-to->prompt->createGenaiPrompt()`: \n  *  `request->genaiPrompt->mcpUrl` **Added**\n  *  `response.mcpUrl` **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->category->createTicketingCategory()`: **Added**\n* `unified-to->category->getTicketingCategory()`: **Added**\n* `unified-to->category->listTicketingCategories()`: **Added**\n* `unified-to->category->patchTicketingCategory()`: **Added**\n* `unified-to->category->removeTicketingCategory()`: **Added**\n* `unified-to->category->updateTicketingCategory()`: **Added**\n* `unified-to->genai->createGenaiEmbedding()`: **Added**\n* `unified-to->genai->getGenaiModel()`: **Added**\n* `unified-to->embedding->createGenaiEmbedding()`: **Added**\n* `unified-to->model->getGenaiModel()`: **Added**\n* `unified-to->ticketing->createTicketingCategory()`: **Added**\n* `unified-to->ticketing->getTicketingCategory()`: **Added**\n* `unified-to->ticketing->listTicketingCategories()`: **Added**\n* `unified-to->ticketing->patchTicketingCategory()`: **Added**\n* `unified-to->ticketing->removeTicketingCategory()`: **Added**\n* `unified-to->ticketing->updateTicketingCategory()`: **Added**\n* `unified-to->ticketing->createTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n* `unified-to->ticketing->getTicketingTicket()`:  `response.categoryId` **Added**\n* `unified-to->ticketing->listTicketingTickets()`:  `response.[]->categoryId` **Added**\n* `unified-to->ticketing->patchTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n* `unified-to->ticketing->updateTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n* `unified-to->ticket->createTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n* `unified-to->ticket->getTicketingTicket()`:  `response.categoryId` **Added**\n* `unified-to->ticket->listTicketingTickets()`:  `response.[]->categoryId` **Added**\n* `unified-to->ticket->patchTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n* `unified-to->ticket->updateTicketingTicket()`: \n  *  `request->ticketingTicket->categoryId` **Added**\n  *  `response.categoryId` **Added**\n"

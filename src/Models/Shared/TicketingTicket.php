@@ -21,6 +21,14 @@ class TicketingTicket
 
     /**
      *
+     * @var ?string $categoryId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $categoryId = null;
+
+    /**
+     *
      * @var ?\DateTime $closedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('closed_at')]
@@ -146,6 +154,7 @@ class TicketingTicket
 
     /**
      * @param  ?string  $category
+     * @param  ?string  $categoryId
      * @param  ?\DateTime  $closedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $customerId
@@ -163,9 +172,10 @@ class TicketingTicket
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $category = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
+    public function __construct(?string $category = null, ?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {
         $this->category = $category;
+        $this->categoryId = $categoryId;
         $this->closedAt = $closedAt;
         $this->createdAt = $createdAt;
         $this->customerId = $customerId;
