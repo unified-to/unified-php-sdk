@@ -38,6 +38,14 @@ class HrisCompensation
 
     /**
      *
+     * @var ?string $groupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $groupId = null;
+
+    /**
+     *
      * @var ?HrisCompensationType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
@@ -49,14 +57,16 @@ class HrisCompensation
      * @param  ?float  $amount
      * @param  ?string  $currency
      * @param  ?HrisCompensationFrequency  $frequency
+     * @param  ?string  $groupId
      * @param  ?HrisCompensationType  $type
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?HrisCompensationType $type = null)
+    public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?string $groupId = null, ?HrisCompensationType $type = null)
     {
         $this->amount = $amount;
         $this->currency = $currency;
         $this->frequency = $frequency;
+        $this->groupId = $groupId;
         $this->type = $type;
     }
 }
