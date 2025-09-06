@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
+  docChecksum: 8ed442c273cdb35b6056af069e0583c0
   docVersion: "1.0"
-  speakeasyVersion: 1.609.0
-  generationVersion: 2.692.0
-  releaseVersion: 1.3.34
-  configChecksum: c93419aab8c96b138d2cf291fd8caf6c
+  speakeasyVersion: 1.611.0
+  generationVersion: 2.694.1
+  releaseVersion: 1.3.35
+  configChecksum: ebbe3d03c12f6364ef47a4bd89eb8f14
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1229,7 +1229,6 @@ generatedFiles:
   - docs/Models/Shared/HrisTelephoneType.md
   - docs/Models/Shared/HrisTimeoff.md
   - docs/Models/Shared/HrisTimeoffStatus.md
-  - docs/Models/Shared/HrisTimeoffType.md
   - docs/Models/Shared/HrisTimeshift.md
   - docs/Models/Shared/Integration.md
   - docs/Models/Shared/Integration1.md
@@ -2825,7 +2824,6 @@ generatedFiles:
   - src/Models/Shared/HrisTelephoneType.php
   - src/Models/Shared/HrisTimeoff.php
   - src/Models/Shared/HrisTimeoffStatus.php
-  - src/Models/Shared/HrisTimeoffType.php
   - src/Models/Shared/HrisTimeshift.php
   - src/Models/Shared/Integration.php
   - src/Models/Shared/Integration1.php
@@ -7675,4 +7673,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->hris->patchHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->hris->createHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->timeshift->updateHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->timeshift->patchHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->timeshift->createHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->hris->updateHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified-to->hris->listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->employee->getHrisEmployee()`:  `response.compensation->[]->groupId` **Added**\n* `unified-to->employee->listHrisEmployees()`:  `response.[]->compensation->[]->groupId` **Added**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request->hrisEmployee->compensation->[]->groupId` **Added**\n  *  `response.compensation->[]->groupId` **Added**\n* `unified-to->hris->listHrisEmployees()`:  `response.[]->compensation->[]->groupId` **Added**\n* `unified-to->timeshift->getHrisTimeshift()`:  `response` **Changed**\n* `unified-to->timeshift->listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to->hris->getHrisTimeshift()`:  `response` **Changed**\n* `unified-to->hris->getHrisEmployee()`:  `response.compensation->[]->groupId` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes Detected:
+  * `unified-to->hris->getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified-to->hris->listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+  * `unified-to->timeoff->getHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
