@@ -52,6 +52,14 @@ class KmsSpace
 
     /**
      *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
+     *
      * @var ?string $parentPageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_page_id')]
@@ -98,6 +106,7 @@ class KmsSpace
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $parentId
      * @param  ?string  $parentPageId
      * @param  ?string  $parentSpaceId
      * @param  ?array<string, mixed>  $raw
@@ -105,13 +114,14 @@ class KmsSpace
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $parentSpaceId = 'sp')
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $parentSpaceId = 'sp')
     {
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->parentId = $parentId;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

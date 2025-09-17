@@ -20,6 +20,14 @@ class UcComment
 
     /**
      *
+     * @var ?string $callId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('call_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $callId = null;
+
+    /**
+     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -62,6 +70,7 @@ class UcComment
 
     /**
      * @param  string  $content
+     * @param  ?string  $callId
      * @param  ?string  $createdAt
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
@@ -69,9 +78,10 @@ class UcComment
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $content, ?string $createdAt = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
+    public function __construct(string $content, ?string $callId = null, ?string $createdAt = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
     {
         $this->content = $content;
+        $this->callId = $callId;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->raw = $raw;

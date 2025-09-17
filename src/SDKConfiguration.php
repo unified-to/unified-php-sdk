@@ -24,11 +24,11 @@ class SDKConfiguration
 
     public string $openapiDocVersion = '1.0';
 
-    public string $sdkVersion = '1.3.35';
+    public string $sdkVersion = '1.3.36';
 
-    public string $genVersion = '2.694.1';
+    public string $genVersion = '2.701.8';
 
-    public string $userAgent = 'speakeasy-sdk/php 1.3.35 2.694.1 1.0 unified/unified-to';
+    public string $userAgent = 'speakeasy-sdk/php 1.3.36 2.701.8 1.0 unified/unified-to';
 
     public ?RetryConfig $retryConfig = null;
 
