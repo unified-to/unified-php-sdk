@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyAccountingReportProfitAndLoss
 {
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      * @deprecated – use cost_of_goods_sold_sections instead
      *
      * @var ?array<AccountingProfitlossCategory> $costOfGoodsSold
@@ -186,6 +196,7 @@ class PropertyAccountingReportProfitAndLoss
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $categoryIds
      * @param  ?array<AccountingProfitlossCategory>  $costOfGoodsSold
      * @param  ?array<AccountingProfitlossSection>  $costOfGoodsSoldSections
      * @param  ?float  $costOfGoodsSoldTotalAmount
@@ -208,8 +219,9 @@ class PropertyAccountingReportProfitAndLoss
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?string $id = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categoryIds = null, ?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?string $id = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
+        $this->categoryIds = $categoryIds;
         $this->costOfGoodsSold = $costOfGoodsSold;
         $this->costOfGoodsSoldSections = $costOfGoodsSoldSections;
         $this->costOfGoodsSoldTotalAmount = $costOfGoodsSoldTotalAmount;
