@@ -36,6 +36,13 @@ class ListCalendarEventsRequest
     public ?string $endLe = null;
 
     /**
+     *
+     * @var ?string $expand
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=expand')]
+    public ?string $expand = null;
+
+    /**
      * Whether to expand recurring calendar events
      *
      * @var ?string $expandRecurringEvents
@@ -115,6 +122,7 @@ class ListCalendarEventsRequest
      * @param  string  $connectionId
      * @param  ?string  $calendarId
      * @param  ?string  $endLe
+     * @param  ?string  $expand
      * @param  ?string  $expandRecurringEvents
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -127,11 +135,12 @@ class ListCalendarEventsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?string $expandRecurringEvents = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?string $expand = null, ?string $expandRecurringEvents = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
         $this->endLe = $endLe;
+        $this->expand = $expand;
         $this->expandRecurringEvents = $expandRecurringEvents;
         $this->fields = $fields;
         $this->limit = $limit;
