@@ -36,11 +36,12 @@ class ListMessagingMessagesRequest
     public ?string $endLe = null;
 
     /**
+     * Whether to flatten grouped or recurring items into individual entries.
      *
-     * @var ?string $expand
+     * @var ?bool $expand
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=expand')]
-    public ?string $expand = null;
+    public ?bool $expand = null;
 
     /**
      * Comma-delimited fields to return
@@ -122,7 +123,7 @@ class ListMessagingMessagesRequest
      * @param  string  $connectionId
      * @param  ?string  $channelId
      * @param  ?string  $endLe
-     * @param  ?string  $expand
+     * @param  ?bool  $expand
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -135,7 +136,7 @@ class ListMessagingMessagesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
