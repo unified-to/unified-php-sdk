@@ -44,7 +44,7 @@ $response = $sdk->passthrough->createPassthroughJson(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -95,7 +95,7 @@ $response = $sdk->passthrough->createPassthroughRaw(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -146,7 +146,7 @@ $response = $sdk->passthrough->listPassthroughs(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -197,7 +197,7 @@ $response = $sdk->passthrough->patchPassthroughJson(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -248,7 +248,7 @@ $response = $sdk->passthrough->patchPassthroughRaw(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -299,7 +299,7 @@ $response = $sdk->passthrough->removePassthrough(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -350,7 +350,7 @@ $response = $sdk->passthrough->updatePassthroughJson(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```
@@ -401,7 +401,7 @@ $response = $sdk->passthrough->updatePassthroughRaw(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->defaultApplicationJsonAny !== null) {
     // handle response
 }
 ```

@@ -128,6 +128,14 @@ class MessagingMessage
 
     /**
      *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
+     *
      * @var ?string $parentMessageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_message_id')]
@@ -208,6 +216,7 @@ class MessagingMessage
      * @param  ?string  $message
      * @param  ?string  $messageHtml
      * @param  ?string  $messageMarkdown
+     * @param  ?string  $parentId
      * @param  ?string  $parentMessageId
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<MessagingReaction>  $reactions
@@ -218,7 +227,7 @@ class MessagingMessage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $parentId = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
@@ -233,6 +242,7 @@ class MessagingMessage
         $this->message = $message;
         $this->messageHtml = $messageHtml;
         $this->messageMarkdown = $messageMarkdown;
+        $this->parentId = $parentId;
         $this->parentMessageId = $parentMessageId;
         $this->raw = $raw;
         $this->reactions = $reactions;

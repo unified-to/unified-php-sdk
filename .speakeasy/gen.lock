@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
+  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
   docVersion: "1.0"
-  speakeasyVersion: 1.622.1
-  generationVersion: 2.709.0
-  releaseVersion: 1.3.39
-  configChecksum: e31ed9ddc192d35d70c2089d06c5a6c2
+  speakeasyVersion: 1.623.0
+  generationVersion: 2.713.0
+  releaseVersion: 1.3.40
+  configChecksum: 3844a4cb647d7fb9e31695ca957da62b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.10
+    core: 3.8.11
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.2
@@ -7673,4 +7673,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->calendar->listCalendarEvents()`:  `request` **Changed** **Breaking** :warning:\n* `unified-to->event->listCalendarEvents()`:  `request` **Changed** **Breaking** :warning:\n* `unified-to->messaging->listMessagingMessages()`: \n  *  `request->expand` **Changed** **Breaking** :warning:\n* `unified-to->message->listMessagingMessages()`: \n  *  `request->expand` **Changed** **Breaking** :warning:\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response.parentId` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]->parentId` **Added**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->getMessagingMessage()`:  `response.parentId` **Added**\n* `unified-to->message->listMessagingMessages()`:  `response.[]->parentId` **Added**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n"
