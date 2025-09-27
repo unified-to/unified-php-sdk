@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
+  docChecksum: e9e9a75ee0b8df9aa855f2c91936efbd
   docVersion: "1.0"
-  speakeasyVersion: 1.623.0
-  generationVersion: 2.713.0
-  releaseVersion: 1.3.40
-  configChecksum: 3844a4cb647d7fb9e31695ca957da62b
+  speakeasyVersion: 1.631.0
+  generationVersion: 2.716.10
+  releaseVersion: 1.3.41
+  configChecksum: 49109327f0094153fb88ce3dfba83d01
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -7673,4 +7673,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response.parentId` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]->parentId` **Added**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->getMessagingMessage()`:  `response.parentId` **Added**\n* `unified-to->message->listMessagingMessages()`:  `response.[]->parentId` **Added**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage->parentId` **Added**\n  *  `response.parentId` **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response.isUnread` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]->isUnread` **Added**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->getMessagingMessage()`:  `response.isUnread` **Added**\n* `unified-to->message->listMessagingMessages()`:  `response.[]->isUnread` **Added**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n"
