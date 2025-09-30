@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: e9e9a75ee0b8df9aa855f2c91936efbd
+  docChecksum: 877b52162b06392093c3efbd89172e36
   docVersion: "1.0"
-  speakeasyVersion: 1.631.0
-  generationVersion: 2.716.10
-  releaseVersion: 1.3.41
-  configChecksum: 49109327f0094153fb88ce3dfba83d01
+  speakeasyVersion: 1.631.5
+  generationVersion: 2.716.16
+  releaseVersion: 1.3.42
+  configChecksum: 096eb260ad029bb49fbe2fd5ea4169cb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1235,6 +1235,8 @@ generatedFiles:
   - docs/Models/Shared/Integration5.md
   - docs/Models/Shared/IntegrationSchemas1.md
   - docs/Models/Shared/IntegrationSchemas5.md
+  - docs/Models/Shared/IntegrationSchemasSaml1.md
+  - docs/Models/Shared/IntegrationSchemasSaml5.md
   - docs/Models/Shared/IntegrationSchemasSandbox1.md
   - docs/Models/Shared/IntegrationSchemasSandbox5.md
   - docs/Models/Shared/IntervalUnit.md
@@ -1368,6 +1370,7 @@ generatedFiles:
   - docs/Models/Shared/ResourceType.md
   - docs/Models/Shared/ResponseStatus.md
   - docs/Models/Shared/Role.md
+  - docs/Models/Shared/Saml.md
   - docs/Models/Shared/Sandbox.md
   - docs/Models/Shared/ScimAddress.md
   - docs/Models/Shared/ScimAddressType.md
@@ -2828,6 +2831,7 @@ generatedFiles:
   - src/Models/Shared/Integration.php
   - src/Models/Shared/Integration1.php
   - src/Models/Shared/IntegrationSchemas1.php
+  - src/Models/Shared/IntegrationSchemasSaml1.php
   - src/Models/Shared/IntegrationSchemasSandbox1.php
   - src/Models/Shared/IntervalUnit.php
   - src/Models/Shared/Issue.php
@@ -7673,4 +7677,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response.isUnread` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]->isUnread` **Added**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->getMessagingMessage()`:  `response.isUnread` **Added**\n* `unified-to->message->listMessagingMessages()`:  `response.[]->isUnread` **Added**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage->isUnread` **Added**\n  *  `response.isUnread` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes Detected:
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->saml` **Added**
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->saml` **Added**
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->saml` **Added**
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->saml` **Added**
