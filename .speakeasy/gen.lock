@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 877b52162b06392093c3efbd89172e36
+  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
   docVersion: "1.0"
   speakeasyVersion: 1.631.5
   generationVersion: 2.716.16
-  releaseVersion: 1.3.42
-  configChecksum: 096eb260ad029bb49fbe2fd5ea4169cb
+  releaseVersion: 1.3.43
+  configChecksum: 8a2d87314b2c71c7d854dde4c7e0c59c
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -361,6 +361,8 @@ generatedFiles:
   - docs/Models/Operations/GetUnifiedIntegrationAuthResponse.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginRequest.md
   - docs/Models/Operations/GetUnifiedIntegrationLoginResponse.md
+  - docs/Models/Operations/GetUnifiedIssueRequest.md
+  - docs/Models/Operations/GetUnifiedIssueResponse.md
   - docs/Models/Operations/GetUnifiedWebhookRequest.md
   - docs/Models/Operations/GetUnifiedWebhookResponse.md
   - docs/Models/Operations/GetVerificationPackageRequest.md
@@ -1975,6 +1977,8 @@ generatedFiles:
   - src/Models/Operations/GetUnifiedIntegrationAuthResponse.php
   - src/Models/Operations/GetUnifiedIntegrationLoginRequest.php
   - src/Models/Operations/GetUnifiedIntegrationLoginResponse.php
+  - src/Models/Operations/GetUnifiedIssueRequest.php
+  - src/Models/Operations/GetUnifiedIssueResponse.php
   - src/Models/Operations/GetUnifiedWebhookRequest.php
   - src/Models/Operations/GetUnifiedWebhookResponse.php
   - src/Models/Operations/GetVerificationPackageRequest.php
@@ -7675,11 +7679,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  getUnifiedIssue:
+    speakeasy-default-get-unified-issue:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
 releaseNotes: |
   ## Php SDK Changes Detected:
-  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->saml` **Added**
-  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->saml` **Added**
-  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->saml` **Added**
-  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->saml` **Added**
+  * `unified-to->unified->getUnifiedIssue()`: **Added**
+  * `unified-to->issue->getUnifiedIssue()`: **Added**

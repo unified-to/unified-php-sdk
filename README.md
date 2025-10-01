@@ -742,6 +742,7 @@ if ($response->accountingAccount !== null) {
 
 ### [issue](docs/sdks/issue/README.md)
 
+* [getUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
 
 ### [item](docs/sdks/item/README.md)
@@ -1342,6 +1343,7 @@ if ($response->accountingAccount !== null) {
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
