@@ -77,6 +77,7 @@ enum PropertyConnectionPermissions: string
     case AtsJobRead = 'ats_job_read';
     case AtsJobWrite = 'ats_job_write';
     case AtsCompanyRead = 'ats_company_read';
+    case AtsCompanyWrite = 'ats_company_write';
     case AtsDocumentRead = 'ats_document_read';
     case AtsDocumentWrite = 'ats_document_write';
     case AtsScorecardRead = 'ats_scorecard_read';
