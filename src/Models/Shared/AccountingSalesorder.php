@@ -90,6 +90,14 @@ class AccountingSalesorder
 
     /**
      *
+     * @var ?string $salesChannel
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sales_channel')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $salesChannel = null;
+
+    /**
+     *
      * @var ?PropertyAccountingSalesorderShippingAddress $shippingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('shipping_address')]
@@ -132,13 +140,14 @@ class AccountingSalesorder
      * @param  ?array<AccountingLineitem>  $lineitems
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $salesChannel
      * @param  ?PropertyAccountingSalesorderShippingAddress  $shippingAddress
      * @param  ?AccountingSalesorderStatus  $status
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
@@ -149,6 +158,7 @@ class AccountingSalesorder
         $this->lineitems = $lineitems;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
+        $this->salesChannel = $salesChannel;
         $this->shippingAddress = $shippingAddress;
         $this->status = $status;
         $this->totalAmount = $totalAmount;

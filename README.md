@@ -1360,7 +1360,6 @@ if ($response->accountingAccount !== null) {
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
-
 ### [user](docs/sdks/user/README.md)
 
 * [createScimUsers](docs/sdks/user/README.md#createscimusers) - Create user

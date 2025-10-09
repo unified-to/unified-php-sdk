@@ -39,7 +39,7 @@ class MessagingMessage
     public ?string $channelId = null;
 
     /**
-     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * @deprecated; use channels instead
      *
      * @var ?array<string> $channelIds
      */
@@ -47,6 +47,16 @@ class MessagingMessage
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $channelIds = null;
+
+    /**
+     * Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
+     *
+     * @var ?array<MessagingChannelMessage> $channels
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('channels')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingChannelMessage>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $channels = null;
 
     /**
      *
@@ -215,6 +225,7 @@ class MessagingMessage
      * @param  ?PropertyMessagingMessageAuthorMember  $authorMember
      * @param  ?string  $channelId
      * @param  ?array<string>  $channelIds
+     * @param  ?array<MessagingChannelMessage>  $channels
      * @param  ?\DateTime  $createdAt
      * @param  ?array<MessagingMember>  $destinationMembers
      * @param  ?bool  $hasChildren
@@ -236,12 +247,13 @@ class MessagingMessage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $parentId = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?string $channelId = null, ?array $channelIds = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $parentId = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
         $this->channelId = $channelId;
         $this->channelIds = $channelIds;
+        $this->channels = $channels;
         $this->createdAt = $createdAt;
         $this->destinationMembers = $destinationMembers;
         $this->hasChildren = $hasChildren;

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0b33a55547cf2ac860e6a35542823995
+  docChecksum: dc91eeac96415353b77e357c69ab74d6
   docVersion: "1.0"
-  speakeasyVersion: 1.634.2
-  generationVersion: 2.721.3
-  releaseVersion: 1.3.44
-  configChecksum: 170e2bbfe6a61b6864ab44fdb3805564
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 1.3.45
+  configChecksum: 427171b98663dcbddbac83ecc873da85
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1273,6 +1273,7 @@ generatedFiles:
   - docs/Models/Shared/MarketingMember.md
   - docs/Models/Shared/MessagingAttachment.md
   - docs/Models/Shared/MessagingChannel.md
+  - docs/Models/Shared/MessagingChannelMessage.md
   - docs/Models/Shared/MessagingMember.md
   - docs/Models/Shared/MessagingMessage.md
   - docs/Models/Shared/MessagingReaction.md
@@ -1553,7 +1554,6 @@ generatedFiles:
   - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
-  - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
@@ -2865,6 +2865,7 @@ generatedFiles:
   - src/Models/Shared/MarketingMember.php
   - src/Models/Shared/MessagingAttachment.php
   - src/Models/Shared/MessagingChannel.php
+  - src/Models/Shared/MessagingChannelMessage.php
   - src/Models/Shared/MessagingMember.php
   - src/Models/Shared/MessagingMessage.php
   - src/Models/Shared/MessagingReaction.php
@@ -7689,3 +7690,4 @@ examples:
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->accounting->createAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->accounting->getAccountingSalesorder()`:  `response.salesChannel` **Added**\n* `unified-to->accounting->listAccountingSalesorders()`:  `response.[]->salesChannel` **Added**\n* `unified-to->accounting->patchAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->accounting->updateAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->salesorder->createAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->salesorder->getAccountingSalesorder()`:  `response.salesChannel` **Added**\n* `unified-to->salesorder->listAccountingSalesorders()`:  `response.[]->salesChannel` **Added**\n* `unified-to->salesorder->patchAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->salesorder->updateAccountingSalesorder()`: \n  *  `request->accountingSalesorder->salesChannel` **Added**\n  *  `response.salesChannel` **Added**\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to->messaging->getMessagingChannel()`:  `response.members->[]->imageUrl` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response` **Changed**\n* `unified-to->messaging->listMessagingChannels()`:  `response.[]->members->[]->imageUrl` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]` **Changed**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to->channel->getMessagingChannel()`:  `response.members->[]->imageUrl` **Added**\n* `unified-to->channel->listMessagingChannels()`:  `response.[]->members->[]->imageUrl` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to->message->getMessagingMessage()`:  `response` **Changed**\n* `unified-to->message->listMessagingMessages()`:  `response.[]` **Changed**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage` **Changed**\n  *  `response` **Changed**\n"

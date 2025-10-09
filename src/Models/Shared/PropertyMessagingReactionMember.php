@@ -21,6 +21,14 @@ class PropertyMessagingReactionMember
 
     /**
      *
+     * @var ?string $imageUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $imageUrl = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -37,13 +45,15 @@ class PropertyMessagingReactionMember
 
     /**
      * @param  ?string  $email
+     * @param  ?string  $imageUrl
      * @param  ?string  $name
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $email = null, ?string $name = null, ?string $userId = null)
+    public function __construct(?string $email = null, ?string $imageUrl = null, ?string $name = null, ?string $userId = null)
     {
         $this->email = $email;
+        $this->imageUrl = $imageUrl;
         $this->name = $name;
         $this->userId = $userId;
     }
