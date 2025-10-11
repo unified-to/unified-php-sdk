@@ -2727,3 +2727,13 @@ Based on:
 - [php v1.3.45] .
 ### Releases
 - [Composer v1.3.45] https://packagist.org/packages/unified/unified-to#v1.3.45 - .
+
+## 2025-10-11 00:24:41
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.636.3 (2.723.11) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v1.3.46] .
+### Releases
+- [Composer v1.3.46] https://packagist.org/packages/unified/unified-to#v1.3.46 - .

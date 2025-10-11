@@ -58,6 +58,14 @@ class CrmContact
     public ?array $dealIds = null;
 
     /**
+     *
+     * @var ?string $department
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('department')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $department = null;
+
+    /**
      * An array of email addresses for this contact
      *
      * @var ?array<CrmEmail> $emails
@@ -74,6 +82,14 @@ class CrmContact
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $imageUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $imageUrl = null;
 
     /**
      * Additional URLs associated with the contact e.g., LinkedIn, website, etc
@@ -153,8 +169,10 @@ class CrmContact
      * @param  ?array<string>  $companyIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
+     * @param  ?string  $department
      * @param  ?array<CrmEmail>  $emails
      * @param  ?string  $id
+     * @param  ?string  $imageUrl
      * @param  ?array<string>  $linkUrls
      * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
@@ -165,15 +183,17 @@ class CrmContact
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?array $emails = null, ?string $id = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $department = null, ?array $emails = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->company = $company;
         $this->companyIds = $companyIds;
         $this->createdAt = $createdAt;
         $this->dealIds = $dealIds;
+        $this->department = $department;
         $this->emails = $emails;
         $this->id = $id;
+        $this->imageUrl = $imageUrl;
         $this->linkUrls = $linkUrls;
         $this->metadata = $metadata;
         $this->name = $name;

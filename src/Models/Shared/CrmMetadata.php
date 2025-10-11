@@ -22,6 +22,15 @@ class CrmMetadata
 
     /**
      *
+     * @var ?CrmMetadataFormat $format
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmMetadataFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CrmMetadataFormat $format = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -71,6 +80,7 @@ class CrmMetadata
 
     /**
      * @param  array<string, mixed>|string|float|bool|array<CrmMetadata1|string|float|bool>|null  $extraData
+     * @param  ?CrmMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
@@ -79,9 +89,10 @@ class CrmMetadata
      * @param  array<string, mixed>|string|float|bool|array<CrmMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(array|string|float|bool|null $extraData = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
+    public function __construct(array|string|float|bool|null $extraData = null, ?CrmMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
     {
         $this->extraData = $extraData;
+        $this->format = $format;
         $this->id = $id;
         $this->key = $key;
         $this->namespace = $namespace;
