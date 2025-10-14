@@ -130,6 +130,22 @@ class AtsJob
 
     /**
      *
+     * @var ?string $minimumDegree
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('minimum_degree')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $minimumDegree = null;
+
+    /**
+     *
+     * @var ?float $minimumExperienceYears
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('minimum_experience_years')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $minimumExperienceYears = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -243,6 +259,8 @@ class AtsJob
      * @param  ?string  $id
      * @param  ?string  $languageLocale
      * @param  ?array<AtsMetadata>  $metadata
+     * @param  ?string  $minimumDegree
+     * @param  ?float  $minimumExperienceYears
      * @param  ?string  $name
      * @param  ?float  $numberOfOpenings
      * @param  ?array<AtsJobOpening>  $openings
@@ -256,7 +274,7 @@ class AtsJob
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?array $metadata = null, ?string $minimumDegree = null, ?float $minimumExperienceYears = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->addresses = $addresses;
         $this->closedAt = $closedAt;
@@ -271,6 +289,8 @@ class AtsJob
         $this->id = $id;
         $this->languageLocale = $languageLocale;
         $this->metadata = $metadata;
+        $this->minimumDegree = $minimumDegree;
+        $this->minimumExperienceYears = $minimumExperienceYears;
         $this->name = $name;
         $this->numberOfOpenings = $numberOfOpenings;
         $this->openings = $openings;
