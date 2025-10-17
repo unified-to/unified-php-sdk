@@ -28,6 +28,7 @@ enum ObjectType: string
     case AccountingProfitloss = 'accounting_profitloss';
     case AccountingTrialbalance = 'accounting_trialbalance';
     case AccountingCategory = 'accounting_category';
+    case AccountingExpense = 'accounting_expense';
     case PaymentPayment = 'payment_payment';
     case PaymentLink = 'payment_link';
     case PaymentPayout = 'payment_payout';

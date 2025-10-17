@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListMessagingMessagesRequest
+class ListAccountingExpensesRequest
 {
     /**
      * ID of the connection
@@ -18,30 +18,6 @@ class ListMessagingMessagesRequest
      */
     #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=connection_id')]
     public string $connectionId;
-
-    /**
-     * The channel ID to filter by
-     *
-     * @var ?string $channelId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=channel_id')]
-    public ?string $channelId = null;
-
-    /**
-     * The end date to filter by
-     *
-     * @var ?string $endLe
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
-    public ?string $endLe = null;
-
-    /**
-     * Whether to flatten grouped or recurring items into individual entries.
-     *
-     * @var ?bool $expand
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=expand')]
-    public ?bool $expand = null;
 
     /**
      * Comma-delimited fields to return
@@ -73,14 +49,6 @@ class ListMessagingMessagesRequest
     public ?string $order = null;
 
     /**
-     * The parent ID to filter by
-     *
-     * @var ?string $parentId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
-    public ?string $parentId = null;
-
-    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -104,14 +72,6 @@ class ListMessagingMessagesRequest
     public ?string $sort = null;
 
     /**
-     * The start date to filter by
-     *
-     * @var ?string $startGte
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
-    public ?string $startGte = null;
-
-    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?string $updatedGte
@@ -129,37 +89,27 @@ class ListMessagingMessagesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?string  $channelId
-     * @param  ?string  $endLe
-     * @param  ?bool  $expand
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
-     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
-        $this->channelId = $channelId;
-        $this->endLe = $endLe;
-        $this->expand = $expand;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
-        $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
-        $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
     }

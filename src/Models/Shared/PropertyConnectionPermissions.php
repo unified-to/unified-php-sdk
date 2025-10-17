@@ -25,6 +25,8 @@ enum PropertyConnectionPermissions: string
     case AccountingCreditmemoWrite = 'accounting_creditmemo_write';
     case AccountingContactRead = 'accounting_contact_read';
     case AccountingContactWrite = 'accounting_contact_write';
+    case AccountingExpenseRead = 'accounting_expense_read';
+    case AccountingExpenseWrite = 'accounting_expense_write';
     case AccountingTaxrateRead = 'accounting_taxrate_read';
     case AccountingTaxrateWrite = 'accounting_taxrate_write';
     case AccountingOrganizationRead = 'accounting_organization_read';

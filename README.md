@@ -114,6 +114,7 @@ if ($response->accountingAccount !== null) {
 * [createAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
+* [createAccountingExpense](docs/sdks/accounting/README.md#createaccountingexpense) - Create an expense
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
@@ -127,6 +128,7 @@ if ($response->accountingAccount !== null) {
 * [getAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
+* [getAccountingExpense](docs/sdks/accounting/README.md#getaccountingexpense) - Retrieve an expense
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
@@ -144,6 +146,7 @@ if ($response->accountingAccount !== null) {
 * [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
+* [listAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
@@ -160,6 +163,7 @@ if ($response->accountingAccount !== null) {
 * [patchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
+* [patchAccountingExpense](docs/sdks/accounting/README.md#patchaccountingexpense) - Update an expense
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
@@ -172,6 +176,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
+* [removeAccountingExpense](docs/sdks/accounting/README.md#removeaccountingexpense) - Remove an expense
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
@@ -184,6 +189,7 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
+* [updateAccountingExpense](docs/sdks/accounting/README.md#updateaccountingexpense) - Update an expense
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
@@ -623,6 +629,15 @@ if ($response->accountingAccount !== null) {
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
+
+### [expense](docs/sdks/expense/README.md)
+
+* [createAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
+* [getAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
+* [listAccountingExpenses](docs/sdks/expense/README.md#listaccountingexpenses) - List all expenses
+* [patchAccountingExpense](docs/sdks/expense/README.md#patchaccountingexpense) - Update an expense
+* [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
+* [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
 ### [file](docs/sdks/file/README.md)
 

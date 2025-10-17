@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: a340dff9ff9a611e83b0ac8c9df95754
+  docChecksum: 5e991f57774a394989eb351c469cc219
   docVersion: "1.0"
-  speakeasyVersion: 1.636.3
-  generationVersion: 2.723.11
-  releaseVersion: 1.3.47
-  configChecksum: 4231da3c686bca46c17e5dfc9b42682f
+  speakeasyVersion: 1.637.0
+  generationVersion: 2.727.4
+  releaseVersion: 1.4.0
+  configChecksum: 5890987fc6e19c7c46a67556870aa4fb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.8.11
+    core: 3.9.0
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.82.2
@@ -36,6 +36,8 @@ generatedFiles:
   - docs/Models/Operations/CreateAccountingContactResponse.md
   - docs/Models/Operations/CreateAccountingCreditmemoRequest.md
   - docs/Models/Operations/CreateAccountingCreditmemoResponse.md
+  - docs/Models/Operations/CreateAccountingExpenseRequest.md
+  - docs/Models/Operations/CreateAccountingExpenseResponse.md
   - docs/Models/Operations/CreateAccountingInvoiceRequest.md
   - docs/Models/Operations/CreateAccountingInvoiceResponse.md
   - docs/Models/Operations/CreateAccountingJournalRequest.md
@@ -195,6 +197,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingContactResponse.md
   - docs/Models/Operations/GetAccountingCreditmemoRequest.md
   - docs/Models/Operations/GetAccountingCreditmemoResponse.md
+  - docs/Models/Operations/GetAccountingExpenseRequest.md
+  - docs/Models/Operations/GetAccountingExpenseResponse.md
   - docs/Models/Operations/GetAccountingInvoiceRequest.md
   - docs/Models/Operations/GetAccountingInvoiceResponse.md
   - docs/Models/Operations/GetAccountingJournalRequest.md
@@ -381,6 +385,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingContactsResponse.md
   - docs/Models/Operations/ListAccountingCreditmemoesRequest.md
   - docs/Models/Operations/ListAccountingCreditmemoesResponse.md
+  - docs/Models/Operations/ListAccountingExpensesRequest.md
+  - docs/Models/Operations/ListAccountingExpensesResponse.md
   - docs/Models/Operations/ListAccountingInvoicesRequest.md
   - docs/Models/Operations/ListAccountingInvoicesResponse.md
   - docs/Models/Operations/ListAccountingJournalsRequest.md
@@ -578,6 +584,8 @@ generatedFiles:
   - docs/Models/Operations/PatchAccountingContactResponse.md
   - docs/Models/Operations/PatchAccountingCreditmemoRequest.md
   - docs/Models/Operations/PatchAccountingCreditmemoResponse.md
+  - docs/Models/Operations/PatchAccountingExpenseRequest.md
+  - docs/Models/Operations/PatchAccountingExpenseResponse.md
   - docs/Models/Operations/PatchAccountingInvoiceRequest.md
   - docs/Models/Operations/PatchAccountingInvoiceResponse.md
   - docs/Models/Operations/PatchAccountingJournalRequest.md
@@ -735,6 +743,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveAccountingContactResponse.md
   - docs/Models/Operations/RemoveAccountingCreditmemoRequest.md
   - docs/Models/Operations/RemoveAccountingCreditmemoResponse.md
+  - docs/Models/Operations/RemoveAccountingExpenseRequest.md
+  - docs/Models/Operations/RemoveAccountingExpenseResponse.md
   - docs/Models/Operations/RemoveAccountingInvoiceRequest.md
   - docs/Models/Operations/RemoveAccountingInvoiceResponse.md
   - docs/Models/Operations/RemoveAccountingJournalRequest.md
@@ -887,6 +897,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateAccountingContactResponse.md
   - docs/Models/Operations/UpdateAccountingCreditmemoRequest.md
   - docs/Models/Operations/UpdateAccountingCreditmemoResponse.md
+  - docs/Models/Operations/UpdateAccountingExpenseRequest.md
+  - docs/Models/Operations/UpdateAccountingExpenseResponse.md
   - docs/Models/Operations/UpdateAccountingInvoiceRequest.md
   - docs/Models/Operations/UpdateAccountingInvoiceResponse.md
   - docs/Models/Operations/UpdateAccountingJournalRequest.md
@@ -1049,6 +1061,7 @@ generatedFiles:
   - docs/Models/Shared/AccountingCreditmemoStatus.md
   - docs/Models/Shared/AccountingEmail.md
   - docs/Models/Shared/AccountingEmailType.md
+  - docs/Models/Shared/AccountingExpense.md
   - docs/Models/Shared/AccountingInvoice.md
   - docs/Models/Shared/AccountingInvoicePaymentCollectionMethod.md
   - docs/Models/Shared/AccountingInvoiceStatus.md
@@ -1489,6 +1502,7 @@ generatedFiles:
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
+  - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
@@ -1599,6 +1613,7 @@ generatedFiles:
   - src/Employee.php
   - src/Enrich.php
   - src/Event.php
+  - src/Expense.php
   - src/File.php
   - src/Genai.php
   - src/Group.php
@@ -1653,6 +1668,8 @@ generatedFiles:
   - src/Models/Operations/CreateAccountingContactResponse.php
   - src/Models/Operations/CreateAccountingCreditmemoRequest.php
   - src/Models/Operations/CreateAccountingCreditmemoResponse.php
+  - src/Models/Operations/CreateAccountingExpenseRequest.php
+  - src/Models/Operations/CreateAccountingExpenseResponse.php
   - src/Models/Operations/CreateAccountingInvoiceRequest.php
   - src/Models/Operations/CreateAccountingInvoiceResponse.php
   - src/Models/Operations/CreateAccountingJournalRequest.php
@@ -1812,6 +1829,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingContactResponse.php
   - src/Models/Operations/GetAccountingCreditmemoRequest.php
   - src/Models/Operations/GetAccountingCreditmemoResponse.php
+  - src/Models/Operations/GetAccountingExpenseRequest.php
+  - src/Models/Operations/GetAccountingExpenseResponse.php
   - src/Models/Operations/GetAccountingInvoiceRequest.php
   - src/Models/Operations/GetAccountingInvoiceResponse.php
   - src/Models/Operations/GetAccountingJournalRequest.php
@@ -1998,6 +2017,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingContactsResponse.php
   - src/Models/Operations/ListAccountingCreditmemoesRequest.php
   - src/Models/Operations/ListAccountingCreditmemoesResponse.php
+  - src/Models/Operations/ListAccountingExpensesRequest.php
+  - src/Models/Operations/ListAccountingExpensesResponse.php
   - src/Models/Operations/ListAccountingInvoicesRequest.php
   - src/Models/Operations/ListAccountingInvoicesResponse.php
   - src/Models/Operations/ListAccountingJournalsRequest.php
@@ -2195,6 +2216,8 @@ generatedFiles:
   - src/Models/Operations/PatchAccountingContactResponse.php
   - src/Models/Operations/PatchAccountingCreditmemoRequest.php
   - src/Models/Operations/PatchAccountingCreditmemoResponse.php
+  - src/Models/Operations/PatchAccountingExpenseRequest.php
+  - src/Models/Operations/PatchAccountingExpenseResponse.php
   - src/Models/Operations/PatchAccountingInvoiceRequest.php
   - src/Models/Operations/PatchAccountingInvoiceResponse.php
   - src/Models/Operations/PatchAccountingJournalRequest.php
@@ -2352,6 +2375,8 @@ generatedFiles:
   - src/Models/Operations/RemoveAccountingContactResponse.php
   - src/Models/Operations/RemoveAccountingCreditmemoRequest.php
   - src/Models/Operations/RemoveAccountingCreditmemoResponse.php
+  - src/Models/Operations/RemoveAccountingExpenseRequest.php
+  - src/Models/Operations/RemoveAccountingExpenseResponse.php
   - src/Models/Operations/RemoveAccountingInvoiceRequest.php
   - src/Models/Operations/RemoveAccountingInvoiceResponse.php
   - src/Models/Operations/RemoveAccountingJournalRequest.php
@@ -2504,6 +2529,8 @@ generatedFiles:
   - src/Models/Operations/UpdateAccountingContactResponse.php
   - src/Models/Operations/UpdateAccountingCreditmemoRequest.php
   - src/Models/Operations/UpdateAccountingCreditmemoResponse.php
+  - src/Models/Operations/UpdateAccountingExpenseRequest.php
+  - src/Models/Operations/UpdateAccountingExpenseResponse.php
   - src/Models/Operations/UpdateAccountingInvoiceRequest.php
   - src/Models/Operations/UpdateAccountingInvoiceResponse.php
   - src/Models/Operations/UpdateAccountingJournalRequest.php
@@ -2666,6 +2693,7 @@ generatedFiles:
   - src/Models/Shared/AccountingCreditmemoStatus.php
   - src/Models/Shared/AccountingEmail.php
   - src/Models/Shared/AccountingEmailType.php
+  - src/Models/Shared/AccountingExpense.php
   - src/Models/Shared/AccountingInvoice.php
   - src/Models/Shared/AccountingInvoicePaymentCollectionMethod.php
   - src/Models/Shared/AccountingInvoiceStatus.php
@@ -7690,6 +7718,61 @@ examples:
       responses:
         "200":
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
+  createAccountingExpense:
+    speakeasy-default-create-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingExpense:
+    speakeasy-default-get-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingExpenses:
+    speakeasy-default-list-accounting-expenses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingExpense:
+    speakeasy-default-patch-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingExpense:
+    speakeasy-default-remove-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingExpense:
+    speakeasy-default-update-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->ats->createAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to->ats->getAtsJob()`:  `response` **Changed**\n* `unified-to->ats->listAtsJobs()`:  `response.[]` **Changed**\n* `unified-to->ats->patchAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to->ats->updateAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to->job->createAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to->job->getAtsJob()`:  `response` **Changed**\n* `unified-to->job->listAtsJobs()`:  `response.[]` **Changed**\n* `unified-to->job->patchAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n* `unified-to->job->updateAtsJob()`: \n  *  `request->atsJob` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->accounting->createAccountingExpense()`: **Added**\n* `unified-to->accounting->getAccountingExpense()`: **Added**\n* `unified-to->accounting->listAccountingExpenses()`: **Added**\n* `unified-to->accounting->patchAccountingExpense()`: **Added**\n* `unified-to->accounting->removeAccountingExpense()`: **Added**\n* `unified-to->accounting->updateAccountingExpense()`: **Added**\n* `unified-to->expense->createAccountingExpense()`: **Added**\n* `unified-to->expense->getAccountingExpense()`: **Added**\n* `unified-to->expense->listAccountingExpenses()`: **Added**\n* `unified-to->expense->patchAccountingExpense()`: **Added**\n* `unified-to->expense->removeAccountingExpense()`: **Added**\n* `unified-to->expense->updateAccountingExpense()`: **Added**\n* `unified-to->messaging->listMessagingMessages()`: \n  *  `request->userId` **Added**\n* `unified-to->message->listMessagingMessages()`: \n  *  `request->userId` **Added**\n"
