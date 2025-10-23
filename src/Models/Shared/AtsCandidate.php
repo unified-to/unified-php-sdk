@@ -92,6 +92,14 @@ class AtsCandidate
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -105,6 +113,14 @@ class AtsCandidate
     #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
@@ -235,8 +251,10 @@ class AtsCandidate
      * @param  ?array<AtsEmail>  $emails
      * @param  ?array<AtsCandidateExperience>  $experiences
      * @param  ?string  $externalIdentifier
+     * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $imageUrl
+     * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
      * @param  ?array<AtsMetadata>  $metadata
      * @param  ?string  $name
@@ -252,7 +270,7 @@ class AtsCandidate
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $id = null, ?string $imageUrl = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -263,8 +281,10 @@ class AtsCandidate
         $this->emails = $emails;
         $this->experiences = $experiences;
         $this->externalIdentifier = $externalIdentifier;
+        $this->firstName = $firstName;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
+        $this->lastName = $lastName;
         $this->linkUrls = $linkUrls;
         $this->metadata = $metadata;
         $this->name = $name;

@@ -143,7 +143,7 @@ class EnrichCompany
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this company
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */

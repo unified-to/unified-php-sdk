@@ -61,7 +61,7 @@ class MarketingList
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this list
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */

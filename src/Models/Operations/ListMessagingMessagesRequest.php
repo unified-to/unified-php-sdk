@@ -28,12 +28,20 @@ class ListMessagingMessagesRequest
     public ?string $channelId = null;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      *
      * @var ?string $endLe
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
     public ?string $endLe = null;
+
+    /**
+     * The end date to filter by
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
@@ -131,6 +139,7 @@ class ListMessagingMessagesRequest
      * @param  string  $connectionId
      * @param  ?string  $channelId
      * @param  ?string  $endLe
+     * @param  ?string  $endLt
      * @param  ?bool  $expand
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -145,11 +154,12 @@ class ListMessagingMessagesRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
         $this->endLe = $endLe;
+        $this->endLt = $endLt;
         $this->expand = $expand;
         $this->fields = $fields;
         $this->limit = $limit;

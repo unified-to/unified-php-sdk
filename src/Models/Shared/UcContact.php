@@ -40,11 +40,27 @@ class UcContact
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      *
@@ -94,7 +110,9 @@ class UcContact
      * @param  ?string  $company
      * @param  ?\DateTime  $createdAt
      * @param  ?array<UcEmail>  $emails
+     * @param  ?string  $firstName
      * @param  ?string  $id
+     * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<UcTelephone>  $telephones
@@ -102,12 +120,14 @@ class UcContact
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->company = $company;
         $this->createdAt = $createdAt;
         $this->emails = $emails;
+        $this->firstName = $firstName;
         $this->id = $id;
+        $this->lastName = $lastName;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;

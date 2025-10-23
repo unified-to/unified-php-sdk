@@ -28,12 +28,20 @@ class ListCalendarEventsRequest
     public ?string $calendarId = null;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      *
      * @var ?string $endLe
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
     public ?string $endLe = null;
+
+    /**
+     * The end date to filter by
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
@@ -123,6 +131,7 @@ class ListCalendarEventsRequest
      * @param  string  $connectionId
      * @param  ?string  $calendarId
      * @param  ?string  $endLe
+     * @param  ?string  $endLt
      * @param  ?bool  $expand
      * @param  ?bool  $expandRecurringEvents
      * @param  ?array<string>  $fields
@@ -136,11 +145,12 @@ class ListCalendarEventsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?bool $expand = null, ?bool $expandRecurringEvents = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?bool $expandRecurringEvents = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
         $this->endLe = $endLe;
+        $this->endLt = $endLt;
         $this->expand = $expand;
         $this->expandRecurringEvents = $expandRecurringEvents;
         $this->fields = $fields;

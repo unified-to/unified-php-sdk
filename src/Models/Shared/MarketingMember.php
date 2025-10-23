@@ -32,11 +32,27 @@ class MarketingMember
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      * An array of list IDs associated with this member
@@ -57,7 +73,7 @@ class MarketingMember
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this member
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */
@@ -87,7 +103,9 @@ class MarketingMember
     /**
      * @param  ?\DateTime  $createdAt
      * @param  ?array<MarketingEmail>  $emails
+     * @param  ?string  $firstName
      * @param  ?string  $id
+     * @param  ?string  $lastName
      * @param  ?array<string>  $listIds
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
@@ -95,11 +113,13 @@ class MarketingMember
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->emails = $emails;
+        $this->firstName = $firstName;
         $this->id = $id;
+        $this->lastName = $lastName;
         $this->listIds = $listIds;
         $this->name = $name;
         $this->raw = $raw;

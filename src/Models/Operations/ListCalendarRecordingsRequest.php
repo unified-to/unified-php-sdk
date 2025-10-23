@@ -20,12 +20,20 @@ class ListCalendarRecordingsRequest
     public string $connectionId;
 
     /**
-     * The end date to filter by
+     * The end date to filter by (deprecated)
      *
      * @var ?string $endLe
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
     public ?string $endLe = null;
+
+    /**
+     * The end date to filter by
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
 
     /**
      * The event ID to filter by
@@ -106,6 +114,7 @@ class ListCalendarRecordingsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLe
+     * @param  ?string  $endLt
      * @param  ?string  $eventId
      * @param  ?array<string>  $fields
      * @param  ?float  $limit
@@ -118,10 +127,11 @@ class ListCalendarRecordingsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLe = null, ?string $eventId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLe = null, ?string $endLt = null, ?string $eventId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->endLe = $endLe;
+        $this->endLt = $endLt;
         $this->eventId = $eventId;
         $this->fields = $fields;
         $this->limit = $limit;

@@ -72,6 +72,14 @@ class CrmLead
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -85,6 +93,14 @@ class CrmLead
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      * $linkUrls
@@ -174,8 +190,10 @@ class CrmLead
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
      * @param  ?array<CrmEmail>  $emails
+     * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
      * @param  ?array<CrmMetadata>  $metadata
      * @param  ?string  $name
@@ -187,7 +205,7 @@ class CrmLead
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $id = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?bool $isActive = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -196,8 +214,10 @@ class CrmLead
         $this->createdAt = $createdAt;
         $this->creatorUserId = $creatorUserId;
         $this->emails = $emails;
+        $this->firstName = $firstName;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->lastName = $lastName;
         $this->linkUrls = $linkUrls;
         $this->metadata = $metadata;
         $this->name = $name;

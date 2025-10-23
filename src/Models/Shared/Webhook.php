@@ -151,16 +151,6 @@ class Webhook
     public ?bool $isPaused = null;
 
     /**
-     * $meta
-     *
-     * @var ?array<string, mixed> $meta
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $meta = null;
-
-    /**
      *
      * @var ?float $pageMaxLimit
      */
@@ -230,7 +220,6 @@ class Webhook
      * @param  ?float  $interval
      * @param  ?bool  $isHealthy
      * @param  ?bool  $isPaused
-     * @param  ?array<string, mixed>  $meta
      * @param  ?float  $pageMaxLimit
      * @param  ?array<string>  $runs
      * @param  ?\DateTime  $updatedAt
@@ -238,7 +227,7 @@ class Webhook
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?string $dbSchema = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?array $meta = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?string $dbSchema = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;
@@ -257,7 +246,6 @@ class Webhook
         $this->interval = $interval;
         $this->isHealthy = $isHealthy;
         $this->isPaused = $isPaused;
-        $this->meta = $meta;
         $this->pageMaxLimit = $pageMaxLimit;
         $this->runs = $runs;
         $this->updatedAt = $updatedAt;

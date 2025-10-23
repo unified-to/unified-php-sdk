@@ -134,6 +134,14 @@ class HrisEmployee
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?HrisEmployeeGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
@@ -182,6 +190,14 @@ class HrisEmployee
     #[\Speakeasy\Serializer\Annotation\SerializedName('language_locale')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $languageLocale = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      *
@@ -351,12 +367,14 @@ class HrisEmployee
      * @param  ?array<PropertyHrisEmployeeEmployeeRoles>  $employeeRoles
      * @param  ?EmploymentStatus  $employmentStatus
      * @param  ?HrisEmployeeEmploymentType  $employmentType
+     * @param  ?string  $firstName
      * @param  ?HrisEmployeeGender  $gender
      * @param  ?array<HrisGroup>  $groups
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $languageLocale
+     * @param  ?string  $lastName
      * @param  ?string  $location
      * @param  ?array<HrisLocation>  $locations
      * @param  ?string  $managerId
@@ -377,7 +395,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -393,12 +411,14 @@ class HrisEmployee
         $this->employeeRoles = $employeeRoles;
         $this->employmentStatus = $employmentStatus;
         $this->employmentType = $employmentType;
+        $this->firstName = $firstName;
         $this->gender = $gender;
         $this->groups = $groups;
         $this->hiredAt = $hiredAt;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
         $this->languageLocale = $languageLocale;
+        $this->lastName = $lastName;
         $this->location = $location;
         $this->locations = $locations;
         $this->managerId = $managerId;

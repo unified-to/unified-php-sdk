@@ -82,6 +82,14 @@ class EnrichPerson
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?Gender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
@@ -123,6 +131,14 @@ class EnrichPerson
 
     /**
      *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
+
+    /**
+     *
      * @var ?string $linkedinUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('linkedin_url')]
@@ -138,7 +154,7 @@ class EnrichPerson
     public ?string $name = null;
 
     /**
-     * The raw data returned by the integration for this person
+     * $raw
      *
      * @var ?array<string, mixed> $raw
      */
@@ -224,11 +240,13 @@ class EnrichPerson
      * @param  ?\DateTime  $createdAt
      * @param  ?array<EnrichEmail>  $emails
      * @param  ?string  $facebookUrl
+     * @param  ?string  $firstName
      * @param  ?Gender  $gender
      * @param  ?string  $githubUrl
      * @param  ?string  $githubUsername
      * @param  ?string  $id
      * @param  ?string  $imageUrl
+     * @param  ?string  $lastName
      * @param  ?string  $linkedinUrl
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
@@ -242,7 +260,7 @@ class EnrichPerson
      * @param  ?array<EnrichPersonWorkHistory>  $workHistories
      * @phpstan-pure
      */
-    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?Gender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
+    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?Gender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -252,11 +270,13 @@ class EnrichPerson
         $this->createdAt = $createdAt;
         $this->emails = $emails;
         $this->facebookUrl = $facebookUrl;
+        $this->firstName = $firstName;
         $this->gender = $gender;
         $this->githubUrl = $githubUrl;
         $this->githubUsername = $githubUsername;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
+        $this->lastName = $lastName;
         $this->linkedinUrl = $linkedinUrl;
         $this->name = $name;
         $this->raw = $raw;

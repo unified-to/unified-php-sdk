@@ -40,6 +40,14 @@ class LmsStudent
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -53,6 +61,14 @@ class LmsStudent
     #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      *
@@ -94,21 +110,25 @@ class LmsStudent
      * @param  ?PropertyLmsStudentAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?array<LmsEmail>  $emails
+     * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $imageUrl
+     * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<LmsTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyLmsStudentAddress $address = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $imageUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyLmsStudentAddress $address = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->emails = $emails;
+        $this->firstName = $firstName;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
+        $this->lastName = $lastName;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;

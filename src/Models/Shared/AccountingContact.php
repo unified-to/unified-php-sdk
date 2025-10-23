@@ -58,6 +58,14 @@ class AccountingContact
 
     /**
      *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -95,6 +103,14 @@ class AccountingContact
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_supplier')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isSupplier = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      *
@@ -191,11 +207,13 @@ class AccountingContact
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?array<AccountingEmail>  $emails
+     * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $identification
      * @param  ?bool  $isActive
      * @param  ?bool  $isCustomer
      * @param  ?bool  $isSupplier
+     * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?array<AccountingContactPaymentMethod>  $paymentMethods
      * @param  ?string  $portalUrl
@@ -207,18 +225,20 @@ class AccountingContact
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $associatedContacts = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?array $associatedContacts = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?string $name = null, ?array $paymentMethods = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->associatedContacts = $associatedContacts;
         $this->billingAddress = $billingAddress;
         $this->companyName = $companyName;
         $this->createdAt = $createdAt;
         $this->emails = $emails;
+        $this->firstName = $firstName;
         $this->id = $id;
         $this->identification = $identification;
         $this->isActive = $isActive;
         $this->isCustomer = $isCustomer;
         $this->isSupplier = $isSupplier;
+        $this->lastName = $lastName;
         $this->name = $name;
         $this->paymentMethods = $paymentMethods;
         $this->portalUrl = $portalUrl;
