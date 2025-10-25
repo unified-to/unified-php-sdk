@@ -37,7 +37,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
-        userId: '<id>',
     ),
     connectionId: '<id>',
 );
@@ -193,7 +192,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
-        userId: '<id>',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -300,7 +298,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
-        userId: '<id>',
     ),
     connectionId: '<id>',
     id: '<id>',

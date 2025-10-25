@@ -20,13 +20,6 @@ class RepoCommit
 
     /**
      *
-     * @var string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    public string $userId;
-
-    /**
-     *
      * @var ?string $branchId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('branch_id')]
@@ -76,25 +69,33 @@ class RepoCommit
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userId = null;
+
+    /**
      * @param  string  $repoId
-     * @param  string  $userId
      * @param  ?string  $branchId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?string  $message
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $repoId, string $userId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $message = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $repoId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $message = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->repoId = $repoId;
-        $this->userId = $userId;
         $this->branchId = $branchId;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->message = $message;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }

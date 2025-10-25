@@ -20,6 +20,16 @@ class AccountingJournalLineitem
     public ?string $accountId = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -34,6 +44,14 @@ class AccountingJournalLineitem
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
+
+    /**
+     *
+     * @var ?string $groupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $groupId = null;
 
     /**
      *
@@ -61,6 +79,14 @@ class AccountingJournalLineitem
 
     /**
      *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
+
+    /**
+     *
      * @var ?float $taxAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
@@ -77,23 +103,29 @@ class AccountingJournalLineitem
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
      * @param  ?string  $description
+     * @param  ?string  $groupId
      * @param  ?string  $id
      * @param  ?string  $invoiceId
      * @param  ?string  $paymentId
+     * @param  ?string  $projectId
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $contactId = null, ?string $description = null, ?string $id = null, ?string $invoiceId = null, ?string $paymentId = null, ?float $taxAmount = null, ?float $totalAmount = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?string $description = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?string $paymentId = null, ?string $projectId = null, ?float $taxAmount = null, ?float $totalAmount = null)
     {
         $this->accountId = $accountId;
+        $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->description = $description;
+        $this->groupId = $groupId;
         $this->id = $id;
         $this->invoiceId = $invoiceId;
         $this->paymentId = $paymentId;
+        $this->projectId = $projectId;
         $this->taxAmount = $taxAmount;
         $this->totalAmount = $totalAmount;
     }
