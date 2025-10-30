@@ -21,6 +21,7 @@
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
@@ -39,6 +40,7 @@
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](#listaccountingbills) - List all bills
+* [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](#listaccountingcategories) - List all categories
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
@@ -916,6 +918,57 @@ if ($response->accountingBill !== null) {
 ### Response
 
 **[?Operations\GetAccountingBillResponse](../../Models/Operations/GetAccountingBillResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAccountingCashflow
+
+Retrieve a cashflow
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAccountingCashflowRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingCashflow(
+    request: $request
+);
+
+if ($response->accountingCashflow !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAccountingCashflowRequest](../../Models/Operations/GetAccountingCashflowRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetAccountingCashflowResponse](../../Models/Operations/GetAccountingCashflowResponse.md)**
 
 ### Errors
 
@@ -1831,6 +1884,56 @@ if ($response->accountingBills !== null) {
 ### Response
 
 **[?Operations\ListAccountingBillsResponse](../../Models/Operations/ListAccountingBillsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAccountingCashflows
+
+List all cashflows
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingCashflowsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingCashflows(
+    request: $request
+);
+
+if ($response->accountingCashflows !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAccountingCashflowsRequest](../../Models/Operations/ListAccountingCashflowsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListAccountingCashflowsResponse](../../Models/Operations/ListAccountingCashflowsResponse.md)**
 
 ### Errors
 

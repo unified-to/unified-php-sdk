@@ -1,0 +1,10 @@
+# AccountingCashflowSection
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `items`                                                                               | array<[Shared\AccountingCashflowItem](../../Models/Shared/AccountingCashflowItem.md)> | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `sectionName`                                                                         | *?string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `totalAmount`                                                                         | *?float*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |

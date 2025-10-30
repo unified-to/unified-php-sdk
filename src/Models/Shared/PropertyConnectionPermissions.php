@@ -48,6 +48,8 @@ enum PropertyConnectionPermissions: string
     case AccountingCategoryWrite = 'accounting_category_write';
     case PaymentPaymentRead = 'payment_payment_read';
     case PaymentPaymentWrite = 'payment_payment_write';
+    case AccountingCashflowRead = 'accounting_cashflow_read';
+    case AccountingCashflowWrite = 'accounting_cashflow_write';
     case PaymentPayoutRead = 'payment_payout_read';
     case PaymentRefundRead = 'payment_refund_read';
     case PaymentLinkRead = 'payment_link_read';

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 018de8bfc3ab59a73a1c069f241e60a4
+  docChecksum: 488263b38991bc1af62a3a84968ffb52
   docVersion: "1.0"
-  speakeasyVersion: 1.639.3
-  generationVersion: 2.730.5
-  releaseVersion: 1.4.2
-  configChecksum: 8748e6f1acd6f48aed79aeea3b0e8c14
+  speakeasyVersion: 1.642.2
+  generationVersion: 2.731.6
+  releaseVersion: 1.4.3
+  configChecksum: db95b1220fe4d9dfa722bdcea91b6544
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -191,6 +191,8 @@ generatedFiles:
   - docs/Models/Operations/GetAccountingBalancesheetResponse.md
   - docs/Models/Operations/GetAccountingBillRequest.md
   - docs/Models/Operations/GetAccountingBillResponse.md
+  - docs/Models/Operations/GetAccountingCashflowRequest.md
+  - docs/Models/Operations/GetAccountingCashflowResponse.md
   - docs/Models/Operations/GetAccountingCategoryRequest.md
   - docs/Models/Operations/GetAccountingCategoryResponse.md
   - docs/Models/Operations/GetAccountingContactRequest.md
@@ -379,6 +381,8 @@ generatedFiles:
   - docs/Models/Operations/ListAccountingBalancesheetsResponse.md
   - docs/Models/Operations/ListAccountingBillsRequest.md
   - docs/Models/Operations/ListAccountingBillsResponse.md
+  - docs/Models/Operations/ListAccountingCashflowsRequest.md
+  - docs/Models/Operations/ListAccountingCashflowsResponse.md
   - docs/Models/Operations/ListAccountingCategoriesRequest.md
   - docs/Models/Operations/ListAccountingCategoriesResponse.md
   - docs/Models/Operations/ListAccountingContactsRequest.md
@@ -1052,6 +1056,9 @@ generatedFiles:
   - docs/Models/Shared/AccountingBalancesheetItem.md
   - docs/Models/Shared/AccountingBill.md
   - docs/Models/Shared/AccountingBillStatus.md
+  - docs/Models/Shared/AccountingCashflow.md
+  - docs/Models/Shared/AccountingCashflowItem.md
+  - docs/Models/Shared/AccountingCashflowSection.md
   - docs/Models/Shared/AccountingCategory.md
   - docs/Models/Shared/AccountingContact.md
   - docs/Models/Shared/AccountingContactPaymentMethod.md
@@ -1312,6 +1319,7 @@ generatedFiles:
   - docs/Models/Shared/Priority.md
   - docs/Models/Shared/ProfileGender.md
   - docs/Models/Shared/PropertyAccountingBalancesheetItemSubItems.md
+  - docs/Models/Shared/PropertyAccountingCashflowItemSubItems.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderBillingAddress.md
@@ -1480,6 +1488,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
@@ -1591,6 +1600,7 @@ generatedFiles:
   - src/Calendar.php
   - src/Call.php
   - src/Candidate.php
+  - src/Cashflow.php
   - src/Category.php
   - src/Change.php
   - src/Channel.php
@@ -1823,6 +1833,8 @@ generatedFiles:
   - src/Models/Operations/GetAccountingBalancesheetResponse.php
   - src/Models/Operations/GetAccountingBillRequest.php
   - src/Models/Operations/GetAccountingBillResponse.php
+  - src/Models/Operations/GetAccountingCashflowRequest.php
+  - src/Models/Operations/GetAccountingCashflowResponse.php
   - src/Models/Operations/GetAccountingCategoryRequest.php
   - src/Models/Operations/GetAccountingCategoryResponse.php
   - src/Models/Operations/GetAccountingContactRequest.php
@@ -2011,6 +2023,8 @@ generatedFiles:
   - src/Models/Operations/ListAccountingBalancesheetsResponse.php
   - src/Models/Operations/ListAccountingBillsRequest.php
   - src/Models/Operations/ListAccountingBillsResponse.php
+  - src/Models/Operations/ListAccountingCashflowsRequest.php
+  - src/Models/Operations/ListAccountingCashflowsResponse.php
   - src/Models/Operations/ListAccountingCategoriesRequest.php
   - src/Models/Operations/ListAccountingCategoriesResponse.php
   - src/Models/Operations/ListAccountingContactsRequest.php
@@ -2684,6 +2698,9 @@ generatedFiles:
   - src/Models/Shared/AccountingBalancesheetItem.php
   - src/Models/Shared/AccountingBill.php
   - src/Models/Shared/AccountingBillStatus.php
+  - src/Models/Shared/AccountingCashflow.php
+  - src/Models/Shared/AccountingCashflowItem.php
+  - src/Models/Shared/AccountingCashflowSection.php
   - src/Models/Shared/AccountingCategory.php
   - src/Models/Shared/AccountingContact.php
   - src/Models/Shared/AccountingContactPaymentMethod.php
@@ -2919,6 +2936,7 @@ generatedFiles:
   - src/Models/Shared/Priority.php
   - src/Models/Shared/ProfileGender.php
   - src/Models/Shared/PropertyAccountingBalancesheetItemSubItems.php
+  - src/Models/Shared/PropertyAccountingCashflowItemSubItems.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrderBillingAddress.php
@@ -7773,6 +7791,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingCashflow:
+    speakeasy-default-get-accounting-cashflow:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCashflows:
+    speakeasy-default-list-accounting-cashflows:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->accounting->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->accounting->getAccountingJournal()`:  `response.lineitems->[]` **Changed**\n* `unified-to->accounting->listAccountingJournals()`:  `response.[]->lineitems->[]` **Changed**\n* `unified-to->accounting->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->accounting->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->journal->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->journal->getAccountingJournal()`:  `response.lineitems->[]` **Changed**\n* `unified-to->journal->listAccountingJournals()`:  `response.[]->lineitems->[]` **Changed**\n* `unified-to->journal->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->journal->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems->[]` **Changed**\n  *  `response.lineitems->[]` **Changed**\n* `unified-to->repo->createRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n* `unified-to->repo->getRepoCommit()`:  `response.userId` **Changed**\n* `unified-to->repo->listRepoCommits()`:  `response.[]->userId` **Changed**\n* `unified-to->repo->patchRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n* `unified-to->repo->updateRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n* `unified-to->commit->createRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n* `unified-to->commit->getRepoCommit()`:  `response.userId` **Changed**\n* `unified-to->commit->listRepoCommits()`:  `response.[]->userId` **Changed**\n* `unified-to->commit->patchRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n* `unified-to->commit->updateRepoCommit()`: \n  *  `request->repoCommit->userId` **Changed**\n  *  `response.userId` **Changed**\n"
+releaseNotes: |
+  ## Php SDK Changes Detected:
+  * `unified-to->accounting->getAccountingCashflow()`: **Added**
+  * `unified-to->accounting->listAccountingCashflows()`: **Added**
+  * `unified-to->cashflow->getAccountingCashflow()`: **Added**
+  * `unified-to->cashflow->listAccountingCashflows()`: **Added**

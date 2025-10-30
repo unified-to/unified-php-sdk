@@ -125,6 +125,7 @@ if ($response->accountingAccount !== null) {
 * [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingBalancesheet](docs/sdks/accounting/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](docs/sdks/accounting/README.md#getaccountingbill) - Retrieve a bill
+* [getAccountingCashflow](docs/sdks/accounting/README.md#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
@@ -143,6 +144,7 @@ if ($response->accountingAccount !== null) {
 * [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [listAccountingBalancesheets](docs/sdks/accounting/README.md#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](docs/sdks/accounting/README.md#listaccountingbills) - List all bills
+* [listAccountingCashflows](docs/sdks/accounting/README.md#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
@@ -345,6 +347,11 @@ if ($response->accountingAccount !== null) {
 * [patchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [cashflow](docs/sdks/cashflow/README.md)
+
+* [getAccountingCashflow](docs/sdks/cashflow/README.md#getaccountingcashflow) - Retrieve a cashflow
+* [listAccountingCashflows](docs/sdks/cashflow/README.md#listaccountingcashflows) - List all cashflows
 
 ### [category](docs/sdks/category/README.md)
 
