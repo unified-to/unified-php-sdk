@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 488263b38991bc1af62a3a84968ffb52
+  docChecksum: 2cae2cbd3b5100db6145386c7734d017
   docVersion: "1.0"
-  speakeasyVersion: 1.642.2
-  generationVersion: 2.731.6
-  releaseVersion: 1.4.3
-  configChecksum: db95b1220fe4d9dfa722bdcea91b6544
+  speakeasyVersion: 1.645.1
+  generationVersion: 2.735.1
+  releaseVersion: 1.5.0
+  configChecksum: 42a2821204dbb5c09202b7550539e2b3
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,10 +14,10 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.9.0
+    core: 3.9.1
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
-    globalServerURLs: 2.82.2
+    globalServerURLs: 2.83.0
     methodArguments: 0.1.0
     responseFormat: 0.1.0
     unions: 0.1.5
@@ -7810,9 +7810,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Php SDK Changes Detected:
-  * `unified-to->accounting->getAccountingCashflow()`: **Added**
-  * `unified-to->accounting->listAccountingCashflows()`: **Added**
-  * `unified-to->cashflow->getAccountingCashflow()`: **Added**
-  * `unified-to->cashflow->listAccountingCashflows()`: **Added**
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->calendar->createCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->calendar->getCalendarEvent()`:  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->calendar->listCalendarEvents()`:  `response.[]->recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->calendar->patchCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->calendar->updateCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->event->createCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->event->getCalendarEvent()`:  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->event->listCalendarEvents()`:  `response.[]->recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->event->patchCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n* `unified-to->event->updateCalendarEvent()`: \n  *  `request->calendarEvent->recurrence->[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence->[]` **Changed** **Breaking** :warning:\n"

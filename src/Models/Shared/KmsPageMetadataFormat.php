@@ -24,4 +24,9 @@ enum KmsPageMetadataFormat: string
     case YesNo = 'YES_NO';
     case Currency = 'CURRENCY';
     case Url = 'URL';
+    case Percent = 'PERCENT';
+    case Email = 'EMAIL';
+    case Phone = 'PHONE';
+    case Reference = 'REFERENCE';
+    case Time = 'TIME';
 }

@@ -13,14 +13,6 @@ class CalendarEventRecurrence
 {
     /**
      *
-     * @var CalendarEventRecurrenceFrequency $frequency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventRecurrenceFrequency')]
-    public CalendarEventRecurrenceFrequency $frequency;
-
-    /**
-     *
      * @var ?float $count
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('count')]
@@ -44,6 +36,25 @@ class CalendarEventRecurrence
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $excludedDates = null;
+
+    /**
+     *
+     * @var ?CalendarEventRecurrenceFrequency $frequency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventRecurrenceFrequency|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CalendarEventRecurrenceFrequency $frequency = null;
+
+    /**
+     * dates to include in the recurrence, defaults to undefined (no inclusions)
+     *
+     * @var ?array<string> $includedDates
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('included_dates')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $includedDates = null;
 
     /**
      *
@@ -104,12 +115,14 @@ class CalendarEventRecurrence
     public ?array $onYearDays = null;
 
     /**
+     * timezone, defaults to undefined (no timezone)
      *
-     * @var ?string $timezone
+     * @var ?array<string> $timezone
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $timezone = null;
+    public ?array $timezone = null;
 
     /**
      *
@@ -121,26 +134,28 @@ class CalendarEventRecurrence
     public ?WeekStart $weekStart = null;
 
     /**
-     * @param  CalendarEventRecurrenceFrequency  $frequency
      * @param  ?float  $count
      * @param  ?\DateTime  $endAt
      * @param  ?array<string>  $excludedDates
+     * @param  ?CalendarEventRecurrenceFrequency  $frequency
+     * @param  ?array<string>  $includedDates
      * @param  ?float  $interval
      * @param  ?array<PropertyCalendarEventRecurrenceOnDays>  $onDays
      * @param  ?array<float>  $onMonthDays
      * @param  ?array<float>  $onMonths
      * @param  ?array<float>  $onWeeks
      * @param  ?array<float>  $onYearDays
-     * @param  ?string  $timezone
+     * @param  ?array<string>  $timezone
      * @param  ?WeekStart  $weekStart
      * @phpstan-pure
      */
-    public function __construct(CalendarEventRecurrenceFrequency $frequency, ?float $count = null, ?\DateTime $endAt = null, ?array $excludedDates = null, ?float $interval = null, ?array $onDays = null, ?array $onMonthDays = null, ?array $onMonths = null, ?array $onWeeks = null, ?array $onYearDays = null, ?string $timezone = null, ?WeekStart $weekStart = null)
+    public function __construct(?float $count = null, ?\DateTime $endAt = null, ?array $excludedDates = null, ?CalendarEventRecurrenceFrequency $frequency = null, ?array $includedDates = null, ?float $interval = null, ?array $onDays = null, ?array $onMonthDays = null, ?array $onMonths = null, ?array $onWeeks = null, ?array $onYearDays = null, ?array $timezone = null, ?WeekStart $weekStart = null)
     {
-        $this->frequency = $frequency;
         $this->count = $count;
         $this->endAt = $endAt;
         $this->excludedDates = $excludedDates;
+        $this->frequency = $frequency;
+        $this->includedDates = $includedDates;
         $this->interval = $interval;
         $this->onDays = $onDays;
         $this->onMonthDays = $onMonthDays;

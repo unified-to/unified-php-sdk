@@ -1500,7 +1500,7 @@ use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
-    ->setServerIndex(2)
+    ->setServerIndex(0)
     ->setSecurity(
         '<YOUR_API_KEY_HERE>'
     )
