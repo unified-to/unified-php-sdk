@@ -95,10 +95,10 @@ class Webhook
     /**
      * $filters
      *
-     * @var ?array<string, mixed> $filters
+     * @var ?array<string, string> $filters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('filters')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $filters = null;
 
@@ -213,7 +213,7 @@ class Webhook
      * @param  ?string  $dbUrl
      * @param  ?string  $environment
      * @param  ?string  $fields
-     * @param  ?array<string, mixed>  $filters
+     * @param  ?array<string, string>  $filters
      * @param  ?string  $hookUrl
      * @param  ?string  $id
      * @param  ?string  $integrationType

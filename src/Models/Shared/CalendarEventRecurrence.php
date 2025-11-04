@@ -115,14 +115,12 @@ class CalendarEventRecurrence
     public ?array $onYearDays = null;
 
     /**
-     * timezone, defaults to undefined (no timezone)
      *
-     * @var ?array<string> $timezone
+     * @var ?string $timezone
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $timezone = null;
+    public ?string $timezone = null;
 
     /**
      *
@@ -145,11 +143,11 @@ class CalendarEventRecurrence
      * @param  ?array<float>  $onMonths
      * @param  ?array<float>  $onWeeks
      * @param  ?array<float>  $onYearDays
-     * @param  ?array<string>  $timezone
+     * @param  ?string  $timezone
      * @param  ?WeekStart  $weekStart
      * @phpstan-pure
      */
-    public function __construct(?float $count = null, ?\DateTime $endAt = null, ?array $excludedDates = null, ?CalendarEventRecurrenceFrequency $frequency = null, ?array $includedDates = null, ?float $interval = null, ?array $onDays = null, ?array $onMonthDays = null, ?array $onMonths = null, ?array $onWeeks = null, ?array $onYearDays = null, ?array $timezone = null, ?WeekStart $weekStart = null)
+    public function __construct(?float $count = null, ?\DateTime $endAt = null, ?array $excludedDates = null, ?CalendarEventRecurrenceFrequency $frequency = null, ?array $includedDates = null, ?float $interval = null, ?array $onDays = null, ?array $onMonthDays = null, ?array $onMonths = null, ?array $onWeeks = null, ?array $onYearDays = null, ?string $timezone = null, ?WeekStart $weekStart = null)
     {
         $this->count = $count;
         $this->endAt = $endAt;

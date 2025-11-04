@@ -178,10 +178,10 @@ class Integration
     /**
      * $support
      *
-     * @var ?array<string, mixed> $support
+     * @var ?array<string, IntegrationSupport> $support
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('support')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $support = null;
 
@@ -258,7 +258,7 @@ class Integration
      * @param  ?string  $rateLimitDescription
      * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemasSaml1|string|float|bool>|null  $saml
      * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemasSandbox1|string|float|bool>|null  $sandbox
-     * @param  ?array<string, mixed>  $support
+     * @param  ?array<string, IntegrationSupport>  $support
      * @param  ?\DateTime  $testedAt
      * @param  ?string  $textColor
      * @param  ?array<string>  $tokenInstructions
