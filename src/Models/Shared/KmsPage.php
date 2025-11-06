@@ -78,6 +78,14 @@ class KmsPage
 
     /**
      *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
+     *
      * @var ?string $parentPageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_page_id')]
@@ -135,6 +143,7 @@ class KmsPage
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?array<KmsPageMetadata>  $metadata
+     * @param  ?string  $parentId
      * @param  ?string  $parentPageId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $spaceId
@@ -143,7 +152,7 @@ class KmsPage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->title = $title;
         $this->type = $type;
@@ -153,6 +162,7 @@ class KmsPage
         $this->id = $id;
         $this->isActive = $isActive;
         $this->metadata = $metadata;
+        $this->parentId = $parentId;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;
         $this->spaceId = $spaceId;
