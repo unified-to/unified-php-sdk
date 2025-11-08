@@ -13,6 +13,14 @@ class CommerceMetadata
 {
     /**
      *
+     * @var ?string $description
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $description = null;
+
+    /**
+     *
      * @var array<string, mixed>|string|float|bool|array<CommerceMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
@@ -55,6 +63,14 @@ class CommerceMetadata
 
     /**
      *
+     * @var ?bool $required
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('required')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $required = null;
+
+    /**
+     *
      * @var ?string $slug
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('slug')]
@@ -79,23 +95,27 @@ class CommerceMetadata
     public array|string|float|bool|null $value = null;
 
     /**
+     * @param  ?string  $description
      * @param  array<string, mixed>|string|float|bool|array<CommerceMetadata1|string|float|bool>|null  $extraData
      * @param  ?CommerceMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
+     * @param  ?bool  $required
      * @param  ?string  $slug
      * @param  ?string  $type
      * @param  array<string, mixed>|string|float|bool|array<CommerceMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(array|string|float|bool|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
+    public function __construct(?string $description = null, array|string|float|bool|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?bool $required = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
     {
+        $this->description = $description;
         $this->extraData = $extraData;
         $this->format = $format;
         $this->id = $id;
         $this->key = $key;
         $this->namespace = $namespace;
+        $this->required = $required;
         $this->slug = $slug;
         $this->type = $type;
         $this->value = $value;

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 3503d47f9b485c988fefca96c2736548
+  docChecksum: 44e3c827bc1f0ba4a6b13ebfe4c949dc
   docVersion: "1.0"
-  speakeasyVersion: 1.649.0
-  generationVersion: 2.739.1
-  releaseVersion: 1.5.2
-  configChecksum: 01f3e048b15b50b0cbb08c7bf90395a1
+  speakeasyVersion: 1.651.0
+  generationVersion: 2.745.2
+  releaseVersion: 1.5.3
+  configChecksum: e40f61b207b72b5d49ee2128f00c5344
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.9.1
+    core: 3.9.2
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
@@ -8034,4 +8034,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->kms->createKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->kms->getKmsPage()`:  `response.parentId` **Added**\n* `unified-to->kms->listKmsPages()`:  `response.[]->parentId` **Added**\n* `unified-to->kms->patchKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->kms->updateKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->page->createKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->page->getKmsPage()`:  `response.parentId` **Added**\n* `unified-to->page->listKmsPages()`:  `response.[]->parentId` **Added**\n* `unified-to->page->patchKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n* `unified-to->page->updateKmsPage()`: \n  *  `request->kmsPage->parentId` **Added**\n  *  `response.parentId` **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->commerce->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->getCommerceCollection()`:  `response` **Changed**\n* `unified-to->commerce->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to->commerce->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->collection->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->collection->getCommerceCollection()`:  `response` **Changed**\n* `unified-to->collection->listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to->collection->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->collection->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->item->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->item->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->review->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed**\n* `unified-to->review->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n"
