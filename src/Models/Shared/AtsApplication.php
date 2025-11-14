@@ -149,6 +149,14 @@ class AtsApplication
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $userId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userId = null;
+
+    /**
      * @param  ?array<AtsApplicationAnswer>  $answers
      * @param  ?\DateTime  $appliedAt
      * @param  ?string  $candidateId
@@ -165,9 +173,10 @@ class AtsApplication
      * @param  ?string  $source
      * @param  ?AtsApplicationStatus  $status
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;
@@ -185,5 +194,6 @@ class AtsApplication
         $this->source = $source;
         $this->status = $status;
         $this->updatedAt = $updatedAt;
+        $this->userId = $userId;
     }
 }
