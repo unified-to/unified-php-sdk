@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5c2a3f40eea3f879043c36a4d45e9686
+  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
   docVersion: "1.0"
-  speakeasyVersion: 1.656.2
-  generationVersion: 2.753.6
-  releaseVersion: 1.5.4
-  configChecksum: 4447d098e14f052c0cd16c9e95e3d87e
+  speakeasyVersion: 1.657.0
+  generationVersion: 2.755.0
+  releaseVersion: 1.5.5
+  configChecksum: ade667e4635c0b929a3c64c0fcab888a
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -1564,6 +1564,7 @@ generatedFiles:
   - docs/Models/Shared/VirtualWebhookItemId.md
   - docs/Models/Shared/VirtualWebhookItemVariantId.md
   - docs/Models/Shared/VirtualWebhookJobId.md
+  - docs/Models/Shared/VirtualWebhookLeadId.md
   - docs/Models/Shared/VirtualWebhookLimit.md
   - docs/Models/Shared/VirtualWebhookListId.md
   - docs/Models/Shared/VirtualWebhookLocationId.md
@@ -3286,6 +3287,7 @@ generatedFiles:
   - src/Models/Shared/VirtualWebhookItemId.php
   - src/Models/Shared/VirtualWebhookItemVariantId.php
   - src/Models/Shared/VirtualWebhookJobId.php
+  - src/Models/Shared/VirtualWebhookLeadId.php
   - src/Models/Shared/VirtualWebhookLimit.php
   - src/Models/Shared/VirtualWebhookListId.php
   - src/Models/Shared/VirtualWebhookLocationId.php
@@ -8034,4 +8036,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->ats->createAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n* `unified-to->ats->getAtsApplication()`:  `response.userId` **Added**\n* `unified-to->ats->listAtsApplications()`:  `response.[]->userId` **Added**\n* `unified-to->ats->patchAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n* `unified-to->ats->updateAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n* `unified-to->application->createAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n* `unified-to->application->getAtsApplication()`:  `response.userId` **Added**\n* `unified-to->application->listAtsApplications()`:  `response.[]->userId` **Added**\n* `unified-to->application->patchAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n* `unified-to->application->updateAtsApplication()`: \n  *  `request->atsApplication->userId` **Added**\n  *  `response.userId` **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->ats->createAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->ats->getAtsJob()`:  `response.skills` **Added**\n* `unified-to->ats->listAtsJobs()`:  `response.[]->skills` **Added**\n* `unified-to->ats->patchAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->ats->updateAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->job->createAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->job->getAtsJob()`:  `response.skills` **Added**\n* `unified-to->job->listAtsJobs()`:  `response.[]->skills` **Added**\n* `unified-to->job->patchAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->job->updateAtsJob()`: \n  *  `request->atsJob->skills` **Added**\n  *  `response.skills` **Added**\n* `unified-to->calendar->createCalendarCalendar()`: \n  *  `request->calendarCalendar->isPrimary` **Added**\n  *  `response.isPrimary` **Added**\n* `unified-to->calendar->getCalendarCalendar()`:  `response.isPrimary` **Added**\n* `unified-to->calendar->listCalendarCalendars()`:  `response.[]->isPrimary` **Added**\n* `unified-to->calendar->patchCalendarCalendar()`: \n  *  `request->calendarCalendar->isPrimary` **Added**\n  *  `response.isPrimary` **Added**\n* `unified-to->calendar->updateCalendarCalendar()`: \n  *  `request->calendarCalendar->isPrimary` **Added**\n  *  `response.isPrimary` **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->{}->virtualWebhookLeadId` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->{}->virtualWebhookLeadId` **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->{}->virtualWebhookLeadId` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->{}->virtualWebhookLeadId` **Added**\n"

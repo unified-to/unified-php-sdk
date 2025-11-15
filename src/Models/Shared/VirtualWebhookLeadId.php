@@ -9,10 +9,9 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum ApiCallType: string
+enum VirtualWebhookLeadId: string
 {
-    case Login = 'login';
-    case Webhook = 'webhook';
-    case Inbound = 'inbound';
-    case Mcp = 'mcp';
+    case SupportedRequired = 'supported-required';
+    case Supported = 'supported';
+    case NotSupported = 'not-supported';
 }
