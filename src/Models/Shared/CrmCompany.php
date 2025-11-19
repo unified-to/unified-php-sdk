@@ -58,6 +58,16 @@ class CrmCompany
     public ?string $description = null;
 
     /**
+     * $domains
+     *
+     * @var ?array<string> $domains
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('domains')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $domains = null;
+
+    /**
      * $emails
      *
      * @var ?array<CrmEmail> $emails
@@ -197,6 +207,7 @@ class CrmCompany
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
      * @param  ?string  $description
+     * @param  ?array<string>  $domains
      * @param  ?array<CrmEmail>  $emails
      * @param  ?float  $employees
      * @param  ?string  $id
@@ -214,13 +225,14 @@ class CrmCompany
      * @param  ?array<string>  $websites
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
+    public function __construct(?PropertyCrmCompanyAddress $address = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $description = null, ?array $domains = null, ?array $emails = null, ?float $employees = null, ?string $id = null, ?string $industry = null, ?bool $isActive = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $websites = null)
     {
         $this->address = $address;
         $this->contactIds = $contactIds;
         $this->createdAt = $createdAt;
         $this->dealIds = $dealIds;
         $this->description = $description;
+        $this->domains = $domains;
         $this->emails = $emails;
         $this->employees = $employees;
         $this->id = $id;
