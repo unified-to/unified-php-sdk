@@ -337,6 +337,7 @@ if ($response->accountingAccount !== null) {
 
 ### [call](docs/sdks/call/README.md)
 
+* [getUcCall](docs/sdks/call/README.md#getuccall) - Retrieve a call
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
 
 ### [candidate](docs/sdks/candidate/README.md)
@@ -1341,6 +1342,7 @@ if ($response->accountingAccount !== null) {
 * [createUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
 * [createUcRecording](docs/sdks/uc/README.md#createucrecording) - Create a recording
+* [getUcCall](docs/sdks/uc/README.md#getuccall) - Retrieve a call
 * [getUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [getUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
 * [getUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording

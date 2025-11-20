@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: fa8f7d5197bb46b9818ca5a0bf429fe1
+  docChecksum: d3236800ede7509df7bab0e934cc59f0
   docVersion: "1.0"
   speakeasyVersion: 1.658.2
   generationVersion: 2.755.9
-  releaseVersion: 1.5.6
-  configChecksum: 4dd9c72309bc699b3df54c90f1bfbbf8
+  releaseVersion: 1.5.7
+  configChecksum: 60f33d9601f5ac647a968b19c82dc570
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -353,6 +353,8 @@ generatedFiles:
   - docs/Models/Operations/GetTicketingNoteResponse.md
   - docs/Models/Operations/GetTicketingTicketRequest.md
   - docs/Models/Operations/GetTicketingTicketResponse.md
+  - docs/Models/Operations/GetUcCallRequest.md
+  - docs/Models/Operations/GetUcCallResponse.md
   - docs/Models/Operations/GetUcCommentRequest.md
   - docs/Models/Operations/GetUcCommentResponse.md
   - docs/Models/Operations/GetUcContactRequest.md
@@ -2108,6 +2110,8 @@ generatedFiles:
   - src/Models/Operations/GetTicketingNoteResponse.php
   - src/Models/Operations/GetTicketingTicketRequest.php
   - src/Models/Operations/GetTicketingTicketResponse.php
+  - src/Models/Operations/GetUcCallRequest.php
+  - src/Models/Operations/GetUcCallResponse.php
   - src/Models/Operations/GetUcCommentRequest.php
   - src/Models/Operations/GetUcCommentResponse.php
   - src/Models/Operations/GetUcContactRequest.php
@@ -8034,6 +8038,18 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  getUcCall:
+    speakeasy-default-get-uc-call:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->company->createCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n* `unified-to->company->getCrmCompany()`:  `response.domains` **Added**\n* `unified-to->company->listCrmCompanies()`:  `response.[]->domains` **Added**\n* `unified-to->company->patchCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n* `unified-to->company->updateCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n* `unified-to->crm->createCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n* `unified-to->crm->getCrmCompany()`:  `response.domains` **Added**\n* `unified-to->crm->listCrmCompanies()`:  `response.[]->domains` **Added**\n* `unified-to->crm->patchCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n* `unified-to->crm->updateCrmCompany()`: \n  *  `request->crmCompany->domains` **Added**\n  *  `response.domains` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes Detected:
+  * `unified-to->uc->getUcCall()`: **Added**
+  * `unified-to->call->getUcCall()`: **Added**
