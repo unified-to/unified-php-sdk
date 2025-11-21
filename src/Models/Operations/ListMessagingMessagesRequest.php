@@ -20,7 +20,7 @@ class ListMessagingMessagesRequest
     public string $connectionId;
 
     /**
-     * The channel ID to filter by
+     * The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
      *
      * @var ?string $channelId
      */
@@ -136,6 +136,14 @@ class ListMessagingMessagesRequest
     public ?string $userId = null;
 
     /**
+     * The user/employee ID to filter by
+     *
+     * @var ?string $userMentionedId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_mentioned_id')]
+    public ?string $userMentionedId = null;
+
+    /**
      * @param  string  $connectionId
      * @param  ?string  $channelId
      * @param  ?string  $endLe
@@ -152,9 +160,10 @@ class ListMessagingMessagesRequest
      * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
+     * @param  ?string  $userMentionedId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null, ?string $userMentionedId = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
@@ -172,5 +181,6 @@ class ListMessagingMessagesRequest
         $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
+        $this->userMentionedId = $userMentionedId;
     }
 }

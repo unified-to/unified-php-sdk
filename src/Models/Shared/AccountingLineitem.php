@@ -86,6 +86,16 @@ class AccountingLineitem
     public ?string $itemSku = null;
 
     /**
+     * $locations
+     *
+     * @var ?array<AccountingReference> $locations
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('locations')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $locations = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -167,6 +177,7 @@ class AccountingLineitem
      * @param  ?string  $itemId
      * @param  ?string  $itemName
      * @param  ?string  $itemSku
+     * @param  ?array<AccountingReference>  $locations
      * @param  ?string  $notes
      * @param  ?float  $refundAmount
      * @param  ?\DateTime  $refundedAt
@@ -178,7 +189,7 @@ class AccountingLineitem
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?array $locations = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -189,6 +200,7 @@ class AccountingLineitem
         $this->itemId = $itemId;
         $this->itemName = $itemName;
         $this->itemSku = $itemSku;
+        $this->locations = $locations;
         $this->notes = $notes;
         $this->refundAmount = $refundAmount;
         $this->refundedAt = $refundedAt;

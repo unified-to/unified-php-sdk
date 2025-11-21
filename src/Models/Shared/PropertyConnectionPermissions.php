@@ -126,6 +126,10 @@ enum PropertyConnectionPermissions: string
     case HrisLocationWrite = 'hris_location_write';
     case HrisDeviceRead = 'hris_device_read';
     case HrisDeviceWrite = 'hris_device_write';
+    case HrisDeductionRead = 'hris_deduction_read';
+    case HrisDeductionWrite = 'hris_deduction_write';
+    case HrisBenefitRead = 'hris_benefit_read';
+    case HrisBenefitWrite = 'hris_benefit_write';
     case UcCallRead = 'uc_call_read';
     case UcContactRead = 'uc_contact_read';
     case UcContactWrite = 'uc_contact_write';

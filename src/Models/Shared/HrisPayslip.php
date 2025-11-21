@@ -45,6 +45,16 @@ class HrisPayslip
     public ?string $currency = null;
 
     /**
+     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     *
+     * @var ?PropertyHrisPayslipDeduction $deduction
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('deduction')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeduction|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyHrisPayslipDeduction $deduction = null;
+
+    /**
      * $details
      *
      * @var ?array<HrisPayslipDetail> $details
@@ -132,6 +142,7 @@ class HrisPayslip
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?PropertyHrisPayslipDeduction  $deduction
      * @param  ?array<HrisPayslipDetail>  $details
      * @param  ?\DateTime  $endAt
      * @param  ?float  $grossAmount
@@ -144,12 +155,13 @@ class HrisPayslip
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(array $raw, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(array $raw, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->raw = $raw;
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->deduction = $deduction;
         $this->details = $details;
         $this->endAt = $endAt;
         $this->grossAmount = $grossAmount;

@@ -126,6 +126,10 @@ class UnifiedTo
 
     public Hris $hris;
 
+    public Benefit $benefit;
+
+    public Deduction $deduction;
+
     public Device $device;
 
     public Employee $employee;
@@ -306,6 +310,8 @@ class UnifiedTo
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
+        $this->benefit = new Benefit($this->sdkConfiguration);
+        $this->deduction = new Deduction($this->sdkConfiguration);
         $this->device = new Device($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
