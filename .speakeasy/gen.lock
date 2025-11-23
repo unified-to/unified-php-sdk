@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c6058565310b31d840e18ece25ff2318
+  docChecksum: 0cbfedd6f5ab2e89dc21eefa192c619d
   docVersion: "1.0"
   speakeasyVersion: 1.660.0
   generationVersion: 2.760.2
-  releaseVersion: 1.5.9
-  configChecksum: a4b72b88935225a17c746ad391e5c45f
+  releaseVersion: 1.5.10
+  configChecksum: 9316bbd9baf292c135532ea3edefc503
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -84,6 +84,8 @@ generatedFiles:
   - docs/Models/Operations/CreateCommerceLocationResponse.md
   - docs/Models/Operations/CreateCommerceReviewRequest.md
   - docs/Models/Operations/CreateCommerceReviewResponse.md
+  - docs/Models/Operations/CreateCommerceSaleschannelRequest.md
+  - docs/Models/Operations/CreateCommerceSaleschannelResponse.md
   - docs/Models/Operations/CreateCrmCompanyRequest.md
   - docs/Models/Operations/CreateCrmCompanyResponse.md
   - docs/Models/Operations/CreateCrmContactRequest.md
@@ -261,6 +263,8 @@ generatedFiles:
   - docs/Models/Operations/GetCommerceLocationResponse.md
   - docs/Models/Operations/GetCommerceReviewRequest.md
   - docs/Models/Operations/GetCommerceReviewResponse.md
+  - docs/Models/Operations/GetCommerceSaleschannelRequest.md
+  - docs/Models/Operations/GetCommerceSaleschannelResponse.md
   - docs/Models/Operations/GetCrmCompanyRequest.md
   - docs/Models/Operations/GetCrmCompanyResponse.md
   - docs/Models/Operations/GetCrmContactRequest.md
@@ -461,6 +465,8 @@ generatedFiles:
   - docs/Models/Operations/ListCommerceLocationsResponse.md
   - docs/Models/Operations/ListCommerceReviewsRequest.md
   - docs/Models/Operations/ListCommerceReviewsResponse.md
+  - docs/Models/Operations/ListCommerceSaleschannelsRequest.md
+  - docs/Models/Operations/ListCommerceSaleschannelsResponse.md
   - docs/Models/Operations/ListCrmCompaniesRequest.md
   - docs/Models/Operations/ListCrmCompaniesResponse.md
   - docs/Models/Operations/ListCrmContactsRequest.md
@@ -650,6 +656,8 @@ generatedFiles:
   - docs/Models/Operations/PatchCommerceLocationResponse.md
   - docs/Models/Operations/PatchCommerceReviewRequest.md
   - docs/Models/Operations/PatchCommerceReviewResponse.md
+  - docs/Models/Operations/PatchCommerceSaleschannelRequest.md
+  - docs/Models/Operations/PatchCommerceSaleschannelResponse.md
   - docs/Models/Operations/PatchCrmCompanyRequest.md
   - docs/Models/Operations/PatchCrmCompanyResponse.md
   - docs/Models/Operations/PatchCrmContactRequest.md
@@ -813,6 +821,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveCommerceLocationResponse.md
   - docs/Models/Operations/RemoveCommerceReviewRequest.md
   - docs/Models/Operations/RemoveCommerceReviewResponse.md
+  - docs/Models/Operations/RemoveCommerceSaleschannelRequest.md
+  - docs/Models/Operations/RemoveCommerceSaleschannelResponse.md
   - docs/Models/Operations/RemoveCrmCompanyRequest.md
   - docs/Models/Operations/RemoveCrmCompanyResponse.md
   - docs/Models/Operations/RemoveCrmContactRequest.md
@@ -971,6 +981,8 @@ generatedFiles:
   - docs/Models/Operations/UpdateCommerceLocationResponse.md
   - docs/Models/Operations/UpdateCommerceReviewRequest.md
   - docs/Models/Operations/UpdateCommerceReviewResponse.md
+  - docs/Models/Operations/UpdateCommerceSaleschannelRequest.md
+  - docs/Models/Operations/UpdateCommerceSaleschannelResponse.md
   - docs/Models/Operations/UpdateCrmCompanyRequest.md
   - docs/Models/Operations/UpdateCrmCompanyResponse.md
   - docs/Models/Operations/UpdateCrmContactRequest.md
@@ -1199,10 +1211,12 @@ generatedFiles:
   - docs/Models/Shared/CommerceMetadataSchemas1.md
   - docs/Models/Shared/CommerceMetadataSchemas5.md
   - docs/Models/Shared/CommerceMetadataValue.md
+  - docs/Models/Shared/CommerceReference.md
   - docs/Models/Shared/CommerceReview.md
   - docs/Models/Shared/CommerceReviewComment.md
   - docs/Models/Shared/CommerceReviewCommentStatus.md
   - docs/Models/Shared/CommerceReviewStatus.md
+  - docs/Models/Shared/CommerceSaleschannel.md
   - docs/Models/Shared/Connection.md
   - docs/Models/Shared/ContentType.md
   - docs/Models/Shared/CoverageLevel.md
@@ -1318,6 +1332,7 @@ generatedFiles:
   - docs/Models/Shared/KmsSpace.md
   - docs/Models/Shared/ListAccountId.md
   - docs/Models/Shared/ListApplicationId.md
+  - docs/Models/Shared/ListBenefitId.md
   - docs/Models/Shared/ListBranchId.md
   - docs/Models/Shared/ListCalendarId.md
   - docs/Models/Shared/ListCallId.md
@@ -1362,6 +1377,7 @@ generatedFiles:
   - docs/Models/Shared/ListRawFields.md
   - docs/Models/Shared/ListRepoId.md
   - docs/Models/Shared/ListRootId.md
+  - docs/Models/Shared/ListSaleschannelId.md
   - docs/Models/Shared/ListSortByCreatedAt.md
   - docs/Models/Shared/ListSortByName.md
   - docs/Models/Shared/ListSortByUpdatedAt.md
@@ -1617,6 +1633,7 @@ generatedFiles:
   - docs/Models/Shared/VirtualWebhookPipelineId.md
   - docs/Models/Shared/VirtualWebhookProjectId.md
   - docs/Models/Shared/VirtualWebhookRepoId.md
+  - docs/Models/Shared/VirtualWebhookSaleschannelId.md
   - docs/Models/Shared/VirtualWebhookSpaceId.md
   - docs/Models/Shared/VirtualWebhookStartGte.md
   - docs/Models/Shared/VirtualWebhookStatus.md
@@ -1720,6 +1737,7 @@ generatedFiles:
   - docs/sdks/repository/README.md
   - docs/sdks/request/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1887,6 +1905,8 @@ generatedFiles:
   - src/Models/Operations/CreateCommerceLocationResponse.php
   - src/Models/Operations/CreateCommerceReviewRequest.php
   - src/Models/Operations/CreateCommerceReviewResponse.php
+  - src/Models/Operations/CreateCommerceSaleschannelRequest.php
+  - src/Models/Operations/CreateCommerceSaleschannelResponse.php
   - src/Models/Operations/CreateCrmCompanyRequest.php
   - src/Models/Operations/CreateCrmCompanyResponse.php
   - src/Models/Operations/CreateCrmContactRequest.php
@@ -2064,6 +2084,8 @@ generatedFiles:
   - src/Models/Operations/GetCommerceLocationResponse.php
   - src/Models/Operations/GetCommerceReviewRequest.php
   - src/Models/Operations/GetCommerceReviewResponse.php
+  - src/Models/Operations/GetCommerceSaleschannelRequest.php
+  - src/Models/Operations/GetCommerceSaleschannelResponse.php
   - src/Models/Operations/GetCrmCompanyRequest.php
   - src/Models/Operations/GetCrmCompanyResponse.php
   - src/Models/Operations/GetCrmContactRequest.php
@@ -2264,6 +2286,8 @@ generatedFiles:
   - src/Models/Operations/ListCommerceLocationsResponse.php
   - src/Models/Operations/ListCommerceReviewsRequest.php
   - src/Models/Operations/ListCommerceReviewsResponse.php
+  - src/Models/Operations/ListCommerceSaleschannelsRequest.php
+  - src/Models/Operations/ListCommerceSaleschannelsResponse.php
   - src/Models/Operations/ListCrmCompaniesRequest.php
   - src/Models/Operations/ListCrmCompaniesResponse.php
   - src/Models/Operations/ListCrmContactsRequest.php
@@ -2453,6 +2477,8 @@ generatedFiles:
   - src/Models/Operations/PatchCommerceLocationResponse.php
   - src/Models/Operations/PatchCommerceReviewRequest.php
   - src/Models/Operations/PatchCommerceReviewResponse.php
+  - src/Models/Operations/PatchCommerceSaleschannelRequest.php
+  - src/Models/Operations/PatchCommerceSaleschannelResponse.php
   - src/Models/Operations/PatchCrmCompanyRequest.php
   - src/Models/Operations/PatchCrmCompanyResponse.php
   - src/Models/Operations/PatchCrmContactRequest.php
@@ -2616,6 +2642,8 @@ generatedFiles:
   - src/Models/Operations/RemoveCommerceLocationResponse.php
   - src/Models/Operations/RemoveCommerceReviewRequest.php
   - src/Models/Operations/RemoveCommerceReviewResponse.php
+  - src/Models/Operations/RemoveCommerceSaleschannelRequest.php
+  - src/Models/Operations/RemoveCommerceSaleschannelResponse.php
   - src/Models/Operations/RemoveCrmCompanyRequest.php
   - src/Models/Operations/RemoveCrmCompanyResponse.php
   - src/Models/Operations/RemoveCrmContactRequest.php
@@ -2774,6 +2802,8 @@ generatedFiles:
   - src/Models/Operations/UpdateCommerceLocationResponse.php
   - src/Models/Operations/UpdateCommerceReviewRequest.php
   - src/Models/Operations/UpdateCommerceReviewResponse.php
+  - src/Models/Operations/UpdateCommerceSaleschannelRequest.php
+  - src/Models/Operations/UpdateCommerceSaleschannelResponse.php
   - src/Models/Operations/UpdateCrmCompanyRequest.php
   - src/Models/Operations/UpdateCrmCompanyResponse.php
   - src/Models/Operations/UpdateCrmContactRequest.php
@@ -2996,10 +3026,12 @@ generatedFiles:
   - src/Models/Shared/CommerceMetadata1.php
   - src/Models/Shared/CommerceMetadataFormat.php
   - src/Models/Shared/CommerceMetadataSchemas1.php
+  - src/Models/Shared/CommerceReference.php
   - src/Models/Shared/CommerceReview.php
   - src/Models/Shared/CommerceReviewComment.php
   - src/Models/Shared/CommerceReviewCommentStatus.php
   - src/Models/Shared/CommerceReviewStatus.php
+  - src/Models/Shared/CommerceSaleschannel.php
   - src/Models/Shared/Connection.php
   - src/Models/Shared/ContentType.php
   - src/Models/Shared/CoverageLevel.php
@@ -3097,6 +3129,7 @@ generatedFiles:
   - src/Models/Shared/KmsSpace.php
   - src/Models/Shared/ListAccountId.php
   - src/Models/Shared/ListApplicationId.php
+  - src/Models/Shared/ListBenefitId.php
   - src/Models/Shared/ListBranchId.php
   - src/Models/Shared/ListCalendarId.php
   - src/Models/Shared/ListCallId.php
@@ -3141,6 +3174,7 @@ generatedFiles:
   - src/Models/Shared/ListRawFields.php
   - src/Models/Shared/ListRepoId.php
   - src/Models/Shared/ListRootId.php
+  - src/Models/Shared/ListSaleschannelId.php
   - src/Models/Shared/ListSortByCreatedAt.php
   - src/Models/Shared/ListSortByName.php
   - src/Models/Shared/ListSortByUpdatedAt.php
@@ -3388,6 +3422,7 @@ generatedFiles:
   - src/Models/Shared/VirtualWebhookPipelineId.php
   - src/Models/Shared/VirtualWebhookProjectId.php
   - src/Models/Shared/VirtualWebhookRepoId.php
+  - src/Models/Shared/VirtualWebhookSaleschannelId.php
   - src/Models/Shared/VirtualWebhookSpaceId.php
   - src/Models/Shared/VirtualWebhookStartGte.php
   - src/Models/Shared/VirtualWebhookStatus.php
@@ -3425,6 +3460,7 @@ generatedFiles:
   - src/Request.php
   - src/Review.php
   - src/SDKConfiguration.php
+  - src/Saleschannel.php
   - src/Salesorder.php
   - src/Scim.php
   - src/Scorecard.php
@@ -8245,6 +8281,61 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCommerceSaleschannel:
+    speakeasy-default-create-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceSaleschannel:
+    speakeasy-default-get-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceSaleschannels:
+    speakeasy-default-list-commerce-saleschannels:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceSaleschannel:
+    speakeasy-default-patch-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceSaleschannel:
+    speakeasy-default-remove-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceSaleschannel:
+    speakeasy-default-update-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->accounting->createAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->createAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingBill()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingCreditmemo()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingExpense()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingInvoice()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingOrder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingPurchaseorder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->getAccountingSalesorder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingBills()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingCreditmemoes()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingExpenses()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingInvoices()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingOrders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingPurchaseorders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->listAccountingSalesorders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->patchAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->accounting->updateAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->bill->createAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->bill->getAccountingBill()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->bill->listAccountingBills()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->bill->patchAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->bill->updateAccountingBill()`: \n  *  `request->accountingBill->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->creditmemo->createAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->creditmemo->getAccountingCreditmemo()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->creditmemo->listAccountingCreditmemoes()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->creditmemo->patchAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->creditmemo->updateAccountingCreditmemo()`: \n  *  `request->accountingCreditmemo->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->expense->getAccountingExpense()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->expense->listAccountingExpenses()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request->accountingExpense->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->invoice->createAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->invoice->getAccountingInvoice()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->invoice->listAccountingInvoices()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->invoice->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->invoice->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->order->createAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->order->getAccountingOrder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->order->listAccountingOrders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->order->patchAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->order->updateAccountingOrder()`: \n  *  `request->accountingOrder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->purchaseorder->createAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->purchaseorder->getAccountingPurchaseorder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->purchaseorder->listAccountingPurchaseorders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->purchaseorder->patchAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->purchaseorder->updateAccountingPurchaseorder()`: \n  *  `request->accountingPurchaseorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->salesorder->createAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->salesorder->getAccountingSalesorder()`:  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->salesorder->listAccountingSalesorders()`:  `response.[]->lineitems->[]->itemVariants` **Added**\n* `unified-to->salesorder->patchAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n* `unified-to->salesorder->updateAccountingSalesorder()`: \n  *  `request->accountingSalesorder->lineitems->[]->itemVariants` **Added**\n  *  `response.lineitems->[]->itemVariants` **Added**\n"
+releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->item->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->getCommerceCollection()`:  `response` **Changed** **Breaking** :warning:\n* `unified-to->review->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->review->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->review->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->review->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->item->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->item->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->item->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->item->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->collection->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->commerce->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->listCommerceCollections()`: \n  *  `request->saleschannelId` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->collection->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->review->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.media->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n  *  `response.comments->[]->metadata->[]` **Changed** **Breaking** :warning:\n* `unified-to->collection->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified-to->collection->getCommerceCollection()`:  `response` **Changed** **Breaking** :warning:\n* `unified-to->collection->listCommerceCollections()`: \n  *  `request->saleschannelId` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified-to->commerce->updateCommerceSaleschannel()`: **Added**\n* `unified-to->saleschannel->createCommerceSaleschannel()`: **Added**\n* `unified-to->saleschannel->removeCommerceSaleschannel()`: **Added**\n* `unified-to->commerce->createCommerceSaleschannel()`: **Added**\n* `unified-to->saleschannel->patchCommerceSaleschannel()`: **Added**\n* `unified-to->saleschannel->listCommerceSaleschannels()`: **Added**\n* `unified-to->saleschannel->updateCommerceSaleschannel()`: **Added**\n* `unified-to->saleschannel->getCommerceSaleschannel()`: **Added**\n* `unified-to->commerce->removeCommerceSaleschannel()`: **Added**\n* `unified-to->commerce->getCommerceSaleschannel()`: **Added**\n* `unified-to->commerce->patchCommerceSaleschannel()`: **Added**\n* `unified-to->commerce->listCommerceSaleschannels()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->{}` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->{}` **Changed**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->{}` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->{}` **Changed**\n"

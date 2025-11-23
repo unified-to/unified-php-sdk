@@ -66,6 +66,8 @@ enum PropertyConnectionPermissions: string
     case CommerceLocationWrite = 'commerce_location_write';
     case CommerceReviewRead = 'commerce_review_read';
     case CommerceReviewWrite = 'commerce_review_write';
+    case CommerceSaleschannelRead = 'commerce_saleschannel_read';
+    case CommerceSaleschannelWrite = 'commerce_saleschannel_write';
     case VerificationPackageRead = 'verification_package_read';
     case VerificationRequestRead = 'verification_request_read';
     case VerificationRequestWrite = 'verification_request_write';

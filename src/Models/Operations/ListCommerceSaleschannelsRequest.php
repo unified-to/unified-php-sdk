@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListCommerceCollectionsRequest
+class ListCommerceSaleschannelsRequest
 {
     /**
      * ID of the connection
@@ -49,14 +49,6 @@ class ListCommerceCollectionsRequest
     public ?string $order = null;
 
     /**
-     * The parent ID to filter by
-     *
-     * @var ?string $parentId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
-    public ?string $parentId = null;
-
-    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -73,26 +65,11 @@ class ListCommerceCollectionsRequest
     public ?string $raw = null;
 
     /**
-     * The saleschannel ID to filter by
-     *
-     * @var ?string $saleschannelId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=saleschannel_id')]
-    public ?string $saleschannelId = null;
-
-    /**
      *
      * @var ?string $sort
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort')]
     public ?string $sort = null;
-
-    /**
-     *
-     * @var ?string $type
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
-    public ?string $type = null;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -108,28 +85,22 @@ class ListCommerceCollectionsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
-     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
-     * @param  ?string  $saleschannelId
      * @param  ?string  $sort
-     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $saleschannelId = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
-        $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
-        $this->saleschannelId = $saleschannelId;
         $this->sort = $sort;
-        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }

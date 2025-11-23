@@ -68,16 +68,6 @@ class CommerceCollection
     public ?bool $isVisible = null;
 
     /**
-     * includes the list of metadata_metadata required to create a commerce_item under the respective commerce_collection
-     *
-     * @var ?array<CommerceMetadata> $itemMetadata
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('item_metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $itemMetadata = null;
-
-    /**
      * $media
      *
      * @var ?array<CommerceItemMedia> $media
@@ -166,7 +156,6 @@ class CommerceCollection
      * @param  ?bool  $isActive
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
-     * @param  ?array<CommerceMetadata>  $itemMetadata
      * @param  ?array<CommerceItemMedia>  $media
      * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $parentId
@@ -178,7 +167,7 @@ class CommerceCollection
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $itemMetadata = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $parentId = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?array $tags = null, ?CommerceCollectionType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;
@@ -187,7 +176,6 @@ class CommerceCollection
         $this->isActive = $isActive;
         $this->isFeatured = $isFeatured;
         $this->isVisible = $isVisible;
-        $this->itemMetadata = $itemMetadata;
         $this->media = $media;
         $this->metadata = $metadata;
         $this->parentId = $parentId;
