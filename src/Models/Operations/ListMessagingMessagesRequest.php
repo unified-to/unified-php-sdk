@@ -120,6 +120,13 @@ class ListMessagingMessagesRequest
     public ?string $startGte = null;
 
     /**
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?string $updatedGte
@@ -158,12 +165,13 @@ class ListMessagingMessagesRequest
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $startGte
+     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @param  ?string  $userMentionedId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null, ?string $userMentionedId = null)
+    public function __construct(string $connectionId, ?string $channelId = null, ?string $endLe = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null, ?string $userId = null, ?string $userMentionedId = null)
     {
         $this->connectionId = $connectionId;
         $this->channelId = $channelId;
@@ -179,6 +187,7 @@ class ListMessagingMessagesRequest
         $this->raw = $raw;
         $this->sort = $sort;
         $this->startGte = $startGte;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
         $this->userMentionedId = $userMentionedId;

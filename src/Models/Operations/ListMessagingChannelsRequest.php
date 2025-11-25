@@ -80,6 +80,13 @@ class ListMessagingChannelsRequest
     public ?string $sort = null;
 
     /**
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      *
      * @var ?string $updatedGte
@@ -97,10 +104,11 @@ class ListMessagingChannelsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -111,6 +119,7 @@ class ListMessagingChannelsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }

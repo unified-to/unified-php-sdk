@@ -54,16 +54,6 @@ class CommerceSaleschannel
     public ?bool $isActive = null;
 
     /**
-     * $itemMetadata
-     *
-     * @var ?array<CommerceMetadata> $itemMetadata
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('item_metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $itemMetadata = null;
-
-    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -95,20 +85,18 @@ class CommerceSaleschannel
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
-     * @param  ?array<CommerceMetadata>  $itemMetadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $itemMetadata = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
     {
         $this->collections = $collections;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
-        $this->itemMetadata = $itemMetadata;
         $this->raw = $raw;
         $this->slug = $slug;
         $this->updatedAt = $updatedAt;
