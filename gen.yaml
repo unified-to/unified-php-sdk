@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.5.11
+  version: 1.5.12
   additionalDependencies:
     autoload: {}
     autoload-dev: {}
@@ -43,6 +43,7 @@ php:
       operations: Models/Operations
       shared: Models/Shared
       webhooks: Models/Webhooks
+  inferUnionDiscriminators: false
   inputModelSuffix: input
   laravelServiceProvider:
     enabled: false

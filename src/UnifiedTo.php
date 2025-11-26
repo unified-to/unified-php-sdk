@@ -228,6 +228,8 @@ class UnifiedTo
 
     public Connection $connection;
 
+    public Environment $environment;
+
     public Integration $integration;
 
     public Auth $auth;
@@ -363,6 +365,7 @@ class UnifiedTo
         $this->unified = new Unified($this->sdkConfiguration);
         $this->apicall = new Apicall($this->sdkConfiguration);
         $this->connection = new Connection($this->sdkConfiguration);
+        $this->environment = new Environment($this->sdkConfiguration);
         $this->integration = new Integration($this->sdkConfiguration);
         $this->auth = new Auth($this->sdkConfiguration);
         $this->login = new Login($this->sdkConfiguration);

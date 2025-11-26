@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: e5fd42ded6b39076e927e9c9bcaeaeda
+  docChecksum: 7e48c8065cf75c07215a397f53c91620
   docVersion: "1.0"
-  speakeasyVersion: 1.660.0
-  generationVersion: 2.760.2
-  releaseVersion: 1.5.11
-  configChecksum: fdee648e416660f1ee0190693cf98d9b
+  speakeasyVersion: 1.661.2
+  generationVersion: 2.763.3
+  releaseVersion: 1.5.12
+  configChecksum: 7883b6fda24258598c9939cf973dd1cc
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -14,7 +14,7 @@ management:
 features:
   php:
     constsAndDefaults: 0.2.0
-    core: 3.9.4
+    core: 3.9.5
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
@@ -187,6 +187,7 @@ generatedFiles:
   - docs/Models/Operations/CreateUcRecordingRequest.md
   - docs/Models/Operations/CreateUcRecordingResponse.md
   - docs/Models/Operations/CreateUnifiedConnectionResponse.md
+  - docs/Models/Operations/CreateUnifiedEnvironmentResponse.md
   - docs/Models/Operations/CreateUnifiedWebhookRequest.md
   - docs/Models/Operations/CreateUnifiedWebhookResponse.md
   - docs/Models/Operations/CreateVerificationRequestRequest.md
@@ -585,6 +586,7 @@ generatedFiles:
   - docs/Models/Operations/ListUnifiedApicallsResponse.md
   - docs/Models/Operations/ListUnifiedConnectionsRequest.md
   - docs/Models/Operations/ListUnifiedConnectionsResponse.md
+  - docs/Models/Operations/ListUnifiedEnvironmentsResponse.md
   - docs/Models/Operations/ListUnifiedIntegrationWorkspacesRequest.md
   - docs/Models/Operations/ListUnifiedIntegrationWorkspacesResponse.md
   - docs/Models/Operations/ListUnifiedIntegrationsQueryParamCategories.md
@@ -919,6 +921,8 @@ generatedFiles:
   - docs/Models/Operations/RemoveUcRecordingResponse.md
   - docs/Models/Operations/RemoveUnifiedConnectionRequest.md
   - docs/Models/Operations/RemoveUnifiedConnectionResponse.md
+  - docs/Models/Operations/RemoveUnifiedEnvironmentRequest.md
+  - docs/Models/Operations/RemoveUnifiedEnvironmentResponse.md
   - docs/Models/Operations/RemoveUnifiedWebhookRequest.md
   - docs/Models/Operations/RemoveUnifiedWebhookResponse.md
   - docs/Models/Operations/RemoveVerificationRequestRequest.md
@@ -1686,6 +1690,7 @@ generatedFiles:
   - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
+  - docs/sdks/environment/README.md
   - docs/sdks/event/README.md
   - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
@@ -1801,6 +1806,7 @@ generatedFiles:
   - src/Embedding.php
   - src/Employee.php
   - src/Enrich.php
+  - src/Environment.php
   - src/Event.php
   - src/Expense.php
   - src/File.php
@@ -2008,6 +2014,7 @@ generatedFiles:
   - src/Models/Operations/CreateUcRecordingRequest.php
   - src/Models/Operations/CreateUcRecordingResponse.php
   - src/Models/Operations/CreateUnifiedConnectionResponse.php
+  - src/Models/Operations/CreateUnifiedEnvironmentResponse.php
   - src/Models/Operations/CreateUnifiedWebhookRequest.php
   - src/Models/Operations/CreateUnifiedWebhookResponse.php
   - src/Models/Operations/CreateVerificationRequestRequest.php
@@ -2406,6 +2413,7 @@ generatedFiles:
   - src/Models/Operations/ListUnifiedApicallsResponse.php
   - src/Models/Operations/ListUnifiedConnectionsRequest.php
   - src/Models/Operations/ListUnifiedConnectionsResponse.php
+  - src/Models/Operations/ListUnifiedEnvironmentsResponse.php
   - src/Models/Operations/ListUnifiedIntegrationWorkspacesRequest.php
   - src/Models/Operations/ListUnifiedIntegrationWorkspacesResponse.php
   - src/Models/Operations/ListUnifiedIntegrationsQueryParamCategories.php
@@ -2740,6 +2748,8 @@ generatedFiles:
   - src/Models/Operations/RemoveUcRecordingResponse.php
   - src/Models/Operations/RemoveUnifiedConnectionRequest.php
   - src/Models/Operations/RemoveUnifiedConnectionResponse.php
+  - src/Models/Operations/RemoveUnifiedEnvironmentRequest.php
+  - src/Models/Operations/RemoveUnifiedEnvironmentResponse.php
   - src/Models/Operations/RemoveUnifiedWebhookRequest.php
   - src/Models/Operations/RemoveUnifiedWebhookResponse.php
   - src/Models/Operations/RemoveVerificationRequestRequest.php
@@ -8336,6 +8346,33 @@ examples:
       responses:
         "200":
           application/json: {}
+  createUnifiedEnvironment:
+    speakeasy-default-create-unified-environment:
+      requestBody:
+        application/json: []
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  listUnifiedEnvironments:
+    speakeasy-default-list-unified-environments:
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  removeUnifiedEnvironment:
+    speakeasy-default-remove-unified-environment:
+      parameters:
+        path:
+          env: "<value>"
+      responses:
+        "200":
+          application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->commerce->listCommerceSaleschannels()`:  `response.[]->itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->saleschannel->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->saleschannel->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->commerce->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->saleschannel->listCommerceSaleschannels()`:  `response.[]->itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->saleschannel->getCommerceSaleschannel()`:  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->saleschannel->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->commerce->getCommerceSaleschannel()`:  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->commerce->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->commerce->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->itemMetadata` **Removed** **Breaking** :warning:\n  *  `response.itemMetadata` **Removed** **Breaking** :warning:\n* `unified-to->collection->listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to->item->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->listCommerceItems()`:  `response.[]->media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->listCommerceCollections()`:  `response.[]` **Changed**\n* `unified-to->collection->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->collection->getCommerceCollection()`:  `response` **Changed**\n* `unified-to->commerce->createCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->collection->patchCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->collection->updateCommerceCollection()`: \n  *  `request->commerceCollection` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->item->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->review->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->listCommerceReviews()`:  `response.[]->comments->[]->metadata->[]` **Changed**\n* `unified-to->review->patchCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->review->updateCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->getCommerceReview()`:  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->getCommerceItem()`:  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->commerce->getCommerceCollection()`:  `response` **Changed**\n* `unified-to->commerce->createCommerceReview()`: \n  *  `request->commerceReview->comments->[]->metadata->[]` **Changed**\n  *  `response.comments->[]->metadata->[]` **Changed**\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request->commerceItem->media->[]->metadata->[]` **Changed**\n  *  `response.media->[]->metadata->[]` **Changed**\n* `unified-to->messaging->listMessagingChannels()`: \n  *  `request->type` **Added**\n* `unified-to->messaging->listMessagingMessages()`: \n  *  `request->type` **Added**\n* `unified-to->channel->listMessagingChannels()`: \n  *  `request->type` **Added**\n* `unified-to->message->listMessagingMessages()`: \n  *  `request->type` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes Detected:
+  * `unified-to->unified->createUnifiedEnvironment()`: **Added**
+  * `unified-to->unified->listUnifiedEnvironments()`: **Added**
+  * `unified-to->unified->removeUnifiedEnvironment()`: **Added**
+  * `unified-to->environment->createUnifiedEnvironment()`: **Added**
+  * `unified-to->environment->listUnifiedEnvironments()`: **Added**
+  * `unified-to->environment->removeUnifiedEnvironment()`: **Added**

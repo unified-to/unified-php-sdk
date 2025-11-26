@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedEnvironment](#createunifiedenvironment)
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
@@ -14,6 +15,7 @@
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
+* [listUnifiedEnvironments](#listunifiedenvironments)
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
@@ -22,6 +24,7 @@
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
+* [removeUnifiedEnvironment](#removeunifiedenvironment)
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
@@ -74,6 +77,51 @@ if ($response->connection !== null) {
 ### Response
 
 **[?Operations\CreateUnifiedConnectionResponse](../../Models/Operations/CreateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createUnifiedEnvironment
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = [];
+
+$response = $sdk->unified->createUnifiedEnvironment(
+    request: $request
+);
+
+if ($response->s !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `$request`                                 | [array<string>](../../.md)                 | :heavy_check_mark:                         | The request object to use for the request. |
+
+### Response
+
+**[?Operations\CreateUnifiedEnvironmentResponse](../../Models/Operations/CreateUnifiedEnvironmentResponse.md)**
 
 ### Errors
 
@@ -481,6 +529,45 @@ if ($response->connections !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUnifiedEnvironments
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->unified->listUnifiedEnvironments(
+
+);
+
+if ($response->s !== null) {
+    // handle response
+}
+```
+
+### Response
+
+**[?Operations\ListUnifiedEnvironmentsResponse](../../Models/Operations/ListUnifiedEnvironmentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listUnifiedIntegrationWorkspaces
 
 No authentication required as this is to be used by front-end interface
@@ -881,6 +968,54 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveUnifiedConnectionResponse](../../Models/Operations/RemoveUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeUnifiedEnvironment
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUnifiedEnvironmentRequest(
+    env: '<value>',
+);
+
+$response = $sdk->unified->removeUnifiedEnvironment(
+    request: $request
+);
+
+if ($response->s !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveUnifiedEnvironmentRequest](../../Models/Operations/RemoveUnifiedEnvironmentRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveUnifiedEnvironmentResponse](../../Models/Operations/RemoveUnifiedEnvironmentResponse.md)**
 
 ### Errors
 
