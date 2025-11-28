@@ -160,6 +160,14 @@ class CalendarEvent
 
     /**
      *
+     * @var ?bool $sendNotifications
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('send_notifications')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $sendNotifications = null;
+
+    /**
+     *
      * @var ?string $startAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
@@ -225,6 +233,7 @@ class CalendarEvent
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<CalendarEventRecurrence>  $recurrence
      * @param  ?string  $recurringEventId
+     * @param  ?bool  $sendNotifications
      * @param  ?string  $startAt
      * @param  ?CalendarEventStatus  $status
      * @param  ?string  $subject
@@ -233,7 +242,7 @@ class CalendarEvent
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?array $attendees = null, ?string $calendarId = null, ?array $conference = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?array $attendees = null, ?string $calendarId = null, ?array $conference = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?bool $sendNotifications = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->attendees = $attendees;
@@ -252,6 +261,7 @@ class CalendarEvent
         $this->raw = $raw;
         $this->recurrence = $recurrence;
         $this->recurringEventId = $recurringEventId;
+        $this->sendNotifications = $sendNotifications;
         $this->startAt = $startAt;
         $this->status = $status;
         $this->subject = $subject;
