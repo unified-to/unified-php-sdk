@@ -16,4 +16,5 @@ enum DbType: string
     case Postgres = 'postgres';
     case Mssql = 'mssql';
     case Mariadb = 'mariadb';
+    case Supabase = 'supabase';
 }

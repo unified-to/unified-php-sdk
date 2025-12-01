@@ -10,7 +10,13 @@ namespace Unified\Unified_to;
 
 
 
-/** UnifiedTo - Unified.to API: One API to Rule Them All */
+/**
+ * UnifiedTo - Unified.to  API: One API to Rule Them All
+ *
+ * https://docs.unified.to - API Documentation
+ *
+ * @see https://docs.unified.to
+ */
 class UnifiedTo
 {
     public const SERVERS = [

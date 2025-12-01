@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.5.13
+  version: 1.5.14
   additionalDependencies:
     autoload: {}
     autoload-dev: {}
@@ -50,6 +50,7 @@ php:
     svcName: openapi
   maxMethodParams: 0
   methodArguments: infer-optional-args
+  multipartArrayFormat: legacy
   namespace: Unified\Unified_to
   outputModelSuffix: output
   packageName: unified/unified-to

@@ -1613,7 +1613,9 @@ if ($response->accountingAccount !== null) {
 <!-- Start Summary [summary] -->
 ## Summary
 
-Unified.to API: One API to Rule Them All
+Unified.to  API: One API to Rule Them All
+
+For more information about the API: [API Documentation](https://docs.unified.to)
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->

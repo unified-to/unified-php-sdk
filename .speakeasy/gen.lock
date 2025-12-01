@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 312aee283a626a1a256d39c734a429ac
+  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
   docVersion: "1.0"
-  speakeasyVersion: 1.662.0
-  generationVersion: 2.763.3
-  releaseVersion: 1.5.13
-  configChecksum: ac2e1749e241b968404a052d870659cf
+  speakeasyVersion: 1.665.0
+  generationVersion: 2.767.2
+  releaseVersion: 1.5.14
+  configChecksum: 910e63fd0a1d7e55be79c09f35246a87
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -8368,4 +8368,3 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes Detected:\n* `unified-to->calendar->createCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n* `unified-to->calendar->getCalendarEvent()`:  `response.sendNotifications` **Added**\n* `unified-to->calendar->listCalendarEvents()`:  `response.[]->sendNotifications` **Added**\n* `unified-to->calendar->patchCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n* `unified-to->calendar->updateCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n* `unified-to->event->createCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n* `unified-to->event->getCalendarEvent()`:  `response.sendNotifications` **Added**\n* `unified-to->event->listCalendarEvents()`:  `response.[]->sendNotifications` **Added**\n* `unified-to->event->patchCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n* `unified-to->event->updateCalendarEvent()`: \n  *  `request->calendarEvent->sendNotifications` **Added**\n  *  `response.sendNotifications` **Added**\n"
