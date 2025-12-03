@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
+  docChecksum: 5cc9bd003a02a42d13a2683d5b08bc71
   docVersion: "1.0"
-  speakeasyVersion: 1.665.0
-  generationVersion: 2.767.2
-  releaseVersion: 1.5.14
-  configChecksum: 910e63fd0a1d7e55be79c09f35246a87
+  speakeasyVersion: 1.666.2
+  generationVersion: 2.768.1
+  releaseVersion: 1.5.15
+  configChecksum: 1e0168258ba436e1c8d98791c8f8e484
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -8368,3 +8368,4 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Php SDK Changes:\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->commerce->getCommerceItem()`:  `response.collections` **Added**\n* `unified-to->commerce->getCommerceSaleschannel()`:  `response.collections->[]->type` **Added**\n* `unified-to->commerce->listCommerceItems()`:  `response.[]->collections` **Added**\n* `unified-to->commerce->listCommerceSaleschannels()`:  `response.[]->collections->[]->type` **Added**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->item->createCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->item->getCommerceItem()`:  `response.collections` **Added**\n* `unified-to->item->listCommerceItems()`:  `response.[]->collections` **Added**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->saleschannel->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->getCommerceSaleschannel()`:  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->listCommerceSaleschannels()`:  `response.[]->collections->[]->type` **Added**\n* `unified-to->saleschannel->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n"

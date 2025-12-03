@@ -28,13 +28,23 @@ class CommerceReference
     public ?string $name = null;
 
     /**
+     *
+     * @var ?string $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $type = null;
+
+    /**
      * @param  ?string  $id
      * @param  ?string  $name
+     * @param  ?string  $type
      * @phpstan-pure
      */
-    public function __construct(?string $id = null, ?string $name = null)
+    public function __construct(?string $id = null, ?string $name = null, ?string $type = null)
     {
         $this->id = $id;
         $this->name = $name;
+        $this->type = $type;
     }
 }

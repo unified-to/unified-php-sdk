@@ -20,7 +20,7 @@ class CommerceItem
     public ?string $accountId = null;
 
     /**
-     * $collectionIds
+     *  @deprecated; use collections instead
      *
      * @var ?array<string> $collectionIds
      */
@@ -28,6 +28,16 @@ class CommerceItem
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $collectionIds = null;
+
+    /**
+     * points to Collection with id, name, and type fields
+     *
+     * @var ?array<CommerceReference> $collections
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('collections')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $collections = null;
 
     /**
      *
@@ -186,6 +196,7 @@ class CommerceItem
     /**
      * @param  ?string  $accountId
      * @param  ?array<string>  $collectionIds
+     * @param  ?array<CommerceReference>  $collections
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $globalCode
@@ -206,10 +217,11 @@ class CommerceItem
      * @param  ?string  $vendorName
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
+        $this->collections = $collections;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->globalCode = $globalCode;
