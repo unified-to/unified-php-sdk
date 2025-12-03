@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5cc9bd003a02a42d13a2683d5b08bc71
+  docChecksum: 24772a040a22188e844daea3d8d85bf5
   docVersion: "1.0"
-  speakeasyVersion: 1.666.2
-  generationVersion: 2.768.1
-  releaseVersion: 1.5.15
-  configChecksum: 1e0168258ba436e1c8d98791c8f8e484
+  speakeasyVersion: 1.667.0
+  generationVersion: 2.769.1
+  releaseVersion: 1.6.0
+  configChecksum: b182a0d14365ca56b6156042440d17b0
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
@@ -18,6 +18,7 @@ features:
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
+    inputOutputModels: 2.83.0
     methodArguments: 0.1.0
     responseFormat: 0.1.0
     unions: 0.1.5
@@ -1443,8 +1444,6 @@ generatedFiles:
   - docs/Models/Shared/PaymentType.md
   - docs/Models/Shared/Priority.md
   - docs/Models/Shared/ProfileGender.md
-  - docs/Models/Shared/PropertyAccountingBalancesheetItemSubItems.md
-  - docs/Models/Shared/PropertyAccountingCashflowItemSubItems.md
   - docs/Models/Shared/PropertyAccountingContactBillingAddress.md
   - docs/Models/Shared/PropertyAccountingContactShippingAddress.md
   - docs/Models/Shared/PropertyAccountingOrderBillingAddress.md
@@ -3245,8 +3244,6 @@ generatedFiles:
   - src/Models/Shared/PaymentType.php
   - src/Models/Shared/Priority.php
   - src/Models/Shared/ProfileGender.php
-  - src/Models/Shared/PropertyAccountingBalancesheetItemSubItems.php
-  - src/Models/Shared/PropertyAccountingCashflowItemSubItems.php
   - src/Models/Shared/PropertyAccountingContactBillingAddress.php
   - src/Models/Shared/PropertyAccountingContactShippingAddress.php
   - src/Models/Shared/PropertyAccountingOrderBillingAddress.php
@@ -8368,4 +8365,17 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->commerce->getCommerceItem()`:  `response.collections` **Added**\n* `unified-to->commerce->getCommerceSaleschannel()`:  `response.collections->[]->type` **Added**\n* `unified-to->commerce->listCommerceItems()`:  `response.[]->collections` **Added**\n* `unified-to->commerce->listCommerceSaleschannels()`:  `response.[]->collections->[]->type` **Added**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->commerce->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->item->createCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->item->getCommerceItem()`:  `response.collections` **Added**\n* `unified-to->item->listCommerceItems()`:  `response.[]->collections` **Added**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request->commerceItem->collections` **Added**\n  *  `response.collections` **Added**\n* `unified-to->saleschannel->createCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->getCommerceSaleschannel()`:  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->listCommerceSaleschannels()`:  `response.[]->collections->[]->type` **Added**\n* `unified-to->saleschannel->patchCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n* `unified-to->saleschannel->updateCommerceSaleschannel()`: \n  *  `request->commerceSaleschannel->collections->[]->type` **Added**\n  *  `response.collections->[]->type` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->accounting->getAccountingBalancesheet()`:  `response.assets->[]->subItems->[]` **Changed**
+  * `unified-to->accounting->getAccountingCashflow()`:  `response.financingSections->[]->items->[]->subItems->[]` **Changed**
+  * `unified-to->accounting->getAccountingReport()`:  `response.balanceSheet->assets->[]->subItems->[]` **Changed**
+  * `unified-to->accounting->listAccountingBalancesheets()`:  `response.[]->assets->[]->subItems->[]` **Changed**
+  * `unified-to->accounting->listAccountingCashflows()`:  `response.[]->financingSections->[]->items->[]->subItems->[]` **Changed**
+  * `unified-to->accounting->listAccountingReports()`:  `response.[]->balanceSheet->assets->[]->subItems->[]` **Changed**
+  * `unified-to->balancesheet->getAccountingBalancesheet()`:  `response.assets->[]->subItems->[]` **Changed**
+  * `unified-to->balancesheet->listAccountingBalancesheets()`:  `response.[]->assets->[]->subItems->[]` **Changed**
+  * `unified-to->cashflow->getAccountingCashflow()`:  `response.financingSections->[]->items->[]->subItems->[]` **Changed**
+  * `unified-to->cashflow->listAccountingCashflows()`:  `response.[]->financingSections->[]->items->[]->subItems->[]` **Changed**
+  * `unified-to->report->getAccountingReport()`:  `response.balanceSheet->assets->[]->subItems->[]` **Changed**
+  * `unified-to->report->listAccountingReports()`:  `response.[]->balanceSheet->assets->[]->subItems->[]` **Changed**
