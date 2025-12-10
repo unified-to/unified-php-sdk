@@ -1,5 +1,4 @@
-# ClassT
-(*class*)
+# Class
 
 ## Overview
 

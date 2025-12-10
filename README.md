@@ -98,7 +98,7 @@ if ($response->accountingAccount !== null) {
 <details open>
 <summary>Available methods</summary>
 
-### [account](docs/sdks/account/README.md)
+### [Account](docs/sdks/account/README.md)
 
 * [createAccountingAccount](docs/sdks/account/README.md#createaccountingaccount) - Create an account
 * [getAccountingAccount](docs/sdks/account/README.md#getaccountingaccount) - Retrieve an account
@@ -107,7 +107,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingAccount](docs/sdks/account/README.md#removeaccountingaccount) - Remove an account
 * [updateAccountingAccount](docs/sdks/account/README.md#updateaccountingaccount) - Update an account
 
-### [accounting](docs/sdks/accounting/README.md)
+### [Accounting](docs/sdks/accounting/README.md)
 
 * [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingBill](docs/sdks/accounting/README.md#createaccountingbill) - Create a bill
@@ -200,7 +200,7 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 
-### [activity](docs/sdks/activity/README.md)
+### [Activity](docs/sdks/activity/README.md)
 
 * [createAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
 * [getAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
@@ -209,12 +209,12 @@ if ($response->accountingAccount !== null) {
 * [removeAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
 * [updateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
 
-### [apicall](docs/sdks/apicall/README.md)
+### [Apicall](docs/sdks/apicall/README.md)
 
 * [getUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [listUnifiedApicalls](docs/sdks/apicall/README.md#listunifiedapicalls) - Returns API Calls
 
-### [application](docs/sdks/application/README.md)
+### [Application](docs/sdks/application/README.md)
 
 * [createAtsApplication](docs/sdks/application/README.md#createatsapplication) - Create an application
 * [getAtsApplication](docs/sdks/application/README.md#getatsapplication) - Retrieve an application
@@ -223,11 +223,11 @@ if ($response->accountingAccount !== null) {
 * [removeAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
 * [updateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
 
-### [applicationstatus](docs/sdks/applicationstatus/README.md)
+### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
-### [ats](docs/sdks/ats/README.md)
+### [Ats](docs/sdks/ats/README.md)
 
 * [createAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
 * [createAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
@@ -279,17 +279,17 @@ if ($response->accountingAccount !== null) {
 * [updateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [updateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [balancesheet](docs/sdks/balancesheet/README.md)
+### [Balancesheet](docs/sdks/balancesheet/README.md)
 
 * [getAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [listAccountingBalancesheets](docs/sdks/balancesheet/README.md#listaccountingbalancesheets) - List all balancesheets
 
-### [benefit](docs/sdks/benefit/README.md)
+### [Benefit](docs/sdks/benefit/README.md)
 
 * [createHrisBenefit](docs/sdks/benefit/README.md#createhrisbenefit) - Create a benefit
 * [getHrisBenefit](docs/sdks/benefit/README.md#gethrisbenefit) - Retrieve a benefit
@@ -298,7 +298,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisBenefit](docs/sdks/benefit/README.md#removehrisbenefit) - Remove a benefit
 * [updateHrisBenefit](docs/sdks/benefit/README.md#updatehrisbenefit) - Update a benefit
 
-### [bill](docs/sdks/bill/README.md)
+### [Bill](docs/sdks/bill/README.md)
 
 * [createAccountingBill](docs/sdks/bill/README.md#createaccountingbill) - Create a bill
 * [getAccountingBill](docs/sdks/bill/README.md#getaccountingbill) - Retrieve a bill
@@ -307,7 +307,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingBill](docs/sdks/bill/README.md#removeaccountingbill) - Remove a bill
 * [updateAccountingBill](docs/sdks/bill/README.md#updateaccountingbill) - Update a bill
 
-### [branch](docs/sdks/branch/README.md)
+### [Branch](docs/sdks/branch/README.md)
 
 * [createRepoBranch](docs/sdks/branch/README.md#createrepobranch) - Create a branch
 * [getRepoBranch](docs/sdks/branch/README.md#getrepobranch) - Retrieve a branch
@@ -316,11 +316,11 @@ if ($response->accountingAccount !== null) {
 * [removeRepoBranch](docs/sdks/branch/README.md#removerepobranch) - Remove a branch
 * [updateRepoBranch](docs/sdks/branch/README.md#updaterepobranch) - Update a branch
 
-### [busy](docs/sdks/busy/README.md)
+### [Busy](docs/sdks/busy/README.md)
 
 * [listCalendarBusies](docs/sdks/busy/README.md#listcalendarbusies) - List all busies
 
-### [calendar](docs/sdks/calendar/README.md)
+### [Calendar](docs/sdks/calendar/README.md)
 
 * [createCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
@@ -344,12 +344,12 @@ if ($response->accountingAccount !== null) {
 * [updateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [updateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
 
-### [call](docs/sdks/call/README.md)
+### [Call](docs/sdks/call/README.md)
 
 * [getUcCall](docs/sdks/call/README.md#getuccall) - Retrieve a call
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
 
-### [candidate](docs/sdks/candidate/README.md)
+### [Candidate](docs/sdks/candidate/README.md)
 
 * [createAtsCandidate](docs/sdks/candidate/README.md#createatscandidate) - Create a candidate
 * [getAtsCandidate](docs/sdks/candidate/README.md#getatscandidate) - Retrieve a candidate
@@ -358,12 +358,12 @@ if ($response->accountingAccount !== null) {
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
-### [cashflow](docs/sdks/cashflow/README.md)
+### [Cashflow](docs/sdks/cashflow/README.md)
 
 * [getAccountingCashflow](docs/sdks/cashflow/README.md#getaccountingcashflow) - Retrieve a cashflow
 * [listAccountingCashflows](docs/sdks/cashflow/README.md#listaccountingcashflows) - List all cashflows
 
-### [category](docs/sdks/category/README.md)
+### [Category](docs/sdks/category/README.md)
 
 * [createAccountingCategory](docs/sdks/category/README.md#createaccountingcategory) - Create a category
 * [createTicketingCategory](docs/sdks/category/README.md#createticketingcategory) - Create a category
@@ -378,17 +378,17 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 * [updateTicketingCategory](docs/sdks/category/README.md#updateticketingcategory) - Update a category
 
-### [change](docs/sdks/change/README.md)
+### [Change](docs/sdks/change/README.md)
 
 * [getTaskChange](docs/sdks/change/README.md#gettaskchange) - Retrieve a change
 * [listTaskChanges](docs/sdks/change/README.md#listtaskchanges) - List all changes
 
-### [channel](docs/sdks/channel/README.md)
+### [Channel](docs/sdks/channel/README.md)
 
 * [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
 * [listMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
 
-### [class](docs/sdks/class/README.md)
+### [Class](docs/sdks/class/README.md)
 
 * [createLmsClass](docs/sdks/class/README.md#createlmsclass) - Create a class
 * [getLmsClass](docs/sdks/class/README.md#getlmsclass) - Retrieve a class
@@ -397,7 +397,7 @@ if ($response->accountingAccount !== null) {
 * [removeLmsClass](docs/sdks/class/README.md#removelmsclass) - Remove a class
 * [updateLmsClass](docs/sdks/class/README.md#updatelmsclass) - Update a class
 
-### [collection](docs/sdks/collection/README.md)
+### [Collection](docs/sdks/collection/README.md)
 
 * [createCommerceCollection](docs/sdks/collection/README.md#createcommercecollection) - Create a collection
 * [getCommerceCollection](docs/sdks/collection/README.md#getcommercecollection) - Retrieve a collection
@@ -406,7 +406,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
 * [updateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
 
-### [comment](docs/sdks/comment/README.md)
+### [Comment](docs/sdks/comment/README.md)
 
 * [createKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
 * [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
@@ -427,7 +427,7 @@ if ($response->accountingAccount !== null) {
 * [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 * [updateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
-### [commerce](docs/sdks/commerce/README.md)
+### [Commerce](docs/sdks/commerce/README.md)
 
 * [createCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
@@ -466,7 +466,7 @@ if ($response->accountingAccount !== null) {
 * [updateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
 
-### [commit](docs/sdks/commit/README.md)
+### [Commit](docs/sdks/commit/README.md)
 
 * [createRepoCommit](docs/sdks/commit/README.md#createrepocommit) - Create a commit
 * [getRepoCommit](docs/sdks/commit/README.md#getrepocommit) - Retrieve a commit
@@ -475,7 +475,7 @@ if ($response->accountingAccount !== null) {
 * [removeRepoCommit](docs/sdks/commit/README.md#removerepocommit) - Remove a commit
 * [updateRepoCommit](docs/sdks/commit/README.md#updaterepocommit) - Update a commit
 
-### [company](docs/sdks/company/README.md)
+### [Company](docs/sdks/company/README.md)
 
 * [createAtsCompany](docs/sdks/company/README.md#createatscompany) - Create a company
 * [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
@@ -497,7 +497,7 @@ if ($response->accountingAccount !== null) {
 * [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [updateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
-### [connection](docs/sdks/connection/README.md)
+### [Connection](docs/sdks/connection/README.md)
 
 * [createUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
 * [getUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
@@ -506,7 +506,7 @@ if ($response->accountingAccount !== null) {
 * [removeUnifiedConnection](docs/sdks/connection/README.md#removeunifiedconnection) - Remove connection
 * [updateUnifiedConnection](docs/sdks/connection/README.md#updateunifiedconnection) - Update connection
 
-### [contact](docs/sdks/contact/README.md)
+### [Contact](docs/sdks/contact/README.md)
 
 * [createAccountingContact](docs/sdks/contact/README.md#createaccountingcontact) - Create a contact
 * [createCrmContact](docs/sdks/contact/README.md#createcrmcontact) - Create a contact
@@ -527,7 +527,7 @@ if ($response->accountingAccount !== null) {
 * [updateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [updateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
 
-### [course](docs/sdks/course/README.md)
+### [Course](docs/sdks/course/README.md)
 
 * [createLmsCourse](docs/sdks/course/README.md#createlmscourse) - Create a course
 * [getLmsCourse](docs/sdks/course/README.md#getlmscourse) - Retrieve a course
@@ -536,7 +536,7 @@ if ($response->accountingAccount !== null) {
 * [removeLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
 * [updateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
-### [creditmemo](docs/sdks/creditmemo/README.md)
+### [Creditmemo](docs/sdks/creditmemo/README.md)
 
 * [createAccountingCreditmemo](docs/sdks/creditmemo/README.md#createaccountingcreditmemo) - Create a creditmemo
 * [getAccountingCreditmemo](docs/sdks/creditmemo/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
@@ -545,7 +545,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingCreditmemo](docs/sdks/creditmemo/README.md#removeaccountingcreditmemo) - Remove a creditmemo
 * [updateAccountingCreditmemo](docs/sdks/creditmemo/README.md#updateaccountingcreditmemo) - Update a creditmemo
 
-### [crm](docs/sdks/crm/README.md)
+### [Crm](docs/sdks/crm/README.md)
 
 * [createCrmCompany](docs/sdks/crm/README.md#createcrmcompany) - Create a company
 * [createCrmContact](docs/sdks/crm/README.md#createcrmcontact) - Create a contact
@@ -584,7 +584,7 @@ if ($response->accountingAccount !== null) {
 * [updateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [updateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
 
-### [customer](docs/sdks/customer/README.md)
+### [Customer](docs/sdks/customer/README.md)
 
 * [createTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
 * [getTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
@@ -593,7 +593,7 @@ if ($response->accountingAccount !== null) {
 * [removeTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
 * [updateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
-### [deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [createCrmDeal](docs/sdks/deal/README.md#createcrmdeal) - Create a deal
 * [getCrmDeal](docs/sdks/deal/README.md#getcrmdeal) - Retrieve a deal
@@ -602,7 +602,7 @@ if ($response->accountingAccount !== null) {
 * [removeCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [updateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
-### [deduction](docs/sdks/deduction/README.md)
+### [Deduction](docs/sdks/deduction/README.md)
 
 * [createHrisDeduction](docs/sdks/deduction/README.md#createhrisdeduction) - Create a deduction
 * [getHrisDeduction](docs/sdks/deduction/README.md#gethrisdeduction) - Retrieve a deduction
@@ -611,7 +611,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
 * [updateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
 
-### [device](docs/sdks/device/README.md)
+### [Device](docs/sdks/device/README.md)
 
 * [createHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
 * [getHrisDevice](docs/sdks/device/README.md#gethrisdevice) - Retrieve a device
@@ -620,7 +620,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisDevice](docs/sdks/device/README.md#removehrisdevice) - Remove a device
 * [updateHrisDevice](docs/sdks/device/README.md#updatehrisdevice) - Update a device
 
-### [document](docs/sdks/document/README.md)
+### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
@@ -629,11 +629,11 @@ if ($response->accountingAccount !== null) {
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 
-### [embedding](docs/sdks/embedding/README.md)
+### [Embedding](docs/sdks/embedding/README.md)
 
 * [createGenaiEmbedding](docs/sdks/embedding/README.md#creategenaiembedding) - Create an embedding
 
-### [employee](docs/sdks/employee/README.md)
+### [Employee](docs/sdks/employee/README.md)
 
 * [createHrisEmployee](docs/sdks/employee/README.md#createhrisemployee) - Create an employee
 * [getHrisEmployee](docs/sdks/employee/README.md#gethrisemployee) - Retrieve an employee
@@ -642,18 +642,18 @@ if ($response->accountingAccount !== null) {
 * [removeHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
 * [updateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
-### [enrich](docs/sdks/enrich/README.md)
+### [Enrich](docs/sdks/enrich/README.md)
 
 * [listEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [listEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [environment](docs/sdks/environment/README.md)
+### [Environment](docs/sdks/environment/README.md)
 
 * [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment)
 * [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments)
 * [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment)
 
-### [event](docs/sdks/event/README.md)
+### [Event](docs/sdks/event/README.md)
 
 * [createCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
 * [createCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
@@ -668,7 +668,7 @@ if ($response->accountingAccount !== null) {
 * [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 
-### [expense](docs/sdks/expense/README.md)
+### [Expense](docs/sdks/expense/README.md)
 
 * [createAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
 * [getAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
@@ -677,7 +677,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
 * [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
-### [file](docs/sdks/file/README.md)
+### [File](docs/sdks/file/README.md)
 
 * [createStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
 * [getStorageFile](docs/sdks/file/README.md#getstoragefile) - Retrieve a file
@@ -686,14 +686,14 @@ if ($response->accountingAccount !== null) {
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
 
-### [genai](docs/sdks/genai/README.md)
+### [Genai](docs/sdks/genai/README.md)
 
 * [createGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 
-### [group](docs/sdks/group/README.md)
+### [Group](docs/sdks/group/README.md)
 
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [createScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
@@ -708,7 +708,7 @@ if ($response->accountingAccount !== null) {
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [updateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
-### [hris](docs/sdks/hris/README.md)
+### [Hris](docs/sdks/hris/README.md)
 
 * [createHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
@@ -763,7 +763,7 @@ if ($response->accountingAccount !== null) {
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
-### [instructor](docs/sdks/instructor/README.md)
+### [Instructor](docs/sdks/instructor/README.md)
 
 * [createLmsInstructor](docs/sdks/instructor/README.md#createlmsinstructor) - Create an instructor
 * [getLmsInstructor](docs/sdks/instructor/README.md#getlmsinstructor) - Retrieve an instructor
@@ -772,13 +772,13 @@ if ($response->accountingAccount !== null) {
 * [removeLmsInstructor](docs/sdks/instructor/README.md#removelmsinstructor) - Remove an instructor
 * [updateLmsInstructor](docs/sdks/instructor/README.md#updatelmsinstructor) - Update an instructor
 
-### [integration](docs/sdks/integration/README.md)
+### [Integration](docs/sdks/integration/README.md)
 
 * [getUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Authorize new connection
 * [listUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
-### [interview](docs/sdks/interview/README.md)
+### [Interview](docs/sdks/interview/README.md)
 
 * [createAtsInterview](docs/sdks/interview/README.md#createatsinterview) - Create an interview
 * [getAtsInterview](docs/sdks/interview/README.md#getatsinterview) - Retrieve an interview
@@ -787,7 +787,7 @@ if ($response->accountingAccount !== null) {
 * [removeAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove an interview
 * [updateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update an interview
 
-### [inventory](docs/sdks/inventory/README.md)
+### [Inventory](docs/sdks/inventory/README.md)
 
 * [createCommerceInventory](docs/sdks/inventory/README.md#createcommerceinventory) - Create an inventory
 * [getCommerceInventory](docs/sdks/inventory/README.md#getcommerceinventory) - Retrieve an inventory
@@ -796,7 +796,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceInventory](docs/sdks/inventory/README.md#removecommerceinventory) - Remove an inventory
 * [updateCommerceInventory](docs/sdks/inventory/README.md#updatecommerceinventory) - Update an inventory
 
-### [invoice](docs/sdks/invoice/README.md)
+### [Invoice](docs/sdks/invoice/README.md)
 
 * [createAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create an invoice
 * [getAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve an invoice
@@ -805,12 +805,12 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove an invoice
 * [updateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update an invoice
 
-### [issue](docs/sdks/issue/README.md)
+### [Issue](docs/sdks/issue/README.md)
 
 * [getUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
 
-### [item](docs/sdks/item/README.md)
+### [Item](docs/sdks/item/README.md)
 
 * [createCommerceItem](docs/sdks/item/README.md#createcommerceitem) - Create an item
 * [getCommerceItem](docs/sdks/item/README.md#getcommerceitem) - Retrieve an item
@@ -819,7 +819,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
 * [updateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
 
-### [job](docs/sdks/job/README.md)
+### [Job](docs/sdks/job/README.md)
 
 * [createAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
 * [getAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
@@ -828,7 +828,7 @@ if ($response->accountingAccount !== null) {
 * [removeAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
 * [updateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
 
-### [journal](docs/sdks/journal/README.md)
+### [Journal](docs/sdks/journal/README.md)
 
 * [createAccountingJournal](docs/sdks/journal/README.md#createaccountingjournal) - Create a journal
 * [getAccountingJournal](docs/sdks/journal/README.md#getaccountingjournal) - Retrieve a journal
@@ -837,7 +837,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingJournal](docs/sdks/journal/README.md#removeaccountingjournal) - Remove a journal
 * [updateAccountingJournal](docs/sdks/journal/README.md#updateaccountingjournal) - Update a journal
 
-### [kms](docs/sdks/kms/README.md)
+### [Kms](docs/sdks/kms/README.md)
 
 * [createKmsComment](docs/sdks/kms/README.md#createkmscomment) - Create a comment
 * [createKmsPage](docs/sdks/kms/README.md#createkmspage) - Create a page
@@ -858,7 +858,7 @@ if ($response->accountingAccount !== null) {
 * [updateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
 * [updateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
 
-### [lead](docs/sdks/lead/README.md)
+### [Lead](docs/sdks/lead/README.md)
 
 * [createCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
 * [getCrmLead](docs/sdks/lead/README.md#getcrmlead) - Retrieve a lead
@@ -867,7 +867,7 @@ if ($response->accountingAccount !== null) {
 * [removeCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
 * [updateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
 
-### [link](docs/sdks/link/README.md)
+### [Link](docs/sdks/link/README.md)
 
 * [createCalendarLink](docs/sdks/link/README.md#createcalendarlink) - Create a link
 * [createPaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a link
@@ -882,7 +882,7 @@ if ($response->accountingAccount !== null) {
 * [updateCalendarLink](docs/sdks/link/README.md#updatecalendarlink) - Update a link
 * [updatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a link
 
-### [list](docs/sdks/list/README.md)
+### [List](docs/sdks/list/README.md)
 
 * [createMartechList](docs/sdks/list/README.md#createmartechlist) - Create a list
 * [getMartechList](docs/sdks/list/README.md#getmartechlist) - Retrieve a list
@@ -891,7 +891,7 @@ if ($response->accountingAccount !== null) {
 * [removeMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [updateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
 
-### [lms](docs/sdks/lms/README.md)
+### [Lms](docs/sdks/lms/README.md)
 
 * [createLmsClass](docs/sdks/lms/README.md#createlmsclass) - Create a class
 * [createLmsCourse](docs/sdks/lms/README.md#createlmscourse) - Create a course
@@ -918,7 +918,7 @@ if ($response->accountingAccount !== null) {
 * [updateLmsInstructor](docs/sdks/lms/README.md#updatelmsinstructor) - Update an instructor
 * [updateLmsStudent](docs/sdks/lms/README.md#updatelmsstudent) - Update a student
 
-### [location](docs/sdks/location/README.md)
+### [Location](docs/sdks/location/README.md)
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
@@ -933,11 +933,11 @@ if ($response->accountingAccount !== null) {
 * [updateCommerceLocation](docs/sdks/location/README.md#updatecommercelocation) - Update a location
 * [updateHrisLocation](docs/sdks/location/README.md#updatehrislocation) - Update a location
 
-### [login](docs/sdks/login/README.md)
+### [Login](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [martech](docs/sdks/martech/README.md)
+### [Martech](docs/sdks/martech/README.md)
 
 * [createMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [createMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
@@ -952,7 +952,7 @@ if ($response->accountingAccount !== null) {
 * [updateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [updateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
-### [member](docs/sdks/member/README.md)
+### [Member](docs/sdks/member/README.md)
 
 * [createMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
 * [getMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member
@@ -961,7 +961,7 @@ if ($response->accountingAccount !== null) {
 * [removeMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [updateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
 
-### [message](docs/sdks/message/README.md)
+### [Message](docs/sdks/message/README.md)
 
 * [createMessagingMessage](docs/sdks/message/README.md#createmessagingmessage) - Create a message
 * [getMessagingMessage](docs/sdks/message/README.md#getmessagingmessage) - Retrieve a message
@@ -970,7 +970,7 @@ if ($response->accountingAccount !== null) {
 * [removeMessagingMessage](docs/sdks/message/README.md#removemessagingmessage) - Remove a message
 * [updateMessagingMessage](docs/sdks/message/README.md#updatemessagingmessage) - Update a message
 
-### [messaging](docs/sdks/messaging/README.md)
+### [Messaging](docs/sdks/messaging/README.md)
 
 * [createMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
 * [getMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
@@ -981,7 +981,7 @@ if ($response->accountingAccount !== null) {
 * [removeMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
 * [updateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
 
-### [metadata](docs/sdks/metadata/README.md)
+### [Metadata](docs/sdks/metadata/README.md)
 
 * [createMetadataMetadata](docs/sdks/metadata/README.md#createmetadatametadata) - Create a metadata
 * [getMetadataMetadata](docs/sdks/metadata/README.md#getmetadatametadata) - Retrieve a metadata
@@ -990,12 +990,12 @@ if ($response->accountingAccount !== null) {
 * [removeMetadataMetadata](docs/sdks/metadata/README.md#removemetadatametadata) - Remove a metadata
 * [updateMetadataMetadata](docs/sdks/metadata/README.md#updatemetadatametadata) - Update a metadata
 
-### [model](docs/sdks/model/README.md)
+### [Model](docs/sdks/model/README.md)
 
 * [getGenaiModel](docs/sdks/model/README.md#getgenaimodel) - Retrieve a model
 * [listGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
 
-### [note](docs/sdks/note/README.md)
+### [Note](docs/sdks/note/README.md)
 
 * [createTicketingNote](docs/sdks/note/README.md#createticketingnote) - Create a note
 * [getTicketingNote](docs/sdks/note/README.md#getticketingnote) - Retrieve a note
@@ -1004,7 +1004,7 @@ if ($response->accountingAccount !== null) {
 * [removeTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
 * [updateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
 
-### [order](docs/sdks/order/README.md)
+### [Order](docs/sdks/order/README.md)
 
 * [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
 * [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
@@ -1013,7 +1013,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
 * [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
 
-### [organization](docs/sdks/organization/README.md)
+### [Organization](docs/sdks/organization/README.md)
 
 * [createRepoOrganization](docs/sdks/organization/README.md#createrepoorganization) - Create an organization
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
@@ -1024,12 +1024,12 @@ if ($response->accountingAccount !== null) {
 * [removeRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
 * [updateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
-### [package](docs/sdks/package/README.md)
+### [Package](docs/sdks/package/README.md)
 
 * [getVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
 * [listVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
 
-### [page](docs/sdks/page/README.md)
+### [Page](docs/sdks/page/README.md)
 
 * [createKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
 * [getKmsPage](docs/sdks/page/README.md#getkmspage) - Retrieve a page
@@ -1038,7 +1038,7 @@ if ($response->accountingAccount !== null) {
 * [removeKmsPage](docs/sdks/page/README.md#removekmspage) - Remove a page
 * [updateKmsPage](docs/sdks/page/README.md#updatekmspage) - Update a page
 
-### [passthrough](docs/sdks/passthrough/README.md)
+### [Passthrough](docs/sdks/passthrough/README.md)
 
 * [createPassthroughJson](docs/sdks/passthrough/README.md#createpassthroughjson) - Passthrough POST
 * [createPassthroughRaw](docs/sdks/passthrough/README.md#createpassthroughraw) - Passthrough POST
@@ -1049,7 +1049,7 @@ if ($response->accountingAccount !== null) {
 * [updatePassthroughJson](docs/sdks/passthrough/README.md#updatepassthroughjson) - Passthrough PUT
 * [updatePassthroughRaw](docs/sdks/passthrough/README.md#updatepassthroughraw) - Passthrough PUT
 
-### [payment](docs/sdks/payment/README.md)
+### [Payment](docs/sdks/payment/README.md)
 
 * [createPaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
 * [createPaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
@@ -1074,21 +1074,21 @@ if ($response->accountingAccount !== null) {
 * [updatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
 * [updatePaymentSubscription](docs/sdks/payment/README.md#updatepaymentsubscription) - Update a subscription
 
-### [payout](docs/sdks/payout/README.md)
+### [Payout](docs/sdks/payout/README.md)
 
 * [getPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
 * [listPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
 
-### [payslip](docs/sdks/payslip/README.md)
+### [Payslip](docs/sdks/payslip/README.md)
 
 * [getHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
 * [listHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslips
 
-### [person](docs/sdks/person/README.md)
+### [Person](docs/sdks/person/README.md)
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [pipeline](docs/sdks/pipeline/README.md)
+### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [createCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
 * [getCrmPipeline](docs/sdks/pipeline/README.md#getcrmpipeline) - Retrieve a pipeline
@@ -1097,12 +1097,12 @@ if ($response->accountingAccount !== null) {
 * [removeCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [updateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
-### [profitloss](docs/sdks/profitloss/README.md)
+### [Profitloss](docs/sdks/profitloss/README.md)
 
 * [getAccountingProfitloss](docs/sdks/profitloss/README.md#getaccountingprofitloss) - Retrieve a profitloss
 * [listAccountingProfitlosses](docs/sdks/profitloss/README.md#listaccountingprofitlosses) - List all profitlosses
 
-### [project](docs/sdks/project/README.md)
+### [Project](docs/sdks/project/README.md)
 
 * [createTaskProject](docs/sdks/project/README.md#createtaskproject) - Create a project
 * [getTaskProject](docs/sdks/project/README.md#gettaskproject) - Retrieve a project
@@ -1111,11 +1111,11 @@ if ($response->accountingAccount !== null) {
 * [removeTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
 * [updateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
 
-### [prompt](docs/sdks/prompt/README.md)
+### [Prompt](docs/sdks/prompt/README.md)
 
 * [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
 
-### [pullrequest](docs/sdks/pullrequest/README.md)
+### [Pullrequest](docs/sdks/pullrequest/README.md)
 
 * [createRepoPullrequest](docs/sdks/pullrequest/README.md#createrepopullrequest) - Create a pullrequest
 * [getRepoPullrequest](docs/sdks/pullrequest/README.md#getrepopullrequest) - Retrieve a pullrequest
@@ -1124,7 +1124,7 @@ if ($response->accountingAccount !== null) {
 * [removeRepoPullrequest](docs/sdks/pullrequest/README.md#removerepopullrequest) - Remove a pullrequest
 * [updateRepoPullrequest](docs/sdks/pullrequest/README.md#updaterepopullrequest) - Update a pullrequest
 
-### [purchaseorder](docs/sdks/purchaseorder/README.md)
+### [Purchaseorder](docs/sdks/purchaseorder/README.md)
 
 * [createAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#createaccountingpurchaseorder) - Create a purchaseorder
 * [getAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -1133,7 +1133,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [updateAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
 
-### [recording](docs/sdks/recording/README.md)
+### [Recording](docs/sdks/recording/README.md)
 
 * [createUcRecording](docs/sdks/recording/README.md#createucrecording) - Create a recording
 * [getCalendarRecording](docs/sdks/recording/README.md#getcalendarrecording) - Retrieve a recording
@@ -1144,12 +1144,12 @@ if ($response->accountingAccount !== null) {
 * [removeUcRecording](docs/sdks/recording/README.md#removeucrecording) - Remove a recording
 * [updateUcRecording](docs/sdks/recording/README.md#updateucrecording) - Update a recording
 
-### [refund](docs/sdks/refund/README.md)
+### [Refund](docs/sdks/refund/README.md)
 
 * [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
-### [repo](docs/sdks/repo/README.md)
+### [Repo](docs/sdks/repo/README.md)
 
 * [createRepoBranch](docs/sdks/repo/README.md#createrepobranch) - Create a branch
 * [createRepoCommit](docs/sdks/repo/README.md#createrepocommit) - Create a commit
@@ -1182,12 +1182,12 @@ if ($response->accountingAccount !== null) {
 * [updateRepoPullrequest](docs/sdks/repo/README.md#updaterepopullrequest) - Update a pullrequest
 * [updateRepoRepository](docs/sdks/repo/README.md#updatereporepository) - Update a repository
 
-### [report](docs/sdks/report/README.md)
+### [Report](docs/sdks/report/README.md)
 
 * [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 
-### [repository](docs/sdks/repository/README.md)
+### [Repository](docs/sdks/repository/README.md)
 
 * [createRepoRepository](docs/sdks/repository/README.md#createreporepository) - Create a repository
 * [getRepoRepository](docs/sdks/repository/README.md#getreporepository) - Retrieve a repository
@@ -1196,7 +1196,7 @@ if ($response->accountingAccount !== null) {
 * [removeRepoRepository](docs/sdks/repository/README.md#removereporepository) - Remove a repository
 * [updateRepoRepository](docs/sdks/repository/README.md#updatereporepository) - Update a repository
 
-### [request](docs/sdks/request/README.md)
+### [Request](docs/sdks/request/README.md)
 
 * [createVerificationRequest](docs/sdks/request/README.md#createverificationrequest) - Create a request
 * [getVerificationRequest](docs/sdks/request/README.md#getverificationrequest) - Retrieve a request
@@ -1205,7 +1205,7 @@ if ($response->accountingAccount !== null) {
 * [removeVerificationRequest](docs/sdks/request/README.md#removeverificationrequest) - Remove a request
 * [updateVerificationRequest](docs/sdks/request/README.md#updateverificationrequest) - Update a request
 
-### [review](docs/sdks/review/README.md)
+### [Review](docs/sdks/review/README.md)
 
 * [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [getCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
@@ -1214,7 +1214,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
 
-### [saleschannel](docs/sdks/saleschannel/README.md)
+### [Saleschannel](docs/sdks/saleschannel/README.md)
 
 * [createCommerceSaleschannel](docs/sdks/saleschannel/README.md#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceSaleschannel](docs/sdks/saleschannel/README.md#getcommercesaleschannel) - Retrieve a saleschannel
@@ -1223,7 +1223,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceSaleschannel](docs/sdks/saleschannel/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceSaleschannel](docs/sdks/saleschannel/README.md#updatecommercesaleschannel) - Update a saleschannel
 
-### [salesorder](docs/sdks/salesorder/README.md)
+### [Salesorder](docs/sdks/salesorder/README.md)
 
 * [createAccountingSalesorder](docs/sdks/salesorder/README.md#createaccountingsalesorder) - Create a salesorder
 * [getAccountingSalesorder](docs/sdks/salesorder/README.md#getaccountingsalesorder) - Retrieve a salesorder
@@ -1232,7 +1232,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingSalesorder](docs/sdks/salesorder/README.md#removeaccountingsalesorder) - Remove a salesorder
 * [updateAccountingSalesorder](docs/sdks/salesorder/README.md#updateaccountingsalesorder) - Update a salesorder
 
-### [scim](docs/sdks/scim/README.md)
+### [Scim](docs/sdks/scim/README.md)
 
 * [createScimGroups](docs/sdks/scim/README.md#createscimgroups) - Create group
 * [createScimUsers](docs/sdks/scim/README.md#createscimusers) - Create user
@@ -1247,7 +1247,7 @@ if ($response->accountingAccount !== null) {
 * [updateScimGroups](docs/sdks/scim/README.md#updatescimgroups) - Update group
 * [updateScimUsers](docs/sdks/scim/README.md#updatescimusers) - Update user
 
-### [scorecard](docs/sdks/scorecard/README.md)
+### [Scorecard](docs/sdks/scorecard/README.md)
 
 * [createAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
 * [getAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
@@ -1256,7 +1256,7 @@ if ($response->accountingAccount !== null) {
 * [removeAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
-### [space](docs/sdks/space/README.md)
+### [Space](docs/sdks/space/README.md)
 
 * [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
 * [getKmsSpace](docs/sdks/space/README.md#getkmsspace) - Retrieve a space
@@ -1265,7 +1265,7 @@ if ($response->accountingAccount !== null) {
 * [removeKmsSpace](docs/sdks/space/README.md#removekmsspace) - Remove a space
 * [updateKmsSpace](docs/sdks/space/README.md#updatekmsspace) - Update a space
 
-### [storage](docs/sdks/storage/README.md)
+### [Storage](docs/sdks/storage/README.md)
 
 * [createStorageFile](docs/sdks/storage/README.md#createstoragefile) - Create a file
 * [getStorageFile](docs/sdks/storage/README.md#getstoragefile) - Retrieve a file
@@ -1274,7 +1274,7 @@ if ($response->accountingAccount !== null) {
 * [removeStorageFile](docs/sdks/storage/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/storage/README.md#updatestoragefile) - Update a file
 
-### [student](docs/sdks/student/README.md)
+### [Student](docs/sdks/student/README.md)
 
 * [createLmsStudent](docs/sdks/student/README.md#createlmsstudent) - Create a student
 * [getLmsStudent](docs/sdks/student/README.md#getlmsstudent) - Retrieve a student
@@ -1283,7 +1283,7 @@ if ($response->accountingAccount !== null) {
 * [removeLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [updateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
 
-### [subscription](docs/sdks/subscription/README.md)
+### [Subscription](docs/sdks/subscription/README.md)
 
 * [createPaymentSubscription](docs/sdks/subscription/README.md#createpaymentsubscription) - Create a subscription
 * [getPaymentSubscription](docs/sdks/subscription/README.md#getpaymentsubscription) - Retrieve a subscription
@@ -1292,7 +1292,7 @@ if ($response->accountingAccount !== null) {
 * [removePaymentSubscription](docs/sdks/subscription/README.md#removepaymentsubscription) - Remove a subscription
 * [updatePaymentSubscription](docs/sdks/subscription/README.md#updatepaymentsubscription) - Update a subscription
 
-### [task](docs/sdks/task/README.md)
+### [Task](docs/sdks/task/README.md)
 
 * [createTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
@@ -1315,7 +1315,7 @@ if ($response->accountingAccount !== null) {
 * [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
 
-### [taxrate](docs/sdks/taxrate/README.md)
+### [Taxrate](docs/sdks/taxrate/README.md)
 
 * [createAccountingTaxrate](docs/sdks/taxrate/README.md#createaccountingtaxrate) - Create a taxrate
 * [getAccountingTaxrate](docs/sdks/taxrate/README.md#getaccountingtaxrate) - Retrieve a taxrate
@@ -1324,7 +1324,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [updateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
 
-### [ticket](docs/sdks/ticket/README.md)
+### [Ticket](docs/sdks/ticket/README.md)
 
 * [createTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
 * [getTicketingTicket](docs/sdks/ticket/README.md#getticketingticket) - Retrieve a ticket
@@ -1333,7 +1333,7 @@ if ($response->accountingAccount !== null) {
 * [removeTicketingTicket](docs/sdks/ticket/README.md#removeticketingticket) - Remove a ticket
 * [updateTicketingTicket](docs/sdks/ticket/README.md#updateticketingticket) - Update a ticket
 
-### [ticketing](docs/sdks/ticketing/README.md)
+### [Ticketing](docs/sdks/ticketing/README.md)
 
 * [createTicketingCategory](docs/sdks/ticketing/README.md#createticketingcategory) - Create a category
 * [createTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
@@ -1360,12 +1360,12 @@ if ($response->accountingAccount !== null) {
 * [updateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [updateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
 
-### [timeoff](docs/sdks/timeoff/README.md)
+### [Timeoff](docs/sdks/timeoff/README.md)
 
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
-### [timeshift](docs/sdks/timeshift/README.md)
+### [Timeshift](docs/sdks/timeshift/README.md)
 
 * [createHrisTimeshift](docs/sdks/timeshift/README.md#createhristimeshift) - Create a timeshift
 * [getHrisTimeshift](docs/sdks/timeshift/README.md#gethristimeshift) - Retrieve a timeshift
@@ -1374,7 +1374,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisTimeshift](docs/sdks/timeshift/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisTimeshift](docs/sdks/timeshift/README.md#updatehristimeshift) - Update a timeshift
 
-### [transaction](docs/sdks/transaction/README.md)
+### [Transaction](docs/sdks/transaction/README.md)
 
 * [createAccountingTransaction](docs/sdks/transaction/README.md#createaccountingtransaction) - Create a transaction
 * [getAccountingTransaction](docs/sdks/transaction/README.md#getaccountingtransaction) - Retrieve a transaction
@@ -1383,12 +1383,12 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingTransaction](docs/sdks/transaction/README.md#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingTransaction](docs/sdks/transaction/README.md#updateaccountingtransaction) - Update a transaction
 
-### [trialbalance](docs/sdks/trialbalance/README.md)
+### [Trialbalance](docs/sdks/trialbalance/README.md)
 
 * [getAccountingTrialbalance](docs/sdks/trialbalance/README.md#getaccountingtrialbalance) - Retrieve a trialbalance
 * [listAccountingTrialbalances](docs/sdks/trialbalance/README.md#listaccountingtrialbalances) - List all trialbalances
 
-### [uc](docs/sdks/uc/README.md)
+### [Uc](docs/sdks/uc/README.md)
 
 * [createUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
@@ -1411,7 +1411,7 @@ if ($response->accountingAccount !== null) {
 * [updateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
 * [updateUcRecording](docs/sdks/uc/README.md#updateucrecording) - Update a recording
 
-### [unified](docs/sdks/unified/README.md)
+### [Unified](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
 * [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment)
@@ -1438,7 +1438,7 @@ if ($response->accountingAccount !== null) {
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [createScimUsers](docs/sdks/user/README.md#createscimusers) - Create user
 * [getScimUsers](docs/sdks/user/README.md#getscimusers) - Get user
@@ -1447,7 +1447,7 @@ if ($response->accountingAccount !== null) {
 * [removeScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
 * [updateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
 
-### [verification](docs/sdks/verification/README.md)
+### [Verification](docs/sdks/verification/README.md)
 
 * [createVerificationRequest](docs/sdks/verification/README.md#createverificationrequest) - Create a request
 * [getVerificationPackage](docs/sdks/verification/README.md#getverificationpackage) - Retrieve a package
@@ -1458,7 +1458,7 @@ if ($response->accountingAccount !== null) {
 * [removeVerificationRequest](docs/sdks/verification/README.md#removeverificationrequest) - Remove a request
 * [updateVerificationRequest](docs/sdks/verification/README.md#updateverificationrequest) - Update a request
 
-### [webhook](docs/sdks/webhook/README.md)
+### [Webhook](docs/sdks/webhook/README.md)
 
 * [createUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
