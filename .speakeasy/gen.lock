@@ -3,18 +3,18 @@ id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
   docChecksum: 7ef3d1caec75891711e5e81373e284c3
   docVersion: "1.0"
-  speakeasyVersion: 1.674.0
-  generationVersion: 2.778.0
-  releaseVersion: 1.6.1
-  configChecksum: b84d4639e3df57b45a23b6b7ae9c3803
+  speakeasyVersion: 1.675.2
+  generationVersion: 2.778.5
+  releaseVersion: 1.6.2
+  configChecksum: 92831d416a40ff2efe0cdc76d993378a
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 591ab1c2-3772-4b59-9e1d-d37c2f252fe4
-  pristine_commit_hash: 8104484153a4d8a2617ebf38bc9b76a41f5c6999
-  pristine_tree_hash: d0119f7b9f8d0e938fcd817a44006720fec13551
+  generation_id: 03e9609e-aa8c-4a41-a4a7-c5e89f8b7dba
+  pristine_commit_hash: 40a59a08515cdd0dc30457789d60d3d625d03819
+  pristine_tree_hash: 3b34f5e42dc68b3c73f4ea0d0bbd3ce9392912e6
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -25,7 +25,7 @@ features:
     inputOutputModels: 2.83.0
     methodArguments: 0.1.0
     responseFormat: 0.1.0
-    unions: 0.1.6
+    unions: 0.1.7
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -13801,8 +13801,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:dfcd7e9dd42aa872871aeaf770b49e44ed62e955
-    pristine_git_object: d4291349d6f9beaa9e0bfdf21305bc36c8b6aac1
+    last_write_checksum: sha1:8573315d2df45fb5bb724fdfb1234c09392c3e8d
+    pristine_git_object: cbec23cec459e9ff66b69d4d1eb32942dc15c6cb
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -14021,8 +14021,8 @@ trackedFiles:
     pristine_git_object: b89ffbbcc4a8e2b01db792df5ac68edfdcdc838f
   src/Utils/UnionHandler.php:
     id: 5a76a946fe85
-    last_write_checksum: sha1:51f625ad8b67192aa4e768a2c1d6ea000fa87d44
-    pristine_git_object: e59f81a7862484eef947848439861c10bc1a7547
+    last_write_checksum: sha1:6c5272dca461a5bf743dbddb5b1e1d6c07435bd4
+    pristine_git_object: cd0d1f2e0c60f1ad5aa889e77d007b600ba501e4
   src/Utils/Utils.php:
     id: c902f57e2422
     last_write_checksum: sha1:6888c007857c94687fa04ef58e2cb299db6f0e58
@@ -18875,7 +18875,6 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n* `unified-to->accounting->getAccountingInvoice()`:  `response.reference` **Added**\n* `unified-to->accounting->listAccountingInvoices()`:  `response.[]->reference` **Added**\n* `unified-to->accounting->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n* `unified-to->accounting->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n* `unified-to->invoice->createAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n* `unified-to->invoice->getAccountingInvoice()`:  `response.reference` **Added**\n* `unified-to->invoice->listAccountingInvoices()`:  `response.[]->reference` **Added**\n* `unified-to->invoice->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n* `unified-to->invoice->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->reference` **Added**\n  *  `response.reference` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
