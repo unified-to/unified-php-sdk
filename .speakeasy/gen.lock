@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 7ef3d1caec75891711e5e81373e284c3
+  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
   docVersion: "1.0"
-  speakeasyVersion: 1.675.2
-  generationVersion: 2.778.5
-  releaseVersion: 1.6.2
-  configChecksum: 92831d416a40ff2efe0cdc76d993378a
+  speakeasyVersion: 1.676.1
+  generationVersion: 2.781.2
+  releaseVersion: 1.6.3
+  configChecksum: 912da485ad49fc76c1229e981f98b932
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 03e9609e-aa8c-4a41-a4a7-c5e89f8b7dba
-  pristine_commit_hash: 40a59a08515cdd0dc30457789d60d3d625d03819
-  pristine_tree_hash: 3b34f5e42dc68b3c73f4ea0d0bbd3ce9392912e6
+  generation_id: 9249766e-c1da-4abc-b95f-798cff83749c
+  pristine_commit_hash: 8cd41d9b325bf23c1b7eeed07a6fb4a89bbd6ce0
+  pristine_tree_hash: ae0e8914e14fa65ed983c9b3d1c55ad81791680b
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -4917,8 +4917,8 @@ trackedFiles:
     pristine_git_object: 927d516cfb536e0b6ac09814f3c973b11b694104
   docs/Models/Shared/CrmStage.md:
     id: a33e5af83c0d
-    last_write_checksum: sha1:f1e63a83c245d9412b635c9c1737600d7bd25e3f
-    pristine_git_object: 776e88285e64194c1cf3fbbba18754ab5f898b33
+    last_write_checksum: sha1:a5b6f435bc126527788ca629bdc4b533747e292f
+    pristine_git_object: aca72aa98dcdd090aa45d2c9410a76ea141a18d3
   docs/Models/Shared/CrmTelephone.md:
     id: 8c394685ce66
     last_write_checksum: sha1:5eaec1c11710692d61b50f1cc97d051b0a5e46f9
@@ -12177,8 +12177,8 @@ trackedFiles:
     pristine_git_object: 4857a371f7c3f5709cf1d7c0517f93ab905681dc
   src/Models/Shared/CrmStage.php:
     id: 41ed569a4813
-    last_write_checksum: sha1:ea709f48e98935c9fe462159b00cde1fff7c63f5
-    pristine_git_object: d2da9c62e9d82631b816c925c5e4c01f796291c1
+    last_write_checksum: sha1:08e9635877bb6fd1bf7e0de6eec52f667e462a76
+    pristine_git_object: 9c1cd109ff906761dee0d24371df4e19bf7a97c9
   src/Models/Shared/CrmTelephone.php:
     id: 4db3db4f488f
     last_write_checksum: sha1:7bedf75edeedfa4b1a511bf475975ee2d594136c
@@ -13801,8 +13801,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:8573315d2df45fb5bb724fdfb1234c09392c3e8d
-    pristine_git_object: cbec23cec459e9ff66b69d4d1eb32942dc15c6cb
+    last_write_checksum: sha1:0af94b698c9315c01bde0e2356af1358c8927de1
+    pristine_git_object: d9e6170f85d013ac354e6bd90e6e79b66c44f9b7
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -18875,6 +18875,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Php SDK Changes:\n* `unified-to->crm->createCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->getCrmPipeline()`:  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->listCrmPipelines()`:  `response.[]->stages->[]->isClosed` **Added**\n* `unified-to->crm->patchCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->updateCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->createCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->getCrmPipeline()`:  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->listCrmPipelines()`:  `response.[]->stages->[]->isClosed` **Added**\n* `unified-to->pipeline->patchCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->updateCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

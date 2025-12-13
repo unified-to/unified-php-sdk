@@ -53,6 +53,14 @@ class CrmStage
 
     /**
      *
+     * @var ?bool $isClosed
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_closed')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isClosed = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -73,17 +81,19 @@ class CrmStage
      * @param  ?float  $dealProbability
      * @param  ?float  $displayOrder
      * @param  ?string  $id
+     * @param  ?bool  $isClosed
      * @param  ?string  $name
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?bool $active = null, ?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?string $name = null, ?\DateTime $updatedAt = null)
+    public function __construct(?bool $active = null, ?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isClosed = null, ?string $name = null, ?\DateTime $updatedAt = null)
     {
         $this->active = $active;
         $this->createdAt = $createdAt;
         $this->dealProbability = $dealProbability;
         $this->displayOrder = $displayOrder;
         $this->id = $id;
+        $this->isClosed = $isClosed;
         $this->name = $name;
         $this->updatedAt = $updatedAt;
     }
