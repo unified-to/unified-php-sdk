@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
+  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 1.6.3
-  configChecksum: 912da485ad49fc76c1229e981f98b932
+  releaseVersion: 1.6.4
+  configChecksum: add1f322810dac54984321026d4bb786
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 9249766e-c1da-4abc-b95f-798cff83749c
-  pristine_commit_hash: 8cd41d9b325bf23c1b7eeed07a6fb4a89bbd6ce0
-  pristine_tree_hash: ae0e8914e14fa65ed983c9b3d1c55ad81791680b
+  generation_id: 7e66af7d-b90d-4579-b244-2a0f004fcb2a
+  pristine_commit_hash: 7f18681f3ec1ee0f9889f2dede6d8859a33c54cd
+  pristine_tree_hash: d97d82dd3ecdeace4363cd025bca671c441f1eca
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -5085,8 +5085,8 @@ trackedFiles:
     pristine_git_object: e1aabdd5666ff4d3f8894862124598352ddc41f2
   docs/Models/Shared/HrisEmployee.md:
     id: 236c8b178d58
-    last_write_checksum: sha1:cbde4586cb2b856088006db19d99bad80c923bb8
-    pristine_git_object: 99e04d1ea3447fcd34c1d1f8b2d715a88bcb1a25
+    last_write_checksum: sha1:bad7ac9a4fb7fbf81413f8354e77f415164e9693
+    pristine_git_object: 27e869d90364e79bc5170445cb03dee5697cb9f1
   docs/Models/Shared/HrisEmployeeEmploymentType.md:
     id: d7695000bf64
     last_write_checksum: sha1:251ec412dae12fdb02e8e527d4f23cf05bf16123
@@ -5095,6 +5095,14 @@ trackedFiles:
     id: 1e375f5fd634
     last_write_checksum: sha1:bb26aedab26faba70465ccbc31cbce22c7d30414
     pristine_git_object: 3749bef8b50c749a9ea262360f071c89e3dd901b
+  docs/Models/Shared/HrisEmployeerelationship.md:
+    id: 5c1a6d4aa157
+    last_write_checksum: sha1:e93579cd64276dd2e218d9dd2d8183cf308929fb
+    pristine_git_object: 42f65314bd5d9df9918b20cca1bd956a1f8d30e8
+  docs/Models/Shared/HrisEmployeerelationshipType.md:
+    id: c7a788a4a551
+    last_write_checksum: sha1:9f2fb1059e29e6a8ae3c09bd41e02fc8317b3b05
+    pristine_git_object: 88d2724d77221a5714d68b34ee26d4a004e7008e
   docs/Models/Shared/HrisGroup.md:
     id: 0b055fc6e3e4
     last_write_checksum: sha1:4201614baafb112d4d49a84d0bda9c5b1aed42bc
@@ -5883,6 +5891,10 @@ trackedFiles:
     id: c55c19016fe0
     last_write_checksum: sha1:fa203fb878d398d3281c0bcb022f8d679afda423
     pristine_git_object: 471aeb44f954afd77c0312993e5086ca1573c532
+  docs/Models/Shared/PropertyHrisEmployeerelationshipAddress.md:
+    id: 45741bb7380b
+    last_write_checksum: sha1:b3eaf579ef22b6323615279c859a27a16e00186e
+    pristine_git_object: 375ba545c99d31395dd06df6f92701b38b6f06e7
   docs/Models/Shared/PropertyHrisLocationAddress.md:
     id: 1c1050c7b95a
     last_write_checksum: sha1:f9e000d3d0b3d5f7cdf1a81007d2d671c4cfe97c
@@ -12337,8 +12349,8 @@ trackedFiles:
     pristine_git_object: 2a0092cf0202e854c3aec015f2bdde8b2250721a
   src/Models/Shared/HrisEmployee.php:
     id: b3199ab6fa52
-    last_write_checksum: sha1:06757fe1c3f08a44dc8ddf43916950c3f417f590
-    pristine_git_object: 48a03359e9c5407ae83e57558508f1644f3199d8
+    last_write_checksum: sha1:3489c5b4912d60824f300589f08379b9ece7a68d
+    pristine_git_object: 8912f473aaed54d748bdccdbe237838c8312c0f4
   src/Models/Shared/HrisEmployeeEmploymentType.php:
     id: c1ab2d1e4a80
     last_write_checksum: sha1:e02f5b6649546d5f3d74231b06bbcb089af81c47
@@ -12347,6 +12359,14 @@ trackedFiles:
     id: e65f8f5f5737
     last_write_checksum: sha1:88d2d204a4a9708ca476d4779715aeaf848d8f03
     pristine_git_object: 1ad1fedda04a3dd7b230c6b5e84fe40b252107ec
+  src/Models/Shared/HrisEmployeerelationship.php:
+    id: a4b0038f6d99
+    last_write_checksum: sha1:daf7016b7704f542eff8b1329edf4d573b816cdf
+    pristine_git_object: 9aa92de933c3cf36a2401d3dbee45298fca377d1
+  src/Models/Shared/HrisEmployeerelationshipType.php:
+    id: bb373b13b1f9
+    last_write_checksum: sha1:067409144167586914f2c117d5fc1ddb04fde2a7
+    pristine_git_object: 3f8b1ae6e231dd719f3b9ad9fbec3816ab208752
   src/Models/Shared/HrisGroup.php:
     id: 4d95ddca65a3
     last_write_checksum: sha1:ae1458ff9f29b147435478f6fa724309b56b2251
@@ -13083,6 +13103,10 @@ trackedFiles:
     id: 79e10458f300
     last_write_checksum: sha1:95d99caf3a1c4faac6c4152821dfd0c775fcd1fe
     pristine_git_object: 248dec9b118dcb6e72e7ea53f0bd3213ad4ef3ca
+  src/Models/Shared/PropertyHrisEmployeerelationshipAddress.php:
+    id: f6ea7af98a69
+    last_write_checksum: sha1:b0e7717f041d4415e86c3e88afaae57c2a87a5db
+    pristine_git_object: 9f15828983ae9edd789d9be598d08940c239219c
   src/Models/Shared/PropertyHrisLocationAddress.php:
     id: 84696a0a4c51
     last_write_checksum: sha1:b6d91fbc94eb8f5ae68f8e2148ac3805eb804485
@@ -13801,8 +13825,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:0af94b698c9315c01bde0e2356af1358c8927de1
-    pristine_git_object: d9e6170f85d013ac354e6bd90e6e79b66c44f9b7
+    last_write_checksum: sha1:771cc031ba809b1d5ebc836c393fe17ec53067b6
+    pristine_git_object: c5ed727c384f7c8c49afb3a449531ea270444df9
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -18875,7 +18899,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->crm->createCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->getCrmPipeline()`:  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->listCrmPipelines()`:  `response.[]->stages->[]->isClosed` **Added**\n* `unified-to->crm->patchCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->crm->updateCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->createCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->getCrmPipeline()`:  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->listCrmPipelines()`:  `response.[]->stages->[]->isClosed` **Added**\n* `unified-to->pipeline->patchCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n* `unified-to->pipeline->updateCrmPipeline()`: \n  *  `request->crmPipeline->stages->[]->isClosed` **Added**\n  *  `response.stages->[]->isClosed` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->hris->getHrisEmployee()`:  `response.relationships` **Added**\n* `unified-to->hris->listHrisEmployees()`:  `response.[]->relationships` **Added**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->getHrisEmployee()`:  `response.relationships` **Added**\n* `unified-to->employee->listHrisEmployees()`:  `response.[]->relationships` **Added**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
