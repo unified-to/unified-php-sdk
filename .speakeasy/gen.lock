@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
+  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 1.6.4
-  configChecksum: add1f322810dac54984321026d4bb786
+  releaseVersion: 1.6.5
+  configChecksum: 23ef4c7833db6915a9878d673299890b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 7e66af7d-b90d-4579-b244-2a0f004fcb2a
-  pristine_commit_hash: 7f18681f3ec1ee0f9889f2dede6d8859a33c54cd
-  pristine_tree_hash: d97d82dd3ecdeace4363cd025bca671c441f1eca
+  generation_id: 2160c7a4-7e88-47bc-853e-b819d2aa4662
+  pristine_commit_hash: 33be13627fe3c206569902ab8962cef6d125e6a1
+  pristine_tree_hash: 9dc5fa2ead9aff31747de269e1d1c6485f82df9f
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -5113,8 +5113,8 @@ trackedFiles:
     pristine_git_object: 26d5f771f12608eb50aa007a384c0a3aae880109
   docs/Models/Shared/HrisLocation.md:
     id: 66cec073effa
-    last_write_checksum: sha1:c669f1fee0af456e1b0a51373b2a3148c98540dd
-    pristine_git_object: 543537913f4448173483ad3c4981bdab0f1ff0a0
+    last_write_checksum: sha1:aca2801464d1bf11bfedd046bfb9acd0e2f15e59
+    pristine_git_object: 98e0ce3c59d17ade74c1463c331495063e36a53b
   docs/Models/Shared/HrisMetadata.md:
     id: ee69efd8a507
     last_write_checksum: sha1:e34bf23a0505e5b6a9f98e79e166ad64609d5c80
@@ -12377,8 +12377,8 @@ trackedFiles:
     pristine_git_object: bca1bdc0ac395f7bdcc17c169fdf2d29e5183c06
   src/Models/Shared/HrisLocation.php:
     id: e21af82d9031
-    last_write_checksum: sha1:9bb4fc22027d4c983b9e3ca41a7a640b51cf5139
-    pristine_git_object: e9c907a37a4751415741f5bff4cc843d13dc2df8
+    last_write_checksum: sha1:242c908eeaa19c2d73f31a89107abeaab92a499a
+    pristine_git_object: 678c3e6b7ab33afc070a6edbee7ee2ec42bab99d
   src/Models/Shared/HrisMetadata.php:
     id: 6e75dca17513
     last_write_checksum: sha1:db933887aad9a6f4ece4624cc79e834ddbbce442
@@ -13825,8 +13825,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:771cc031ba809b1d5ebc836c393fe17ec53067b6
-    pristine_git_object: c5ed727c384f7c8c49afb3a449531ea270444df9
+    last_write_checksum: sha1:2420e6ddfa14b38b7cc543448393c2fa30722ae6
+    pristine_git_object: 77633611934d79882596e0a3169f4864b05f808d
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -18899,7 +18899,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->hris->getHrisEmployee()`:  `response.relationships` **Added**\n* `unified-to->hris->listHrisEmployees()`:  `response.[]->relationships` **Added**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->getHrisEmployee()`:  `response.relationships` **Added**\n* `unified-to->employee->listHrisEmployees()`:  `response.[]->relationships` **Added**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request->hrisEmployee->relationships` **Added**\n  *  `response.relationships` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->location->createHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->location->getHrisLocation()`:  `response.companyId` **Added**\n* `unified-to->location->listHrisLocations()`:  `response.[]->companyId` **Added**\n* `unified-to->location->patchHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->location->updateHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->createHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->getHrisEmployee()`:  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->getHrisLocation()`:  `response.companyId` **Added**\n* `unified-to->hris->listHrisEmployees()`:  `response.[]->locations->[]->companyId` **Added**\n* `unified-to->hris->listHrisLocations()`:  `response.[]->companyId` **Added**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->patchHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->updateHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->getHrisEmployee()`:  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->listHrisEmployees()`:  `response.[]->locations->[]->companyId` **Added**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

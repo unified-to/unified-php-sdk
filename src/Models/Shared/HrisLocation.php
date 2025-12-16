@@ -22,6 +22,14 @@ class HrisLocation
 
     /**
      *
+     * @var ?string $companyId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $companyId = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -138,6 +146,7 @@ class HrisLocation
 
     /**
      * @param  ?PropertyHrisLocationAddress  $address
+     * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
@@ -154,9 +163,10 @@ class HrisLocation
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisLocationAddress $address = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
+        $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
