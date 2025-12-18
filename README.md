@@ -663,10 +663,12 @@ if ($response->accountingAccount !== null) {
 * [listCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
 * [patchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
 * [patchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
+* [patchMessagingEvent](docs/sdks/event/README.md#patchmessagingevent) - Update an event
 * [removeCalendarEvent](docs/sdks/event/README.md#removecalendarevent) - Remove an event
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
+* [updateMessagingEvent](docs/sdks/event/README.md#updatemessagingevent) - Update an event
 
 ### [Expense](docs/sdks/expense/README.md)
 
@@ -977,8 +979,10 @@ if ($response->accountingAccount !== null) {
 * [getMessagingMessage](docs/sdks/messaging/README.md#getmessagingmessage) - Retrieve a message
 * [listMessagingChannels](docs/sdks/messaging/README.md#listmessagingchannels) - List all channels
 * [listMessagingMessages](docs/sdks/messaging/README.md#listmessagingmessages) - List all messages
+* [patchMessagingEvent](docs/sdks/messaging/README.md#patchmessagingevent) - Update an event
 * [patchMessagingMessage](docs/sdks/messaging/README.md#patchmessagingmessage) - Update a message
 * [removeMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
+* [updateMessagingEvent](docs/sdks/messaging/README.md#updatemessagingevent) - Update an event
 * [updateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
 
 ### [Metadata](docs/sdks/metadata/README.md)

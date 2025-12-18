@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class MessagingMessage
+class PropertyMessagingEventMessage
 {
     /**
      * $attachments
@@ -23,12 +23,12 @@ class MessagingMessage
 
     /**
      *
-     * @var ?PropertyMessagingMessageAuthorMember $authorMember
+     * @var ?PropertyMessagingEventMessageAuthorMember $authorMember
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('author_member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessageAuthorMember|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyMessagingMessageAuthorMember $authorMember = null;
+    public ?PropertyMessagingEventMessageAuthorMember $authorMember = null;
 
     /**
      * $buttons
@@ -240,7 +240,7 @@ class MessagingMessage
 
     /**
      * @param  ?array<MessagingAttachment>  $attachments
-     * @param  ?PropertyMessagingMessageAuthorMember  $authorMember
+     * @param  ?PropertyMessagingEventMessageAuthorMember  $authorMember
      * @param  ?array<MessagingButton>  $buttons
      * @param  ?string  $channelId
      * @param  ?array<string>  $channelIds
@@ -267,7 +267,7 @@ class MessagingMessage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?array $buttons = null, ?string $channelId = null, ?array $channelIds = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?string $parentId = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingEventMessageAuthorMember $authorMember = null, ?array $buttons = null, ?string $channelId = null, ?array $channelIds = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?string $parentId = null, ?string $parentMessageId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;

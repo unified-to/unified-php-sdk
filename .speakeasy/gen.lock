@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
+  docChecksum: 1a896c50bc225151e4415d9bcea95f29
   docVersion: "1.0"
-  speakeasyVersion: 1.676.1
-  generationVersion: 2.781.2
-  releaseVersion: 1.6.5
-  configChecksum: 23ef4c7833db6915a9878d673299890b
+  speakeasyVersion: 1.680.0
+  generationVersion: 2.788.4
+  releaseVersion: 1.6.6
+  configChecksum: 9f47d977f997070c738d9aac57bb8d69
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 2160c7a4-7e88-47bc-853e-b819d2aa4662
-  pristine_commit_hash: 33be13627fe3c206569902ab8962cef6d125e6a1
-  pristine_tree_hash: 9dc5fa2ead9aff31747de269e1d1c6485f82df9f
+  generation_id: 4d51f003-9009-4587-95ef-70792d831cee
+  pristine_commit_hash: 163ec138000aa16fb8de3ce717ca9ccc920678b0
+  pristine_tree_hash: fdba9d6394c83cb1ce416437a4fb84fb7ab7bd97
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -2763,6 +2763,14 @@ trackedFiles:
     id: cff91b97b344
     last_write_checksum: sha1:aca866c14f8d0beb1f70647b9bdc471c3178d66f
     pristine_git_object: 5b877a186065cb7379c69650393d6c54477331dd
+  docs/Models/Operations/PatchMessagingEventRequest.md:
+    id: 2f1346534514
+    last_write_checksum: sha1:8792d463a8e604e5b7d1d11e3a4bc5f5997a6b15
+    pristine_git_object: 87621a0e619718402ee91d4c9d7e360ad6fdcfe5
+  docs/Models/Operations/PatchMessagingEventResponse.md:
+    id: 07ddecebf200
+    last_write_checksum: sha1:f85112fe5b8453143414554299a5470d03704203
+    pristine_git_object: 2b46119a17199e8968f1e4fc0afc82ca99a12e45
   docs/Models/Operations/PatchMessagingMessageRequest.md:
     id: d151d9a1c65d
     last_write_checksum: sha1:e8c7dc6da8ea506732d4a762100252b80e423208
@@ -4071,6 +4079,14 @@ trackedFiles:
     id: 028afc70c01c
     last_write_checksum: sha1:d94903470c58eaeec0b22fe0e9be9695af0ace6e
     pristine_git_object: 0856655cd8221c91900dfb22c75ebf027f7e2862
+  docs/Models/Operations/UpdateMessagingEventRequest.md:
+    id: 3a8387044414
+    last_write_checksum: sha1:30efad6b562f31093ee9d0ee4e9a607243f4f570
+    pristine_git_object: f67c007d7ce94a74fd30e364676e0d10bf00d83d
+  docs/Models/Operations/UpdateMessagingEventResponse.md:
+    id: ff4fe50bf1d8
+    last_write_checksum: sha1:98cf443c4b79664412d03207b65d194575314e11
+    pristine_git_object: b4aa107a91cfb8e6d8c3c3a433785a6c240a4088
   docs/Models/Operations/UpdateMessagingMessageRequest.md:
     id: 2ee57db703da
     last_write_checksum: sha1:40c7b46899bbae6dfe3f0d61a6829049aef521b0
@@ -5591,26 +5607,38 @@ trackedFiles:
     id: 8f3856626926
     last_write_checksum: sha1:a10cf1961e12c54fcbd1e97643a3de93ce73a6aa
     pristine_git_object: 9d8f9d13ca13cfc9ce57eefc4acfbe120feae0e2
+  docs/Models/Shared/MessagingButton.md:
+    id: 240769fbc856
+    last_write_checksum: sha1:def93b4e626c5c38fc1cd378f6683da5e5eced8f
+    pristine_git_object: a7fa981bf924874659db8f7d39d1b0b657373577
   docs/Models/Shared/MessagingChannel.md:
     id: db94fc7d7580
     last_write_checksum: sha1:c1b02f690a1d793128d9faf245065f32f4d91c41
     pristine_git_object: f79e069188a917f26be521f31fe91a80c86da5a4
-  docs/Models/Shared/MessagingChannelMessage.md:
-    id: 619626772ea8
-    last_write_checksum: sha1:22e3a02d7c3ee5013e8b8c65620eb1fa251ee27b
-    pristine_git_object: 0f4c6b369479845887e506e8f949845dce05a44d
+  docs/Models/Shared/MessagingEvent.md:
+    id: cf570b202f7c
+    last_write_checksum: sha1:95cf787479e78442ee30e4b2cbc8fa2771b80a4c
+    pristine_git_object: c1820b9401568a035bd4a0e7088f14ce9af3d7f0
+  docs/Models/Shared/MessagingEventType.md:
+    id: 65929c163cac
+    last_write_checksum: sha1:249b0d536f9c599aa5e5ee19ef98e065d6d5319f
+    pristine_git_object: b5d99d6c2160eabf421ca03c8a77c5812dc97fe3
   docs/Models/Shared/MessagingMember.md:
     id: 16b468922e63
     last_write_checksum: sha1:3a36170ef1e51f56ef308a7706c8dcb384b80779
     pristine_git_object: 5c5c3b63e51967c515d4f05f09f5a9fc609a85d4
   docs/Models/Shared/MessagingMessage.md:
     id: 14cb9c8a4013
-    last_write_checksum: sha1:24d6145ec7ed4b2d9109a91e85563a8bf493ea13
-    pristine_git_object: 61ac9ac367ae24c894eb4132e4e89d32864f22b3
+    last_write_checksum: sha1:04cc61c2f08b0a36a0aa21b3c510ff920268e0ba
+    pristine_git_object: 8c921952aae20896c94e0a3c498b315915540fea
   docs/Models/Shared/MessagingReaction.md:
     id: e35709ea6d3b
     last_write_checksum: sha1:62a345dfc46d2655729a9df6fc4835696faa2c9e
     pristine_git_object: 3210cc9b66e062d161706ff84880a945d5efcd4f
+  docs/Models/Shared/MessagingReference.md:
+    id: 412c348d6cb5
+    last_write_checksum: sha1:953506f6f430b6b11b773a610b3f68f7ad7a6871
+    pristine_git_object: 9c1cc765b49c820a94a812fb5916341717d9f4f9
   docs/Models/Shared/MetadataMetadata.md:
     id: f4111e2d1701
     last_write_checksum: sha1:94e41298d5cef70488d42da0c604b63b4a87ffd9
@@ -5939,6 +5967,26 @@ trackedFiles:
     id: df263ff8aa59
     last_write_checksum: sha1:619f9a4a6feedd6f3cccff20af052c3eec54317b
     pristine_git_object: d49c17ae99100c96d8459045584cee451c083044
+  docs/Models/Shared/PropertyMessagingEventButton.md:
+    id: e9adab1386f0
+    last_write_checksum: sha1:9a8d58f68c905144b659cff25d03665446ec8320
+    pristine_git_object: 2d620ecb6c361e7c935768524b7d228adca3bc43
+  docs/Models/Shared/PropertyMessagingEventChannel.md:
+    id: a3f1f532aa31
+    last_write_checksum: sha1:7aa9bfd714fe7fc8268eac8b6e7d905092bbac6e
+    pristine_git_object: 77a6d43f871a6928faadb4fc287bccc37bc7b428
+  docs/Models/Shared/PropertyMessagingEventMessage.md:
+    id: 047a84de176b
+    last_write_checksum: sha1:c2a69b48b39199eb2b37c91cc307867e6287b234
+    pristine_git_object: 558434f0dc64baa736fe07e73355196eb7050216
+  docs/Models/Shared/PropertyMessagingEventMessageAuthorMember.md:
+    id: 353052d59d7c
+    last_write_checksum: sha1:a28e06c86a688b60ce4083bf73e46797a7b66f7e
+    pristine_git_object: 08367b9a7ae8904a654704c4d803df128ec85e5e
+  docs/Models/Shared/PropertyMessagingEventUser.md:
+    id: 7172cc5e487b
+    last_write_checksum: sha1:96612851320d5cab5b9534c28cd42909ba96d5af
+    pristine_git_object: 46ed6533d37ae1860a56705db167ba5e5415e418
   docs/Models/Shared/PropertyMessagingMessageAuthorMember.md:
     id: a09ee1fa73cc
     last_write_checksum: sha1:21417ca3dd52efd719943c34bfc4544c5780918b
@@ -6709,8 +6757,8 @@ trackedFiles:
     pristine_git_object: 3084d68d576d989acc48990c925e2bde842883a8
   docs/sdks/event/README.md:
     id: 38354de266eb
-    last_write_checksum: sha1:a915ac8d58c6893097ee3b9b6d2ab2149c4fd28c
-    pristine_git_object: c71f044b03ed20fb3ebfa74496212af6834228d9
+    last_write_checksum: sha1:e890b10f2aac2df97b8d36e2b4b75eadade12126
+    pristine_git_object: ba1c3ccc6b551bc84cf606eeb1ec113387c28cf9
   docs/sdks/expense/README.md:
     id: 8bba157370c0
     last_write_checksum: sha1:47d669cf0d08d7a22b74fbc65a43aad0a06b711d
@@ -6809,8 +6857,8 @@ trackedFiles:
     pristine_git_object: f65c9c2f037496d350859480a37fa985bc7c02ee
   docs/sdks/messaging/README.md:
     id: 827f9d81a390
-    last_write_checksum: sha1:f436ce2e30c101d53bfb80b036033d624584eabb
-    pristine_git_object: 61a50c06ce5b35cdb31e6326a14b5f3be3e60ae1
+    last_write_checksum: sha1:cba17f753e1ff6be0c8609dd415b41e35f16a753
+    pristine_git_object: 7e259abb77641bbb651a00776d6f89e40120079e
   docs/sdks/metadata/README.md:
     id: de871ca7dbeb
     last_write_checksum: sha1:41f31313f16081cdbd12e02267abb04482ee348e
@@ -7173,8 +7221,8 @@ trackedFiles:
     pristine_git_object: 6e0ffd127d64a2f1f8204daed44ca3055f807c72
   src/Event.php:
     id: d84ea91b33d3
-    last_write_checksum: sha1:10279205a5f4b91bd0d8cf3b435a321ed358253f
-    pristine_git_object: 7756212aac7e1585cffec947d69115bb926e0a01
+    last_write_checksum: sha1:134187d8b3c146873bd84f6cf1636a41d7d8a8b7
+    pristine_git_object: 0e08f27decccc2b23d32b9a592a8fe6e343d3ab0
   src/Expense.php:
     id: 5f6afa1091aa
     last_write_checksum: sha1:9509e8d5eeadab562da413a7ed55df8caccb0896
@@ -7337,8 +7385,8 @@ trackedFiles:
     pristine_git_object: 9d965aa90a295ed06b60021ab3dbdb9665fb7317
   src/Messaging.php:
     id: b1d2daa7279a
-    last_write_checksum: sha1:72ef8029a1a9acf7230510cc748d155ab26adfbe
-    pristine_git_object: 7ae9af14a1636b838bc12ec1480e917eadde5850
+    last_write_checksum: sha1:4b6beec7792abd74cf3609a2523f9143768e1eed
+    pristine_git_object: efa53eeaaf33bc55141601f8a3d90f8876fc78d6
   src/Metadata.php:
     id: 94c6506339ac
     last_write_checksum: sha1:cd215cde47a1b7977670bdb9ec61b9f8429992cc
@@ -10075,6 +10123,14 @@ trackedFiles:
     id: 452bce84ca87
     last_write_checksum: sha1:be14ec2c0415d3027459ca29362ef092e417924c
     pristine_git_object: 05161d49df4fe8fee12eafdad77d2de10852359a
+  src/Models/Operations/PatchMessagingEventRequest.php:
+    id: 50ae90230a55
+    last_write_checksum: sha1:9674594485112c46d5d0469b80caf7f687a39705
+    pristine_git_object: e065ec998c59a5479125cc7764481fa02eb63836
+  src/Models/Operations/PatchMessagingEventResponse.php:
+    id: 316aedc8b395
+    last_write_checksum: sha1:6beafd2d50114925bb8b44d0e1788f5ce6a332a6
+    pristine_git_object: ffa2da0a8db93b8f6a7286a631fe92e404969057
   src/Models/Operations/PatchMessagingMessageRequest.php:
     id: 3d2645477d5c
     last_write_checksum: sha1:af665526a81c39f4a201745df6de8fed5be64638
@@ -11383,6 +11439,14 @@ trackedFiles:
     id: 6ac25888b8b5
     last_write_checksum: sha1:9198b363ca57142490a7c84abae07580b8ccf388
     pristine_git_object: 167216d809299d7bdf15d3ff7bb0f8679f93e1ff
+  src/Models/Operations/UpdateMessagingEventRequest.php:
+    id: ef308e8e48ae
+    last_write_checksum: sha1:c244d1e67deeac81322e5937daa9c238a20a566e
+    pristine_git_object: 4653ff858ca164282bd94bca48d9bde77c4ddcfa
+  src/Models/Operations/UpdateMessagingEventResponse.php:
+    id: 471bfb7e447b
+    last_write_checksum: sha1:d4fbc4c3bbdb61fb9b307d6aa13c5ea1c04348c9
+    pristine_git_object: 1169d00549de6bd92dd8d462669cfb71dc393d53
   src/Models/Operations/UpdateMessagingMessageRequest.php:
     id: 228d2bf1f3a8
     last_write_checksum: sha1:b16798cf7d951eb0f8c234968368df0d64413ab3
@@ -12807,26 +12871,38 @@ trackedFiles:
     id: e796d3147672
     last_write_checksum: sha1:b49d3e845c45b7f981daf89c68a71d253296c516
     pristine_git_object: dcf9b8a79b0871082b5f3ad9ed8bcfcc57bbc06c
+  src/Models/Shared/MessagingButton.php:
+    id: d27d19da74a6
+    last_write_checksum: sha1:3583c8e02346377e706ad397175f5a76e4adffd8
+    pristine_git_object: 4da904d1acf5145c5e8cb176e437009bb3d81a0a
   src/Models/Shared/MessagingChannel.php:
     id: 78b63f25c4ba
     last_write_checksum: sha1:2078b89e66b2b44fcaae9432aa8e360073c7b34e
     pristine_git_object: 829fac174f8ab32c917e0b56bfe55eb6c71b5c0b
-  src/Models/Shared/MessagingChannelMessage.php:
-    id: 91cfde7f3c52
-    last_write_checksum: sha1:4ae9728772f5a960c10f213b00b1a63878e9d9e3
-    pristine_git_object: 7fb1188f4766b904817798f98264818e20b4b555
+  src/Models/Shared/MessagingEvent.php:
+    id: b263da3b8073
+    last_write_checksum: sha1:090bb6853217d1d818d62b91798de88b27997414
+    pristine_git_object: be3d4874d7c5470ce7bd6beddc074094dc7b7aa9
+  src/Models/Shared/MessagingEventType.php:
+    id: ce8910c090e2
+    last_write_checksum: sha1:e2bfe56ad2c514c2727132b8d5f881070301165b
+    pristine_git_object: 7a353cc48af0c081f11a668dc6aa9daa4a68687f
   src/Models/Shared/MessagingMember.php:
     id: 3ac67bb2ab11
     last_write_checksum: sha1:2eed4cb65fb66e60d769a5e1946af1aeb81d7646
     pristine_git_object: 1d7d420349214cf40e18c88be03d32fa637c0829
   src/Models/Shared/MessagingMessage.php:
     id: cd7bd5955cf4
-    last_write_checksum: sha1:46f785ea6f91b96da8f279d451efb5b7264b2be6
-    pristine_git_object: 6bfd02e86891214cdc936384d5143ab6e0c15d95
+    last_write_checksum: sha1:d9601102b042f118bb5543d9eb6317b63a95c2ca
+    pristine_git_object: f886eb69c38808c2cfb893a4fecb0b21ac79b90d
   src/Models/Shared/MessagingReaction.php:
     id: 6139dda9816d
     last_write_checksum: sha1:0b76de3978ea140857665dcb2c3bbfd00b6106fa
     pristine_git_object: 91a5269c9e803f451cabd8b9b87054c2922d9d7b
+  src/Models/Shared/MessagingReference.php:
+    id: 1d9426c81f0b
+    last_write_checksum: sha1:fe8d06cd2bf5c9d00219c06e4add6a6e6b7c807d
+    pristine_git_object: d9cd74323c7e3d1215025f623add3f22774da334
   src/Models/Shared/MetadataMetadata.php:
     id: e366f1033ce9
     last_write_checksum: sha1:df9ea9d77da09015552dcefbbbd3794587b73f2c
@@ -13151,6 +13227,26 @@ trackedFiles:
     id: ca25d6f0944f
     last_write_checksum: sha1:e5da6683a88bd4c7a5b3a7eec363c9d3fb0ce3a5
     pristine_git_object: de7f3b8005b7ec4648fe7babc4c7cb4beb9c4422
+  src/Models/Shared/PropertyMessagingEventButton.php:
+    id: ef1bd56f2e08
+    last_write_checksum: sha1:05fa73b973e26cadf41a7e8f26be3a855206decc
+    pristine_git_object: 4996aa277ea1b61788f3166a1a0eebb4bc0ef222
+  src/Models/Shared/PropertyMessagingEventChannel.php:
+    id: b794612aab22
+    last_write_checksum: sha1:66507c43e5e858092528c33a4229efd31de4f20f
+    pristine_git_object: c68bb7bea756566165d4574b2090536e32f32410
+  src/Models/Shared/PropertyMessagingEventMessage.php:
+    id: 574485b6377f
+    last_write_checksum: sha1:9c8682a622570388e3209970c22c14a454e3a5bf
+    pristine_git_object: 40b3b6918f35b35c758051dbaeb585adc765517e
+  src/Models/Shared/PropertyMessagingEventMessageAuthorMember.php:
+    id: 98290bbd3c30
+    last_write_checksum: sha1:a1262f3ea630c1e253dbe85ecf94879c0ab793be
+    pristine_git_object: 46f9653d518857ada4f476b337c47a6e3b05357b
+  src/Models/Shared/PropertyMessagingEventUser.php:
+    id: 21beb66f10cd
+    last_write_checksum: sha1:3b430c5e276288bfce45eb4069aa47965fca32e0
+    pristine_git_object: 7b49fb65c75653ae691d562b08139a4abd9dd73e
   src/Models/Shared/PropertyMessagingMessageAuthorMember.php:
     id: aa92a0384243
     last_write_checksum: sha1:150098eaf48c7cbb70430e9bbe8ce586c02f88ab
@@ -13825,8 +13921,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:2420e6ddfa14b38b7cc543448393c2fa30722ae6
-    pristine_git_object: 77633611934d79882596e0a3169f4864b05f808d
+    last_write_checksum: sha1:f7bd57d5355eaee7798b0320829a22302aadf6e1
+    pristine_git_object: b2abca423c8678aa6e7830adf34b3c5f6b4ffd82
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -18897,9 +18993,31 @@ examples:
       responses:
         "200":
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  patchMessagingEvent:
+    speakeasy-default-patch-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "USER_UPDATED"}
+  updateMessagingEvent:
+    speakeasy-default-update-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "CHANNEL_LEFT"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->location->createHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->location->getHrisLocation()`:  `response.companyId` **Added**\n* `unified-to->location->listHrisLocations()`:  `response.[]->companyId` **Added**\n* `unified-to->location->patchHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->location->updateHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->createHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->getHrisEmployee()`:  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->getHrisLocation()`:  `response.companyId` **Added**\n* `unified-to->hris->listHrisEmployees()`:  `response.[]->locations->[]->companyId` **Added**\n* `unified-to->hris->listHrisLocations()`:  `response.[]->companyId` **Added**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->patchHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->hris->updateHrisLocation()`: \n  *  `request->hrisLocation->companyId` **Added**\n  *  `response.companyId` **Added**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->getHrisEmployee()`:  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->listHrisEmployees()`:  `response.[]->locations->[]->companyId` **Added**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request->hrisEmployee->locations->[]->companyId` **Added**\n  *  `response.locations->[]->companyId` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->event->patchMessagingEvent()`: **Added**\n* `unified-to->event->updateMessagingEvent()`: **Added**\n* `unified-to->messaging->patchMessagingEvent()`: **Added**\n* `unified-to->messaging->updateMessagingEvent()`: **Added**\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified-to->messaging->getMessagingMessage()`:  `response.buttons` **Added**\n* `unified-to->messaging->listMessagingMessages()`:  `response.[]->buttons` **Added**\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified-to->message->createMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified-to->message->getMessagingMessage()`:  `response.buttons` **Added**\n* `unified-to->message->listMessagingMessages()`:  `response.[]->buttons` **Added**\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request->messagingMessage->buttons` **Added**\n  *  `response.buttons` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

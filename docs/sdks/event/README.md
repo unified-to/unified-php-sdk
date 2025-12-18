@@ -12,10 +12,12 @@
 * [listCrmEvents](#listcrmevents) - List all events
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
+* [patchMessagingEvent](#patchmessagingevent) - Update an event
 * [removeCalendarEvent](#removecalendarevent) - Remove an event
 * [removeCrmEvent](#removecrmevent) - Remove an event
 * [updateCalendarEvent](#updatecalendarevent) - Update an event
 * [updateCrmEvent](#updatecrmevent) - Update an event
+* [updateMessagingEvent](#updatemessagingevent) - Update an event
 
 ## createCalendarEvent
 
@@ -429,6 +431,61 @@ if ($response->crmEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchMessagingEventRequest(
+    messagingEvent: new Shared\MessagingEvent(
+        type: Shared\MessagingEventType::ChannelJoined,
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->patchMessagingEvent(
+    request: $request
+);
+
+if ($response->messagingEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchMessagingEventRequest](../../Models/Operations/PatchMessagingEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\PatchMessagingEventResponse](../../Models/Operations/PatchMessagingEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeCalendarEvent
 
 Remove an event
@@ -630,6 +687,61 @@ if ($response->crmEvent !== null) {
 ### Response
 
 **[?Operations\UpdateCrmEventResponse](../../Models/Operations/UpdateCrmEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateMessagingEventRequest(
+    messagingEvent: new Shared\MessagingEvent(
+        type: Shared\MessagingEventType::ChannelJoined,
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->updateMessagingEvent(
+    request: $request
+);
+
+if ($response->messagingEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateMessagingEventRequest](../../Models/Operations/UpdateMessagingEventRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\UpdateMessagingEventResponse](../../Models/Operations/UpdateMessagingEventResponse.md)**
 
 ### Errors
 
