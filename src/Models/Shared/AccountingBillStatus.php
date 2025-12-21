@@ -18,4 +18,5 @@ enum AccountingBillStatus: string
     case PartiallyPaid = 'PARTIALLY_PAID';
     case PartiallyRefunded = 'PARTIALLY_REFUNDED';
     case Refunded = 'REFUNDED';
+    case Overdue = 'OVERDUE';
 }
