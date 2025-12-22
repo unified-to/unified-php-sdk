@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 333cdf57ecb8fc0562c8da2e5dd0fd38
+  docChecksum: 33d600247d6caaa9557a7dac72257357
   docVersion: "1.0"
   speakeasyVersion: 1.680.3
   generationVersion: 2.788.5
-  releaseVersion: 1.6.7
-  configChecksum: a61897c58941471848467f074e9a097e
+  releaseVersion: 1.6.8
+  configChecksum: c30c6504a2b26541405ff46a730f5a41
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 20fb01a7-ae27-4dfc-9879-70a5e0ecf824
-  pristine_commit_hash: 682ee020098ddf5fd2a959fbb4f3eb9bb3578460
-  pristine_tree_hash: f1d428017f68fc6224dabd49068361683d821dd8
+  generation_id: 4903da1e-8c56-492c-80ac-dc06b838d4e2
+  pristine_commit_hash: 280fa8e1327413a9f430a0e8587c79b6e36be844
+  pristine_tree_hash: 66489ec89e471a48ae1e1a0172c3513caa3ad8b4
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -5677,8 +5677,8 @@ trackedFiles:
     pristine_git_object: 4b3743a7dec83d7530294aa27581f508d223cd29
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:7458847c771273f8018e00434d99ef51e59594cc
-    pristine_git_object: 91af6f273850d152ad35aa723ed82eb7c07b6cff
+    last_write_checksum: sha1:5b2ae7d4b24ec7397739539597c9150e7d5655b6
+    pristine_git_object: d2fc9f95cc84eeaa461515c2900486300237f4bd
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -5849,8 +5849,8 @@ trackedFiles:
     pristine_git_object: 6b4bf574f578f75b9133779b9acde99497b64e46
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:7a0d44f93e4483122ef9c196fbdba45e4db567ea
-    pristine_git_object: 152432bd22d8101ccd205bc3481571ae0fb148e0
+    last_write_checksum: sha1:60af5e1113775ad1ba7aa8b6fe69a5536df7ede6
+    pristine_git_object: 3dc06f64b3727b7cc0ddd340c19195afb39cb15c
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -12941,8 +12941,8 @@ trackedFiles:
     pristine_git_object: c1c36c7a1b9e970f81b6dcfef9f467d71fe15ce0
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:7bd67abc8331e22577df05a9cc6410d70c81c36d
-    pristine_git_object: 5f74cd8ca7c4bda51eea5193f5b575343524616e
+    last_write_checksum: sha1:a933e3921e97b6272f754b4161c1e0ec9b93d69d
+    pristine_git_object: fa9a36774211a6ccd76bd2f687f5590a0e8d950d
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -13109,8 +13109,8 @@ trackedFiles:
     pristine_git_object: 3b69dfa4ae50cace47fd4746f9b42c01949e37c2
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:9798dda7f8d9577cf2743efc7b3ad2eea2b5b3c6
-    pristine_git_object: b747ddfa46866499eb7ef826b27ee64a67122a12
+    last_write_checksum: sha1:7a72794fa38660a797b6d23756aa84a9638eb680
+    pristine_git_object: 4981e019c09445436abeb74bd2deb423756c21a4
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -13921,8 +13921,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:745be691dae34bca4709d631713e539383f39d09
-    pristine_git_object: 99845354b67f6bd5689acafe6e702a1c841204c5
+    last_write_checksum: sha1:28068bf7142008f6ef782d97b81d538ca565f527
+    pristine_git_object: 0b12f7cd5528c160d5fd878c1ccf8b30d0874cad
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe

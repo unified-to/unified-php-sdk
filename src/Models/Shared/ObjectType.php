@@ -87,6 +87,7 @@ enum ObjectType: string
     case GenaiEmbedding = 'genai_embedding';
     case MessagingMessage = 'messaging_message';
     case MessagingChannel = 'messaging_channel';
+    case MessagingEvent = 'messaging_event';
     case KmsSpace = 'kms_space';
     case KmsPage = 'kms_page';
     case KmsComment = 'kms_comment';
