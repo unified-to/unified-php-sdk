@@ -18,4 +18,6 @@ enum AccountingSalesorderStatus: string
     case PartiallyPaid = 'PARTIALLY_PAID';
     case PartiallyRefunded = 'PARTIALLY_REFUNDED';
     case Refunded = 'REFUNDED';
+    case Submitted = 'SUBMITTED';
+    case Deleted = 'DELETED';
 }
