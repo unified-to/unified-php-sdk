@@ -199,4 +199,13 @@ enum PropertyConnectionPermissions: string
     case CalendarRecordingWrite = 'calendar_recording_write';
     case EnrichPersonRead = 'enrich_person_read';
     case EnrichCompanyRead = 'enrich_company_read';
+    case AdsAdRead = 'ads_ad_read';
+    case AdsAdWrite = 'ads_ad_write';
+    case AdsCampaignRead = 'ads_campaign_read';
+    case AdsCampaignWrite = 'ads_campaign_write';
+    case AdsGroupRead = 'ads_group_read';
+    case AdsGroupWrite = 'ads_group_write';
+    case AdsReportRead = 'ads_report_read';
+    case AdsOrganizationRead = 'ads_organization_read';
+    case AdsOrganizationWrite = 'ads_organization_write';
 }

@@ -41,6 +41,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?ListAdId $listAdId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_ad_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAdId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListAdId $listAdId = null;
+
+    /**
+     *
      * @var ?ListApplicationId $listApplicationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_application_id')]
@@ -83,6 +92,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCallId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListCallId $listCallId = null;
+
+    /**
+     *
+     * @var ?ListCampaignId $listCampaignId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_campaign_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCampaignId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListCampaignId $listCampaignId = null;
 
     /**
      *
@@ -227,6 +245,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListExpandRecurringEvents|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListExpandRecurringEvents $listExpandRecurringEvents = null;
+
+    /**
+     *
+     * @var ?ListGroupId $listGroupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_group_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListGroupId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListGroupId $listGroupId = null;
 
     /**
      *
@@ -738,6 +765,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?VirtualWebhookAdId $virtualWebhookAdId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_ad_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookAdId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookAdId $virtualWebhookAdId = null;
+
+    /**
+     *
      * @var ?VirtualWebhookApplicationId $virtualWebhookApplicationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_application_id')]
@@ -771,6 +807,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCallId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?VirtualWebhookCallId $virtualWebhookCallId = null;
+
+    /**
+     *
+     * @var ?VirtualWebhookCampaignId $virtualWebhookCampaignId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_campaign_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCampaignId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookCampaignId $virtualWebhookCampaignId = null;
 
     /**
      *
@@ -879,6 +924,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookFields|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?VirtualWebhookFields $virtualWebhookFields = null;
+
+    /**
+     *
+     * @var ?VirtualWebhookGroupId $virtualWebhookGroupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_group_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookGroupId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookGroupId $virtualWebhookGroupId = null;
 
     /**
      *
@@ -1100,11 +1154,13 @@ class IntegrationSupport
      * @param  ?FromWebhook  $fromWebhook
      * @param  ?array<string, string>  $inboundFields
      * @param  ?ListAccountId  $listAccountId
+     * @param  ?ListAdId  $listAdId
      * @param  ?ListApplicationId  $listApplicationId
      * @param  ?ListBenefitId  $listBenefitId
      * @param  ?ListBranchId  $listBranchId
      * @param  ?ListCalendarId  $listCalendarId
      * @param  ?ListCallId  $listCallId
+     * @param  ?ListCampaignId  $listCampaignId
      * @param  ?ListCandidateId  $listCandidateId
      * @param  ?ListCategoryId  $listCategoryId
      * @param  ?ListChannelId  $listChannelId
@@ -1121,6 +1177,7 @@ class IntegrationSupport
      * @param  ?ListEventId  $listEventId
      * @param  ?ListExpand  $listExpand
      * @param  ?ListExpandRecurringEvents  $listExpandRecurringEvents
+     * @param  ?ListGroupId  $listGroupId
      * @param  ?ListInstructorId  $listInstructorId
      * @param  ?ListInterviewId  $listInterviewId
      * @param  ?ListInvoiceId  $listInvoiceId
@@ -1177,10 +1234,12 @@ class IntegrationSupport
      * @param  ?SearchName  $searchName
      * @param  ?SearchTwitter  $searchTwitter
      * @param  ?array<string>  $slowFields
+     * @param  ?VirtualWebhookAdId  $virtualWebhookAdId
      * @param  ?VirtualWebhookApplicationId  $virtualWebhookApplicationId
      * @param  ?VirtualWebhookBranchId  $virtualWebhookBranchId
      * @param  ?VirtualWebhookCalendarId  $virtualWebhookCalendarId
      * @param  ?VirtualWebhookCallId  $virtualWebhookCallId
+     * @param  ?VirtualWebhookCampaignId  $virtualWebhookCampaignId
      * @param  ?VirtualWebhookCandidateId  $virtualWebhookCandidateId
      * @param  ?VirtualWebhookChannelId  $virtualWebhookChannelId
      * @param  ?VirtualWebhookCollectionId  $virtualWebhookCollectionId
@@ -1193,6 +1252,7 @@ class IntegrationSupport
      * @param  ?VirtualWebhookEventId  $virtualWebhookEventId
      * @param  ?VirtualWebhookExpand  $virtualWebhookExpand
      * @param  ?VirtualWebhookFields  $virtualWebhookFields
+     * @param  ?VirtualWebhookGroupId  $virtualWebhookGroupId
      * @param  ?VirtualWebhookItemId  $virtualWebhookItemId
      * @param  ?VirtualWebhookItemVariantId  $virtualWebhookItemVariantId
      * @param  ?VirtualWebhookJobId  $virtualWebhookJobId
@@ -1219,16 +1279,18 @@ class IntegrationSupport
      * @param  ?PropertyIntegrationSupportWebhookEvents  $webhookEvents
      * @phpstan-pure
      */
-    public function __construct(?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListApplicationId $listApplicationId = null, ?ListBenefitId $listBenefitId = null, ?ListBranchId $listBranchId = null, ?ListCalendarId $listCalendarId = null, ?ListCallId $listCallId = null, ?ListCandidateId $listCandidateId = null, ?ListCategoryId $listCategoryId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListDealId $listDealId = null, ?ListDocumentId $listDocumentId = null, ?ListEndLe $listEndLe = null, ?ListEndLt $listEndLt = null, ?ListEventId $listEventId = null, ?ListExpand $listExpand = null, ?ListExpandRecurringEvents $listExpandRecurringEvents = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLeadId $listLeadId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrgId $listOrgId = null, ?ListPackageId $listPackageId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListPaymentId $listPaymentId = null, ?ListPayslipId $listPayslipId = null, ?ListPipelineId $listPipelineId = null, ?ListProjectId $listProjectId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListRepoId $listRepoId = null, ?ListRootId $listRootId = null, ?ListSaleschannelId $listSaleschannelId = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStatus $listStatus = null, ?ListStudentId $listStudentId = null, ?ListTaskId $listTaskId = null, ?ListTeacherId $listTeacherId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?ListUserMentionedId $listUserMentionedId = null, ?array $methods = null, ?NativeWebhookCalendarId $nativeWebhookCalendarId = null, ?NativeWebhookChannelId $nativeWebhookChannelId = null, ?NativeWebhookCompanyId $nativeWebhookCompanyId = null, ?NativeWebhookEventId $nativeWebhookEventId = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?NativeWebhookTaskId $nativeWebhookTaskId = null, ?array $outboundFields = null, ?array $rawObjects = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookApplicationId $virtualWebhookApplicationId = null, ?VirtualWebhookBranchId $virtualWebhookBranchId = null, ?VirtualWebhookCalendarId $virtualWebhookCalendarId = null, ?VirtualWebhookCallId $virtualWebhookCallId = null, ?VirtualWebhookCandidateId $virtualWebhookCandidateId = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCollectionId $virtualWebhookCollectionId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookCustomerId $virtualWebhookCustomerId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookEndLe $virtualWebhookEndLe = null, ?VirtualWebhookEndLt $virtualWebhookEndLt = null, ?VirtualWebhookEventId $virtualWebhookEventId = null, ?VirtualWebhookExpand $virtualWebhookExpand = null, ?VirtualWebhookFields $virtualWebhookFields = null, ?VirtualWebhookItemId $virtualWebhookItemId = null, ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLeadId $virtualWebhookLeadId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookListId $virtualWebhookListId = null, ?VirtualWebhookLocationId $virtualWebhookLocationId = null, ?VirtualWebhookOrgId $virtualWebhookOrgId = null, ?VirtualWebhookPageId $virtualWebhookPageId = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookPipelineId $virtualWebhookPipelineId = null, ?VirtualWebhookProjectId $virtualWebhookProjectId = null, ?VirtualWebhookRepoId $virtualWebhookRepoId = null, ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId = null, ?VirtualWebhookSpaceId $virtualWebhookSpaceId = null, ?VirtualWebhookStartGte $virtualWebhookStartGte = null, ?VirtualWebhookStatus $virtualWebhookStatus = null, ?VirtualWebhookTaskId $virtualWebhookTaskId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
+    public function __construct(?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListAdId $listAdId = null, ?ListApplicationId $listApplicationId = null, ?ListBenefitId $listBenefitId = null, ?ListBranchId $listBranchId = null, ?ListCalendarId $listCalendarId = null, ?ListCallId $listCallId = null, ?ListCampaignId $listCampaignId = null, ?ListCandidateId $listCandidateId = null, ?ListCategoryId $listCategoryId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListDealId $listDealId = null, ?ListDocumentId $listDocumentId = null, ?ListEndLe $listEndLe = null, ?ListEndLt $listEndLt = null, ?ListEventId $listEventId = null, ?ListExpand $listExpand = null, ?ListExpandRecurringEvents $listExpandRecurringEvents = null, ?ListGroupId $listGroupId = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLeadId $listLeadId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrgId $listOrgId = null, ?ListPackageId $listPackageId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListPaymentId $listPaymentId = null, ?ListPayslipId $listPayslipId = null, ?ListPipelineId $listPipelineId = null, ?ListProjectId $listProjectId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListRepoId $listRepoId = null, ?ListRootId $listRootId = null, ?ListSaleschannelId $listSaleschannelId = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStatus $listStatus = null, ?ListStudentId $listStudentId = null, ?ListTaskId $listTaskId = null, ?ListTeacherId $listTeacherId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?ListUserMentionedId $listUserMentionedId = null, ?array $methods = null, ?NativeWebhookCalendarId $nativeWebhookCalendarId = null, ?NativeWebhookChannelId $nativeWebhookChannelId = null, ?NativeWebhookCompanyId $nativeWebhookCompanyId = null, ?NativeWebhookEventId $nativeWebhookEventId = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?NativeWebhookTaskId $nativeWebhookTaskId = null, ?array $outboundFields = null, ?array $rawObjects = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookAdId $virtualWebhookAdId = null, ?VirtualWebhookApplicationId $virtualWebhookApplicationId = null, ?VirtualWebhookBranchId $virtualWebhookBranchId = null, ?VirtualWebhookCalendarId $virtualWebhookCalendarId = null, ?VirtualWebhookCallId $virtualWebhookCallId = null, ?VirtualWebhookCampaignId $virtualWebhookCampaignId = null, ?VirtualWebhookCandidateId $virtualWebhookCandidateId = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCollectionId $virtualWebhookCollectionId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookCustomerId $virtualWebhookCustomerId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookEndLe $virtualWebhookEndLe = null, ?VirtualWebhookEndLt $virtualWebhookEndLt = null, ?VirtualWebhookEventId $virtualWebhookEventId = null, ?VirtualWebhookExpand $virtualWebhookExpand = null, ?VirtualWebhookFields $virtualWebhookFields = null, ?VirtualWebhookGroupId $virtualWebhookGroupId = null, ?VirtualWebhookItemId $virtualWebhookItemId = null, ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLeadId $virtualWebhookLeadId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookListId $virtualWebhookListId = null, ?VirtualWebhookLocationId $virtualWebhookLocationId = null, ?VirtualWebhookOrgId $virtualWebhookOrgId = null, ?VirtualWebhookPageId $virtualWebhookPageId = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookPipelineId $virtualWebhookPipelineId = null, ?VirtualWebhookProjectId $virtualWebhookProjectId = null, ?VirtualWebhookRepoId $virtualWebhookRepoId = null, ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId = null, ?VirtualWebhookSpaceId $virtualWebhookSpaceId = null, ?VirtualWebhookStartGte $virtualWebhookStartGte = null, ?VirtualWebhookStatus $virtualWebhookStatus = null, ?VirtualWebhookTaskId $virtualWebhookTaskId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
     {
         $this->fromWebhook = $fromWebhook;
         $this->inboundFields = $inboundFields;
         $this->listAccountId = $listAccountId;
+        $this->listAdId = $listAdId;
         $this->listApplicationId = $listApplicationId;
         $this->listBenefitId = $listBenefitId;
         $this->listBranchId = $listBranchId;
         $this->listCalendarId = $listCalendarId;
         $this->listCallId = $listCallId;
+        $this->listCampaignId = $listCampaignId;
         $this->listCandidateId = $listCandidateId;
         $this->listCategoryId = $listCategoryId;
         $this->listChannelId = $listChannelId;
@@ -1245,6 +1307,7 @@ class IntegrationSupport
         $this->listEventId = $listEventId;
         $this->listExpand = $listExpand;
         $this->listExpandRecurringEvents = $listExpandRecurringEvents;
+        $this->listGroupId = $listGroupId;
         $this->listInstructorId = $listInstructorId;
         $this->listInterviewId = $listInterviewId;
         $this->listInvoiceId = $listInvoiceId;
@@ -1301,10 +1364,12 @@ class IntegrationSupport
         $this->searchName = $searchName;
         $this->searchTwitter = $searchTwitter;
         $this->slowFields = $slowFields;
+        $this->virtualWebhookAdId = $virtualWebhookAdId;
         $this->virtualWebhookApplicationId = $virtualWebhookApplicationId;
         $this->virtualWebhookBranchId = $virtualWebhookBranchId;
         $this->virtualWebhookCalendarId = $virtualWebhookCalendarId;
         $this->virtualWebhookCallId = $virtualWebhookCallId;
+        $this->virtualWebhookCampaignId = $virtualWebhookCampaignId;
         $this->virtualWebhookCandidateId = $virtualWebhookCandidateId;
         $this->virtualWebhookChannelId = $virtualWebhookChannelId;
         $this->virtualWebhookCollectionId = $virtualWebhookCollectionId;
@@ -1317,6 +1382,7 @@ class IntegrationSupport
         $this->virtualWebhookEventId = $virtualWebhookEventId;
         $this->virtualWebhookExpand = $virtualWebhookExpand;
         $this->virtualWebhookFields = $virtualWebhookFields;
+        $this->virtualWebhookGroupId = $virtualWebhookGroupId;
         $this->virtualWebhookItemId = $virtualWebhookItemId;
         $this->virtualWebhookItemVariantId = $virtualWebhookItemVariantId;
         $this->virtualWebhookJobId = $virtualWebhookJobId;

@@ -112,4 +112,9 @@ enum ObjectType: string
     case CalendarBusy = 'calendar_busy';
     case CalendarLink = 'calendar_link';
     case CalendarRecording = 'calendar_recording';
+    case AdsOrganization = 'ads_organization';
+    case AdsAd = 'ads_ad';
+    case AdsCampaign = 'ads_campaign';
+    case AdsReport = 'ads_report';
+    case AdsGroup = 'ads_group';
 }

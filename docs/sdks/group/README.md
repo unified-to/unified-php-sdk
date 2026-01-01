@@ -4,18 +4,76 @@
 
 ### Available Operations
 
+* [createAdsGroup](#createadsgroup) - Create a group
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
+* [getAdsGroup](#getadsgroup) - Retrieve a group
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
+* [listAdsGroups](#listadsgroups) - List all groups
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
+* [patchAdsGroup](#patchadsgroup) - Update a group
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchScimGroups](#patchscimgroups) - Update group
+* [removeAdsGroup](#removeadsgroup) - Remove a group
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeScimGroups](#removescimgroups) - Delete group
+* [updateAdsGroup](#updateadsgroup) - Update a group
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateScimGroups](#updatescimgroups) - Update group
+
+## createAdsGroup
+
+Create a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsGroupRequest(
+    adsGroup: new Shared\AdsGroup(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->group->createAdsGroup(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateAdsGroupRequest](../../Models/Operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\CreateAdsGroupResponse](../../Models/Operations/CreateAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createHrisGroup
 
@@ -116,6 +174,57 @@ if ($response->scimGroup !== null) {
 ### Response
 
 **[?Operations\CreateScimGroupsResponse](../../Models/Operations/CreateScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsGroup
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->getAdsGroup(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetAdsGroupRequest](../../Models/Operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\GetAdsGroupResponse](../../Models/Operations/GetAdsGroupResponse.md)**
 
 ### Errors
 
@@ -225,6 +334,56 @@ if ($response->scimGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAdsGroups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsGroupsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->group->listAdsGroups(
+    request: $request
+);
+
+if ($response->adsGroups !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListAdsGroupsRequest](../../Models/Operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\ListAdsGroupsResponse](../../Models/Operations/ListAdsGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHrisGroups
 
 List all groups
@@ -318,6 +477,59 @@ if ($response->scimGroups !== null) {
 ### Response
 
 **[?Operations\ListScimGroupsResponse](../../Models/Operations/ListScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAdsGroup
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAdsGroupRequest(
+    adsGroup: new Shared\AdsGroup(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->patchAdsGroup(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchAdsGroupRequest](../../Models/Operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\PatchAdsGroupResponse](../../Models/Operations/PatchAdsGroupResponse.md)**
 
 ### Errors
 
@@ -433,6 +645,57 @@ if ($response->scimGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeAdsGroup
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->removeAdsGroup(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveAdsGroupRequest](../../Models/Operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\RemoveAdsGroupResponse](../../Models/Operations/RemoveAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeHrisGroup
 
 Remove a group
@@ -528,6 +791,59 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveScimGroupsResponse](../../Models/Operations/RemoveScimGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAdsGroup
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAdsGroupRequest(
+    adsGroup: new Shared\AdsGroup(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->updateAdsGroup(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateAdsGroupRequest](../../Models/Operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\UpdateAdsGroupResponse](../../Models/Operations/UpdateAdsGroupResponse.md)**
 
 ### Errors
 

@@ -161,6 +161,14 @@ class HrisEmployee
 
     /**
      *
+     * @var ?bool $hasMfa
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_mfa')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasMfa = null;
+
+    /**
+     *
      * @var ?\DateTime $hiredAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('hired_at')]
@@ -380,6 +388,7 @@ class HrisEmployee
      * @param  ?string  $firstName
      * @param  ?HrisEmployeeGender  $gender
      * @param  ?array<HrisGroup>  $groups
+     * @param  ?bool  $hasMfa
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $imageUrl
@@ -406,7 +415,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -425,6 +434,7 @@ class HrisEmployee
         $this->firstName = $firstName;
         $this->gender = $gender;
         $this->groups = $groups;
+        $this->hasMfa = $hasMfa;
         $this->hiredAt = $hiredAt;
         $this->id = $id;
         $this->imageUrl = $imageUrl;

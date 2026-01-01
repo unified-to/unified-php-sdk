@@ -68,6 +68,14 @@ class UnifiedTo
 
     public Trialbalance $trialbalance;
 
+    public Ads $ads;
+
+    public Ad $ad;
+
+    public Campaign $campaign;
+
+    public Group $group;
+
     public Ats $ats;
 
     public Activity $activity;
@@ -141,8 +149,6 @@ class UnifiedTo
     public Device $device;
 
     public Employee $employee;
-
-    public Group $group;
 
     public Payslip $payslip;
 
@@ -288,6 +294,10 @@ class UnifiedTo
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
         $this->trialbalance = new Trialbalance($this->sdkConfiguration);
+        $this->ads = new Ads($this->sdkConfiguration);
+        $this->ad = new Ad($this->sdkConfiguration);
+        $this->campaign = new Campaign($this->sdkConfiguration);
+        $this->group = new Group($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
         $this->activity = new Activity($this->sdkConfiguration);
         $this->application = new Application($this->sdkConfiguration);
@@ -325,7 +335,6 @@ class UnifiedTo
         $this->deduction = new Deduction($this->sdkConfiguration);
         $this->device = new Device($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
-        $this->group = new Group($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->timeshift = new Timeshift($this->sdkConfiguration);

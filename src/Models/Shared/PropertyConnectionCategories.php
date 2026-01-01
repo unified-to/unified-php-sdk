@@ -34,4 +34,5 @@ enum PropertyConnectionCategories: string
     case Metadata = 'metadata';
     case Calendar = 'calendar';
     case Verification = 'verification';
+    case Ads = 'ads';
 }
