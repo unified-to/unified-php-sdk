@@ -21,6 +21,14 @@ class AdsOrganization
 
     /**
      *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -47,6 +55,14 @@ class AdsOrganization
 
     /**
      *
+     * @var ?string $timezone
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $timezone = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -55,18 +71,22 @@ class AdsOrganization
 
     /**
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
+        $this->currency = $currency;
         $this->id = $id;
         $this->name = $name;
         $this->raw = $raw;
+        $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;
     }
 }

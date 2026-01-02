@@ -30,7 +30,7 @@ class PropertyCrmEventMarketingEmail
     public ?string $body = null;
 
     /**
-     * The event email's cc name & email (name <test@test.com>)
+     * The event email's cc name & email (name )
      *
      * @var ?array<string> $cc
      */
@@ -64,7 +64,7 @@ class PropertyCrmEventMarketingEmail
     public ?string $subject = null;
 
     /**
-     * The event email's "to" name & email (name <test@test.com>)
+     * The event email's "to" name & email (name )
      *
      * @var ?array<string> $to
      */

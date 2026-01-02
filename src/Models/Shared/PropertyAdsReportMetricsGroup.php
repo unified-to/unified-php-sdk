@@ -13,6 +13,31 @@ class PropertyAdsReportMetricsGroup
 {
     /**
      *
+     * @var ?float $bidAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bid_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $bidAmount = null;
+
+    /**
+     *
+     * @var ?float $budgetAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $budgetAmount = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null;
+
+    /**
+     *
      * @var ?string $campaignId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('campaign_id')]
@@ -26,6 +51,14 @@ class PropertyAdsReportMetricsGroup
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
 
     /**
      *
@@ -71,6 +104,14 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
      * @var ?PropertyAdsReportMetricsGroupTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
@@ -87,26 +128,36 @@ class PropertyAdsReportMetricsGroup
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?float  $bidAmount
+     * @param  ?float  $budgetAmount
+     * @param  ?PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
+     * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
      * @param  ?PropertyAdsReportMetricsGroupTargeting  $targeting
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $campaignId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?\DateTime $updatedAt = null)
     {
+        $this->bidAmount = $bidAmount;
+        $this->budgetAmount = $budgetAmount;
+        $this->budgetPeriod = $budgetPeriod;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
+        $this->endAt = $endAt;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->raw = $raw;
+        $this->startAt = $startAt;
         $this->targeting = $targeting;
         $this->updatedAt = $updatedAt;
     }

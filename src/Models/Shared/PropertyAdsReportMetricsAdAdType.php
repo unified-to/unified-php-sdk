@@ -18,4 +18,6 @@ enum PropertyAdsReportMetricsAdAdType: string
     case Shopping = 'SHOPPING';
     case App = 'APP';
     case Call = 'CALL';
+    case Carousel = 'CAROUSEL';
+    case Social = 'SOCIAL';
 }

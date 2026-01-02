@@ -32,6 +32,36 @@ class PropertyAdsGroupTargeting
     public ?array $audiences = null;
 
     /**
+     * $companies
+     *
+     * @var ?array<string> $companies
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('companies')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $companies = null;
+
+    /**
+     * $companySizes
+     *
+     * @var ?array<string> $companySizes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_sizes')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $companySizes = null;
+
+    /**
+     * $degrees
+     *
+     * @var ?array<string> $degrees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('degrees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $degrees = null;
+
+    /**
      * $devices
      *
      * @var ?array<string> $devices
@@ -50,6 +80,46 @@ class PropertyAdsGroupTargeting
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $genders = null;
+
+    /**
+     * $industries
+     *
+     * @var ?array<string> $industries
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('industries')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $industries = null;
+
+    /**
+     * $interests
+     *
+     * @var ?array<string> $interests
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('interests')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $interests = null;
+
+    /**
+     * $jobFunctions
+     *
+     * @var ?array<string> $jobFunctions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('job_functions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $jobFunctions = null;
+
+    /**
+     * $jobTitles
+     *
+     * @var ?array<string> $jobTitles
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('job_titles')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $jobTitles = null;
 
     /**
      * $keywords
@@ -92,25 +162,75 @@ class PropertyAdsGroupTargeting
     public ?array $placements = null;
 
     /**
+     * $schools
+     *
+     * @var ?array<string> $schools
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('schools')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $schools = null;
+
+    /**
+     * $seniorities
+     *
+     * @var ?array<string> $seniorities
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('seniorities')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $seniorities = null;
+
+    /**
+     * $skills
+     *
+     * @var ?array<string> $skills
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('skills')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $skills = null;
+
+    /**
      * @param  ?array<string>  $ageRanges
      * @param  ?array<string>  $audiences
+     * @param  ?array<string>  $companies
+     * @param  ?array<string>  $companySizes
+     * @param  ?array<string>  $degrees
      * @param  ?array<string>  $devices
      * @param  ?array<string>  $genders
+     * @param  ?array<string>  $industries
+     * @param  ?array<string>  $interests
+     * @param  ?array<string>  $jobFunctions
+     * @param  ?array<string>  $jobTitles
      * @param  ?array<string>  $keywords
      * @param  ?array<string>  $languages
      * @param  ?array<string>  $locations
      * @param  ?array<string>  $placements
+     * @param  ?array<string>  $schools
+     * @param  ?array<string>  $seniorities
+     * @param  ?array<string>  $skills
      * @phpstan-pure
      */
-    public function __construct(?array $ageRanges = null, ?array $audiences = null, ?array $devices = null, ?array $genders = null, ?array $keywords = null, ?array $languages = null, ?array $locations = null, ?array $placements = null)
+    public function __construct(?array $ageRanges = null, ?array $audiences = null, ?array $companies = null, ?array $companySizes = null, ?array $degrees = null, ?array $devices = null, ?array $genders = null, ?array $industries = null, ?array $interests = null, ?array $jobFunctions = null, ?array $jobTitles = null, ?array $keywords = null, ?array $languages = null, ?array $locations = null, ?array $placements = null, ?array $schools = null, ?array $seniorities = null, ?array $skills = null)
     {
         $this->ageRanges = $ageRanges;
         $this->audiences = $audiences;
+        $this->companies = $companies;
+        $this->companySizes = $companySizes;
+        $this->degrees = $degrees;
         $this->devices = $devices;
         $this->genders = $genders;
+        $this->industries = $industries;
+        $this->interests = $interests;
+        $this->jobFunctions = $jobFunctions;
+        $this->jobTitles = $jobTitles;
         $this->keywords = $keywords;
         $this->languages = $languages;
         $this->locations = $locations;
         $this->placements = $placements;
+        $this->schools = $schools;
+        $this->seniorities = $seniorities;
+        $this->skills = $skills;
     }
 }

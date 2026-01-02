@@ -20,4 +20,12 @@ enum AdsReportMetricsType: string
     case ConversionValue = 'CONVERSION_VALUE';
     case Cpa = 'CPA';
     case Roas = 'ROAS';
+    case Cpm = 'CPM';
+    case Ecpm = 'ECPM';
+    case Engagement = 'ENGAGEMENT';
+    case VideoCompletions = 'VIDEO_COMPLETIONS';
+    case VideoViews = 'VIDEO_VIEWS';
+    case Leads = 'LEADS';
+    case Engagements = 'ENGAGEMENTS';
+    case Saves = 'SAVES';
 }

@@ -29,6 +29,14 @@ class CrmDeal
     public ?\DateTime $closedAt = null;
 
     /**
+     *
+     * @var ?\DateTime $closingAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('closing_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $closingAt = null;
+
+    /**
      * $companyIds
      *
      * @var ?array<string> $companyIds
@@ -193,6 +201,7 @@ class CrmDeal
     /**
      * @param  ?float  $amount
      * @param  ?\DateTime  $closedAt
+     * @param  ?\DateTime  $closingAt
      * @param  ?array<string>  $companyIds
      * @param  ?array<string>  $contactIds
      * @param  ?\DateTime  $createdAt
@@ -214,10 +223,11 @@ class CrmDeal
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
+        $this->closingAt = $closingAt;
         $this->companyIds = $companyIds;
         $this->contactIds = $contactIds;
         $this->createdAt = $createdAt;
