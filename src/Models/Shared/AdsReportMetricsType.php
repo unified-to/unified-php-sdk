@@ -28,4 +28,8 @@ enum AdsReportMetricsType: string
     case Leads = 'LEADS';
     case Engagements = 'ENGAGEMENTS';
     case Saves = 'SAVES';
+    case Likes = 'LIKES';
+    case Shares = 'SHARES';
+    case Comments = 'COMMENTS';
+    case Follows = 'FOLLOWS';
 }

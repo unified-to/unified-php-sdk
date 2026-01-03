@@ -44,6 +44,14 @@ class AdsOrganization
     public ?string $name = null;
 
     /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -74,17 +82,19 @@ class AdsOrganization
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $name
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
         $this->name = $name;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;
