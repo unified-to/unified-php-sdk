@@ -45,7 +45,7 @@ class Environment
     }
 
     /**
-     * createUnifiedEnvironment
+     * Create new environments
      *
      * @param  array<string>  $request
      * @return Operations\CreateUnifiedEnvironmentResponse
@@ -93,7 +93,7 @@ class Environment
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    s: $obj);
+                    environments: $obj);
 
                 return $response;
             } else {
@@ -109,7 +109,7 @@ class Environment
     }
 
     /**
-     * listUnifiedEnvironments
+     * Returns all environments
      *
      * @return Operations\ListUnifiedEnvironmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -151,7 +151,7 @@ class Environment
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    s: $obj);
+                    environments: $obj);
 
                 return $response;
             } else {
@@ -167,7 +167,7 @@ class Environment
     }
 
     /**
-     * removeUnifiedEnvironment
+     * Remove an environment
      *
      * @param  Operations\RemoveUnifiedEnvironmentRequest  $request
      * @return Operations\RemoveUnifiedEnvironmentResponse
@@ -210,7 +210,7 @@ class Environment
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    s: $obj);
+                    environments: $obj);
 
                 return $response;
             } else {

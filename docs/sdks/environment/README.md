@@ -4,11 +4,13 @@
 
 ### Available Operations
 
-* [createUnifiedEnvironment](#createunifiedenvironment)
-* [listUnifiedEnvironments](#listunifiedenvironments)
-* [removeUnifiedEnvironment](#removeunifiedenvironment)
+* [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
+* [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
+* [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 
 ## createUnifiedEnvironment
+
+Create new environments
 
 ### Example Usage
 
@@ -32,7 +34,7 @@ $response = $sdk->environment->createUnifiedEnvironment(
     request: $request
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```
@@ -54,6 +56,8 @@ if ($response->s !== null) {
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## listUnifiedEnvironments
+
+Returns all environments
 
 ### Example Usage
 
@@ -77,7 +81,7 @@ $response = $sdk->environment->listUnifiedEnvironments(
 
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```
@@ -93,6 +97,8 @@ if ($response->s !== null) {
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## removeUnifiedEnvironment
+
+Remove an environment
 
 ### Example Usage
 
@@ -119,7 +125,7 @@ $response = $sdk->environment->removeUnifiedEnvironment(
     request: $request
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```

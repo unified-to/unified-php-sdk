@@ -1,0 +1,22 @@
+# FormsForm
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `confirmationMessage`                                         | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `confirmationRedirectUrl`                                     | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `description`                                                 | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `fields`                                                      | array<[Shared\FormField](../../Models/Shared/FormField.md)>   | :heavy_minus_sign:                                            | N/A                                                           |
+| `hasMultipleSubmissions`                                      | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `hasProgressBar`                                              | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `hasShuffleQuestions`                                         | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `isActive`                                                    | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `name`                                                        | *string*                                                      | :heavy_check_mark:                                            | N/A                                                           |
+| `publishedUrl`                                                | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `raw`                                                         | array<string, *mixed*>                                        | :heavy_minus_sign:                                            | N/A                                                           |
+| `responseCount`                                               | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |

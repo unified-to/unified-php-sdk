@@ -117,4 +117,6 @@ enum ObjectType: string
     case AdsCampaign = 'ads_campaign';
     case AdsReport = 'ads_report';
     case AdsGroup = 'ads_group';
+    case FormsForm = 'forms_form';
+    case FormsSubmission = 'forms_submission';
 }

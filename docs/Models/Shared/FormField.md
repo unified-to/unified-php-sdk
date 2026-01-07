@@ -1,0 +1,23 @@
+# FormField
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `choices`                                                     | array<*string*>                                               | :heavy_minus_sign:                                            | For select/radio/checkbox fields                              |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `defaultValue`                                                | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `description`                                                 | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `isActive`                                                    | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `isRequired`                                                  | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `max`                                                         | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `maxLength`                                                   | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `min`                                                         | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `minLength`                                                   | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `name`                                                        | *string*                                                      | :heavy_check_mark:                                            | N/A                                                           |
+| `order`                                                       | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `pattern`                                                     | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `type`                                                        | [Shared\FormFieldType](../../Models/Shared/FormFieldType.md)  | :heavy_check_mark:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |

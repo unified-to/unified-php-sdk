@@ -695,9 +695,9 @@ if ($response->accountingAccount !== null) {
 
 ### [Environment](docs/sdks/environment/README.md)
 
-* [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment)
-* [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments)
-* [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment)
+* [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment) - Create new environments
+* [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments) - Returns all environments
+* [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment) - Remove an environment
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -733,6 +733,26 @@ if ($response->accountingAccount !== null) {
 * [patchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
+
+### [Form](docs/sdks/form/README.md)
+
+* [createFormsForm](docs/sdks/form/README.md#createformsform) - Create a form
+* [getFormsForm](docs/sdks/form/README.md#getformsform) - Retrieve a form
+* [listFormsForms](docs/sdks/form/README.md#listformsforms) - List all forms
+* [patchFormsForm](docs/sdks/form/README.md#patchformsform) - Update a form
+* [removeFormsForm](docs/sdks/form/README.md#removeformsform) - Remove a form
+* [updateFormsForm](docs/sdks/form/README.md#updateformsform) - Update a form
+
+### [Forms](docs/sdks/forms/README.md)
+
+* [createFormsForm](docs/sdks/forms/README.md#createformsform) - Create a form
+* [getFormsForm](docs/sdks/forms/README.md#getformsform) - Retrieve a form
+* [getFormsSubmission](docs/sdks/forms/README.md#getformssubmission) - Retrieve a submission
+* [listFormsForms](docs/sdks/forms/README.md#listformsforms) - List all forms
+* [listFormsSubmissions](docs/sdks/forms/README.md#listformssubmissions) - List all submissions
+* [patchFormsForm](docs/sdks/forms/README.md#patchformsform) - Update a form
+* [removeFormsForm](docs/sdks/forms/README.md#removeformsform) - Remove a form
+* [updateFormsForm](docs/sdks/forms/README.md#updateformsform) - Update a form
 
 ### [Genai](docs/sdks/genai/README.md)
 
@@ -1346,6 +1366,11 @@ if ($response->accountingAccount !== null) {
 * [removeLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [updateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
 
+### [Submission](docs/sdks/submission/README.md)
+
+* [getFormsSubmission](docs/sdks/submission/README.md#getformssubmission) - Retrieve a submission
+* [listFormsSubmissions](docs/sdks/submission/README.md#listformssubmissions) - List all submissions
+
 ### [Subscription](docs/sdks/subscription/README.md)
 
 * [createPaymentSubscription](docs/sdks/subscription/README.md#createpaymentsubscription) - Create a subscription
@@ -1477,7 +1502,7 @@ if ($response->accountingAccount !== null) {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
-* [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment)
+* [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
@@ -1486,7 +1511,7 @@ if ($response->accountingAccount !== null) {
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
-* [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments)
+* [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
@@ -1495,7 +1520,7 @@ if ($response->accountingAccount !== null) {
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
-* [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment)
+* [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription

@@ -132,6 +132,12 @@ class UnifiedTo
 
     public Person $person;
 
+    public Forms $forms;
+
+    public Form $form;
+
+    public Submission $submission;
+
     public Genai $genai;
 
     public Embedding $embedding;
@@ -326,6 +332,9 @@ class UnifiedTo
         $this->pipeline = new Pipeline($this->sdkConfiguration);
         $this->enrich = new Enrich($this->sdkConfiguration);
         $this->person = new Person($this->sdkConfiguration);
+        $this->forms = new Forms($this->sdkConfiguration);
+        $this->form = new Form($this->sdkConfiguration);
+        $this->submission = new Submission($this->sdkConfiguration);
         $this->genai = new Genai($this->sdkConfiguration);
         $this->embedding = new Embedding($this->sdkConfiguration);
         $this->model = new Model($this->sdkConfiguration);

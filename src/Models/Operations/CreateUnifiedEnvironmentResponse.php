@@ -35,22 +35,22 @@ class CreateUnifiedEnvironmentResponse
     /**
      * Successful
      *
-     * @var ?array<string> $s
+     * @var ?array<string> $environments
      */
-    public ?array $s = null;
+    public ?array $environments = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<string>  $s
+     * @param  ?array<string>  $environments
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $s = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $environments = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->s = $s;
+        $this->environments = $environments;
     }
 }

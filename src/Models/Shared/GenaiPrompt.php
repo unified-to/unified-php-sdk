@@ -20,6 +20,16 @@ class GenaiPrompt
     public ?float $maxTokens = null;
 
     /**
+     * $mcpDeferredTools
+     *
+     * @var ?array<string> $mcpDeferredTools
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('mcp_deferred_tools')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $mcpDeferredTools = null;
+
+    /**
      *
      * @var ?string $mcpUrl
      */
@@ -83,6 +93,7 @@ class GenaiPrompt
 
     /**
      * @param  ?float  $maxTokens
+     * @param  ?array<string>  $mcpDeferredTools
      * @param  ?string  $mcpUrl
      * @param  ?array<GenaiContent>  $messages
      * @param  ?string  $modelId
@@ -92,9 +103,10 @@ class GenaiPrompt
      * @param  ?float  $tokensUsed
      * @phpstan-pure
      */
-    public function __construct(?float $maxTokens = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
+    public function __construct(?float $maxTokens = null, ?array $mcpDeferredTools = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
     {
         $this->maxTokens = $maxTokens;
+        $this->mcpDeferredTools = $mcpDeferredTools;
         $this->mcpUrl = $mcpUrl;
         $this->messages = $messages;
         $this->modelId = $modelId;

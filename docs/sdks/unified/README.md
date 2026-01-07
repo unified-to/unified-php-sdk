@@ -5,7 +5,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
-* [createUnifiedEnvironment](#createunifiedenvironment)
+* [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
@@ -14,7 +14,7 @@
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
-* [listUnifiedEnvironments](#listunifiedenvironments)
+* [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
@@ -23,7 +23,7 @@
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
-* [removeUnifiedEnvironment](#removeunifiedenvironment)
+* [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
@@ -85,6 +85,8 @@ if ($response->connection !== null) {
 
 ## createUnifiedEnvironment
 
+Create new environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="php" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
@@ -107,7 +109,7 @@ $response = $sdk->unified->createUnifiedEnvironment(
     request: $request
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```
@@ -530,6 +532,8 @@ if ($response->connections !== null) {
 
 ## listUnifiedEnvironments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="php" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -552,7 +556,7 @@ $response = $sdk->unified->listUnifiedEnvironments(
 
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```
@@ -976,6 +980,8 @@ if ($response->statusCode === 200) {
 
 ## removeUnifiedEnvironment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="php" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -1001,7 +1007,7 @@ $response = $sdk->unified->removeUnifiedEnvironment(
     request: $request
 );
 
-if ($response->s !== null) {
+if ($response->environments !== null) {
     // handle response
 }
 ```

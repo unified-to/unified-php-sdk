@@ -208,4 +208,8 @@ enum PropertyConnectionPermissions: string
     case AdsReportRead = 'ads_report_read';
     case AdsOrganizationRead = 'ads_organization_read';
     case AdsOrganizationWrite = 'ads_organization_write';
+    case FormsFormRead = 'forms_form_read';
+    case FormsFormWrite = 'forms_form_write';
+    case FormsSubmissionRead = 'forms_submission_read';
+    case FormsSubmissionWrite = 'forms_submission_write';
 }
