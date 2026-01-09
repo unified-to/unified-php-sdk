@@ -30,7 +30,7 @@ class ListAdsReportsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAdsReportsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -57,7 +57,7 @@ class ListAdsReportsRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      *
      * @var ?string $orgId
      */
@@ -95,7 +95,7 @@ class ListAdsReportsRequest
     public ?string $type = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -105,7 +105,7 @@ class ListAdsReportsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $campaignId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAdsReportsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

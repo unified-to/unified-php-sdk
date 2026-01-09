@@ -30,7 +30,7 @@ class CreateKmsPageRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateKmsPageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateKmsPageRequest
     /**
      * @param  Shared\KmsPage  $kmsPage
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateKmsPageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

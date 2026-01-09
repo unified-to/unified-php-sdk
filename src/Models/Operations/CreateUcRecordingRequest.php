@@ -30,7 +30,7 @@ class CreateUcRecordingRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateUcRecordingRequest
     /**
      * @param  Shared\UcRecording  $ucRecording
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

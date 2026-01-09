@@ -20,15 +20,7 @@ class ListAccountingTrialbalancesRequest
     public string $connectionId;
 
     /**
-     * The end date to filter by (deprecated)
-     *
-     * @var ?string $endLe
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
-    public ?string $endLe = null;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
      */
@@ -38,7 +30,7 @@ class ListAccountingTrialbalancesRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAccountingTrialbalancesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,7 +80,7 @@ class ListAccountingTrialbalancesRequest
     public ?string $sort = null;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $startGte
      */
@@ -96,7 +88,7 @@ class ListAccountingTrialbalancesRequest
     public ?string $startGte = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -105,9 +97,8 @@ class ListAccountingTrialbalancesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?string  $endLe
      * @param  ?string  $endLt
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAccountingTrialbalancesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -118,10 +109,9 @@ class ListAccountingTrialbalancesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLe = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
-        $this->endLe = $endLe;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;

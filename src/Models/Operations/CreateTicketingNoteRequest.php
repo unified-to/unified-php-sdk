@@ -30,7 +30,7 @@ class CreateTicketingNoteRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateTicketingNoteQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateTicketingNoteRequest
     /**
      * @param  Shared\TicketingNote  $ticketingNote
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateTicketingNoteQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

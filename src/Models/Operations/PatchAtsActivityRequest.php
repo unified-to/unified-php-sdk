@@ -38,7 +38,7 @@ class PatchAtsActivityRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchAtsActivityQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchAtsActivityRequest
      * @param  Shared\AtsActivity  $atsActivity
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchAtsActivityQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

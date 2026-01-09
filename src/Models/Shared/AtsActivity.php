@@ -64,14 +64,6 @@ class AtsActivity
     public ?string $description = null;
 
     /**
-     *
-     * @var ?string $documentId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('document_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $documentId = null;
-
-    /**
      * IDs for AtsDocument.get
      *
      * @var ?array<string> $documentIds
@@ -192,7 +184,6 @@ class AtsActivity
      * @param  ?array<AtsEmail>  $cc
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
-     * @param  ?string  $documentId
      * @param  ?array<string>  $documentIds
      * @param  ?PropertyAtsActivityFrom  $from
      * @param  ?string  $id
@@ -208,7 +199,7 @@ class AtsActivity
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $documentId = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;
@@ -216,7 +207,6 @@ class AtsActivity
         $this->cc = $cc;
         $this->createdAt = $createdAt;
         $this->description = $description;
-        $this->documentId = $documentId;
         $this->documentIds = $documentIds;
         $this->from = $from;
         $this->id = $id;

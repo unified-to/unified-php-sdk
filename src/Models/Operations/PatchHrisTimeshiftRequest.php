@@ -38,7 +38,7 @@ class PatchHrisTimeshiftRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchHrisTimeshiftQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchHrisTimeshiftRequest
      * @param  Shared\HrisTimeshift  $hrisTimeshift
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchHrisTimeshiftQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

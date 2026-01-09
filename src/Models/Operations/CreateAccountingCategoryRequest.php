@@ -30,7 +30,7 @@ class CreateAccountingCategoryRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAccountingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAccountingCategoryRequest
     /**
      * @param  Shared\AccountingCategory  $accountingCategory
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAccountingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

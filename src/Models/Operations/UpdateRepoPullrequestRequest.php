@@ -38,7 +38,7 @@ class UpdateRepoPullrequestRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateRepoPullrequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateRepoPullrequestRequest
      * @param  Shared\RepoPullrequest  $repoPullrequest
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateRepoPullrequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

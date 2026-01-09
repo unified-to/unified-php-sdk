@@ -38,7 +38,7 @@ class PatchTaskCommentRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchTaskCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchTaskCommentRequest
      * @param  Shared\TaskComment  $taskComment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchTaskCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

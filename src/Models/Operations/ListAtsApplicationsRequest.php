@@ -28,7 +28,7 @@ class ListAtsApplicationsRequest
     public ?string $candidateId = null;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -38,7 +38,7 @@ class ListAtsApplicationsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAtsApplicationsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -96,7 +96,7 @@ class ListAtsApplicationsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -107,7 +107,7 @@ class ListAtsApplicationsRequest
      * @param  string  $connectionId
      * @param  ?string  $candidateId
      * @param  ?string  $companyId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAtsApplicationsQueryParamFields>  $fields
      * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset

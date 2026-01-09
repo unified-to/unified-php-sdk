@@ -20,7 +20,7 @@ class ListAtsJobsRequest
     public string $connectionId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -30,7 +30,7 @@ class ListAtsJobsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAtsJobsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,7 +88,7 @@ class ListAtsJobsRequest
     public ?string $status = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -96,7 +96,7 @@ class ListAtsJobsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -106,7 +106,7 @@ class ListAtsJobsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAtsJobsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

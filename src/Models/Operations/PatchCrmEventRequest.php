@@ -39,7 +39,7 @@ class PatchCrmEventRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchCrmEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class PatchCrmEventRequest
      * @param  Shared\CrmEvent  $crmEvent
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchCrmEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

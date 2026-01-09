@@ -38,7 +38,7 @@ class PatchMessagingMessageRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchMessagingMessageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchMessagingMessageRequest
      * @param  Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchMessagingMessageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

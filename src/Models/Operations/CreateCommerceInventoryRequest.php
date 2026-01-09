@@ -30,7 +30,7 @@ class CreateCommerceInventoryRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateCommerceInventoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateCommerceInventoryRequest
     /**
      * @param  Shared\CommerceInventory  $commerceInventory
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateCommerceInventoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

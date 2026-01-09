@@ -38,7 +38,7 @@ class UpdateRepoBranchRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateRepoBranchQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateRepoBranchRequest
      * @param  Shared\RepoBranch  $repoBranch
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateRepoBranchQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -20,7 +20,7 @@ class ListLmsCoursesRequest
     public string $connectionId;
 
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      *
      * @var ?string $classId
      */
@@ -28,7 +28,7 @@ class ListLmsCoursesRequest
     public ?string $classId = null;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -36,17 +36,9 @@ class ListLmsCoursesRequest
     public ?string $companyId = null;
 
     /**
-     * The course ID to filter by
-     *
-     * @var ?string $courseId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=course_id')]
-    public ?string $courseId = null;
-
-    /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListLmsCoursesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -96,7 +88,7 @@ class ListLmsCoursesRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -107,8 +99,7 @@ class ListLmsCoursesRequest
      * @param  string  $connectionId
      * @param  ?string  $classId
      * @param  ?string  $companyId
-     * @param  ?string  $courseId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListLmsCoursesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -118,12 +109,11 @@ class ListLmsCoursesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->classId = $classId;
         $this->companyId = $companyId;
-        $this->courseId = $courseId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;

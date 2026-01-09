@@ -30,7 +30,7 @@ class CreatePaymentPaymentRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreatePaymentPaymentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreatePaymentPaymentRequest
     /**
      * @param  Shared\PaymentPayment  $paymentPayment
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreatePaymentPaymentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

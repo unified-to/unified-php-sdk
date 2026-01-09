@@ -30,13 +30,13 @@ class ListAdsAdsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAdsAdsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
     /**
-     * The group ID to filter by
+     * The group ID to filter by (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -65,7 +65,7 @@ class ListAdsAdsRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AdsOrganization)
      *
      * @var ?string $orgId
      */
@@ -96,7 +96,7 @@ class ListAdsAdsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -106,7 +106,7 @@ class ListAdsAdsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $campaignId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAdsAdsQueryParamFields>  $fields
      * @param  ?string  $groupId
      * @param  ?float  $limit
      * @param  ?float  $offset

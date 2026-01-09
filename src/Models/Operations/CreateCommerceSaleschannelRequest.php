@@ -30,7 +30,7 @@ class CreateCommerceSaleschannelRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateCommerceSaleschannelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateCommerceSaleschannelRequest
     /**
      * @param  Shared\CommerceSaleschannel  $commerceSaleschannel
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateCommerceSaleschannelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

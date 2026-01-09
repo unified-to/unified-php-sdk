@@ -30,7 +30,7 @@ class GetRepoOrganizationRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetRepoOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetRepoOrganizationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetRepoOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

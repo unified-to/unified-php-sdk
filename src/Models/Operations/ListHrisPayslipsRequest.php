@@ -20,7 +20,7 @@ class ListHrisPayslipsRequest
     public string $connectionId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -30,7 +30,7 @@ class ListHrisPayslipsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListHrisPayslipsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -80,7 +80,7 @@ class ListHrisPayslipsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -88,7 +88,7 @@ class ListHrisPayslipsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -98,7 +98,7 @@ class ListHrisPayslipsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListHrisPayslipsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

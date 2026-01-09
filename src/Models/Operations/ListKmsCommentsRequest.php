@@ -22,7 +22,7 @@ class ListKmsCommentsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListKmsCommentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -49,7 +49,7 @@ class ListKmsCommentsRequest
     public ?string $order = null;
 
     /**
-     * The page ID to filter by
+     * The page ID to filter by (reference to KmsPage)
      *
      * @var ?string $pageId
      */
@@ -96,7 +96,7 @@ class ListKmsCommentsRequest
     public ?string $type = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -105,7 +105,7 @@ class ListKmsCommentsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListKmsCommentsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

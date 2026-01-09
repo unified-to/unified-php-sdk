@@ -20,7 +20,7 @@ class ListAccountingCashflowsRequest
     public string $connectionId;
 
     /**
-     * The category ID to filter by
+     * The category ID to filter by (reference to AccountingCategory)
      *
      * @var ?string $categoryId
      */
@@ -28,7 +28,7 @@ class ListAccountingCashflowsRequest
     public ?string $categoryId = null;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -36,15 +36,7 @@ class ListAccountingCashflowsRequest
     public ?string $contactId = null;
 
     /**
-     * The end date to filter by (deprecated)
-     *
-     * @var ?string $endLe
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
-    public ?string $endLe = null;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
      */
@@ -54,7 +46,7 @@ class ListAccountingCashflowsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAccountingCashflowsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -104,7 +96,7 @@ class ListAccountingCashflowsRequest
     public ?string $sort = null;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $startGte
      */
@@ -112,7 +104,7 @@ class ListAccountingCashflowsRequest
     public ?string $startGte = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -123,9 +115,8 @@ class ListAccountingCashflowsRequest
      * @param  string  $connectionId
      * @param  ?string  $categoryId
      * @param  ?string  $contactId
-     * @param  ?string  $endLe
      * @param  ?string  $endLt
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAccountingCashflowsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -136,12 +127,11 @@ class ListAccountingCashflowsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLe = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->categoryId = $categoryId;
         $this->contactId = $contactId;
-        $this->endLe = $endLe;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;

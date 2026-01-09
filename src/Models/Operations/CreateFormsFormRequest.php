@@ -30,7 +30,7 @@ class CreateFormsFormRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateFormsFormQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateFormsFormRequest
     /**
      * @param  Shared\FormsForm  $formsForm
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateFormsFormQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

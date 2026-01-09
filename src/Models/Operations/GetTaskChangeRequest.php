@@ -30,7 +30,7 @@ class GetTaskChangeRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetTaskChangeQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetTaskChangeRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetTaskChangeQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

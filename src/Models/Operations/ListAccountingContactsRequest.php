@@ -22,7 +22,7 @@ class ListAccountingContactsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAccountingContactsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -49,7 +49,7 @@ class ListAccountingContactsRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      *
      * @var ?string $orgId
      */
@@ -87,7 +87,7 @@ class ListAccountingContactsRequest
     public ?string $type = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -96,7 +96,7 @@ class ListAccountingContactsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAccountingContactsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

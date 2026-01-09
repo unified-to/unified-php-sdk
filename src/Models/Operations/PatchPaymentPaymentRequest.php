@@ -38,7 +38,7 @@ class PatchPaymentPaymentRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchPaymentPaymentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchPaymentPaymentRequest
      * @param  Shared\PaymentPayment  $paymentPayment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchPaymentPaymentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

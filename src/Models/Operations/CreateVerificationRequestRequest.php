@@ -30,7 +30,7 @@ class CreateVerificationRequestRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateVerificationRequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateVerificationRequestRequest
     /**
      * @param  Shared\VerificationRequest  $verificationRequest
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateVerificationRequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

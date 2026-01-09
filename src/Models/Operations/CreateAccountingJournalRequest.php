@@ -30,7 +30,7 @@ class CreateAccountingJournalRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAccountingJournalQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAccountingJournalRequest
     /**
      * @param  Shared\AccountingJournal  $accountingJournal
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAccountingJournalQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

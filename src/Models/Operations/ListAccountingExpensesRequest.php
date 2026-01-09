@@ -22,7 +22,7 @@ class ListAccountingExpensesRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAccountingExpensesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -72,7 +72,7 @@ class ListAccountingExpensesRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -80,7 +80,7 @@ class ListAccountingExpensesRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -89,7 +89,7 @@ class ListAccountingExpensesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAccountingExpensesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

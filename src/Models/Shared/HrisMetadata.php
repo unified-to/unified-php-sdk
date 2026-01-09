@@ -39,14 +39,6 @@ class HrisMetadata
 
     /**
      *
-     * @var ?string $key
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $key = null;
-
-    /**
-     *
      * @var ?string $namespace
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('namespace')]
@@ -63,14 +55,6 @@ class HrisMetadata
 
     /**
      *
-     * @var ?string $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $type = null;
-
-    /**
-     *
      * @var array<string, mixed>|string|float|bool|array<HrisMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
@@ -82,22 +66,18 @@ class HrisMetadata
      * @param  array<string, mixed>|string|float|bool|array<HrisMetadata1|string|float|bool>|null  $extraData
      * @param  ?HrisMetadataFormat  $format
      * @param  ?string  $id
-     * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
-     * @param  ?string  $type
      * @param  array<string, mixed>|string|float|bool|array<HrisMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(array|string|float|bool|null $extraData = null, ?HrisMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
+    public function __construct(array|string|float|bool|null $extraData = null, ?HrisMetadataFormat $format = null, ?string $id = null, ?string $namespace = null, ?string $slug = null, array|string|float|bool|null $value = null)
     {
         $this->extraData = $extraData;
         $this->format = $format;
         $this->id = $id;
-        $this->key = $key;
         $this->namespace = $namespace;
         $this->slug = $slug;
-        $this->type = $type;
         $this->value = $value;
     }
 }

@@ -38,7 +38,7 @@ class UpdateKmsCommentRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateKmsCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateKmsCommentRequest
      * @param  Shared\KmsComment  $kmsComment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateKmsCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

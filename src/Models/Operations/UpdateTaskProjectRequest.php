@@ -38,7 +38,7 @@ class UpdateTaskProjectRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateTaskProjectQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateTaskProjectRequest
      * @param  Shared\TaskProject  $taskProject
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateTaskProjectQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

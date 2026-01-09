@@ -31,7 +31,7 @@ class CreateCommerceCollectionRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateCommerceCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,7 +47,7 @@ class CreateCommerceCollectionRequest
     /**
      * @param  Shared\CommerceCollection  $commerceCollection
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateCommerceCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

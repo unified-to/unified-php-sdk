@@ -30,7 +30,7 @@ class GetCrmPipelineRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetCrmPipelineQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCrmPipelineRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetCrmPipelineQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

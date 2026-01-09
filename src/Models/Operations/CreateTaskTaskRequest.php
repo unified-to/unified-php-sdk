@@ -30,7 +30,7 @@ class CreateTaskTaskRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateTaskTaskQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateTaskTaskRequest
     /**
      * @param  Shared\TaskTask  $taskTask
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateTaskTaskQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

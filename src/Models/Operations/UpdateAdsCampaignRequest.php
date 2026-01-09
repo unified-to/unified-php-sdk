@@ -38,7 +38,7 @@ class UpdateAdsCampaignRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAdsCampaignQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateAdsCampaignRequest
      * @param  Shared\AdsCampaign  $adsCampaign
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAdsCampaignQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

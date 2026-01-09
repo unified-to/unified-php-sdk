@@ -22,7 +22,7 @@ class ListMartechMembersRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListMartechMembersQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -80,7 +80,7 @@ class ListMartechMembersRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -89,7 +89,7 @@ class ListMartechMembersRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListMartechMembersQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?string  $listId
      * @param  ?float  $offset

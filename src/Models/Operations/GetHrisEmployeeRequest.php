@@ -30,7 +30,7 @@ class GetHrisEmployeeRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetHrisEmployeeQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisEmployeeRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetHrisEmployeeQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

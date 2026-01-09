@@ -20,7 +20,7 @@ class ListRepoCommitsRequest
     public string $connectionId;
 
     /**
-     * The repo branch ID to filter by
+     * The repo branch ID to filter by (reference to RepoBranch)
      *
      * @var ?string $branchId
      */
@@ -30,7 +30,7 @@ class ListRepoCommitsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListRepoCommitsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -73,7 +73,7 @@ class ListRepoCommitsRequest
     public ?string $raw = null;
 
     /**
-     * The repo ID to filter by
+     * The repo ID to filter by (reference to RepoRepository)
      *
      * @var ?string $repoId
      */
@@ -88,7 +88,7 @@ class ListRepoCommitsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -98,7 +98,7 @@ class ListRepoCommitsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $branchId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListRepoCommitsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

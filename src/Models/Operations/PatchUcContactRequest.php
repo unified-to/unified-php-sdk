@@ -39,7 +39,7 @@ class PatchUcContactRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchUcContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class PatchUcContactRequest
      * @param  Shared\UcContact  $ucContact
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchUcContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

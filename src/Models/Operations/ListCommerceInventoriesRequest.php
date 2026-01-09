@@ -22,13 +22,13 @@ class ListCommerceInventoriesRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListCommerceInventoriesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
     /**
-     * The item variant ID to filter by
+     * The item variant ID to filter by (reference to CommerceItemVariant)
      *
      * @var ?string $itemVariantId
      */
@@ -43,7 +43,7 @@ class ListCommerceInventoriesRequest
     public ?float $limit = null;
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -88,7 +88,7 @@ class ListCommerceInventoriesRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -97,7 +97,7 @@ class ListCommerceInventoriesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListCommerceInventoriesQueryParamFields>  $fields
      * @param  ?string  $itemVariantId
      * @param  ?float  $limit
      * @param  ?string  $locationId

@@ -20,7 +20,7 @@ class ListHrisTimeshiftsRequest
     public string $connectionId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -28,15 +28,7 @@ class ListHrisTimeshiftsRequest
     public ?string $companyId = null;
 
     /**
-     * The end date to filter by (deprecated)
-     *
-     * @var ?string $endLe
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_le')]
-    public ?string $endLe = null;
-
-    /**
-     * The end date to filter by
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
      */
@@ -46,7 +38,7 @@ class ListHrisTimeshiftsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListHrisTimeshiftsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -59,7 +51,7 @@ class ListHrisTimeshiftsRequest
     public ?float $limit = null;
 
     /**
-     * The location ID to filter by
+     * The location ID to filter by (reference to HrisLocation)
      *
      * @var ?string $locationId
      */
@@ -104,7 +96,7 @@ class ListHrisTimeshiftsRequest
     public ?string $sort = null;
 
     /**
-     * The start date to filter by
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $startGte
      */
@@ -112,7 +104,7 @@ class ListHrisTimeshiftsRequest
     public ?string $startGte = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -120,7 +112,7 @@ class ListHrisTimeshiftsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -130,9 +122,8 @@ class ListHrisTimeshiftsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?string  $endLe
      * @param  ?string  $endLt
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListHrisTimeshiftsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?string  $locationId
      * @param  ?float  $offset
@@ -145,11 +136,10 @@ class ListHrisTimeshiftsRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $endLe = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
-        $this->endLe = $endLe;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;

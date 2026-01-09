@@ -38,7 +38,7 @@ class PatchHrisDeviceRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchHrisDeviceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchHrisDeviceRequest
      * @param  Shared\HrisDevice  $hrisDevice
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchHrisDeviceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

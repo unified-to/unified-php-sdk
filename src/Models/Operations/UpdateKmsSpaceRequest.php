@@ -38,7 +38,7 @@ class UpdateKmsSpaceRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateKmsSpaceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateKmsSpaceRequest
      * @param  Shared\KmsSpace  $kmsSpace
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateKmsSpaceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

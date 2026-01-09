@@ -22,7 +22,7 @@ class ListTaskCommentsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListTaskCommentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -72,7 +72,7 @@ class ListTaskCommentsRequest
     public ?string $sort = null;
 
     /**
-     * The task ID to filter by
+     * The task ID to filter by (reference to TaskTask)
      *
      * @var ?string $taskId
      */
@@ -80,7 +80,7 @@ class ListTaskCommentsRequest
     public ?string $taskId = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -89,7 +89,7 @@ class ListTaskCommentsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListTaskCommentsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

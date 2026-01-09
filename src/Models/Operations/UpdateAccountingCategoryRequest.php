@@ -38,7 +38,7 @@ class UpdateAccountingCategoryRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAccountingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateAccountingCategoryRequest
      * @param  Shared\AccountingCategory  $accountingCategory
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAccountingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

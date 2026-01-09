@@ -20,7 +20,7 @@ class ListPaymentPaymentsRequest
     public string $connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -30,13 +30,13 @@ class ListPaymentPaymentsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListPaymentPaymentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
     /**
-     * The invoice ID to filter by
+     * The invoice ID to filter by (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -88,7 +88,7 @@ class ListPaymentPaymentsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -98,7 +98,7 @@ class ListPaymentPaymentsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListPaymentPaymentsQueryParamFields>  $fields
      * @param  ?string  $invoiceId
      * @param  ?float  $limit
      * @param  ?float  $offset

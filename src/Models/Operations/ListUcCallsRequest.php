@@ -20,7 +20,7 @@ class ListUcCallsRequest
     public string $connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to UcContact)
      *
      * @var ?string $contactId
      */
@@ -30,7 +30,7 @@ class ListUcCallsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListUcCallsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -80,7 +80,7 @@ class ListUcCallsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -88,7 +88,7 @@ class ListUcCallsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -98,7 +98,7 @@ class ListUcCallsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListUcCallsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

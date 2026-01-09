@@ -20,7 +20,7 @@ class ListAccountingCreditmemoesRequest
     public string $connectionId;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -30,7 +30,7 @@ class ListAccountingCreditmemoesRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListAccountingCreditmemoesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -57,7 +57,7 @@ class ListAccountingCreditmemoesRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      *
      * @var ?string $orgId
      */
@@ -88,7 +88,7 @@ class ListAccountingCreditmemoesRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -98,7 +98,7 @@ class ListAccountingCreditmemoesRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListAccountingCreditmemoesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

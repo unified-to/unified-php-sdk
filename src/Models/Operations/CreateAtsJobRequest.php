@@ -30,7 +30,7 @@ class CreateAtsJobRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAtsJobQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAtsJobRequest
     /**
      * @param  Shared\AtsJob  $atsJob
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAtsJobQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

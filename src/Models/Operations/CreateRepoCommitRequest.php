@@ -30,7 +30,7 @@ class CreateRepoCommitRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateRepoCommitQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateRepoCommitRequest
     /**
      * @param  Shared\RepoCommit  $repoCommit
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateRepoCommitQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

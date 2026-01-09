@@ -38,7 +38,7 @@ class PatchRepoOrganizationRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchRepoOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchRepoOrganizationRequest
      * @param  Shared\RepoOrganization  $repoOrganization
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchRepoOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

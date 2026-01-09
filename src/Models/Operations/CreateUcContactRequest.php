@@ -31,7 +31,7 @@ class CreateUcContactRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateUcContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,7 +47,7 @@ class CreateUcContactRequest
     /**
      * @param  Shared\UcContact  $ucContact
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateUcContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

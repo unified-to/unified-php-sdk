@@ -38,7 +38,7 @@ class UpdateAtsInterviewRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAtsInterviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateAtsInterviewRequest
      * @param  Shared\AtsInterview  $atsInterview
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAtsInterviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

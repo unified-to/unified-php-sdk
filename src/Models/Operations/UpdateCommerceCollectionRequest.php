@@ -39,7 +39,7 @@ class UpdateCommerceCollectionRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateCommerceCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class UpdateCommerceCollectionRequest
      * @param  Shared\CommerceCollection  $commerceCollection
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateCommerceCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

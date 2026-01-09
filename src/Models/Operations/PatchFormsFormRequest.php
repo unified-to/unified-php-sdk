@@ -38,7 +38,7 @@ class PatchFormsFormRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchFormsFormQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchFormsFormRequest
      * @param  Shared\FormsForm  $formsForm
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchFormsFormQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -56,16 +56,6 @@ class AtsJob
     public ?\DateTime $createdAt = null;
 
     /**
-     * @deprecated Use `groups` instead
-     *
-     * @var ?array<string> $departments
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('departments')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $departments = null;
-
-    /**
      *
      * @var ?string $description
      */
@@ -261,7 +251,6 @@ class AtsJob
      * @param  ?string  $companyId
      * @param  ?array<AtsCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<string>  $departments
      * @param  ?string  $description
      * @param  ?EmploymentType  $employmentType
      * @param  ?array<AtsGroup>  $groups
@@ -285,14 +274,13 @@ class AtsJob
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?array $departments = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?array $metadata = null, ?string $minimumDegree = null, ?float $minimumExperienceYears = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?array $skills = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?string $id = null, ?string $languageLocale = null, ?array $metadata = null, ?string $minimumDegree = null, ?float $minimumExperienceYears = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?array $skills = null, ?AtsJobStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->addresses = $addresses;
         $this->closedAt = $closedAt;
         $this->companyId = $companyId;
         $this->compensation = $compensation;
         $this->createdAt = $createdAt;
-        $this->departments = $departments;
         $this->description = $description;
         $this->employmentType = $employmentType;
         $this->groups = $groups;

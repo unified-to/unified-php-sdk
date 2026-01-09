@@ -30,7 +30,7 @@ class CreateGenaiPromptRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateGenaiPromptQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateGenaiPromptRequest
     /**
      * @param  Shared\GenaiPrompt  $genaiPrompt
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateGenaiPromptQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

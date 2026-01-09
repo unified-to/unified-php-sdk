@@ -30,7 +30,7 @@ class CreatePaymentSubscriptionRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreatePaymentSubscriptionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreatePaymentSubscriptionRequest
     /**
      * @param  Shared\PaymentSubscription  $paymentSubscription
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreatePaymentSubscriptionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

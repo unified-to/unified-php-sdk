@@ -31,7 +31,7 @@ class CreateCrmEventRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateCrmEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,7 +47,7 @@ class CreateCrmEventRequest
     /**
      * @param  Shared\CrmEvent  $crmEvent
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateCrmEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

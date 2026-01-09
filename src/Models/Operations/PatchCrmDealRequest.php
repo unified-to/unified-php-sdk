@@ -39,7 +39,7 @@ class PatchCrmDealRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchCrmDealQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class PatchCrmDealRequest
      * @param  Shared\CrmDeal  $crmDeal
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchCrmDealQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

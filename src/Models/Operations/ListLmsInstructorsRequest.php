@@ -20,7 +20,7 @@ class ListLmsInstructorsRequest
     public string $connectionId;
 
     /**
-     * The class ID to filter by
+     * The class ID to filter by (reference to LmsClass)
      *
      * @var ?string $classId
      */
@@ -28,7 +28,7 @@ class ListLmsInstructorsRequest
     public ?string $classId = null;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -36,7 +36,7 @@ class ListLmsInstructorsRequest
     public ?string $companyId = null;
 
     /**
-     * The course ID to filter by
+     * The course ID to filter by (reference to Course)
      *
      * @var ?string $courseId
      */
@@ -46,7 +46,7 @@ class ListLmsInstructorsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListLmsInstructorsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -57,14 +57,6 @@ class ListLmsInstructorsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
-
-    /**
-     * The location ID to filter by
-     *
-     * @var ?string $locationId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
-    public ?string $locationId = null;
 
     /**
      *
@@ -104,7 +96,7 @@ class ListLmsInstructorsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -116,9 +108,8 @@ class ListLmsInstructorsRequest
      * @param  ?string  $classId
      * @param  ?string  $companyId
      * @param  ?string  $courseId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListLmsInstructorsQueryParamFields>  $fields
      * @param  ?float  $limit
-     * @param  ?string  $locationId
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
@@ -127,7 +118,7 @@ class ListLmsInstructorsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $classId = null, ?string $companyId = null, ?string $courseId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->classId = $classId;
@@ -135,7 +126,6 @@ class ListLmsInstructorsRequest
         $this->courseId = $courseId;
         $this->fields = $fields;
         $this->limit = $limit;
-        $this->locationId = $locationId;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;

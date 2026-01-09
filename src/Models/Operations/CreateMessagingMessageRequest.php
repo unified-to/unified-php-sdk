@@ -30,7 +30,7 @@ class CreateMessagingMessageRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateMessagingMessageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateMessagingMessageRequest
     /**
      * @param  Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateMessagingMessageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

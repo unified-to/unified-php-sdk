@@ -39,7 +39,7 @@ class PatchMartechListRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchMartechListQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class PatchMartechListRequest
      * @param  Shared\MarketingList  $marketingList
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchMartechListQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

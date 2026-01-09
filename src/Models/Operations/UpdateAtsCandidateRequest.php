@@ -38,7 +38,7 @@ class UpdateAtsCandidateRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAtsCandidateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateAtsCandidateRequest
      * @param  Shared\AtsCandidate  $atsCandidate
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAtsCandidateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

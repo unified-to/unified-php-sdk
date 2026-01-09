@@ -20,7 +20,7 @@ class ListCrmContactsRequest
     public string $connectionId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to CrmCompany)
      *
      * @var ?string $companyId
      */
@@ -28,7 +28,7 @@ class ListCrmContactsRequest
     public ?string $companyId = null;
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      *
      * @var ?string $dealId
      */
@@ -38,7 +38,7 @@ class ListCrmContactsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListCrmContactsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,7 +88,7 @@ class ListCrmContactsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -96,7 +96,7 @@ class ListCrmContactsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -107,7 +107,7 @@ class ListCrmContactsRequest
      * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?string  $dealId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListCrmContactsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

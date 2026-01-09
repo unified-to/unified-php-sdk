@@ -39,7 +39,7 @@ class UpdateCrmContactRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateCrmContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class UpdateCrmContactRequest
      * @param  Shared\CrmContact  $crmContact
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateCrmContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

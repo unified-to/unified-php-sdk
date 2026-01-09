@@ -38,7 +38,7 @@ class PatchAccountingJournalRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchAccountingJournalQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchAccountingJournalRequest
      * @param  Shared\AccountingJournal  $accountingJournal
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchAccountingJournalQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

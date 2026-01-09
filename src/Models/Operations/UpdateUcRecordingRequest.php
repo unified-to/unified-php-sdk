@@ -38,7 +38,7 @@ class UpdateUcRecordingRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateUcRecordingRequest
      * @param  Shared\UcRecording  $ucRecording
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -30,7 +30,7 @@ class GetCrmLeadRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetCrmLeadQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCrmLeadRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetCrmLeadQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

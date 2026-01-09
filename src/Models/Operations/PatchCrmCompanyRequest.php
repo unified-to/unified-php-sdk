@@ -39,7 +39,7 @@ class PatchCrmCompanyRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchCrmCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class PatchCrmCompanyRequest
      * @param  Shared\CrmCompany  $crmCompany
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchCrmCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

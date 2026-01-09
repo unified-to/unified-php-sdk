@@ -38,7 +38,7 @@ class UpdateTicketingCategoryRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateTicketingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateTicketingCategoryRequest
      * @param  Shared\TicketingCategory  $ticketingCategory
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateTicketingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

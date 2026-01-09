@@ -30,7 +30,7 @@ class CreateAdsGroupRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAdsGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAdsGroupRequest
     /**
      * @param  Shared\AdsGroup  $adsGroup
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAdsGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

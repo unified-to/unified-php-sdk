@@ -30,7 +30,7 @@ class GetCommerceReviewRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetCommerceReviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceReviewRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetCommerceReviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

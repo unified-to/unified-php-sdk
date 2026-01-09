@@ -38,7 +38,7 @@ class UpdateAccountingCreditmemoRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAccountingCreditmemoQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateAccountingCreditmemoRequest
      * @param  Shared\AccountingCreditmemo  $accountingCreditmemo
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAccountingCreditmemoQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

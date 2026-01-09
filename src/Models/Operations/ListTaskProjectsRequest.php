@@ -20,9 +20,17 @@ class ListTaskProjectsRequest
     public string $connectionId;
 
     /**
+     * The company ID to filter by (reference to HrisCompany)
+     *
+     * @var ?string $companyId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
+    public ?string $companyId = null;
+
+    /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListTaskProjectsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,14 +55,6 @@ class ListTaskProjectsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order')]
     public ?string $order = null;
-
-    /**
-     * The org ID to filter by
-     *
-     * @var ?string $orgId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
-    public ?string $orgId = null;
 
     /**
      * The parent ID to filter by
@@ -88,7 +88,7 @@ class ListTaskProjectsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -96,31 +96,41 @@ class ListTaskProjectsRequest
     public ?string $updatedGte = null;
 
     /**
+     * The user/employee ID to filter by (reference to HrisEmployee)
+     *
+     * @var ?string $userId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+
+    /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?string  $companyId
+     * @param  ?array<ListTaskProjectsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
-     * @param  ?string  $orgId
      * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $updatedGte
+     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
+        $this->companyId = $companyId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
-        $this->orgId = $orgId;
         $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
         $this->updatedGte = $updatedGte;
+        $this->userId = $userId;
     }
 }

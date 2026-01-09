@@ -30,7 +30,7 @@ class ListVerificationRequestsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListVerificationRequestsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,7 +88,7 @@ class ListVerificationRequestsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -98,7 +98,7 @@ class ListVerificationRequestsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $candidateId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListVerificationRequestsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

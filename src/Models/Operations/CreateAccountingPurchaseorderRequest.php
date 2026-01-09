@@ -30,7 +30,7 @@ class CreateAccountingPurchaseorderRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAccountingPurchaseorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAccountingPurchaseorderRequest
     /**
      * @param  Shared\AccountingPurchaseorder  $accountingPurchaseorder
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAccountingPurchaseorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

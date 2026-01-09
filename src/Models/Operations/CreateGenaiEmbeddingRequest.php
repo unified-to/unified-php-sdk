@@ -30,7 +30,7 @@ class CreateGenaiEmbeddingRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateGenaiEmbeddingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateGenaiEmbeddingRequest
     /**
      * @param  Shared\GenaiEmbedding  $genaiEmbedding
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateGenaiEmbeddingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

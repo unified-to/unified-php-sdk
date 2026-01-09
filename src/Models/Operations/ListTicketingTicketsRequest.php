@@ -30,7 +30,7 @@ class ListTicketingTicketsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListTicketingTicketsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -80,7 +80,7 @@ class ListTicketingTicketsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -88,7 +88,7 @@ class ListTicketingTicketsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -98,7 +98,7 @@ class ListTicketingTicketsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $customerId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListTicketingTicketsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

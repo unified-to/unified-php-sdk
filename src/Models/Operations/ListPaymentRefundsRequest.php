@@ -22,7 +22,7 @@ class ListPaymentRefundsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListPaymentRefundsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -49,7 +49,7 @@ class ListPaymentRefundsRequest
     public ?string $order = null;
 
     /**
-     * The payment ID to filter by
+     * The payment ID to filter by (reference to PaymentPayment)
      *
      * @var ?string $paymentId
      */
@@ -80,7 +80,7 @@ class ListPaymentRefundsRequest
     public ?string $sort = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -89,7 +89,7 @@ class ListPaymentRefundsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListPaymentRefundsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

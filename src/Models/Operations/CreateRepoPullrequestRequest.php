@@ -30,7 +30,7 @@ class CreateRepoPullrequestRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateRepoPullrequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateRepoPullrequestRequest
     /**
      * @param  Shared\RepoPullrequest  $repoPullrequest
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateRepoPullrequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

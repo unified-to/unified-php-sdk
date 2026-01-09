@@ -31,7 +31,7 @@ class CreateHrisDeductionRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateHrisDeductionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,7 +47,7 @@ class CreateHrisDeductionRequest
     /**
      * @param  Shared\HrisDeduction  $hrisDeduction
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateHrisDeductionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

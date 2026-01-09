@@ -38,7 +38,7 @@ class PatchAdsOrganizationRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchAdsOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchAdsOrganizationRequest
      * @param  Shared\AdsOrganization  $adsOrganization
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchAdsOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -30,7 +30,7 @@ class CreateAccountingTaxrateRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAccountingTaxrateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAccountingTaxrateRequest
     /**
      * @param  Shared\AccountingTaxrate  $accountingTaxrate
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAccountingTaxrateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

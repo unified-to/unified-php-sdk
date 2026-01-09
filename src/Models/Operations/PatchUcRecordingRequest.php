@@ -38,7 +38,7 @@ class PatchUcRecordingRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchUcRecordingRequest
      * @param  Shared\UcRecording  $ucRecording
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -71,22 +71,6 @@ class HrisEmployee
     public ?\DateTime $dateOfBirth = null;
 
     /**
-     *
-     * @var ?string $department
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('department')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $department = null;
-
-    /**
-     *
-     * @var ?string $division
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('division')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $division = null;
-
-    /**
      * $emails
      *
      * @var ?array<HrisEmail> $emails
@@ -206,14 +190,6 @@ class HrisEmployee
     #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $lastName = null;
-
-    /**
-     *
-     * @var ?string $location
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('location')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $location = null;
 
     /**
      * $locations
@@ -386,8 +362,6 @@ class HrisEmployee
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $dateOfBirth
-     * @param  ?string  $department
-     * @param  ?string  $division
      * @param  ?array<HrisEmail>  $emails
      * @param  ?string  $employeeNumber
      * @param  ?array<PropertyHrisEmployeeEmployeeRoles>  $employeeRoles
@@ -402,7 +376,6 @@ class HrisEmployee
      * @param  ?string  $imageUrl
      * @param  ?string  $languageLocale
      * @param  ?string  $lastName
-     * @param  ?string  $location
      * @param  ?array<HrisLocation>  $locations
      * @param  ?string  $managerId
      * @param  ?MaritalStatus  $maritalStatus
@@ -424,7 +397,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?string $department = null, ?string $division = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?string $location = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -433,8 +406,6 @@ class HrisEmployee
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->dateOfBirth = $dateOfBirth;
-        $this->department = $department;
-        $this->division = $division;
         $this->emails = $emails;
         $this->employeeNumber = $employeeNumber;
         $this->employeeRoles = $employeeRoles;
@@ -449,7 +420,6 @@ class HrisEmployee
         $this->imageUrl = $imageUrl;
         $this->languageLocale = $languageLocale;
         $this->lastName = $lastName;
-        $this->location = $location;
         $this->locations = $locations;
         $this->managerId = $managerId;
         $this->maritalStatus = $maritalStatus;

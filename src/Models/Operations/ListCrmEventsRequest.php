@@ -20,7 +20,7 @@ class ListCrmEventsRequest
     public string $connectionId;
 
     /**
-     * The company ID to filter by
+     * The company ID to filter by (reference to CrmCompany)
      *
      * @var ?string $companyId
      */
@@ -28,7 +28,7 @@ class ListCrmEventsRequest
     public ?string $companyId = null;
 
     /**
-     * The contact ID to filter by
+     * The contact ID to filter by (reference to CrmContact)
      *
      * @var ?string $contactId
      */
@@ -36,7 +36,7 @@ class ListCrmEventsRequest
     public ?string $contactId = null;
 
     /**
-     * The deal ID to filter by
+     * The deal ID to filter by (reference to CrmDeal)
      *
      * @var ?string $dealId
      */
@@ -46,13 +46,13 @@ class ListCrmEventsRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListCrmEventsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
 
     /**
-     * The CRM lead ID to filter by
+     * The CRM lead ID to filter by (reference to CrmLead)
      *
      * @var ?string $leadId
      */
@@ -111,7 +111,7 @@ class ListCrmEventsRequest
     public ?string $type = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -119,7 +119,7 @@ class ListCrmEventsRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -131,7 +131,7 @@ class ListCrmEventsRequest
      * @param  ?string  $companyId
      * @param  ?string  $contactId
      * @param  ?string  $dealId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListCrmEventsQueryParamFields>  $fields
      * @param  ?string  $leadId
      * @param  ?float  $limit
      * @param  ?float  $offset

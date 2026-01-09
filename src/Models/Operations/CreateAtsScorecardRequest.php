@@ -30,7 +30,7 @@ class CreateAtsScorecardRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAtsScorecardQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAtsScorecardRequest
     /**
      * @param  Shared\AtsScorecard  $atsScorecard
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAtsScorecardQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

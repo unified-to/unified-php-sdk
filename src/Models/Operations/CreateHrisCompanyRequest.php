@@ -30,7 +30,7 @@ class CreateHrisCompanyRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateHrisCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateHrisCompanyRequest
     /**
      * @param  Shared\HrisCompany  $hrisCompany
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateHrisCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

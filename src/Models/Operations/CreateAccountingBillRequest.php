@@ -30,7 +30,7 @@ class CreateAccountingBillRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateAccountingBillQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateAccountingBillRequest
     /**
      * @param  Shared\AccountingBill  $accountingBill
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateAccountingBillQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -30,7 +30,7 @@ class GetAccountingReportRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<GetAccountingReportQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingReportRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<GetAccountingReportQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

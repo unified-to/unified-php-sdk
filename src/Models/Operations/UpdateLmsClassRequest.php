@@ -38,7 +38,7 @@ class UpdateLmsClassRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateLmsClassQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdateLmsClassRequest
      * @param  Shared\LmsClass  $lmsClass
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateLmsClassQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -38,7 +38,7 @@ class UpdatePaymentLinkRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdatePaymentLinkQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class UpdatePaymentLinkRequest
      * @param  Shared\PaymentLink  $paymentLink
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdatePaymentLinkQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

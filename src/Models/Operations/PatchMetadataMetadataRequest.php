@@ -38,7 +38,7 @@ class PatchMetadataMetadataRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchMetadataMetadataQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchMetadataMetadataRequest
      * @param  Shared\MetadataMetadata  $metadataMetadata
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchMetadataMetadataQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

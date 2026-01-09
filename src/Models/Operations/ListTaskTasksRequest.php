@@ -22,7 +22,7 @@ class ListTaskTasksRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListTaskTasksQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -57,7 +57,7 @@ class ListTaskTasksRequest
     public ?string $parentId = null;
 
     /**
-     * The project ID to filter by
+     * The project ID to filter by (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -96,7 +96,7 @@ class ListTaskTasksRequest
     public ?string $status = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -104,7 +104,7 @@ class ListTaskTasksRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by
+     * The user/employee ID to filter by (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -113,7 +113,7 @@ class ListTaskTasksRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListTaskTasksQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

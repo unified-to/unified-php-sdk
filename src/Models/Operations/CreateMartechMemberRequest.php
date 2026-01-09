@@ -31,7 +31,7 @@ class CreateMartechMemberRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateMartechMemberQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -47,7 +47,7 @@ class CreateMartechMemberRequest
     /**
      * @param  Shared\MarketingMember  $marketingMember
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateMartechMemberQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

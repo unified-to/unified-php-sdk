@@ -39,7 +39,7 @@ class UpdateAccountingAccountRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<UpdateAccountingAccountQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -56,7 +56,7 @@ class UpdateAccountingAccountRequest
      * @param  Shared\AccountingAccount  $accountingAccount
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<UpdateAccountingAccountQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

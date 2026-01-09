@@ -38,7 +38,7 @@ class PatchLmsInstructorRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchLmsInstructorQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchLmsInstructorRequest
      * @param  Shared\LmsInstructor  $lmsInstructor
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchLmsInstructorQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

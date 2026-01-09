@@ -22,7 +22,7 @@ class ListTaskChangesRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<ListTaskChangesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -72,7 +72,7 @@ class ListTaskChangesRequest
     public ?string $sort = null;
 
     /**
-     * The task ID to filter by
+     * The task ID to filter by (reference to TaskTask)
      *
      * @var ?string $taskId
      */
@@ -80,7 +80,7 @@ class ListTaskChangesRequest
     public ?string $taskId = null;
 
     /**
-     * Return only results whose updated date is equal or greater to this value
+     * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
      */
@@ -89,7 +89,7 @@ class ListTaskChangesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<ListTaskChangesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

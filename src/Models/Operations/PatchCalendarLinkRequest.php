@@ -38,7 +38,7 @@ class PatchCalendarLinkRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<PatchCalendarLinkQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -55,7 +55,7 @@ class PatchCalendarLinkRequest
      * @param  Shared\CalendarLink  $calendarLink
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<string>  $fields
+     * @param  ?array<PatchCalendarLinkQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

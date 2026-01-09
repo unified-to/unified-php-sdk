@@ -30,7 +30,7 @@ class CreateKmsSpaceRequest
     /**
      * Comma-delimited fields to return
      *
-     * @var ?array<string> $fields
+     * @var ?array<CreateKmsSpaceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class CreateKmsSpaceRequest
     /**
      * @param  Shared\KmsSpace  $kmsSpace
      * @param  string  $connectionId
-     * @param  ?array<string>  $fields
+     * @param  ?array<CreateKmsSpaceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */
