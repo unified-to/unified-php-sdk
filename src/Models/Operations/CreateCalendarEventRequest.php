@@ -28,7 +28,7 @@ class CreateCalendarEventRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateCalendarEventQueryParamFields> $fields
      */

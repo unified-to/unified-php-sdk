@@ -28,7 +28,7 @@ class GetUcCallRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetUcCallQueryParamFields> $fields
      */

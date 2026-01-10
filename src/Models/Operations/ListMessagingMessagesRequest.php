@@ -44,7 +44,7 @@ class ListMessagingMessagesRequest
     public ?bool $expand = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListMessagingMessagesQueryParamFields> $fields
      */

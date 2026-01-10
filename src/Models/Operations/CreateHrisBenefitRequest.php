@@ -29,7 +29,7 @@ class CreateHrisBenefitRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateHrisBenefitQueryParamFields> $fields
      */

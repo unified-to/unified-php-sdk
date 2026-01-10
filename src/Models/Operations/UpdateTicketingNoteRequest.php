@@ -36,7 +36,7 @@ class UpdateTicketingNoteRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateTicketingNoteQueryParamFields> $fields
      */

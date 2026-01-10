@@ -36,6 +36,7 @@ enum ObjectType: string
     case PaymentRefund = 'payment_refund';
     case PaymentSubscription = 'payment_subscription';
     case CommerceItem = 'commerce_item';
+    case CommerceItemvariant = 'commerce_itemvariant';
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';
     case CommerceLocation = 'commerce_location';

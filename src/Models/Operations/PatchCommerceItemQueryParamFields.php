@@ -18,6 +18,7 @@ enum PatchCommerceItemQueryParamFields: string
     case PublicName = 'public_name';
     case Slug = 'slug';
     case Description = 'description';
+    case TaxrateId = 'taxrate_id';
     case GlobalCode = 'global_code';
     case PublicDescription = 'public_description';
     case IsActive = 'is_active';

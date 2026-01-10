@@ -28,7 +28,7 @@ class GetCalendarCalendarRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetCalendarCalendarQueryParamFields> $fields
      */

@@ -36,7 +36,7 @@ class PatchAccountingCreditmemoRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchAccountingCreditmemoQueryParamFields> $fields
      */

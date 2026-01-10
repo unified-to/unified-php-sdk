@@ -28,7 +28,7 @@ class GetAccountingTransactionRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAccountingTransactionQueryParamFields> $fields
      */

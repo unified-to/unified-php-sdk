@@ -28,7 +28,7 @@ class CreateAccountingCategoryRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateAccountingCategoryQueryParamFields> $fields
      */

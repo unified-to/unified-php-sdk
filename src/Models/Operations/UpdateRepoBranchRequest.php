@@ -36,7 +36,7 @@ class UpdateRepoBranchRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateRepoBranchQueryParamFields> $fields
      */

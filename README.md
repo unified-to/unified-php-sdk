@@ -478,36 +478,42 @@ if ($response->accountingAccount !== null) {
 * [createCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [createCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
+* [createCommerceItemvariant](docs/sdks/commerce/README.md#createcommerceitemvariant) - Create an itemvariant
 * [createCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
 * [createCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [createCommerceSaleschannel](docs/sdks/commerce/README.md#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
+* [getCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [listCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
+* [listCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
+* [patchCommerceItemvariant](docs/sdks/commerce/README.md#patchcommerceitemvariant) - Update an itemvariant
 * [patchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
 * [patchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [patchCommerceSaleschannel](docs/sdks/commerce/README.md#patchcommercesaleschannel) - Update a saleschannel
 * [removeCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
+* [removeCommerceItemvariant](docs/sdks/commerce/README.md#removecommerceitemvariant) - Remove an itemvariant
 * [removeCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
 * [removeCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [removeCommerceSaleschannel](docs/sdks/commerce/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
+* [updateCommerceItemvariant](docs/sdks/commerce/README.md#updatecommerceitemvariant) - Update an itemvariant
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
 * [updateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
@@ -892,6 +898,15 @@ if ($response->accountingAccount !== null) {
 * [patchCommerceItem](docs/sdks/item/README.md#patchcommerceitem) - Update an item
 * [removeCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
 * [updateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
+
+### [Itemvariant](docs/sdks/itemvariant/README.md)
+
+* [createCommerceItemvariant](docs/sdks/itemvariant/README.md#createcommerceitemvariant) - Create an itemvariant
+* [getCommerceItemvariant](docs/sdks/itemvariant/README.md#getcommerceitemvariant) - Retrieve an itemvariant
+* [listCommerceItemvariants](docs/sdks/itemvariant/README.md#listcommerceitemvariants) - List all itemvariants
+* [patchCommerceItemvariant](docs/sdks/itemvariant/README.md#patchcommerceitemvariant) - Update an itemvariant
+* [removeCommerceItemvariant](docs/sdks/itemvariant/README.md#removecommerceitemvariant) - Remove an itemvariant
+* [updateCommerceItemvariant](docs/sdks/itemvariant/README.md#updatecommerceitemvariant) - Update an itemvariant
 
 ### [Job](docs/sdks/job/README.md)
 

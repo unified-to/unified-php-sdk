@@ -28,7 +28,7 @@ class GetCommerceCollectionRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetCommerceCollectionQueryParamFields> $fields
      */

@@ -28,7 +28,7 @@ class ListLmsClassesRequest
     public ?string $courseId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListLmsClassesQueryParamFields> $fields
      */

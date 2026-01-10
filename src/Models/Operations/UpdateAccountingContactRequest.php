@@ -36,7 +36,7 @@ class UpdateAccountingContactRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateAccountingContactQueryParamFields> $fields
      */

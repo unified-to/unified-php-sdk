@@ -28,7 +28,7 @@ class CreateVerificationRequestRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateVerificationRequestQueryParamFields> $fields
      */

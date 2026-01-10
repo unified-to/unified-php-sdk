@@ -28,7 +28,7 @@ class ListAdsGroupsRequest
     public ?string $campaignId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAdsGroupsQueryParamFields> $fields
      */

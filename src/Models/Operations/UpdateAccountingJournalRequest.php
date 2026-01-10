@@ -36,7 +36,7 @@ class UpdateAccountingJournalRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateAccountingJournalQueryParamFields> $fields
      */

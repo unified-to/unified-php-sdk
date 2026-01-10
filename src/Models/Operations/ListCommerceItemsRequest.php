@@ -28,7 +28,7 @@ class ListCommerceItemsRequest
     public ?string $collectionId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCommerceItemsQueryParamFields> $fields
      */

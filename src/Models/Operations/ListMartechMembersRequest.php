@@ -20,7 +20,7 @@ class ListMartechMembersRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListMartechMembersQueryParamFields> $fields
      */

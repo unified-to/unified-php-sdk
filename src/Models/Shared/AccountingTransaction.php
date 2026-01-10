@@ -20,14 +20,6 @@ class AccountingTransaction
     public ?string $accountId = null;
 
     /**
-     *
-     * @var ?string $contactId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $contactId = null;
-
-    /**
      * $contacts
      *
      * @var ?array<AccountingTransactionContact> $contacts
@@ -171,7 +163,6 @@ class AccountingTransaction
 
     /**
      * @param  ?string  $accountId
-     * @param  ?string  $contactId
      * @param  ?array<AccountingTransactionContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -191,10 +182,9 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
-        $this->contactId = $contactId;
         $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->currency = $currency;

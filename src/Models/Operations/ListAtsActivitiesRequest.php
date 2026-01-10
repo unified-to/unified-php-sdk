@@ -44,7 +44,7 @@ class ListAtsActivitiesRequest
     public ?string $documentId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAtsActivitiesQueryParamFields> $fields
      */

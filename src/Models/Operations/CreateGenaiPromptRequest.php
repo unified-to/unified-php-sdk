@@ -28,7 +28,7 @@ class CreateGenaiPromptRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateGenaiPromptQueryParamFields> $fields
      */

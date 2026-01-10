@@ -20,7 +20,7 @@ class ListCommerceSaleschannelsRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCommerceSaleschannelsQueryParamFields> $fields
      */

@@ -28,7 +28,7 @@ class GetLmsClassRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetLmsClassQueryParamFields> $fields
      */

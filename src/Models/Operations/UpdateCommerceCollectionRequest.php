@@ -37,7 +37,7 @@ class UpdateCommerceCollectionRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateCommerceCollectionQueryParamFields> $fields
      */

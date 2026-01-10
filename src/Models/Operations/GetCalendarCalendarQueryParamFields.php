@@ -17,7 +17,6 @@ enum GetCalendarCalendarQueryParamFields: string
     case Name = 'name';
     case Description = 'description';
     case Timezone = 'timezone';
-    case Primary = 'primary';
     case IsPrimary = 'is_primary';
     case Raw = 'raw';
 }

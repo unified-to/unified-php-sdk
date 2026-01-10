@@ -28,7 +28,7 @@ class CreateAccountingInvoiceRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateAccountingInvoiceQueryParamFields> $fields
      */

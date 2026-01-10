@@ -28,7 +28,7 @@ class GetUcRecordingRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetUcRecordingQueryParamFields> $fields
      */

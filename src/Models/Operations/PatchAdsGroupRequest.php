@@ -36,7 +36,7 @@ class PatchAdsGroupRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchAdsGroupQueryParamFields> $fields
      */

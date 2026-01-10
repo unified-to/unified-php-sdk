@@ -28,7 +28,7 @@ class CreateStorageFileRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateStorageFileQueryParamFields> $fields
      */

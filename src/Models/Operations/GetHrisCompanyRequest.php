@@ -28,7 +28,7 @@ class GetHrisCompanyRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetHrisCompanyQueryParamFields> $fields
      */

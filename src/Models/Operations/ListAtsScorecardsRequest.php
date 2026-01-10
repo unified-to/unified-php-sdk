@@ -36,7 +36,7 @@ class ListAtsScorecardsRequest
     public ?string $candidateId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAtsScorecardsQueryParamFields> $fields
      */

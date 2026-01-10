@@ -55,14 +55,6 @@ class CommerceMetadata
 
     /**
      *
-     * @var ?string $key
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('key')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $key = null;
-
-    /**
-     *
      * @var ?string $namespace
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('namespace')]
@@ -79,14 +71,6 @@ class CommerceMetadata
 
     /**
      *
-     * @var ?string $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $type = null;
-
-    /**
-     *
      * @var array<string, mixed>|string|float|bool|array<CommerceMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
@@ -100,24 +84,20 @@ class CommerceMetadata
      * @param  ?CommerceMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?bool  $isRequired
-     * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
-     * @param  ?string  $type
      * @param  array<string, mixed>|string|float|bool|array<CommerceMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, array|string|float|bool|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?bool $isRequired = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)
+    public function __construct(?string $description = null, array|string|float|bool|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?bool $isRequired = null, ?string $namespace = null, ?string $slug = null, array|string|float|bool|null $value = null)
     {
         $this->description = $description;
         $this->extraData = $extraData;
         $this->format = $format;
         $this->id = $id;
         $this->isRequired = $isRequired;
-        $this->key = $key;
         $this->namespace = $namespace;
         $this->slug = $slug;
-        $this->type = $type;
         $this->value = $value;
     }
 }

@@ -44,7 +44,7 @@ class ListCalendarEventsRequest
     public ?bool $expand = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCalendarEventsQueryParamFields> $fields
      */

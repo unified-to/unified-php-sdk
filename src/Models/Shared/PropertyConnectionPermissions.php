@@ -58,6 +58,8 @@ enum PropertyConnectionPermissions: string
     case PaymentSubscriptionWrite = 'payment_subscription_write';
     case CommerceItemRead = 'commerce_item_read';
     case CommerceItemWrite = 'commerce_item_write';
+    case CommerceItemvariantRead = 'commerce_itemvariant_read';
+    case CommerceItemvariantWrite = 'commerce_itemvariant_write';
     case CommerceCollectionRead = 'commerce_collection_read';
     case CommerceCollectionWrite = 'commerce_collection_write';
     case CommerceInventoryRead = 'commerce_inventory_read';

@@ -37,7 +37,7 @@ class PatchCommerceCollectionRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchCommerceCollectionQueryParamFields> $fields
      */

@@ -44,7 +44,7 @@ class ListCrmEventsRequest
     public ?string $dealId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCrmEventsQueryParamFields> $fields
      */

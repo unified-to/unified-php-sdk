@@ -28,7 +28,7 @@ class ListAccountingInvoicesRequest
     public ?string $contactId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAccountingInvoicesQueryParamFields> $fields
      */

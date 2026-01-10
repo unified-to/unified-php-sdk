@@ -36,7 +36,7 @@ class PatchRepoRepositoryRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchRepoRepositoryQueryParamFields> $fields
      */

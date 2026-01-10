@@ -20,7 +20,7 @@ class ListVerificationPackagesRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListVerificationPackagesQueryParamFields> $fields
      */

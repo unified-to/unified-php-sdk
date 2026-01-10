@@ -28,7 +28,7 @@ class ListVerificationRequestsRequest
     public ?string $candidateId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListVerificationRequestsQueryParamFields> $fields
      */

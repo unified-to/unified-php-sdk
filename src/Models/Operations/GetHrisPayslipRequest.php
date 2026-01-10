@@ -28,7 +28,7 @@ class GetHrisPayslipRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetHrisPayslipQueryParamFields> $fields
      */

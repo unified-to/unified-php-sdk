@@ -28,7 +28,7 @@ class GetAccountingOrganizationRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAccountingOrganizationQueryParamFields> $fields
      */

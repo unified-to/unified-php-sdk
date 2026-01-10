@@ -16,7 +16,6 @@ enum CreateKmsSpaceQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case Name = 'name';
     case Description = 'description';
-    case ParentSpaceId = 'parent_space_id';
     case ParentId = 'parent_id';
     case IsActive = 'is_active';
     case UserId = 'user_id';

@@ -28,7 +28,7 @@ class CreateAdsCampaignRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateAdsCampaignQueryParamFields> $fields
      */

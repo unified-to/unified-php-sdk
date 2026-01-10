@@ -36,7 +36,7 @@ class UpdateHrisGroupRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateHrisGroupQueryParamFields> $fields
      */

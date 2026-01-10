@@ -28,7 +28,7 @@ class GetAtsActivityRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAtsActivityQueryParamFields> $fields
      */

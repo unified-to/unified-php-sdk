@@ -161,6 +161,14 @@ class CommerceItem
 
     /**
      *
+     * @var ?string $taxrateId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $taxrateId = null;
+
+    /**
+     *
      * @var ?string $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
@@ -211,13 +219,14 @@ class CommerceItem
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
      * @param  ?array<string>  $tags
+     * @param  ?string  $taxrateId
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<CommerceItemVariant>  $variants
      * @param  ?string  $vendorName
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
@@ -236,6 +245,7 @@ class CommerceItem
         $this->raw = $raw;
         $this->slug = $slug;
         $this->tags = $tags;
+        $this->taxrateId = $taxrateId;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->variants = $variants;

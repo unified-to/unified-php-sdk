@@ -22,7 +22,6 @@ enum Fields: string
     case Currency = 'currency';
     case CustomerDefinedCode = 'customer_defined_code';
     case IsPayable = 'is_payable';
-    case ParentAccountId = 'parent_account_id';
     case Section = 'section';
     case Subsection = 'subsection';
     case Group = 'group';

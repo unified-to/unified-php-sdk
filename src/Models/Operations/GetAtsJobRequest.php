@@ -28,7 +28,7 @@ class GetAtsJobRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAtsJobQueryParamFields> $fields
      */

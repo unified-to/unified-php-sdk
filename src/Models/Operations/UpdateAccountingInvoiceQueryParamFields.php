@@ -35,7 +35,6 @@ enum UpdateAccountingInvoiceQueryParamFields: string
     case Status = 'status';
     case Url = 'url';
     case PaymentCollectionMethod = 'payment_collection_method';
-    case InvoiceAt = 'invoice_at';
     case Type = 'type';
     case Attachments = 'attachments';
     case Send = 'send';

@@ -36,7 +36,7 @@ class UpdateAccountingExpenseRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<UpdateAccountingExpenseQueryParamFields> $fields
      */

@@ -28,7 +28,7 @@ class GetPaymentRefundRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetPaymentRefundQueryParamFields> $fields
      */

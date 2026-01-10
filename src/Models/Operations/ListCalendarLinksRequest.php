@@ -20,7 +20,7 @@ class ListCalendarLinksRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCalendarLinksQueryParamFields> $fields
      */

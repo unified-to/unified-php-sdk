@@ -28,7 +28,7 @@ class ListAccountingTrialbalancesRequest
     public ?string $endLt = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAccountingTrialbalancesQueryParamFields> $fields
      */

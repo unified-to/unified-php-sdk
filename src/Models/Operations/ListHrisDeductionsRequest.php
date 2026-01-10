@@ -36,7 +36,7 @@ class ListHrisDeductionsRequest
     public ?string $companyId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListHrisDeductionsQueryParamFields> $fields
      */

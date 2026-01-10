@@ -28,7 +28,7 @@ class GetCommerceSaleschannelRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetCommerceSaleschannelQueryParamFields> $fields
      */

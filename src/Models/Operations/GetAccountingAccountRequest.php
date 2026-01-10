@@ -28,7 +28,7 @@ class GetAccountingAccountRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<QueryParamFields> $fields
      */

@@ -28,7 +28,7 @@ class CreateCommerceReviewRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateCommerceReviewQueryParamFields> $fields
      */

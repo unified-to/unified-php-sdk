@@ -28,7 +28,7 @@ class GetAccountingProfitlossRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAccountingProfitlossQueryParamFields> $fields
      */

@@ -28,7 +28,7 @@ class CreateAtsInterviewRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateAtsInterviewQueryParamFields> $fields
      */

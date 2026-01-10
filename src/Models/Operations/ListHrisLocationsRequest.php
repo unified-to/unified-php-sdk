@@ -28,7 +28,7 @@ class ListHrisLocationsRequest
     public ?string $companyId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListHrisLocationsQueryParamFields> $fields
      */

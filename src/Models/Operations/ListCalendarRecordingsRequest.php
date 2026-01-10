@@ -36,7 +36,7 @@ class ListCalendarRecordingsRequest
     public ?string $eventId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCalendarRecordingsQueryParamFields> $fields
      */

@@ -36,7 +36,7 @@ class PatchTaskTaskRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchTaskTaskQueryParamFields> $fields
      */

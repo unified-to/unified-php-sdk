@@ -36,7 +36,7 @@ class ListCrmDealsRequest
     public ?string $contactId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCrmDealsQueryParamFields> $fields
      */

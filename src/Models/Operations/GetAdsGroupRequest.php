@@ -28,7 +28,7 @@ class GetAdsGroupRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAdsGroupQueryParamFields> $fields
      */

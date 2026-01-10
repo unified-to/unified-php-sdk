@@ -28,7 +28,7 @@ class GetAccountingOrderRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetAccountingOrderQueryParamFields> $fields
      */

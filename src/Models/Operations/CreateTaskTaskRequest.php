@@ -28,7 +28,7 @@ class CreateTaskTaskRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateTaskTaskQueryParamFields> $fields
      */

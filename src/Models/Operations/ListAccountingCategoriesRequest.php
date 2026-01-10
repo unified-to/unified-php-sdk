@@ -20,7 +20,7 @@ class ListAccountingCategoriesRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAccountingCategoriesQueryParamFields> $fields
      */

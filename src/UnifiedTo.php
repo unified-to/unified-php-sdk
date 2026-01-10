@@ -114,6 +114,8 @@ class UnifiedTo
 
     public Item $item;
 
+    public Itemvariant $itemvariant;
+
     public Location $location;
 
     public Review $review;
@@ -323,6 +325,7 @@ class UnifiedTo
         $this->collection = new Collection($this->sdkConfiguration);
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
+        $this->itemvariant = new Itemvariant($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);

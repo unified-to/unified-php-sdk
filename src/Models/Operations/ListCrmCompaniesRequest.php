@@ -36,7 +36,7 @@ class ListCrmCompaniesRequest
     public ?string $dealId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListCrmCompaniesQueryParamFields> $fields
      */

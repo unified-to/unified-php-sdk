@@ -28,7 +28,7 @@ class ListTicketingTicketsRequest
     public ?string $customerId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListTicketingTicketsQueryParamFields> $fields
      */

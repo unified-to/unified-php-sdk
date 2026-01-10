@@ -28,7 +28,7 @@ class ListRepoCommitsRequest
     public ?string $branchId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListRepoCommitsQueryParamFields> $fields
      */

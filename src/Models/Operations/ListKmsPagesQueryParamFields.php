@@ -17,7 +17,6 @@ enum ListKmsPagesQueryParamFields: string
     case Title = 'title';
     case Type = 'type';
     case SpaceId = 'space_id';
-    case ParentPageId = 'parent_page_id';
     case ParentId = 'parent_id';
     case IsActive = 'is_active';
     case UserId = 'user_id';

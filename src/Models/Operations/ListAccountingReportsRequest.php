@@ -28,7 +28,7 @@ class ListAccountingReportsRequest
     public ?string $endLt = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAccountingReportsQueryParamFields> $fields
      */

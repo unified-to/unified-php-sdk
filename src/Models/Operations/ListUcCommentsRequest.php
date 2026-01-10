@@ -28,7 +28,7 @@ class ListUcCommentsRequest
     public ?string $callId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListUcCommentsQueryParamFields> $fields
      */

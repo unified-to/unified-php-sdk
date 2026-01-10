@@ -36,7 +36,7 @@ class ListAtsDocumentsRequest
     public ?string $candidateId = null;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListAtsDocumentsQueryParamFields> $fields
      */

@@ -36,7 +36,7 @@ class PatchAccountingCategoryRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<PatchAccountingCategoryQueryParamFields> $fields
      */

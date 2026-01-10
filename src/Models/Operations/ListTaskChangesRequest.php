@@ -20,7 +20,7 @@ class ListTaskChangesRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<ListTaskChangesQueryParamFields> $fields
      */

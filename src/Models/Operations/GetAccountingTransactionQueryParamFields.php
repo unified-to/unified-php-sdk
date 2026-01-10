@@ -18,7 +18,6 @@ enum GetAccountingTransactionQueryParamFields: string
     case TotalAmount = 'total_amount';
     case TaxAmount = 'tax_amount';
     case AccountId = 'account_id';
-    case ContactId = 'contact_id';
     case Reference = 'reference';
     case SubTotalAmount = 'sub_total_amount';
     case SplitAccountId = 'split_account_id';

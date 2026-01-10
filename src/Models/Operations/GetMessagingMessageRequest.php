@@ -28,7 +28,7 @@ class GetMessagingMessageRequest
     public string $id;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<GetMessagingMessageQueryParamFields> $fields
      */

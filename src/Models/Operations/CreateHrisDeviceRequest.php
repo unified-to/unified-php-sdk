@@ -28,7 +28,7 @@ class CreateHrisDeviceRequest
     public string $connectionId;
 
     /**
-     * Comma-delimited fields to return
+     * Fields to return
      *
      * @var ?array<CreateHrisDeviceQueryParamFields> $fields
      */
