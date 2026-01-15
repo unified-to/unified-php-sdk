@@ -36,12 +36,12 @@ enum ObjectType: string
     case PaymentRefund = 'payment_refund';
     case PaymentSubscription = 'payment_subscription';
     case CommerceItem = 'commerce_item';
-    case CommerceItemvariant = 'commerce_itemvariant';
     case CommerceCollection = 'commerce_collection';
     case CommerceInventory = 'commerce_inventory';
     case CommerceLocation = 'commerce_location';
     case CommerceReview = 'commerce_review';
     case CommerceSaleschannel = 'commerce_saleschannel';
+    case CommerceItemvariant = 'commerce_itemvariant';
     case VerificationPackage = 'verification_package';
     case VerificationRequest = 'verification_request';
     case AtsActivity = 'ats_activity';
@@ -120,4 +120,9 @@ enum ObjectType: string
     case AdsGroup = 'ads_group';
     case FormsForm = 'forms_form';
     case FormsSubmission = 'forms_submission';
+    case ShippingCarrier = 'shipping_carrier';
+    case ShippingRate = 'shipping_rate';
+    case ShippingShipment = 'shipping_shipment';
+    case ShippingLabel = 'shipping_label';
+    case ShippingTracking = 'shipping_tracking';
 }

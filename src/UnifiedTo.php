@@ -220,6 +220,18 @@ class UnifiedTo
 
     public User $user;
 
+    public Shipping $shipping;
+
+    public Carrier $carrier;
+
+    public Label $label;
+
+    public Rate $rate;
+
+    public Shipment $shipment;
+
+    public Tracking $tracking;
+
     public Storage $storage;
 
     public File $file;
@@ -378,6 +390,12 @@ class UnifiedTo
         $this->repository = new Repository($this->sdkConfiguration);
         $this->scim = new Scim($this->sdkConfiguration);
         $this->user = new User($this->sdkConfiguration);
+        $this->shipping = new Shipping($this->sdkConfiguration);
+        $this->carrier = new Carrier($this->sdkConfiguration);
+        $this->label = new Label($this->sdkConfiguration);
+        $this->rate = new Rate($this->sdkConfiguration);
+        $this->shipment = new Shipment($this->sdkConfiguration);
+        $this->tracking = new Tracking($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);

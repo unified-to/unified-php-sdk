@@ -292,9 +292,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMessagingEventRequest(
-    messagingEvent: new Shared\MessagingEvent(
-        type: Shared\MessagingEventType::ChannelJoined,
-    ),
+    messagingEvent: new Shared\MessagingEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -451,9 +449,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMessagingEventRequest(
-    messagingEvent: new Shared\MessagingEvent(
-        type: Shared\MessagingEventType::ChannelJoined,
-    ),
+    messagingEvent: new Shared\MessagingEvent(),
     connectionId: '<id>',
     id: '<id>',
 );

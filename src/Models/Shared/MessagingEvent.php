@@ -13,14 +13,6 @@ class MessagingEvent
 {
     /**
      *
-     * @var MessagingEventType $type
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MessagingEventType')]
-    public MessagingEventType $type;
-
-    /**
-     *
      * @var ?PropertyMessagingEventButton $button
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('button')]
@@ -55,6 +47,14 @@ class MessagingEvent
 
     /**
      *
+     * @var ?bool $isReplacingOriginal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_replacing_original')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isReplacingOriginal = null;
+
+    /**
+     *
      * @var ?PropertyMessagingEventMessage $message
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('message')]
@@ -74,6 +74,15 @@ class MessagingEvent
 
     /**
      *
+     * @var ?MessagingEventType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MessagingEventType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?MessagingEventType $type = null;
+
+    /**
+     *
      * @var ?PropertyMessagingEventUser $user
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user')]
@@ -82,25 +91,27 @@ class MessagingEvent
     public ?PropertyMessagingEventUser $user = null;
 
     /**
-     * @param  MessagingEventType  $type
      * @param  ?PropertyMessagingEventButton  $button
      * @param  ?PropertyMessagingEventChannel  $channel
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?bool  $isReplacingOriginal
      * @param  ?PropertyMessagingEventMessage  $message
      * @param  ?array<string, mixed>  $raw
+     * @param  ?MessagingEventType  $type
      * @param  ?PropertyMessagingEventUser  $user
      * @phpstan-pure
      */
-    public function __construct(MessagingEventType $type, ?PropertyMessagingEventButton $button = null, ?PropertyMessagingEventChannel $channel = null, ?\DateTime $createdAt = null, ?string $id = null, ?PropertyMessagingEventMessage $message = null, ?array $raw = null, ?PropertyMessagingEventUser $user = null)
+    public function __construct(?PropertyMessagingEventButton $button = null, ?PropertyMessagingEventChannel $channel = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isReplacingOriginal = null, ?PropertyMessagingEventMessage $message = null, ?array $raw = null, ?MessagingEventType $type = null, ?PropertyMessagingEventUser $user = null)
     {
-        $this->type = $type;
         $this->button = $button;
         $this->channel = $channel;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->isReplacingOriginal = $isReplacingOriginal;
         $this->message = $message;
         $this->raw = $raw;
+        $this->type = $type;
         $this->user = $user;
     }
 }

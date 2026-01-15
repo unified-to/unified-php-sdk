@@ -58,8 +58,6 @@ enum PropertyConnectionPermissions: string
     case PaymentSubscriptionWrite = 'payment_subscription_write';
     case CommerceItemRead = 'commerce_item_read';
     case CommerceItemWrite = 'commerce_item_write';
-    case CommerceItemvariantRead = 'commerce_itemvariant_read';
-    case CommerceItemvariantWrite = 'commerce_itemvariant_write';
     case CommerceCollectionRead = 'commerce_collection_read';
     case CommerceCollectionWrite = 'commerce_collection_write';
     case CommerceInventoryRead = 'commerce_inventory_read';
@@ -70,6 +68,8 @@ enum PropertyConnectionPermissions: string
     case CommerceReviewWrite = 'commerce_review_write';
     case CommerceSaleschannelRead = 'commerce_saleschannel_read';
     case CommerceSaleschannelWrite = 'commerce_saleschannel_write';
+    case CommerceItemvariantRead = 'commerce_itemvariant_read';
+    case CommerceItemvariantWrite = 'commerce_itemvariant_write';
     case VerificationPackageRead = 'verification_package_read';
     case VerificationRequestRead = 'verification_request_read';
     case VerificationRequestWrite = 'verification_request_write';
@@ -214,4 +214,11 @@ enum PropertyConnectionPermissions: string
     case FormsFormWrite = 'forms_form_write';
     case FormsSubmissionRead = 'forms_submission_read';
     case FormsSubmissionWrite = 'forms_submission_write';
+    case ShippingShipmentRead = 'shipping_shipment_read';
+    case ShippingShipmentWrite = 'shipping_shipment_write';
+    case ShippingLabelRead = 'shipping_label_read';
+    case ShippingLabelWrite = 'shipping_label_write';
+    case ShippingTrackingRead = 'shipping_tracking_read';
+    case ShippingRateRead = 'shipping_rate_read';
+    case ShippingCarrierRead = 'shipping_carrier_read';
 }

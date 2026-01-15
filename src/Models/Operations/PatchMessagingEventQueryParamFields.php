@@ -18,5 +18,6 @@ enum PatchMessagingEventQueryParamFields: string
     case Message = 'message';
     case Button = 'button';
     case User = 'user';
+    case IsReplacingOriginal = 'is_replacing_original';
     case Raw = 'raw';
 }

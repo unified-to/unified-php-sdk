@@ -36,4 +36,5 @@ enum PropertyConnectionCategories: string
     case Verification = 'verification';
     case Ads = 'ads';
     case Forms = 'forms';
+    case Shipping = 'shipping';
 }
