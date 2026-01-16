@@ -22,6 +22,7 @@ class MessagingMessage
     public ?array $attachments = null;
 
     /**
+     * for email systems, this field represents the From value
      *
      * @var ?PropertyMessagingMessageAuthorMember $authorMember
      */
@@ -77,7 +78,7 @@ class MessagingMessage
     public ?\DateTime $createdAt = null;
 
     /**
-     * $destinationMembers
+     * for email systems, this field represents the To value
      *
      * @var ?array<MessagingMember> $destinationMembers
      */
@@ -95,7 +96,7 @@ class MessagingMessage
     public ?bool $hasChildren = null;
 
     /**
-     * $hiddenMembers
+     * for email systems, this field represents the BCC value
      *
      * @var ?array<MessagingMember> $hiddenMembers
      */
@@ -121,7 +122,7 @@ class MessagingMessage
     public ?bool $isUnread = null;
 
     /**
-     * $mentionedMembers
+     * for email systems, this field represents the CC value
      *
      * @var ?array<MessagingMember> $mentionedMembers
      */

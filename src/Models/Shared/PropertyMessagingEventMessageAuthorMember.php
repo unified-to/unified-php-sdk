@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** PropertyMessagingEventMessageAuthorMember - for email systems, this field represents the From value */
 class PropertyMessagingEventMessageAuthorMember
 {
     /**

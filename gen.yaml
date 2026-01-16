@@ -11,6 +11,7 @@ generation:
     requestResponseComponentNamesFeb2024: false
     securityFeb2025: false
     sharedErrorComponentsApr2025: false
+    sharedNestedComponentsJan2026: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
@@ -26,7 +27,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.6.16
+  version: 1.6.17
   additionalDependencies:
     autoload: {}
     autoload-dev: {}
