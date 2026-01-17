@@ -65,6 +65,14 @@ class ListAdsGroupsRequest
     public ?string $orgId = null;
 
     /**
+     * The parent ID to filter by
+     *
+     * @var ?string $parentId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
+    public ?string $parentId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -103,13 +111,14 @@ class ListAdsGroupsRequest
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $orgId
+     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $campaignId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $campaignId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->campaignId = $campaignId;
@@ -118,6 +127,7 @@ class ListAdsGroupsRequest
         $this->offset = $offset;
         $this->order = $order;
         $this->orgId = $orgId;
+        $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

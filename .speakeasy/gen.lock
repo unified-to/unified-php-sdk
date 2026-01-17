@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 091d7b9c5c8337ec015b0663ff6edb22
+  docChecksum: efb9a6c3665234f4ced6bdd175a6f17e
   docVersion: "1.0"
-  speakeasyVersion: 1.686.0
+  speakeasyVersion: 1.687.1
   generationVersion: 2.796.1
-  releaseVersion: 1.6.17
-  configChecksum: 4dd7ffaec26ca9592abd74210fc015e7
+  releaseVersion: 1.6.18
+  configChecksum: ae8ab6191f93714a4de437a9c9a645fb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: f98caca6-c4f5-479f-845e-253e49f6340b
-  pristine_commit_hash: 02283f0e039d30f4cfd94b319e3f578e2809b46a
-  pristine_tree_hash: d20b78796523406c5c72c30ff4b8c46328f01445
+  generation_id: 7bc1cf77-69de-48c7-9b13-036fff3e881e
+  pristine_commit_hash: f4a1c5517a864fd9cb416117c7cb53590f64a241
+  pristine_tree_hash: 8de45c4bf31ec1446b2d58dd0535358533028717
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -2521,8 +2521,8 @@ trackedFiles:
     pristine_git_object: 24123b3fb5f38388389b3a97a925bc6333b163bc
   docs/Models/Operations/ListAccountingExpensesRequest.md:
     id: cf7d921c43fb
-    last_write_checksum: sha1:2a1ddfc519020700bc7911f8a5d596328be74c1e
-    pristine_git_object: b70547814c77eed8c57bc6a628d7d608679dfa26
+    last_write_checksum: sha1:ba86b96b14f295f70cb13a7f9bff509cdbcb8796
+    pristine_git_object: b2b53702aa9bafc1a5b2b4dde45f6df396ff491f
   docs/Models/Operations/ListAccountingExpensesResponse.md:
     id: 4c34440f2a34
     last_write_checksum: sha1:657fc6bd44e2a6c500f55837834c98950f392371
@@ -2689,8 +2689,8 @@ trackedFiles:
     pristine_git_object: b1a2c902470901b8d0d956930203affa2de9deb0
   docs/Models/Operations/ListAdsGroupsRequest.md:
     id: e0cc43666c52
-    last_write_checksum: sha1:0ecfae8c203f34559fb98f262309d296c5d0f9dd
-    pristine_git_object: aba08f1e5bf6ee377e18dd8478006ee08927fa40
+    last_write_checksum: sha1:93db635daae4f7c38af3dccf86d19453bb661370
+    pristine_git_object: 5d79c573475a3d750dea56520039e64325d14088
   docs/Models/Operations/ListAdsGroupsResponse.md:
     id: 7b85582453c5
     last_write_checksum: sha1:417286eb6159ede191d5b90089f05edfbec0a1fe
@@ -12577,8 +12577,8 @@ trackedFiles:
     pristine_git_object: 93308fdac2f3f0ba440cee9743165d513b41f178
   src/Models/Operations/ListAccountingExpensesRequest.php:
     id: 9bc567b8a828
-    last_write_checksum: sha1:3fc041e2457a4d908927891130c9100aa5f3c6f3
-    pristine_git_object: 1fde5d5c98f09ab4b37fd8a825fd570f8adff445
+    last_write_checksum: sha1:062b393d6f0c22b24964a1ade7f9b7c3ea94020f
+    pristine_git_object: b4d42e199072865ab8ef1c5fb2796cbd53206087
   src/Models/Operations/ListAccountingExpensesResponse.php:
     id: 9e24f3ffa8d5
     last_write_checksum: sha1:832570e92f3fc08d76ecd181449a29ea7756a061
@@ -12745,8 +12745,8 @@ trackedFiles:
     pristine_git_object: 743968f14d6a51530e917f99221485efb5bef50c
   src/Models/Operations/ListAdsGroupsRequest.php:
     id: ae4951b6771d
-    last_write_checksum: sha1:024211ae2ea338d7aa14fb3ad96043f39fa1ee41
-    pristine_git_object: 8691300a1be00fcc11302320c6768969f81a315d
+    last_write_checksum: sha1:87337c6eb009183cb7fd4b321955f662f83454f1
+    pristine_git_object: 68542fd6688f3b46f993860ab50bcfb5506f68e7
   src/Models/Operations/ListAdsGroupsResponse.php:
     id: e3d86cefc6dc
     last_write_checksum: sha1:31e3a13ecfb44a72007295fba0ab2b18f6c71a66
@@ -19233,8 +19233,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:2908b0dc7969dfd7b1aad475a2430efcfb2f6b70
-    pristine_git_object: 7a76c0a1d4349f948d51d05db5f6a5788a70988b
+    last_write_checksum: sha1:6744deddbf1a9fecd40e61db58bc9712a79b64c2
+    pristine_git_object: f111bf5318dd3562f239ea7f9095ca092141fbe5
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -24851,7 +24851,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->event->patchMessagingEvent()`: \n  *  `request->fields` **Changed**\n* `unified-to->event->updateMessagingEvent()`: \n  *  `request->fields` **Changed**\n* `unified-to->messaging->patchMessagingEvent()`: \n  *  `request->fields` **Changed**\n* `unified-to->messaging->updateMessagingEvent()`: \n  *  `request->fields` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->listAccountingExpenses()`:  `request` **Changed**\n* `unified-to->expense->listAccountingExpenses()`:  `request` **Changed**\n* `unified-to->ads->listAdsGroups()`: \n  *  `request->parentId` **Added**\n* `unified-to->group->listAdsGroups()`: \n  *  `request->parentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
