@@ -23,6 +23,7 @@ enum UpdateCrmDealQueryParamFields: string
     case StageId = 'stage_id';
     case Pipeline = 'pipeline';
     case PipelineId = 'pipeline_id';
+    case Stages = 'stages';
     case Source = 'source';
     case Probability = 'probability';
     case Tags = 'tags';
@@ -33,4 +34,5 @@ enum UpdateCrmDealQueryParamFields: string
     case CompanyIds = 'company_ids';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case Pipelines = 'pipelines';
 }

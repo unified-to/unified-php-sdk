@@ -123,6 +123,16 @@ class CrmDeal
     public ?string $pipelineId = null;
 
     /**
+     * $pipelines
+     *
+     * @var ?array<CrmReference> $pipelines
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('pipelines')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $pipelines = null;
+
+    /**
      *
      * @var ?float $probability
      */
@@ -163,6 +173,16 @@ class CrmDeal
     #[\Speakeasy\Serializer\Annotation\SerializedName('stage_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $stageId = null;
+
+    /**
+     * $stages
+     *
+     * @var ?array<CrmReference> $stages
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('stages')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $stages = null;
 
     /**
      * $tags
@@ -212,18 +232,20 @@ class CrmDeal
      * @param  ?string  $name
      * @param  ?string  $pipeline
      * @param  ?string  $pipelineId
+     * @param  ?array<CrmReference>  $pipelines
      * @param  ?float  $probability
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
      * @param  ?string  $stage
      * @param  ?string  $stageId
+     * @param  ?array<CrmReference>  $stages
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?array $pipelines = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $stages = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
@@ -238,11 +260,13 @@ class CrmDeal
         $this->name = $name;
         $this->pipeline = $pipeline;
         $this->pipelineId = $pipelineId;
+        $this->pipelines = $pipelines;
         $this->probability = $probability;
         $this->raw = $raw;
         $this->source = $source;
         $this->stage = $stage;
         $this->stageId = $stageId;
+        $this->stages = $stages;
         $this->tags = $tags;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
