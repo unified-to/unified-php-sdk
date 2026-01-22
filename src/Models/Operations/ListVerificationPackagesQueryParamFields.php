@@ -28,5 +28,6 @@ enum ListVerificationPackagesQueryParamFields: string
     case Currency = 'currency';
     case MaxScore = 'max_score';
     case InfoUrl = 'info_url';
+    case ValidRegions = 'valid_regions';
     case Raw = 'raw';
 }

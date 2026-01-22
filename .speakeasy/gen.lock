@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: ffa471bd7fa4f3990f03aef2cc210f38
+  docChecksum: 8871ab86c0b3e5ad56d0c55ebdf768e9
   docVersion: "1.0"
-  speakeasyVersion: 1.689.0
-  generationVersion: 2.796.4
-  releaseVersion: 1.6.19
-  configChecksum: f1986c81be9b6a95a966253aa14dd5d1
+  speakeasyVersion: 1.692.0
+  generationVersion: 2.797.1
+  releaseVersion: 1.6.20
+  configChecksum: 810e6ba7c838ff26d0066eb2b3231ccc
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 5f986dad-ad94-4005-b3cf-b2a1c8fe223c
-  pristine_commit_hash: b5b386c4a053ee009326e8b4518305d0bbb187d7
-  pristine_tree_hash: d718054a459dd1960ba36c9c181f3e225dc7268b
+  generation_id: 9e6053ec-0fb9-4deb-a56b-4ff478577495
+  pristine_commit_hash: 06422bf89acf01e70b4604be70f91cb6783eff0d
+  pristine_tree_hash: 1c2773ff21075c77966b91fe2ed788adfc774872
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -2409,8 +2409,8 @@ trackedFiles:
     pristine_git_object: a7d06ef306622c832c75fac3cb850c1e25e3c481
   docs/Models/Operations/GetVerificationPackageQueryParamFields.md:
     id: 0b28a93e7afa
-    last_write_checksum: sha1:2ff147c3432f9ca0ccd87dc69036683a26f80410
-    pristine_git_object: 0f479a92342e46eef36afc9784297f97f378b69a
+    last_write_checksum: sha1:8a56a6b6748183d1ece8d02b630f8a092f7b2c07
+    pristine_git_object: 00d9abf20737c2012250ced060ace9e7330054e6
   docs/Models/Operations/GetVerificationPackageRequest.md:
     id: e9d0521109be
     last_write_checksum: sha1:d78bd8502764bb1ec95e55922eb14f6ffe7f7d07
@@ -3765,8 +3765,8 @@ trackedFiles:
     pristine_git_object: 203ef7586e02dd9aa4f17b109927b4fee5d18749
   docs/Models/Operations/ListVerificationPackagesQueryParamFields.md:
     id: 359fdd22a2b3
-    last_write_checksum: sha1:a97e2d4d605eb7fc2bba19f6f7ff1713d2d5de84
-    pristine_git_object: 9e64d977178f9d75d5096a1de3970e3152430e63
+    last_write_checksum: sha1:27aef7c79f33d198d28e8adfd7e17e4a2b46262e
+    pristine_git_object: 71f44cb8c498f972db4df36fe22d61b2037354e8
   docs/Models/Operations/ListVerificationPackagesRequest.md:
     id: ada319ea1feb
     last_write_checksum: sha1:1327c4bb7a738e27f565f2902c0d441d0891aa82
@@ -8981,8 +8981,8 @@ trackedFiles:
     pristine_git_object: e7ffbd91c7de0d5194bc0585d6ce1d82edd411f3
   docs/Models/Shared/VerificationPackage.md:
     id: 59a6a0e3badd
-    last_write_checksum: sha1:4a491ef21298196e952eab23c3bec3f30abf1868
-    pristine_git_object: 2e68dcf771e0c7e7588dd55347f167c13b13c9ad
+    last_write_checksum: sha1:b00ee5a37da22964fbef9d28166ae0d201db70b2
+    pristine_git_object: 9dbaf1d23bfb2f2f41895b2fcdef333822aa3009
   docs/Models/Shared/VerificationPackageType.md:
     id: 815fa4851137
     last_write_checksum: sha1:fe6abdc665d733717ed52f372b414ed9fbd8d637
@@ -12469,8 +12469,8 @@ trackedFiles:
     pristine_git_object: a82441932d7a90762806e2a365f0c180a9fae277
   src/Models/Operations/GetVerificationPackageQueryParamFields.php:
     id: 3794a4b3f7a9
-    last_write_checksum: sha1:d4f33df222313d8ad9f1815f91cd722d12cd96d6
-    pristine_git_object: 02031b756126e01d95f481e83f4866fd31502c41
+    last_write_checksum: sha1:1d896c7007070fc2eeecac8a3a035f56a7960cfc
+    pristine_git_object: 435db969700a9d8b8c0da5f43c3152f1f11395a4
   src/Models/Operations/GetVerificationPackageRequest.php:
     id: b8edf2845cf9
     last_write_checksum: sha1:b033f1109b44dffc3f2e5c31f831129ca00eae2c
@@ -13825,8 +13825,8 @@ trackedFiles:
     pristine_git_object: c5cdcb38fa18185936f28a2f1d8f1fa9203d6dd9
   src/Models/Operations/ListVerificationPackagesQueryParamFields.php:
     id: 596031c9793b
-    last_write_checksum: sha1:5775128264e435df4fc707ce2f91f02c75453e8d
-    pristine_git_object: c33cf5659877ec4c905a18c406e1543d022fc522
+    last_write_checksum: sha1:e433d1f610ea97dd239b25d762f71dd6fee98a09
+    pristine_git_object: 8c383a4be98723daf9074ae57556fed34654c1b1
   src/Models/Operations/ListVerificationPackagesRequest.php:
     id: 229f0711fe66
     last_write_checksum: sha1:a4bbda73db17d57acdc63d28627b672c8217e270
@@ -18913,8 +18913,8 @@ trackedFiles:
     pristine_git_object: ebe1f31c775cacbb6d43be21ba64d9b4190c8714
   src/Models/Shared/VerificationPackage.php:
     id: 4853fdcbeb37
-    last_write_checksum: sha1:46fc257555caa023159353555583474a3b546b3f
-    pristine_git_object: 86e61ab979d8eb47d8f59696003108d5af3fcb04
+    last_write_checksum: sha1:3db5c7ccc51c115e479ed51986d40904f0f094d7
+    pristine_git_object: a29029d7a0444d6cb27757ffa2ac6f6fd872e255
   src/Models/Shared/VerificationPackageType.php:
     id: 1ae42977d473
     last_write_checksum: sha1:d693497c0fb7c537521e3e33a97ec5865a3914ea
@@ -19241,8 +19241,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:9ecab747f876ebdca7c844edfa060e4287ac3ce2
-    pristine_git_object: e3136f80bed4d2e99ffdeef0b629f1ec5c800433
+    last_write_checksum: sha1:6c355f3a26b6f5394929cb25981dff59d770064c
+    pristine_git_object: e905831ca982a1c94773930991a4553f02ad721a
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -24859,7 +24859,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->crm->createCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->crm->getCrmDeal()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->crm->listCrmDeals()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->crm->patchCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->crm->updateCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->deal->createCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->deal->getCrmDeal()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->deal->listCrmDeals()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->deal->patchCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->deal->updateCrmDeal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->verification->getVerificationPackage()`: \n  *  `request->fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to->verification->listVerificationPackages()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->validRegions` **Added**\n* `unified-to->package->getVerificationPackage()`: \n  *  `request->fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to->package->listVerificationPackages()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->validRegions` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

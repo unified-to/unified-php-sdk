@@ -164,6 +164,16 @@ class VerificationPackage
     public ?\DateTime $updatedAt = null;
 
     /**
+     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     *
+     * @var ?array<string> $validRegions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('valid_regions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $validRegions = null;
+
+    /**
      * @param  string  $id
      * @param  string  $name
      * @param  VerificationPackageType  $type
@@ -182,9 +192,10 @@ class VerificationPackage
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
+     * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $infoUrl = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $id, string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $infoUrl = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?array $validRegions = null)
     {
         $this->id = $id;
         $this->name = $name;
@@ -204,5 +215,6 @@ class VerificationPackage
         $this->raw = $raw;
         $this->tags = $tags;
         $this->updatedAt = $updatedAt;
+        $this->validRegions = $validRegions;
     }
 }
