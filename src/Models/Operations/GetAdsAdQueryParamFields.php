@@ -17,9 +17,11 @@ enum GetAdsAdQueryParamFields: string
     case Name = 'name';
     case CampaignId = 'campaign_id';
     case GroupId = 'group_id';
+    case ItemId = 'item_id';
     case OrganizationId = 'organization_id';
-    case IsActive = 'is_active';
+    case Status = 'status';
     case AdType = 'ad_type';
+    case CreativeIds = 'creative_ids';
     case CreativeAssetUrl = 'creative_asset_url';
     case AdCopy = 'ad_copy';
     case Headline = 'headline';
@@ -27,5 +29,6 @@ enum GetAdsAdQueryParamFields: string
     case Cta = 'cta';
     case FinalUrl = 'final_url';
     case Targeting = 'targeting';
+    case IsActive = 'is_active';
     case Raw = 'raw';
 }

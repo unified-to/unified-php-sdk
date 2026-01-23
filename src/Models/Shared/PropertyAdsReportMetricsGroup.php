@@ -20,6 +20,25 @@ class PropertyAdsReportMetricsGroup
     public ?float $bidAmount = null;
 
     /**
+     * YOUTUBE_AND_PARTNERS
+     *
+     * @var ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategy|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_allocation_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetAllocationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null;
+
+    /**
      *
      * @var ?float $budgetAmount
      */
@@ -29,12 +48,29 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?float $budgetMaxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_max_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $budgetMaxAmount = null;
+
+    /**
+     *
      * @var ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null;
 
     /**
      *
@@ -53,6 +89,16 @@ class PropertyAdsReportMetricsGroup
     public ?\DateTime $createdAt = null;
 
     /**
+     * $creativeIds
+     *
+     * @var ?array<string> $creativeIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $creativeIds = null;
+
+    /**
      *
      * @var ?\DateTime $endAt
      */
@@ -62,11 +108,36 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null;
+
+    /**
+     *
+     * @var ?bool $hasEuPoliticalAds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_eu_political_ads')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasEuPoliticalAds = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $insertionorderId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('insertionorder_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $insertionorderId = null;
 
     /**
      *
@@ -93,6 +164,23 @@ class PropertyAdsReportMetricsGroup
     public ?string $organizationId = null;
 
     /**
+     *
+     * @var ?PropertyAdsReportMetricsGroupPacing $pacing
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('pacing')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupPacing|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupPacing $pacing = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -112,12 +200,30 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?PropertyAdsReportMetricsGroupStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupStatus $status = null;
+
+    /**
+     *
      * @var ?PropertyAdsReportMetricsGroupTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargeting|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsGroupTargeting $targeting = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsGroupType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupType $type = null;
 
     /**
      *
@@ -129,36 +235,60 @@ class PropertyAdsReportMetricsGroup
 
     /**
      * @param  ?float  $bidAmount
+     * @param  ?PropertyAdsReportMetricsGroupBidStrategy  $bidStrategy
+     * @param  ?PropertyAdsReportMetricsGroupBudgetAllocationType  $budgetAllocationType
      * @param  ?float  $budgetAmount
+     * @param  ?float  $budgetMaxAmount
      * @param  ?PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
+     * @param  ?PropertyAdsReportMetricsGroupBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $creativeIds
      * @param  ?\DateTime  $endAt
+     * @param  ?PropertyAdsReportMetricsGroupFrequencyCap  $frequencyCap
+     * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
+     * @param  ?string  $insertionorderId
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?string  $organizationId
+     * @param  ?PropertyAdsReportMetricsGroupPacing  $pacing
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?PropertyAdsReportMetricsGroupStatus  $status
      * @param  ?PropertyAdsReportMetricsGroupTargeting  $targeting
+     * @param  ?PropertyAdsReportMetricsGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
+        $this->bidStrategy = $bidStrategy;
+        $this->budgetAllocationType = $budgetAllocationType;
         $this->budgetAmount = $budgetAmount;
+        $this->budgetMaxAmount = $budgetMaxAmount;
         $this->budgetPeriod = $budgetPeriod;
+        $this->budgetUnit = $budgetUnit;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
+        $this->creativeIds = $creativeIds;
         $this->endAt = $endAt;
+        $this->frequencyCap = $frequencyCap;
+        $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
+        $this->insertionorderId = $insertionorderId;
         $this->isActive = $isActive;
         $this->name = $name;
         $this->organizationId = $organizationId;
+        $this->pacing = $pacing;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->status = $status;
         $this->targeting = $targeting;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
     }
 }

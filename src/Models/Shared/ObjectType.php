@@ -118,6 +118,8 @@ enum ObjectType: string
     case AdsCampaign = 'ads_campaign';
     case AdsReport = 'ads_report';
     case AdsGroup = 'ads_group';
+    case AdsCreative = 'ads_creative';
+    case AdsInsertionorder = 'ads_insertionorder';
     case FormsForm = 'forms_form';
     case FormsSubmission = 'forms_submission';
     case ShippingCarrier = 'shipping_carrier';

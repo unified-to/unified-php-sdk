@@ -74,7 +74,11 @@ class UnifiedTo
 
     public Campaign $campaign;
 
+    public Creative $creative;
+
     public Group $group;
+
+    public Insertionorder $insertionorder;
 
     public Ats $ats;
 
@@ -317,7 +321,9 @@ class UnifiedTo
         $this->ads = new Ads($this->sdkConfiguration);
         $this->ad = new Ad($this->sdkConfiguration);
         $this->campaign = new Campaign($this->sdkConfiguration);
+        $this->creative = new Creative($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
+        $this->insertionorder = new Insertionorder($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
         $this->activity = new Activity($this->sdkConfiguration);
         $this->application = new Application($this->sdkConfiguration);

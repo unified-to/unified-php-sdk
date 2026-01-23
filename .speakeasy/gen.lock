@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 8871ab86c0b3e5ad56d0c55ebdf768e9
+  docChecksum: e791a4d4f6acb4af6f7a5261e1dded55
   docVersion: "1.0"
-  speakeasyVersion: 1.692.0
-  generationVersion: 2.797.1
-  releaseVersion: 1.6.20
-  configChecksum: 810e6ba7c838ff26d0066eb2b3231ccc
+  speakeasyVersion: 1.696.0
+  generationVersion: 2.799.0
+  releaseVersion: 1.6.21
+  configChecksum: 39ee44f0e6d768d748e429d5243213ee
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 9e6053ec-0fb9-4deb-a56b-4ff478577495
-  pristine_commit_hash: 06422bf89acf01e70b4604be70f91cb6783eff0d
-  pristine_tree_hash: 1c2773ff21075c77966b91fe2ed788adfc774872
+  generation_id: 572b7e79-726c-41d9-995e-878026fcc5eb
+  pristine_commit_hash: bf445b0e7c82ddcb09159ae853dda4efbdf7e98e
+  pristine_tree_hash: 5badde8d65910f25f36ee428982f034d92f9f606
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -197,8 +197,8 @@ trackedFiles:
     pristine_git_object: 2a5f5d139c649eb804ce7fcb1dd7907d9e55bb9b
   docs/Models/Operations/CreateAdsAdQueryParamFields.md:
     id: dd1cdc568678
-    last_write_checksum: sha1:a0d2084d1163d6fc99d13b6f59ae8b9774855e5e
-    pristine_git_object: 070c8afb2672de122c28ea07698c96be531e8bf1
+    last_write_checksum: sha1:d9d1796720ce4dbb86f34748a6fe5b800d90a0dc
+    pristine_git_object: 55f828c406a4443f32814052749c80cbc0d3fd5f
   docs/Models/Operations/CreateAdsAdRequest.md:
     id: d438b6c3d216
     last_write_checksum: sha1:5604a960bbf682d846336f5af014af99c0abb82f
@@ -209,8 +209,8 @@ trackedFiles:
     pristine_git_object: 5dcb022ccde36d7aed3844b6277fdf33fc1482f8
   docs/Models/Operations/CreateAdsCampaignQueryParamFields.md:
     id: 203ac32d045a
-    last_write_checksum: sha1:56a04664bd1342938f773b6a29a25b728d90f5f0
-    pristine_git_object: ed5e95b5b282eaadf57af1ff89ef00e4ebc5a586
+    last_write_checksum: sha1:8989f98592109c2e706c8d3585e0289b0b1e00db
+    pristine_git_object: 14f045edbf11735f8ee0e0f26e207f9b484476d4
   docs/Models/Operations/CreateAdsCampaignRequest.md:
     id: 915d92105ce7
     last_write_checksum: sha1:4ab4fb8bbc38b0d36246b2ef8f4337e3c56550c5
@@ -219,10 +219,22 @@ trackedFiles:
     id: 52c0c1b6974b
     last_write_checksum: sha1:6bc1e86699e13531c63de25068db4b5a23b6a612
     pristine_git_object: 379b4f3cdb4af79eabc69c96719eec36d3e8393f
+  docs/Models/Operations/CreateAdsCreativeQueryParamFields.md:
+    id: 24e01dbc8dd9
+    last_write_checksum: sha1:e214f14d87828d5555c6032f84c917ed6ad813a0
+    pristine_git_object: ad5657249b4f6f646ae1485af36f043b8d90c211
+  docs/Models/Operations/CreateAdsCreativeRequest.md:
+    id: f4fdaf91e58c
+    last_write_checksum: sha1:8ab179727595e49eea28001bd87b023e3a5f9435
+    pristine_git_object: 67b489c346fb725a71d5aaf2f585d9947eec2c38
+  docs/Models/Operations/CreateAdsCreativeResponse.md:
+    id: 0548a8090af7
+    last_write_checksum: sha1:a894116b550c4a15e2eb252436eda28001dd602c
+    pristine_git_object: 1cf8456988ede625f2447ad5f06ae9ad103779d9
   docs/Models/Operations/CreateAdsGroupQueryParamFields.md:
     id: 44bfa92f1901
-    last_write_checksum: sha1:29383f1b3d32ae4d69332810ddb2621850535af3
-    pristine_git_object: ae4e710c7a71bbe771955327c47decc6c9d981dd
+    last_write_checksum: sha1:40d2b47868d0cc91954d36bca8eb0f91c298ac7a
+    pristine_git_object: f82a19ff14afac735840827dd5f31f8dd83b3a36
   docs/Models/Operations/CreateAdsGroupRequest.md:
     id: 0d9132efdfaf
     last_write_checksum: sha1:0d941436a7a83cb855eea6d015f99033d1d3a1b2
@@ -231,6 +243,18 @@ trackedFiles:
     id: 64b10884594e
     last_write_checksum: sha1:abb99691e0c44de59f8eff9d34bbb851f3db1225
     pristine_git_object: 7539b01e21b17a1a85265d74c03aa0c86742151b
+  docs/Models/Operations/CreateAdsInsertionorderQueryParamFields.md:
+    id: b61e92d5b505
+    last_write_checksum: sha1:f2a430c21b955dffecf70464efe556d08b9f3cd9
+    pristine_git_object: 80968081cd0d86338732f1d6bcb0d42e0fb8e691
+  docs/Models/Operations/CreateAdsInsertionorderRequest.md:
+    id: 9a4bc5a6aa7b
+    last_write_checksum: sha1:0526148a4027f4be3614463534ef6dbad3162fe1
+    pristine_git_object: d663f1000a3a17ae4fd0672f5e111dc8868e18b8
+  docs/Models/Operations/CreateAdsInsertionorderResponse.md:
+    id: b090fd3c45f6
+    last_write_checksum: sha1:b7161c6983917382755b881123db92d3ed5ebd01
+    pristine_git_object: c972120e5b7832a43934135a56c02f6d0933735b
   docs/Models/Operations/CreateAdsOrganizationQueryParamFields.md:
     id: 300cb863f709
     last_write_checksum: sha1:d8a11bca1716352154c06d2e6b9fa58bec5e846c
@@ -1361,8 +1385,8 @@ trackedFiles:
     pristine_git_object: 2f3a85442f570313c74db2c30a83bd2dd1e1f782
   docs/Models/Operations/GetAdsAdQueryParamFields.md:
     id: 9ebd48b98417
-    last_write_checksum: sha1:4bcc4aedb0cff364e2006358ab30f7a744435862
-    pristine_git_object: 12b99481f3777eb6dfa94bb49f2354249611ebbc
+    last_write_checksum: sha1:9b480600ecc0d232da12324eaca9c9b4908c9df4
+    pristine_git_object: 1dae2d10288927bb0b779b8154bb3587f4302da5
   docs/Models/Operations/GetAdsAdRequest.md:
     id: 9437b1e9ded8
     last_write_checksum: sha1:a1c578a8a2ec83056e7320db5003f437e34878ce
@@ -1373,8 +1397,8 @@ trackedFiles:
     pristine_git_object: 5672f710a4d0ac59e2660b82d26e5cd324179e9b
   docs/Models/Operations/GetAdsCampaignQueryParamFields.md:
     id: 53a6cd044a46
-    last_write_checksum: sha1:c817c273eec4b8164f66c06750b2a183bb95c6db
-    pristine_git_object: f30fb7af6986cde7ef7b3c337bc8023dccd34d50
+    last_write_checksum: sha1:475615085152afd402a25f7fff76d5050ca840e9
+    pristine_git_object: 171fd6d4d09e23f61638534dc20db7499c7d2ae5
   docs/Models/Operations/GetAdsCampaignRequest.md:
     id: fda1361002fc
     last_write_checksum: sha1:665ce2bf6eaa2e1b8f1cf1f3b872954bf2cc2b42
@@ -1383,10 +1407,22 @@ trackedFiles:
     id: 40d89081a851
     last_write_checksum: sha1:e61809b482a8740a5979a12ac3641baa95d2c8f9
     pristine_git_object: 7b02d92aa1cb442a3a3d9485b11145ea876c9c0a
+  docs/Models/Operations/GetAdsCreativeQueryParamFields.md:
+    id: d77738b6383d
+    last_write_checksum: sha1:1930c55c3999e5527070a10c2112dd5dfbf82475
+    pristine_git_object: 0ef0f4a910156287badc63b5b6d02053a3f374ad
+  docs/Models/Operations/GetAdsCreativeRequest.md:
+    id: 27d44e12850c
+    last_write_checksum: sha1:7d4043d11647f6a0bf2af3e018f1828ab0ab828f
+    pristine_git_object: 48231e366e06a6290b73c8ae6ada610ebd011dfa
+  docs/Models/Operations/GetAdsCreativeResponse.md:
+    id: 56aa3846823a
+    last_write_checksum: sha1:3dcb002e678a290a36d4966eb7cd9bd029dfc178
+    pristine_git_object: 533fd5dfd64eb00e2fa9ebfe1e214be81e01b288
   docs/Models/Operations/GetAdsGroupQueryParamFields.md:
     id: e021f7abc1e9
-    last_write_checksum: sha1:f1ddc182846a1d415cc2171e3db79d6f832ddc9b
-    pristine_git_object: 525d5722d1dbf314a51e2deb4e661e20af057a07
+    last_write_checksum: sha1:375897561a778700f3cda42146f6fa5ef2c2382f
+    pristine_git_object: 77ae393e7e5179bd915eeca5e6871f9f218b989b
   docs/Models/Operations/GetAdsGroupRequest.md:
     id: a3298b287ed5
     last_write_checksum: sha1:b6385edd808b274766309169e3f26ab2f40fe40b
@@ -1395,6 +1431,18 @@ trackedFiles:
     id: 3d5ad02791e0
     last_write_checksum: sha1:7ff225046b531cf2d3cbf7e516a11b6764451ad4
     pristine_git_object: 97e40b5475ce156491b34142fd2268c11f386b85
+  docs/Models/Operations/GetAdsInsertionorderQueryParamFields.md:
+    id: b931b2785ef6
+    last_write_checksum: sha1:2b747ceacf78788dd0c7c6eecacba1e5192487d4
+    pristine_git_object: 51bad1b9633ed026f835338078646e3b25f4c6c9
+  docs/Models/Operations/GetAdsInsertionorderRequest.md:
+    id: ab4423250679
+    last_write_checksum: sha1:9e8e0b0f8231b420bd946a9d3d3e4d6abe01cd8e
+    pristine_git_object: 2fcfc7cb41d7e14bcac29177a97eae6aade3d91e
+  docs/Models/Operations/GetAdsInsertionorderResponse.md:
+    id: 088d8a063ff8
+    last_write_checksum: sha1:d15ec80b6f43610e6e3fd4903e075fc3eb905a44
+    pristine_git_object: 8bbf40d90cf64b2040398ebcb6920d431762e9ee
   docs/Models/Operations/GetAdsOrganizationQueryParamFields.md:
     id: 7e2a9275fccf
     last_write_checksum: sha1:76e727e46909f9eb885ed9f6a36f5f2664826952
@@ -2661,8 +2709,8 @@ trackedFiles:
     pristine_git_object: 534a3848e8216f4284d0615ce1290bc603f87305
   docs/Models/Operations/ListAdsAdsQueryParamFields.md:
     id: 3f4a5843c6f7
-    last_write_checksum: sha1:a9d76e63a79ee1285d67338400150932fc81b8f2
-    pristine_git_object: a2625a0bd4fe1456cdaec96291ef526765862c51
+    last_write_checksum: sha1:e859e9dff4fd173355460f0e4b80bb19c340e25b
+    pristine_git_object: e3a8c6c1a510bf06ab64e1b4b9c66c3441590043
   docs/Models/Operations/ListAdsAdsRequest.md:
     id: bfba0206d878
     last_write_checksum: sha1:d95dfde7ac9709b3b74403b0aa385ae5f2a1506c
@@ -2673,8 +2721,8 @@ trackedFiles:
     pristine_git_object: 8227fcd003175a062eeb9f5a495405ce52a8c7d8
   docs/Models/Operations/ListAdsCampaignsQueryParamFields.md:
     id: f6c54df52b54
-    last_write_checksum: sha1:6ba69d26768c0034778270044ce4c468a61a8c9c
-    pristine_git_object: 2f2bd9e667d0286ccac215e2f0a3251bd96c831f
+    last_write_checksum: sha1:6c9843a2aa11867981b09e497bcec16f6a3fc064
+    pristine_git_object: 2bd57fc203339e0d04ba7487cfb747c453706a3e
   docs/Models/Operations/ListAdsCampaignsRequest.md:
     id: 6ce8029a5cd3
     last_write_checksum: sha1:b5e62152f95f25c320017fcdcdf21388a03e9f36
@@ -2683,10 +2731,22 @@ trackedFiles:
     id: d7aa124789c3
     last_write_checksum: sha1:3dfe83431d60d001bdddf3148b66619fc7bdb15e
     pristine_git_object: 1be8cfdfa89c200627d38cb70e70d58b9e53dfad
+  docs/Models/Operations/ListAdsCreativesQueryParamFields.md:
+    id: b74ece95de87
+    last_write_checksum: sha1:06a63c81b61cde85fe49f4be60d42fe2b35253e1
+    pristine_git_object: 098c201e8d18d4ed67e6b2b9d1ca5c8ce5efa0fa
+  docs/Models/Operations/ListAdsCreativesRequest.md:
+    id: a2dbf8b2621b
+    last_write_checksum: sha1:789bcedf2df9899099e9dec7ab94539bc4d17481
+    pristine_git_object: d15f71f130c6b86a1a9e08afd49557e4a91eabbc
+  docs/Models/Operations/ListAdsCreativesResponse.md:
+    id: 81b7861e66de
+    last_write_checksum: sha1:5016354e091afc1c9d763221b0b4530a0818f456
+    pristine_git_object: 7534eda17d39f22f21f18474fea17a022af127c9
   docs/Models/Operations/ListAdsGroupsQueryParamFields.md:
     id: f11efc1b45ce
-    last_write_checksum: sha1:66db7dd6de96d93a9a92bb8a125e42051be55abf
-    pristine_git_object: b1a2c902470901b8d0d956930203affa2de9deb0
+    last_write_checksum: sha1:e262aee933e686aa5a3ca0ad13c72212728a4ab7
+    pristine_git_object: 466c3736dde31a561fe3e2476740f5384fae0cab
   docs/Models/Operations/ListAdsGroupsRequest.md:
     id: e0cc43666c52
     last_write_checksum: sha1:93db635daae4f7c38af3dccf86d19453bb661370
@@ -2695,6 +2755,18 @@ trackedFiles:
     id: 7b85582453c5
     last_write_checksum: sha1:417286eb6159ede191d5b90089f05edfbec0a1fe
     pristine_git_object: 1e89ed13618457d710ee7fb600ff855eb5c80a85
+  docs/Models/Operations/ListAdsInsertionordersQueryParamFields.md:
+    id: d90423da546f
+    last_write_checksum: sha1:1e2be96bbcaeb0d3ea67ee9463c8bd1b21b26303
+    pristine_git_object: 37f6584d0e74b38f591ffacfc36c321c6ff23027
+  docs/Models/Operations/ListAdsInsertionordersRequest.md:
+    id: f53a98055dcf
+    last_write_checksum: sha1:9cc753c2046be8f63b6bad728698fcea8dcffc14
+    pristine_git_object: 1059b9a6819a538f0df4c0aa73d2fa0467acb2df
+  docs/Models/Operations/ListAdsInsertionordersResponse.md:
+    id: b82490b2576d
+    last_write_checksum: sha1:3ce32d196986a11171571584de81196956d3c3db
+    pristine_git_object: 6facc79dcad334ef58cd953521a3c8f2f0b9a0a9
   docs/Models/Operations/ListAdsOrganizationsQueryParamFields.md:
     id: 1f718ce7e111
     last_write_checksum: sha1:f08bba9f5c44fe7f93d0907679511bb9ac8e256b
@@ -3945,8 +4017,8 @@ trackedFiles:
     pristine_git_object: ff04724f85bc8e0ca250e022490944f3b22c04c9
   docs/Models/Operations/PatchAdsAdQueryParamFields.md:
     id: 6335535633fc
-    last_write_checksum: sha1:8106a1dbeafa9111f1a3b54e4e0df64487101548
-    pristine_git_object: 5cdc64dc1292464a306cac95a6755d0284d16683
+    last_write_checksum: sha1:51a74a879f77817b9bcab6478e31e3d9e0a16547
+    pristine_git_object: 5eae39e53451ebc67daea5592810000c3d1fe98b
   docs/Models/Operations/PatchAdsAdRequest.md:
     id: 4a1ecf93ccd9
     last_write_checksum: sha1:44946f1f11d6280a3367ace8fbf6f5f6ced5874f
@@ -3957,8 +4029,8 @@ trackedFiles:
     pristine_git_object: dddf91087dd7c50ee64c3ab204d772c79914eb7d
   docs/Models/Operations/PatchAdsCampaignQueryParamFields.md:
     id: c7ffd4dc220d
-    last_write_checksum: sha1:1e8df747499e4b2e55f8fe57e743a3d783125641
-    pristine_git_object: 13bca45e99aec595719a11afc4ffa17d36a0e1bf
+    last_write_checksum: sha1:8adb76b9fe99db526d69e53e4105129cb2b73a47
+    pristine_git_object: 0a605044e014bcd250baa5c1fb91242a8706f381
   docs/Models/Operations/PatchAdsCampaignRequest.md:
     id: 73d0029d4cb6
     last_write_checksum: sha1:58e3c81a61fae227cfc14cc7e6852d7feff5b6e7
@@ -3967,10 +4039,22 @@ trackedFiles:
     id: 38b0658947f7
     last_write_checksum: sha1:148d59af23ae3ec58644d4a256cc0c69d768c3da
     pristine_git_object: 10faac4a823a5700bb6052d2a53b0d86f8c6e474
+  docs/Models/Operations/PatchAdsCreativeQueryParamFields.md:
+    id: 4d45940e2ca9
+    last_write_checksum: sha1:146e5e57cf2712990f47cd71a4a8595093ddfd05
+    pristine_git_object: 9585781d8abba85ebc6bc52e45f0377eaead7555
+  docs/Models/Operations/PatchAdsCreativeRequest.md:
+    id: 64fc6832f2e8
+    last_write_checksum: sha1:fd6f05acb670b15234b17076a4843cbc92a06952
+    pristine_git_object: 346f0b3b692d435b61ed1f6b2e7a74c619be1dd0
+  docs/Models/Operations/PatchAdsCreativeResponse.md:
+    id: a28c09b70ad0
+    last_write_checksum: sha1:dfc57704e2c3dd2b1c37ab03c2f4d37a3e9dedc3
+    pristine_git_object: 15edfc92e861a710b13bcaa6e9f43eb92affd6b9
   docs/Models/Operations/PatchAdsGroupQueryParamFields.md:
     id: 7a2fdf3d515b
-    last_write_checksum: sha1:e35b0e0539ca61f866f3f4e9ef5c296b6ffa66a0
-    pristine_git_object: b57e9112ad56b66cf6b64721390b4ee4e33a0fb8
+    last_write_checksum: sha1:d61976fb8ccdfdb473763feec6cdb098d3efe7ca
+    pristine_git_object: 49971aa2acd4406361ad7fe142efd2218e686a90
   docs/Models/Operations/PatchAdsGroupRequest.md:
     id: f0fc7b071327
     last_write_checksum: sha1:7e42b88e1c40658148197ab2566d29a53f177c6d
@@ -3979,6 +4063,18 @@ trackedFiles:
     id: e7678c2efe6e
     last_write_checksum: sha1:c6efc1f7152abc6e2648dfee031410d69c41f902
     pristine_git_object: d5d5d2a2bdf8b32dc9277d5b23b090da37d600df
+  docs/Models/Operations/PatchAdsInsertionorderQueryParamFields.md:
+    id: 8dd0e4bcbf13
+    last_write_checksum: sha1:b207eee0758664e17ca994cad8be3052ee61aeb3
+    pristine_git_object: a686b970f1294a7cd8de683f2ec224319de9098b
+  docs/Models/Operations/PatchAdsInsertionorderRequest.md:
+    id: aa762f332201
+    last_write_checksum: sha1:cffd5b4c52fc2c9e0337e12a9de6b23fd83c7967
+    pristine_git_object: 8b9cdd76ab9a1431575c601ed283d2bd0caed0e4
+  docs/Models/Operations/PatchAdsInsertionorderResponse.md:
+    id: da9ed3d62bef
+    last_write_checksum: sha1:8d13d58460634e2f76c627bf2edc1f60352ea7ee
+    pristine_git_object: ceb6f1b9b2f3bbe1dcf3e2ede2a8aa5290a90de9
   docs/Models/Operations/PatchAdsOrganizationQueryParamFields.md:
     id: 1007604b81b3
     last_write_checksum: sha1:4a2cfd7c77bdd9b78bc94fba59b37847e7588ea9
@@ -4967,6 +5063,14 @@ trackedFiles:
     id: a1451aab4d67
     last_write_checksum: sha1:8d5a1c3341bda7ed0b4591f21cf87e280234d100
     pristine_git_object: f77502f8b8e7ce1b81d1520b11212167d93f922d
+  docs/Models/Operations/RemoveAdsCreativeRequest.md:
+    id: fa1a2bb7a852
+    last_write_checksum: sha1:0b4c5bc7a2912e61a44c74c359d3a9bcf535f5f1
+    pristine_git_object: cd41487013ddddef1fff06d642a4aa5faae345f6
+  docs/Models/Operations/RemoveAdsCreativeResponse.md:
+    id: 6f9f673a6b5a
+    last_write_checksum: sha1:03d7c6d43d5abeba83d5aa4c137c85c6f4ecacc7
+    pristine_git_object: 34b71e9c50ec677e3f060e2480c3d60729e25801
   docs/Models/Operations/RemoveAdsGroupRequest.md:
     id: 298f2fb39924
     last_write_checksum: sha1:e9d2505e0608f2d7d9181245df72574d25064ce4
@@ -4975,6 +5079,14 @@ trackedFiles:
     id: ebb3785771c1
     last_write_checksum: sha1:cb21befd42c68bacceb66c06348065c077a24fea
     pristine_git_object: 18d6e5d9737a3e91f262ebb6ef02ccf78ec0aae2
+  docs/Models/Operations/RemoveAdsInsertionorderRequest.md:
+    id: 038ecb04ea1a
+    last_write_checksum: sha1:ae8aff45332b2873ef35872b085f41487a22e58f
+    pristine_git_object: c5c37fcfe86b896db85197e1b5ec1c12ac5bc58d
+  docs/Models/Operations/RemoveAdsInsertionorderResponse.md:
+    id: 682336b11303
+    last_write_checksum: sha1:5933a8ea0b0dedcfdb6016a75a3545afae1ebf70
+    pristine_git_object: cf34dc3ba1ab64c219ced081f00ee37dc01be9bc
   docs/Models/Operations/RemoveAdsOrganizationRequest.md:
     id: 0df74b24e7a3
     last_write_checksum: sha1:e5dee43a1b4b701b7b51884f154280959b2dbce2
@@ -5717,8 +5829,8 @@ trackedFiles:
     pristine_git_object: ba6f8f16fa92f1622c031bdf9b4036885400168d
   docs/Models/Operations/UpdateAdsAdQueryParamFields.md:
     id: 9e71b3a75964
-    last_write_checksum: sha1:41c2961ead219ff16902841ad010c14fba26e453
-    pristine_git_object: 13fa2c35336f82b85e78909449c39a4754896d2e
+    last_write_checksum: sha1:60db230a50d644b4bdeb4b169e38857e857b1462
+    pristine_git_object: 6495764178d498d5575f182d88fe1045bd6f9794
   docs/Models/Operations/UpdateAdsAdRequest.md:
     id: 53eceb5ff230
     last_write_checksum: sha1:9b83a08c6b61cffb6f6cbdeb370896fa7e4a082b
@@ -5729,8 +5841,8 @@ trackedFiles:
     pristine_git_object: 47c2da6f7b39877d928ccdfddf349b01e0c34a62
   docs/Models/Operations/UpdateAdsCampaignQueryParamFields.md:
     id: 30f9402b0ed6
-    last_write_checksum: sha1:1cddf627c4c2369be8afa82d5117fdf902fbc2da
-    pristine_git_object: 0085a4d05e308451eb5f2a8f2fe9cb258d956b75
+    last_write_checksum: sha1:db8b89d0735677afd75d95fcf4805e7fe299e921
+    pristine_git_object: 84862e88b98da9bfc1d89f00cf1c4a5cce3a37ed
   docs/Models/Operations/UpdateAdsCampaignRequest.md:
     id: 68ed616caa06
     last_write_checksum: sha1:8b2c6b6a2c89a60bd965afdac1c4b9196b3e9fd9
@@ -5739,10 +5851,22 @@ trackedFiles:
     id: 2193eb6739ac
     last_write_checksum: sha1:6269d6584037bb416f81b1598e8d8c2726e59c0a
     pristine_git_object: a34cfa31f22d5b2e1c715d622667b8c0142907b1
+  docs/Models/Operations/UpdateAdsCreativeQueryParamFields.md:
+    id: 8936b6c964b9
+    last_write_checksum: sha1:52dc1a621a6a59c22ecfbba4e543fe1fd76a27d3
+    pristine_git_object: 39b73f027bd81d77dde9b2cf3b9b30de93fd14c2
+  docs/Models/Operations/UpdateAdsCreativeRequest.md:
+    id: 6ed049b867a2
+    last_write_checksum: sha1:89e1bf61d6a61e7b12893f2dc23640b3ca15f3f5
+    pristine_git_object: c5a5c825815c549ce97e9f79b035b93361c3248b
+  docs/Models/Operations/UpdateAdsCreativeResponse.md:
+    id: faf4da5260a5
+    last_write_checksum: sha1:1d1bdc78e133bd489bb391eb21b87d6315d6809b
+    pristine_git_object: 0a74e3865cf824ce3c157d7deee47f8f119f5fc6
   docs/Models/Operations/UpdateAdsGroupQueryParamFields.md:
     id: ac4224373132
-    last_write_checksum: sha1:bd2ce389358e19c38355a2122095c0fd9bedeb4f
-    pristine_git_object: 86c6676f034114bb08e7c3bd0883f89849f5dc9e
+    last_write_checksum: sha1:0913a80bbd3c5e7339cb3cfaf3e9dd6fc0b4bbac
+    pristine_git_object: dc5d52feb631dd9c243e43eb647d5cea2fd9225c
   docs/Models/Operations/UpdateAdsGroupRequest.md:
     id: 931e0ef6f41c
     last_write_checksum: sha1:cd10b11091e1b59a93162c6ae8facdf8ec8eec19
@@ -5751,6 +5875,18 @@ trackedFiles:
     id: ed75fe9924c9
     last_write_checksum: sha1:6d705975bdb1a4702d13587638fade4d7ca2d8b0
     pristine_git_object: 6eb52867b85d66c713c1e3b6189820bfd354b574
+  docs/Models/Operations/UpdateAdsInsertionorderQueryParamFields.md:
+    id: 6116d02b1853
+    last_write_checksum: sha1:8f367b98732ec2861774ab80d8baeabe627e0958
+    pristine_git_object: 02afec73ad4c830d737c2505efe1f210b8c75de3
+  docs/Models/Operations/UpdateAdsInsertionorderRequest.md:
+    id: f73694adb5a4
+    last_write_checksum: sha1:135aebf0b90cfc365b791f02347849c864f95c26
+    pristine_git_object: 71aa57fedb42a6517879c199980cd43697162951
+  docs/Models/Operations/UpdateAdsInsertionorderResponse.md:
+    id: c9625517d18b
+    last_write_checksum: sha1:a4bd823c28b483c904b4d8f04728149f2d105814
+    pristine_git_object: bfb3a9320ccea3f8c38b165a75dd49895e732aef
   docs/Models/Operations/UpdateAdsOrganizationQueryParamFields.md:
     id: 39dbd8672b31
     last_write_checksum: sha1:27bcc00aa71598e8e5fc116a510d1166f0b29ed1
@@ -6821,20 +6957,60 @@ trackedFiles:
     pristine_git_object: 651be418dcf25a51db611ce42d8ee4f859f76a74
   docs/Models/Shared/AdsAd.md:
     id: e92fe5c1aa1c
-    last_write_checksum: sha1:ac931f6417e2c59b2b9422926c30535769690f8f
-    pristine_git_object: 625abc6753563313c5e5985652e4ebac98adb578
+    last_write_checksum: sha1:badb3a3ec48675dc42e66a0b8919f4230cebf4b9
+    pristine_git_object: 98b7f23af43b6e70bfc30df820c2113343ea3ae7
+  docs/Models/Shared/AdsAdStatus.md:
+    id: 1ad23b9f2369
+    last_write_checksum: sha1:ca4de4e00f5a9a28fa6656be41f8951eba079e11
+    pristine_git_object: 61c551e242d4a8c6cbced98463cd71fe834b3137
   docs/Models/Shared/AdsCampaign.md:
     id: 2be1cde38717
-    last_write_checksum: sha1:da2ae17adb21c19d20fa5cb18e66a75d47a21351
-    pristine_git_object: 807eafd8d5f211c2c53a9329f3bc343c4feaad1e
+    last_write_checksum: sha1:c0e22fd2b7adfa289ceb1c8b1991041abec0ed26
+    pristine_git_object: bf4ea33d4acc00e48a225e3365e3c2d432501819
+  docs/Models/Shared/AdsCampaignStatus.md:
+    id: c1ed735e5506
+    last_write_checksum: sha1:c42efd2caecc5752ec295773fca8e174bbdf5f46
+    pristine_git_object: a7c40fe979f14ca06d201b4fb197b92c9b1b98ca
+  docs/Models/Shared/AdsCreative.md:
+    id: ef6b5c90e8e9
+    last_write_checksum: sha1:afbbf3da908c21327c184ea513c566bfe42f7559
+    pristine_git_object: 81708f486f263dc65b21fb76d4c35f91d891d614
+  docs/Models/Shared/AdsCreativeStatus.md:
+    id: 314afa29f6b0
+    last_write_checksum: sha1:6fd22c1ee261bc6928d62b85dc23757a4e86dd14
+    pristine_git_object: 4fe0a6349d1e29270c1394bb7d790fc69722e0f7
   docs/Models/Shared/AdsGroup.md:
     id: 860d5bbeeae2
-    last_write_checksum: sha1:90d3058e247eb999caf6054345039bf38669e869
-    pristine_git_object: a75ee81b5413ab52a51b177ee5ee9feefaf0445d
+    last_write_checksum: sha1:af572eaca00eb444eed9f04578a379a18a455426
+    pristine_git_object: 9a0fb3a34d91b2b8d84f4301f065fcd0abad3b2e
   docs/Models/Shared/AdsGroupBudgetPeriod.md:
     id: ecf761227f35
     last_write_checksum: sha1:d7ecf44be550c72f841919bc62a64e251ab873b3
     pristine_git_object: e6d9c068a81f53621e08a50ac617242b430bb851
+  docs/Models/Shared/AdsGroupStatus.md:
+    id: 3307f7fdef38
+    last_write_checksum: sha1:800780bbf67b6c9ad39bb920bc390fec88cf8d24
+    pristine_git_object: bbcd1dfb227af36e188ba08e0d774701663849cd
+  docs/Models/Shared/AdsGroupType.md:
+    id: cc41c280d0ba
+    last_write_checksum: sha1:1f070f119444312cf0955f551042b2754e70839a
+    pristine_git_object: b811b96a599d2449d9c6493763a62e3101731ed1
+  docs/Models/Shared/AdsInsertionorder.md:
+    id: dfc79aa97034
+    last_write_checksum: sha1:1277d543418fb376d0746d411c4a53490d00554a
+    pristine_git_object: 319a613a42742f1a4fa8a679689b68eec48a84eb
+  docs/Models/Shared/AdsInsertionorderBudgetSegment.md:
+    id: 7b7813175c7a
+    last_write_checksum: sha1:95dbccf373abc2caef7164ef93a9f232169022ed
+    pristine_git_object: 62af351721c7c7a12a79626f81a735ff049a3194
+  docs/Models/Shared/AdsInsertionorderBudgetUnit.md:
+    id: b3958f7d1592
+    last_write_checksum: sha1:5bf64c89da5f9fcb34522868d355320d3e21e2ab
+    pristine_git_object: 6b5386a9a1a3b8ef161262cf06da4965de46cb33
+  docs/Models/Shared/AdsInsertionorderStatus.md:
+    id: 94788560edd6
+    last_write_checksum: sha1:99a2ffc0376d20349adb2e50302a1706d14a3164
+    pristine_git_object: 84c5c63fedfcc3687d157c876ff45227143da7ed
   docs/Models/Shared/AdsOrganization.md:
     id: 900cad54fe14
     last_write_checksum: sha1:f3c6933f13fe19deb85cfe813c676fdc9cfaef20
@@ -6857,8 +7033,8 @@ trackedFiles:
     pristine_git_object: b5a1e33a66f3fe68f60b4361388d5f53f3c88523
   docs/Models/Shared/ApiCall.md:
     id: 4accee81b0a6
-    last_write_checksum: sha1:4c348342a5c75c09f5c678e318726e98a96849d3
-    pristine_git_object: 24f7477a0927c66b40725f15a03d4257008e1285
+    last_write_checksum: sha1:95279aa8af7a9bf932dbff48ba8b301fe01cdff1
+    pristine_git_object: 4e9a4663e0f6578ce212d50b600a18688cfebc82
   docs/Models/Shared/ApiCallType.md:
     id: e02410f0e073
     last_write_checksum: sha1:c229fc3272996738d26492fb1786b78f07f6ee78
@@ -7015,10 +7191,18 @@ trackedFiles:
     id: 31e9e74791c2
     last_write_checksum: sha1:60d682b1457ce5ce6b599175a69ea573896dc1bf
     pristine_git_object: a72174bb7ced98e4b1791ab67c3a0a35b282cd49
+  docs/Models/Shared/BudgetAllocationType.md:
+    id: ebe5763aa8bb
+    last_write_checksum: sha1:e17531482ff9f0a683a878988c6e7b458cc2683a
+    pristine_git_object: 7d9ab8f3c5f8f2d9ad3a1712bd773003119fbc2d
   docs/Models/Shared/BudgetPeriod.md:
     id: b216ee6a50df
     last_write_checksum: sha1:c53745d42fd4346c620d84802371cd6d025ee1a4
     pristine_git_object: e3c08fea7062c0e0b486337810fec6ea8411aaf3
+  docs/Models/Shared/BudgetUnit.md:
+    id: 0453e9ae2d91
+    last_write_checksum: sha1:d3ea5291b8646339178b245227f07de9d7ba3759
+    pristine_git_object: e72bcdd721064ba2e657f9ce8007d0f498215b22
   docs/Models/Shared/CalendarAttachment.md:
     id: 5f5fdf7b854b
     last_write_checksum: sha1:0b1326f46219eb754d8f87bfe27f6dd2c3063a36
@@ -7203,6 +7387,10 @@ trackedFiles:
     id: ad32446c13af
     last_write_checksum: sha1:a51c5dbd2fef4642965936894ca9614f678acacf
     pristine_git_object: ef5188a92facf20cdf5e72399f8161c5317e1c22
+  docs/Models/Shared/CreativeType.md:
+    id: 0809bdca9a64
+    last_write_checksum: sha1:f1ac1ab57bbc22a57c62906225e8bc441bbaf15b
+    pristine_git_object: 3268476218a8d644361391a55fd3542723a1eb4e
   docs/Models/Shared/CrmCompany.md:
     id: 024eea53e93b
     last_write_checksum: sha1:0750200aa5b5ed5b5569f92a22b8d28a3b3c601b
@@ -7423,6 +7611,14 @@ trackedFiles:
     id: c6a59312e677
     last_write_checksum: sha1:1b46748d63216896cf5c9b45467f393cce2e6288
     pristine_git_object: 42928c802734549101ea810c164264a4c123d71e
+  docs/Models/Shared/Goal.md:
+    id: d164a4956c73
+    last_write_checksum: sha1:e9d314708affad75c9cb0a82ca581488ca59a5cb
+    pristine_git_object: 51cdc8dee19e96b8a54d2a1397c0a002723f0142
+  docs/Models/Shared/HostingSource.md:
+    id: a05ed4052e8c
+    last_write_checksum: sha1:0640912787dd79a9f81c5e24ffd4d0b1e98a8560
+    pristine_git_object: 235273919a5e312667d76034082575ec31a667b2
   docs/Models/Shared/HrisBenefit.md:
     id: b83112611d3d
     last_write_checksum: sha1:df1b01961f15ae069df10f72b619bb8b6ea936e8
@@ -8109,8 +8305,8 @@ trackedFiles:
     pristine_git_object: 51b242ed4ddc0af4e5d05fc34919c6ef4c128117
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:5eb0f9220d7f93f561b409810ed2a0aa633dec3d
-    pristine_git_object: 8c44756c2c75f17cf92344e10e28f30334a795bb
+    last_write_checksum: sha1:3ef720256e43be1f2998702a9f660276c4d3a32a
+    pristine_git_object: 6bfb087f0ba26447b492366c2725f47347301376
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -8171,6 +8367,14 @@ trackedFiles:
     id: 6e213b61d92f
     last_write_checksum: sha1:4643db3f9912b466deb8fc23c884f9ac24708201
     pristine_git_object: dfd71b05321fa59a9ea136eacc7bdecd9609078e
+  docs/Models/Shared/PerformanceGoalType.md:
+    id: ab269bf08817
+    last_write_checksum: sha1:04826b3bd8b5da5f5d696ff08c2225d67c72106d
+    pristine_git_object: 49ee032dabea6de0b8ad4aa6898647139c3376b1
+  docs/Models/Shared/Period.md:
+    id: 155f6a29f0af
+    last_write_checksum: sha1:848fd1689d1a56d67a7f20095b05520e340b6116
+    pristine_git_object: 4aaacee7024e38cea3e2866be81473f6172e3925
   docs/Models/Shared/Priority.md:
     id: ad35107111de
     last_write_checksum: sha1:b41d42aa483d33c7170fb04de361b986182ab29f
@@ -8231,50 +8435,182 @@ trackedFiles:
     id: 81da9d044ff8
     last_write_checksum: sha1:6f749870772ce242e38f1e8fd8d8ab4ccfce4d90
     pristine_git_object: f669ec9ff2e265968a1cd04d50fb8752d949d592
+  docs/Models/Shared/PropertyAdsCampaignFrequencyCap.md:
+    id: 87544a7554db
+    last_write_checksum: sha1:a4416081f9775dd670009efc1859c800a6a0b1ea
+    pristine_git_object: 8555ef8390b7979b4708465bad824edea111c916
   docs/Models/Shared/PropertyAdsCampaignTargeting.md:
     id: ef8ca8c9faa8
     last_write_checksum: sha1:8c2f0185bff199e8b2486d94b7578bae03fd4727
     pristine_git_object: 55e943341d68dd9cf743b9e3d402ee02c81ed538
+  docs/Models/Shared/PropertyAdsGroupBidStrategy.md:
+    id: 2882013e8402
+    last_write_checksum: sha1:75b2126e298de0819a36a27dea7e35bdfa9ce7bc
+    pristine_git_object: 73881c157d9a1272301de8d99b23dc48750eb24f
+  docs/Models/Shared/PropertyAdsGroupBidStrategyType.md:
+    id: 708aeae2dc6e
+    last_write_checksum: sha1:f42ab5537b2a191cd5a802c01c7bc94426623719
+    pristine_git_object: c5ef13831b3640183fb83c8ee0680b1a838ce47f
+  docs/Models/Shared/PropertyAdsGroupFrequencyCap.md:
+    id: ce435e1338e8
+    last_write_checksum: sha1:3bf973aa081e4691937dc5bce4e7e6310451e0a1
+    pristine_git_object: 3fe289a57089aa97516fef532223dc4383bf1cf5
+  docs/Models/Shared/PropertyAdsGroupFrequencyCapTimeUnit.md:
+    id: 0b9e1fd9e13b
+    last_write_checksum: sha1:9dc09184e51a4a6a103107ba0fdbf893196b4074
+    pristine_git_object: 4b2dd0ef50cfb61ee5a541ac74cfb11cd155770c
+  docs/Models/Shared/PropertyAdsGroupPacing.md:
+    id: 3e31af3d34f0
+    last_write_checksum: sha1:22400689a8f0d39d013b2e6124139c140ee536be
+    pristine_git_object: 8a582d93bd958381a107483ce57a4cc0d7d41960
   docs/Models/Shared/PropertyAdsGroupTargeting.md:
     id: 80f5b0d6bb30
     last_write_checksum: sha1:2743d7af8f38f7e18232cbdf5965c53e490c940f
     pristine_git_object: e4aa4a0f490d2855ac5d843a2a2c1f7900d75fdd
+  docs/Models/Shared/PropertyAdsInsertionorderBidStrategy.md:
+    id: ab301356256e
+    last_write_checksum: sha1:93bbf7b4998bba012e62462f50997c4a3675c55f
+    pristine_git_object: 74cc01a9efc841da7ea3eca3884d50aebb6b4631
+  docs/Models/Shared/PropertyAdsInsertionorderBidStrategyPerformanceGoalType.md:
+    id: c421cd309940
+    last_write_checksum: sha1:116dca504258e0b36ba8980a089ac3f4c84c9bf0
+    pristine_git_object: 103e4f8a4196d72f5920a1253595594c6ad859ac
+  docs/Models/Shared/PropertyAdsInsertionorderBidStrategyType.md:
+    id: 8e082b5d1fac
+    last_write_checksum: sha1:ad19a88d5361fd056602eab03fe918c21ffd6b26
+    pristine_git_object: 40334986b499f207d80eeb16ff3400876a86cd09
+  docs/Models/Shared/PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType.md:
+    id: 8f7edbb6e69f
+    last_write_checksum: sha1:e31f4bf52dea302687d5168ddd156b8f7176845e
+    pristine_git_object: f8064ec053bc649179102fbc43c51a84a2883755
+  docs/Models/Shared/PropertyAdsInsertionorderFrequencyCap.md:
+    id: 6d9f44b26827
+    last_write_checksum: sha1:f8921f4898be916cbdcc78be28f51c4fda4d3ee6
+    pristine_git_object: 8953ced3f46165ea49da71d6fac690da28acdff7
+  docs/Models/Shared/PropertyAdsInsertionorderFrequencyCapTimeUnit.md:
+    id: 7a776658fa55
+    last_write_checksum: sha1:e5c24d16e66f2c2523b499a2b1062688567a7ac8
+    pristine_git_object: 591c14b6952029c5619ecda99a8b9b6737876613
+  docs/Models/Shared/PropertyAdsInsertionorderKpi.md:
+    id: b7c857c77c41
+    last_write_checksum: sha1:9977d7acdfc6910b1c172074f7ca0158e7d2f26f
+    pristine_git_object: 23aa5f1072ed748b4dfdd4436603b1763605dd64
+  docs/Models/Shared/PropertyAdsInsertionorderKpiType.md:
+    id: 0b7efa0e1b8c
+    last_write_checksum: sha1:0488b9bf27a13efefc5fe8c00655702dbf350b19
+    pristine_git_object: 962e4ad68e413e69bfffe81bb161c27f2c6ef90c
+  docs/Models/Shared/PropertyAdsInsertionorderPacing.md:
+    id: 05978117abe7
+    last_write_checksum: sha1:f07839abb9252bf42e2b6bad4fbd7d5e75ecfec2
+    pristine_git_object: 4072da37a07ca04c889ccfd773b67aa30dd087a9
+  docs/Models/Shared/PropertyAdsInsertionorderPacingPeriod.md:
+    id: 061e47049fc1
+    last_write_checksum: sha1:1817b54019f7ce5ca9e24086881c9092ce3d3b9d
+    pristine_git_object: 6ab0c2509d55850847ef8e01472657b750188d3f
   docs/Models/Shared/PropertyAdsReportMetricsAd.md:
     id: 45e40f5afc1f
-    last_write_checksum: sha1:086cf119841a67a85286e17063cdcf3c50225d48
-    pristine_git_object: 4d45c848f2c8d8a28985c2f323307b45c1b4b051
+    last_write_checksum: sha1:1e54836f95c233a0a548883216c1c06d6d321596
+    pristine_git_object: 4e6cf3116356b37b81612fd71bda03d2ea2acfe6
   docs/Models/Shared/PropertyAdsReportMetricsAdAdType.md:
     id: 97ccdbbd60d5
     last_write_checksum: sha1:68f5d37c5b1fea98ff0fde0a555360c8e614d4aa
     pristine_git_object: 54d2d4cdf15f3ee88d2d6f7d56473f432b5743b3
+  docs/Models/Shared/PropertyAdsReportMetricsAdStatus.md:
+    id: e061e6f19493
+    last_write_checksum: sha1:76c88af7b4ee9ac8c03c57fd6827a69a5f9dc25c
+    pristine_git_object: 40e8cd6597b895e7f77a9773473d12662c53c590
   docs/Models/Shared/PropertyAdsReportMetricsAdTargeting.md:
     id: 1342dd9d1831
     last_write_checksum: sha1:ac7770ab086a7804914537f484cd68b11b043668
     pristine_git_object: fe608fbddb5f7fd9658f1eb2bd3ce7d9660b5fc4
   docs/Models/Shared/PropertyAdsReportMetricsCampaign.md:
     id: b8407e9921cd
-    last_write_checksum: sha1:02a2d14b12942b64380b72334e4aae4cb554500b
-    pristine_git_object: a7fd94e8536fec0794b047c608ad9823614f8567
+    last_write_checksum: sha1:eb8fd81ad193f02113490bac5cd6adff1909a4b1
+    pristine_git_object: 76f7c544d1eb0ea492ba8e91a99b06392bea5326
   docs/Models/Shared/PropertyAdsReportMetricsCampaignBudgetPeriod.md:
     id: 0b641f84cdf0
     last_write_checksum: sha1:b99ab977e3b95073f5942c13eae18789214bbb24
     pristine_git_object: ea78a50dc8b11b0e9650b065398d079bb10137cb
+  docs/Models/Shared/PropertyAdsReportMetricsCampaignFrequencyCap.md:
+    id: 35691c1d3a06
+    last_write_checksum: sha1:f944902db40883b7db3f019116aae7ccf0065c5e
+    pristine_git_object: 15bcdb00958bd335675bb0916611b7f2f22fd690
+  docs/Models/Shared/PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit.md:
+    id: 0ed205ead144
+    last_write_checksum: sha1:11bda4b8cb48ea88369ce937a71bd241d9e6676e
+    pristine_git_object: cda6cf0edb9e284af9fa2e72f31fe2ce7434984c
+  docs/Models/Shared/PropertyAdsReportMetricsCampaignGoal.md:
+    id: cfbad7f7d443
+    last_write_checksum: sha1:ac2e378d394cd56f1eb120ea8670ddb88ace7d0b
+    pristine_git_object: 00dab4904dc67690454e49b69897ee3cd5613489
+  docs/Models/Shared/PropertyAdsReportMetricsCampaignStatus.md:
+    id: 7ab6ed9d5ec1
+    last_write_checksum: sha1:407eb64bcb3c5b08fdb751328143360db8bed72e
+    pristine_git_object: ec4472183273f4c76778746d1156260f50be2312
   docs/Models/Shared/PropertyAdsReportMetricsCampaignTargeting.md:
     id: e20568cf2402
     last_write_checksum: sha1:7dfc8a385a70c59babb270ec3cb663121b81bdc0
     pristine_git_object: c510dfa3979aae7c1d6268e8b40bed09a825eede
   docs/Models/Shared/PropertyAdsReportMetricsGroup.md:
     id: 394d696ba7c9
-    last_write_checksum: sha1:8eab64ebd5f18a3aed6651077c0fcd7394f35ae7
-    pristine_git_object: e07bc88252908937742f93a01ffffce19b226549
+    last_write_checksum: sha1:94d9f7d8aaa8fc026291e97284de8772b3107269
+    pristine_git_object: 3eefa8d383c0bbd64fbaa0b08dae6b47fe4dac7b
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBidStrategy.md:
+    id: 207592315fe8
+    last_write_checksum: sha1:b1f5acc0976468baea7fcdc071478f9fd82d825b
+    pristine_git_object: 663d101302fc22710cea9c71ebe8ade9a483f01d
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType.md:
+    id: bfd42e6f40f1
+    last_write_checksum: sha1:91db18c1363b3186a2c87f4633019700acf63a5f
+    pristine_git_object: 6db02b064ef65c4d7fa0d6c5f9ce70926b60f0ba
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyType.md:
+    id: a4304d454457
+    last_write_checksum: sha1:49044411122b3faa43bd3a265072cfc05ffeff9c
+    pristine_git_object: a694152e1bed05b0d6ac14c7c74efbf0faf2fb71
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType.md:
+    id: a43551e055ea
+    last_write_checksum: sha1:8e19df08eef0f02c332039d6559bb0fbfd97489e
+    pristine_git_object: 312ed392b3c6fa25eeb909725cd91653d19ca18f
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBudgetAllocationType.md:
+    id: e9a685bded2f
+    last_write_checksum: sha1:d97b979979958fc3a211bc409edee4ba27325a47
+    pristine_git_object: be38c1d87f410498146098820d9e4323907b6600
   docs/Models/Shared/PropertyAdsReportMetricsGroupBudgetPeriod.md:
     id: e84416a64e63
     last_write_checksum: sha1:1eec4d8250d6229e0269640cc78c1af84e16e89f
     pristine_git_object: 0ef09f8a9883308363f2f79fa0d5c46ce9c03932
+  docs/Models/Shared/PropertyAdsReportMetricsGroupBudgetUnit.md:
+    id: ed081fdcc5f9
+    last_write_checksum: sha1:6a3fff6bd45035074a121b2047e12a1d7f734379
+    pristine_git_object: 41d274140128e2dac93ce0a7afcf974ddabcadb0
+  docs/Models/Shared/PropertyAdsReportMetricsGroupFrequencyCap.md:
+    id: 1a84ded81b7d
+    last_write_checksum: sha1:2b23f7ccabdd4a355fcb45851db3c023a5464e01
+    pristine_git_object: db3b42fa241115507ffc1ab388cb70fdb6cf138c
+  docs/Models/Shared/PropertyAdsReportMetricsGroupFrequencyCapTimeUnit.md:
+    id: 7fc13b5ce093
+    last_write_checksum: sha1:4260ceaa5b3bf045ebb8695465082f3dbb48e14d
+    pristine_git_object: 72ca56fc79978aac935933bbcf6b0330be5e7e47
+  docs/Models/Shared/PropertyAdsReportMetricsGroupPacing.md:
+    id: 59561a322ae1
+    last_write_checksum: sha1:b69e3e8cdaad9da1bc96396cb060a70c2d5fad9e
+    pristine_git_object: 93162729b60bfe54f219fffdc4ca212645f21781
+  docs/Models/Shared/PropertyAdsReportMetricsGroupPacingPeriod.md:
+    id: ff8c874b1c67
+    last_write_checksum: sha1:276c9449a0161e47af127d1ba3b340ad533f1ad6
+    pristine_git_object: e6d956456ef77f3c9b872d57a6cd68bf92cab76e
+  docs/Models/Shared/PropertyAdsReportMetricsGroupStatus.md:
+    id: 235d1aad62cf
+    last_write_checksum: sha1:811d93b5760c295f72aee51531833db94e28bcc7
+    pristine_git_object: 5b7a9b57aeb1c712abc1d12b24749375470c3ea4
   docs/Models/Shared/PropertyAdsReportMetricsGroupTargeting.md:
     id: e1bee239b8a4
     last_write_checksum: sha1:d30b2ab462419d8d7842d7ff674e32acb30675bf
     pristine_git_object: 86334f8e5ff291e5904493b824e417e91d744449
+  docs/Models/Shared/PropertyAdsReportMetricsGroupType.md:
+    id: e7e2be1bf4d0
+    last_write_checksum: sha1:1247044c6ff96161ecaf2bb5e5d053fea89d964c
+    pristine_git_object: 8191f492625afa4718ff695de91022d5bc942f94
   docs/Models/Shared/PropertyAtsActivityFrom.md:
     id: 94f822e1807e
     last_write_checksum: sha1:27cb902613ddc3dc0cd82337192c586d4d67794a
@@ -8329,8 +8665,8 @@ trackedFiles:
     pristine_git_object: e7baf526458e4e4df2b21c78f65b61e666f26e9d
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:1d7c50c5bc24d15c9fed9df7dca4b7ae44d6d081
-    pristine_git_object: 70cb4c45fe1ada95284ed21faea293287f48e7d0
+    last_write_checksum: sha1:53a1332db321571ef4db1b18121968af2287278f
+    pristine_git_object: 7c8664eeb56f91b975fe66ab6ea436f78ed895b2
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -8927,6 +9263,10 @@ trackedFiles:
     id: 7225dac8963b
     last_write_checksum: sha1:73f0a6591a1422aab97966843bc7fcfd361c1168
     pristine_git_object: 4b84bcdaf77ae5e72c7e5591ffa298db1f6a8ab1
+  docs/Models/Shared/TimeUnit.md:
+    id: 1f2b24e444e7
+    last_write_checksum: sha1:7b0673de60c30c57c9610513d01eca2528046548
+    pristine_git_object: 86f5d5bf863375a5b7abf37d4c2a08145393f88f
   docs/Models/Shared/Type.md:
     id: 1475e79ae8e9
     last_write_checksum: sha1:25bbdddfbecb43a137eab48ab6e7606ccbcf9056
@@ -9211,6 +9551,10 @@ trackedFiles:
     id: c0723fc92188
     last_write_checksum: sha1:0341d44eb1c098df6f0c3ac9773452dd623c5923
     pristine_git_object: 6988ce5e5bf14207a0e3fedfb4596fc1ddb30ea4
+  docs/Models/Shared/YoutubeAndPartnersType.md:
+    id: b205c0ee1b8d
+    last_write_checksum: sha1:04461207b8b9caf984ef2b831c70e2e79de99e8b
+    pristine_git_object: 3f586018b24751fc6e6c50ef4def2ee21246c1cd
   docs/sdks/account/README.md:
     id: 2d1d67055b31
     last_write_checksum: sha1:afade2c007d2cf9539cdac0e118476026b70e74f
@@ -9229,8 +9573,8 @@ trackedFiles:
     pristine_git_object: 316bddfcb2969b8144f4509785c40ac167f940e1
   docs/sdks/ads/README.md:
     id: 29d096aad48a
-    last_write_checksum: sha1:8baf7ea3f81b72a7afb0777395a4f4ca504efbb5
-    pristine_git_object: a216478caf0249327f3b361a4769d36e0e800124
+    last_write_checksum: sha1:c8a00b6d291c62239c47a5db359ef1a1375ed8a7
+    pristine_git_object: 68b4af34c1fd0418c5e3709548324438150dd613
   docs/sdks/apicall/README.md:
     id: 69cabc6c43ea
     last_write_checksum: sha1:9f02c593c65ef4cc1335fa43e16ea23acdbdd6b8
@@ -9343,6 +9687,10 @@ trackedFiles:
     id: 80cb1721406a
     last_write_checksum: sha1:161760d97341e20db1d7d16d803bc1dbee4d2946
     pristine_git_object: 9d04889350b0b6e72742ce54f2d6dcabb10512b6
+  docs/sdks/creative/README.md:
+    id: 9e3fda387788
+    last_write_checksum: sha1:b3c5826ff44cf021c8d14b421e171297b01ad560
+    pristine_git_object: 239bb83bf9e8a8189f19a31560317becddc6b49b
   docs/sdks/creditmemo/README.md:
     id: 3174d1f4998a
     last_write_checksum: sha1:7525ebda488418e01bb33e4ba3c3c9676e36ca22
@@ -9419,6 +9767,10 @@ trackedFiles:
     id: 0baa868a038c
     last_write_checksum: sha1:7b1ce004d382222deeade67cafcd019ab98ca1ab
     pristine_git_object: d1fae629a10a54c1688d3d47702035392860a775
+  docs/sdks/insertionorder/README.md:
+    id: 72e4049753b2
+    last_write_checksum: sha1:5e9d559c24e8fcf505e2b7e3b99d1b7f62825931
+    pristine_git_object: b27fe6b37f695ad05002ed55d36f527e9d8131c9
   docs/sdks/instructor/README.md:
     id: cc938a24e891
     last_write_checksum: sha1:79077f13e812880170f0e650256a653044b0c714
@@ -9745,8 +10097,8 @@ trackedFiles:
     pristine_git_object: df7f62d5a891cd2c1766907e4009c79141d82a25
   src/Ads.php:
     id: 06359576be17
-    last_write_checksum: sha1:ddfc8133992a7a43ee5682f90a0b5f333c5b4289
-    pristine_git_object: 57384b876bdf9069d15e3da7e7f986d00308660d
+    last_write_checksum: sha1:3c2e7b9e3cdc1e3005a37e80c6eb943c6080970a
+    pristine_git_object: 7fc687f946760ec99fa912ec9490262d97e13fef
   src/Apicall.php:
     id: bacbe2e21d0e
     last_write_checksum: sha1:a73e4c9bb88141f3315ab248ed67e5e41a35bd0c
@@ -9859,6 +10211,10 @@ trackedFiles:
     id: 07e5c7437d29
     last_write_checksum: sha1:8ff70d7f12eefb33d1a80e58c8bbe9c48e3b7f66
     pristine_git_object: 116da7905b252f46f292294689cebb46f214e025
+  src/Creative.php:
+    id: d1c1d9f88645
+    last_write_checksum: sha1:6fdcd524058f6383190076ac1cf9fde1e93cb111
+    pristine_git_object: 0a52fbc6bf53946b1b7f6813f4e67b8f5a01ba7c
   src/Creditmemo.php:
     id: 8b55d8e2c7e9
     last_write_checksum: sha1:3d48dee4f9ba82ceac1efe63c49d7f37a7b4c108
@@ -9999,6 +10355,10 @@ trackedFiles:
     id: f49753f45f8f
     last_write_checksum: sha1:3ce92f19e605bcbb038c517ad4f3b06fc551e695
     pristine_git_object: c841de44735cd0b63bd04dddf74c06ba5e8226d3
+  src/Insertionorder.php:
+    id: 2a740805440b
+    last_write_checksum: sha1:c8e5785e141c732aab35c807096382a8b6ef011f
+    pristine_git_object: 39fc34d244c09b63e72d13f240382215f8018c2e
   src/Instructor.php:
     id: d8700ea999f1
     last_write_checksum: sha1:144a4d86c29dbee0577ed206c65221b8e8f62f0c
@@ -10257,8 +10617,8 @@ trackedFiles:
     pristine_git_object: e7b2831bb6588ec54e8fdb0efb361e1dc2c014f3
   src/Models/Operations/CreateAdsAdQueryParamFields.php:
     id: 4a287414cd28
-    last_write_checksum: sha1:7b92a89107825f7d1d36d029fc922fadc3625133
-    pristine_git_object: 2a00c08d89a9e9a2ea04d94a05fc8e1e855050f3
+    last_write_checksum: sha1:2e785c470bcc9741326b0f351fa07821523a4c81
+    pristine_git_object: 47c664248e600dca57bf3b3491c9a8f4534a54ba
   src/Models/Operations/CreateAdsAdRequest.php:
     id: 7d7aa62b116e
     last_write_checksum: sha1:f53f7323c1611a90546e240ccf048983da7e7895
@@ -10269,8 +10629,8 @@ trackedFiles:
     pristine_git_object: bef385db457eaf21acf453d12ff8c4fad80170c6
   src/Models/Operations/CreateAdsCampaignQueryParamFields.php:
     id: 6ad808cd6d3f
-    last_write_checksum: sha1:5ffbfaf2bbd31e2a96ae153247fbe6e5ebe48a41
-    pristine_git_object: ade5402c946fdbf5ea8aaca854f52afcc8440731
+    last_write_checksum: sha1:3078b86fbb63775e1928ff6078600aefdd5c1fd7
+    pristine_git_object: 7ba85fa25c88963938a12cbfa4063c9c9a80869a
   src/Models/Operations/CreateAdsCampaignRequest.php:
     id: 832ff476bd13
     last_write_checksum: sha1:29f0325b9444bf52855e0c5c71f495cb6a79b4e0
@@ -10279,10 +10639,22 @@ trackedFiles:
     id: ac14f90f6298
     last_write_checksum: sha1:0fb12bfba0c20315b8ade7ade5a8483d887c3dd6
     pristine_git_object: cb08a76232e0a8765c57e1b199205d9c04add75c
+  src/Models/Operations/CreateAdsCreativeQueryParamFields.php:
+    id: 2f51fe47cf3b
+    last_write_checksum: sha1:01aac58023f4602e26c7e50ec62e320bda306f36
+    pristine_git_object: 870e64d34f05f9adc3c3eea4dfd3ff5fe6bb4183
+  src/Models/Operations/CreateAdsCreativeRequest.php:
+    id: 4a9124bcc9a3
+    last_write_checksum: sha1:f825dea4934b8888858d77526283033c82b19572
+    pristine_git_object: 0b96d27c42a0ecf083732831f06173b00352688d
+  src/Models/Operations/CreateAdsCreativeResponse.php:
+    id: 3f945fe7c33e
+    last_write_checksum: sha1:bc422636d06574a781663de40b5ee1bb0c25d519
+    pristine_git_object: 8f9abfbb9b9e996a9e3094f284df0eb1deb78b28
   src/Models/Operations/CreateAdsGroupQueryParamFields.php:
     id: 470a558b0570
-    last_write_checksum: sha1:8de380cf42f41eed1f01b43ca61329a1aa9e1453
-    pristine_git_object: db751dd000088f79ea4e105a6b19904898ef68f4
+    last_write_checksum: sha1:1227548e728b934a0e78f2bd02572fa552049e8d
+    pristine_git_object: 32e5acb2ba03f7907921e0ed7e1f012a590bc629
   src/Models/Operations/CreateAdsGroupRequest.php:
     id: 35b912e9c744
     last_write_checksum: sha1:17bd94e61bc903489ba71b3063dcc934f78ee895
@@ -10291,6 +10663,18 @@ trackedFiles:
     id: 4da35eb146f4
     last_write_checksum: sha1:bfbe147fa439ac7069e22e0b176bc8caebbe9e46
     pristine_git_object: b173bfd6a1ca01a9fb04e573b9234c8cd0d9ec3b
+  src/Models/Operations/CreateAdsInsertionorderQueryParamFields.php:
+    id: e9b2e5745eca
+    last_write_checksum: sha1:afc769a971dc1fa22126c767c8dfe56e0c5bb3bd
+    pristine_git_object: 354bcba1ef152ae8946521532729133cd04f92f2
+  src/Models/Operations/CreateAdsInsertionorderRequest.php:
+    id: 7d08c778e5ed
+    last_write_checksum: sha1:262a6f2a0efc72edc0f03bdbdc1df7fbc19207e0
+    pristine_git_object: 613c8996b0543e2baae65d9a83c71cda27965045
+  src/Models/Operations/CreateAdsInsertionorderResponse.php:
+    id: f45374ac7c15
+    last_write_checksum: sha1:c2d147172795c2dc8fe2f28a6f6f787098909e95
+    pristine_git_object: 45c6f332966f4f66816b7789e3305e243e107b2f
   src/Models/Operations/CreateAdsOrganizationQueryParamFields.php:
     id: 40c74f17387c
     last_write_checksum: sha1:3261045dd140cecea9ec446aadd9dbe2a1510b44
@@ -11421,8 +11805,8 @@ trackedFiles:
     pristine_git_object: 835a630369018fd8e007f8bb6d03daecd456de2c
   src/Models/Operations/GetAdsAdQueryParamFields.php:
     id: 5b593d9a8b15
-    last_write_checksum: sha1:26df1ec263feac4a11c31fa61ba2499158a87423
-    pristine_git_object: 49af764803b160c3ef0fb230838e46dc4007b7e2
+    last_write_checksum: sha1:3510492112151e08bfd7c7ba92a84bdf0e849bb3
+    pristine_git_object: 7c90f82b63e93c7006db8d5fb757a4c2882adcee
   src/Models/Operations/GetAdsAdRequest.php:
     id: 9746eebb5012
     last_write_checksum: sha1:3f1c3e8a652ac78aad7c197f0e59db2c5057cbad
@@ -11433,8 +11817,8 @@ trackedFiles:
     pristine_git_object: 0b378e411f41429f46350325489cbf496c8a7388
   src/Models/Operations/GetAdsCampaignQueryParamFields.php:
     id: e1cac2783c14
-    last_write_checksum: sha1:c16c1aa3b336a2cde862fbcbd8d5c9768207fd00
-    pristine_git_object: b1d6c8bc1fdf39995b35b2970decc59a8955602f
+    last_write_checksum: sha1:0dabde47352f097d6fa52233c5572adce5092925
+    pristine_git_object: dbea961d3c000f081d836ed983aaf6dfc794a911
   src/Models/Operations/GetAdsCampaignRequest.php:
     id: 390d4a7c2bd8
     last_write_checksum: sha1:702f6bf87789183bd47c78a35acccc46b61cef94
@@ -11443,10 +11827,22 @@ trackedFiles:
     id: 5d6a16e97e1a
     last_write_checksum: sha1:7a599cf3e10d09e7da14c924df4f2b3b21b6663f
     pristine_git_object: 62863b39097b2db3ede61e8dbacc6d9358df5ff1
+  src/Models/Operations/GetAdsCreativeQueryParamFields.php:
+    id: 4ed9eb0fde80
+    last_write_checksum: sha1:00aafcf38b22874d95466213d52794af7dc76944
+    pristine_git_object: d0a1fe03f4071fdce9d259d5dbb8894b9e4f5682
+  src/Models/Operations/GetAdsCreativeRequest.php:
+    id: 31fba1f8a2e1
+    last_write_checksum: sha1:dd8bb18b2f548d7471c24b6d41a2aa57c172483f
+    pristine_git_object: ab773a314ccaec940e08aef1c25190a550c1715d
+  src/Models/Operations/GetAdsCreativeResponse.php:
+    id: 680fc0409166
+    last_write_checksum: sha1:3077e60a950409a8a98de1665b509de37b5745ba
+    pristine_git_object: 5623379d33dc97e0ec2c36feb556922472482868
   src/Models/Operations/GetAdsGroupQueryParamFields.php:
     id: ff945eb0f4bc
-    last_write_checksum: sha1:b3eb95bc05fdcf181995331a1394c2e0b651c884
-    pristine_git_object: 5fc0a5cb8aaad4622b2eeff7c4029771e95e2bba
+    last_write_checksum: sha1:a86fa216d8b79303576ddab214f42a96827ba56b
+    pristine_git_object: b942f26210f61fab890fd6d44fc66dd9005be18b
   src/Models/Operations/GetAdsGroupRequest.php:
     id: 1b5691f33572
     last_write_checksum: sha1:a12c509908036ab66d86ad49726ce8fe8fd798b2
@@ -11455,6 +11851,18 @@ trackedFiles:
     id: f979aecbd2ee
     last_write_checksum: sha1:299f4bf256972ee20f11300e023eff53d2a3cc44
     pristine_git_object: c539279059688fd6b854430ac98bc258689615b3
+  src/Models/Operations/GetAdsInsertionorderQueryParamFields.php:
+    id: f03b72b25425
+    last_write_checksum: sha1:24293b7774365870f371b07b0da46c7c6143f5ca
+    pristine_git_object: 59bd7e9c7ad745c06598746e532682f9c5a8be5d
+  src/Models/Operations/GetAdsInsertionorderRequest.php:
+    id: c1c8ad35f8df
+    last_write_checksum: sha1:237b6a33d12f9a06ffc2304f0c1eecb6774c6000
+    pristine_git_object: 73c29250ce732be8be6f375574bfb5966e340198
+  src/Models/Operations/GetAdsInsertionorderResponse.php:
+    id: 920762042c03
+    last_write_checksum: sha1:8b1a1cad565f0f135b66112ed1fcc54cf1db1f96
+    pristine_git_object: 53e8700719d3c256c7efc7f12461f82eeef2a271
   src/Models/Operations/GetAdsOrganizationQueryParamFields.php:
     id: 14ba2a899187
     last_write_checksum: sha1:741d2553a4dfa443989748ab43a6e4ab75227e3e
@@ -12721,8 +13129,8 @@ trackedFiles:
     pristine_git_object: 610eaa267b784bbbdb521e343362b162e3c36753
   src/Models/Operations/ListAdsAdsQueryParamFields.php:
     id: 46f26139d149
-    last_write_checksum: sha1:b836e78567befaf32b94ed77b6734ce111a3431d
-    pristine_git_object: eb730f96e64b698012446440b831bb371e1a85f6
+    last_write_checksum: sha1:a120b97ef565aad871e70ec78d7049c1bd53e7c7
+    pristine_git_object: 322d9ab360f216c587fa3101788d54e8a7c7fd92
   src/Models/Operations/ListAdsAdsRequest.php:
     id: bf4c96ae8ce9
     last_write_checksum: sha1:c951feef9d174b8a5cb8fa5e5d6aa7e64138cd4e
@@ -12733,8 +13141,8 @@ trackedFiles:
     pristine_git_object: 478dbc65bdd11fae838cb2d090d6cd7a8ed32cb2
   src/Models/Operations/ListAdsCampaignsQueryParamFields.php:
     id: 32c5ea17a96c
-    last_write_checksum: sha1:11e523345fcbe8d33c4cfa99dfd230068e667b48
-    pristine_git_object: f94580c26cc02393d0481561c75349c450a54b62
+    last_write_checksum: sha1:f2d4ec6eb0380d4fe2fb39e0b89d0b15ce583f75
+    pristine_git_object: 36de18290fbf1071c66d01a7b39e8ec5c394c200
   src/Models/Operations/ListAdsCampaignsRequest.php:
     id: 1f15f9d3c9be
     last_write_checksum: sha1:d6d19bcd697f57e37595b48da3978be6cf3a93ef
@@ -12743,10 +13151,22 @@ trackedFiles:
     id: 00300a2f2ef2
     last_write_checksum: sha1:0cfc2ca01bd7552ea30d674b9c5d4fd8a246f9c5
     pristine_git_object: 5c0f91016e92930defa21bc92c27ee4e352a69d4
+  src/Models/Operations/ListAdsCreativesQueryParamFields.php:
+    id: fbf1dbb7550c
+    last_write_checksum: sha1:3f3c462eff38cc851cb2b55498eb3d4e81d50571
+    pristine_git_object: 23f895b392fdeabf23dfe2e28f9b69e64ca457f7
+  src/Models/Operations/ListAdsCreativesRequest.php:
+    id: 1f1619159831
+    last_write_checksum: sha1:b638c356994c872a5ffd9dc37067f6a691d23f5d
+    pristine_git_object: 3718b407136acc876de0207a130070ffd4c59d06
+  src/Models/Operations/ListAdsCreativesResponse.php:
+    id: c51771b4fcb7
+    last_write_checksum: sha1:2cab26be54ba1317debc4def35ba582b03665491
+    pristine_git_object: 570b1ad53045976f3406f0cb20f8575a96bf35c9
   src/Models/Operations/ListAdsGroupsQueryParamFields.php:
     id: b8e83b30a440
-    last_write_checksum: sha1:d173363565b7734568879f9efa3e9a7c9082c1de
-    pristine_git_object: 743968f14d6a51530e917f99221485efb5bef50c
+    last_write_checksum: sha1:d7787155415c80495742d17a21148424fc1329d9
+    pristine_git_object: a6020314b48b98117608cb1cdad8b1244eb1a64c
   src/Models/Operations/ListAdsGroupsRequest.php:
     id: ae4951b6771d
     last_write_checksum: sha1:87337c6eb009183cb7fd4b321955f662f83454f1
@@ -12755,6 +13175,18 @@ trackedFiles:
     id: e3d86cefc6dc
     last_write_checksum: sha1:31e3a13ecfb44a72007295fba0ab2b18f6c71a66
     pristine_git_object: 2c8408ba7fd145ff91f31bc81368ebdb1d938d21
+  src/Models/Operations/ListAdsInsertionordersQueryParamFields.php:
+    id: db28d3ca355e
+    last_write_checksum: sha1:af633db74791b4f436ad2829d30e9b61cbb224f1
+    pristine_git_object: 42e827f8626ddb1c73acf4b3a4f7bf97edc66909
+  src/Models/Operations/ListAdsInsertionordersRequest.php:
+    id: ee39ade4726d
+    last_write_checksum: sha1:9ef3fe1b0b1032a1307793b05584dbdd4db307df
+    pristine_git_object: bae62c72d5b1883aba4b4eceea4d4979178172b8
+  src/Models/Operations/ListAdsInsertionordersResponse.php:
+    id: 8e68351f4cc2
+    last_write_checksum: sha1:526d6692c3ef53a0c693c0b545e7631114b57a77
+    pristine_git_object: 05d4218632762f72fa015578270ec428eea8f0f6
   src/Models/Operations/ListAdsOrganizationsQueryParamFields.php:
     id: da703f71e3f9
     last_write_checksum: sha1:109de9e42ccca376180c15e4ae548c703e83686b
@@ -14005,8 +14437,8 @@ trackedFiles:
     pristine_git_object: 6ef20eb6fdb8e41943575f3b07ff433258e44e4f
   src/Models/Operations/PatchAdsAdQueryParamFields.php:
     id: accdbf483579
-    last_write_checksum: sha1:1d45a53a9c2a1f86f5753f5d9de6f98a02960976
-    pristine_git_object: e3f674762bafd42d1148b6417ec814245fa9db35
+    last_write_checksum: sha1:9b05d18777c59748e9fc46b327950f0591eeda98
+    pristine_git_object: 3997afc05937a8fe91fe29a988438cf8ffd8c5ec
   src/Models/Operations/PatchAdsAdRequest.php:
     id: 8eb66584849a
     last_write_checksum: sha1:500db82341a2479b90fe684e15bf65292278665c
@@ -14017,8 +14449,8 @@ trackedFiles:
     pristine_git_object: c08a497511200be7e1f169ba29cdaa3ddbf2e2f7
   src/Models/Operations/PatchAdsCampaignQueryParamFields.php:
     id: db2bcebe8b7e
-    last_write_checksum: sha1:f936511426559bf7db98131066a5d451c809fe1d
-    pristine_git_object: 353d1de82e45115b4b02799ec131a6efa0c5f5dd
+    last_write_checksum: sha1:c831f66d4e676811d026b6eb3738f5e91418329d
+    pristine_git_object: 6f5c4e836816899fdea1482bc2acc86d58405e38
   src/Models/Operations/PatchAdsCampaignRequest.php:
     id: 5c613abf37e1
     last_write_checksum: sha1:da96d980400a2d0bebdfc0d9aef4caeea02a4f2d
@@ -14027,10 +14459,22 @@ trackedFiles:
     id: 1658916a7289
     last_write_checksum: sha1:ff994d4e2c3508f34caf0a467647a6ab891d47a3
     pristine_git_object: 1a58d2825ada37d803850c52812dac7304a3e6a3
+  src/Models/Operations/PatchAdsCreativeQueryParamFields.php:
+    id: e8001122c259
+    last_write_checksum: sha1:2cbeed4c1846332dd99345204782a9bea527f34c
+    pristine_git_object: 2aee1ea786913711e234a85bb943d57370f58bcd
+  src/Models/Operations/PatchAdsCreativeRequest.php:
+    id: d196ead76139
+    last_write_checksum: sha1:57c910d8c4301f61a89e36a69eee8fae363ec6ec
+    pristine_git_object: 1cbe3080e9352f167b3f87b83a5675170f9f234e
+  src/Models/Operations/PatchAdsCreativeResponse.php:
+    id: af79f9166e86
+    last_write_checksum: sha1:a3df6978da3ec2ff13d408c21bfea419d67f7192
+    pristine_git_object: 0825f40fc9523843095f698436197fac1de34946
   src/Models/Operations/PatchAdsGroupQueryParamFields.php:
     id: 73824137b014
-    last_write_checksum: sha1:ea5943a00ac7cb53c521e4c1ce7fa418b60afb80
-    pristine_git_object: eaac2f1c452b5ef90fa6120b6fe9f3f23a7d5f3d
+    last_write_checksum: sha1:9ddd43a15fc782fb317d1f2520a6de7ef3edd7a3
+    pristine_git_object: 83d12b7ada99206b78c9f824bc5e5c7304a7af45
   src/Models/Operations/PatchAdsGroupRequest.php:
     id: e6e1f02894fe
     last_write_checksum: sha1:c45887a2222ce5d522aaa1b9e2f02e7c5c262b07
@@ -14039,6 +14483,18 @@ trackedFiles:
     id: d112d7efeca8
     last_write_checksum: sha1:8d4869fa115a6468f43b879186752cce35535be7
     pristine_git_object: 4d387551e5a9495f02fb470b9f2d85643e185013
+  src/Models/Operations/PatchAdsInsertionorderQueryParamFields.php:
+    id: 8409297f3b23
+    last_write_checksum: sha1:e7ca7def1a18a294129498f8d7bfac8dc1ddcd83
+    pristine_git_object: 813a4c50fb3de32c78a06c55be88471c3cad979a
+  src/Models/Operations/PatchAdsInsertionorderRequest.php:
+    id: 6b1dd03f48c8
+    last_write_checksum: sha1:eec82475c544ddf88519a246e0f88c705b3eeb03
+    pristine_git_object: b428c1de7d7041f6697d3985b005acf2a7a076de
+  src/Models/Operations/PatchAdsInsertionorderResponse.php:
+    id: ea49a51ee042
+    last_write_checksum: sha1:af2749216fd9894e4a92de65f62b35c9bf3f6691
+    pristine_git_object: 5a97b9d5fce82633b255a4ae27e0e21863230bcd
   src/Models/Operations/PatchAdsOrganizationQueryParamFields.php:
     id: bde6b1c6e343
     last_write_checksum: sha1:42f2778f2b740622d5db35a6ae2f3a8d67f00101
@@ -15027,6 +15483,14 @@ trackedFiles:
     id: 1ecce1b19022
     last_write_checksum: sha1:8429ecf7dffab0f9f79e643bfc00d11c478f9173
     pristine_git_object: 9d3b0a75e3d7fabfa81da82af9227b63def05b93
+  src/Models/Operations/RemoveAdsCreativeRequest.php:
+    id: 94c1663188f9
+    last_write_checksum: sha1:308a2eb415775f01f4bd6c6c9a62ef6092a35436
+    pristine_git_object: 9cf0004b429974596368fd3900499fe995482e52
+  src/Models/Operations/RemoveAdsCreativeResponse.php:
+    id: 184d74c3b13f
+    last_write_checksum: sha1:fcca6432e9dc6f609b51797716c1db339afe0e84
+    pristine_git_object: 58e78904853157c9b1412674c58224b2b3d298ce
   src/Models/Operations/RemoveAdsGroupRequest.php:
     id: 11d4a277e827
     last_write_checksum: sha1:992b05f1858790298682b30c7de0700140be9425
@@ -15035,6 +15499,14 @@ trackedFiles:
     id: 6840030f6d4e
     last_write_checksum: sha1:97dbc7ac6db068da3610d42c46e983d738e24f11
     pristine_git_object: 0b775ae71ef054c68fe57f9f5cb9ed98c5124bdb
+  src/Models/Operations/RemoveAdsInsertionorderRequest.php:
+    id: b5b4410b0a71
+    last_write_checksum: sha1:e224711976c25542f49595d390091794536c904a
+    pristine_git_object: 5d765ab9bda9085c0ba801d75a7e214a66645444
+  src/Models/Operations/RemoveAdsInsertionorderResponse.php:
+    id: ec58864d2688
+    last_write_checksum: sha1:f12672636d71477ca72b06db00d9ba4f45b47182
+    pristine_git_object: 45d55db91acf9f78e483e09ea92d5fc1cf22af04
   src/Models/Operations/RemoveAdsOrganizationRequest.php:
     id: b8229b5b9e12
     last_write_checksum: sha1:395cad5df99204dcfa311e850edd7aaf76ec3620
@@ -15777,8 +16249,8 @@ trackedFiles:
     pristine_git_object: eef41693238c4ff708d5da3221f7113a4dcf61e1
   src/Models/Operations/UpdateAdsAdQueryParamFields.php:
     id: 1144593f7786
-    last_write_checksum: sha1:cbbdbb1d0b23bca21e4b7da23c3f6d227638ce7c
-    pristine_git_object: 50bb481047c9d75579874c9b16d93684648a1f91
+    last_write_checksum: sha1:038d42dfd3dbbba08c2e7c23628b0c4699f45739
+    pristine_git_object: 75f0d62dcf90adb6bc9140dfbdd0821bc281c827
   src/Models/Operations/UpdateAdsAdRequest.php:
     id: 73efab14dd2b
     last_write_checksum: sha1:628defe2dc7c897641846dc77c11ac4f43e01c20
@@ -15789,8 +16261,8 @@ trackedFiles:
     pristine_git_object: 4b94177b9e44d37c0e26833b0944360ad3c2b989
   src/Models/Operations/UpdateAdsCampaignQueryParamFields.php:
     id: 3b0b16085341
-    last_write_checksum: sha1:99d350b43b6ae91075cb611b540c7b293bf0314d
-    pristine_git_object: 6a30ebf5ba9069457e970ce423e9e2953f657638
+    last_write_checksum: sha1:0499586c7f5651c733e5864d2812c3f5b3f86fc1
+    pristine_git_object: 9a35f4b19a53bcf4265248e1af88a185de0c00da
   src/Models/Operations/UpdateAdsCampaignRequest.php:
     id: 30ba477b1bd5
     last_write_checksum: sha1:1ce4dc1468e3fecf8b32f439d9fef078ab344bb7
@@ -15799,10 +16271,22 @@ trackedFiles:
     id: 96ac7ac153b1
     last_write_checksum: sha1:1feb58b1532cb264f0048dd3ca484faf9ae49ee3
     pristine_git_object: 90fd7bf85380cd6fea33b4510abf39d089befc79
+  src/Models/Operations/UpdateAdsCreativeQueryParamFields.php:
+    id: 83b145d02a7d
+    last_write_checksum: sha1:b1288db5680914aa80e912580738396d9c838154
+    pristine_git_object: 7dda4fdc57d79fb474661d472eccd31349cb1670
+  src/Models/Operations/UpdateAdsCreativeRequest.php:
+    id: 1e1b3cf8ad0b
+    last_write_checksum: sha1:df65d672c373bf6fa94d4a7f182ecf6c4f58ce27
+    pristine_git_object: 44ef3d0e1d6a708ec49610d9edd1685728ba01ed
+  src/Models/Operations/UpdateAdsCreativeResponse.php:
+    id: 1028e3e5ede3
+    last_write_checksum: sha1:68ac3850d86b1aadc54c513b33bddf02685ece0d
+    pristine_git_object: 44067e0aea78f2b1cb92fea3f9556f40e0077e28
   src/Models/Operations/UpdateAdsGroupQueryParamFields.php:
     id: f64ba09ecfb5
-    last_write_checksum: sha1:ff0ebb9d9220709d2a8c932dc9692f37a701c424
-    pristine_git_object: a0b9666a116c89f02af16f82476df783b8049533
+    last_write_checksum: sha1:72c302b99304ad0e5c43b98284bd540b16b17bbb
+    pristine_git_object: 43cffdd9e62ec3caf7d8f2dce028f51eb03ec166
   src/Models/Operations/UpdateAdsGroupRequest.php:
     id: 67fa3f592700
     last_write_checksum: sha1:7a48c56afcf0a7c1b6993e9a09478b13302f3523
@@ -15811,6 +16295,18 @@ trackedFiles:
     id: e3bc8907731b
     last_write_checksum: sha1:8984c622c1f9385afefa6be62208e5c074f3591a
     pristine_git_object: a623acb1aaacd62548ccb6b06dbf0486c30d0d2d
+  src/Models/Operations/UpdateAdsInsertionorderQueryParamFields.php:
+    id: c580e9ea7bf9
+    last_write_checksum: sha1:c6ee5f48bb3309522edc207e89ce0727bdce5d31
+    pristine_git_object: 5831c9b385b9e57eb38c07113d2c40fb3586764b
+  src/Models/Operations/UpdateAdsInsertionorderRequest.php:
+    id: 066df774fe1c
+    last_write_checksum: sha1:51f924dc60c1f247613be264a32d083da984bbd9
+    pristine_git_object: 91cae5fb3b4faaca86ba7d5d13205eba22f3ffda
+  src/Models/Operations/UpdateAdsInsertionorderResponse.php:
+    id: a5ba3f915802
+    last_write_checksum: sha1:900591ad7aa91c4727589f8dcf3d11e9e11b1144
+    pristine_git_object: 723f82b57a4d8ef53155084fee3bcc71a343a842
   src/Models/Operations/UpdateAdsOrganizationQueryParamFields.php:
     id: 64d8eb369330
     last_write_checksum: sha1:3bffb1405b1ff7f3925d6bfa4fb17662ab111e30
@@ -16881,20 +17377,60 @@ trackedFiles:
     pristine_git_object: 2dea773ab2ffbd84b547ce79742b61e2500a03ac
   src/Models/Shared/AdsAd.php:
     id: da2ab98646fe
-    last_write_checksum: sha1:aa04c8597802e4b13c75041045c57842fb84d6cc
-    pristine_git_object: fa5e3247eee2ce8a5d63d7a223144d60228b1cc3
+    last_write_checksum: sha1:ea9a40e620da7a262447173f40c4442ed34bf0de
+    pristine_git_object: f79086e7012bc7ab8c2e3738ed626ff327e92f5c
+  src/Models/Shared/AdsAdStatus.php:
+    id: 1b4dbd116375
+    last_write_checksum: sha1:c8cea4a09df2bf73f75fc135c23776e10d7effef
+    pristine_git_object: 530fba817e6cd9a5153b483f7518f0bf3a859f9c
   src/Models/Shared/AdsCampaign.php:
     id: e9c454b15e7f
-    last_write_checksum: sha1:e073817edb388acbfb4340364ce4e2c3a0c6421f
-    pristine_git_object: d94ce473004af7d8177212fcd4daed0ec9ffaa7f
+    last_write_checksum: sha1:7e7748aa4a5a57d83e769ac500592fc4ca8faa46
+    pristine_git_object: aa6f74b6b5da50778e7121af1c335bfa60d928b6
+  src/Models/Shared/AdsCampaignStatus.php:
+    id: 61bc00d6d936
+    last_write_checksum: sha1:faf8431a53f446150a0b70d6262d4909190173c8
+    pristine_git_object: f27c9808dc2927a86142c90b076c7301e2943bee
+  src/Models/Shared/AdsCreative.php:
+    id: ea1ffda2f493
+    last_write_checksum: sha1:dbc8db8952c3ef4399f0174ff7d74d11f6753af4
+    pristine_git_object: 123b356a2a633ddc0c2e00be5a1a19e4f69b818a
+  src/Models/Shared/AdsCreativeStatus.php:
+    id: 1f03ae9b6899
+    last_write_checksum: sha1:0b5ffe8ee1dce6d9abe4c27b4072d4f56e0bd5b8
+    pristine_git_object: 2e283e57a01c0161591806f8df1c6f82f75164fa
   src/Models/Shared/AdsGroup.php:
     id: 629d15251778
-    last_write_checksum: sha1:58d11baa25fea4435359f79772affacd64099bd2
-    pristine_git_object: b0a1c5e72bcd573b2ebda5d30458903ced280753
+    last_write_checksum: sha1:dcfb8b7157ec3d417ac8ea01c1e5717e3ed95da1
+    pristine_git_object: f6d213c8adf30b023a84c7a92b33bc9ff604562b
   src/Models/Shared/AdsGroupBudgetPeriod.php:
     id: fb7e341c509a
     last_write_checksum: sha1:2ce0cb47d6976195dec669cff0dc16d5a88295e9
     pristine_git_object: c206fbdf3861998919c69060a04ae1a978feca64
+  src/Models/Shared/AdsGroupStatus.php:
+    id: 2857407b01db
+    last_write_checksum: sha1:5f3c96d923ae48eae46c93b22227a64cdc580d18
+    pristine_git_object: d88b21d4b98dfee8b7cc783a94b827ac29e63cc2
+  src/Models/Shared/AdsGroupType.php:
+    id: e73717063539
+    last_write_checksum: sha1:452bd6162ad8ba4266ab9886348035b9ae1ce572
+    pristine_git_object: 0c1e40188b401ba29f7e93dd5c287daf3aa26377
+  src/Models/Shared/AdsInsertionorder.php:
+    id: 0a3bf6eee0ce
+    last_write_checksum: sha1:6c8a8d0d56fbd715a63329a64aee329c3ba00453
+    pristine_git_object: 7aecb0280a3e900b2aefd025a799bb6d073acf82
+  src/Models/Shared/AdsInsertionorderBudgetSegment.php:
+    id: 9fbbcd959e15
+    last_write_checksum: sha1:d0a1fade01a1943725bf83a8f76d1e1fab88fc11
+    pristine_git_object: 16145bfb64ac2ea648fc2dc274006701720cd944
+  src/Models/Shared/AdsInsertionorderBudgetUnit.php:
+    id: 85f73419ff8c
+    last_write_checksum: sha1:b4440b9d4adb07f4ec3f40b7977d10db4c90fd59
+    pristine_git_object: 5a2e5472244e126245e59705d03e1065dc0efb38
+  src/Models/Shared/AdsInsertionorderStatus.php:
+    id: 133631d096c1
+    last_write_checksum: sha1:6d13839b85120632f2bf76dce20bde65c181f7f5
+    pristine_git_object: 111fe58543f2297bf6f46591d7e925e607b28f0c
   src/Models/Shared/AdsOrganization.php:
     id: 908b4f2aed3d
     last_write_checksum: sha1:303a22935509736b2242e45e51eb2a8e4fc5d92f
@@ -16913,8 +17449,8 @@ trackedFiles:
     pristine_git_object: 5e6b6da29b609f10875083b44c540186f10411ad
   src/Models/Shared/ApiCall.php:
     id: 962fab80f219
-    last_write_checksum: sha1:5d1e65e6af412c478efac5b33c739daca878ea74
-    pristine_git_object: 5059f653a5b4881c40b0d9960158680650f3856f
+    last_write_checksum: sha1:59c944a7f88bca3c6fc67b3947873d3975e94176
+    pristine_git_object: 4a002f6b894a7e449d1c7dd24fee977ca51453eb
   src/Models/Shared/ApiCallType.php:
     id: 36b2d6dbb2ab
     last_write_checksum: sha1:c792d77a03ddfbdd9cb02940d8a11f713e1fae51
@@ -17067,10 +17603,18 @@ trackedFiles:
     id: 2fbb589a2b81
     last_write_checksum: sha1:7ca2bdf592e61a507722b1dad168417d80bc5114
     pristine_git_object: bb7589f207d557e7579037954d1ff1c7efe83d7f
+  src/Models/Shared/BudgetAllocationType.php:
+    id: cc624929c48d
+    last_write_checksum: sha1:beb84ec282bc1b279bd57ba091e6b170e6b6ef64
+    pristine_git_object: 0477a8720bbfbf3211a7dfd92c4792810a96c821
   src/Models/Shared/BudgetPeriod.php:
     id: 99e9f4fa6df0
     last_write_checksum: sha1:518dd4a314576d482fc2f78668c289490494faa1
     pristine_git_object: bf27a635a77b025005a51473ea99dd005501e010
+  src/Models/Shared/BudgetUnit.php:
+    id: bc546af0e46d
+    last_write_checksum: sha1:efb55fd2b18882b2c0e2cc2b713054ec4c304468
+    pristine_git_object: 02315c32bff0645e88c4cd9257acdc7715baf379
   src/Models/Shared/CalendarAttachment.php:
     id: d3d28ded30d8
     last_write_checksum: sha1:54cd410869e5b35aec1480c8473b083db623739b
@@ -17239,6 +17783,10 @@ trackedFiles:
     id: f54d7927fddc
     last_write_checksum: sha1:0bb001743c73cfbf5ef2c7f7de4e88df0dbc8749
     pristine_git_object: 79dc29bdd440f4b19f9245a87a03d09374f62182
+  src/Models/Shared/CreativeType.php:
+    id: 1a51d1337f44
+    last_write_checksum: sha1:f840515c249bc14c169660d2d63e59d945697345
+    pristine_git_object: c1c39ce14abb7d6fca143d631bfe7a4fc23ef588
   src/Models/Shared/CrmCompany.php:
     id: 4bb3868741ef
     last_write_checksum: sha1:ed9946bd1472296d3ddb3d6ca45215e96b939aba
@@ -17435,6 +17983,14 @@ trackedFiles:
     id: 141d0973bf32
     last_write_checksum: sha1:862226d9adab1ab08374c82f50133b314c817783
     pristine_git_object: 7f77353691f2edd031870394c2f85e7f1f84a593
+  src/Models/Shared/Goal.php:
+    id: 43120fc76881
+    last_write_checksum: sha1:13cdac2e61cfad6a801e417e26c2505586aea5bb
+    pristine_git_object: 14da34351c60b578c1a02a1d6d5e28b5e736e428
+  src/Models/Shared/HostingSource.php:
+    id: b9659eff6594
+    last_write_checksum: sha1:6a36fa560464dcc85d6e1d903e6d9bebdae8b0d7
+    pristine_git_object: 21eb22e36f785f1c9a69efa9fca5b1b8dcb5e170
   src/Models/Shared/HrisBenefit.php:
     id: f844f7c9f591
     last_write_checksum: sha1:ceaca43426ec2379cba1eb15c318da75f5e72889
@@ -18073,8 +18629,8 @@ trackedFiles:
     pristine_git_object: 3560c526c71c3a7ce8d98c5d900da5ed21f4beff
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:42edbd364f26af9a17cf4021d27f5cbf4d5a4558
-    pristine_git_object: f8ae686daee914731d308570515cb9470e91a74a
+    last_write_checksum: sha1:7462b4c937ec9ccf28adeb71d6bd287dc5084ebc
+    pristine_git_object: f922228fc15bf0b04c1548e3f52e607ace74dbd1
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -18131,6 +18687,14 @@ trackedFiles:
     id: 4afcfc6d7c6c
     last_write_checksum: sha1:37a61b3e2cd48a20182b99145ef81491e1dc306e
     pristine_git_object: 9d57ea798756d86a0032dbf16b1609f7f80696ed
+  src/Models/Shared/PerformanceGoalType.php:
+    id: c92fbaa3b625
+    last_write_checksum: sha1:d122b9ad3f673b91091337606e614e8c30d9ed3e
+    pristine_git_object: e0bb5065dfdee4213d48d0b9b2ab4e4501b93a6b
+  src/Models/Shared/Period.php:
+    id: 1f1ce544f30c
+    last_write_checksum: sha1:2555977a275d29a127c3ada35813c5127bd56a8e
+    pristine_git_object: 8e36668913d9f658f40315caff9c9ec96af38298
   src/Models/Shared/Priority.php:
     id: 5576ea87f106
     last_write_checksum: sha1:0341187d38383ed12f0f7c87ccea163f4e426e34
@@ -18191,50 +18755,182 @@ trackedFiles:
     id: 606dbb98247b
     last_write_checksum: sha1:715166c4dad6ecfb8e40de3b0391aee27866b461
     pristine_git_object: 37f105ac25e31a16a7c2b2f4b656f265d4794a10
+  src/Models/Shared/PropertyAdsCampaignFrequencyCap.php:
+    id: 8979f28cc353
+    last_write_checksum: sha1:39f18d968c773be4702c07b5cb1daebb92faa99c
+    pristine_git_object: 508f27415ea1194765eca624560412fb2e81f14f
   src/Models/Shared/PropertyAdsCampaignTargeting.php:
     id: 2284ec343112
     last_write_checksum: sha1:baf5ea7b106d11c6695a0cbef9ce98cb5d185e91
     pristine_git_object: a35bac057d241a37af16fc712194b49891be8dde
+  src/Models/Shared/PropertyAdsGroupBidStrategy.php:
+    id: f0275b06b85c
+    last_write_checksum: sha1:3e747c555b9bcca0ffce4ef60681ab80eac9b6b9
+    pristine_git_object: 42e6da40cd5caef398577a09cadd0d728e4569e8
+  src/Models/Shared/PropertyAdsGroupBidStrategyType.php:
+    id: 00eb6bc642f1
+    last_write_checksum: sha1:5e3974067b7f2d48764b97dff92150fb7a03c919
+    pristine_git_object: 558c5e1f17a44bf53d05c5e5bf384499ba40e05f
+  src/Models/Shared/PropertyAdsGroupFrequencyCap.php:
+    id: 8ccdb7ad4834
+    last_write_checksum: sha1:953008f5826b0ca12e2a19afb6e10b9bfb691cb7
+    pristine_git_object: cc3bc092b34c6f9c4872d8b0e80b826228ff4478
+  src/Models/Shared/PropertyAdsGroupFrequencyCapTimeUnit.php:
+    id: ee1f38252915
+    last_write_checksum: sha1:89943209cc4c92127d405abe2830ffe20d28a377
+    pristine_git_object: c0ecebcffea629d96463215ba08acd0542a1b895
+  src/Models/Shared/PropertyAdsGroupPacing.php:
+    id: 739501312b5f
+    last_write_checksum: sha1:a9668bd0f1699318a4e11cd514f1e0aed51409ef
+    pristine_git_object: 1337e88a1e153b32c5d41eb4d99f991b474960bb
   src/Models/Shared/PropertyAdsGroupTargeting.php:
     id: 4d730e0f4195
     last_write_checksum: sha1:6aefa3f20b02300bd2ce6fe39507754fd1c97f4a
     pristine_git_object: 357040200170c21763ec13b1ac01e1e09bca8c36
+  src/Models/Shared/PropertyAdsInsertionorderBidStrategy.php:
+    id: b84c92850c5a
+    last_write_checksum: sha1:3f896481c5347d0baa359a159fe386e9f875bb90
+    pristine_git_object: d0956f7b0379fc9786fa00f2d408dc8dbb61c232
+  src/Models/Shared/PropertyAdsInsertionorderBidStrategyPerformanceGoalType.php:
+    id: d27de2a71168
+    last_write_checksum: sha1:eaa618c5c570a377c4bf03ff0e5090950fed4703
+    pristine_git_object: a503087bf273a874653de5b3091b4dec816443bc
+  src/Models/Shared/PropertyAdsInsertionorderBidStrategyType.php:
+    id: 3f32edcf21a2
+    last_write_checksum: sha1:eaa60f1ba873dbeaad5e8b477dd5151d2b2c0f59
+    pristine_git_object: 653181d2dc0fcaa9565240d47b121a2564aa414c
+  src/Models/Shared/PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType.php:
+    id: 86aef3fb442f
+    last_write_checksum: sha1:a42a1379ac37060389e4e4225ff8f8fa13dbf9f7
+    pristine_git_object: 74a4148a49d929f9a70e5e8e652bc30abb59bd28
+  src/Models/Shared/PropertyAdsInsertionorderFrequencyCap.php:
+    id: a82c41077759
+    last_write_checksum: sha1:f2199fa8c9a974612f69bfa01d111a0d0c28544d
+    pristine_git_object: 2b06db5abc82b2f87e3ebef91f87120f5aaf987a
+  src/Models/Shared/PropertyAdsInsertionorderFrequencyCapTimeUnit.php:
+    id: 1dcb3368cb03
+    last_write_checksum: sha1:f52f1cc0b6d1e4536287a2932a01a37fb4192b17
+    pristine_git_object: b61e70d43dbfdc5363eb98d11e4ba3c98ac1628a
+  src/Models/Shared/PropertyAdsInsertionorderKpi.php:
+    id: 43fc54b15aa0
+    last_write_checksum: sha1:33830dfcdc22f724cb6568b1ccad37a96c97373f
+    pristine_git_object: a0e40a573fb06f4946c03d93896421e86bda58c0
+  src/Models/Shared/PropertyAdsInsertionorderKpiType.php:
+    id: 02525272f411
+    last_write_checksum: sha1:d4f5f9335a19f6c02d2bcf13cb868f4a6d4fcfa2
+    pristine_git_object: 76d3c819728fece922a0e58ecee72dd4a1497cde
+  src/Models/Shared/PropertyAdsInsertionorderPacing.php:
+    id: 0918a3c84381
+    last_write_checksum: sha1:a57f5cb96e4652c6f56239a77120fc07eaf3faf4
+    pristine_git_object: 2eea31e1c782ee954b35f2cad550d804ca3516a8
+  src/Models/Shared/PropertyAdsInsertionorderPacingPeriod.php:
+    id: 6ebe08432a41
+    last_write_checksum: sha1:e1f9e17f014a24cf6345ed7ecdc7e23094b4786c
+    pristine_git_object: 91e1972c7c6c39c8029efaff554f7e29a2d06b6b
   src/Models/Shared/PropertyAdsReportMetricsAd.php:
     id: a55c4fef9657
-    last_write_checksum: sha1:bb2eaea42f084cfa80f1fd928f17236bb9421d56
-    pristine_git_object: f1c5f6290f5c389c21c704b0a14eb85971f6fec8
+    last_write_checksum: sha1:b31203920262f19f99b92316d66c86562dd02130
+    pristine_git_object: 516bcab1b7bec08d1db98f82e4a0281721b07d54
   src/Models/Shared/PropertyAdsReportMetricsAdAdType.php:
     id: 441f9de557c6
     last_write_checksum: sha1:0b1f6ba0e85cab193b059e6898dd648aa33ef739
     pristine_git_object: 235293cd1907b30015ab8f475520d52be861c5bf
+  src/Models/Shared/PropertyAdsReportMetricsAdStatus.php:
+    id: 9f9a3ca37e1d
+    last_write_checksum: sha1:c01696f75c943aba333bb4bc6c4cf8f50ae1123a
+    pristine_git_object: b755ae13ef8e11dc3dc737793d424eaced5ad979
   src/Models/Shared/PropertyAdsReportMetricsAdTargeting.php:
     id: ebe21936bd6b
     last_write_checksum: sha1:50c9fb150aa782b2c1ea58fc335e27b96fb70327
     pristine_git_object: 211f1b622a672e261f17c47c86bec370c8d33068
   src/Models/Shared/PropertyAdsReportMetricsCampaign.php:
     id: 62849eeeb75f
-    last_write_checksum: sha1:e9ded4768ca3ce4dff24f01f7e1510eab8f2474b
-    pristine_git_object: d6432c549e32491ba3969d0b8a1c8884a16de370
+    last_write_checksum: sha1:ec424b74d6b5f24774f3a7fc4349f16e9b44a144
+    pristine_git_object: 8a7ca342d679041542ada728900c8a9843f04878
   src/Models/Shared/PropertyAdsReportMetricsCampaignBudgetPeriod.php:
     id: 1588c1c4bf57
     last_write_checksum: sha1:1ee0f1d16e7daa905fefc8da1e8f4b468ca3b870
     pristine_git_object: 24549e3b41758de6d52fcbe49a71647c73c6e2f4
+  src/Models/Shared/PropertyAdsReportMetricsCampaignFrequencyCap.php:
+    id: 34a14f50afea
+    last_write_checksum: sha1:0ddb6f37aaf3300a5d99e1ebf506164dbf0c802a
+    pristine_git_object: 961dfdd0cd8c2db0af64d3a912490258ffa5d3ea
+  src/Models/Shared/PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit.php:
+    id: ca8426dbaae1
+    last_write_checksum: sha1:5d6e8726f61a6ed83595319e0baec0991c2824d4
+    pristine_git_object: 86b270addbd753455b775b7ef01159469f6cd335
+  src/Models/Shared/PropertyAdsReportMetricsCampaignGoal.php:
+    id: 21f21c982d77
+    last_write_checksum: sha1:16d93b156c94773d0ce58e54964106b6d76d9177
+    pristine_git_object: b042f3b29506f32fc2d308081d4ddcf5d011d943
+  src/Models/Shared/PropertyAdsReportMetricsCampaignStatus.php:
+    id: 265259d8642e
+    last_write_checksum: sha1:37e35d2c15845437f61e5b092fc427f2da310a43
+    pristine_git_object: e9d5659a3391a9e23ea0f0dadc6c83853fc7a54d
   src/Models/Shared/PropertyAdsReportMetricsCampaignTargeting.php:
     id: d2e54edfe7e4
     last_write_checksum: sha1:7c91c1a4be09c40dea94b912f23d3d1cb52b0b80
     pristine_git_object: 6ba6f7e46ecf8d1c843d47e03d17b69ac8bc9c31
   src/Models/Shared/PropertyAdsReportMetricsGroup.php:
     id: 2d31c7e47ea9
-    last_write_checksum: sha1:67f2af6dccf415082b1570bc744c7f69cb006ee2
-    pristine_git_object: b171a1205e5b5d45a2fe81a6176a4c475c1074da
+    last_write_checksum: sha1:19638497ca6c207a13a250be67800b859be3b163
+    pristine_git_object: 4cd7176cd73e33a283e569e77875e9e9fa174a5c
+  src/Models/Shared/PropertyAdsReportMetricsGroupBidStrategy.php:
+    id: bc5651a88a93
+    last_write_checksum: sha1:ff85a8eed3bd34194c648b370eee838a6c033638
+    pristine_git_object: 4b406db77b67ddf4e03191c8e2501cc219075b66
+  src/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType.php:
+    id: f501ecea000b
+    last_write_checksum: sha1:f42cd574f7f524a20fb126f7f3f435bc466e6034
+    pristine_git_object: 6fee9b4b6d96c4e4f07e68b5ad969f8ae2d31933
+  src/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyType.php:
+    id: 1cdb3366be7b
+    last_write_checksum: sha1:0a306bc9dd1d23572b35bca78703fc9614736312
+    pristine_git_object: b85079628a23a753544910c2e00408cfe9a447be
+  src/Models/Shared/PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType.php:
+    id: 109783889be4
+    last_write_checksum: sha1:308e116264f216d3c18b00280688b14f6032b873
+    pristine_git_object: b07ace4af368e8e14f0511f507f37dc0aae485e1
+  src/Models/Shared/PropertyAdsReportMetricsGroupBudgetAllocationType.php:
+    id: 0c69f408f147
+    last_write_checksum: sha1:aa8687ef903d8b4939ad90d9ff5cc86da331b7d0
+    pristine_git_object: c79a20709eb0557fb499ebed0d37c5ce2a93087e
   src/Models/Shared/PropertyAdsReportMetricsGroupBudgetPeriod.php:
     id: 399e5776c212
     last_write_checksum: sha1:a4e147337d446a600e23409fbb66eccd21fb68ca
     pristine_git_object: ae9d9d4500931232496e5530263c84bef9681e15
+  src/Models/Shared/PropertyAdsReportMetricsGroupBudgetUnit.php:
+    id: 5dc363b4418f
+    last_write_checksum: sha1:8e7422167562896cfe42a78f03565e55ab4f81fa
+    pristine_git_object: 5ffea4dcc9097828f721b770309523387c12f3f5
+  src/Models/Shared/PropertyAdsReportMetricsGroupFrequencyCap.php:
+    id: 6d0fa6bd1515
+    last_write_checksum: sha1:64a836d383de591c3870dd964d059eb92728e534
+    pristine_git_object: caf98fab7d5c7a46f5458d55875e7c286e69d68b
+  src/Models/Shared/PropertyAdsReportMetricsGroupFrequencyCapTimeUnit.php:
+    id: 760762b1bf88
+    last_write_checksum: sha1:0723e5f61bbf8ffef437993509c2095c473f41bc
+    pristine_git_object: eb83045b91142c9d4f92ca513674fc5718a06fb3
+  src/Models/Shared/PropertyAdsReportMetricsGroupPacing.php:
+    id: bd32a6dcc536
+    last_write_checksum: sha1:4f6a3ca78feb07daf0086fa8352a3a335a369da5
+    pristine_git_object: 171d25b760e119c675d6ee054968fa42d2421b9a
+  src/Models/Shared/PropertyAdsReportMetricsGroupPacingPeriod.php:
+    id: 8912a34dacc0
+    last_write_checksum: sha1:17f1d9772bf0e3a8a1894a8a9acfa45b9d4d1417
+    pristine_git_object: 8075957437b89599d65b307ff93086bd800cb07d
+  src/Models/Shared/PropertyAdsReportMetricsGroupStatus.php:
+    id: 2aa8402ac6ad
+    last_write_checksum: sha1:35da99c0ec30571b1e4035b61a13c1b018f17254
+    pristine_git_object: cc90181077d3eabeee42b1234810e8e473cb94db
   src/Models/Shared/PropertyAdsReportMetricsGroupTargeting.php:
     id: ccf126392c7f
     last_write_checksum: sha1:48644e81c9c6b69c65dfc48f5c1c1da67b8304f4
     pristine_git_object: c2d1b18b62a5021dc4c660faf7808e72e3a581b1
+  src/Models/Shared/PropertyAdsReportMetricsGroupType.php:
+    id: 1079a1b35e6f
+    last_write_checksum: sha1:6572db354008f8389fd641f25bc5dfbfe522756f
+    pristine_git_object: 477b9c0defda467c7f812680593b6ff16cee0009
   src/Models/Shared/PropertyAtsActivityFrom.php:
     id: 83ef1ffc6f3e
     last_write_checksum: sha1:3b4ac199d75fd7686f1082b0b0679826986090a0
@@ -18289,8 +18985,8 @@ trackedFiles:
     pristine_git_object: 7951b64c94369e1645d2bc6aaba461d39b55a138
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:dd516e4b8efa1ab4906b624ad878a256405be360
-    pristine_git_object: 857bfe1848cfd381795858351cea3d9d088b0d32
+    last_write_checksum: sha1:293bd5705e3f1c30e71352951c1df661f2bc84a6
+    pristine_git_object: 5a8075007045d0cf1a2bfef5bdf0a7ebeaa688cc
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -18863,6 +19559,10 @@ trackedFiles:
     id: 7b950190f016
     last_write_checksum: sha1:fef17c2ca09b0b4c5ca04d4192757db79aa18742
     pristine_git_object: d60976085d6c595f2a9aef97d3f5ea22ce03c8f5
+  src/Models/Shared/TimeUnit.php:
+    id: a4b5ca0e8cee
+    last_write_checksum: sha1:fb28b7e60abe0fde1172d247a9ab60b49ae12b03
+    pristine_git_object: 5d29c99ce812ae6566cf75e62c101672943af4dc
   src/Models/Shared/Type.php:
     id: 7c48f0c750b1
     last_write_checksum: sha1:0e1a5b99daa45553b043111edd25763f35769cc3
@@ -19143,6 +19843,10 @@ trackedFiles:
     id: ff1b0b7cc058
     last_write_checksum: sha1:6b2680a8b088f635c54bf9ce685d1d9b39307b72
     pristine_git_object: 27b04053a45c4bc6efb77989d52a106533239fa4
+  src/Models/Shared/YoutubeAndPartnersType.php:
+    id: bd458e9cfb27
+    last_write_checksum: sha1:2b7050028a244aa836c7ba26e880ac670525cfe6
+    pristine_git_object: bfcc03857b6ca745540ca45620d405c84e2fa566
   src/Note.php:
     id: c083fe6f97bc
     last_write_checksum: sha1:86a317c5723d9482ebf71ca6a4fb31dba094b1b9
@@ -19241,8 +19945,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:6c355f3a26b6f5394929cb25981dff59d770064c
-    pristine_git_object: e905831ca982a1c94773930991a4553f02ad721a
+    last_write_checksum: sha1:3134cb0b53e273dcbc5b82a76749b8eae60dd18d
+    pristine_git_object: 71a49221108908ccc673e2e8f6aba8db1b1f8fcd
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -19333,8 +20037,8 @@ trackedFiles:
     pristine_git_object: a1862cce3ba999911f03c796248fd7a8f440318a
   src/UnifiedTo.php:
     id: 23b841da485f
-    last_write_checksum: sha1:243108e481b31ca4dcf1fbbcdbc18dcda63ee977
-    pristine_git_object: 882fb78f456a57f8d762539c22d24a12ff9786ac
+    last_write_checksum: sha1:f1f4ae543138a4b2bf7f8f2b7a020527e3d7633d
+    pristine_git_object: e0804a6af0ab4a8a7cdf7ea56de22186eb6c13d2
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
     last_write_checksum: sha1:e9b1c7277595f8e786f774674b3177e449cff509
@@ -24857,9 +25561,119 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAdsCreative:
+    speakeasy-default-create-ads-creative:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAdsInsertionorder:
+    speakeasy-default-create-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAdsCreative:
+    speakeasy-default-get-ads-creative:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAdsInsertionorder:
+    speakeasy-default-get-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAdsCreatives:
+    speakeasy-default-list-ads-creatives:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAdsInsertionorders:
+    speakeasy-default-list-ads-insertionorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAdsCreative:
+    speakeasy-default-patch-ads-creative:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAdsInsertionorder:
+    speakeasy-default-patch-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAdsCreative:
+    speakeasy-default-remove-ads-creative:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAdsInsertionorder:
+    speakeasy-default-remove-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAdsCreative:
+    speakeasy-default-update-ads-creative:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAdsInsertionorder:
+    speakeasy-default-update-ads-insertionorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->verification->getVerificationPackage()`: \n  *  `request->fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to->verification->listVerificationPackages()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->validRegions` **Added**\n* `unified-to->package->getVerificationPackage()`: \n  *  `request->fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to->package->listVerificationPackages()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->validRegions` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->ads->createAdsCreative()`: **Added**\n* `unified-to->ads->createAdsInsertionorder()`: **Added**\n* `unified-to->ads->getAdsCreative()`: **Added**\n* `unified-to->ads->getAdsInsertionorder()`: **Added**\n* `unified-to->ads->listAdsCreatives()`: **Added**\n* `unified-to->ads->listAdsInsertionorders()`: **Added**\n* `unified-to->ads->patchAdsCreative()`: **Added**\n* `unified-to->ads->patchAdsInsertionorder()`: **Added**\n* `unified-to->ads->removeAdsCreative()`: **Added**\n* `unified-to->ads->removeAdsInsertionorder()`: **Added**\n* `unified-to->ads->updateAdsCreative()`: **Added**\n* `unified-to->ads->updateAdsInsertionorder()`: **Added**\n* `unified-to->creative->createAdsCreative()`: **Added**\n* `unified-to->creative->getAdsCreative()`: **Added**\n* `unified-to->creative->listAdsCreatives()`: **Added**\n* `unified-to->creative->patchAdsCreative()`: **Added**\n* `unified-to->creative->removeAdsCreative()`: **Added**\n* `unified-to->creative->updateAdsCreative()`: **Added**\n* `unified-to->insertionorder->createAdsInsertionorder()`: **Added**\n* `unified-to->insertionorder->getAdsInsertionorder()`: **Added**\n* `unified-to->insertionorder->listAdsInsertionorders()`: **Added**\n* `unified-to->insertionorder->patchAdsInsertionorder()`: **Added**\n* `unified-to->insertionorder->removeAdsInsertionorder()`: **Added**\n* `unified-to->insertionorder->updateAdsInsertionorder()`: **Added**\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics->[]` **Changed**\n* `unified-to->ads->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->getAdsGroup()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ads->listAdsGroups()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics->[]` **Changed**\n* `unified-to->ads->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ad->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->group->createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->group->getAdsGroup()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->group->listAdsGroups()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->group->patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->group->updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->unified->getUnifiedApicall()`:  `response.userAgent` **Added**\n* `unified-to->unified->listUnifiedApicalls()`:  `response.[]->userAgent` **Added**\n* `unified-to->apicall->getUnifiedApicall()`:  `response.userAgent` **Added**\n* `unified-to->apicall->listUnifiedApicalls()`:  `response.[]->userAgent` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -1,0 +1,12 @@
+# PropertyAdsCampaignFrequencyCap
+
+
+## Fields
+
+| Field                                               | Type                                                | Required                                            | Description                                         |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| `isUnlimited`                                       | *?bool*                                             | :heavy_minus_sign:                                  | N/A                                                 |
+| `maxImpressions`                                    | *?float*                                            | :heavy_minus_sign:                                  | N/A                                                 |
+| `maxViews`                                          | *?float*                                            | :heavy_minus_sign:                                  | N/A                                                 |
+| `timeUnit`                                          | [?Shared\TimeUnit](../../Models/Shared/TimeUnit.md) | :heavy_minus_sign:                                  | N/A                                                 |
+| `timeUnitCount`                                     | *?float*                                            | :heavy_minus_sign:                                  | N/A                                                 |

@@ -20,6 +20,25 @@ class AdsGroup
     public ?float $bidAmount = null;
 
     /**
+     * YOUTUBE_AND_PARTNERS
+     *
+     * @var ?PropertyAdsGroupBidStrategy $bidStrategy
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategy|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupBidStrategy $bidStrategy = null;
+
+    /**
+     *
+     * @var ?BudgetAllocationType $budgetAllocationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_allocation_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BudgetAllocationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?BudgetAllocationType $budgetAllocationType = null;
+
+    /**
      *
      * @var ?float $budgetAmount
      */
@@ -29,12 +48,29 @@ class AdsGroup
 
     /**
      *
+     * @var ?float $budgetMaxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_max_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $budgetMaxAmount = null;
+
+    /**
+     *
      * @var ?AdsGroupBudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupBudgetPeriod|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AdsGroupBudgetPeriod $budgetPeriod = null;
+
+    /**
+     *
+     * @var ?BudgetUnit $budgetUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BudgetUnit|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?BudgetUnit $budgetUnit = null;
 
     /**
      *
@@ -53,6 +89,16 @@ class AdsGroup
     public ?\DateTime $createdAt = null;
 
     /**
+     * $creativeIds
+     *
+     * @var ?array<string> $creativeIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $creativeIds = null;
+
+    /**
      *
      * @var ?\DateTime $endAt
      */
@@ -62,11 +108,36 @@ class AdsGroup
 
     /**
      *
+     * @var ?PropertyAdsGroupFrequencyCap $frequencyCap
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupFrequencyCap $frequencyCap = null;
+
+    /**
+     *
+     * @var ?bool $hasEuPoliticalAds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_eu_political_ads')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasEuPoliticalAds = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $insertionorderId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('insertionorder_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $insertionorderId = null;
 
     /**
      *
@@ -93,6 +164,23 @@ class AdsGroup
     public ?string $organizationId = null;
 
     /**
+     *
+     * @var ?PropertyAdsGroupPacing $pacing
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('pacing')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacing|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupPacing $pacing = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -112,12 +200,30 @@ class AdsGroup
 
     /**
      *
+     * @var ?AdsGroupStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AdsGroupStatus $status = null;
+
+    /**
+     *
      * @var ?PropertyAdsGroupTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargeting|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsGroupTargeting $targeting = null;
+
+    /**
+     *
+     * @var ?AdsGroupType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AdsGroupType $type = null;
 
     /**
      *
@@ -129,36 +235,60 @@ class AdsGroup
 
     /**
      * @param  ?float  $bidAmount
+     * @param  ?PropertyAdsGroupBidStrategy  $bidStrategy
+     * @param  ?BudgetAllocationType  $budgetAllocationType
      * @param  ?float  $budgetAmount
+     * @param  ?float  $budgetMaxAmount
      * @param  ?AdsGroupBudgetPeriod  $budgetPeriod
+     * @param  ?BudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
+     * @param  ?array<string>  $creativeIds
      * @param  ?\DateTime  $endAt
+     * @param  ?PropertyAdsGroupFrequencyCap  $frequencyCap
+     * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
+     * @param  ?string  $insertionorderId
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?string  $organizationId
+     * @param  ?PropertyAdsGroupPacing  $pacing
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?AdsGroupStatus  $status
      * @param  ?PropertyAdsGroupTargeting  $targeting
+     * @param  ?AdsGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?float $budgetAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsGroupTargeting $targeting = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?BudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
+        $this->bidStrategy = $bidStrategy;
+        $this->budgetAllocationType = $budgetAllocationType;
         $this->budgetAmount = $budgetAmount;
+        $this->budgetMaxAmount = $budgetMaxAmount;
         $this->budgetPeriod = $budgetPeriod;
+        $this->budgetUnit = $budgetUnit;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
+        $this->creativeIds = $creativeIds;
         $this->endAt = $endAt;
+        $this->frequencyCap = $frequencyCap;
+        $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
+        $this->insertionorderId = $insertionorderId;
         $this->isActive = $isActive;
         $this->name = $name;
         $this->organizationId = $organizationId;
+        $this->pacing = $pacing;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->status = $status;
         $this->targeting = $targeting;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
     }
 }

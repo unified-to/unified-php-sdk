@@ -46,6 +46,24 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
+     * @var ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignFrequencyCap|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsCampaignGoal $goal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('goal')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignGoal|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignGoal $goal = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -77,6 +95,14 @@ class PropertyAdsReportMetricsCampaign
     public ?string $organizationId = null;
 
     /**
+     *
+     * @var ?float $plannedSpendAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('planned_spend_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $plannedSpendAmount = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -93,6 +119,15 @@ class PropertyAdsReportMetricsCampaign
     #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
+
+    /**
+     *
+     * @var ?PropertyAdsReportMetricsCampaignStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignStatus $status = null;
 
     /**
      *
@@ -124,29 +159,37 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?PropertyAdsReportMetricsCampaignBudgetPeriod  $budgetPeriod
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
+     * @param  ?PropertyAdsReportMetricsCampaignFrequencyCap  $frequencyCap
+     * @param  ?PropertyAdsReportMetricsCampaignGoal  $goal
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?string  $organizationId
+     * @param  ?float  $plannedSpendAmount
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?PropertyAdsReportMetricsCampaignStatus  $status
      * @param  ?PropertyAdsReportMetricsCampaignTargeting  $targeting
      * @param  ?float  $totalSpendAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->budgetAmount = $budgetAmount;
         $this->budgetPeriod = $budgetPeriod;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
+        $this->frequencyCap = $frequencyCap;
+        $this->goal = $goal;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->name = $name;
         $this->organizationId = $organizationId;
+        $this->plannedSpendAmount = $plannedSpendAmount;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->status = $status;
         $this->targeting = $targeting;
         $this->totalSpendAmount = $totalSpendAmount;
         $this->updatedAt = $updatedAt;

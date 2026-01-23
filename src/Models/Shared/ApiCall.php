@@ -120,6 +120,14 @@ class ApiCall
 
     /**
      *
+     * @var ?string $userAgent
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_agent')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userAgent = null;
+
+    /**
+     *
      * @var ?string $webhookId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_id')]
@@ -158,11 +166,12 @@ class ApiCall
      * @param  ?string  $ipAddress
      * @param  ?bool  $isBillable
      * @param  ?float  $size
+     * @param  ?string  $userAgent
      * @param  ?string  $webhookId
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?string $userAgent = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->integrationType = $integrationType;
         $this->method = $method;
@@ -178,6 +187,7 @@ class ApiCall
         $this->ipAddress = $ipAddress;
         $this->isBillable = $isBillable;
         $this->size = $size;
+        $this->userAgent = $userAgent;
         $this->webhookId = $webhookId;
         $this->workspaceId = $workspaceId;
         $this->environment = $environment;

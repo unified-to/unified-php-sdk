@@ -16,7 +16,7 @@ enum GetAdsCampaignQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case Name = 'name';
     case OrganizationId = 'organization_id';
-    case IsActive = 'is_active';
+    case Status = 'status';
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case BudgetAmount = 'budget_amount';
@@ -24,4 +24,8 @@ enum GetAdsCampaignQueryParamFields: string
     case TotalSpendAmount = 'total_spend_amount';
     case Targeting = 'targeting';
     case Raw = 'raw';
+    case Goal = 'goal';
+    case PlannedSpendAmount = 'planned_spend_amount';
+    case FrequencyCap = 'frequency_cap';
+    case IsActive = 'is_active';
 }

@@ -53,6 +53,16 @@ class AdsAd
     public ?string $creativeAssetUrl = null;
 
     /**
+     * $creativeIds
+     *
+     * @var ?array<string> $creativeIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $creativeIds = null;
+
+    /**
      *
      * @var ?string $cta
      */
@@ -110,6 +120,14 @@ class AdsAd
 
     /**
      *
+     * @var ?string $itemId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('item_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $itemId = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -136,6 +154,15 @@ class AdsAd
 
     /**
      *
+     * @var ?AdsAdStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsAdStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AdsAdStatus $status = null;
+
+    /**
+     *
      * @var ?PropertyAdsAdTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
@@ -157,6 +184,7 @@ class AdsAd
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creativeAssetUrl
+     * @param  ?array<string>  $creativeIds
      * @param  ?string  $cta
      * @param  ?string  $description
      * @param  ?string  $finalUrl
@@ -164,20 +192,23 @@ class AdsAd
      * @param  ?string  $headline
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $itemId
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?AdsAdStatus  $status
      * @param  ?PropertyAdsAdTargeting  $targeting
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $adCopy = null, ?AdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?string $cta = null, ?string $description = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?PropertyAdsAdTargeting $targeting = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $adCopy = null, ?AdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?bool $isActive = null, ?string $itemId = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?AdsAdStatus $status = null, ?PropertyAdsAdTargeting $targeting = null, ?\DateTime $updatedAt = null)
     {
         $this->adCopy = $adCopy;
         $this->adType = $adType;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeAssetUrl = $creativeAssetUrl;
+        $this->creativeIds = $creativeIds;
         $this->cta = $cta;
         $this->description = $description;
         $this->finalUrl = $finalUrl;
@@ -185,9 +216,11 @@ class AdsAd
         $this->headline = $headline;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->itemId = $itemId;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->raw = $raw;
+        $this->status = $status;
         $this->targeting = $targeting;
         $this->updatedAt = $updatedAt;
     }

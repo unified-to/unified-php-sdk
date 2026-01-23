@@ -15,14 +15,26 @@ enum PatchAdsGroupQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case Name = 'name';
+    case ParentId = 'parent_id';
     case CampaignId = 'campaign_id';
     case OrganizationId = 'organization_id';
-    case IsActive = 'is_active';
+    case InsertionorderId = 'insertionorder_id';
+    case Status = 'status';
     case Targeting = 'targeting';
     case BidAmount = 'bid_amount';
+    case BidStrategy = 'bid_strategy';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';
+    case BudgetAllocationType = 'budget_allocation_type';
     case StartAt = 'start_at';
     case EndAt = 'end_at';
+    case BudgetUnit = 'budget_unit';
+    case BudgetMaxAmount = 'budget_max_amount';
+    case Type = 'type';
+    case HasEuPoliticalAds = 'has_eu_political_ads';
+    case Pacing = 'pacing';
+    case FrequencyCap = 'frequency_cap';
+    case CreativeIds = 'creative_ids';
+    case IsActive = 'is_active';
     case Raw = 'raw';
 }
