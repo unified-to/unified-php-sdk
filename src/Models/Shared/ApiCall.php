@@ -72,6 +72,14 @@ class ApiCall
 
     /**
      *
+     * @var ?float $endapiResponseTime
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('endapi_response_time')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $endapiResponseTime = null;
+
+    /**
+     *
      * @var ?string $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
@@ -120,6 +128,14 @@ class ApiCall
 
     /**
      *
+     * @var ?float $unifiedResponseTime
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('unified_response_time')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $unifiedResponseTime = null;
+
+    /**
+     *
      * @var ?string $userAgent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user_agent')]
@@ -159,6 +175,7 @@ class ApiCall
      * @param  ApiCallType  $type
      * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdAt
+     * @param  ?float  $endapiResponseTime
      * @param  ?string  $environment
      * @param  ?string  $error
      * @param  ?string  $externalXref
@@ -166,12 +183,13 @@ class ApiCall
      * @param  ?string  $ipAddress
      * @param  ?bool  $isBillable
      * @param  ?float  $size
+     * @param  ?float  $unifiedResponseTime
      * @param  ?string  $userAgent
      * @param  ?string  $webhookId
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?string $userAgent = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?float $endapiResponseTime = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?float $unifiedResponseTime = null, ?string $userAgent = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->integrationType = $integrationType;
         $this->method = $method;
@@ -181,12 +199,14 @@ class ApiCall
         $this->type = $type;
         $this->connectionId = $connectionId;
         $this->createdAt = $createdAt;
+        $this->endapiResponseTime = $endapiResponseTime;
         $this->error = $error;
         $this->externalXref = $externalXref;
         $this->id = $id;
         $this->ipAddress = $ipAddress;
         $this->isBillable = $isBillable;
         $this->size = $size;
+        $this->unifiedResponseTime = $unifiedResponseTime;
         $this->userAgent = $userAgent;
         $this->webhookId = $webhookId;
         $this->workspaceId = $workspaceId;
