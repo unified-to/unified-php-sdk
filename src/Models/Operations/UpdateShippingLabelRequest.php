@@ -8,9 +8,17 @@ declare(strict_types=1);
 
 namespace Unified\Unified_to\Models\Operations;
 
+use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class GetShippingRateRequest
+class UpdateShippingLabelRequest
 {
+    /**
+     *
+     * @var Shared\ShippingLabel $shippingLabel
+     */
+    #[SpeakeasyMetadata('request:mediaType=application/json')]
+    public Shared\ShippingLabel $shippingLabel;
+
     /**
      * ID of the connection
      *
@@ -20,7 +28,7 @@ class GetShippingRateRequest
     public string $connectionId;
 
     /**
-     * ID of the Rate
+     * ID of the Label
      *
      * @var string $id
      */
@@ -30,7 +38,7 @@ class GetShippingRateRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetShippingRateQueryParamFields> $fields
+     * @var ?array<UpdateShippingLabelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,14 +52,16 @@ class GetShippingRateRequest
     public ?string $raw = null;
 
     /**
+     * @param  Shared\ShippingLabel  $shippingLabel
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetShippingRateQueryParamFields>  $fields
+     * @param  ?array<UpdateShippingLabelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $id, ?array $fields = null, ?string $raw = null)
+    public function __construct(Shared\ShippingLabel $shippingLabel, string $connectionId, string $id, ?array $fields = null, ?string $raw = null)
     {
+        $this->shippingLabel = $shippingLabel;
         $this->connectionId = $connectionId;
         $this->id = $id;
         $this->fields = $fields;

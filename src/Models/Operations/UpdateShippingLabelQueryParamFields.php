@@ -9,20 +9,20 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-enum ListShippingTrackingsQueryParamFields: string
+enum UpdateShippingLabelQueryParamFields: string
 {
     case Id = 'id';
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case ShipmentId = 'shipment_id';
     case TrackingNumber = 'tracking_number';
+    case LabelUrl = 'label_url';
+    case LabelFormat = 'label_format';
     case Status = 'status';
-    case Events = 'events';
-    case EstimatedDelivery = 'estimated_delivery';
-    case ActualDeliveryAt = 'actual_delivery_at';
-    case StatusDescription = 'status_description';
-    case CarrierId = 'carrier_id';
-    case CarrierStatusCode = 'carrier_status_code';
-    case CarrierStatusDescription = 'carrier_status_description';
+    case IsVoided = 'is_voided';
+    case LabelCost = 'label_cost';
+    case LabelCostCurrency = 'label_cost_currency';
+    case RateId = 'rate_id';
+    case ServiceCode = 'service_code';
     case Raw = 'raw';
 }

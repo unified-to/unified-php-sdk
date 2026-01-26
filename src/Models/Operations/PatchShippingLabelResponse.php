@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
-class GetShippingRateResponse
+class PatchShippingLabelResponse
 {
     /**
      * HTTP response content type for this operation
@@ -35,22 +35,22 @@ class GetShippingRateResponse
     /**
      * Successful
      *
-     * @var ?Shared\ShippingRate $shippingRate
+     * @var ?Shared\ShippingLabel $shippingLabel
      */
-    public ?Shared\ShippingRate $shippingRate = null;
+    public ?Shared\ShippingLabel $shippingLabel = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ShippingRate  $shippingRate
+     * @param  ?Shared\ShippingLabel  $shippingLabel
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingRate $shippingRate = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingLabel $shippingLabel = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->shippingRate = $shippingRate;
+        $this->shippingLabel = $shippingLabel;
     }
 }

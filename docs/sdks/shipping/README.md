@@ -7,19 +7,18 @@
 * [createShippingLabel](#createshippinglabel) - Create a label
 * [createShippingRate](#createshippingrate) - Create a rate
 * [createShippingShipment](#createshippingshipment) - Create a shipment
-* [createShippingTracking](#createshippingtracking) - Create a tracking
 * [getShippingCarrier](#getshippingcarrier) - Retrieve a carrier
 * [getShippingLabel](#getshippinglabel) - Retrieve a label
-* [getShippingRate](#getshippingrate) - Retrieve a rate
 * [getShippingShipment](#getshippingshipment) - Retrieve a shipment
 * [getShippingTracking](#getshippingtracking) - Retrieve a tracking
 * [listShippingCarriers](#listshippingcarriers) - List all carriers
 * [listShippingLabels](#listshippinglabels) - List all labels
 * [listShippingShipments](#listshippingshipments) - List all shipments
-* [listShippingTrackings](#listshippingtrackings) - List all trackings
+* [patchShippingLabel](#patchshippinglabel) - Update a label
 * [patchShippingShipment](#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](#removeshippinglabel) - Remove a label
 * [removeShippingShipment](#removeshippingshipment) - Remove a shipment
+* [updateShippingLabel](#updateshippinglabel) - Update a label
 * [updateShippingShipment](#updateshippingshipment) - Update a shipment
 
 ## createShippingLabel
@@ -178,58 +177,6 @@ if ($response->shippingShipment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createShippingTracking
-
-Create a tracking
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createShippingTracking" method="post" path="/shipping/{connection_id}/tracking" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateShippingTrackingRequest(
-    shippingTracking: new Shared\ShippingTracking(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->shipping->createShippingTracking(
-    request: $request
-);
-
-if ($response->shippingTracking !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateShippingTrackingRequest](../../Models/Operations/CreateShippingTrackingRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\CreateShippingTrackingResponse](../../Models/Operations/CreateShippingTrackingResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
 ## getShippingCarrier
 
 Retrieve a carrier
@@ -325,57 +272,6 @@ if ($response->shippingLabel !== null) {
 ### Response
 
 **[?Operations\GetShippingLabelResponse](../../Models/Operations/GetShippingLabelResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getShippingRate
-
-Retrieve a rate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getShippingRate" method="get" path="/shipping/{connection_id}/rate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetShippingRateRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->shipping->getShippingRate(
-    request: $request
-);
-
-if ($response->shippingRate !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetShippingRateRequest](../../Models/Operations/GetShippingRateRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\GetShippingRateResponse](../../Models/Operations/GetShippingRateResponse.md)**
 
 ### Errors
 
@@ -635,13 +531,13 @@ if ($response->shippingShipments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listShippingTrackings
+## patchShippingLabel
 
-List all trackings
+Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+<!-- UsageSnippet language="php" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -649,6 +545,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -656,28 +553,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListShippingTrackingsRequest(
+$request = new Operations\PatchShippingLabelRequest(
+    shippingLabel: new Shared\ShippingLabel(),
     connectionId: '<id>',
+    id: '<id>',
 );
 
-$response = $sdk->shipping->listShippingTrackings(
+$response = $sdk->shipping->patchShippingLabel(
     request: $request
 );
 
-if ($response->shippingTrackings !== null) {
+if ($response->shippingLabel !== null) {
     // handle response
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListShippingTrackingsRequest](../../Models/Operations/ListShippingTrackingsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchShippingLabelRequest](../../Models/Operations/PatchShippingLabelRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListShippingTrackingsResponse](../../Models/Operations/ListShippingTrackingsResponse.md)**
+**[?Operations\PatchShippingLabelResponse](../../Models/Operations/PatchShippingLabelResponse.md)**
 
 ### Errors
 
@@ -833,6 +732,59 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveShippingShipmentResponse](../../Models/Operations/RemoveShippingShipmentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateShippingLabel
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateShippingLabelRequest(
+    shippingLabel: new Shared\ShippingLabel(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->shipping->updateShippingLabel(
+    request: $request
+);
+
+if ($response->shippingLabel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateShippingLabelRequest](../../Models/Operations/UpdateShippingLabelRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\UpdateShippingLabelResponse](../../Models/Operations/UpdateShippingLabelResponse.md)**
 
 ### Errors
 

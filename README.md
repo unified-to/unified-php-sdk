@@ -987,7 +987,9 @@ if ($response->accountingAccount !== null) {
 * [createShippingLabel](docs/sdks/label/README.md#createshippinglabel) - Create a label
 * [getShippingLabel](docs/sdks/label/README.md#getshippinglabel) - Retrieve a label
 * [listShippingLabels](docs/sdks/label/README.md#listshippinglabels) - List all labels
+* [patchShippingLabel](docs/sdks/label/README.md#patchshippinglabel) - Update a label
 * [removeShippingLabel](docs/sdks/label/README.md#removeshippinglabel) - Remove a label
+* [updateShippingLabel](docs/sdks/label/README.md#updateshippinglabel) - Update a label
 
 ### [Lead](docs/sdks/lead/README.md)
 
@@ -1275,7 +1277,6 @@ if ($response->accountingAccount !== null) {
 ### [Rate](docs/sdks/rate/README.md)
 
 * [createShippingRate](docs/sdks/rate/README.md#createshippingrate) - Create a rate
-* [getShippingRate](docs/sdks/rate/README.md#getshippingrate) - Retrieve a rate
 
 ### [Recording](docs/sdks/recording/README.md)
 
@@ -1415,19 +1416,18 @@ if ($response->accountingAccount !== null) {
 * [createShippingLabel](docs/sdks/shipping/README.md#createshippinglabel) - Create a label
 * [createShippingRate](docs/sdks/shipping/README.md#createshippingrate) - Create a rate
 * [createShippingShipment](docs/sdks/shipping/README.md#createshippingshipment) - Create a shipment
-* [createShippingTracking](docs/sdks/shipping/README.md#createshippingtracking) - Create a tracking
 * [getShippingCarrier](docs/sdks/shipping/README.md#getshippingcarrier) - Retrieve a carrier
 * [getShippingLabel](docs/sdks/shipping/README.md#getshippinglabel) - Retrieve a label
-* [getShippingRate](docs/sdks/shipping/README.md#getshippingrate) - Retrieve a rate
 * [getShippingShipment](docs/sdks/shipping/README.md#getshippingshipment) - Retrieve a shipment
 * [getShippingTracking](docs/sdks/shipping/README.md#getshippingtracking) - Retrieve a tracking
 * [listShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
 * [listShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
 * [listShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
-* [listShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
+* [patchShippingLabel](docs/sdks/shipping/README.md#patchshippinglabel) - Update a label
 * [patchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
 * [removeShippingShipment](docs/sdks/shipping/README.md#removeshippingshipment) - Remove a shipment
+* [updateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [updateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
 ### [Space](docs/sdks/space/README.md)
@@ -1555,9 +1555,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Tracking](docs/sdks/tracking/README.md)
 
-* [createShippingTracking](docs/sdks/tracking/README.md#createshippingtracking) - Create a tracking
 * [getShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
-* [listShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

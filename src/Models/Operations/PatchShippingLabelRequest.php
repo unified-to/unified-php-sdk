@@ -10,14 +10,14 @@ namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class CreateShippingTrackingRequest
+class PatchShippingLabelRequest
 {
     /**
      *
-     * @var Shared\ShippingTracking $shippingTracking
+     * @var Shared\ShippingLabel $shippingLabel
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public Shared\ShippingTracking $shippingTracking;
+    public Shared\ShippingLabel $shippingLabel;
 
     /**
      * ID of the connection
@@ -28,9 +28,17 @@ class CreateShippingTrackingRequest
     public string $connectionId;
 
     /**
+     * ID of the Label
+     *
+     * @var string $id
+     */
+    #[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
+    public string $id;
+
+    /**
      * Fields to return
      *
-     * @var ?array<CreateShippingTrackingQueryParamFields> $fields
+     * @var ?array<PatchShippingLabelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,16 +52,18 @@ class CreateShippingTrackingRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\ShippingTracking  $shippingTracking
+     * @param  Shared\ShippingLabel  $shippingLabel
      * @param  string  $connectionId
-     * @param  ?array<CreateShippingTrackingQueryParamFields>  $fields
+     * @param  string  $id
+     * @param  ?array<PatchShippingLabelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */
-    public function __construct(Shared\ShippingTracking $shippingTracking, string $connectionId, ?array $fields = null, ?string $raw = null)
+    public function __construct(Shared\ShippingLabel $shippingLabel, string $connectionId, string $id, ?array $fields = null, ?string $raw = null)
     {
-        $this->shippingTracking = $shippingTracking;
+        $this->shippingLabel = $shippingLabel;
         $this->connectionId = $connectionId;
+        $this->id = $id;
         $this->fields = $fields;
         $this->raw = $raw;
     }
