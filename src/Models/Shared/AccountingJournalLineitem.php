@@ -39,6 +39,22 @@ class AccountingJournalLineitem
 
     /**
      *
+     * @var ?float $creditAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('credit_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $creditAmount = null;
+
+    /**
+     *
+     * @var ?float $debitAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('debit_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $debitAmount = null;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
@@ -105,6 +121,8 @@ class AccountingJournalLineitem
      * @param  ?string  $accountId
      * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
+     * @param  ?float  $creditAmount
+     * @param  ?float  $debitAmount
      * @param  ?string  $description
      * @param  ?string  $groupId
      * @param  ?string  $id
@@ -115,11 +133,13 @@ class AccountingJournalLineitem
      * @param  ?float  $totalAmount
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?string $description = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?string $paymentId = null, ?string $projectId = null, ?float $taxAmount = null, ?float $totalAmount = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?float $creditAmount = null, ?float $debitAmount = null, ?string $description = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?string $paymentId = null, ?string $projectId = null, ?float $taxAmount = null, ?float $totalAmount = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
+        $this->creditAmount = $creditAmount;
+        $this->debitAmount = $debitAmount;
         $this->description = $description;
         $this->groupId = $groupId;
         $this->id = $id;

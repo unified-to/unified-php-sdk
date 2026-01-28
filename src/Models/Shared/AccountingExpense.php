@@ -29,6 +29,14 @@ class AccountingExpense
 
     /**
      *
+     * @var ?string $contactId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $contactId = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -130,6 +138,7 @@ class AccountingExpense
     /**
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
+     * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
@@ -144,10 +153,11 @@ class AccountingExpense
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $approvedAt = null, ?string $approverUserId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
+        $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;

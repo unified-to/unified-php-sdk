@@ -15,6 +15,7 @@ enum ListAccountingExpensesQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case UserId = 'user_id';
+    case ContactId = 'contact_id';
     case Name = 'name';
     case TotalAmount = 'total_amount';
     case Currency = 'currency';

@@ -27,7 +27,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 php:
-  version: 1.6.23
+  version: 1.6.24
   additionalDependencies:
     autoload: {}
     autoload-dev: {}
