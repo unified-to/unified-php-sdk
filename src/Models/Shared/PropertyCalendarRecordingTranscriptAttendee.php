@@ -21,6 +21,14 @@ class PropertyCalendarRecordingTranscriptAttendee
 
     /**
      *
+     * @var ?bool $isCohost
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_cohost')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isCohost = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -54,15 +62,17 @@ class PropertyCalendarRecordingTranscriptAttendee
 
     /**
      * @param  ?string  $email
+     * @param  ?bool  $isCohost
      * @param  ?string  $name
      * @param  ?bool  $required
      * @param  ?PropertyCalendarRecordingTranscriptAttendeeStatus  $status
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $email = null, ?string $name = null, ?bool $required = null, ?PropertyCalendarRecordingTranscriptAttendeeStatus $status = null, ?string $userId = null)
+    public function __construct(?string $email = null, ?bool $isCohost = null, ?string $name = null, ?bool $required = null, ?PropertyCalendarRecordingTranscriptAttendeeStatus $status = null, ?string $userId = null)
     {
         $this->email = $email;
+        $this->isCohost = $isCohost;
         $this->name = $name;
         $this->required = $required;
         $this->status = $status;

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 842cdb22961f557bcd41a4dc4569932b
+  docChecksum: 92ddc604425066fbaa39dfc01dd91097
   docVersion: "1.0"
-  speakeasyVersion: 1.700.1
-  generationVersion: 2.801.0
-  releaseVersion: 1.6.24
-  configChecksum: e6567e90a2f5179960cf8a5a6e5013c9
+  speakeasyVersion: 1.700.2
+  generationVersion: 2.801.2
+  releaseVersion: 1.6.25
+  configChecksum: 524be396d8cdc8e210ccc601d533b974
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: aa0dea72-9395-49f0-9b81-050f096cb4ec
-  pristine_commit_hash: f85cd810cb55306ef7601734a4d01e0a7530d25d
-  pristine_tree_hash: 17fbe9f63f7a1aa4f3d78d83d57bf19e9b5e9193
+  generation_id: 6fa05be4-31a2-4f21-8faf-6eb4b6e49687
+  pristine_commit_hash: 51fa4e2404fb30dfa6aab10ccfbdaf2a9f5e45ec
+  pristine_tree_hash: 4cd16cb493aaedd3c472d20e95931dc9ec25ad7d
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -7197,8 +7197,8 @@ trackedFiles:
     pristine_git_object: 8dbec3ebc44c63643f201fe17ed61a54876889e7
   docs/Models/Shared/CalendarAttendee.md:
     id: 5e74986384b2
-    last_write_checksum: sha1:63cafb930b44a075e82a430a0fa3779ac102bf03
-    pristine_git_object: cec57c0617d55e4060738acd8eba6a9a3ba14ae0
+    last_write_checksum: sha1:9ebe5567e2cb246f5bc0cdaddfd0cf3ecf250830
+    pristine_git_object: 70cb55291aeec7008cfb1420b05a085fb91f3e4d
   docs/Models/Shared/CalendarAttendeeStatus.md:
     id: 58c5967d09fd
     last_write_checksum: sha1:85327301fbfdaf7cce4bfe36b7143d5ef7b53d6d
@@ -8621,8 +8621,8 @@ trackedFiles:
     pristine_git_object: aa9b3bab05256c11724dd48fa705300a206015ee
   docs/Models/Shared/PropertyCalendarEventOrganizer.md:
     id: dd5ccd39d1cc
-    last_write_checksum: sha1:08558a3b5b1cdc978296b97cab162f30910e0c03
-    pristine_git_object: 4ec4089a3740314cad66087c8bb63ee65798ef53
+    last_write_checksum: sha1:0fbd10fc374a9e6900a1a020227e0053728d0de7
+    pristine_git_object: 45c346b49dc05d337d9507218709212991155db0
   docs/Models/Shared/PropertyCalendarEventOrganizerStatus.md:
     id: ecf3383f6658
     last_write_checksum: sha1:8849d46fbdb4252e37d74f5da4af8d9b1c6de511
@@ -8633,8 +8633,8 @@ trackedFiles:
     pristine_git_object: 4bd58b79d40a2aac415cf43013a9e1ade4eedae8
   docs/Models/Shared/PropertyCalendarRecordingTranscriptAttendee.md:
     id: 4a4372703aa1
-    last_write_checksum: sha1:50062780f2226c9ee65193074e7c04cfd8fe328f
-    pristine_git_object: f9d7790e7addb256273856039f4f02230c8b5d66
+    last_write_checksum: sha1:13b727f8dd73307d31bc5ccbd1f42647ce5f5b0b
+    pristine_git_object: cb5363b6cd893e17b83cf536f1205c6ff1d68fab
   docs/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.md:
     id: 3544243dcfb7
     last_write_checksum: sha1:f4e294b7355d679edeea70b5e3e5fdad9a78a28f
@@ -17597,8 +17597,8 @@ trackedFiles:
     pristine_git_object: 658cb57c45a1bf8e6f57922ce796736ade68ce5e
   src/Models/Shared/CalendarAttendee.php:
     id: 4bc77b15f465
-    last_write_checksum: sha1:80e79d5b62d57505333f5721f2abb54f4a07f1e2
-    pristine_git_object: d9dba023930f4a70200af111caef249958a9b2a2
+    last_write_checksum: sha1:4f1305c3b03da2b248c7ab54ac80d9cb5130e980
+    pristine_git_object: 3e1151d7e16b57a1c52602f0047fa40074b87609
   src/Models/Shared/CalendarAttendeeStatus.php:
     id: 1cb549914b90
     last_write_checksum: sha1:87ae1ed1247e6bb5939ad0ddda34b6469bac5d77
@@ -18929,8 +18929,8 @@ trackedFiles:
     pristine_git_object: bfabaeed1d0fb51523ad152cfdfbb3605dfc7ffe
   src/Models/Shared/PropertyCalendarEventOrganizer.php:
     id: 12f8a0189959
-    last_write_checksum: sha1:80f56cab2131372febb3b181c6cc0980eed17f32
-    pristine_git_object: 8fdae29d62d7da72559344cbc9e03789fdf27760
+    last_write_checksum: sha1:56e0ddf6d644b674107650acdaadbbd1469b33bf
+    pristine_git_object: f93e1abdbf2bea4047c48e1de0a61f9fb19e7345
   src/Models/Shared/PropertyCalendarEventOrganizerStatus.php:
     id: 44a6493ab374
     last_write_checksum: sha1:2eb423052042f06ddd569acdd89818ea4faaf2bb
@@ -18941,8 +18941,8 @@ trackedFiles:
     pristine_git_object: eef46fa9cd9db8edc484040123b39926e975a080
   src/Models/Shared/PropertyCalendarRecordingTranscriptAttendee.php:
     id: ab9fc52cc885
-    last_write_checksum: sha1:d99df50c0a68063f6d8692d8da567903ecbe01cf
-    pristine_git_object: e2263d6f9b1914b208e816c2d36e7d1df13b5c54
+    last_write_checksum: sha1:cf97865b3fc4d4f9c2d03194ecb96dea25364f20
+    pristine_git_object: fe00c3ebb815e1fe81ac79a41472d293255d089b
   src/Models/Shared/PropertyCalendarRecordingTranscriptAttendeeStatus.php:
     id: 2c9a2b9c9b3d
     last_write_checksum: sha1:10b33f2a09d999cddcc6bfcb7805d69472d34b17
@@ -19921,8 +19921,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c6b6255044e4f208f45ccf5e6fea40db379a6e14
-    pristine_git_object: a4d96fe796318fa1878442a89c84e41721e9abf9
+    last_write_checksum: sha1:bebe79303b025ebc4683c84db523af7cd740114c
+    pristine_git_object: 2b381649763ee78a9fbb2341a30846fd00795a51
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -25671,7 +25671,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->accounting->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->accounting->getAccountingJournal()`:  `response.lineitems[]` **Changed**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->contactId` **Added**\n* `unified-to->accounting->listAccountingJournals()`:  `response.[]->lineitems[]` **Changed**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->accounting->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->accounting->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->contactId` **Added**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to->journal->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to->journal->getAccountingJournal()`:  `response.lineitems[]` **Changed**\n* `unified-to->journal->listAccountingJournals()`:  `response.[]->lineitems[]` **Changed**\n* `unified-to->journal->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to->journal->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->calendar->createCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->calendar->getCalendarEvent()`:  `response` **Changed**\n* `unified-to->calendar->getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to->calendar->listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to->calendar->listCalendarRecordings()`:  `response.[]->media[]` **Changed**\n* `unified-to->calendar->patchCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->calendar->updateCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->createCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->getCalendarEvent()`:  `response` **Changed**\n* `unified-to->event->listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to->event->patchCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->updateCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->recording->getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to->recording->listCalendarRecordings()`:  `response.[]->media[]` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
