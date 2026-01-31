@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 92ddc604425066fbaa39dfc01dd91097
+  docChecksum: f1a8d59500c94e46966b2cfaf9ce5506
   docVersion: "1.0"
   speakeasyVersion: 1.700.2
   generationVersion: 2.801.2
-  releaseVersion: 1.6.25
-  configChecksum: 524be396d8cdc8e210ccc601d533b974
+  releaseVersion: 1.6.26
+  configChecksum: 349056d62fa9b38c0b6225015e949348
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 6fa05be4-31a2-4f21-8faf-6eb4b6e49687
-  pristine_commit_hash: 51fa4e2404fb30dfa6aab10ccfbdaf2a9f5e45ec
-  pristine_tree_hash: 4cd16cb493aaedd3c472d20e95931dc9ec25ad7d
+  generation_id: dac4e049-61e9-4209-ba24-dd9f2f6a9fdd
+  pristine_commit_hash: 8c364bf7f9aded57bfddffc9628dad848581ab45
+  pristine_tree_hash: 5c01a03ce1f9ced7b3b0171b4afb944755190c89
 features:
   php:
     constsAndDefaults: 0.2.0
@@ -399,6 +399,18 @@ trackedFiles:
     id: 78bce16917e9
     last_write_checksum: sha1:63cc6f21748e2056d859e8136e52ef7fd492405e
     pristine_git_object: 88e895fb7002780f10c6fddd6686d2f326301fad
+  docs/Models/Operations/CreateCalendarWebinarQueryParamFields.md:
+    id: 24d46c8dfce4
+    last_write_checksum: sha1:8207621d336d781703516817cef54cbb1d552185
+    pristine_git_object: a8810a89eb73ddc20e1d1c2550ca8ea7eccbcf7e
+  docs/Models/Operations/CreateCalendarWebinarRequest.md:
+    id: 2b61197a8bf1
+    last_write_checksum: sha1:14bedde333e2e8b4d1eb56a479c4973d412059f3
+    pristine_git_object: efa0be621fdccfd6d9d2648dcfab3b2a3bb22de5
+  docs/Models/Operations/CreateCalendarWebinarResponse.md:
+    id: ca584b447042
+    last_write_checksum: sha1:58234bebadfcab8cbc28778531ed3e9f63f065bd
+    pristine_git_object: fa7e5887cf39ac568637b32a2146748d39dc2f10
   docs/Models/Operations/CreateCommerceCollectionQueryParamFields.md:
     id: 1da6c465d2df
     last_write_checksum: sha1:ded5be83dd2eaead4a6fc335091e452ecae6c851
@@ -1587,6 +1599,18 @@ trackedFiles:
     id: 9ffabcee59b0
     last_write_checksum: sha1:aaf0b5a1601cb0cfa569cd48496ae2e9606812a6
     pristine_git_object: 87b475d62dd36f86b80bfa6324941f8cf78ce2ef
+  docs/Models/Operations/GetCalendarWebinarQueryParamFields.md:
+    id: 0f4b3fc1c235
+    last_write_checksum: sha1:2340e7954cbbd81e6462205a81bc667b5593060f
+    pristine_git_object: 17783df25db2ecaec6cbd0f69c0c28906ad761a4
+  docs/Models/Operations/GetCalendarWebinarRequest.md:
+    id: 0104a4970762
+    last_write_checksum: sha1:d5610eee56d62dc9adbdad3cf28a141be27b557c
+    pristine_git_object: c8bc63c664c059f05820c717f5f046526c993dbd
+  docs/Models/Operations/GetCalendarWebinarResponse.md:
+    id: b723f0ba24c7
+    last_write_checksum: sha1:ee7dfa66ca7ff59bc32622c9c52e61d7a2c5054d
+    pristine_git_object: 0378d1ef9ee3cc601352d586a99e8091fab6a039
   docs/Models/Operations/GetCommerceCollectionQueryParamFields.md:
     id: de0450c430a0
     last_write_checksum: sha1:8f58cfa2e324108d0ce333de7deeb97bb48383b8
@@ -2935,6 +2959,18 @@ trackedFiles:
     id: 148b8b1e3c16
     last_write_checksum: sha1:73f41ec8ac9ad3ea6c037f36c067ed210bf0d707
     pristine_git_object: e7b90614bac4a74ba287fb4f24980246c39fc822
+  docs/Models/Operations/ListCalendarWebinarsQueryParamFields.md:
+    id: 455439325fe9
+    last_write_checksum: sha1:a0ab97b36c46b2fd69dd42006d020217ff2d9e7d
+    pristine_git_object: ff65996dea925767b0d8aec36ba340c99313bef0
+  docs/Models/Operations/ListCalendarWebinarsRequest.md:
+    id: b43d12a90f11
+    last_write_checksum: sha1:10d7d8ac32bc529a35b87e8aa6340db6dbd210ae
+    pristine_git_object: 6bce34926234166e185a7380b7158f995eb6e956
+  docs/Models/Operations/ListCalendarWebinarsResponse.md:
+    id: 5d1eebfd6588
+    last_write_checksum: sha1:aa1ba7187fa525b5e594a5e3e57b4c54b84294c3
+    pristine_git_object: d7eae473a1b56739975b2932ab24c39cd90a5d60
   docs/Models/Operations/ListCommerceCollectionsQueryParamFields.md:
     id: b8447d1bd226
     last_write_checksum: sha1:693e290ae7898a14a7130360f2b09374167221a8
@@ -4183,6 +4219,18 @@ trackedFiles:
     id: 1c9680095855
     last_write_checksum: sha1:ea76dd9e6445b0ec23bae73a074ace685033c4e0
     pristine_git_object: 38a375858b8e5bb106caf665c35c27a37c324ad0
+  docs/Models/Operations/PatchCalendarWebinarQueryParamFields.md:
+    id: fb3fc2006f23
+    last_write_checksum: sha1:07d444fc0f40391971d8f1ed18737349777688a9
+    pristine_git_object: 7bb3573cdd0272ce0e6d5d90b37a906f17bac935
+  docs/Models/Operations/PatchCalendarWebinarRequest.md:
+    id: c7fa2b2d399a
+    last_write_checksum: sha1:4bdb5d757fa820099ccd139b4b614c7210f9ead6
+    pristine_git_object: 4714a7ef25329cb9c3794e60fa47de66b4e718eb
+  docs/Models/Operations/PatchCalendarWebinarResponse.md:
+    id: 8d823b13dc4a
+    last_write_checksum: sha1:d442a16906ca523e379e9102dd7fa269e039dbc7
+    pristine_git_object: 70f39f48bad00abc707fc72b899491d933660080
   docs/Models/Operations/PatchCommerceCollectionQueryParamFields.md:
     id: 2a1c8fb2c311
     last_write_checksum: sha1:1ae1b9cb4880f1a55f942ef8760010a47662113d
@@ -5159,6 +5207,14 @@ trackedFiles:
     id: 52ba61574f7c
     last_write_checksum: sha1:071226b21416d3de4d059e887457278af6a4c895
     pristine_git_object: 963493b46793be36599ce58ccfeb9dde35e87e4a
+  docs/Models/Operations/RemoveCalendarWebinarRequest.md:
+    id: 77ccbe69b44b
+    last_write_checksum: sha1:e85b2d51cd3f61caa843857fd10b6ea58ad2aae9
+    pristine_git_object: 37084ac89b267297ecc045965f92c0a6f9482ce7
+  docs/Models/Operations/RemoveCalendarWebinarResponse.md:
+    id: acddd05e5c8d
+    last_write_checksum: sha1:e3313abf979f58fd7ddc41e5674c69ceffb943b7
+    pristine_git_object: 57a3a913586313a9be3e8c43e7b4e8a869b46b82
   docs/Models/Operations/RemoveCommerceCollectionRequest.md:
     id: 3fc89094fb80
     last_write_checksum: sha1:d4d4ab81e9584b7db20fdbdb3b3ffe8141bc74e9
@@ -6007,6 +6063,18 @@ trackedFiles:
     id: 9a11bff9e37f
     last_write_checksum: sha1:1f19310d0005f377353506fd5d2fd0379b851650
     pristine_git_object: 0da52db4af896279876701d95f994cb659c2e6ad
+  docs/Models/Operations/UpdateCalendarWebinarQueryParamFields.md:
+    id: a300c3347df9
+    last_write_checksum: sha1:8fb3064df164336542c56da5695a10a1be06d5be
+    pristine_git_object: d2ab4ad0194bbc32b8568a5fb1181207ffdb2869
+  docs/Models/Operations/UpdateCalendarWebinarRequest.md:
+    id: bd161bedb1b0
+    last_write_checksum: sha1:6deae9a4a0669bda3c7ff427e52f569878f7a2b7
+    pristine_git_object: ee813692aa3896017d0fc179ba98880493f039fb
+  docs/Models/Operations/UpdateCalendarWebinarResponse.md:
+    id: 1a3e2e7b552a
+    last_write_checksum: sha1:8e3df306d328e59a41c2d126f6440916a4c7ff8b
+    pristine_git_object: 4d9b73e40691f86ef4be4adf407962902b81909c
   docs/Models/Operations/UpdateCommerceCollectionQueryParamFields.md:
     id: fa78b82d1d24
     last_write_checksum: sha1:e7514a14ae5713e6258c73dcc5970d41289f2e16
@@ -7247,6 +7315,26 @@ trackedFiles:
     id: 931b68bc3c41
     last_write_checksum: sha1:77630d37bf5b01d192a0dc0b84568ba91abbdc94
     pristine_git_object: cc9d1a8c3dc2b47ceecde68dcf142ecd4cdec07c
+  docs/Models/Shared/CalendarWebinar.md:
+    id: 59ef503cc34f
+    last_write_checksum: sha1:50f60009e186d03f5945b738ebecf170e49f7f07
+    pristine_git_object: 8f812e0722439555cec224f2976afef5b688ea24
+  docs/Models/Shared/CalendarWebinarPanelist.md:
+    id: a65ff3e3d9ec
+    last_write_checksum: sha1:2f6bd9a254e8081e093bb70bd329a4705bf68c8a
+    pristine_git_object: d941d1a797efd1b67c2f98f43c542f6a1e642910
+  docs/Models/Shared/CalendarWebinarPanelistStatus.md:
+    id: b10e25735fea
+    last_write_checksum: sha1:2aa009e8b8156558bbe3f7b80d16f6b645c327db
+    pristine_git_object: 3e101ad275e3d06178de705b9b259941a17ed7de
+  docs/Models/Shared/CalendarWebinarRegistrant.md:
+    id: 3940c268b43f
+    last_write_checksum: sha1:044b47d8786d38e8b19af1fa55cbeeb7b610e978
+    pristine_git_object: ee0847aae44c713231e66ee4790e72da51b45b09
+  docs/Models/Shared/CalendarWebinarStatus.md:
+    id: 849d5fd7a6f6
+    last_write_checksum: sha1:4c4dbdb778e7e7da6266fdde917d8b694b1c0c2b
+    pristine_git_object: c68ef2d71bda344ffb95f314bf5b1d28a83eef3e
   docs/Models/Shared/CommerceCollection.md:
     id: 71663273f1fa
     last_write_checksum: sha1:559098d2f32871a7144def101e4447344b501092
@@ -8293,8 +8381,8 @@ trackedFiles:
     pristine_git_object: 51b242ed4ddc0af4e5d05fc34919c6ef4c128117
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:3ef720256e43be1f2998702a9f660276c4d3a32a
-    pristine_git_object: 6bfb087f0ba26447b492366c2725f47347301376
+    last_write_checksum: sha1:dc638c85ada9da77d82cd69e3903a00cb2fe16cb
+    pristine_git_object: 355be3337bdce3a936edc6ac11b7a53dc7106cf0
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -8639,6 +8727,14 @@ trackedFiles:
     id: 3544243dcfb7
     last_write_checksum: sha1:f4e294b7355d679edeea70b5e3e5fdad9a78a28f
     pristine_git_object: ca78cdd8505fb228e772ad0f511a4b25cb699552
+  docs/Models/Shared/PropertyCalendarWebinarOrganizer.md:
+    id: 1d0025a49037
+    last_write_checksum: sha1:3322f0e2be144ccd5aac2c01666fd274a55e90b7
+    pristine_git_object: d7397a475be527da3828f3cdd0a98ce291dd1051
+  docs/Models/Shared/PropertyCalendarWebinarOrganizerStatus.md:
+    id: f9fd1487dc96
+    last_write_checksum: sha1:c509ea95b64debdd89bafabee04c60247fd2a075
+    pristine_git_object: d987c0008fcd3a759192ed95530fbdf73574894e
   docs/Models/Shared/PropertyCommerceLocationAddress.md:
     id: e2952266ad79
     last_write_checksum: sha1:106ca5b75c3b2306672838af8b3487999b52ef91
@@ -8653,8 +8749,8 @@ trackedFiles:
     pristine_git_object: e7baf526458e4e4df2b21c78f65b61e666f26e9d
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:53a1332db321571ef4db1b18121968af2287278f
-    pristine_git_object: 7c8664eeb56f91b975fe66ab6ea436f78ed895b2
+    last_write_checksum: sha1:655065688ba83452da2395bed4008e3da435e88c
+    pristine_git_object: 6f30ea74ba380aba39b5f78d472b3f540233c199
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -8903,6 +8999,10 @@ trackedFiles:
     id: de6dc5fe7851
     last_write_checksum: sha1:b5ee7bb29c0d0ebe1030cbbfdc7583871bb66056
     pristine_git_object: 2f45b9f7cf02927156811d1dad7e9ddc55471c50
+  docs/Models/Shared/RegistrationStatus.md:
+    id: e1b2ef304ca8
+    last_write_checksum: sha1:0571c3e076ce8c64b06a8e09e0c51b6b9cacc150
+    pristine_git_object: 14698b279016fc10abbd8c41ef213a210c5f20c3
   docs/Models/Shared/RepoBranch.md:
     id: 4d0c965dbee6
     last_write_checksum: sha1:94ddabbe936580abdc9ae624fa5c74979c6e7c59
@@ -9605,8 +9705,8 @@ trackedFiles:
     pristine_git_object: 0fd942f1b74fb6150b3f6440e3ee9bf248fab305
   docs/sdks/calendar/README.md:
     id: b85c3af313ad
-    last_write_checksum: sha1:687179320da3cf6d733c07d244d9654190749833
-    pristine_git_object: f85a785b8f3d68a5de2cb50fe417c7a0eb31234a
+    last_write_checksum: sha1:b8cdfc7c966d6ef85909e1d978081e5176b372b2
+    pristine_git_object: 62d27195c7fac22a578d90ef52d5506f0b848e79
   docs/sdks/call/README.md:
     id: 63a19d6314f9
     last_write_checksum: sha1:132dd9e7ceb910a77616ca1369f056aea8209591
@@ -10051,6 +10151,10 @@ trackedFiles:
     id: 3b908e644c3d
     last_write_checksum: sha1:177d945800a104e45d32a70339f5e1360faceefc
     pristine_git_object: bc1c0c9d7b687f2bc909103b542d7b51d6482e9e
+  docs/sdks/webinar/README.md:
+    id: f09c102d4cb9
+    last_write_checksum: sha1:8eccd184dd006a4129d826463e3ef889d4da1815
+    pristine_git_object: 8f0f6340636fc0790766f185034f0244b3338ae4
   phpstan.neon:
     id: 9503203c22f7
     last_write_checksum: sha1:36c7aff86142888cf147c7dceed4bbc02049e8fd
@@ -10129,8 +10233,8 @@ trackedFiles:
     pristine_git_object: 7cea5a37bc771a53b29f1b2c1ed75077f993c80e
   src/Calendar.php:
     id: cae7df766526
-    last_write_checksum: sha1:13c580ef773f6d41e506ca4585ac2f8ea9c87dfe
-    pristine_git_object: 089a92e1281f9f21ee0858ff9e06e474fc46323a
+    last_write_checksum: sha1:d40c51ffe847c6f7e56829623a10ac04be86478a
+    pristine_git_object: 048778a62a59800e62c7204449fd8ac6a0cf34fc
   src/Call.php:
     id: f682a7c97c11
     last_write_checksum: sha1:e0d7541c207ab59a5fefed38c90f01c36116b97e
@@ -10807,6 +10911,18 @@ trackedFiles:
     id: c2d8611302bb
     last_write_checksum: sha1:3f2401b70f951983fb70f63d1f92cd067408a60a
     pristine_git_object: 88fa656746f50a9a58caba5f95cb7f28ac2ef20c
+  src/Models/Operations/CreateCalendarWebinarQueryParamFields.php:
+    id: 1061506bb077
+    last_write_checksum: sha1:3ed7777987adac0e1a4c592caaf9425f10cf7389
+    pristine_git_object: eb4c17760c71e2f4f8cb745f1304397a44b48f5c
+  src/Models/Operations/CreateCalendarWebinarRequest.php:
+    id: 335fced657e5
+    last_write_checksum: sha1:de8494ea761f6a7b5bccc018ac90acdb4b2189b3
+    pristine_git_object: ba634b026dbbf80ff39677f464894d55dd444884
+  src/Models/Operations/CreateCalendarWebinarResponse.php:
+    id: d110242f32a6
+    last_write_checksum: sha1:db16a23bc4ad17dc3779a9ecb9d6e76d9ee1500c
+    pristine_git_object: c4bfb51a293c90410bb0e7685cd167bb68b1deb2
   src/Models/Operations/CreateCommerceCollectionQueryParamFields.php:
     id: 96d02532211d
     last_write_checksum: sha1:20345298dc178d8d2e33549a4c7bbd48381addb9
@@ -11995,6 +12111,18 @@ trackedFiles:
     id: 3a37ff17a19e
     last_write_checksum: sha1:949095c88f58f5c69472b94ace9243698f9e707f
     pristine_git_object: 197501bbdb4983694f28c7295124290fb47f3c63
+  src/Models/Operations/GetCalendarWebinarQueryParamFields.php:
+    id: 86387cb39a37
+    last_write_checksum: sha1:de4a2a7bec6e9b259fcd3d6544f818639456e44e
+    pristine_git_object: b03cb60cb595cfa0523e984a9ae1bd55fa236e76
+  src/Models/Operations/GetCalendarWebinarRequest.php:
+    id: 6300013b4993
+    last_write_checksum: sha1:fad7168b02f756d8a708d1525900e621cc180808
+    pristine_git_object: c5ce3e049d704c3f03b6ce099d598cdb2ee62163
+  src/Models/Operations/GetCalendarWebinarResponse.php:
+    id: aa73b41b9779
+    last_write_checksum: sha1:5737643cc32df44dc4ce17ad37302593027b2838
+    pristine_git_object: cc188ff70cbecbd8b16323f77e176036f1aa074b
   src/Models/Operations/GetCommerceCollectionQueryParamFields.php:
     id: 3a21bac6ef33
     last_write_checksum: sha1:5441672a13d46c9d14aaf88573d3c792b4e55a23
@@ -13343,6 +13471,18 @@ trackedFiles:
     id: 172a5a646368
     last_write_checksum: sha1:f469de3151903e925ad2ba59a4e0b953e61fdb35
     pristine_git_object: d066c3c0da4f44f8f0fda1297f58e80e5ba09908
+  src/Models/Operations/ListCalendarWebinarsQueryParamFields.php:
+    id: e5fc34cf1714
+    last_write_checksum: sha1:6b36c10eb83b676938c69e4cadf739977ecdbda3
+    pristine_git_object: 5176e4bb3ca17f44cd09027061352aa0f2f8b2a4
+  src/Models/Operations/ListCalendarWebinarsRequest.php:
+    id: 3a7fff22083f
+    last_write_checksum: sha1:672f4b0abe2b05521ad6e95a6521a4d168d54014
+    pristine_git_object: 84e6e5ebc850f9e4231badafbda6d53102978471
+  src/Models/Operations/ListCalendarWebinarsResponse.php:
+    id: c9dba288ad04
+    last_write_checksum: sha1:e4001b871931425b1dbef621d28b7a8bae93d53b
+    pristine_git_object: 731e6f3c706da634abb005c9ee3ae7fd89564d09
   src/Models/Operations/ListCommerceCollectionsQueryParamFields.php:
     id: e58070dbbea6
     last_write_checksum: sha1:d60161d1e3ca95b2c59ba7cdd3b86cfc7ffe6b6a
@@ -14591,6 +14731,18 @@ trackedFiles:
     id: 3f6a25e719b1
     last_write_checksum: sha1:0610cc5e7b11007efaf2bb8aa7e3d347ad960315
     pristine_git_object: 76025541fc86d0dba1be55c66057a8ba31fd06b5
+  src/Models/Operations/PatchCalendarWebinarQueryParamFields.php:
+    id: 704c5aef4375
+    last_write_checksum: sha1:5785b500aae57df57cd47ad20968dc501c0ed7b9
+    pristine_git_object: b0d6037c8114f5eb13d8a3f34f2ac954d0e87b33
+  src/Models/Operations/PatchCalendarWebinarRequest.php:
+    id: d9777ff2ebaa
+    last_write_checksum: sha1:b1a22e1aa2b6e7346c315863e2c5d7a2a92baf15
+    pristine_git_object: 7bc27b932bf0d62cd9ef33b2b7ac142ac5f535e0
+  src/Models/Operations/PatchCalendarWebinarResponse.php:
+    id: 0e6f27780d4f
+    last_write_checksum: sha1:e445ba77c0ce830e909e34795dc22f161822b1de
+    pristine_git_object: b9d3cb875a69f2da42034bb9b272e092afc3d636
   src/Models/Operations/PatchCommerceCollectionQueryParamFields.php:
     id: bd76bb73a797
     last_write_checksum: sha1:795414b166a6a1d5ade1a1eed28e5c70252bee5e
@@ -15567,6 +15719,14 @@ trackedFiles:
     id: 7c05cd28f5f1
     last_write_checksum: sha1:027a81f3fc589585edad022b8bfe47d419d4d8f1
     pristine_git_object: fd26d74dfa32ce931a800eb796a99b136f791dea
+  src/Models/Operations/RemoveCalendarWebinarRequest.php:
+    id: 7401a69e2fef
+    last_write_checksum: sha1:de6b8492df2a28498fc87ddb124cd82bc73943c2
+    pristine_git_object: 89eee9fb84fd9ea249dab7d3865b11bd810ce384
+  src/Models/Operations/RemoveCalendarWebinarResponse.php:
+    id: 99dcc8c41fde
+    last_write_checksum: sha1:5f6fe1c0582edf9875dfa252ef4ce6a8895bd10c
+    pristine_git_object: e2a78d189b2b5c8d30433914fb5f1b08a37a4c71
   src/Models/Operations/RemoveCommerceCollectionRequest.php:
     id: 30d03c295383
     last_write_checksum: sha1:43b78c7ee586419dcf0dc768a4036e981cc826d2
@@ -16415,6 +16575,18 @@ trackedFiles:
     id: a2fcc789d18d
     last_write_checksum: sha1:8b1d0ba5d8a91e4a37930fe910fa223f2ade7a69
     pristine_git_object: 4995b10f2f37678b46d68fe82a4ea19ec85f7aa1
+  src/Models/Operations/UpdateCalendarWebinarQueryParamFields.php:
+    id: 900316caab82
+    last_write_checksum: sha1:0c4c3601d7026e09b23051e3349889765d75c0d0
+    pristine_git_object: 808762e9f2f254c4774fa3a9a8bc777862543905
+  src/Models/Operations/UpdateCalendarWebinarRequest.php:
+    id: 352c34d0797d
+    last_write_checksum: sha1:5e6a6624c1665438a20917a745fb1fe18b416910
+    pristine_git_object: feb6850bfe4491cb605886be8d495f363496505c
+  src/Models/Operations/UpdateCalendarWebinarResponse.php:
+    id: 8a3f58f66e60
+    last_write_checksum: sha1:488963015f4ddcbf3bd11e9663da7aa6df7f3c89
+    pristine_git_object: 5c091e64be702bbbd037fd7e8807e5673ac05932
   src/Models/Operations/UpdateCommerceCollectionQueryParamFields.php:
     id: 115ac7062a7f
     last_write_checksum: sha1:d7d0964f6f5c6f15c61070c031cbb4d01dbff1fb
@@ -17647,6 +17819,26 @@ trackedFiles:
     id: 781027f21b52
     last_write_checksum: sha1:1e9525249a04549514fb537042527d16cbf41bb1
     pristine_git_object: 0dfb0d726ea5d09c25455b8b3bbf19a6667d5760
+  src/Models/Shared/CalendarWebinar.php:
+    id: 11cb9d353af9
+    last_write_checksum: sha1:92cd3017d16d33d4e1df47574b342b2d9839ebc7
+    pristine_git_object: aafafb020a7fd15fd10bf0b683c23db2f5420bfc
+  src/Models/Shared/CalendarWebinarPanelist.php:
+    id: 672ed6a2ef10
+    last_write_checksum: sha1:a8e1a9a51af5d8792d7121e4338037958d347f77
+    pristine_git_object: 8a3f35f0a25698782576d81078e9341d66f98e72
+  src/Models/Shared/CalendarWebinarPanelistStatus.php:
+    id: 4b0e763d50f0
+    last_write_checksum: sha1:77223f310ac469efa2aa53a266239ca46b04e2d9
+    pristine_git_object: cc572910363c6f3a7628654eeb211dfbd24a3b2a
+  src/Models/Shared/CalendarWebinarRegistrant.php:
+    id: 26021819504a
+    last_write_checksum: sha1:6a07f7b4ff1147ead5e82b466f59afec109f3c81
+    pristine_git_object: 3d5448832ddc8e9161ec915ca9c3f0e7364b5358
+  src/Models/Shared/CalendarWebinarStatus.php:
+    id: aca86455a962
+    last_write_checksum: sha1:d2d4d1534871a645bdb20cce71586e2a59c5803b
+    pristine_git_object: ca45e7cbf117b6e470e29daaaa15b04e4e1a58c1
   src/Models/Shared/CommerceCollection.php:
     id: 9cc6114c0cb3
     last_write_checksum: sha1:1218d09db2f46328e74a23facc4083431afdf615
@@ -18605,8 +18797,8 @@ trackedFiles:
     pristine_git_object: 3560c526c71c3a7ce8d98c5d900da5ed21f4beff
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:7462b4c937ec9ccf28adeb71d6bd287dc5084ebc
-    pristine_git_object: f922228fc15bf0b04c1548e3f52e607ace74dbd1
+    last_write_checksum: sha1:d143abe7607de068358cfb57c2340145f531ad94
+    pristine_git_object: b1434d9121e0b81749ff73b9efda1e7cf14b5c55
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -18947,6 +19139,14 @@ trackedFiles:
     id: 2c9a2b9c9b3d
     last_write_checksum: sha1:10b33f2a09d999cddcc6bfcb7805d69472d34b17
     pristine_git_object: 9f79b223e76eff4318a53d40e9c6f15f7cedcb38
+  src/Models/Shared/PropertyCalendarWebinarOrganizer.php:
+    id: b20a149cf820
+    last_write_checksum: sha1:4df58fd5d3e722d678fbc5d95cc79fb6be8f6388
+    pristine_git_object: 1057edccc2038de41cd8001c36edff055e95a7da
+  src/Models/Shared/PropertyCalendarWebinarOrganizerStatus.php:
+    id: 7e08d294ca80
+    last_write_checksum: sha1:cb1020e01c8cf1b8d9a21bc0197b768c7e3c2d6d
+    pristine_git_object: 93263254eeabcdf456906f212b3179350ecb473c
   src/Models/Shared/PropertyCommerceLocationAddress.php:
     id: b0da683c70ab
     last_write_checksum: sha1:58d7cad49a25ba939e178b31b83b5ec8e0bd2545
@@ -18961,8 +19161,8 @@ trackedFiles:
     pristine_git_object: 7951b64c94369e1645d2bc6aaba461d39b55a138
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:293bd5705e3f1c30e71352951c1df661f2bc84a6
-    pristine_git_object: 5a8075007045d0cf1a2bfef5bdf0a7ebeaa688cc
+    last_write_checksum: sha1:6504e265567dac067a1ab5d24370fba80922f58a
+    pristine_git_object: 40792cb6bcc981e1f027dd1b0a31b5d3b9798a5e
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -19211,6 +19411,10 @@ trackedFiles:
     id: 9be630ccaa08
     last_write_checksum: sha1:ad5e82d243716b84afcb5adbcc54e5f40b5351dc
     pristine_git_object: fb7927c59c09d2417c86c50442c96aa8facf6caa
+  src/Models/Shared/RegistrationStatus.php:
+    id: ecad64cb8cff
+    last_write_checksum: sha1:90dc5cc778222f177f6ff16155796831ba0dd73e
+    pristine_git_object: 907de9218eeee3d3699cbb7ac70fb669990ddce9
   src/Models/Shared/RepoBranch.php:
     id: bbaedbd6502a
     last_write_checksum: sha1:6afa52741859fefb5054dffdbb09dae265548f82
@@ -19921,8 +20125,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:bebe79303b025ebc4683c84db523af7cd740114c
-    pristine_git_object: 2b381649763ee78a9fbb2341a30846fd00795a51
+    last_write_checksum: sha1:c5d4384498c9a05e59bc30dde72feb1e2b4f012b
+    pristine_git_object: f332556f9cc97d2b0b3541c35e90394bb0164e4f
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -20013,8 +20217,8 @@ trackedFiles:
     pristine_git_object: a1862cce3ba999911f03c796248fd7a8f440318a
   src/UnifiedTo.php:
     id: 23b841da485f
-    last_write_checksum: sha1:f1f4ae543138a4b2bf7f8f2b7a020527e3d7633d
-    pristine_git_object: e0804a6af0ab4a8a7cdf7ea56de22186eb6c13d2
+    last_write_checksum: sha1:d8db86340411207b5b280a534381420a600c8df1
+    pristine_git_object: 825c92fdf8c867ebb127bea2f2e330af4b21e29f
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
     last_write_checksum: sha1:e9b1c7277595f8e786f774674b3177e449cff509
@@ -20171,6 +20375,10 @@ trackedFiles:
     id: 6e184894fb74
     last_write_checksum: sha1:b499a05bc43bf116b7f0afff014165ed3b1e73f9
     pristine_git_object: 45645a330fb13d6624695ad636502a1c00b740a5
+  src/Webinar.php:
+    id: 3b127bab990b
+    last_write_checksum: sha1:1de4f91f27355658023f9caf73b2c0628e4128d4
+    pristine_git_object: c925301d86064f6798bd90488c4401c8717d5c85
 examples:
   createAccountingAccount:
     speakeasy-default-create-accounting-account:
@@ -25669,9 +25877,64 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCalendarWebinar:
+    speakeasy-default-create-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCalendarWebinar:
+    speakeasy-default-get-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCalendarWebinars:
+    speakeasy-default-list-calendar-webinars:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCalendarWebinar:
+    speakeasy-default-patch-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCalendarWebinar:
+    speakeasy-default-remove-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarWebinar:
+    speakeasy-default-update-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->calendar->createCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->calendar->getCalendarEvent()`:  `response` **Changed**\n* `unified-to->calendar->getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to->calendar->listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to->calendar->listCalendarRecordings()`:  `response.[]->media[]` **Changed**\n* `unified-to->calendar->patchCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->calendar->updateCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->createCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->getCalendarEvent()`:  `response` **Changed**\n* `unified-to->event->listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to->event->patchCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->event->updateCalendarEvent()`: \n  *  `request->calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to->recording->getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to->recording->listCalendarRecordings()`:  `response.[]->media[]` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webinar->listCalendarWebinars()`: **Added**\n* `unified-to->calendar->getCalendarWebinar()`: **Added**\n* `unified-to->webinar->updateCalendarWebinar()`: **Added**\n* `unified-to->webinar->removeCalendarWebinar()`: **Added**\n* `unified-to->calendar->createCalendarWebinar()`: **Added**\n* `unified-to->webinar->patchCalendarWebinar()`: **Added**\n* `unified-to->webinar->getCalendarWebinar()`: **Added**\n* `unified-to->webinar->createCalendarWebinar()`: **Added**\n* `unified-to->calendar->updateCalendarWebinar()`: **Added**\n* `unified-to->calendar->removeCalendarWebinar()`: **Added**\n* `unified-to->calendar->patchCalendarWebinar()`: **Added**\n* `unified-to->calendar->listCalendarWebinars()`: **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

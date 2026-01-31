@@ -374,24 +374,30 @@ if ($response->accountingAccount !== null) {
 * [createCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
 * [createCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
+* [createCalendarWebinar](docs/sdks/calendar/README.md#createcalendarwebinar) - Create a webinar
 * [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
 * [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [getCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
 * [listCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
 * [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [listCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
 * [patchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
+* [patchCalendarWebinar](docs/sdks/calendar/README.md#patchcalendarwebinar) - Update a webinar
 * [removeCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
 * [removeCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
 * [removeCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
+* [removeCalendarWebinar](docs/sdks/calendar/README.md#removecalendarwebinar) - Remove a webinar
 * [updateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
 * [updateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [updateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
+* [updateCalendarWebinar](docs/sdks/calendar/README.md#updatecalendarwebinar) - Update a webinar
 
 ### [Call](docs/sdks/call/README.md)
 
@@ -1651,6 +1657,15 @@ if ($response->accountingAccount !== null) {
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedWebhook](docs/sdks/webhook/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+
+### [Webinar](docs/sdks/webinar/README.md)
+
+* [createCalendarWebinar](docs/sdks/webinar/README.md#createcalendarwebinar) - Create a webinar
+* [getCalendarWebinar](docs/sdks/webinar/README.md#getcalendarwebinar) - Retrieve a webinar
+* [listCalendarWebinars](docs/sdks/webinar/README.md#listcalendarwebinars) - List all webinars
+* [patchCalendarWebinar](docs/sdks/webinar/README.md#patchcalendarwebinar) - Update a webinar
+* [removeCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
+* [updateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

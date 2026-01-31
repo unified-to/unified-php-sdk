@@ -110,6 +110,8 @@ class UnifiedTo
 
     public Recording $recording;
 
+    public Webinar $webinar;
+
     public Commerce $commerce;
 
     public Collection $collection;
@@ -339,6 +341,7 @@ class UnifiedTo
         $this->event = new Event($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);
         $this->recording = new Recording($this->sdkConfiguration);
+        $this->webinar = new Webinar($this->sdkConfiguration);
         $this->commerce = new Commerce($this->sdkConfiguration);
         $this->collection = new Collection($this->sdkConfiguration);
         $this->inventory = new Inventory($this->sdkConfiguration);

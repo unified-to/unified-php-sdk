@@ -7,24 +7,30 @@
 * [createCalendarCalendar](#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](#createcalendarevent) - Create an event
 * [createCalendarLink](#createcalendarlink) - Create a link
+* [createCalendarWebinar](#createcalendarwebinar) - Create a webinar
 * [getCalendarCalendar](#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
 * [getCalendarLink](#getcalendarlink) - Retrieve a link
 * [getCalendarRecording](#getcalendarrecording) - Retrieve a recording
+* [getCalendarWebinar](#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](#listcalendarbusies) - List all busies
 * [listCalendarCalendars](#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](#listcalendarevents) - List all events
 * [listCalendarLinks](#listcalendarlinks) - List all links
 * [listCalendarRecordings](#listcalendarrecordings) - List all recordings
+* [listCalendarWebinars](#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCalendarLink](#patchcalendarlink) - Update a link
+* [patchCalendarWebinar](#patchcalendarwebinar) - Update a webinar
 * [removeCalendarCalendar](#removecalendarcalendar) - Remove a calendar
 * [removeCalendarEvent](#removecalendarevent) - Remove an event
 * [removeCalendarLink](#removecalendarlink) - Remove a link
+* [removeCalendarWebinar](#removecalendarwebinar) - Remove a webinar
 * [updateCalendarCalendar](#updatecalendarcalendar) - Update a calendar
 * [updateCalendarEvent](#updatecalendarevent) - Update an event
 * [updateCalendarLink](#updatecalendarlink) - Update a link
+* [updateCalendarWebinar](#updatecalendarwebinar) - Update a webinar
 
 ## createCalendarCalendar
 
@@ -179,6 +185,58 @@ if ($response->calendarLink !== null) {
 ### Response
 
 **[?Operations\CreateCalendarLinkResponse](../../Models/Operations/CreateCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCalendarWebinar
+
+Create a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCalendarWebinarRequest(
+    calendarWebinar: new Shared\CalendarWebinar(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->calendar->createCalendarWebinar(
+    request: $request
+);
+
+if ($response->calendarWebinar !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateCalendarWebinarRequest](../../Models/Operations/CreateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateCalendarWebinarResponse](../../Models/Operations/CreateCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -383,6 +441,57 @@ if ($response->calendarRecording !== null) {
 ### Response
 
 **[?Operations\GetCalendarRecordingResponse](../../Models/Operations/GetCalendarRecordingResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCalendarWebinar
+
+Retrieve a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCalendarWebinarRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->calendar->getCalendarWebinar(
+    request: $request
+);
+
+if ($response->calendarWebinar !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetCalendarWebinarRequest](../../Models/Operations/GetCalendarWebinarRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetCalendarWebinarResponse](../../Models/Operations/GetCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -640,6 +749,56 @@ if ($response->calendarRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listCalendarWebinars
+
+List all webinars
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCalendarWebinarsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->calendar->listCalendarWebinars(
+    request: $request
+);
+
+if ($response->calendarWebinars !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListCalendarWebinarsRequest](../../Models/Operations/ListCalendarWebinarsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\ListCalendarWebinarsResponse](../../Models/Operations/ListCalendarWebinarsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchCalendarCalendar
 
 Update a calendar
@@ -803,6 +962,59 @@ if ($response->calendarLink !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchCalendarWebinar
+
+Update a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCalendarWebinarRequest(
+    calendarWebinar: new Shared\CalendarWebinar(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->calendar->patchCalendarWebinar(
+    request: $request
+);
+
+if ($response->calendarWebinar !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchCalendarWebinarRequest](../../Models/Operations/PatchCalendarWebinarRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchCalendarWebinarResponse](../../Models/Operations/PatchCalendarWebinarResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeCalendarCalendar
 
 Remove a calendar
@@ -949,6 +1161,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveCalendarLinkResponse](../../Models/Operations/RemoveCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCalendarWebinar
+
+Remove a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCalendarWebinarRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->calendar->removeCalendarWebinar(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveCalendarWebinarRequest](../../Models/Operations/RemoveCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveCalendarWebinarResponse](../../Models/Operations/RemoveCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -1112,6 +1375,59 @@ if ($response->calendarLink !== null) {
 ### Response
 
 **[?Operations\UpdateCalendarLinkResponse](../../Models/Operations/UpdateCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCalendarWebinar
+
+Update a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCalendarWebinarRequest(
+    calendarWebinar: new Shared\CalendarWebinar(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->calendar->updateCalendarWebinar(
+    request: $request
+);
+
+if ($response->calendarWebinar !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateCalendarWebinarRequest](../../Models/Operations/UpdateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\UpdateCalendarWebinarResponse](../../Models/Operations/UpdateCalendarWebinarResponse.md)**
 
 ### Errors
 
