@@ -13,6 +13,14 @@ class AccountingExpense
 {
     /**
      *
+     * @var ?string $accountId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('account_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $accountId = null;
+
+    /**
+     *
      * @var ?\DateTime $approvedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('approved_at')]
@@ -78,6 +86,22 @@ class AccountingExpense
     public ?string $name = null;
 
     /**
+     *
+     * @var ?string $paymentMethod
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_method')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paymentMethod = null;
+
+    /**
+     *
+     * @var ?\DateTime $postedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('posted_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $postedAt = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -136,6 +160,7 @@ class AccountingExpense
     public ?string $userId = null;
 
     /**
+     * @param  ?string  $accountId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $contactId
@@ -144,6 +169,8 @@ class AccountingExpense
      * @param  ?string  $id
      * @param  ?array<AccountingLineitem>  $lineitems
      * @param  ?string  $name
+     * @param  ?string  $paymentMethod
+     * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $reimbursedAmount
      * @param  ?\DateTime  $reimbursedAt
@@ -153,8 +180,9 @@ class AccountingExpense
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
+        $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
         $this->contactId = $contactId;
@@ -163,6 +191,8 @@ class AccountingExpense
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->name = $name;
+        $this->paymentMethod = $paymentMethod;
+        $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->reimbursedAmount = $reimbursedAmount;
         $this->reimbursedAt = $reimbursedAt;

@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f1a8d59500c94e46966b2cfaf9ce5506
+  docChecksum: 920d3864f2302ad5f3efefc595c4d0d8
   docVersion: "1.0"
-  speakeasyVersion: 1.700.2
-  generationVersion: 2.801.2
-  releaseVersion: 1.6.26
-  configChecksum: 349056d62fa9b38c0b6225015e949348
+  speakeasyVersion: 1.704.0
+  generationVersion: 2.806.4
+  releaseVersion: 1.6.27
+  configChecksum: 6db483b7911150b252bb1bff802d9bc3
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: dac4e049-61e9-4209-ba24-dd9f2f6a9fdd
-  pristine_commit_hash: 8c364bf7f9aded57bfddffc9628dad848581ab45
-  pristine_tree_hash: 5c01a03ce1f9ced7b3b0171b4afb944755190c89
+  generation_id: 14fa5cda-7241-451d-ab87-1cdf3551404d
+  pristine_commit_hash: bd9d2a8ecba9c754cdfe5c9f20d065736618ab90
+  pristine_tree_hash: 5f5176db06b5de2b76787ab62ffadbdb5f19d987
 features:
   php:
-    constsAndDefaults: 0.2.0
-    core: 3.9.9
+    constsAndDefaults: 0.2.1
+    core: 3.9.11
     globalSecurity: 2.81.9
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
@@ -101,8 +101,8 @@ trackedFiles:
     pristine_git_object: 353810dd1fd0bbdbc621eaddc014d605a0d2203f
   docs/Models/Operations/CreateAccountingExpenseQueryParamFields.md:
     id: a3e344aa2d23
-    last_write_checksum: sha1:74bc1a9874670b55baad8a9ed5b224a93f71314d
-    pristine_git_object: 4fada6a8f094914afccf6b234cfb57e2a82e3194
+    last_write_checksum: sha1:ffcab17181d920776e6368c0e6cee7259d62a335
+    pristine_git_object: ec521ae47b8cb023cef4377a70e92e028dc22abf
   docs/Models/Operations/CreateAccountingExpenseRequest.md:
     id: 84956f314d1b
     last_write_checksum: sha1:96bafe24674d6ddef7e7d428f12a6ce750716784
@@ -1241,8 +1241,8 @@ trackedFiles:
     pristine_git_object: 846d554bc000b574a7ff8e9c602eaef7ca1333ce
   docs/Models/Operations/GetAccountingExpenseQueryParamFields.md:
     id: e9027e3924aa
-    last_write_checksum: sha1:aae8b34c16fd5201543c2601281e11a8e2547302
-    pristine_git_object: 9fe304449113b07d9069af081b129f2d5513e23a
+    last_write_checksum: sha1:70ceb05a4a4985997d71c29b7bb8432d09c226db
+    pristine_git_object: 9e7454ef11fe559e68f316e62fc02c49602e4087
   docs/Models/Operations/GetAccountingExpenseRequest.md:
     id: ecbed038bee5
     last_write_checksum: sha1:8802d7e7b98c0270d4ce72444156f2557351a0e3
@@ -2565,8 +2565,8 @@ trackedFiles:
     pristine_git_object: a32b1068bbc6743723bfec1a6356ff216ca6b5a8
   docs/Models/Operations/ListAccountingExpensesQueryParamFields.md:
     id: b984bcb34af3
-    last_write_checksum: sha1:f7d5f5b132abc95978c253039bab982a778dc3b1
-    pristine_git_object: 676ccca08544b2c4eb6a9f611c85ca1ca5a7d9e2
+    last_write_checksum: sha1:b04eb835a47419ae15555386b09a6bce5f3bc4a0
+    pristine_git_object: 46bc07b69e86cbae5ee397ecfbef53abbc7c0734
   docs/Models/Operations/ListAccountingExpensesRequest.md:
     id: cf7d921c43fb
     last_write_checksum: sha1:ba86b96b14f295f70cb13a7f9bff509cdbcb8796
@@ -3921,8 +3921,8 @@ trackedFiles:
     pristine_git_object: d248c1b42e631bf66913e67978899630da23b9f7
   docs/Models/Operations/PatchAccountingExpenseQueryParamFields.md:
     id: 1282c8582640
-    last_write_checksum: sha1:f846c21accf94ae3a7bb5a9523af30d85a17989e
-    pristine_git_object: f7f81a076661b64ff0af0ff727742eb89d891ffc
+    last_write_checksum: sha1:25605884b3004156e64939d97aa88801dabe8044
+    pristine_git_object: 89f0ce9da588e67bdb2488ade0fc5b52f18c0374
   docs/Models/Operations/PatchAccountingExpenseRequest.md:
     id: 6c76ee7ab04c
     last_write_checksum: sha1:61c60b2692a0594ff00e19bc781468c7df3db3f4
@@ -5765,8 +5765,8 @@ trackedFiles:
     pristine_git_object: 4a1f9c412911ee13b7ad98906aba72870200e0ae
   docs/Models/Operations/UpdateAccountingExpenseQueryParamFields.md:
     id: a34adfc00995
-    last_write_checksum: sha1:f4a14119a2cb2e9740977e38baa5360f7076bddb
-    pristine_git_object: ab07d0b84139db934eb07ce362c5c2764da0cc0a
+    last_write_checksum: sha1:efaea7869d7d77abd391cdeca4f6fa91f5bf53e5
+    pristine_git_object: 04b2f540c190fe608f5f01b6abcd7306f206587b
   docs/Models/Operations/UpdateAccountingExpenseRequest.md:
     id: 0e25a687e7a7
     last_write_checksum: sha1:e2bf12db2ae43353f5a74060c95ce08dd9af8055
@@ -6881,8 +6881,8 @@ trackedFiles:
     pristine_git_object: f31e18f925718d09f41d17d711f9fd331518f7e8
   docs/Models/Shared/AccountingExpense.md:
     id: 900ebecda5b5
-    last_write_checksum: sha1:8ebec20c0a9eb4e25c5b69f199e2560d7bb14b1a
-    pristine_git_object: f3d118e8c4f3486cf68327cfbc1c9f9d4050ebcc
+    last_write_checksum: sha1:2b0c28d77787b6f4005c337bfcf8aff557c80489
+    pristine_git_object: 23dcbe53e7d4b4cfaa5c724c10849e85a0596f4d
   docs/Models/Shared/AccountingInvoice.md:
     id: 3e5ca7838b24
     last_write_checksum: sha1:dbfededa3984b91d6c94aa955061987731b9fd92
@@ -10613,8 +10613,8 @@ trackedFiles:
     pristine_git_object: eb3ddd0c72af50665cb18521e178fba8403cb8ed
   src/Models/Operations/CreateAccountingExpenseQueryParamFields.php:
     id: 027d920b02cc
-    last_write_checksum: sha1:23078939a05cc3371699ff35a808856f8d77eab8
-    pristine_git_object: ad236dba95d15b8d731b2a8c0f93eb93d58ca84a
+    last_write_checksum: sha1:3ec4aa378518a3aa88cc3f1d2e2951f34f39b230
+    pristine_git_object: 54ad5428cf5e5f9781c250961d63b87a76017acd
   src/Models/Operations/CreateAccountingExpenseRequest.php:
     id: 790257dae0f3
     last_write_checksum: sha1:0b68a04e1a7d16c4295b6a6d9232df73eaa663b6
@@ -11753,8 +11753,8 @@ trackedFiles:
     pristine_git_object: c1f0907b5d50aa780a6ab77a414d533b395f0c48
   src/Models/Operations/GetAccountingExpenseQueryParamFields.php:
     id: ddfcb1339b2b
-    last_write_checksum: sha1:3a77f8d01828151306773adda303e49bc20d87c7
-    pristine_git_object: a0dedf0ba6cb6577c5d93a2052776f690423140c
+    last_write_checksum: sha1:abb156e84cd9ed8ab589a30bf0f5b1f284cd83a0
+    pristine_git_object: 6582c9991f8043b56184b9bc9adc846cb5f0a9b9
   src/Models/Operations/GetAccountingExpenseRequest.php:
     id: 8a2dbc7da4de
     last_write_checksum: sha1:4e43557abec0148a1f14946f7fbc69a885d66306
@@ -13077,8 +13077,8 @@ trackedFiles:
     pristine_git_object: 4384f0dcde815d6b1916003c1827778346ecee88
   src/Models/Operations/ListAccountingExpensesQueryParamFields.php:
     id: 56f206038966
-    last_write_checksum: sha1:7134c77892d05805fd38e52ab3bb462e705e62c9
-    pristine_git_object: 4c785669e83ef4fb1701a07ad9b646deccf42928
+    last_write_checksum: sha1:8a4eb3e855f305913d1a33027d27ca0571fb85c1
+    pristine_git_object: 3454db895817d325c7ce3f0a3047c6f39dd4449d
   src/Models/Operations/ListAccountingExpensesRequest.php:
     id: 9bc567b8a828
     last_write_checksum: sha1:062b393d6f0c22b24964a1ade7f9b7c3ea94020f
@@ -14433,8 +14433,8 @@ trackedFiles:
     pristine_git_object: 00f523b884e5f987db8f9ac86c79c667a825439f
   src/Models/Operations/PatchAccountingExpenseQueryParamFields.php:
     id: 1a186ccffcf8
-    last_write_checksum: sha1:23c9aa2a92f7ca2840e8af6255d206d9024d0462
-    pristine_git_object: 93aaac39c92d018d320a5a01fcf9de79437822ab
+    last_write_checksum: sha1:cd56de59d73dcb3778c6d6d706470329b8602a5d
+    pristine_git_object: d431c1ee1e196f6ad2c530b1684c0bda0a68730c
   src/Models/Operations/PatchAccountingExpenseRequest.php:
     id: 06fcc381ec2f
     last_write_checksum: sha1:6622d32f994dd6d754d9542361ec0048ecd5de3b
@@ -16277,8 +16277,8 @@ trackedFiles:
     pristine_git_object: d3b2ad837b31bdaa47ba26586a079d6844c06d48
   src/Models/Operations/UpdateAccountingExpenseQueryParamFields.php:
     id: 8f123f496ad9
-    last_write_checksum: sha1:667e8027b55d631a59a454af2e45fb58557c130e
-    pristine_git_object: b9b019f50659fe075fc4cef4ba28b3120e004e12
+    last_write_checksum: sha1:39ae35578fbeae90b05b631233eeaa9304fb4afa
+    pristine_git_object: b0dd0df69faca86f31bc9a43b2e9ce3a2cc3f50e
   src/Models/Operations/UpdateAccountingExpenseRequest.php:
     id: 383aa30a8ed1
     last_write_checksum: sha1:fc572cf2657ebbeb9bb82c4d4f39d10c55f3492c
@@ -17393,8 +17393,8 @@ trackedFiles:
     pristine_git_object: ca6e27769f0babb92cf085a96b6b5605c02bc213
   src/Models/Shared/AccountingExpense.php:
     id: 5ce8737efa84
-    last_write_checksum: sha1:f56c6fb9090d7ea47074bbd0cb475e1d79f7903a
-    pristine_git_object: 01eec5c3f07b515ac7284feb096e345bfd2aeb48
+    last_write_checksum: sha1:70d6f9eb011fa61c61e2858612cd34b882759d38
+    pristine_git_object: f735bad645805d9162e355c4aecd4ea317ca1930
   src/Models/Shared/AccountingInvoice.php:
     id: ac3f002ed079
     last_write_checksum: sha1:6efeab1e3c57d2c1e8a58aa975f0b4c3ffd436bf
@@ -20125,8 +20125,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c5d4384498c9a05e59bc30dde72feb1e2b4f012b
-    pristine_git_object: f332556f9cc97d2b0b3541c35e90394bb0164e4f
+    last_write_checksum: sha1:c7bc9ecf09a2fb6043c68dbf2c3a3339e6bb8998
+    pristine_git_object: c152af689af4337936bf4d40687e9771969aa690
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -25934,7 +25934,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** **Breaking** ⚠️\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(calendarWebinar)` **Added**\n  *  `response.objectType->enum(calendarWebinar)` **Added** **Breaking** ⚠️\n* `unified-to->webinar->listCalendarWebinars()`: **Added**\n* `unified-to->calendar->getCalendarWebinar()`: **Added**\n* `unified-to->webinar->updateCalendarWebinar()`: **Added**\n* `unified-to->webinar->removeCalendarWebinar()`: **Added**\n* `unified-to->calendar->createCalendarWebinar()`: **Added**\n* `unified-to->webinar->patchCalendarWebinar()`: **Added**\n* `unified-to->webinar->getCalendarWebinar()`: **Added**\n* `unified-to->webinar->createCalendarWebinar()`: **Added**\n* `unified-to->calendar->updateCalendarWebinar()`: **Added**\n* `unified-to->calendar->removeCalendarWebinar()`: **Added**\n* `unified-to->calendar->patchCalendarWebinar()`: **Added**\n* `unified-to->calendar->listCalendarWebinars()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

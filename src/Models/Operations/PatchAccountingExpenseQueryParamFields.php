@@ -16,7 +16,10 @@ enum PatchAccountingExpenseQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case UserId = 'user_id';
     case ContactId = 'contact_id';
+    case AccountId = 'account_id';
     case Name = 'name';
+    case PaymentMethod = 'payment_method';
+    case PostedAt = 'posted_at';
     case TotalAmount = 'total_amount';
     case Currency = 'currency';
     case TaxAmount = 'tax_amount';
