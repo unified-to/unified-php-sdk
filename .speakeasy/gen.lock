@@ -1,25 +1,25 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 920d3864f2302ad5f3efefc595c4d0d8
+  docChecksum: 15ec18fc071c0aef95cddded62ccfdd3
   docVersion: "1.0"
-  speakeasyVersion: 1.704.0
-  generationVersion: 2.806.4
-  releaseVersion: 1.6.27
-  configChecksum: 6db483b7911150b252bb1bff802d9bc3
+  speakeasyVersion: 1.708.2
+  generationVersion: 2.811.4
+  releaseVersion: 1.6.28
+  configChecksum: 71b8cd97aa0548b882bc5c10e487937d
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 14fa5cda-7241-451d-ab87-1cdf3551404d
-  pristine_commit_hash: bd9d2a8ecba9c754cdfe5c9f20d065736618ab90
-  pristine_tree_hash: 5f5176db06b5de2b76787ab62ffadbdb5f19d987
+  generation_id: 9729ea8d-c7e1-44ad-acee-88ded69fda0a
+  pristine_commit_hash: 2d364d501712f8a23ba6da3de11a594e069bdd36
+  pristine_tree_hash: 6c2858cc8a4929ac05dc6b794ad03f63cc29bee5
 features:
   php:
     constsAndDefaults: 0.2.1
     core: 3.9.11
-    globalSecurity: 2.81.9
+    globalSecurity: 2.81.10
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
     inputOutputModels: 2.83.0
@@ -783,6 +783,18 @@ trackedFiles:
     id: a4e983e598f7
     last_write_checksum: sha1:40785b95d513ff3ccdde9cb8519b7df73bd9fa2e
     pristine_git_object: d6b722e632b1d8e5a788a28b12b5c2fca6129aa9
+  docs/Models/Operations/CreateMartechCampaignQueryParamFields.md:
+    id: 704402431fd0
+    last_write_checksum: sha1:487d57c9647b77ce963ac16f534edc5acd5975b8
+    pristine_git_object: 4e93c04e7a290eef4f2a31a06f7020679ec51cb4
+  docs/Models/Operations/CreateMartechCampaignRequest.md:
+    id: d28b5c6373f3
+    last_write_checksum: sha1:ba10f08e0a21c5cf0acb8d0e2f71a22f702324c6
+    pristine_git_object: 1c990e68557212e1271403912b107840c37af69b
+  docs/Models/Operations/CreateMartechCampaignResponse.md:
+    id: 8578ff160211
+    last_write_checksum: sha1:6dbca442dc5727eced38ec246bdf081f07a01ebf
+    pristine_git_object: c6e86e78e2dace7d176e2cdb29b30f776a8e11b8
   docs/Models/Operations/CreateMartechListQueryParamFields.md:
     id: 6be7bd3a7092
     last_write_checksum: sha1:a24d91465b8a24b3122e9646d64ae16771417ecf
@@ -2007,6 +2019,18 @@ trackedFiles:
     id: bc189834a948
     last_write_checksum: sha1:8127963efdeda54b4c33fbd76b88ed85cfdd865a
     pristine_git_object: de83f88a91def22e5474b566d0b9170da772923c
+  docs/Models/Operations/GetMartechCampaignQueryParamFields.md:
+    id: 2bf64bda8e77
+    last_write_checksum: sha1:9f88f9bf90d36eb8e09fac055cbe4388fe227e20
+    pristine_git_object: 3f975552fbee5cebf9383b658cd38716663283f8
+  docs/Models/Operations/GetMartechCampaignRequest.md:
+    id: d843a0d97ed5
+    last_write_checksum: sha1:7e3d394446bf5ce9748fc6dfcda92cc880a00e8f
+    pristine_git_object: bd80ef082af56bec34459fcd7d565b4c24eb32e9
+  docs/Models/Operations/GetMartechCampaignResponse.md:
+    id: 7e1857970a99
+    last_write_checksum: sha1:54a6499fa567b06e44fb5e7609a0ac2f7d81e617
+    pristine_git_object: c2a6ad0ce1ddb3a8d1dec1dfbd5e85c3a4bd3ff8
   docs/Models/Operations/GetMartechListQueryParamFields.md:
     id: 2a744ead837d
     last_write_checksum: sha1:62529c69168b17305553dbc2feba98e1e74492c9
@@ -3383,6 +3407,18 @@ trackedFiles:
     id: d8938dd95458
     last_write_checksum: sha1:950e8dc97f310efbe60cfc31ef51231d8cf43f76
     pristine_git_object: 3d6e2e136021d74eb415b8088b0f5886d827fc36
+  docs/Models/Operations/ListMartechCampaignsQueryParamFields.md:
+    id: 89e93d03c99e
+    last_write_checksum: sha1:ed3c4d91bfbecbe431d3a5bead00c1e08aea9fa8
+    pristine_git_object: 30be7d573462e3032b0a2f9a3546718f2a4b2557
+  docs/Models/Operations/ListMartechCampaignsRequest.md:
+    id: 3db02f2d2339
+    last_write_checksum: sha1:4365a6e9df0b45aaf9bb785e7eb20e60e27ab45e
+    pristine_git_object: 0d714f9d56d0dfb751bdd22a81b55a4cf9996a60
+  docs/Models/Operations/ListMartechCampaignsResponse.md:
+    id: 9a72b56c5738
+    last_write_checksum: sha1:2e0baec904d2b54f9d6b3d9721e8fae37b413eaf
+    pristine_git_object: 0064245a7e731791b8b91b23230aeab10a44fa4e
   docs/Models/Operations/ListMartechListsQueryParamFields.md:
     id: e86b9358ac43
     last_write_checksum: sha1:839c3917d171afaf8ec95b283b552d0c0a1b4357
@@ -3407,6 +3443,18 @@ trackedFiles:
     id: 6ea61f0163a3
     last_write_checksum: sha1:9664895fdddff35fef3deaed3043b43d3e50627d
     pristine_git_object: 373473ecc757c9edfcd8efddb71b77ff9b5a8993
+  docs/Models/Operations/ListMartechReportsQueryParamFields.md:
+    id: a9b5377d124d
+    last_write_checksum: sha1:923869a4d79a3b95d6ce24fe8dbab2baeaa26b12
+    pristine_git_object: f271a7f2021de7063b09394692111b7645bf6131
+  docs/Models/Operations/ListMartechReportsRequest.md:
+    id: 193fdc1c9c45
+    last_write_checksum: sha1:fe28f310ab1dc067ffb83efa783734851e4311f1
+    pristine_git_object: fb56089e32c50969234ec3ddc7bd3fabb4d916b2
+  docs/Models/Operations/ListMartechReportsResponse.md:
+    id: d863db8dc72d
+    last_write_checksum: sha1:14c791a9a9809a0c4f608526f9319ce5c93002bd
+    pristine_git_object: a81ee0809a421c6801309fc954ed27d15a9cf592
   docs/Models/Operations/ListMessagingChannelsQueryParamFields.md:
     id: ba0809283894
     last_write_checksum: sha1:1eebdb472efe3f4e9fcd66c22961da37e47a1c9e
@@ -4579,6 +4627,18 @@ trackedFiles:
     id: 5defcd89b559
     last_write_checksum: sha1:e7fdaeeff45cc2ae70ba22ae8e3293b1f857b519
     pristine_git_object: 84442b0a97f08ec20663dfcf9d9bd48c5b4c81cd
+  docs/Models/Operations/PatchMartechCampaignQueryParamFields.md:
+    id: 22e877934154
+    last_write_checksum: sha1:49444bbac94f842ab86a54f825ffb7a27a43c943
+    pristine_git_object: 9f74ad9a83e5ca543007f2e09b743637067f2cf9
+  docs/Models/Operations/PatchMartechCampaignRequest.md:
+    id: 74361c706d2e
+    last_write_checksum: sha1:4f37dc71e4e1763db3549c765f0eca4cdb135f6a
+    pristine_git_object: e56c4bac1b5319730dd3854ec300b9495c9e1a7d
+  docs/Models/Operations/PatchMartechCampaignResponse.md:
+    id: 25f42497318e
+    last_write_checksum: sha1:d022f74dfbd2d89971c0513440ae39ed8a85bf14
+    pristine_git_object: 70d03ee2882aa40e7a0cd9a39bbf8b92f7f7bc58
   docs/Models/Operations/PatchMartechListQueryParamFields.md:
     id: c4fe2eccae7f
     last_write_checksum: sha1:1fe2ab985f4a05c51103f8c7a064f5cb7589990e
@@ -5447,6 +5507,14 @@ trackedFiles:
     id: 92308472b471
     last_write_checksum: sha1:db259740351cc26342e8cf50938756eebd758593
     pristine_git_object: c2373f08f9ebb83625b71a8be24411e2f5ba37ba
+  docs/Models/Operations/RemoveMartechCampaignRequest.md:
+    id: 7cb7b40ad8c3
+    last_write_checksum: sha1:77947638ec36b552fc0df722a2e79394769a0a14
+    pristine_git_object: 8823f254d05a71df847af9f2096da3b99cf9861e
+  docs/Models/Operations/RemoveMartechCampaignResponse.md:
+    id: 4ce4f1202e84
+    last_write_checksum: sha1:44903ca4edf4e5e57411c4a850880d5591abfd06
+    pristine_git_object: a710790f9281639bb9effaae4b499736c22767f8
   docs/Models/Operations/RemoveMartechListRequest.md:
     id: 9192a475434a
     last_write_checksum: sha1:ac9679bcc561afe4a70caf5aa052725e63f853d4
@@ -6423,6 +6491,18 @@ trackedFiles:
     id: a892e06bc72b
     last_write_checksum: sha1:2065a63ddc4d00bba14b91832633f729d20074d4
     pristine_git_object: b5f99ce7f435f8ce22e7da19115d9f209f906157
+  docs/Models/Operations/UpdateMartechCampaignQueryParamFields.md:
+    id: bd00de17cb2d
+    last_write_checksum: sha1:f19594b855cf1fc3fb8f09e986767022ebdac013
+    pristine_git_object: 1e49fb57fb8f88477ee3e37e3075fd80c7e1ed07
+  docs/Models/Operations/UpdateMartechCampaignRequest.md:
+    id: cc4b096866ad
+    last_write_checksum: sha1:64e88f7f42bb04de72fcab211962e3194c826ba0
+    pristine_git_object: ca3f8b219ce36069b05e3f70e036a80820a4cd64
+  docs/Models/Operations/UpdateMartechCampaignResponse.md:
+    id: 959a702a97d5
+    last_write_checksum: sha1:309a7f60bea6d598b5e3bc6ac300a2e93b4666a8
+    pristine_git_object: 0056b55ca7e30f4deba8e9ec3ed490922b836d38
   docs/Models/Operations/UpdateMartechListQueryParamFields.md:
     id: d866bf20ca51
     last_write_checksum: sha1:ee7a5016357d16bf6d59f24e11d8a44bf866a8b2
@@ -7885,8 +7965,8 @@ trackedFiles:
     pristine_git_object: 1d0faeb7cc3455e4d164b74118966d84bcdf643f
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:e126b98ed3d6f2d37ca89949fd8e587f5f12a739
-    pristine_git_object: 4a65d3cae9c8d14c10ec062f083ed54aa0220f88
+    last_write_checksum: sha1:1ce971d49175518333a678a0ef64efa99ff04565
+    pristine_git_object: fe5668c0cde1da909562a0baa4ae96ae2a8ce31d
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -8103,6 +8183,10 @@ trackedFiles:
     id: 86091f051355
     last_write_checksum: sha1:27f31f902cedd7e9728434f11fe2164db606466d
     pristine_git_object: 91e8f1875526c1dd9fb4aa1e6863b34dea9b6982
+  docs/Models/Shared/ListMemberId.md:
+    id: b138b5288c94
+    last_write_checksum: sha1:2d5313f2748f3060a1bf3477c9e80f50b308d3e4
+    pristine_git_object: 2b8085fc32eaccc66435e4ddd1d4a083e988540c
   docs/Models/Shared/ListOffset.md:
     id: d3c9992a8cfe
     last_write_checksum: sha1:d0ee0a07d610daed4dddd71825a0ee54595291a1
@@ -8267,6 +8351,14 @@ trackedFiles:
     id: 1e6749b47573
     last_write_checksum: sha1:576641a9f9ace4531c50b939901d4bc4c9ee4222
     pristine_git_object: 48c2317e540b9d90c5d46c4c21ac3a0c1bacbd30
+  docs/Models/Shared/MarketingCampaign.md:
+    id: 985acb93e2f0
+    last_write_checksum: sha1:c82800434d9b74ca92b01d9d70252d4b8518a400
+    pristine_git_object: efdf041fd56ae8f03d582955c33b2f79a5e5352a
+  docs/Models/Shared/MarketingCampaignStatus.md:
+    id: 6c1394426777
+    last_write_checksum: sha1:b9baac8a12d9a1ea3812b521ff694fbec4231304
+    pristine_git_object: 68ad7f67e89d99e3589c730e38101f2c13478721
   docs/Models/Shared/MarketingEmail.md:
     id: 0b1c8ced728d
     last_write_checksum: sha1:f55d2a4fad66041c97b3ad781b5f3817f27ac5e2
@@ -8283,6 +8375,14 @@ trackedFiles:
     id: c8ef2992fc63
     last_write_checksum: sha1:8ff324687bbe72a79b0bb1648cf9cedb39a6a698
     pristine_git_object: 6fc2ccb95b689358a456bcde09c6e1c16ad092ba
+  docs/Models/Shared/MarketingReport.md:
+    id: a1b1eb9dfd67
+    last_write_checksum: sha1:a648c6ae24313d65d59cbbe5225cca886da49f08
+    pristine_git_object: 7628d5c3c0ac43b59fe68d04ee8d28d0c05d034f
+  docs/Models/Shared/MarketingReportLink.md:
+    id: ba53ba594883
+    last_write_checksum: sha1:1f83974c85c51043c6e38cf37b50a395b55d0246
+    pristine_git_object: e5a9b830eafc12294389f6534d222d5c032a986d
   docs/Models/Shared/MessagingAttachment.md:
     id: 8f3856626926
     last_write_checksum: sha1:a10cf1961e12c54fcbd1e97643a3de93ce73a6aa
@@ -8381,8 +8481,8 @@ trackedFiles:
     pristine_git_object: 51b242ed4ddc0af4e5d05fc34919c6ef4c128117
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:dc638c85ada9da77d82cd69e3903a00cb2fe16cb
-    pristine_git_object: 355be3337bdce3a936edc6ac11b7a53dc7106cf0
+    last_write_checksum: sha1:3546dbc02de1240c191b0034b8f5bf32bb107c5e
+    pristine_git_object: e25a571bf8757f591168addf99ceb5c627c56777
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -8749,8 +8849,8 @@ trackedFiles:
     pristine_git_object: e7baf526458e4e4df2b21c78f65b61e666f26e9d
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:655065688ba83452da2395bed4008e3da435e88c
-    pristine_git_object: 6f30ea74ba380aba39b5f78d472b3f540233c199
+    last_write_checksum: sha1:e5b3ef54349005b7e96c07ffd0d0122210c79856
+    pristine_git_object: a814c7206ecede50ba89f9c18a6a6c9926478442
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -9551,6 +9651,10 @@ trackedFiles:
     id: 379a3ca3be3b
     last_write_checksum: sha1:fbadf9d8771670ada99a5ee4a0d6c22e2d702793
     pristine_git_object: ca5ad003f955e585f6fec82d3358de69cd44d919
+  docs/Models/Shared/VirtualWebhookMemberId.md:
+    id: c1c1aba43d11
+    last_write_checksum: sha1:e8b9c83edddcb58242ba0d98485c1389197dbcec
+    pristine_git_object: 393630aa62402ee904236fa005add5494b3272eb
   docs/Models/Shared/VirtualWebhookOrderId.md:
     id: 0f595d0444b7
     last_write_checksum: sha1:33c44e27f5ae9fa2d1bf827ca454605a0b6e7763
@@ -9713,8 +9817,8 @@ trackedFiles:
     pristine_git_object: eb66c7607fd72a626b86a6ed054a33edca3b1a38
   docs/sdks/campaign/README.md:
     id: 7c44530e0eca
-    last_write_checksum: sha1:4ddda3f9504951d5749bd7b2b51d4bfe8dbf130f
-    pristine_git_object: 1c289feadceb03364b8e7ab4f87e1984b575cede
+    last_write_checksum: sha1:bdf5df74f08ef7191f48aa60cb790fcb4eef5352
+    pristine_git_object: ba2e3b8c00222e113e0f73d383efaae8840b975f
   docs/sdks/candidate/README.md:
     id: af1eaf3d177f
     last_write_checksum: sha1:dadc546c569b303d7b6ed58371b7ef49b005a246
@@ -9933,8 +10037,8 @@ trackedFiles:
     pristine_git_object: a4152dd7975b4d9d8c552ffc5491ee49394c23bc
   docs/sdks/martech/README.md:
     id: ba21e4ca633c
-    last_write_checksum: sha1:11f99bd89d9e3ab762ef58c747046a879a8d2158
-    pristine_git_object: 0012fe4bba72ef700795298581dca6415ced3b55
+    last_write_checksum: sha1:5e9e6644dea0e7b146d9b19ac3812a4599ab2441
+    pristine_git_object: 439e2ffcfdad03e8f779c1136d9e78d8b7eb5d16
   docs/sdks/member/README.md:
     id: 699c1c3b93e4
     last_write_checksum: sha1:421f03608a0092bfdc42e69e9662144733dc6715
@@ -10037,8 +10141,8 @@ trackedFiles:
     pristine_git_object: b3ece18c8b1b6a0fc724769414ad8a2b476d31e3
   docs/sdks/report/README.md:
     id: 0e99424930fc
-    last_write_checksum: sha1:74772bc8263478dd74398c31101d1c2dbd35a4e4
-    pristine_git_object: 1641172bf8104581a8efa3f63041e5acb5bf05df
+    last_write_checksum: sha1:3ed96e308e97070bf61de40ee88171d44cbed86a
+    pristine_git_object: 90c07771e89ff0d6e265a0d7c275dec411c3c71e
   docs/sdks/repository/README.md:
     id: 25db3a468495
     last_write_checksum: sha1:643167794892a805eccf68378aff1a223fd62d4a
@@ -10241,8 +10345,8 @@ trackedFiles:
     pristine_git_object: 262e8b68e458210c4b2a514df6a18c44545f3053
   src/Campaign.php:
     id: 3197058825b1
-    last_write_checksum: sha1:39725e4ccc95a8df76f2f35eb6d2db4ee558b1c3
-    pristine_git_object: 4c52d6169d7c7ed4cc6a128ffe9eff4a9f585758
+    last_write_checksum: sha1:78f0f0409a10937eaac834b89fa6ce3c9ba0d1d6
+    pristine_git_object: c031a70e5f1e852c541ee7553b3c98eab743da35
   src/Candidate.php:
     id: 16e92642c262
     last_write_checksum: sha1:5e292376e40cc0f5c5dda4b031a787fd4b2fad06
@@ -10525,8 +10629,8 @@ trackedFiles:
     pristine_git_object: fd40feeeeace4855d177b7fb9cc655ee24aa2ce0
   src/Martech.php:
     id: 99cdd9fcb173
-    last_write_checksum: sha1:36a760d2b5f7889300686e8807fd9b62eaf6e967
-    pristine_git_object: 0fe6ec73e8afd62e6b404980e7da2af6716eebbe
+    last_write_checksum: sha1:ccb7c20f6f9ec51b5a187b9f3f4557f0e56d0d45
+    pristine_git_object: ee85fe51c9c43112de860c0606bc4777a36dfe47
   src/Member.php:
     id: 4a759d4b512b
     last_write_checksum: sha1:84449e06f9ee29358b79bf768d7ff6f88ce74b24
@@ -11295,6 +11399,18 @@ trackedFiles:
     id: 7f5254d38c5a
     last_write_checksum: sha1:927975b822c8c84bf292d27113599964a675c023
     pristine_git_object: eb938bb549706034347cca58e6fad1425041c9ce
+  src/Models/Operations/CreateMartechCampaignQueryParamFields.php:
+    id: aa3f4c5f4f2d
+    last_write_checksum: sha1:24b12d589ed953dc112f24c20307446dddbd5ced
+    pristine_git_object: c2a01871ccd7dd3b7e6ffb8e627810ba67835830
+  src/Models/Operations/CreateMartechCampaignRequest.php:
+    id: f7a43cd5ef05
+    last_write_checksum: sha1:54ec412fc1e5f7c0fa6eda6b1413fd54561629d8
+    pristine_git_object: 4c048304a56c9ddc6628ad8c1b09fc8fa520f170
+  src/Models/Operations/CreateMartechCampaignResponse.php:
+    id: cf908878b5c7
+    last_write_checksum: sha1:f41ab4ee587cb856499d38512ed0cbf332d61f27
+    pristine_git_object: 0d8c7ee41a539905da3d02f9fd423431b9a9ff64
   src/Models/Operations/CreateMartechListQueryParamFields.php:
     id: 30c6d9e2dc85
     last_write_checksum: sha1:324a015502cb7ab5ce83270afbbb20a06b1f8650
@@ -12519,6 +12635,18 @@ trackedFiles:
     id: 59f6b99ab98a
     last_write_checksum: sha1:ad51799f1a644b46253b88697e1f6df1614863e5
     pristine_git_object: 0ec8311b55b77ce0245693103aaeba930d97fa98
+  src/Models/Operations/GetMartechCampaignQueryParamFields.php:
+    id: d2d356db4558
+    last_write_checksum: sha1:84e347a6c707bcef45afaae042067f4a6dcad007
+    pristine_git_object: 25f35ca20d86c8e21fc29a04ead74b6b74497b41
+  src/Models/Operations/GetMartechCampaignRequest.php:
+    id: 91cc566c9e8f
+    last_write_checksum: sha1:aa2581fadbb3ef1524219cddc68d40689a15e151
+    pristine_git_object: 41b9e55c5d9a756150e36554b1a24267953fe036
+  src/Models/Operations/GetMartechCampaignResponse.php:
+    id: 6137feec4601
+    last_write_checksum: sha1:c80124fd018451adc47d6c8a2f796248f849ce3d
+    pristine_git_object: 11ed38f1d465f49c5b5385d7a8e5762f2e8773fd
   src/Models/Operations/GetMartechListQueryParamFields.php:
     id: 67fc2cb39992
     last_write_checksum: sha1:312f7bedd1638a11eedd55dff1643e7ed464e732
@@ -13895,6 +14023,18 @@ trackedFiles:
     id: ba2c6ff08330
     last_write_checksum: sha1:bc0920656112f225ec2565d3bec0ca771f816c9d
     pristine_git_object: f642954e8d553e4cbca644a5b5f5b39b908abb86
+  src/Models/Operations/ListMartechCampaignsQueryParamFields.php:
+    id: 46092ea29318
+    last_write_checksum: sha1:6759c64d2956f4532cfa23f7fa2a08b4cb7ff627
+    pristine_git_object: 9ffbced0f929df4a70eeb6d20d28d62a717a0495
+  src/Models/Operations/ListMartechCampaignsRequest.php:
+    id: de228ce70e16
+    last_write_checksum: sha1:9515504126417d1429826a92e6b96bcaf562ff52
+    pristine_git_object: 76d4524ec6defa765cdc8a018e3ca72226566cbe
+  src/Models/Operations/ListMartechCampaignsResponse.php:
+    id: 13cfcfcf0ec4
+    last_write_checksum: sha1:5568f9a32b773acb6382296c6f71d8ffa24fc0ec
+    pristine_git_object: bfc6fe6ff0e88c943dc6a5c1ad74762544311069
   src/Models/Operations/ListMartechListsQueryParamFields.php:
     id: 133f4d8a3774
     last_write_checksum: sha1:8b51cdd5dda599483ec8b3e7d8227758bb5feab1
@@ -13919,6 +14059,18 @@ trackedFiles:
     id: c03f2edaff45
     last_write_checksum: sha1:730d9dbb4a9aaa73bcdef79809819d714e333e0c
     pristine_git_object: 339ff6057a2f507bdc686bf654a4dbacf143ca2c
+  src/Models/Operations/ListMartechReportsQueryParamFields.php:
+    id: 24ce85383645
+    last_write_checksum: sha1:fdf46c5cfea7708b70dd69d07d9215e5b01bb514
+    pristine_git_object: fa6edf4fc2ad3556e11498b1abab598e86c6d3b4
+  src/Models/Operations/ListMartechReportsRequest.php:
+    id: 616aa58a1549
+    last_write_checksum: sha1:55ea414b88c02594df78c8aab1475973f91ee290
+    pristine_git_object: e255b5977f59c7579ec8b5dea5208ef2191d9de4
+  src/Models/Operations/ListMartechReportsResponse.php:
+    id: 7ff8452b7ae4
+    last_write_checksum: sha1:ec4a5e29b8a75bab1b5752c758984bf1359ee671
+    pristine_git_object: 85a9c4b723b5b990afa1eeb423c07c42c225bc8f
   src/Models/Operations/ListMessagingChannelsQueryParamFields.php:
     id: 01b17ba9694a
     last_write_checksum: sha1:5c8ad642692d6a86943de0f4b29ef6200789935b
@@ -15091,6 +15243,18 @@ trackedFiles:
     id: 5924fc680f1f
     last_write_checksum: sha1:70e00e82a7b97bd2060413bb3144436c5a3b4b41
     pristine_git_object: ac04992232fb2c10ff9a6ef683870c3952320a98
+  src/Models/Operations/PatchMartechCampaignQueryParamFields.php:
+    id: 522ee3065eaf
+    last_write_checksum: sha1:5751755e14e2f896a6ad843541700c240b9f92a6
+    pristine_git_object: 9d320d2c3bf0cd46074d3ff4d42f1def240e5286
+  src/Models/Operations/PatchMartechCampaignRequest.php:
+    id: cf94ae13c477
+    last_write_checksum: sha1:d00f9ca07fc698a15b3ac5a3e88515f32213dcee
+    pristine_git_object: 914be16a29e7d47b290240e591ac53203a770880
+  src/Models/Operations/PatchMartechCampaignResponse.php:
+    id: 098acbdb6c91
+    last_write_checksum: sha1:32a04b45b9394a2012d1e2d30dd82dc0a59f709c
+    pristine_git_object: 41e96f7bdd9248c42743e58544daa56ecc33c236
   src/Models/Operations/PatchMartechListQueryParamFields.php:
     id: d43415fe7567
     last_write_checksum: sha1:99251c005d82a6cd57f5c0101022e07e8571fac7
@@ -15959,6 +16123,14 @@ trackedFiles:
     id: 411719623cab
     last_write_checksum: sha1:1371d54408e70f41e002de6672476fcec8809dad
     pristine_git_object: a8826da9bf0770567d5765e1d01d79416a97f197
+  src/Models/Operations/RemoveMartechCampaignRequest.php:
+    id: f4afc3389bdf
+    last_write_checksum: sha1:ddb557ac9b25b27a8875d1b0ef360de23fe9eb99
+    pristine_git_object: 4d612dabe143510b474c8649b9f6d3bfd8aedff9
+  src/Models/Operations/RemoveMartechCampaignResponse.php:
+    id: b302bc82c33e
+    last_write_checksum: sha1:35e13a4271ab48cfd675fbaad547a516b880d5b1
+    pristine_git_object: 42d81ca91711be1e0208ec076920f30cb1d118a5
   src/Models/Operations/RemoveMartechListRequest.php:
     id: 8dc3a2826adb
     last_write_checksum: sha1:3916254eb60013f945f14fc588dbb248188b2357
@@ -16935,6 +17107,18 @@ trackedFiles:
     id: 8e132eaf89cc
     last_write_checksum: sha1:8a8737ecd0fe065abd3d84bbefd8f605f7d7753f
     pristine_git_object: e4bf33aae0ca8d7775dd1c993a6ad66b16e11f7d
+  src/Models/Operations/UpdateMartechCampaignQueryParamFields.php:
+    id: 81cd44086239
+    last_write_checksum: sha1:299b2a62a2487980a3a8e595fed919ff16025cf7
+    pristine_git_object: 74632630987142a752acac07d7b78daca83d70ab
+  src/Models/Operations/UpdateMartechCampaignRequest.php:
+    id: 4b9e623bb2ec
+    last_write_checksum: sha1:6d72838159e19e1210edc54ab0fabc21ade3f004
+    pristine_git_object: 54d915887905a9c815bbbef567d467c937df034a
+  src/Models/Operations/UpdateMartechCampaignResponse.php:
+    id: bd2a1cdb919b
+    last_write_checksum: sha1:11c069838334a4e31729c0541b815839faa07b2a
+    pristine_git_object: 1f5d6715d18ff9cbbe6f561d79be20c56d71df64
   src/Models/Operations/UpdateMartechListQueryParamFields.php:
     id: 43807f78eb79
     last_write_checksum: sha1:f87c09b65bb64c73f3a1a155adfefe5f701a1b80
@@ -18317,8 +18501,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:be7fdca67a86af8c8082ad0873011325aac9e3c0
-    pristine_git_object: 43919aaff12520925360142684d44a9f33393b74
+    last_write_checksum: sha1:fcceace85a3883e974f3f833410e03f261f97f10
+    pristine_git_object: d93699d80f2413f19d9157b81502afe206865311
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -18519,6 +18703,10 @@ trackedFiles:
     id: 02d49b8c66fa
     last_write_checksum: sha1:3ecb5e1e570c0350dae59b55dd2e9a051dd141ff
     pristine_git_object: e9529dc501f247dc168b168431110aac3d5ed8a9
+  src/Models/Shared/ListMemberId.php:
+    id: 37ebd12c5216
+    last_write_checksum: sha1:d0312c9fecdf8638298029fa21544e7f9598cb4c
+    pristine_git_object: 953fd9afd5b1b850ceb577f456217a5285a4664b
   src/Models/Shared/ListOffset.php:
     id: 51db95f5eb7a
     last_write_checksum: sha1:64eee83603747e9ffea64d99c90f9707753168cf
@@ -18683,6 +18871,14 @@ trackedFiles:
     id: b5825ceac1e2
     last_write_checksum: sha1:e9eaaf5ebc1b3c2199bff0732cad00e4df4c0cdc
     pristine_git_object: 01b9b339e5015400deb56a9eb2f7f58ef96f2303
+  src/Models/Shared/MarketingCampaign.php:
+    id: 8dc6e811a2fe
+    last_write_checksum: sha1:a4416bda57412b778d868d9349f377e32abe9d7d
+    pristine_git_object: afc6679b2fb5eed657e328e471b0ee0367f5869b
+  src/Models/Shared/MarketingCampaignStatus.php:
+    id: e837d890851a
+    last_write_checksum: sha1:cf215f9c09136d969c8e15809199aa9dc096aad4
+    pristine_git_object: 9c10a3e94a5467e113538788b7fe968299fdd445
   src/Models/Shared/MarketingEmail.php:
     id: a2f4b1c2d2d2
     last_write_checksum: sha1:a7047b7087bb4d3e4d5db01fe979ad1b7740c569
@@ -18699,6 +18895,14 @@ trackedFiles:
     id: 459b7ae3b619
     last_write_checksum: sha1:fdc598b4529364c44a15d99a38cb592fe7e77a2c
     pristine_git_object: f3b78512112541a5c6462968179df038fdd7f662
+  src/Models/Shared/MarketingReport.php:
+    id: cbf4f5594430
+    last_write_checksum: sha1:74755d27dbf912d61f96c1e5d5be60c1ed100bed
+    pristine_git_object: 990a15c6b5057eb4100f84fba955c406ce0ac1a8
+  src/Models/Shared/MarketingReportLink.php:
+    id: 116fc776e091
+    last_write_checksum: sha1:93e0edc20fe80f8b3b185e6e3b80b1e53c572c4a
+    pristine_git_object: 2eec7ee9e6c52e9dfbd833eee725e13a46368561
   src/Models/Shared/MessagingAttachment.php:
     id: e796d3147672
     last_write_checksum: sha1:b49d3e845c45b7f981daf89c68a71d253296c516
@@ -18797,8 +19001,8 @@ trackedFiles:
     pristine_git_object: 3560c526c71c3a7ce8d98c5d900da5ed21f4beff
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:d143abe7607de068358cfb57c2340145f531ad94
-    pristine_git_object: b1434d9121e0b81749ff73b9efda1e7cf14b5c55
+    last_write_checksum: sha1:df76769bc0ceefe2b7b5bc604a0864676bcb6426
+    pristine_git_object: ccb82349ea54208cbb3da7e646143f8a1bf6ccde
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -19161,8 +19365,8 @@ trackedFiles:
     pristine_git_object: 7951b64c94369e1645d2bc6aaba461d39b55a138
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:6504e265567dac067a1ab5d24370fba80922f58a
-    pristine_git_object: 40792cb6bcc981e1f027dd1b0a31b5d3b9798a5e
+    last_write_checksum: sha1:eb8628f017136bab73548745b6a50c88bbb1ad4a
+    pristine_git_object: da50c4f8ebf1498b6d03508fb45a2159404e59bd
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -19935,6 +20139,10 @@ trackedFiles:
     id: dea19d5920d2
     last_write_checksum: sha1:db57a219742b01db09d98beb1b2c228fc767c44b
     pristine_git_object: e919f0890c2b70874b24cb7b55ae838d316fa33b
+  src/Models/Shared/VirtualWebhookMemberId.php:
+    id: 12cf1468451d
+    last_write_checksum: sha1:245738eaba4032608c7b51c672d5e9cb76bf4ce0
+    pristine_git_object: fcaee4142ce3c80c174e0422fec48c373310939e
   src/Models/Shared/VirtualWebhookOrderId.php:
     id: 57d3c1011fab
     last_write_checksum: sha1:d24086da8c0f33e930538019306b7b6ab486b6c2
@@ -20109,8 +20317,8 @@ trackedFiles:
     pristine_git_object: 1757f2acb8e881172ea325ea728f205ae349577f
   src/Report.php:
     id: 010b677bd968
-    last_write_checksum: sha1:e9959ce78bb5d3c3c574f6c5b58cdc1538653b6a
-    pristine_git_object: 987124001262ac131ddea0fff0e91fd17803cb71
+    last_write_checksum: sha1:7ebff963c7d88aede7e79791769bae16b06351a5
+    pristine_git_object: 7f5089833f121519a17bf033d1bd8e105fd0c1ed
   src/Repository.php:
     id: 2bc2201435ec
     last_write_checksum: sha1:04c8b9a3d85fbdc9bda490924b0ebfaaf8ee6222
@@ -20125,8 +20333,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c7bc9ecf09a2fb6043c68dbf2c3a3339e6bb8998
-    pristine_git_object: c152af689af4337936bf4d40687e9771969aa690
+    last_write_checksum: sha1:cc5a1ac04126267509776a785437d876a2a13d09
+    pristine_git_object: 3baead4fdd661d319a18dfe70b5e4ffdbba06d25
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -25932,9 +26140,72 @@ examples:
       responses:
         "200":
           application/json: {}
+  listMartechReports:
+    speakeasy-default-list-martech-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  createMartechCampaign:
+    speakeasy-default-create-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getMartechCampaign:
+    speakeasy-default-get-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listMartechCampaigns:
+    speakeasy-default-list-martech-campaigns:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchMartechCampaign:
+    speakeasy-default-patch-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMartechCampaign:
+    speakeasy-default-remove-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMartechCampaign:
+    speakeasy-default-update-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->martech->listMartechReports()`: **Added**\n* `unified-to->martech->listMartechCampaigns()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->campaign->createMartechCampaign()`: **Added**\n* `unified-to->martech->updateMartechCampaign()`: **Added**\n* `unified-to->martech->removeMartechCampaign()`: **Added**\n* `unified-to->martech->patchMartechCampaign()`: **Added**\n* `unified-to->report->listMartechReports()`: **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->martech->getMartechCampaign()`: **Added**\n* `unified-to->martech->createMartechCampaign()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->campaign->updateMartechCampaign()`: **Added**\n* `unified-to->campaign->removeMartechCampaign()`: **Added**\n* `unified-to->campaign->patchMartechCampaign()`: **Added**\n* `unified-to->campaign->listMartechCampaigns()`: **Added**\n* `unified-to->campaign->getMartechCampaign()`: **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

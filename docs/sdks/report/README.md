@@ -7,6 +7,7 @@
 * [getAccountingReport](#getaccountingreport) - Retrieve a report
 * [listAccountingReports](#listaccountingreports) - List all reports
 * [listAdsReports](#listadsreports) - List all reports
+* [listMartechReports](#listmartechreports) - List all reports
 
 ## getAccountingReport
 
@@ -152,6 +153,56 @@ if ($response->adsReports !== null) {
 ### Response
 
 **[?Operations\ListAdsReportsResponse](../../Models/Operations/ListAdsReportsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listMartechReports
+
+List all reports
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListMartechReportsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->report->listMartechReports(
+    request: $request
+);
+
+if ($response->marketingReports !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListMartechReportsRequest](../../Models/Operations/ListMartechReportsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListMartechReportsResponse](../../Models/Operations/ListMartechReportsResponse.md)**
 
 ### Errors
 

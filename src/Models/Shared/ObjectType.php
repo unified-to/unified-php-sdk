@@ -69,8 +69,10 @@ enum ObjectType: string
     case HrisTimeshift = 'hris_timeshift';
     case HrisDeduction = 'hris_deduction';
     case HrisBenefit = 'hris_benefit';
+    case MartechCampaign = 'martech_campaign';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
+    case MartechReport = 'martech_report';
     case Passthrough = 'passthrough';
     case TicketingNote = 'ticketing_note';
     case TicketingTicket = 'ticketing_ticket';

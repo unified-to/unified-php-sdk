@@ -407,11 +407,17 @@ if ($response->accountingAccount !== null) {
 ### [Campaign](docs/sdks/campaign/README.md)
 
 * [createAdsCampaign](docs/sdks/campaign/README.md#createadscampaign) - Create a campaign
+* [createMartechCampaign](docs/sdks/campaign/README.md#createmartechcampaign) - Create a campaign
 * [getAdsCampaign](docs/sdks/campaign/README.md#getadscampaign) - Retrieve a campaign
+* [getMartechCampaign](docs/sdks/campaign/README.md#getmartechcampaign) - Retrieve a campaign
 * [listAdsCampaigns](docs/sdks/campaign/README.md#listadscampaigns) - List all campaigns
+* [listMartechCampaigns](docs/sdks/campaign/README.md#listmartechcampaigns) - List all campaigns
 * [patchAdsCampaign](docs/sdks/campaign/README.md#patchadscampaign) - Update a campaign
+* [patchMartechCampaign](docs/sdks/campaign/README.md#patchmartechcampaign) - Update a campaign
 * [removeAdsCampaign](docs/sdks/campaign/README.md#removeadscampaign) - Remove a campaign
+* [removeMartechCampaign](docs/sdks/campaign/README.md#removemartechcampaign) - Remove a campaign
 * [updateAdsCampaign](docs/sdks/campaign/README.md#updateadscampaign) - Update a campaign
+* [updateMartechCampaign](docs/sdks/campaign/README.md#updatemartechcampaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -1078,16 +1084,23 @@ if ($response->accountingAccount !== null) {
 
 ### [Martech](docs/sdks/martech/README.md)
 
+* [createMartechCampaign](docs/sdks/martech/README.md#createmartechcampaign) - Create a campaign
 * [createMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [createMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
+* [getMartechCampaign](docs/sdks/martech/README.md#getmartechcampaign) - Retrieve a campaign
 * [getMartechList](docs/sdks/martech/README.md#getmartechlist) - Retrieve a list
 * [getMartechMember](docs/sdks/martech/README.md#getmartechmember) - Retrieve a member
+* [listMartechCampaigns](docs/sdks/martech/README.md#listmartechcampaigns) - List all campaigns
 * [listMartechLists](docs/sdks/martech/README.md#listmartechlists) - List all lists
 * [listMartechMembers](docs/sdks/martech/README.md#listmartechmembers) - List all members
+* [listMartechReports](docs/sdks/martech/README.md#listmartechreports) - List all reports
+* [patchMartechCampaign](docs/sdks/martech/README.md#patchmartechcampaign) - Update a campaign
 * [patchMartechList](docs/sdks/martech/README.md#patchmartechlist) - Update a list
 * [patchMartechMember](docs/sdks/martech/README.md#patchmartechmember) - Update a member
+* [removeMartechCampaign](docs/sdks/martech/README.md#removemartechcampaign) - Remove a campaign
 * [removeMartechList](docs/sdks/martech/README.md#removemartechlist) - Remove a list
 * [removeMartechMember](docs/sdks/martech/README.md#removemartechmember) - Remove a member
+* [updateMartechCampaign](docs/sdks/martech/README.md#updatemartechcampaign) - Update a campaign
 * [updateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [updateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
@@ -1338,6 +1351,7 @@ if ($response->accountingAccount !== null) {
 * [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 * [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
+* [listMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 

@@ -102,10 +102,14 @@ enum PropertyConnectionPermissions: string
     case CrmLeadWrite = 'crm_lead_write';
     case CrmPipelineRead = 'crm_pipeline_read';
     case CrmPipelineWrite = 'crm_pipeline_write';
+    case MartechCampaignRead = 'martech_campaign_read';
+    case MartechCampaignWrite = 'martech_campaign_write';
     case MartechListRead = 'martech_list_read';
     case MartechListWrite = 'martech_list_write';
     case MartechMemberRead = 'martech_member_read';
     case MartechMemberWrite = 'martech_member_write';
+    case MartechReportRead = 'martech_report_read';
+    case MartechReportWrite = 'martech_report_write';
     case TicketingCustomerRead = 'ticketing_customer_read';
     case TicketingCustomerWrite = 'ticketing_customer_write';
     case TicketingTicketRead = 'ticketing_ticket_read';
