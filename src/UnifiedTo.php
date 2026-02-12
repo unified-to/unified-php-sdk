@@ -80,6 +80,10 @@ class UnifiedTo
 
     public Insertionorder $insertionorder;
 
+    public Assessment $assessment;
+
+    public Package $package;
+
     public Ats $ats;
 
     public Activity $activity;
@@ -280,8 +284,6 @@ class UnifiedTo
 
     public Verification $verification;
 
-    public Package $package;
-
     public Request $request;
 
     /**
@@ -326,6 +328,8 @@ class UnifiedTo
         $this->creative = new Creative($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
         $this->insertionorder = new Insertionorder($this->sdkConfiguration);
+        $this->assessment = new Assessment($this->sdkConfiguration);
+        $this->package = new Package($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
         $this->activity = new Activity($this->sdkConfiguration);
         $this->application = new Application($this->sdkConfiguration);
@@ -426,7 +430,6 @@ class UnifiedTo
         $this->issue = new Issue($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
         $this->verification = new Verification($this->sdkConfiguration);
-        $this->package = new Package($this->sdkConfiguration);
         $this->request = new Request($this->sdkConfiguration);
         $this->initHooks();
 

@@ -37,4 +37,5 @@ enum Categories: string
     case Ads = 'ads';
     case Forms = 'forms';
     case Shipping = 'shipping';
+    case Assessment = 'assessment';
 }

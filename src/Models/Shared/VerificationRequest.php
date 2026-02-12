@@ -83,12 +83,12 @@ class VerificationRequest
 
     /**
      *
-     * @var ?ProfileGender $profileGender
+     * @var ?VerificationRequestProfileGender $profileGender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profile_gender')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ProfileGender|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationRequestProfileGender|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?ProfileGender $profileGender = null;
+    public ?VerificationRequestProfileGender $profileGender = null;
 
     /**
      *
@@ -204,12 +204,12 @@ class VerificationRequest
 
     /**
      *
-     * @var ?ResponseStatus $responseStatus
+     * @var ?VerificationRequestResponseStatus $responseStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResponseStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationRequestResponseStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?ResponseStatus $responseStatus = null;
+    public ?VerificationRequestResponseStatus $responseStatus = null;
 
     /**
      *
@@ -236,7 +236,7 @@ class VerificationRequest
      * @param  ?array<VerificationAddress>  $profileAddresses
      * @param  ?string  $profileDateOfBirth
      * @param  ?array<string>  $profileEmails
-     * @param  ?ProfileGender  $profileGender
+     * @param  ?VerificationRequestProfileGender  $profileGender
      * @param  ?string  $profileIpAddress
      * @param  ?string  $profileName
      * @param  ?string  $profileNationalIdentifier
@@ -250,12 +250,12 @@ class VerificationRequest
      * @param  ?string  $responseRedirectUrl
      * @param  ?float  $responseScore
      * @param  ?string  $responseSource
-     * @param  ?ResponseStatus  $responseStatus
+     * @param  ?VerificationRequestResponseStatus  $responseStatus
      * @param  ?string  $targetUrl
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $candidateId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?ProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?array $profileTelephones = null, ?array $raw = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?ResponseStatus $responseStatus = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $candidateId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?VerificationRequestProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?array $profileTelephones = null, ?array $raw = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?VerificationRequestResponseStatus $responseStatus = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null)
     {
         $this->candidateId = $candidateId;
         $this->createdAt = $createdAt;

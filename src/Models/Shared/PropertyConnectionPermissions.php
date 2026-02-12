@@ -73,6 +73,9 @@ enum PropertyConnectionPermissions: string
     case VerificationPackageRead = 'verification_package_read';
     case VerificationRequestRead = 'verification_request_read';
     case VerificationRequestWrite = 'verification_request_write';
+    case AssessmentPackageRead = 'assessment_package_read';
+    case AssessmentPackageWrite = 'assessment_package_write';
+    case AssessmentOrderWrite = 'assessment_order_write';
     case AtsActivityRead = 'ats_activity_read';
     case AtsActivityWrite = 'ats_activity_write';
     case AtsApplicationRead = 'ats_application_read';
@@ -102,12 +105,12 @@ enum PropertyConnectionPermissions: string
     case CrmLeadWrite = 'crm_lead_write';
     case CrmPipelineRead = 'crm_pipeline_read';
     case CrmPipelineWrite = 'crm_pipeline_write';
-    case MartechCampaignRead = 'martech_campaign_read';
-    case MartechCampaignWrite = 'martech_campaign_write';
     case MartechListRead = 'martech_list_read';
     case MartechListWrite = 'martech_list_write';
     case MartechMemberRead = 'martech_member_read';
     case MartechMemberWrite = 'martech_member_write';
+    case MartechCampaignRead = 'martech_campaign_read';
+    case MartechCampaignWrite = 'martech_campaign_write';
     case MartechReportRead = 'martech_report_read';
     case MartechReportWrite = 'martech_report_write';
     case TicketingCustomerRead = 'ticketing_customer_read';

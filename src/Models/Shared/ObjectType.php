@@ -44,6 +44,8 @@ enum ObjectType: string
     case CommerceItemvariant = 'commerce_itemvariant';
     case VerificationPackage = 'verification_package';
     case VerificationRequest = 'verification_request';
+    case AssessmentPackage = 'assessment_package';
+    case AssessmentOrder = 'assessment_order';
     case AtsActivity = 'ats_activity';
     case AtsApplication = 'ats_application';
     case AtsApplicationstatus = 'ats_applicationstatus';
@@ -69,9 +71,9 @@ enum ObjectType: string
     case HrisTimeshift = 'hris_timeshift';
     case HrisDeduction = 'hris_deduction';
     case HrisBenefit = 'hris_benefit';
-    case MartechCampaign = 'martech_campaign';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
+    case MartechCampaign = 'martech_campaign';
     case MartechReport = 'martech_report';
     case Passthrough = 'passthrough';
     case TicketingNote = 'ticketing_note';

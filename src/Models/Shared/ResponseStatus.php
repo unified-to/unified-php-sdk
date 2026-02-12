@@ -11,8 +11,9 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum ResponseStatus: string
 {
+    case Open = 'OPEN';
+    case InProgress = 'IN_PROGRESS';
     case Completed = 'COMPLETED';
     case Failed = 'FAILED';
-    case Passed = 'PASSED';
-    case Pending = 'PENDING';
+    case Rejected = 'REJECTED';
 }

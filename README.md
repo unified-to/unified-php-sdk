@@ -276,6 +276,17 @@ if ($response->accountingAccount !== null) {
 
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
+### [Assessment](docs/sdks/assessment/README.md)
+
+* [createAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
+* [listAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
+* [patchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
+* [patchAssessmentPackage](docs/sdks/assessment/README.md#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](docs/sdks/assessment/README.md#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentOrder](docs/sdks/assessment/README.md#updateassessmentorder) - Update an order
+* [updateAssessmentPackage](docs/sdks/assessment/README.md#updateassessmentpackage) - Update an assessment package
+
 ### [Ats](docs/sdks/ats/README.md)
 
 * [createAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
@@ -1164,8 +1175,10 @@ if ($response->accountingAccount !== null) {
 * [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
 * [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
 * [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
 * [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [updateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -1186,8 +1199,14 @@ if ($response->accountingAccount !== null) {
 
 ### [Package](docs/sdks/package/README.md)
 
+* [createAssessmentPackage](docs/sdks/package/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](docs/sdks/package/README.md#getassessmentpackage) - Get an assessment package
 * [getVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
+* [listAssessmentPackages](docs/sdks/package/README.md#listassessmentpackages) - List assessment packages
 * [listVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
+* [patchAssessmentPackage](docs/sdks/package/README.md#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](docs/sdks/package/README.md#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentPackage](docs/sdks/package/README.md#updateassessmentpackage) - Update an assessment package
 
 ### [Page](docs/sdks/page/README.md)
 
