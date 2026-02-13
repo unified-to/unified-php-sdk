@@ -13,13 +13,6 @@ class AccountingOrganization
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?PropertyAccountingOrganizationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -69,11 +62,27 @@ class AccountingOrganization
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $organizationCode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_code')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $organizationCode = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      * $raw
@@ -118,14 +127,15 @@ class AccountingOrganization
     public ?string $website = null;
 
     /**
-     * @param  string  $name
      * @param  ?PropertyAccountingOrganizationAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?float  $fiscalYearEndMonth
      * @param  ?string  $id
      * @param  ?string  $legalName
+     * @param  ?string  $name
      * @param  ?string  $organizationCode
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taxNumber
      * @param  ?string  $timezone
@@ -133,16 +143,17 @@ class AccountingOrganization
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $organizationCode = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
-        $this->name = $name;
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->fiscalYearEndMonth = $fiscalYearEndMonth;
         $this->id = $id;
         $this->legalName = $legalName;
+        $this->name = $name;
         $this->organizationCode = $organizationCode;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->taxNumber = $taxNumber;
         $this->timezone = $timezone;

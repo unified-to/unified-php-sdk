@@ -1,0 +1,10 @@
+# AccountingAccountTaxonomy
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `originalType`                                                                               | *?string*                                                                                    | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `type`                                                                                       | [Shared\AccountingAccountTaxonomyType](../../Models/Shared/AccountingAccountTaxonomyType.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `value`                                                                                      | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |

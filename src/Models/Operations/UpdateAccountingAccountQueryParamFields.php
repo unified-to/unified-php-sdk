@@ -27,5 +27,6 @@ enum UpdateAccountingAccountQueryParamFields: string
     case Group = 'group';
     case Subgroup = 'subgroup';
     case ParentId = 'parent_id';
+    case Taxonomy = 'taxonomy';
     case Raw = 'raw';
 }

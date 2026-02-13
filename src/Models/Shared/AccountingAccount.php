@@ -136,6 +136,16 @@ class AccountingAccount
     public ?string $subsection = null;
 
     /**
+     * $taxonomy
+     *
+     * @var ?array<AccountingAccountTaxonomy> $taxonomy
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxonomy')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomy>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $taxonomy = null;
+
+    /**
      *
      * @var ?Type $type
      */
@@ -168,11 +178,12 @@ class AccountingAccount
      * @param  ?Status  $status
      * @param  ?string  $subgroup
      * @param  ?string  $subsection
+     * @param  ?array<AccountingAccountTaxonomy>  $taxonomy
      * @param  ?Type  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
@@ -189,6 +200,7 @@ class AccountingAccount
         $this->status = $status;
         $this->subgroup = $subgroup;
         $this->subsection = $subsection;
+        $this->taxonomy = $taxonomy;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
     }

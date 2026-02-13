@@ -18,7 +18,6 @@ enum GetMessagingMessageQueryParamFields: string
     case ChannelIds = 'channel_ids';
     case Channels = 'channels';
     case ParentId = 'parent_id';
-    case ParentMessageId = 'parent_message_id';
     case RootMessageId = 'root_message_id';
     case MessageThreadIdentifier = 'message_thread_identifier';
     case AuthorMember = 'author_member';

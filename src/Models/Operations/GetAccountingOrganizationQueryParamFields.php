@@ -21,6 +21,7 @@ enum GetAccountingOrganizationQueryParamFields: string
     case TaxNumber = 'tax_number';
     case Timezone = 'timezone';
     case Website = 'website';
+    case ParentId = 'parent_id';
     case FiscalYearEndMonth = 'fiscal_year_end_month';
     case OrganizationCode = 'organization_code';
     case Raw = 'raw';
