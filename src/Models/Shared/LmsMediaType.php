@@ -16,5 +16,8 @@ enum LmsMediaType: string
     case Video = 'VIDEO';
     case Web = 'WEB';
     case Document = 'DOCUMENT';
+    case Text = 'TEXT';
+    case Html = 'HTML';
+    case Markdown = 'MARKDOWN';
     case Other = 'OTHER';
 }

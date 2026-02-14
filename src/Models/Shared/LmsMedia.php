@@ -20,6 +20,14 @@ class LmsMedia
 
     /**
      *
+     * @var ?string $content
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $content = null;
+
+    /**
+     *
      * @var ?string $description
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
@@ -53,15 +61,17 @@ class LmsMedia
 
     /**
      * @param  string  $url
+     * @param  ?string  $content
      * @param  ?string  $description
      * @param  ?string  $name
      * @param  ?string  $thumbnailUrl
      * @param  ?LmsMediaType  $type
      * @phpstan-pure
      */
-    public function __construct(string $url, ?string $description = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null)
+    public function __construct(string $url, ?string $content = null, ?string $description = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null)
     {
         $this->url = $url;
+        $this->content = $content;
         $this->description = $description;
         $this->name = $name;
         $this->thumbnailUrl = $thumbnailUrl;

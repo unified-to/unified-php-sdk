@@ -186,6 +186,8 @@ class UnifiedTo
 
     public ClassT $class;
 
+    public Content $content;
+
     public Course $course;
 
     public Instructor $instructor;
@@ -381,6 +383,7 @@ class UnifiedTo
         $this->space = new Space($this->sdkConfiguration);
         $this->lms = new Lms($this->sdkConfiguration);
         $this->class = new ClassT($this->sdkConfiguration);
+        $this->content = new Content($this->sdkConfiguration);
         $this->course = new Course($this->sdkConfiguration);
         $this->instructor = new Instructor($this->sdkConfiguration);
         $this->student = new Student($this->sdkConfiguration);

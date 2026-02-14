@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 32d6237e45310a593e6a74bae997cf21
+  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
   docVersion: "1.0"
-  speakeasyVersion: 1.713.2
-  generationVersion: 2.821.6
-  releaseVersion: 1.6.30
-  configChecksum: cad8abddf2d1ec594e038a89c2e08390
+  speakeasyVersion: 1.716.0
+  generationVersion: 2.823.1
+  releaseVersion: 1.6.31
+  configChecksum: d432891428dcb256de347c7895bc00c0
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 3e0e4a98-d9ab-49ef-9738-c1bef76ca56f
-  pristine_commit_hash: cd3c5cf8d21e23e206a1704fc652bcd4069afd42
-  pristine_tree_hash: b28410527911e28af19b319486f742be29183542
+  generation_id: 6f5212af-1fe5-483a-8e9c-16342e5a25ea
+  pristine_commit_hash: 3af131af77a167e4ff61e6e126064cf80391b696
+  pristine_tree_hash: 92fdc59a13ac0181741ea5093bf8dc10fc2700d6
 features:
   php:
     constsAndDefaults: 0.2.1
@@ -743,6 +743,18 @@ trackedFiles:
     id: 60118717aecd
     last_write_checksum: sha1:2c3b4cfb9c034b6bfadf7d2e9717cc8b2f19d457
     pristine_git_object: 11f6ce492ea4490c02fc14dc039d90febb4151db
+  docs/Models/Operations/CreateLmsActivityQueryParamFields.md:
+    id: b046ab6cee38
+    last_write_checksum: sha1:ef0ba546fccc35903b746ac8d4dee0608a7922df
+    pristine_git_object: 6ef331d28fc88a3be87401a453d216bca40d3eaf
+  docs/Models/Operations/CreateLmsActivityRequest.md:
+    id: e2c0c838209d
+    last_write_checksum: sha1:59dcdf275264ec4e9895ab7cfc87f3b3b2c7e46a
+    pristine_git_object: 4edd73d916b42caa83d9c27b5644381306a384c4
+  docs/Models/Operations/CreateLmsActivityResponse.md:
+    id: b6a9e96de257
+    last_write_checksum: sha1:af1f5ad2fd4b017ae36be988103cb4c33851211b
+    pristine_git_object: a3b412303686dad693622590c30dcf536c6bedb1
   docs/Models/Operations/CreateLmsClassQueryParamFields.md:
     id: 85dd94f68369
     last_write_checksum: sha1:88f740ea456e5a1828806c3556b98c3cb7a71c89
@@ -755,6 +767,30 @@ trackedFiles:
     id: 724b29543c67
     last_write_checksum: sha1:ed3ceb6980a4ba7f5b5aa17e20847c89436c1439
     pristine_git_object: ccb00e6a4d7ad04db863dec7165018f4613df733
+  docs/Models/Operations/CreateLmsCollectionQueryParamFields.md:
+    id: 0af3da6128ee
+    last_write_checksum: sha1:df8f3fd02ac7e4cadb8ccb6664abc0faa81496db
+    pristine_git_object: da039dae27fdf9f575d451555ce54fdaa58af68e
+  docs/Models/Operations/CreateLmsCollectionRequest.md:
+    id: 694b53fc5773
+    last_write_checksum: sha1:5000db82d9501d529a4138f3db6cc3e05575893b
+    pristine_git_object: f9e62300ec05770692daddf48c972076b1eabef4
+  docs/Models/Operations/CreateLmsCollectionResponse.md:
+    id: bc3b1dc42e79
+    last_write_checksum: sha1:f1bdb9504214a5630402b29725c98ae427fa7dbf
+    pristine_git_object: 77cc84707b31703c9b999ddc7b7b1a851bffdee3
+  docs/Models/Operations/CreateLmsContentQueryParamFields.md:
+    id: 12883980d45c
+    last_write_checksum: sha1:ec87858d2a6a9238597e102e57dca703a178414a
+    pristine_git_object: 136ae8080278d07a9e4343c57d84726167b79edf
+  docs/Models/Operations/CreateLmsContentRequest.md:
+    id: d9946ec65981
+    last_write_checksum: sha1:b51ab663f6513133888383766d572159661e3dfe
+    pristine_git_object: 08eafb1121f5fc7b725f029612d854e2beb7ff8f
+  docs/Models/Operations/CreateLmsContentResponse.md:
+    id: 676e0ca70b1f
+    last_write_checksum: sha1:909a5128940ecc1516ecdd43b53f4a45e1e66daf
+    pristine_git_object: 90369b7369ccdecc2c539619eb610da8619a41dd
   docs/Models/Operations/CreateLmsCourseQueryParamFields.md:
     id: e21e2f6d9eaf
     last_write_checksum: sha1:23f80e65c4ea03df6f8fcb965b0a21f7975c5172
@@ -1987,6 +2023,18 @@ trackedFiles:
     id: 6386eeffe533
     last_write_checksum: sha1:8dcfd105d5a855a371ca8fac6b28aab7af11932f
     pristine_git_object: 55e6b8f86ca7d468125d5dc98aa9f5a4d9ddced4
+  docs/Models/Operations/GetLmsActivityQueryParamFields.md:
+    id: 43ac347f3e6b
+    last_write_checksum: sha1:2d000bca78e221c7d4e50a031f11641f3f08cc9a
+    pristine_git_object: c9a388f86822468ad571da7e77aa246df8068ea8
+  docs/Models/Operations/GetLmsActivityRequest.md:
+    id: b48b48045b4b
+    last_write_checksum: sha1:797227c7bd2e25f2e25b237fa56bbd79b28d43c0
+    pristine_git_object: 98d5058bbaedb5f7fc9e54bf33c563a778091895
+  docs/Models/Operations/GetLmsActivityResponse.md:
+    id: 0df16389d5ed
+    last_write_checksum: sha1:a634108aacaaf2596f48f6398f9e2241f3a69d31
+    pristine_git_object: 2131922b0c98506baad74d90c0d84c37764a07e0
   docs/Models/Operations/GetLmsClassQueryParamFields.md:
     id: 536dbc425efb
     last_write_checksum: sha1:3a4bfd8956e20cbceda9e16be7ac973b29ee64f6
@@ -1999,6 +2047,30 @@ trackedFiles:
     id: 383ce4e3ba5b
     last_write_checksum: sha1:e823d7079330936d3668abadb3e0fa079c209e1a
     pristine_git_object: c0713e7f12dc78c36bbc789d6f8d297b312f3b16
+  docs/Models/Operations/GetLmsCollectionQueryParamFields.md:
+    id: d118dd8ab8e6
+    last_write_checksum: sha1:356e61d3e71440deb9aa43220c4ba8e5a5975926
+    pristine_git_object: c20c6c2cb8a9e7dd7a8c66ee32dbba508dbd0979
+  docs/Models/Operations/GetLmsCollectionRequest.md:
+    id: 83953916b39c
+    last_write_checksum: sha1:b7a3864d96370ded12e5f78f2af6c3a45d409aae
+    pristine_git_object: 1a95a8e9fe45147304a33242afc0c4f9b7426249
+  docs/Models/Operations/GetLmsCollectionResponse.md:
+    id: 38cf7795abb1
+    last_write_checksum: sha1:5a7f2f0d0a2d725b0e82237d40b89496ba2e9143
+    pristine_git_object: dd4b46ec5988d4fedf4212e339973072c989dd9f
+  docs/Models/Operations/GetLmsContentQueryParamFields.md:
+    id: cf430fb38e85
+    last_write_checksum: sha1:29e0c7aed874510d28e684f9494dad81fd109cb7
+    pristine_git_object: 770e1e903d24bc935ee08fffa3e778e3e459d7c4
+  docs/Models/Operations/GetLmsContentRequest.md:
+    id: 988238ef4b81
+    last_write_checksum: sha1:820f16798dccc44848479cf3cdaf9c89506b00e8
+    pristine_git_object: 9685ba63078e076e4d19e6d534169b2df1a561cd
+  docs/Models/Operations/GetLmsContentResponse.md:
+    id: 411e0b236a69
+    last_write_checksum: sha1:a8af68535247a87b5e33d916d43b836ccdca1767
+    pristine_git_object: 6a50b19ced5f5c8bb79c3aa637461beb50a97511
   docs/Models/Operations/GetLmsCourseQueryParamFields.md:
     id: dea0deb57eb3
     last_write_checksum: sha1:814b76df18846de5e947fb3a75fc236ed4abbf14
@@ -3383,6 +3455,18 @@ trackedFiles:
     id: 4dd532604034
     last_write_checksum: sha1:568b7b884b72019a7f2ca35fa942dbc1488cf947
     pristine_git_object: 52eaf01313493d9bc6fffb860044145053da38ce
+  docs/Models/Operations/ListLmsActivitiesQueryParamFields.md:
+    id: 67e1d8a86dcb
+    last_write_checksum: sha1:7b27f588ad0528ca684f7ce13652d2920135e031
+    pristine_git_object: 1728cab1e90da8ead37b351124d17f077f77a690
+  docs/Models/Operations/ListLmsActivitiesRequest.md:
+    id: 45a717835551
+    last_write_checksum: sha1:c44601c721e29559991ff0d24007f6d223b13c70
+    pristine_git_object: 5f5c875d291b7edd182bf7c6ec31893b227162f8
+  docs/Models/Operations/ListLmsActivitiesResponse.md:
+    id: b91f028b33d8
+    last_write_checksum: sha1:f5a9127af9c8e031db228d078352b08a7c73cd2e
+    pristine_git_object: 79220ccd34487c094f81013e428c1b607629b852
   docs/Models/Operations/ListLmsClassesQueryParamFields.md:
     id: 4c5c1e201750
     last_write_checksum: sha1:4a712b18376c8c792a49edfecf4d05f9be41ef4d
@@ -3395,6 +3479,30 @@ trackedFiles:
     id: ae4eb04bbfbd
     last_write_checksum: sha1:df54f5f4f56dbac7cdf8a118e37e14c17569423e
     pristine_git_object: 96e8e9d74a3a040d617c5aed0a45d7e6010c551c
+  docs/Models/Operations/ListLmsCollectionsQueryParamFields.md:
+    id: 92cb6342c40d
+    last_write_checksum: sha1:e2cccf43d94bfaea29469c6845f0c4e08e0f58ff
+    pristine_git_object: a8b490b034326856838b1103e77e01ddc1c3469d
+  docs/Models/Operations/ListLmsCollectionsRequest.md:
+    id: 751aad78b985
+    last_write_checksum: sha1:d02e15c40014f76737123ddcd1e368c82b3c2656
+    pristine_git_object: 7d643b670cba664f39cb6209bc7a140fee5b6f4d
+  docs/Models/Operations/ListLmsCollectionsResponse.md:
+    id: cbe64595b68b
+    last_write_checksum: sha1:d25af810a641c26364dad907f211bed09afc077d
+    pristine_git_object: 13381b24ebb993675711c4b71c74f872c71b7424
+  docs/Models/Operations/ListLmsContentsQueryParamFields.md:
+    id: 6637322608b3
+    last_write_checksum: sha1:ff759cc15dd2b85d7d931a927375c6c22cf4a76c
+    pristine_git_object: ed263702c06fa4e9a9ee9a4ad94fb18391135b45
+  docs/Models/Operations/ListLmsContentsRequest.md:
+    id: d3d6c9279d60
+    last_write_checksum: sha1:d32a193d6562fe5cd9f48c9d7ed1d50f9271714e
+    pristine_git_object: c45b080feb6bcd10578796178967ddea8dd07a89
+  docs/Models/Operations/ListLmsContentsResponse.md:
+    id: 794a55649688
+    last_write_checksum: sha1:8d4e726dbf8707cf9c068f8058065efb749c3ab8
+    pristine_git_object: 4357b0ffdf38334c0c9eedfc581f5b34a0cb6c9b
   docs/Models/Operations/ListLmsCoursesQueryParamFields.md:
     id: d2118ccb2fee
     last_write_checksum: sha1:c03c23f42b33da07bcf304c9e1dc1ca459248860
@@ -4623,6 +4731,18 @@ trackedFiles:
     id: 33666eff9c8d
     last_write_checksum: sha1:aeaf4c976de599ca4a62aa82d5cf4dd03179cbd4
     pristine_git_object: 3b7eba6dddc6508d342f4f2eae96703f0656b84a
+  docs/Models/Operations/PatchLmsActivityQueryParamFields.md:
+    id: 3a47ed02e651
+    last_write_checksum: sha1:f7c23eb923de632ba57a14775317ff94dd1931f2
+    pristine_git_object: 19ebf8b34813b6d8e606c34801118dfb36d182e2
+  docs/Models/Operations/PatchLmsActivityRequest.md:
+    id: 09e72da1f996
+    last_write_checksum: sha1:efde45e14448b1e606dcd312903eb6f139813d61
+    pristine_git_object: 5d04c5eadaf41c19a5aba5ef04098d6570dcf096
+  docs/Models/Operations/PatchLmsActivityResponse.md:
+    id: 78dc297be796
+    last_write_checksum: sha1:21dba74526710a3b7be7abdcd92f0645e012d9bb
+    pristine_git_object: e1a0d32668e5e852748eb2a27b8d23d175b3ccd0
   docs/Models/Operations/PatchLmsClassQueryParamFields.md:
     id: caa30b02208f
     last_write_checksum: sha1:e2f56df54c0f2f5e63faf72d209bfe9a6581a34c
@@ -4635,6 +4755,30 @@ trackedFiles:
     id: f4c0244c98e8
     last_write_checksum: sha1:acca0a62a18a168b1720afc1d29fb01ff5d334e1
     pristine_git_object: 95e81c1cb9d822d9062d87f73281c85dd0eca0d0
+  docs/Models/Operations/PatchLmsCollectionQueryParamFields.md:
+    id: a9fa481d920b
+    last_write_checksum: sha1:7861ca7f08afdc37b133b35771d70af5cde47e78
+    pristine_git_object: b493a354d60039dd6022e22fd1a2d103e5a5d15f
+  docs/Models/Operations/PatchLmsCollectionRequest.md:
+    id: 09a58f14b3bc
+    last_write_checksum: sha1:fc09b63ad91c44c45e764cc13e27bbf48480b65f
+    pristine_git_object: f336c2a599b00e629234c0444275184f5cf56fd2
+  docs/Models/Operations/PatchLmsCollectionResponse.md:
+    id: fc7de64e9023
+    last_write_checksum: sha1:5b243db0e64dbb91ca8b615fd186a7881f0b7ddb
+    pristine_git_object: 054db975cf5e3d517516af3fe6a5f088179bc695
+  docs/Models/Operations/PatchLmsContentQueryParamFields.md:
+    id: b0b0aa0cd555
+    last_write_checksum: sha1:6e9be8e1a8dc546b9b6fef8b6970e08ca3680dba
+    pristine_git_object: 6548a09f5c9e32a64593278940a5337fcc203bd9
+  docs/Models/Operations/PatchLmsContentRequest.md:
+    id: 0e613a8dccb1
+    last_write_checksum: sha1:0976c604892fc21a840633fd79ff7c2979cc2a3a
+    pristine_git_object: 40569a50f99f3aac4d2a6b142103a0a36ffa0285
+  docs/Models/Operations/PatchLmsContentResponse.md:
+    id: f8814acf8c5e
+    last_write_checksum: sha1:03ac86e37755dd45d6a942797d5f568528f99012
+    pristine_git_object: 5594beb1c1bf8f5dd5c2ac716dd846ce5857f703
   docs/Models/Operations/PatchLmsCourseQueryParamFields.md:
     id: 7044c15f66c6
     last_write_checksum: sha1:85bfa679d6b4b1377b1d66c48114f541e1400a8b
@@ -5527,6 +5671,14 @@ trackedFiles:
     id: 315bd39bf73a
     last_write_checksum: sha1:01753a913c9ab9470c02cd45852d44d146640efb
     pristine_git_object: 6caab5a8da6b0068fa96e450c6ae2f4291c4affe
+  docs/Models/Operations/RemoveLmsActivityRequest.md:
+    id: 9f00db1447c3
+    last_write_checksum: sha1:bc034114a3561d15b4c309f67ec09b3ead825ca9
+    pristine_git_object: 007a532723e2a97f885229f265cae1d7ea9856f0
+  docs/Models/Operations/RemoveLmsActivityResponse.md:
+    id: 07ea03080690
+    last_write_checksum: sha1:7f18fcff84d0deddbabb1a6132ae7e9ff97a2daf
+    pristine_git_object: ad5e1a03b1926a5c1680c1d7de11ce8b949aed43
   docs/Models/Operations/RemoveLmsClassRequest.md:
     id: d6d413cc261f
     last_write_checksum: sha1:fb3a128e2aa258710cf94dd0f2769dda310c2093
@@ -5535,6 +5687,22 @@ trackedFiles:
     id: 6efaa876dfad
     last_write_checksum: sha1:878a7670dbd3a14e416116ae4398d6bc5f3f05ed
     pristine_git_object: d329f120ec70fd3d23fb6d79400bdd5e09f6c5b7
+  docs/Models/Operations/RemoveLmsCollectionRequest.md:
+    id: 896e2d911e52
+    last_write_checksum: sha1:d8071623ba862032c2d6b78f4a40b4e5ccac488b
+    pristine_git_object: c9adf4f4af95c864a328151699cf7c502d66adb3
+  docs/Models/Operations/RemoveLmsCollectionResponse.md:
+    id: 58c30daefc67
+    last_write_checksum: sha1:0d70a23665fed3fc598dcb0e0d1a7637047cf5ee
+    pristine_git_object: 936d5660e4b762090527464a1bdc365aec750ac1
+  docs/Models/Operations/RemoveLmsContentRequest.md:
+    id: 9511a36b4ab4
+    last_write_checksum: sha1:986bddfda05052c3afbb7555529987ab254536b0
+    pristine_git_object: 73f32ecbacf428fea1703b66cdd8243b359aebb1
+  docs/Models/Operations/RemoveLmsContentResponse.md:
+    id: 4845c2fab0d6
+    last_write_checksum: sha1:8e3a23f3d3a0a0da506f6fe53a07aebefd2acb19
+    pristine_git_object: cedfa146602444337399b07d2c43e6b62e8322f5
   docs/Models/Operations/RemoveLmsCourseRequest.md:
     id: 532b6761ec35
     last_write_checksum: sha1:83f6f7a43619143bf16cc943ab2bd8a0948efb8c
@@ -6515,6 +6683,18 @@ trackedFiles:
     id: 36af476bed02
     last_write_checksum: sha1:edc9ca1b0d850b10eb55784b41edd94d0466de98
     pristine_git_object: 995607ad5c4a1879fe4be5fcac7de4b7beb92c75
+  docs/Models/Operations/UpdateLmsActivityQueryParamFields.md:
+    id: 1209eb12a50c
+    last_write_checksum: sha1:bf30c46a1f090e88f17c3bf68fb19d53a7980f60
+    pristine_git_object: db3b2224982191131bf2679325c5043e52136a04
+  docs/Models/Operations/UpdateLmsActivityRequest.md:
+    id: a9453a8f843f
+    last_write_checksum: sha1:1cae050ada3a2c49c82091c3e618eebfc2b0b2dc
+    pristine_git_object: c7f8f6d92a971e603ec6fb1b91df000a4596a77f
+  docs/Models/Operations/UpdateLmsActivityResponse.md:
+    id: 50f34dea157e
+    last_write_checksum: sha1:5fb54ead29bc9aedb6920abd8fc41c4e6e826c49
+    pristine_git_object: a01de19f9c3db6547a3c75c0d5152847617edd9d
   docs/Models/Operations/UpdateLmsClassQueryParamFields.md:
     id: 03b2558e2d8e
     last_write_checksum: sha1:13372ec0be2cf5c83091ec1827f81c79e1ea1510
@@ -6527,6 +6707,30 @@ trackedFiles:
     id: 783cfc04d90a
     last_write_checksum: sha1:519e903293f784448d4aa7008f509c86c081a560
     pristine_git_object: 42fbc10e611ce129f376c196be8f4384900b1e45
+  docs/Models/Operations/UpdateLmsCollectionQueryParamFields.md:
+    id: 8d599efeb511
+    last_write_checksum: sha1:80eedc897c52bd2a06d26cd690ebaed8c39a9df0
+    pristine_git_object: 4fc0c00655411739df3566bca206c8cc5ccf3c75
+  docs/Models/Operations/UpdateLmsCollectionRequest.md:
+    id: 999b4b6fca0a
+    last_write_checksum: sha1:c4711a525b822a2c246e3c0e5980a0d2502a164f
+    pristine_git_object: a9a780749cc41ec381e0ddf3667e1f1eb1efabc4
+  docs/Models/Operations/UpdateLmsCollectionResponse.md:
+    id: c928b71b0b03
+    last_write_checksum: sha1:b54671f4bd36b9efca7700bc166430e2f564a2e8
+    pristine_git_object: 88ff02d5a299d629f21459285adc4ad29a42f373
+  docs/Models/Operations/UpdateLmsContentQueryParamFields.md:
+    id: 639a035d71f3
+    last_write_checksum: sha1:faf3f0e8916b80ecad8e4c34ec893f566b92406e
+    pristine_git_object: 3f4df211431415c3edb1b39946c026fce5625ecb
+  docs/Models/Operations/UpdateLmsContentRequest.md:
+    id: 39f4df07f1d3
+    last_write_checksum: sha1:d927dcf322181e63d06aeb93f67d25457309039f
+    pristine_git_object: 4765ecbd142ef06b6f4a8ce570bfbf709641c43d
+  docs/Models/Operations/UpdateLmsContentResponse.md:
+    id: 45a48030f051
+    last_write_checksum: sha1:5428749dfa9df927e9f9da49e69db2b4b6f8b0bd
+    pristine_git_object: 01a323f2116f321471989dac9c312a28b722ea06
   docs/Models/Operations/UpdateLmsCourseQueryParamFields.md:
     id: 7dd031ca5cf3
     last_write_checksum: sha1:800278df381d0da07b11c9ad1508021335291c5f
@@ -8097,8 +8301,8 @@ trackedFiles:
     pristine_git_object: 1d0faeb7cc3455e4d164b74118966d84bcdf643f
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:fa1e75be8ac03350f371991f1d7de888999b0d4d
-    pristine_git_object: 2e41735cb563e341c737c8338e9970cb386ae179
+    last_write_checksum: sha1:e9e307c0a9988f021e8c5f497176fd0f4e6e26bc
+    pristine_git_object: 1d88dfae4ba8caf40c081e4c8adf20f61ef1534a
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -8231,6 +8435,10 @@ trackedFiles:
     id: af6591e58d44
     last_write_checksum: sha1:9b1b5cc7c1e4a9f2404557cc8b20f65d2c24ee2a
     pristine_git_object: f800fa6dd99a0be252a712e5d7af0045ea635517
+  docs/Models/Shared/ListContentId.md:
+    id: d9ffb35ce320
+    last_write_checksum: sha1:682004cc902c6aedcae20ff64504462203ceaaf4
+    pristine_git_object: eeafb9419b92b4176c1dbd587a21148aca66e2c5
   docs/Models/Shared/ListCourseId.md:
     id: 357e4532b16f
     last_write_checksum: sha1:5189b2af137740baa9b463589ae0e0d0b0887ada
@@ -8443,10 +8651,26 @@ trackedFiles:
     id: acc534b8f284
     last_write_checksum: sha1:4b229d0267b4d06891351ad45d67f8d1df3e1850
     pristine_git_object: 60ee19a3a021ec5b9b10187dbd78ccfffa4c2196
+  docs/Models/Shared/LmsActivity.md:
+    id: 5638c90d9149
+    last_write_checksum: sha1:11cfbeedd30bc33b2eba03d9365a0dd52ad86551
+    pristine_git_object: dca8f83e935805bca65b945e2fa9967561ae394c
   docs/Models/Shared/LmsClass.md:
     id: 19b2a9d29772
     last_write_checksum: sha1:dd1298cb7aaeee90b8f0d2a21f77b7de7c500c1b
     pristine_git_object: 1d1b96cf98cc01e15ff3519f140bca86873b978a
+  docs/Models/Shared/LmsCollection.md:
+    id: 56983b2f8162
+    last_write_checksum: sha1:0c12077459fc7b0e3ae97f73fe3b83212c6402ab
+    pristine_git_object: 1c4f5220577d58d196ea754b2eee127a2b67def5
+  docs/Models/Shared/LmsContent.md:
+    id: 1ff399a20c71
+    last_write_checksum: sha1:c4df15c3506edc457050227d8fc0f2f09f70eacc
+    pristine_git_object: 509331ac5f060a3f34eaef04d87f900d0f130262
+  docs/Models/Shared/LmsContentShapeLocalization.md:
+    id: 96d5a5cc1652
+    last_write_checksum: sha1:4f6dd1b83fa5518c74c1806cdd117dde0aabb9ac
+    pristine_git_object: c83a95c7ee8bb678b08530f3016f7ff8172d7a62
   docs/Models/Shared/LmsCourse.md:
     id: 42bb4df3c8ef
     last_write_checksum: sha1:34c77586fc0ccb5f9371083d069c9b518f552958
@@ -8461,12 +8685,12 @@ trackedFiles:
     pristine_git_object: a3a2ae32bb4c6f7b3055e127a62112206c839d47
   docs/Models/Shared/LmsMedia.md:
     id: 1f503d2d703a
-    last_write_checksum: sha1:cb05aa230f9001ce40aeed4ddd159e2cf21bf0fc
-    pristine_git_object: c81cb77706b61aca73a4f6dd29723a7a7a147acc
+    last_write_checksum: sha1:7a383192ba9116686aaf0d160d4a3cc3c0ad5a9d
+    pristine_git_object: 1ed7c9e7fc3f5ee11e48b3ce1d53ee65fed430f3
   docs/Models/Shared/LmsMediaType.md:
     id: ba77f941b350
-    last_write_checksum: sha1:3e1ac8be93e6b2182ebd65d0c8678eb59e51fb75
-    pristine_git_object: f7c591a2ff420e5b5978333851519ca3ac119956
+    last_write_checksum: sha1:e5b2e590325b653a05c3137c9446d42d201818e9
+    pristine_git_object: 48fd4f8e7912045d69ad9161c46e038956cdbea8
   docs/Models/Shared/LmsStudent.md:
     id: 336d48359395
     last_write_checksum: sha1:9960f0bc7783132129b1ccd45c2d450bc8fcf097
@@ -8575,6 +8799,10 @@ trackedFiles:
     id: aba35a044a5c
     last_write_checksum: sha1:2f7a324ebce5d4b583ff5fdf4b29dd9de7149604
     pristine_git_object: 524d20a5f9b7734fbc0d5d2082434834bed43859
+  docs/Models/Shared/NativeWebhookCourseId.md:
+    id: f2675cc1713b
+    last_write_checksum: sha1:7af1947970dbc7eb9d1a847415bfe7357ca2e750
+    pristine_git_object: 4edb3bca1099eb3e7ff0240be82b965347c218e1
   docs/Models/Shared/NativeWebhookEventId.md:
     id: dcf46d9b026a
     last_write_checksum: sha1:1d326871e4a9726a92b150c83cf0e8e05ef7c6f1
@@ -8607,6 +8835,10 @@ trackedFiles:
     id: eb4593fa7de0
     last_write_checksum: sha1:f61ad9b955e7826c644c5f786e9f5f263831fc6b
     pristine_git_object: 32aa7c0248499d585e8aae31bf96df005e8a4920
+  docs/Models/Shared/NativeWebhookStudentId.md:
+    id: 481ad391e347
+    last_write_checksum: sha1:0a6d9d8f9e7406c668056252abf6ec192fd544b7
+    pristine_git_object: bf417ad6be4cff4fd27397740de1021a3a51f65b
   docs/Models/Shared/NativeWebhookTaskId.md:
     id: 7e8f7d667446
     last_write_checksum: sha1:e100094b22324d2e92dd579546bfcf896b9d8090
@@ -8617,8 +8849,8 @@ trackedFiles:
     pristine_git_object: 51b242ed4ddc0af4e5d05fc34919c6ef4c128117
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:c2f6c301a71491b4fa002b12e5729e215d5fd468
-    pristine_git_object: b51e42517ad52d8fc935bbc4de806ce82d40d591
+    last_write_checksum: sha1:74aa1679457a14355e1f5ea44947005bb5ee4f43
+    pristine_git_object: 46fe0b3d92e5920a3a654d54f878d4a198432ba8
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -8985,8 +9217,8 @@ trackedFiles:
     pristine_git_object: 7273a7dff6c4caba70cdca57ea2b4b8403c22142
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:0c31e9657290510fdb9c3f4821ea8b141fca98f7
-    pristine_git_object: dbe5e084c5eddebafbf92c0f0931a647cd479ba7
+    last_write_checksum: sha1:53ae18b6ff024f89d8dff5f164c464465b481849
+    pristine_git_object: 1bce7cb8e2e86954cf67fc2cd696ac577c7a85d9
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -9731,6 +9963,10 @@ trackedFiles:
     id: a41bc94fae9c
     last_write_checksum: sha1:12eb31aee26f91b893715057ef497acbbd2e37b3
     pristine_git_object: 7e3e9cd931b6db369ea69defd7e95012bb0df86a
+  docs/Models/Shared/VirtualWebhookCourseId.md:
+    id: 90d683fcd8fb
+    last_write_checksum: sha1:edd0c6f40d1489e74d927d098d409fbb4b65e36e
+    pristine_git_object: 0b1e28a8b3a30c0a345f197424990ed253d57e8a
   docs/Models/Shared/VirtualWebhookCustomerId.md:
     id: 55417a0be1bd
     last_write_checksum: sha1:18e594b4baf05d05e98d32f8ce52ea53e310ad37
@@ -9847,6 +10083,10 @@ trackedFiles:
     id: 61a2f6736bfe
     last_write_checksum: sha1:2ce610ea4ac26b1b74b4d10890adb7111d4549fe
     pristine_git_object: 8839f90de360e39e3681380e8ffe106085f1bbdc
+  docs/Models/Shared/VirtualWebhookStudentId.md:
+    id: 9753466fe710
+    last_write_checksum: sha1:aed256d6b6a82dc39b40f38a457a828106f34de8
+    pristine_git_object: 9418e4b81d1b7df98ba9a4e617c12c811d17c917
   docs/Models/Shared/VirtualWebhookTaskId.md:
     id: a265f56d3f93
     last_write_checksum: sha1:3406c0fa79a9d3444387cbb7a17663f474854380
@@ -9901,8 +10141,8 @@ trackedFiles:
     pristine_git_object: 9b95faf28880594cb5613178c5bb40dea52e65a1
   docs/sdks/activity/README.md:
     id: f6e8241fca80
-    last_write_checksum: sha1:01269cdade98b4450dd76b6c57b2fb7394f7af38
-    pristine_git_object: 0e3402f3568962df6a62b46a8065963b326ec2dd
+    last_write_checksum: sha1:d91ffb889d2d98e62ce35fb135714f3818434229
+    pristine_git_object: 56afa6d41799af88eee902b374d6deec2a4a4507
   docs/sdks/ad/README.md:
     id: 4a5f13d72832
     last_write_checksum: sha1:ac2138a5e60c28d65d9c278da1be8bb70b05834e
@@ -9997,8 +10237,8 @@ trackedFiles:
     pristine_git_object: 0737cc9d9275522cc1777a6aee0d2237fbd16486
   docs/sdks/collection/README.md:
     id: 8e08642c5af2
-    last_write_checksum: sha1:4280752390110eec19d086b3e55daef2bc3c5143
-    pristine_git_object: 2864f7c9b799de322a9ae98605b1d5ae6384138e
+    last_write_checksum: sha1:85ceaff68a3ad9839727e1672fabd249076a3e5a
+    pristine_git_object: 6fd4956dad46ea9c3806fe1b46f201beeceb05a8
   docs/sdks/comment/README.md:
     id: e4246f80d976
     last_write_checksum: sha1:9f46dd985c983ca4262ae84cf2f2d9618be40f03
@@ -10023,6 +10263,10 @@ trackedFiles:
     id: 5859714108c3
     last_write_checksum: sha1:39357616221b18aeeb4649a39c00e19b655de1b6
     pristine_git_object: da8a1708efa113847ca2d4b84f7e0e7e216e5c7e
+  docs/sdks/content/README.md:
+    id: de1d68ebc2ba
+    last_write_checksum: sha1:09b671709ef42a19693a68ef190ca145a34a0e7e
+    pristine_git_object: a50d630f8ba5152386ca7c67e4ba2f7eebc28fde
   docs/sdks/course/README.md:
     id: 80cb1721406a
     last_write_checksum: sha1:161760d97341e20db1d7d16d803bc1dbee4d2946
@@ -10173,8 +10417,8 @@ trackedFiles:
     pristine_git_object: eecd58684db68b2eb68d8678ecbcbdb3869cc9a9
   docs/sdks/lms/README.md:
     id: 794550affa22
-    last_write_checksum: sha1:6dd237c738c71c4dd19b8063bc6564c542c5d099
-    pristine_git_object: e01722dfd5ed74b6b87a4d040959dafd71954838
+    last_write_checksum: sha1:f9d5c13863adaa15127f9dca2f8f44d99319a603
+    pristine_git_object: f694b59b0e8167adffa5ff09c1f261b9b02c07ce
   docs/sdks/location/README.md:
     id: f174fc17f497
     last_write_checksum: sha1:0df343f1fb50888d285d172dfce42f6c77cd489d
@@ -10433,8 +10677,8 @@ trackedFiles:
     pristine_git_object: 17d37bd558b162a15a8c1d497af843af1d91fa25
   src/Activity.php:
     id: 6d81fc6b52c3
-    last_write_checksum: sha1:d64cc279091fb41e53fd9464e25372bece67e47d
-    pristine_git_object: 7980cc6a0b0683754375f73a611fc13579ff9b9d
+    last_write_checksum: sha1:e5bb906eae0cd64ff666be3edd19ae79757bbeb9
+    pristine_git_object: 3d4ef793a0b8704d0a9d6af5871137727bd799b4
   src/Ad.php:
     id: 70223511227f
     last_write_checksum: sha1:d43e8991d45fe8fbd885519bfcdec5f1bedc5771
@@ -10529,8 +10773,8 @@ trackedFiles:
     pristine_git_object: 65057f12b688be9b3f03ff50160902924880196d
   src/Collection.php:
     id: 6f459ff97ce8
-    last_write_checksum: sha1:3d3924554a48680c760c6fe4ce4ad705d2ca7db8
-    pristine_git_object: e0eefb67042ddf9f824f18ec401313f24e4e0e50
+    last_write_checksum: sha1:894ae9953a5f00a93c6f1f0b8d8d54c860fcb8ce
+    pristine_git_object: 96a8b7ab66b4d2c78275e1d2f121a01274af42eb
   src/Comment.php:
     id: 18271c556a2d
     last_write_checksum: sha1:cf1c87cf031c4e5599d1e7139626a43fa2828279
@@ -10555,6 +10799,10 @@ trackedFiles:
     id: 6026bb27482c
     last_write_checksum: sha1:1c126d0842323f6ddfbd2a02619823ffe5fcf165
     pristine_git_object: f34cad5130f2b448b4ac22a8798ab78030dd0ac3
+  src/Content.php:
+    id: 81face746662
+    last_write_checksum: sha1:ce3034ce5e45dc4bf0248ad0bd4c99175da09ee9
+    pristine_git_object: de4dcad569ee0bd9be7e4f27528f3a396c39cdb9
   src/Course.php:
     id: 07e5c7437d29
     last_write_checksum: sha1:8ff70d7f12eefb33d1a80e58c8bbe9c48e3b7f66
@@ -10769,8 +11017,8 @@ trackedFiles:
     pristine_git_object: 04fbbcd3de14a20e88b2418856c761f025a6caa1
   src/Lms.php:
     id: 3d82df8edc95
-    last_write_checksum: sha1:7e1b256a852d636c32af98f0ad959a230ef8b349
-    pristine_git_object: 06bc6404ba4b19de0d533e54f64101be9213612b
+    last_write_checksum: sha1:9dee524f913d81b5ad9166822d5ec43e6024d527
+    pristine_git_object: 28b90abb286bbad915631dd5f460c365da23a191
   src/Location.php:
     id: 43400abbb3f1
     last_write_checksum: sha1:64e4e080ec8a648655a2c4c2b25d68b26d1a5d0a
@@ -11511,6 +11759,18 @@ trackedFiles:
     id: f46268762b0e
     last_write_checksum: sha1:f67f372c8a9d031fcd208e2da31b51846c7354bb
     pristine_git_object: 4bbd59245d40e570e9287c193dcaf14c1a7506c5
+  src/Models/Operations/CreateLmsActivityQueryParamFields.php:
+    id: e57f34292eb7
+    last_write_checksum: sha1:a7c4bc374459b931ae84fc24dfa88eeb00aa13e2
+    pristine_git_object: 5f8fef09e630ab9407a0e8a41844de791c7c8fad
+  src/Models/Operations/CreateLmsActivityRequest.php:
+    id: 9748ec88f42f
+    last_write_checksum: sha1:3c3996afb93a02827d6eb5514fe1d4a21f655aa5
+    pristine_git_object: ede24a171a1b7a006f0c3881494630c15367262a
+  src/Models/Operations/CreateLmsActivityResponse.php:
+    id: c93d30624685
+    last_write_checksum: sha1:6f3080dd3627239960f364a065c94c7bb6c2ff06
+    pristine_git_object: ddfa9faa58d46b42f3c775e17f7f9da8fe5ab45b
   src/Models/Operations/CreateLmsClassQueryParamFields.php:
     id: 8f9ae192e74f
     last_write_checksum: sha1:c9ea4aaef04bade1eba099b55bc71bf68194eb58
@@ -11523,6 +11783,30 @@ trackedFiles:
     id: 676e2a122737
     last_write_checksum: sha1:ce36b1858cb8204458f3d604718b895901205ee8
     pristine_git_object: 88185cb534a66aa50d224d052e81c69bfaf8ae50
+  src/Models/Operations/CreateLmsCollectionQueryParamFields.php:
+    id: 2362a503cf10
+    last_write_checksum: sha1:da878df223d7fe921d2564cd7ef4584b37985533
+    pristine_git_object: 897fa2455e201c30ae9b16c6282648806eb85b20
+  src/Models/Operations/CreateLmsCollectionRequest.php:
+    id: be0102ffca85
+    last_write_checksum: sha1:01dec934875f064443647b5bfedca0a11548f1ae
+    pristine_git_object: 872e6e2e574b93b919a0a2210676c023f482f214
+  src/Models/Operations/CreateLmsCollectionResponse.php:
+    id: 5d5122b5cb9d
+    last_write_checksum: sha1:61386dce49e1b223d26e1d30d0738c9450ad5acf
+    pristine_git_object: 4d6d16899ecc0da8197b308d0671fb97c62a47f3
+  src/Models/Operations/CreateLmsContentQueryParamFields.php:
+    id: da15af2853d6
+    last_write_checksum: sha1:80a9853a396815a33d09c70fce9b4bdc75487d4b
+    pristine_git_object: e0a9f87857928f5468a73e9f13a5d8b924a93e52
+  src/Models/Operations/CreateLmsContentRequest.php:
+    id: e5c50f19e0a8
+    last_write_checksum: sha1:9c5c25fe4239ff69bcc7a982337bc978c64a67c6
+    pristine_git_object: 5de9470e4cc5865d29926fc2e2e193aa3f740025
+  src/Models/Operations/CreateLmsContentResponse.php:
+    id: 4c9578e15d35
+    last_write_checksum: sha1:22f7edef9ac51fffa398cc95cc322d83e55116aa
+    pristine_git_object: bb7ff9f043d569a7149101722e965743dd7b1185
   src/Models/Operations/CreateLmsCourseQueryParamFields.php:
     id: dc44d70a7808
     last_write_checksum: sha1:0bd1874932eea85030118089897b29a217d74792
@@ -12755,6 +13039,18 @@ trackedFiles:
     id: df1d59c221d1
     last_write_checksum: sha1:3b1e8bad278497c4de639fe58ebef94ad97851ca
     pristine_git_object: 134cc82683a25d1cb81dde62901e809353ebd382
+  src/Models/Operations/GetLmsActivityQueryParamFields.php:
+    id: 9fe6e52290bd
+    last_write_checksum: sha1:e25a6f9713ee207ea23a6cf7e972d6fd7dff0cf7
+    pristine_git_object: e3b5dcd8e5fe2304329a8c8e211c6fcdf1e5a721
+  src/Models/Operations/GetLmsActivityRequest.php:
+    id: 4de41ca96ef1
+    last_write_checksum: sha1:ff034307176dfa650bffd18ee20bcc8fdf697c33
+    pristine_git_object: 2b69f2ffa97152857ba60bae55f6fa309a8a7778
+  src/Models/Operations/GetLmsActivityResponse.php:
+    id: 8cd4f3d88c81
+    last_write_checksum: sha1:dec835da120d7b30e3d1886736aa6be28171bade
+    pristine_git_object: f3a474cce2223f42afbfc8557bda67e4e83519cb
   src/Models/Operations/GetLmsClassQueryParamFields.php:
     id: af0148511141
     last_write_checksum: sha1:03f690b21cb24d005dab1670b6ca00f88cbf86bb
@@ -12767,6 +13063,30 @@ trackedFiles:
     id: 82ee3977badf
     last_write_checksum: sha1:fd82fce50aee0f9f3241c1ba28a505783029f34a
     pristine_git_object: 37517cf05cb2de9ec1c8090ab9124b7353f85627
+  src/Models/Operations/GetLmsCollectionQueryParamFields.php:
+    id: 3f030687f566
+    last_write_checksum: sha1:de78789aab26371d9ecc4159bc9bc07defbd28a9
+    pristine_git_object: 65257d2c9e8f68b8c7d3f000cc898fb75762c7f3
+  src/Models/Operations/GetLmsCollectionRequest.php:
+    id: b387099ca725
+    last_write_checksum: sha1:999e8cfbb44496744f892268fcd28666b3dc55d2
+    pristine_git_object: ab7d2903b9387068a3f1a1eb0010bc4ba7d05f93
+  src/Models/Operations/GetLmsCollectionResponse.php:
+    id: 4c45301ddd9c
+    last_write_checksum: sha1:890f0fc814613747422bdd411865ac8a8d6c8fd6
+    pristine_git_object: f3f83c0cd6efea5e400ff94e87d8961ec8cf46db
+  src/Models/Operations/GetLmsContentQueryParamFields.php:
+    id: ce9e94839a84
+    last_write_checksum: sha1:cae5340eac3517e01d24ceed8eb061cd10f9a060
+    pristine_git_object: f5c12e831295589ba4a94b7ee1e8585d327e5442
+  src/Models/Operations/GetLmsContentRequest.php:
+    id: ee139ab2d869
+    last_write_checksum: sha1:e123c629ecadc19546560ce7028d9758bbc3d714
+    pristine_git_object: b177b8050b7aa49f3101d96cc0ce8f1bbe4536a2
+  src/Models/Operations/GetLmsContentResponse.php:
+    id: 98949dfa8ca3
+    last_write_checksum: sha1:1dfdc75a1847fdeef2f7ce68fd267bec8b4745d3
+    pristine_git_object: 0f93d8385ce171fe2f527153b3de87eb0d7b89e4
   src/Models/Operations/GetLmsCourseQueryParamFields.php:
     id: cbbccfd70bf2
     last_write_checksum: sha1:fe3b9000b4a1f7006ebd2fe9c236e4959578ad0c
@@ -14151,6 +14471,18 @@ trackedFiles:
     id: be38154974b9
     last_write_checksum: sha1:e7d98e709e374334fcf1d9f4ba0691ec1658d20e
     pristine_git_object: 21bf4775096a9676fb220cb29c5e38fda412c8d9
+  src/Models/Operations/ListLmsActivitiesQueryParamFields.php:
+    id: 4df2fe5b1ca4
+    last_write_checksum: sha1:f6eb0ba35544bf66ef3f4a6c8c64781e697de7dd
+    pristine_git_object: 7465647fa5fe222de3f461200ee3b0d2d7a09346
+  src/Models/Operations/ListLmsActivitiesRequest.php:
+    id: 512fe47c2aba
+    last_write_checksum: sha1:449304694e872a8dded87b7eb33b229d2c12db0d
+    pristine_git_object: 993d2f3c30a0a9cc8f23615676cee6e044c86a35
+  src/Models/Operations/ListLmsActivitiesResponse.php:
+    id: 6f641d0def58
+    last_write_checksum: sha1:b0350a1f0348aab15b9a11315a06d8e0003f78b2
+    pristine_git_object: 0bbef38495c4b60fc965723e41d003bc7a40dcbd
   src/Models/Operations/ListLmsClassesQueryParamFields.php:
     id: ff0d742bc6a2
     last_write_checksum: sha1:07c5e3ffc591443d7fa33ea00c009b83026c0917
@@ -14163,6 +14495,30 @@ trackedFiles:
     id: fa8ce6849c52
     last_write_checksum: sha1:3b466df1181c06a5a1d800df0e70257c5c06b766
     pristine_git_object: d54e7d95b981c7bb060ac44026b7f09a50595ae8
+  src/Models/Operations/ListLmsCollectionsQueryParamFields.php:
+    id: 49fd6f2416e7
+    last_write_checksum: sha1:8f8cd27cd8aa82df54e477e2d521bbaf61b2f9a0
+    pristine_git_object: 6c2ae6da1fdcc5aef1515534c9fb3fa75e7bd3af
+  src/Models/Operations/ListLmsCollectionsRequest.php:
+    id: 24bc137ea4ac
+    last_write_checksum: sha1:9377a4227723eabebdab6e3cb5fb548b400c649e
+    pristine_git_object: b4b3c3fce045edcb7ccbf989dc051f47797e408d
+  src/Models/Operations/ListLmsCollectionsResponse.php:
+    id: 03d2c8b0fd53
+    last_write_checksum: sha1:d06b71aed2cc822061188e57f8b57310125101e3
+    pristine_git_object: 75a3145651af58dac12c106fe07db0e9701f0f8a
+  src/Models/Operations/ListLmsContentsQueryParamFields.php:
+    id: 3eef352db0fa
+    last_write_checksum: sha1:95b384c38ef717c891492ea3ffc1310ad31a45ea
+    pristine_git_object: 691f639edf34fb2e8d0e217d82fe5bf6b24dbb4b
+  src/Models/Operations/ListLmsContentsRequest.php:
+    id: 17aa2e70c6a3
+    last_write_checksum: sha1:5ea841c8119dde602fa4516531340ccbdb787915
+    pristine_git_object: 8daeb7ecb6bc1f19139701f42aea6db764a88ee3
+  src/Models/Operations/ListLmsContentsResponse.php:
+    id: 8cdf8512ccf9
+    last_write_checksum: sha1:7d4b950f6b949da56d900bd222d58dfdc876175d
+    pristine_git_object: 2634cf9259eebe2da62975d2a480559af7391f16
   src/Models/Operations/ListLmsCoursesQueryParamFields.php:
     id: 4f7a7bf74147
     last_write_checksum: sha1:c4894f089be75dfc4487180d942209a9f29de7dd
@@ -15391,6 +15747,18 @@ trackedFiles:
     id: e69205d912b7
     last_write_checksum: sha1:91c5543234645dbf9f753dc194c972887dbdda1a
     pristine_git_object: b6c2e7bf36b885519223a5772be8b79bd0121e37
+  src/Models/Operations/PatchLmsActivityQueryParamFields.php:
+    id: ffa4b7b6f361
+    last_write_checksum: sha1:32e0be920cd1ed426223208dbb54c043d6d0f17d
+    pristine_git_object: c11cd3e39e979dfb2dc25acef23d195ccc2a3721
+  src/Models/Operations/PatchLmsActivityRequest.php:
+    id: 7ec5557651dd
+    last_write_checksum: sha1:d0c73b6b82d4070be0e7e87c82980694ef56a472
+    pristine_git_object: 49999d55c68f36a84e4f8ae8f08d4293627e123b
+  src/Models/Operations/PatchLmsActivityResponse.php:
+    id: 5c8ef0026e00
+    last_write_checksum: sha1:f8d47f1dc5ac144687e0b4c454e0c69aa9691e56
+    pristine_git_object: d412c44f0db73a51a398520daba71df640b5c00b
   src/Models/Operations/PatchLmsClassQueryParamFields.php:
     id: 659fea832d40
     last_write_checksum: sha1:f4f5610511194f8351da733a3a416d227fa47df7
@@ -15403,6 +15771,30 @@ trackedFiles:
     id: 8b7a110c42c6
     last_write_checksum: sha1:9ea600a4d2914bf9f23bf27ccc8b0db0565b6ade
     pristine_git_object: 2dbfa875aa6282b892e9cecf8b881e94fafc7dc9
+  src/Models/Operations/PatchLmsCollectionQueryParamFields.php:
+    id: b0e64214f488
+    last_write_checksum: sha1:c9530f5f79a537d29feb6399815a13fe8f04cda2
+    pristine_git_object: 9d9ce1e3dffe83c8a06d7fa1274c58362619f987
+  src/Models/Operations/PatchLmsCollectionRequest.php:
+    id: a0640b143b81
+    last_write_checksum: sha1:37fa6c715b60c062e77d6dddc441901a779a2508
+    pristine_git_object: 4cf06ab99e6099f7da9776ac8167e03cecd4d796
+  src/Models/Operations/PatchLmsCollectionResponse.php:
+    id: b5c553e0768c
+    last_write_checksum: sha1:b9f83d9774cf511d1dcb89ef95059d89d6b8d9b2
+    pristine_git_object: 1c067e3e946bf7a076776a391e1c66e314caa764
+  src/Models/Operations/PatchLmsContentQueryParamFields.php:
+    id: cb9279beda4e
+    last_write_checksum: sha1:2ba532140c185d692873e778c3223d4ba12ebacf
+    pristine_git_object: 6b336fda658f4276810006732de28dd0b7354fe4
+  src/Models/Operations/PatchLmsContentRequest.php:
+    id: f18e88493fb7
+    last_write_checksum: sha1:d03927fae621c5edcd28265630724682e4a4abfb
+    pristine_git_object: 6047fb311c301644b9a8095ffc689e18679eea85
+  src/Models/Operations/PatchLmsContentResponse.php:
+    id: 12041d6a8378
+    last_write_checksum: sha1:d20c2d8d92630039fc021e1e45346a56be69bc91
+    pristine_git_object: 22e157dd9c947adfdb88be2ccd0174f752ded5b9
   src/Models/Operations/PatchLmsCourseQueryParamFields.php:
     id: ec0ec5c9eaa0
     last_write_checksum: sha1:7a0ad33227052e11e5e0508c1989cffd537b6e1e
@@ -16295,6 +16687,14 @@ trackedFiles:
     id: 36edd960e2fa
     last_write_checksum: sha1:ee142a2e388b55a73f1080872e064019dd511657
     pristine_git_object: b101478e7933f6a8f6be02d6c79bc117ef7d5ba0
+  src/Models/Operations/RemoveLmsActivityRequest.php:
+    id: 7972218c11a0
+    last_write_checksum: sha1:1eb10aceeedf66b566e85ec9f66e2d1e1e51a18a
+    pristine_git_object: 7ae08496eebb10ca03ccd85ccdf401171fdcea37
+  src/Models/Operations/RemoveLmsActivityResponse.php:
+    id: ef7b1644d193
+    last_write_checksum: sha1:4e811e7a4fd4aff1696b54f8d0a471b9f969185b
+    pristine_git_object: 037484a5b4e4fed02316df3455c2e9c0499d37e7
   src/Models/Operations/RemoveLmsClassRequest.php:
     id: 51c8cd1b976f
     last_write_checksum: sha1:1096868171843696c5d1290bafbab77530a0027b
@@ -16303,6 +16703,22 @@ trackedFiles:
     id: 44a8f474b163
     last_write_checksum: sha1:51ed66c8a2a9866d9c3b03f64e8e688f28534d74
     pristine_git_object: 4edfcacf115ae573555047be2f41888b8f356f26
+  src/Models/Operations/RemoveLmsCollectionRequest.php:
+    id: ad6a4c46a856
+    last_write_checksum: sha1:07987fa6648b32393b56404d8012a9e2821a7bbb
+    pristine_git_object: dfc1109a8fa3364157015e3c906327b5e51646da
+  src/Models/Operations/RemoveLmsCollectionResponse.php:
+    id: c09cda29d8cd
+    last_write_checksum: sha1:d0ace74fb6b3786e2aa1c49581391eccb6dfa46f
+    pristine_git_object: 7b6bef9ae9ff160468f182996a9542f88aaa12c9
+  src/Models/Operations/RemoveLmsContentRequest.php:
+    id: cf6c7533a2ed
+    last_write_checksum: sha1:a922c4540e7bbb15359711090632a83c7a1d7a76
+    pristine_git_object: 5bf2450c319d903b876508b9d5ca5c1d678cf04f
+  src/Models/Operations/RemoveLmsContentResponse.php:
+    id: 171cd2e9cfa0
+    last_write_checksum: sha1:63950bdef6a7c5e059b91ff4e10d8b03f92c83b0
+    pristine_git_object: 499a2c9698e60fb45c5376401c16497df2417262
   src/Models/Operations/RemoveLmsCourseRequest.php:
     id: dff7ad8654c6
     last_write_checksum: sha1:232ac8cc4290b513a6af3fd486ac5e51a8d67f19
@@ -17283,6 +17699,18 @@ trackedFiles:
     id: b7f79ed456a0
     last_write_checksum: sha1:ea79e0e61f1f700f31803745810d5e8d76b7bc71
     pristine_git_object: f0ff4da5a4deecb310fbc8f76aca46ae89ced034
+  src/Models/Operations/UpdateLmsActivityQueryParamFields.php:
+    id: c78f178c1c00
+    last_write_checksum: sha1:04b85b448ca3719c9be134139447d89eacbfaf0e
+    pristine_git_object: 0042440073609d2d4208122eeb57f110609ad230
+  src/Models/Operations/UpdateLmsActivityRequest.php:
+    id: eeb65e572e12
+    last_write_checksum: sha1:25770315a7299e29408239991e37dff9b93ef422
+    pristine_git_object: 6b9e226618664286c8fafc3967c1c2a2720a54fa
+  src/Models/Operations/UpdateLmsActivityResponse.php:
+    id: 3734c3669d91
+    last_write_checksum: sha1:14ee555b91a4e0a397de2de6ea9561a23cf03f92
+    pristine_git_object: 6ca9676cc47bc8d258d89c0beff4c16ccf81bc19
   src/Models/Operations/UpdateLmsClassQueryParamFields.php:
     id: 0b0e61e1da7b
     last_write_checksum: sha1:dc7013612ed5a0ed38aaf071094420e98d567299
@@ -17295,6 +17723,30 @@ trackedFiles:
     id: 005890d098a7
     last_write_checksum: sha1:b502c2811be251bd105ed1fc440b6c7c878c659e
     pristine_git_object: e73fef91b0f8a237fdb141650f29b914778d1327
+  src/Models/Operations/UpdateLmsCollectionQueryParamFields.php:
+    id: cb9574ad2c5f
+    last_write_checksum: sha1:2fffd633efd675d48aa2a785060e5f54d16c7ea8
+    pristine_git_object: 50f1956185eddf71776710efc951eb778a0256d6
+  src/Models/Operations/UpdateLmsCollectionRequest.php:
+    id: 5dac4d87db17
+    last_write_checksum: sha1:4cb40237038b0a9f8bde059c167f01db4d7b78c0
+    pristine_git_object: d00f583091c2291f39175ee8abc4fee6e480a1d6
+  src/Models/Operations/UpdateLmsCollectionResponse.php:
+    id: e5e8e3a19abf
+    last_write_checksum: sha1:d9848923fa8c37942daf7035ef5f571b307fd092
+    pristine_git_object: ae8d4226336f4f611f2615ff861164d79c86bcaa
+  src/Models/Operations/UpdateLmsContentQueryParamFields.php:
+    id: 3f1788545fb3
+    last_write_checksum: sha1:8f86637a503d70d7764e3c1bac93b195b85ac290
+    pristine_git_object: bcacb3122dc59dc11aac91f453da57fa21b1f560
+  src/Models/Operations/UpdateLmsContentRequest.php:
+    id: 956beb56d4f8
+    last_write_checksum: sha1:bd6744f911501ce7d675f1fddcf56d2eea228855
+    pristine_git_object: 498883d6ba75fa17286b36cc18eb5cbe8c81ed0c
+  src/Models/Operations/UpdateLmsContentResponse.php:
+    id: 53cf47e58ac8
+    last_write_checksum: sha1:1ccee61e0fed3249afa8bba77ce63e5591ebac6c
+    pristine_git_object: 3c71aa1a656175512367cb68bf212c56c74fbb2a
   src/Models/Operations/UpdateLmsCourseQueryParamFields.php:
     id: 781b0148ea91
     last_write_checksum: sha1:303fecc8819eee2a05905d9a3d528b3d5acb375e
@@ -18785,8 +19237,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:66b6535e01d929f2ca395c8e0de7eba5b7f37cf7
-    pristine_git_object: 80fe7f9c99e93d10aded2c9028ba4b334f9fdf7b
+    last_write_checksum: sha1:c1e5bc2029fcf6966abc2355c1e0d39803bfa3b5
+    pristine_git_object: 09732acc7b40621f769b9af5214ef2977e564a95
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -18903,6 +19355,10 @@ trackedFiles:
     id: e6de2b005d64
     last_write_checksum: sha1:a4ad1acc2844eb7117dbf2b81f6b6d88d32649ce
     pristine_git_object: 289cef0af94ab19e6fe5ca14a186ef8db22160fd
+  src/Models/Shared/ListContentId.php:
+    id: 736fe08cb5ac
+    last_write_checksum: sha1:896c27893ac96bc1d33fdfbb2c512f14b59f1b11
+    pristine_git_object: 0cc608afd9de5ff567399377f18b2e876e0b2007
   src/Models/Shared/ListCourseId.php:
     id: 62a8cebfdf79
     last_write_checksum: sha1:e7809a748019d594a66e9550274d136c8bc445fa
@@ -19115,10 +19571,26 @@ trackedFiles:
     id: 2d3950dff098
     last_write_checksum: sha1:d44ab3c544c89bc32a7745c4dce77f982a0d8b70
     pristine_git_object: cfb5f5c3963136fdd569d01e3a61a0744f77c084
+  src/Models/Shared/LmsActivity.php:
+    id: 08866f331214
+    last_write_checksum: sha1:8beb08b85e1b05d5e1807e653cd9fa220c18d428
+    pristine_git_object: 89d398f1a6876ddc36c2eac313bd91d31d12373d
   src/Models/Shared/LmsClass.php:
     id: 46ee2d66ebcd
     last_write_checksum: sha1:2201c23e4327a2d1883cc01ca6182d133dbd8a32
     pristine_git_object: 9b6eb54f3bca4e92ebe07524c555c743e8000c7f
+  src/Models/Shared/LmsCollection.php:
+    id: 11e8c1abe058
+    last_write_checksum: sha1:170120191906696ca059a7316fe45aef7ad998ab
+    pristine_git_object: 61b330bb465d4feb177c0edeb8e1a4f4ae0a2af6
+  src/Models/Shared/LmsContent.php:
+    id: ee5f534164f9
+    last_write_checksum: sha1:954b68f837dde8ad4a48d49441614322932cf5a0
+    pristine_git_object: 4dd401aab55bc68b4d722a8cc849addb03adb590
+  src/Models/Shared/LmsContentShapeLocalization.php:
+    id: 87e28eb41027
+    last_write_checksum: sha1:a5bafdabec9ec555bf76a422d87160910ed7a749
+    pristine_git_object: d0f8fab8efef8f229f960cd8a2c89be2081368ef
   src/Models/Shared/LmsCourse.php:
     id: 197ff9680330
     last_write_checksum: sha1:3317f7bab4eb7d2d321ade2ab07b71342245eb55
@@ -19133,12 +19605,12 @@ trackedFiles:
     pristine_git_object: 6458f8776597afd11a1bf926b32ec3c51d002e24
   src/Models/Shared/LmsMedia.php:
     id: 348f2d6d16fe
-    last_write_checksum: sha1:2835ef1fefbc4e90d3b5a921dde93b4b3f98409e
-    pristine_git_object: c4286a1ac94b0fa750113bb014d4a007075703b9
+    last_write_checksum: sha1:90f6d67b55b27975119e21e2fc99ca83abdc126c
+    pristine_git_object: 91b34150cf4f9771d961ef3b1e97f76c534fb4ef
   src/Models/Shared/LmsMediaType.php:
     id: f5c5f454b059
-    last_write_checksum: sha1:059b062e1a8202a8e32a7b9075d735e9bd627bbe
-    pristine_git_object: 25659d575a758c2ec939f8e7552251d1cef9e26f
+    last_write_checksum: sha1:b13744562ba3dfb475e1af7d14ff1c8c376a8190
+    pristine_git_object: 48a93f2c9e093d6265041351786213d09d825553
   src/Models/Shared/LmsStudent.php:
     id: 0cabc3e9cd93
     last_write_checksum: sha1:84a924c4b25cad1884d654f288133ce7968ff2cd
@@ -19247,6 +19719,10 @@ trackedFiles:
     id: 1df2967c6815
     last_write_checksum: sha1:434b8258b517039f48f33e2a073fb3c8fc6e7038
     pristine_git_object: b0958aba8600b615eecd27908455ff8e10950dcf
+  src/Models/Shared/NativeWebhookCourseId.php:
+    id: 9ee4c5a8b814
+    last_write_checksum: sha1:12d2f69dad617973a086d043ce161638f99838a5
+    pristine_git_object: 5130be3cfe32867241156f1a44d07e58f22d2d3a
   src/Models/Shared/NativeWebhookEventId.php:
     id: b756a51c7fb6
     last_write_checksum: sha1:f02eb5546692953d452400d4fffffadfb6fd246d
@@ -19279,6 +19755,10 @@ trackedFiles:
     id: 65117cf05fd5
     last_write_checksum: sha1:a9b005ab42a952b6af8efea8af1c41fca78462f1
     pristine_git_object: f3391079d8c35bcbb8f3a72e4253e8a8cf8879c6
+  src/Models/Shared/NativeWebhookStudentId.php:
+    id: 37fa4dc18e8a
+    last_write_checksum: sha1:52cb7445e836fe4b43fbd03e81d943eabe7cbda4
+    pristine_git_object: 8c9fb9002d7c50763494f6e9bc1d411f76d3a667
   src/Models/Shared/NativeWebhookTaskId.php:
     id: 24debef40ef2
     last_write_checksum: sha1:cb42854f1143dd35c3b19b7118a394e0b3104a2a
@@ -19289,8 +19769,8 @@ trackedFiles:
     pristine_git_object: 3560c526c71c3a7ce8d98c5d900da5ed21f4beff
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:554a1daf2541d8958bd9a000bcbc40c32a585acb
-    pristine_git_object: a2a35785f9561df3667074caa31dba5dbe0f3abc
+    last_write_checksum: sha1:ee99dfff569a954ae5f52bf4ab657b1ba33602ea
+    pristine_git_object: d67c42732e97715c3b41928b0132f428278a5001
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -19653,8 +20133,8 @@ trackedFiles:
     pristine_git_object: e75e07d97fe43aad22894e8d81080eb220feb693
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:87671b1ff0f4f1bc7347b2420a52e486478bb267
-    pristine_git_object: 14b4086dac6c4ceac5bd76b18294f923fdffee06
+    last_write_checksum: sha1:98c51a5bce772a6cc4272e7f153e44b726dece49
+    pristine_git_object: 5e9b78b53ad9da716bfc111dc2ba75b1dd615825
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -20371,6 +20851,10 @@ trackedFiles:
     id: c8e2136ba8bc
     last_write_checksum: sha1:0f89588ebc2fb27fe2a597427b45e833db959130
     pristine_git_object: 7d2b265df7f2b7a4b53d9737b9ebe7d021b8b287
+  src/Models/Shared/VirtualWebhookCourseId.php:
+    id: e4a4fb4d948e
+    last_write_checksum: sha1:6f190fb7b54913600c75d069fe9081c96601b99a
+    pristine_git_object: d8752c864d83a233673e7ba2a183c284e5f03598
   src/Models/Shared/VirtualWebhookCustomerId.php:
     id: 0a30be344fbf
     last_write_checksum: sha1:3cb75135e5efda94247ecfab90c13f2093a4459f
@@ -20487,6 +20971,10 @@ trackedFiles:
     id: 9e3595f1d49e
     last_write_checksum: sha1:98d78143572e57dabec03bb15afaaae328bab700
     pristine_git_object: 176768f7034596b4b085d1fe83c2e4ffb43a17ab
+  src/Models/Shared/VirtualWebhookStudentId.php:
+    id: 29fdf659b147
+    last_write_checksum: sha1:ae7372d0ae9053cffaa54168c4459f11d3ad5f5f
+    pristine_git_object: f591ac5906013388e75e154185ed114cf3666878
   src/Models/Shared/VirtualWebhookTaskId.php:
     id: 2e2bb16e84ec
     last_write_checksum: sha1:29e0d365b604a5e52f20826e3eed2615154561f0
@@ -20629,8 +21117,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:30ad5f6758c561e1972a115ffcf261a976827e49
-    pristine_git_object: 1a1689d0f7b79bdb2b7106400af456dc2c4b302b
+    last_write_checksum: sha1:2b9b9d46991e25fe97d4d44d134c093a5117f4c0
+    pristine_git_object: ed6bba0855887c97f09780e0a2374cc0d4dd1796
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -20721,8 +21209,8 @@ trackedFiles:
     pristine_git_object: a1862cce3ba999911f03c796248fd7a8f440318a
   src/UnifiedTo.php:
     id: 23b841da485f
-    last_write_checksum: sha1:c5ab4e169931f74f27387bf0e93332799ac3762d
-    pristine_git_object: f1b8ba216dcb1569154edca6fb6878353975eda0
+    last_write_checksum: sha1:f07e20e09accb80d8008eed6af51058b1c219c59
+    pristine_git_object: 9decb688c0f399a4b6e836f4c9f2de207785e6a2
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
     last_write_checksum: sha1:e9b1c7277595f8e786f774674b3177e449cff509
@@ -26576,9 +27064,174 @@ examples:
       responses:
         "200":
           application/json: {"id": "<id>", "name": "<value>", "type": "BEHAVIORAL_ASSESSMENT"}
+  createLmsActivity:
+    speakeasy-default-create-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsActivity:
+    speakeasy-default-get-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsActivities:
+    speakeasy-default-list-lms-activities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsActivity:
+    speakeasy-default-patch-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsActivity:
+    speakeasy-default-remove-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsActivity:
+    speakeasy-default-update-lms-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createLmsCollection:
+    speakeasy-default-create-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsCollection:
+    speakeasy-default-get-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsCollections:
+    speakeasy-default-list-lms-collections:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsCollection:
+    speakeasy-default-patch-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsCollection:
+    speakeasy-default-remove-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsCollection:
+    speakeasy-default-update-lms-collection:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createLmsContent:
+    speakeasy-default-create-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getLmsContent:
+    speakeasy-default-get-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listLmsContents:
+    speakeasy-default-list-lms-contents:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchLmsContent:
+    speakeasy-default-patch-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeLmsContent:
+    speakeasy-default-remove-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsContent:
+    speakeasy-default-update-lms-content:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->event->patchMessagingEvent()`: \n  *  `request->messagingEvent->message->parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->message->updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->message->patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->message->listMessagingMessages()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->message->getMessagingMessage()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->message->createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->updateMessagingEvent()`: \n  *  `request->messagingEvent->message->parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->patchMessagingEvent()`: \n  *  `request->messagingEvent->message->parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->listMessagingMessages()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->getMessagingMessage()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->event->updateMessagingEvent()`: \n  *  `request->messagingEvent->message->parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message->parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->location->listCommerceLocations()`: \n  *  `request->orgId` **Added**\n* `unified-to->account->updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->journal->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n* `unified-to->journal->getAccountingJournal()`:  `response.lineitems[]->organizationId` **Added**\n* `unified-to->journal->listAccountingJournals()`:  `response.[]->lineitems[]->organizationId` **Added**\n* `unified-to->journal->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n* `unified-to->journal->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n* `unified-to->organization->getAccountingOrganization()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->organization->listAccountingOrganizations()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->account->listAccountingAccounts()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->taxonomy` **Added**\n* `unified-to->account->getAccountingAccount()`: \n  *  `request->fields` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->commerce->listCommerceLocations()`: \n  *  `request->orgId` **Added**\n* `unified-to->account->patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->account->createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->accounting->updateAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n* `unified-to->accounting->createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->accounting->patchAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n* `unified-to->accounting->patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->accounting->listAccountingOrganizations()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->listAccountingJournals()`:  `response.[]->lineitems[]->organizationId` **Added**\n* `unified-to->accounting->listAccountingAccounts()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->taxonomy` **Added**\n* `unified-to->accounting->getAccountingOrganization()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->getAccountingJournal()`:  `response.lineitems[]->organizationId` **Added**\n* `unified-to->accounting->getAccountingAccount()`: \n  *  `request->fields` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to->accounting->createAccountingJournal()`: \n  *  `request->accountingJournal->lineitems[]->organizationId` **Added**\n  *  `response.lineitems[]->organizationId` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->getLmsCourse()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->updateLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->patchLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsClasses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->listLmsCourses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->getLmsCourse()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->createLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->updateLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->patchLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->listLmsClasses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->createLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->updateLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->updateLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->patchLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->createLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->createLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->patchLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsCourses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsContents()`: **Added**\n* `unified-to->lms->listLmsActivities()`: **Added**\n* `unified-to->lms->getLmsCollection()`: **Added**\n* `unified-to->content->updateLmsContent()`: **Added**\n* `unified-to->content->removeLmsContent()`: **Added**\n* `unified-to->content->patchLmsContent()`: **Added**\n* `unified-to->content->listLmsContents()`: **Added**\n* `unified-to->content->getLmsContent()`: **Added**\n* `unified-to->content->createLmsContent()`: **Added**\n* `unified-to->lms->updateLmsContent()`: **Added**\n* `unified-to->lms->updateLmsCollection()`: **Added**\n* `unified-to->lms->updateLmsActivity()`: **Added**\n* `unified-to->lms->removeLmsContent()`: **Added**\n* `unified-to->lms->removeLmsCollection()`: **Added**\n* `unified-to->lms->patchLmsContent()`: **Added**\n* `unified-to->lms->patchLmsCollection()`: **Added**\n* `unified-to->lms->patchLmsActivity()`: **Added**\n* `unified-to->activity->getLmsActivity()`: **Added**\n* `unified-to->lms->listLmsCollections()`: **Added**\n* `unified-to->lms->removeLmsActivity()`: **Added**\n* `unified-to->activity->createLmsActivity()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->lms->getLmsContent()`: **Added**\n* `unified-to->lms->getLmsActivity()`: **Added**\n* `unified-to->lms->createLmsContent()`: **Added**\n* `unified-to->lms->createLmsCollection()`: **Added**\n* `unified-to->lms->createLmsActivity()`: **Added**\n* `unified-to->collection->updateLmsCollection()`: **Added**\n* `unified-to->collection->removeLmsCollection()`: **Added**\n* `unified-to->collection->patchLmsCollection()`: **Added**\n* `unified-to->collection->listLmsCollections()`: **Added**\n* `unified-to->collection->getLmsCollection()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->collection->createLmsCollection()`: **Added**\n* `unified-to->activity->updateLmsActivity()`: **Added**\n* `unified-to->activity->removeLmsActivity()`: **Added**\n* `unified-to->activity->patchLmsActivity()`: **Added**\n* `unified-to->activity->listLmsActivities()`: **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

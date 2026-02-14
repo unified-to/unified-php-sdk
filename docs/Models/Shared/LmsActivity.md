@@ -1,0 +1,19 @@
+# LmsActivity
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `completedAt`                                                 | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `contentId`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `courseId`                                                    | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `durationMinutes`                                             | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `isCompleted`                                                 | *?bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `progressPercentage`                                          | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `raw`                                                         | array<string, *mixed*>                                        | :heavy_minus_sign:                                            | N/A                                                           |
+| `startedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `studentId`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |

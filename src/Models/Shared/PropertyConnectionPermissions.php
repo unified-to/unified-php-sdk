@@ -185,6 +185,12 @@ enum PropertyConnectionPermissions: string
     case LmsStudentWrite = 'lms_student_write';
     case LmsInstructorRead = 'lms_instructor_read';
     case LmsInstructorWrite = 'lms_instructor_write';
+    case LmsContentRead = 'lms_content_read';
+    case LmsContentWrite = 'lms_content_write';
+    case LmsCollectionRead = 'lms_collection_read';
+    case LmsCollectionWrite = 'lms_collection_write';
+    case LmsActivityRead = 'lms_activity_read';
+    case LmsActivityWrite = 'lms_activity_write';
     case RepoOrganizationRead = 'repo_organization_read';
     case RepoOrganizationWrite = 'repo_organization_write';
     case RepoRepositoryRead = 'repo_repository_read';

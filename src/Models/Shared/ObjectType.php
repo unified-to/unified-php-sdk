@@ -106,6 +106,9 @@ enum ObjectType: string
     case LmsClass = 'lms_class';
     case LmsStudent = 'lms_student';
     case LmsInstructor = 'lms_instructor';
+    case LmsContent = 'lms_content';
+    case LmsCollection = 'lms_collection';
+    case LmsActivity = 'lms_activity';
     case RepoOrganization = 'repo_organization';
     case RepoRepository = 'repo_repository';
     case RepoBranch = 'repo_branch';
