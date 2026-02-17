@@ -20,6 +20,14 @@ class ListAdsReportsRequest
     public string $connectionId;
 
     /**
+     * The ad ID to filter by
+     *
+     * @var ?string $adId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=ad_id')]
+    public ?string $adId = null;
+
+    /**
      * The campaign ID to filter by
      *
      * @var ?string $campaignId
@@ -28,12 +36,28 @@ class ListAdsReportsRequest
     public ?string $campaignId = null;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<ListAdsReportsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     *
+     * @var ?string $groupId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=group_id')]
+    public ?string $groupId = null;
 
     /**
      *
@@ -88,6 +112,14 @@ class ListAdsReportsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      *
      * @var ?string $type
      */
@@ -104,8 +136,11 @@ class ListAdsReportsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $adId
      * @param  ?string  $campaignId
+     * @param  ?string  $endLt
      * @param  ?array<ListAdsReportsQueryParamFields>  $fields
+     * @param  ?string  $groupId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -113,15 +148,19 @@ class ListAdsReportsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $campaignId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $adId = null, ?string $campaignId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->adId = $adId;
         $this->campaignId = $campaignId;
+        $this->endLt = $endLt;
         $this->fields = $fields;
+        $this->groupId = $groupId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
@@ -129,6 +168,7 @@ class ListAdsReportsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->type = $type;
         $this->updatedGte = $updatedGte;
     }

@@ -101,7 +101,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
-        taskId: '<id>',
         text: '<value>',
     ),
     connectionId: '<id>',
@@ -568,7 +567,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchTaskCommentRequest(
     taskComment: new Shared\TaskComment(
-        taskId: '<id>',
         text: '<value>',
     ),
     connectionId: '<id>',
@@ -887,7 +885,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
-        taskId: '<id>',
         text: '<value>',
     ),
     connectionId: '<id>',

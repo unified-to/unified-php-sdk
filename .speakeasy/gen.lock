@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
+  docChecksum: d121c23b689164804bad4c9617517509
   docVersion: "1.0"
-  speakeasyVersion: 1.716.0
-  generationVersion: 2.823.1
-  releaseVersion: 1.6.31
-  configChecksum: d432891428dcb256de347c7895bc00c0
+  speakeasyVersion: 1.719.0
+  generationVersion: 2.824.1
+  releaseVersion: 1.6.32
+  configChecksum: 49a09d3a4ba072eed901dac2a01893b2
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 6f5212af-1fe5-483a-8e9c-16342e5a25ea
-  pristine_commit_hash: 3af131af77a167e4ff61e6e126064cf80391b696
-  pristine_tree_hash: 92fdc59a13ac0181741ea5093bf8dc10fc2700d6
+  generation_id: 819af5bf-9def-45e0-894d-99f341cb963d
+  pristine_commit_hash: e4d605086b293a9fc0eef178027264bb23f3ba93
+  pristine_tree_hash: c6c0fbae452b12c3c41fc5ba7d1ab2114d75f32c
 features:
   php:
     constsAndDefaults: 0.2.1
@@ -2897,8 +2897,8 @@ trackedFiles:
     pristine_git_object: 5a697ad618b76e7d282b754166567addb8d2bef5
   docs/Models/Operations/ListAdsReportsRequest.md:
     id: 87347f9a8d43
-    last_write_checksum: sha1:d8c90a2b0d7ec5a2059e89abf0255f741f859b1a
-    pristine_git_object: ce26249a8d9d749883b1db0775099e30d3815360
+    last_write_checksum: sha1:f6857ff9b7ad25b40b6bc7a5b6993685b4d4a7a4
+    pristine_git_object: e7e0cba37af20a6e98bed651ec39fca756de034b
   docs/Models/Operations/ListAdsReportsResponse.md:
     id: 7e6bbf3d142a
     last_write_checksum: sha1:8dff96ad472a98522eed8531b62ea37344cc8a6b
@@ -9725,8 +9725,8 @@ trackedFiles:
     pristine_git_object: c2334e8710d13dffa060663ae7226efeddad6bd8
   docs/Models/Shared/TaskComment.md:
     id: addf5af9c65c
-    last_write_checksum: sha1:bc8fbfa01e37aa6fe19c5c6c3b56cbb67c493655
-    pristine_git_object: a12e114813a6561f55d1e2e1497e44f81f758de3
+    last_write_checksum: sha1:6a4d7de4db82bea28f4050b3282da2f8b34021c4
+    pristine_git_object: f45fdd0cbb67f56a75c60c99ea15dcbcee8af981
   docs/Models/Shared/TaskMetadata.md:
     id: f2932ddbff3a
     last_write_checksum: sha1:7773340f690500db2baff277da013e66892838cd
@@ -10241,8 +10241,8 @@ trackedFiles:
     pristine_git_object: 6fd4956dad46ea9c3806fe1b46f201beeceb05a8
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:9f46dd985c983ca4262ae84cf2f2d9618be40f03
-    pristine_git_object: 714ea8bd92dbbd18631d0eae6f9188ec74ee4fa0
+    last_write_checksum: sha1:b6f90af1a77117323ccfc29a619da4a09b763206
+    pristine_git_object: b939bbc73895b2bae86a978a7d488d1c74fb9ca5
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
     last_write_checksum: sha1:139d28049b59de4c6310235820f4a1e72cf27bb2
@@ -10593,8 +10593,8 @@ trackedFiles:
     pristine_git_object: 973c06621833ab7714a3da8e88f29eb3269f0c14
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:0c9704f94c6f7c4ff340db3131cf454b34ba75d6
-    pristine_git_object: 97eea138c03f507af4622401ec9c457c239fd640
+    last_write_checksum: sha1:42ac3c4ccb416a654b056bdcda159790d2234db5
+    pristine_git_object: 6026259de2f02fb96f9650b35b4b3e4910aa2cef
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:08643fbf57f21fd0910384d2984c01d20b1f3225
@@ -13913,8 +13913,8 @@ trackedFiles:
     pristine_git_object: 0771ec912b3b3ec42668863c0a493213ec9a4d09
   src/Models/Operations/ListAdsReportsRequest.php:
     id: 69605d1fcab0
-    last_write_checksum: sha1:0ba46b55cc9afeb2acf5f12f809e2b923c1be232
-    pristine_git_object: d0e9a2458e943960a22c529f12eb5a082de9bdc9
+    last_write_checksum: sha1:31dba370041d018f953f2b5caee71ca93e2c9bdc
+    pristine_git_object: 9e91bceffd488b07eace5e862373c49743d16ce7
   src/Models/Operations/ListAdsReportsResponse.php:
     id: 178b2c283a7a
     last_write_checksum: sha1:5b10a0ad28c99d2a2bbc925d24955119cf7c6ddf
@@ -20633,8 +20633,8 @@ trackedFiles:
     pristine_git_object: 7736ced7ae5b82fbe291138632606bd7a646ac78
   src/Models/Shared/TaskComment.php:
     id: 944fa821869b
-    last_write_checksum: sha1:2d4b595f6d3ac5cda3a4c39f7018d2f4aa625762
-    pristine_git_object: 66892aeb965d7011bf7564ef43724c09ee61115a
+    last_write_checksum: sha1:2aea858efcbd87807784a6fe8c11924a6c46039b
+    pristine_git_object: 59c13f61cef40046b61bd835d0ac323ad210ff6a
   src/Models/Shared/TaskMetadata.php:
     id: be1a533b7aae
     last_write_checksum: sha1:9d8f10bb1296c14af15289034e31ab570ad66606
@@ -21117,8 +21117,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:2b9b9d46991e25fe97d4d44d134c093a5117f4c0
-    pristine_git_object: ed6bba0855887c97f09780e0a2374cc0d4dd1796
+    last_write_checksum: sha1:4c6be7b53911a4476679f183fc90baf9027d8173
+    pristine_git_object: 989d4e685b350c3170f268e082ec06af5934e543
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -23785,10 +23785,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
@@ -23807,7 +23807,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -23840,10 +23840,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -23874,10 +23874,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -27231,7 +27231,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->getLmsCourse()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->updateLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->patchLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsClasses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->listLmsCourses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->getLmsCourse()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->course->createLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->updateLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->patchLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->listLmsClasses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->class->createLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->updateLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->updateLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->patchLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->createLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->createLmsCourse()`: \n  *  `request->lmsCourse->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->patchLmsClass()`: \n  *  `request->lmsClass->media[]` **Changed**\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsCourses()`:  `response.[]->media[]` **Changed** (Breaking ⚠️)\n* `unified-to->lms->listLmsContents()`: **Added**\n* `unified-to->lms->listLmsActivities()`: **Added**\n* `unified-to->lms->getLmsCollection()`: **Added**\n* `unified-to->content->updateLmsContent()`: **Added**\n* `unified-to->content->removeLmsContent()`: **Added**\n* `unified-to->content->patchLmsContent()`: **Added**\n* `unified-to->content->listLmsContents()`: **Added**\n* `unified-to->content->getLmsContent()`: **Added**\n* `unified-to->content->createLmsContent()`: **Added**\n* `unified-to->lms->updateLmsContent()`: **Added**\n* `unified-to->lms->updateLmsCollection()`: **Added**\n* `unified-to->lms->updateLmsActivity()`: **Added**\n* `unified-to->lms->removeLmsContent()`: **Added**\n* `unified-to->lms->removeLmsCollection()`: **Added**\n* `unified-to->lms->patchLmsContent()`: **Added**\n* `unified-to->lms->patchLmsCollection()`: **Added**\n* `unified-to->lms->patchLmsActivity()`: **Added**\n* `unified-to->activity->getLmsActivity()`: **Added**\n* `unified-to->lms->listLmsCollections()`: **Added**\n* `unified-to->lms->removeLmsActivity()`: **Added**\n* `unified-to->activity->createLmsActivity()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->lms->getLmsContent()`: **Added**\n* `unified-to->lms->getLmsActivity()`: **Added**\n* `unified-to->lms->createLmsContent()`: **Added**\n* `unified-to->lms->createLmsCollection()`: **Added**\n* `unified-to->lms->createLmsActivity()`: **Added**\n* `unified-to->collection->updateLmsCollection()`: **Added**\n* `unified-to->collection->removeLmsCollection()`: **Added**\n* `unified-to->collection->patchLmsCollection()`: **Added**\n* `unified-to->collection->listLmsCollections()`: **Added**\n* `unified-to->collection->getLmsCollection()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->collection->createLmsCollection()`: **Added**\n* `unified-to->activity->updateLmsActivity()`: **Added**\n* `unified-to->activity->removeLmsActivity()`: **Added**\n* `unified-to->activity->patchLmsActivity()`: **Added**\n* `unified-to->activity->listLmsActivities()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->report->listAdsReports()`:  `request` **Changed**\n* `unified-to->ads->listAdsReports()`:  `request` **Changed**\n* `unified-to->comment->createTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to->comment->getTaskComment()`:  `response.taskId` **Changed**\n* `unified-to->comment->listTaskComments()`:  `response.[]->taskId` **Changed**\n* `unified-to->comment->patchTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to->comment->updateTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to->task->createTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to->task->getTaskComment()`:  `response.taskId` **Changed**\n* `unified-to->task->listTaskComments()`:  `response.[]->taskId` **Changed**\n* `unified-to->task->patchTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to->task->updateTaskComment()`: \n  *  `request->taskComment->taskId` **Changed**\n  *  `response.taskId` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
