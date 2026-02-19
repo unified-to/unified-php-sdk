@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** PropertyHrisPayslipDeduction - // The ID (and optionally name) of the employee deduction (if this detail represents a deduction) */
+/** PropertyHrisPayslipDeduction - The ID (and optionally name) of the employee deduction (if this detail represents a deduction) */
 class PropertyHrisPayslipDeduction
 {
     /**
@@ -87,6 +87,14 @@ class PropertyHrisPayslipDeduction
     public ?bool $isActive = null;
 
     /**
+     *
+     * @var ?string $notes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $notes = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -139,6 +147,7 @@ class PropertyHrisPayslipDeduction
      * @param  ?PropertyHrisPayslipDeductionFrequency  $frequency
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?PropertyHrisPayslipDeductionType  $type
@@ -146,7 +155,7 @@ class PropertyHrisPayslipDeduction
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?PropertyHrisPayslipDeductionFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyHrisPayslipDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?PropertyHrisPayslipDeductionFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?string $notes = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyHrisPayslipDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->amount = $amount;
         $this->benefitId = $benefitId;
@@ -157,6 +166,7 @@ class PropertyHrisPayslipDeduction
         $this->frequency = $frequency;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->notes = $notes;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->type = $type;

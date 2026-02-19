@@ -160,6 +160,8 @@ class UnifiedTo
 
     public Hris $hris;
 
+    public Bankaccount $bankaccount;
+
     public Benefit $benefit;
 
     public Deduction $deduction;
@@ -370,6 +372,7 @@ class UnifiedTo
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
+        $this->bankaccount = new Bankaccount($this->sdkConfiguration);
         $this->benefit = new Benefit($this->sdkConfiguration);
         $this->deduction = new Deduction($this->sdkConfiguration);
         $this->device = new Device($this->sdkConfiguration);

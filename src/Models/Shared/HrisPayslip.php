@@ -45,7 +45,7 @@ class HrisPayslip
     public ?string $currency = null;
 
     /**
-     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      *
      * @var ?PropertyHrisPayslipDeduction $deduction
      */

@@ -24,5 +24,6 @@ enum PatchHrisDeductionQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case IsActive = 'is_active';
+    case Notes = 'notes';
     case Raw = 'raw';
 }

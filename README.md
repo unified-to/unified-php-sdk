@@ -355,6 +355,15 @@ if ($response->accountingAccount !== null) {
 * [getAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [listAccountingBalancesheets](docs/sdks/balancesheet/README.md#listaccountingbalancesheets) - List all balancesheets
 
+### [Bankaccount](docs/sdks/bankaccount/README.md)
+
+* [createHrisBankaccount](docs/sdks/bankaccount/README.md#createhrisbankaccount) - Create a bankaccount
+* [getHrisBankaccount](docs/sdks/bankaccount/README.md#gethrisbankaccount) - Retrieve a bankaccount
+* [listHrisBankaccounts](docs/sdks/bankaccount/README.md#listhrisbankaccounts) - List all bankaccounts
+* [patchHrisBankaccount](docs/sdks/bankaccount/README.md#patchhrisbankaccount) - Update a bankaccount
+* [removeHrisBankaccount](docs/sdks/bankaccount/README.md#removehrisbankaccount) - Remove a bankaccount
+* [updateHrisBankaccount](docs/sdks/bankaccount/README.md#updatehrisbankaccount) - Update a bankaccount
+
 ### [Benefit](docs/sdks/benefit/README.md)
 
 * [createHrisBenefit](docs/sdks/benefit/README.md#createhrisbenefit) - Create a benefit
@@ -860,6 +869,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [createHrisBankaccount](docs/sdks/hris/README.md#createhrisbankaccount) - Create a bankaccount
 * [createHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [createHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
@@ -868,6 +878,7 @@ if ($response->accountingAccount !== null) {
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [getHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [getHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
@@ -878,6 +889,7 @@ if ($response->accountingAccount !== null) {
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [listHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
 * [listHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [listHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
@@ -888,6 +900,7 @@ if ($response->accountingAccount !== null) {
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [patchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
 * [patchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [patchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
@@ -896,6 +909,7 @@ if ($response->accountingAccount !== null) {
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [removeHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [removeHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
@@ -904,6 +918,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [updateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [updateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction

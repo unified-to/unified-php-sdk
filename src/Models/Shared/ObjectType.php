@@ -71,6 +71,7 @@ enum ObjectType: string
     case HrisTimeshift = 'hris_timeshift';
     case HrisDeduction = 'hris_deduction';
     case HrisBenefit = 'hris_benefit';
+    case HrisBankaccount = 'hris_bankaccount';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case MartechCampaign = 'martech_campaign';
