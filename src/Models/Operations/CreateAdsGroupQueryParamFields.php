@@ -22,6 +22,7 @@ enum CreateAdsGroupQueryParamFields: string
     case Status = 'status';
     case Targeting = 'targeting';
     case BidAmount = 'bid_amount';
+    case Currency = 'currency';
     case BidStrategy = 'bid_strategy';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';

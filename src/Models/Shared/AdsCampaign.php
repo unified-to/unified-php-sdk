@@ -38,6 +38,14 @@ class AdsCampaign
 
     /**
      *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -158,6 +166,7 @@ class AdsCampaign
      * @param  ?float  $budgetAmount
      * @param  ?BudgetPeriod  $budgetPeriod
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?PropertyAdsCampaignFrequencyCap  $frequencyCap
      * @param  ?Goal  $goal
@@ -174,11 +183,12 @@ class AdsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->budgetAmount = $budgetAmount;
         $this->budgetPeriod = $budgetPeriod;
         $this->createdAt = $createdAt;
+        $this->currency = $currency;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
         $this->goal = $goal;

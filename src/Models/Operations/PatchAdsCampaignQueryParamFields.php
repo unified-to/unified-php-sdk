@@ -21,6 +21,7 @@ enum PatchAdsCampaignQueryParamFields: string
     case EndAt = 'end_at';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';
+    case Currency = 'currency';
     case TotalSpendAmount = 'total_spend_amount';
     case Targeting = 'targeting';
     case Raw = 'raw';

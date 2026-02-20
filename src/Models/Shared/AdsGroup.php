@@ -100,6 +100,14 @@ class AdsGroup
 
     /**
      *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -244,6 +252,7 @@ class AdsGroup
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
+     * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?PropertyAdsGroupFrequencyCap  $frequencyCap
      * @param  ?bool  $hasEuPoliticalAds
@@ -262,7 +271,7 @@ class AdsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?BudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?BudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -274,6 +283,7 @@ class AdsGroup
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
+        $this->currency = $currency;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;
