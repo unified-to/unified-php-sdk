@@ -126,6 +126,14 @@ class Integration
 
     /**
      *
+     * @var ?bool $isHidden
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_hidden')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isHidden = null;
+
+    /**
+     *
      * @var ?string $logoUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('logo_url')]
@@ -252,6 +260,7 @@ class Integration
      * @param  ?bool  $featured
      * @param  ?bool  $inProgress
      * @param  ?bool  $isActive
+     * @param  ?bool  $isHidden
      * @param  ?string  $logoUrl
      * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemas1|string|float|bool>|null  $partnership
      * @param  ?float  $popularity
@@ -267,7 +276,7 @@ class Integration
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, array|string|float|bool|null $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?string $logoUrl = null, array|string|float|bool|null $partnership = null, ?float $popularity = null, ?string $rateLimitDescription = null, array|string|float|bool|null $saml = null, array|string|float|bool|null $sandbox = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, array|string|float|bool|null $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?bool $isHidden = null, ?string $logoUrl = null, array|string|float|bool|null $partnership = null, ?float $popularity = null, ?string $rateLimitDescription = null, array|string|float|bool|null $saml = null, array|string|float|bool|null $sandbox = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->categories = $categories;
         $this->name = $name;
@@ -283,6 +292,7 @@ class Integration
         $this->featured = $featured;
         $this->inProgress = $inProgress;
         $this->isActive = $isActive;
+        $this->isHidden = $isHidden;
         $this->logoUrl = $logoUrl;
         $this->partnership = $partnership;
         $this->popularity = $popularity;

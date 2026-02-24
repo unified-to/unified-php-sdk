@@ -28,6 +28,14 @@ class ListUcCallsRequest
     public ?string $contactId = null;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<ListUcCallsQueryParamFields> $fields
@@ -80,6 +88,14 @@ class ListUcCallsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -98,6 +114,7 @@ class ListUcCallsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
+     * @param  ?string  $endLt
      * @param  ?array<ListUcCallsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -105,14 +122,16 @@ class ListUcCallsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;
+        $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
@@ -120,6 +139,7 @@ class ListUcCallsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;
     }

@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0016420ba460156764e16b3acba7913d
+  docChecksum: 10d21384d59617a5ae23a76cc75e1339
   docVersion: "1.0"
-  speakeasyVersion: 1.722.7
-  generationVersion: 2.832.9
-  releaseVersion: 1.6.34
-  configChecksum: 2e8031b6a42149e7d5a1113743fafafe
+  speakeasyVersion: 1.725.0
+  generationVersion: 2.836.5
+  releaseVersion: 1.6.35
+  configChecksum: 359e873e7bc374e0ae04749c833609af
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk
   published: true
 persistentEdits:
-  generation_id: 8e95fd1c-96e8-4331-8c77-9fa1d5722cbb
-  pristine_commit_hash: 482298eccdfca2fbc1f931ffe4443555c373070a
-  pristine_tree_hash: 64666206ecb22a2a44d3397fcf89686f6998bccf
+  generation_id: ce6bc44f-7ab6-48db-a900-9026d8279223
+  pristine_commit_hash: b484d58e817e9d19726261dfea8b9669a40e70f4
+  pristine_tree_hash: d977dcc5f4afe56bb6850f46f957b03cacb334e1
 features:
   php:
     constsAndDefaults: 0.2.1
-    core: 3.9.13
+    core: 3.9.14
     globalSecurity: 2.81.10
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.0
@@ -601,8 +601,8 @@ trackedFiles:
     pristine_git_object: 71283d257cb21dfd8aa943d4dd4fdf8a0b128c71
   docs/Models/Operations/CreateGenaiPromptQueryParamFields.md:
     id: 82ecd74a61e2
-    last_write_checksum: sha1:f3a25f66fe0122cf52e11cebf9444af3daadbc65
-    pristine_git_object: ff6ade3765491a28a6cbdbf732411e5e0a67e6a2
+    last_write_checksum: sha1:4b87cdc36c8e532309e6695b73470fcdb56170cc
+    pristine_git_object: 5c78d8a3a52877fba4a1b4b0bd8d7f4a3b80acd7
   docs/Models/Operations/CreateGenaiPromptRequest.md:
     id: 47adc46ac9ae
     last_write_checksum: sha1:28dc0ed4c818b13fc37d25f4565f51768e956c9c
@@ -3953,8 +3953,8 @@ trackedFiles:
     pristine_git_object: a67325f9af1f449ccc8e6773bc8dad26d3dd37d3
   docs/Models/Operations/ListUcCallsRequest.md:
     id: 2ffb78fa1aa3
-    last_write_checksum: sha1:3269ab7c78d7ef5d10809223cf20c9917c6ab63b
-    pristine_git_object: ba18a6dc989b4e2039d452a59ffb582ce3e7927b
+    last_write_checksum: sha1:b4d853cc8b216e33a2a79f1179e7a49748db1776
+    pristine_git_object: 10a62379e12ba0a7ff70c5d3abd3de0459f22d61
   docs/Models/Operations/ListUcCallsResponse.md:
     id: 3739e05c5843
     last_write_checksum: sha1:e6cd3d3bd8c7f8e6d669838c3f8a3f9036e1be43
@@ -8169,8 +8169,8 @@ trackedFiles:
     pristine_git_object: 3c73d6540e509560624a4c1afe9d02347fb5cdfb
   docs/Models/Shared/GenaiPrompt.md:
     id: 9bf063fdd97e
-    last_write_checksum: sha1:c3989246fe058b8927e4578b3c671e30ed573f23
-    pristine_git_object: 5dbc25402c34e04485ef183914e442c7ce9897b9
+    last_write_checksum: sha1:95e6c7531832ba4fa3845c681ca35dd129fb5fcf
+    pristine_git_object: 84c8e5e87dcc0e9a6deeccdbd63231052652d858
   docs/Models/Shared/Gender.md:
     id: c6a59312e677
     last_write_checksum: sha1:1b46748d63216896cf5c9b45467f393cce2e6288
@@ -8341,8 +8341,8 @@ trackedFiles:
     pristine_git_object: 63464419290f9593e544e8dfa0c097b9d7594036
   docs/Models/Shared/Integration.md:
     id: c53b5743c635
-    last_write_checksum: sha1:c1c70a02bf0bd65f76dae3fffb4f43e3e6936231
-    pristine_git_object: 5bd29cf82d9ad5785c59c61db0965b05012a53e4
+    last_write_checksum: sha1:724a9a3fe5e89c5d5d11def74ec0d64730082658
+    pristine_git_object: 0290166bec492e56e60a44fc8f78f2ff33419b7f
   docs/Models/Shared/Integration1.md:
     id: 239500f2daea
     last_write_checksum: sha1:8fa2168f55ebf3a760dcbc8d79327a19444b042f
@@ -11705,8 +11705,8 @@ trackedFiles:
     pristine_git_object: 035c1e7a50277cdd7147e91aa7cb59f0cdb852f6
   src/Models/Operations/CreateGenaiPromptQueryParamFields.php:
     id: 0d83e448988b
-    last_write_checksum: sha1:72cd12478ce779b3691ccfed1c32225e339eae29
-    pristine_git_object: 53dac19ffd6a4c6a89c136255e695a169300fb85
+    last_write_checksum: sha1:90f9b031f314fe9de7b2367ccf5da69b22f0914a
+    pristine_git_object: bf58b491c9235b9ff366bd770f592eed3ce5ebf5
   src/Models/Operations/CreateGenaiPromptRequest.php:
     id: cedde368bf02
     last_write_checksum: sha1:d32371a534aaaeb8c2878e2e91214e5a00614c5d
@@ -15057,8 +15057,8 @@ trackedFiles:
     pristine_git_object: d0a488ec5433f1f99364606b547f1004fc392196
   src/Models/Operations/ListUcCallsRequest.php:
     id: bb483df58f98
-    last_write_checksum: sha1:8ca030b4887db48eb5d02abb8e29dcd88a33c582
-    pristine_git_object: 11a333b5ead92667012c1fca8f80ea8444289a54
+    last_write_checksum: sha1:efd8b52fe10c9a8ce255714da1f8be6cdb53dc18
+    pristine_git_object: 1777683e43b83f768d6fdb5ba8eb94c80dad357b
   src/Models/Operations/ListUcCallsResponse.php:
     id: bdd419f25611
     last_write_checksum: sha1:7dffe38ee8dcbf63b8373b89143f3fd8a438cd8a
@@ -19225,8 +19225,8 @@ trackedFiles:
     pristine_git_object: d456b902bfe3fe53cb76c137e9304fa94c90e0fd
   src/Models/Shared/GenaiPrompt.php:
     id: fcbc5904157e
-    last_write_checksum: sha1:569520840f5a2d40d20f9c053cd71d55e7485c7f
-    pristine_git_object: f40241056d9dc962f6c4783a6cce53570c242cf2
+    last_write_checksum: sha1:c9231124a7bdb180227080185dffd6f3b5d16efa
+    pristine_git_object: 59c0f7d5d197cd36af35b291d1a491d70576351c
   src/Models/Shared/Gender.php:
     id: 141d0973bf32
     last_write_checksum: sha1:862226d9adab1ab08374c82f50133b314c817783
@@ -19381,8 +19381,8 @@ trackedFiles:
     pristine_git_object: aeef9d53098c627e5d432e76dd6c6f8f31883ed9
   src/Models/Shared/Integration.php:
     id: 015e0b5d30fd
-    last_write_checksum: sha1:94b27a7c999f0be2c2106eabd904400b3e6f4dba
-    pristine_git_object: b819b37b161692849f9afaf698f6c815d260620c
+    last_write_checksum: sha1:1365ef3e2312857334a37e94b7dd9ac674fa4862
+    pristine_git_object: 9848597b3be9f19a1167e45b25f7bba74120092e
   src/Models/Shared/Integration1.php:
     id: db0ec0f42904
     last_write_checksum: sha1:392150dc82f19af460cb2b70fba614910a483c15
@@ -21285,8 +21285,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:4fce41b50b3b48d3c10a9cf556d0b920b0a2130b
-    pristine_git_object: 2c490eed133b037924dd80f926a7a36f2edf4bef
+    last_write_checksum: sha1:717af71440585cbb5f83139b167aa62a8ac852f9
+    pristine_git_object: cb9a2f557929e0b3aea9b18473520c82dd74643a
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -21389,12 +21389,12 @@ trackedFiles:
     pristine_git_object: 3ef00d8507d3f1ce3f31886b69e19b95026735ba
   src/Utils/BigDecimalHandler.php:
     id: cdcca3718e2e
-    last_write_checksum: sha1:de00f210414d71609b379fabc25b4444a9884847
-    pristine_git_object: e041f037e2789c652c59a0d3d908a283e1b5375e
+    last_write_checksum: sha1:f3e749fa083977a5be19649817bb08fa5ecae86e
+    pristine_git_object: 4c82dd87d2373fb8cc629484cbb59604227678e9
   src/Utils/BigIntHandler.php:
     id: 190c4d16fa85
-    last_write_checksum: sha1:6256390dae3f807b92b0d707339e004d6a814880
-    pristine_git_object: 9a28a91958e13442e636fb08554e5af22f15101e
+    last_write_checksum: sha1:0dd48da87e9271e8d84f1c4b6f3e025584e91bee
+    pristine_git_object: 20979226b4e370561346408ac10dc15d331c5c25
   src/Utils/DateHandler.php:
     id: 3223e13fd506
     last_write_checksum: sha1:41c7f8c757cacdefa573d84f5a0fe3232c59a4f5
@@ -21433,8 +21433,8 @@ trackedFiles:
     pristine_git_object: 73422e51b41d977c1ab5ecf1229452dc2bd82f00
   src/Utils/JSON.php:
     id: fb267328a809
-    last_write_checksum: sha1:1428a7c4218f9746d00e3eb2c2874fc5e6295109
-    pristine_git_object: bae65e02894164bdc73482b7287845d896dd6bc3
+    last_write_checksum: sha1:da2e4f8fd198f85525163f25e17a6fedb690d7ef
+    pristine_git_object: 9f31446b03a9ad8a39b289f6bb237bcc68f1b28e
   src/Utils/MixedJSONHandler.php:
     id: ceb58b45ce9f
     last_write_checksum: sha1:e65e6e2bbc62dfa4002846445f500fbae6b62fd6
@@ -27454,7 +27454,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed**\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->getAdsGroup()`: \n  *  `request->fields` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->currency` **Added**\n* `unified-to->ads->listAdsGroups()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->currency` **Added**\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed**\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->currency` **Added**\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->group->createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->group->getAdsGroup()`: \n  *  `request->fields` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->group->listAdsGroups()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->currency` **Added**\n* `unified-to->group->patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->group->updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.currency` **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookType` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookType` **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookType` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookType` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->genai->createGenaiPrompt()`: \n  *  `request` **Changed**\n  *  `response.mcpAuthorizationToken` **Added**\n* `unified-to->prompt->createGenaiPrompt()`: \n  *  `request` **Changed**\n  *  `response.mcpAuthorizationToken` **Added**\n* `unified-to->uc->listUcCalls()`:  `request` **Changed**\n* `unified-to->call->listUcCalls()`:  `request` **Changed**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->isHidden` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->isHidden` **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->isHidden` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->isHidden` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
