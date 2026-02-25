@@ -81,6 +81,14 @@ class AccountingJournal
 
     /**
      *
+     * @var ?string $source
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $source = null;
+
+    /**
+     *
      * @var ?float $taxAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
@@ -112,12 +120,13 @@ class AccountingJournal
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
+     * @param  ?string  $source
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
@@ -127,6 +136,7 @@ class AccountingJournal
         $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->reference = $reference;
+        $this->source = $source;
         $this->taxAmount = $taxAmount;
         $this->taxrateId = $taxrateId;
         $this->updatedAt = $updatedAt;

@@ -21,5 +21,6 @@ enum ListAccountingJournalsQueryParamFields: string
     case TaxrateId = 'taxrate_id';
     case Description = 'description';
     case PostedAt = 'posted_at';
+    case Source = 'source';
     case Raw = 'raw';
 }
