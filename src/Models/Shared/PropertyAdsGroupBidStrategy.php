@@ -54,12 +54,12 @@ class PropertyAdsGroupBidStrategy
 
     /**
      *
-     * @var ?PerformanceGoalType $performanceGoalType
+     * @var ?PropertyAdsGroupBidStrategyPerformanceGoalType $performanceGoalType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('performance_goal_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PerformanceGoalType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategyPerformanceGoalType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PerformanceGoalType $performanceGoalType = null;
+    public ?PropertyAdsGroupBidStrategyPerformanceGoalType $performanceGoalType = null;
 
     /**
      *
@@ -71,12 +71,20 @@ class PropertyAdsGroupBidStrategy
 
     /**
      *
-     * @var ?YoutubeAndPartnersType $youtubeAndPartnersType
+     * @var ?float $targetRoas
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('target_roas')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $targetRoas = null;
+
+    /**
+     *
+     * @var ?PropertyAdsGroupBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_and_partners_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\YoutubeAndPartnersType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategyYoutubeAndPartnersType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?YoutubeAndPartnersType $youtubeAndPartnersType = null;
+    public ?PropertyAdsGroupBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType = null;
 
     /**
      *
@@ -92,13 +100,14 @@ class PropertyAdsGroupBidStrategy
      * @param  ?float  $fixedBidAmount
      * @param  ?float  $maxAverageCpmBidAmount
      * @param  ?float  $performanceGoalAmount
-     * @param  ?PerformanceGoalType  $performanceGoalType
+     * @param  ?PropertyAdsGroupBidStrategyPerformanceGoalType  $performanceGoalType
      * @param  ?bool  $raiseBidForDeals
-     * @param  ?YoutubeAndPartnersType  $youtubeAndPartnersType
+     * @param  ?float  $targetRoas
+     * @param  ?PropertyAdsGroupBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
      * @param  ?string  $youtubeAndPartnersValue
      * @phpstan-pure
      */
-    public function __construct(PropertyAdsGroupBidStrategyType $type, ?string $customBiddingAlgorithmId = null, ?float $fixedBidAmount = null, ?float $maxAverageCpmBidAmount = null, ?float $performanceGoalAmount = null, ?PerformanceGoalType $performanceGoalType = null, ?bool $raiseBidForDeals = null, ?YoutubeAndPartnersType $youtubeAndPartnersType = null, ?string $youtubeAndPartnersValue = null)
+    public function __construct(PropertyAdsGroupBidStrategyType $type, ?string $customBiddingAlgorithmId = null, ?float $fixedBidAmount = null, ?float $maxAverageCpmBidAmount = null, ?float $performanceGoalAmount = null, ?PropertyAdsGroupBidStrategyPerformanceGoalType $performanceGoalType = null, ?bool $raiseBidForDeals = null, ?float $targetRoas = null, ?PropertyAdsGroupBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType = null, ?string $youtubeAndPartnersValue = null)
     {
         $this->type = $type;
         $this->customBiddingAlgorithmId = $customBiddingAlgorithmId;
@@ -107,6 +116,7 @@ class PropertyAdsGroupBidStrategy
         $this->performanceGoalAmount = $performanceGoalAmount;
         $this->performanceGoalType = $performanceGoalType;
         $this->raiseBidForDeals = $raiseBidForDeals;
+        $this->targetRoas = $targetRoas;
         $this->youtubeAndPartnersType = $youtubeAndPartnersType;
         $this->youtubeAndPartnersValue = $youtubeAndPartnersValue;
     }

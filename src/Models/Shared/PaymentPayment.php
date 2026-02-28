@@ -21,6 +21,14 @@ class PaymentPayment
 
     /**
      *
+     * @var ?string $billId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bill_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $billId = null;
+
+    /**
+     *
      * @var ?string $contactId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
@@ -95,6 +103,15 @@ class PaymentPayment
 
     /**
      *
+     * @var ?PaymentPaymentType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPaymentType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PaymentPaymentType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -111,6 +128,7 @@ class PaymentPayment
 
     /**
      * @param  ?string  $accountId
+     * @param  ?string  $billId
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -121,12 +139,14 @@ class PaymentPayment
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?float  $totalAmount
+     * @param  ?PaymentPaymentType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $notes = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $notes = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
+        $this->billId = $billId;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -136,6 +156,7 @@ class PaymentPayment
         $this->raw = $raw;
         $this->reference = $reference;
         $this->totalAmount = $totalAmount;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->currency = $currency;
     }

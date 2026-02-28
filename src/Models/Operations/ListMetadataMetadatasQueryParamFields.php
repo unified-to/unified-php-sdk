@@ -21,5 +21,6 @@ enum ListMetadataMetadatasQueryParamFields: string
     case Options = 'options';
     case ObjectType = 'object_type';
     case Objects = 'objects';
+    case IsRequired = 'is_required';
     case Raw = 'raw';
 }

@@ -71,6 +71,14 @@ class PropertyAdsInsertionorderBidStrategy
 
     /**
      *
+     * @var ?float $targetRoas
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('target_roas')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $targetRoas = null;
+
+    /**
+     *
      * @var ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_and_partners_type')]
@@ -94,11 +102,12 @@ class PropertyAdsInsertionorderBidStrategy
      * @param  ?float  $performanceGoalAmount
      * @param  ?PropertyAdsInsertionorderBidStrategyPerformanceGoalType  $performanceGoalType
      * @param  ?bool  $raiseBidForDeals
+     * @param  ?float  $targetRoas
      * @param  ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
      * @param  ?string  $youtubeAndPartnersValue
      * @phpstan-pure
      */
-    public function __construct(PropertyAdsInsertionorderBidStrategyType $type, ?string $customBiddingAlgorithmId = null, ?float $fixedBidAmount = null, ?float $maxAverageCpmBidAmount = null, ?float $performanceGoalAmount = null, ?PropertyAdsInsertionorderBidStrategyPerformanceGoalType $performanceGoalType = null, ?bool $raiseBidForDeals = null, ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType = null, ?string $youtubeAndPartnersValue = null)
+    public function __construct(PropertyAdsInsertionorderBidStrategyType $type, ?string $customBiddingAlgorithmId = null, ?float $fixedBidAmount = null, ?float $maxAverageCpmBidAmount = null, ?float $performanceGoalAmount = null, ?PropertyAdsInsertionorderBidStrategyPerformanceGoalType $performanceGoalType = null, ?bool $raiseBidForDeals = null, ?float $targetRoas = null, ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType = null, ?string $youtubeAndPartnersValue = null)
     {
         $this->type = $type;
         $this->customBiddingAlgorithmId = $customBiddingAlgorithmId;
@@ -107,6 +116,7 @@ class PropertyAdsInsertionorderBidStrategy
         $this->performanceGoalAmount = $performanceGoalAmount;
         $this->performanceGoalType = $performanceGoalType;
         $this->raiseBidForDeals = $raiseBidForDeals;
+        $this->targetRoas = $targetRoas;
         $this->youtubeAndPartnersType = $youtubeAndPartnersType;
         $this->youtubeAndPartnersValue = $youtubeAndPartnersValue;
     }

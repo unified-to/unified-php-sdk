@@ -22,7 +22,6 @@ enum ListAdsGroupsQueryParamFields: string
     case Status = 'status';
     case Targeting = 'targeting';
     case BidAmount = 'bid_amount';
-    case Currency = 'currency';
     case BidStrategy = 'bid_strategy';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';
@@ -36,6 +35,12 @@ enum ListAdsGroupsQueryParamFields: string
     case Pacing = 'pacing';
     case FrequencyCap = 'frequency_cap';
     case CreativeIds = 'creative_ids';
-    case IsActive = 'is_active';
+    case OptimizationGoal = 'optimization_goal';
+    case BillingEvent = 'billing_event';
+    case DailySpendCap = 'daily_spend_cap';
+    case LifetimeSpendCap = 'lifetime_spend_cap';
+    case AdGroupType = 'ad_group_type';
+    case Currency = 'currency';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

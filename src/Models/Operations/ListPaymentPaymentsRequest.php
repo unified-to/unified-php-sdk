@@ -20,6 +20,14 @@ class ListPaymentPaymentsRequest
     public string $connectionId;
 
     /**
+     * The bill ID to filter by
+     *
+     * @var ?string $billId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=bill_id')]
+    public ?string $billId = null;
+
+    /**
      * The contact ID to filter by (reference to AccountingContact)
      *
      * @var ?string $contactId
@@ -49,6 +57,14 @@ class ListPaymentPaymentsRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
     public ?float $limit = null;
+
+    /**
+     * The link ID to filter by
+     *
+     * @var ?string $linkId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=link_id')]
+    public ?string $linkId = null;
 
     /**
      *
@@ -88,6 +104,14 @@ class ListPaymentPaymentsRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -97,30 +121,36 @@ class ListPaymentPaymentsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $billId
      * @param  ?string  $contactId
      * @param  ?array<ListPaymentPaymentsQueryParamFields>  $fields
      * @param  ?string  $invoiceId
      * @param  ?float  $limit
+     * @param  ?string  $linkId
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $billId = null, ?string $contactId = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?string $linkId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->billId = $billId;
         $this->contactId = $contactId;
         $this->fields = $fields;
         $this->invoiceId = $invoiceId;
         $this->limit = $limit;
+        $this->linkId = $linkId;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }

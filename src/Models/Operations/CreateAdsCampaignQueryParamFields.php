@@ -21,12 +21,15 @@ enum CreateAdsCampaignQueryParamFields: string
     case EndAt = 'end_at';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';
-    case Currency = 'currency';
     case TotalSpendAmount = 'total_spend_amount';
     case Targeting = 'targeting';
-    case Raw = 'raw';
     case Goal = 'goal';
     case PlannedSpendAmount = 'planned_spend_amount';
     case FrequencyCap = 'frequency_cap';
-    case IsActive = 'is_active';
+    case BidStrategy = 'bid_strategy';
+    case SpecialAdCategories = 'special_ad_categories';
+    case AdvertisingChannelType = 'advertising_channel_type';
+    case CampaignBudgetIdentifier = 'campaign_budget_identifier';
+    case Currency = 'currency';
+    case Raw = 'raw';
 }

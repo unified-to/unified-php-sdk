@@ -11,8 +11,17 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum PropertyAdsReportMetricsGroupType: string
 {
-    case Display = 'DISPLAY';
+    case Text = 'TEXT';
+    case Image = 'IMAGE';
     case Video = 'VIDEO';
+    case Responsive = 'RESPONSIVE';
+    case Shopping = 'SHOPPING';
+    case App = 'APP';
+    case Call = 'CALL';
+    case Carousel = 'CAROUSEL';
+    case Social = 'SOCIAL';
+    case Display = 'DISPLAY';
+    case Search = 'SEARCH';
     case Audio = 'AUDIO';
     case Youtube = 'YOUTUBE';
 }

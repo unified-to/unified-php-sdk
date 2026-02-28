@@ -32,6 +32,16 @@ class PropertyAdsGroupTargeting
     public ?array $audiences = null;
 
     /**
+     * $behaviors
+     *
+     * @var ?array<string> $behaviors
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('behaviors')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $behaviors = null;
+
+    /**
      * $companies
      *
      * @var ?array<string> $companies
@@ -52,6 +62,16 @@ class PropertyAdsGroupTargeting
     public ?array $companySizes = null;
 
     /**
+     * $customAudiences
+     *
+     * @var ?array<string> $customAudiences
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('custom_audiences')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $customAudiences = null;
+
+    /**
      * $degrees
      *
      * @var ?array<string> $degrees
@@ -70,6 +90,26 @@ class PropertyAdsGroupTargeting
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $devices = null;
+
+    /**
+     * $excludedAudiences
+     *
+     * @var ?array<string> $excludedAudiences
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_audiences')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $excludedAudiences = null;
+
+    /**
+     * $excludedLocations
+     *
+     * @var ?array<string> $excludedLocations
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_locations')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $excludedLocations = null;
 
     /**
      * $genders
@@ -194,10 +234,14 @@ class PropertyAdsGroupTargeting
     /**
      * @param  ?array<string>  $ageRanges
      * @param  ?array<string>  $audiences
+     * @param  ?array<string>  $behaviors
      * @param  ?array<string>  $companies
      * @param  ?array<string>  $companySizes
+     * @param  ?array<string>  $customAudiences
      * @param  ?array<string>  $degrees
      * @param  ?array<string>  $devices
+     * @param  ?array<string>  $excludedAudiences
+     * @param  ?array<string>  $excludedLocations
      * @param  ?array<string>  $genders
      * @param  ?array<string>  $industries
      * @param  ?array<string>  $interests
@@ -212,14 +256,18 @@ class PropertyAdsGroupTargeting
      * @param  ?array<string>  $skills
      * @phpstan-pure
      */
-    public function __construct(?array $ageRanges = null, ?array $audiences = null, ?array $companies = null, ?array $companySizes = null, ?array $degrees = null, ?array $devices = null, ?array $genders = null, ?array $industries = null, ?array $interests = null, ?array $jobFunctions = null, ?array $jobTitles = null, ?array $keywords = null, ?array $languages = null, ?array $locations = null, ?array $placements = null, ?array $schools = null, ?array $seniorities = null, ?array $skills = null)
+    public function __construct(?array $ageRanges = null, ?array $audiences = null, ?array $behaviors = null, ?array $companies = null, ?array $companySizes = null, ?array $customAudiences = null, ?array $degrees = null, ?array $devices = null, ?array $excludedAudiences = null, ?array $excludedLocations = null, ?array $genders = null, ?array $industries = null, ?array $interests = null, ?array $jobFunctions = null, ?array $jobTitles = null, ?array $keywords = null, ?array $languages = null, ?array $locations = null, ?array $placements = null, ?array $schools = null, ?array $seniorities = null, ?array $skills = null)
     {
         $this->ageRanges = $ageRanges;
         $this->audiences = $audiences;
+        $this->behaviors = $behaviors;
         $this->companies = $companies;
         $this->companySizes = $companySizes;
+        $this->customAudiences = $customAudiences;
         $this->degrees = $degrees;
         $this->devices = $devices;
+        $this->excludedAudiences = $excludedAudiences;
+        $this->excludedLocations = $excludedLocations;
         $this->genders = $genders;
         $this->industries = $industries;
         $this->interests = $interests;

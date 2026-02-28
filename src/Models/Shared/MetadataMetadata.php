@@ -51,6 +51,14 @@ class MetadataMetadata
     public ?string $id = null;
 
     /**
+     *
+     * @var ?bool $isRequired
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_required')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isRequired = null;
+
+    /**
      * $objects
      *
      * @var ?array<string, mixed> $objects
@@ -110,6 +118,7 @@ class MetadataMetadata
      * @param  ?\DateTime  $createdAt
      * @param  ?MetadataMetadataFormat  $format
      * @param  ?string  $id
+     * @param  ?bool  $isRequired
      * @param  ?array<string, mixed>  $objects
      * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
@@ -118,13 +127,14 @@ class MetadataMetadata
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?MetadataMetadataFormat $format = null, ?string $id = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $objectType, ?\DateTime $createdAt = null, ?MetadataMetadataFormat $format = null, ?string $id = null, ?bool $isRequired = null, ?array $objects = null, ?array $options = null, ?string $originalFormat = null, ?array $raw = null, ?string $slug = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->objectType = $objectType;
         $this->createdAt = $createdAt;
         $this->format = $format;
         $this->id = $id;
+        $this->isRequired = $isRequired;
         $this->objects = $objects;
         $this->options = $options;
         $this->originalFormat = $originalFormat;

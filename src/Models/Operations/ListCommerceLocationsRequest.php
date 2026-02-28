@@ -49,7 +49,7 @@ class ListCommerceLocationsRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      *
      * @var ?string $orgId
      */

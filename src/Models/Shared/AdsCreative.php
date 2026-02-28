@@ -23,6 +23,14 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $body
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('body')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $body = null;
+
+    /**
+     *
      * @var ?string $campaignId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('campaign_id')]
@@ -45,6 +53,14 @@ class AdsCreative
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CreativeType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CreativeType $creativeType = null;
+
+    /**
+     *
+     * @var ?string $cta
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cta')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $cta = null;
 
     /**
      *
@@ -105,11 +121,37 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $imageHash
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('image_hash')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $imageHash = null;
+
+    /**
+     *
      * @var ?string $itemId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('item_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $itemId = null;
+
+    /**
+     *
+     * @var ?string $linkUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('link_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $linkUrl = null;
+
+    /**
+     * $metadata
+     *
+     * @var ?array<AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
 
     /**
      *
@@ -126,6 +168,30 @@ class AdsCreative
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $organizationId = null;
+
+    /**
+     *
+     * @var ?string $pageIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('page_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $pageIdentifier = null;
+
+    /**
+     *
+     * @var ?string $path1
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('path1')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $path1 = null;
+
+    /**
+     *
+     * @var ?string $path2
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('path2')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $path2 = null;
 
     /**
      * $raw
@@ -156,6 +222,22 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $thumbnailUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('thumbnail_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $thumbnailUrl = null;
+
+    /**
+     *
+     * @var ?string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $title = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -172,6 +254,14 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $videoId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('video_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $videoId = null;
+
+    /**
+     *
      * @var ?float $width
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('width')]
@@ -180,9 +270,11 @@ class AdsCreative
 
     /**
      * @param  ?array<string>  $assetUrls
+     * @param  ?string  $body
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?CreativeType  $creativeType
+     * @param  ?string  $cta
      * @param  ?string  $externalAdReference
      * @param  ?string  $externalCreativeReference
      * @param  ?string  $externalPlacementReference
@@ -190,23 +282,34 @@ class AdsCreative
      * @param  ?float  $height
      * @param  ?HostingSource  $hostingSource
      * @param  ?string  $id
+     * @param  ?string  $imageHash
      * @param  ?string  $itemId
+     * @param  ?string  $linkUrl
+     * @param  ?array<AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
+     * @param  ?string  $pageIdentifier
+     * @param  ?string  $path1
+     * @param  ?string  $path2
      * @param  ?array<string, mixed>  $raw
      * @param  ?AdsCreativeStatus  $status
      * @param  ?string  $thirdPartyTag
+     * @param  ?string  $thumbnailUrl
+     * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $vastTagUrl
+     * @param  ?string  $videoId
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?array $assetUrls = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?\DateTime $updatedAt = null, ?string $vastTagUrl = null, ?float $width = null)
+    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $cta = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $imageHash = null, ?string $itemId = null, ?string $linkUrl = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $pageIdentifier = null, ?string $path1 = null, ?string $path2 = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $thumbnailUrl = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $vastTagUrl = null, ?string $videoId = null, ?float $width = null)
     {
         $this->assetUrls = $assetUrls;
+        $this->body = $body;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeType = $creativeType;
+        $this->cta = $cta;
         $this->externalAdReference = $externalAdReference;
         $this->externalCreativeReference = $externalCreativeReference;
         $this->externalPlacementReference = $externalPlacementReference;
@@ -214,14 +317,23 @@ class AdsCreative
         $this->height = $height;
         $this->hostingSource = $hostingSource;
         $this->id = $id;
+        $this->imageHash = $imageHash;
         $this->itemId = $itemId;
+        $this->linkUrl = $linkUrl;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
+        $this->pageIdentifier = $pageIdentifier;
+        $this->path1 = $path1;
+        $this->path2 = $path2;
         $this->raw = $raw;
         $this->status = $status;
         $this->thirdPartyTag = $thirdPartyTag;
+        $this->thumbnailUrl = $thumbnailUrl;
+        $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->vastTagUrl = $vastTagUrl;
+        $this->videoId = $videoId;
         $this->width = $width;
     }
 }

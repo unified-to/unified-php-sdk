@@ -30,5 +30,11 @@ enum UpdateAdsAdQueryParamFields: string
     case FinalUrl = 'final_url';
     case Targeting = 'targeting';
     case IsActive = 'is_active';
+    case EndAt = 'end_at';
+    case StartAt = 'start_at';
+    case DisplayUrl = 'display_url';
+    case Path1 = 'path1';
+    case Path2 = 'path2';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

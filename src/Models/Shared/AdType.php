@@ -20,4 +20,8 @@ enum AdType: string
     case Call = 'CALL';
     case Carousel = 'CAROUSEL';
     case Social = 'SOCIAL';
+    case Display = 'DISPLAY';
+    case Search = 'SEARCH';
+    case Audio = 'AUDIO';
+    case Youtube = 'YOUTUBE';
 }

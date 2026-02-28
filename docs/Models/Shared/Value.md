@@ -43,7 +43,7 @@ bool $value = /* values here */
 
 ```php
 /**
-* @var array<Shared\AtsMetadata1|string|float|bool>
+* @var array<Shared\One|string|float|bool>
 */
 array $value = /* values here */
 ```
