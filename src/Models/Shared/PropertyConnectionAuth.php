@@ -38,6 +38,14 @@ class PropertyConnectionAuth
 
     /**
      *
+     * @var ?string $audience
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('audience')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $audience = null;
+
+    /**
+     *
      * @var ?string $authorizeUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('authorize_url')]
@@ -222,6 +230,7 @@ class PropertyConnectionAuth
      * @param  ?string  $accessToken
      * @param  ?string  $apiUrl
      * @param  ?string  $appId
+     * @param  ?string  $audience
      * @param  ?string  $authorizeUrl
      * @param  ?string  $clientId
      * @param  ?string  $clientSecret
@@ -246,11 +255,12 @@ class PropertyConnectionAuth
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?array $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $refreshUrl = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null, ?string $userId = null)
+    public function __construct(?string $accessToken = null, ?string $apiUrl = null, ?string $appId = null, ?string $audience = null, ?string $authorizeUrl = null, ?string $clientId = null, ?string $clientSecret = null, ?string $consumerKey = null, ?string $consumerSecret = null, ?string $devApiKey = null, ?array $emails = null, ?float $expiresIn = null, ?\DateTime $expiryDate = null, ?string $key = null, ?array $meta = null, ?string $name = null, ?array $otherAuthInfo = null, ?string $pem = null, ?string $refreshToken = null, ?\DateTime $refreshTokenExpiresDate = null, ?float $refreshTokenExpiresIn = null, ?string $refreshUrl = null, ?string $state = null, ?string $token = null, ?string $tokenUrl = null, ?string $userId = null)
     {
         $this->accessToken = $accessToken;
         $this->apiUrl = $apiUrl;
         $this->appId = $appId;
+        $this->audience = $audience;
         $this->authorizeUrl = $authorizeUrl;
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;

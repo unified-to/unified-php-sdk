@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c49ff261f475ff6eee95b4805bd5de3f
+  docChecksum: d0897cf78de3efc63587534d3e4d713b
   docVersion: "1.0"
-  speakeasyVersion: 1.734.1
-  generationVersion: 2.845.12
-  releaseVersion: 1.6.37
-  configChecksum: 425effb2bc14c9a02dca8c6e1282681d
+  speakeasyVersion: 1.739.2
+  generationVersion: 2.846.4
+  releaseVersion: 1.6.38
+  configChecksum: fb85c341c1d5a06079ee21a7aadf79b6
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 8de35d76-61b4-4bd7-b34b-b3fd665d4104
-  pristine_commit_hash: 9b405185faa179b0d05a1f2d73e9a18cc35707f4
-  pristine_tree_hash: 71a139b0f08c60caecdcaadd25abc218b033b8dc
+  generation_id: c9a15b86-2e02-4081-b093-e64feef86534
+  pristine_commit_hash: a91d82a6fa50402dc5172dbebe16fec853b44343
+  pristine_tree_hash: d218480cd4b7d2883001b5920c9a17ccb006eff5
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -9353,8 +9353,8 @@ trackedFiles:
     pristine_git_object: 1bb1436a14156b974236e073037270d4b8c234d6
   docs/Models/Shared/PropertyConnectionAuth.md:
     id: 626d05634d8e
-    last_write_checksum: sha1:6515d84c2f28918b649679c420769e9b245ec6ba
-    pristine_git_object: b5335fd28df8c806f8cdb16fc5e47598190a03a8
+    last_write_checksum: sha1:35859a61350299a1a6fec569fe67b15267630612
+    pristine_git_object: c51a4f29e6948a36da601bc10f2c9657a3634bdb
   docs/Models/Shared/PropertyConnectionCategories.md:
     id: b9202d95df0f
     last_write_checksum: sha1:735230da065784328226913c959ece90fce6ad22
@@ -20425,8 +20425,8 @@ trackedFiles:
     pristine_git_object: 09bbcb88732d0abf58573fa42dfb1dab92d5fde9
   src/Models/Shared/PropertyConnectionAuth.php:
     id: a12b21f3e9e1
-    last_write_checksum: sha1:540b788aea1458374257a55cbaa16c79237fa285
-    pristine_git_object: 5003df75595c31915f19c7dead80863351c864f1
+    last_write_checksum: sha1:dc7d1ad02c419e16d69c20ac037ed37f62dc6ff8
+    pristine_git_object: 3b38fe85f9b369d213808e198c18e37d0b1b7be7
   src/Models/Shared/PropertyConnectionCategories.php:
     id: 061bd0c5fe08
     last_write_checksum: sha1:7df5d66c13eb09f00340b5fc2425246cc63fee64
@@ -21429,8 +21429,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:d4b62296ea821829422b5e07efbfb9349de46438
-    pristine_git_object: bb801a4e1ce2f58a18e39123e43460f42a47a547
+    last_write_checksum: sha1:8a288df83c2871892453ace6e3492b8645949a56
+    pristine_git_object: e4e75e4e9191cc83d435623674ceb749f9521cad
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -27598,7 +27598,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->group->updateAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->patchAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->listAdsGroups()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsGroup()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->getAdsGroup()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->group->createAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsGroups()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ad->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->insertionorder->getAdsInsertionorder()`:  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->insertionorder->listAdsInsertionorders()`:  `response.[]->bidStrategy->targetRoas` **Added**\n* `unified-to->creative->updateAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->patchAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->patchAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->creative->createAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->creative->getAdsCreative()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->creative->listAdsCreatives()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->creative->patchAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->listAdsInsertionorders()`:  `response.[]->bidStrategy->targetRoas` **Added**\n* `unified-to->insertionorder->patchAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->getAdsInsertionorder()`:  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->getAdsCreative()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->createAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->createAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ads->updateAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->updateAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->insertionorder->createAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->ads->listAdsCreatives()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->insertionorder->updateAdsInsertionorder()`: \n  *  `request->adsInsertionorder->bidStrategy->targetRoas` **Added**\n  *  `response.bidStrategy->targetRoas` **Added**\n* `unified-to->metadata->createMetadataMetadata()`: \n  *  `request` **Changed**\n  *  `response.isRequired` **Added**\n* `unified-to->metadata->getMetadataMetadata()`: \n  *  `request->fields` **Changed**\n  *  `response.isRequired` **Added**\n* `unified-to->metadata->listMetadataMetadatas()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->isRequired` **Added**\n* `unified-to->metadata->patchMetadataMetadata()`: \n  *  `request` **Changed**\n  *  `response.isRequired` **Added**\n* `unified-to->metadata->updateMetadataMetadata()`: \n  *  `request` **Changed**\n  *  `response.isRequired` **Added**\n* `unified-to->payment->createPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->payment->getPaymentPayment()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->payment->listPaymentPayments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->payment->patchPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->payment->updatePaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->unified->getUnifiedConnection()`:  `response.auth->audience` **Added**\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->auth->audience` **Added**\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->getUnifiedConnection()`:  `response.auth->audience` **Added**\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->auth->audience` **Added**\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
