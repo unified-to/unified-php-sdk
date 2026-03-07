@@ -83,6 +83,15 @@ class MarketingMember
     public ?array $raw = null;
 
     /**
+     *
+     * @var ?MarketingMemberStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingMemberStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?MarketingMemberStatus $status = null;
+
+    /**
      * An array of tags associated with this member
      *
      * @var ?array<string> $tags
@@ -109,11 +118,12 @@ class MarketingMember
      * @param  ?array<string>  $listIds
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
+     * @param  ?MarketingMemberStatus  $status
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?MarketingMemberStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->emails = $emails;
@@ -123,6 +133,7 @@ class MarketingMember
         $this->listIds = $listIds;
         $this->name = $name;
         $this->raw = $raw;
+        $this->status = $status;
         $this->tags = $tags;
         $this->updatedAt = $updatedAt;
     }

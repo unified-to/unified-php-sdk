@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: d0897cf78de3efc63587534d3e4d713b
+  docChecksum: b3881b35f991a103d30f955376d3b4f5
   docVersion: "1.0"
-  speakeasyVersion: 1.739.2
-  generationVersion: 2.846.4
-  releaseVersion: 1.6.38
-  configChecksum: fb85c341c1d5a06079ee21a7aadf79b6
+  speakeasyVersion: 1.748.0
+  generationVersion: 2.852.1
+  releaseVersion: 1.6.39
+  configChecksum: 690678c8794936deed54467b2c19c637
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: c9a15b86-2e02-4081-b093-e64feef86534
-  pristine_commit_hash: a91d82a6fa50402dc5172dbebe16fec853b44343
-  pristine_tree_hash: d218480cd4b7d2883001b5920c9a17ccb006eff5
+  generation_id: 38a50069-a520-4362-a0e9-bb7f1353ea33
+  pristine_commit_hash: ef0d65199e6ce3acd09539111aef3b9fe559fbdb
+  pristine_tree_hash: 52e6577c53f6846ffbc7a9dac4415fe458d140ca
 features:
   php:
     constsAndDefaults: 0.2.2
-    core: 3.9.17
+    core: 3.9.18
     globalSecurity: 2.81.10
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.1
@@ -865,8 +865,8 @@ trackedFiles:
     pristine_git_object: a8be6abb8fa5d5679638498a5911815cf356aaac
   docs/Models/Operations/CreateMartechMemberQueryParamFields.md:
     id: 20e08f417107
-    last_write_checksum: sha1:9efe2158233ac17d4cd5ae75e8a2bfb78f7bc2ac
-    pristine_git_object: bb41753885856d0194c6b5ccf41ea83078cae903
+    last_write_checksum: sha1:977bd6073fc17601266a07f8fa0f1e6e057a25b9
+    pristine_git_object: 42bacf25edaf0b9f19569036a01c8c056bf1faca
   docs/Models/Operations/CreateMartechMemberRequest.md:
     id: 8c80ed7111a8
     last_write_checksum: sha1:e62a62bf0f207667501347fcbc61b75be097106b
@@ -2157,8 +2157,8 @@ trackedFiles:
     pristine_git_object: 8e20704371ca05804031dfd750197c2c726f7ecd
   docs/Models/Operations/GetMartechMemberQueryParamFields.md:
     id: cf0b5e59edb5
-    last_write_checksum: sha1:41bfc4b04006c279cb335a027d3b5af5f010c072
-    pristine_git_object: aa3744c521d2a5f6fca7fca348b890b9315c1ff0
+    last_write_checksum: sha1:47b2655764b47b2a9b7208acedac1cbaae875c3e
+    pristine_git_object: 4302ffbaeb0c765dbf35e21817fc7e543c9ea33f
   docs/Models/Operations/GetMartechMemberRequest.md:
     id: ce907579e7f0
     last_write_checksum: sha1:79d7e1dc5268834b1e9a36cfc22dd6b0a2ffc02f
@@ -3601,8 +3601,8 @@ trackedFiles:
     pristine_git_object: c655aa4348dae28f681b5a611c755bd28b10039d
   docs/Models/Operations/ListMartechMembersQueryParamFields.md:
     id: db0a13d0766e
-    last_write_checksum: sha1:7d170df4c29fb2c58ffd9dc284e84f16b7fd6ac9
-    pristine_git_object: 35db18422db2f0bef40cacd8173d60cd487edc38
+    last_write_checksum: sha1:b8be9acaea5049b7cd7a4143db17d72a4b5448c3
+    pristine_git_object: da6afb28635c6d4a796ef2894c66b48f0d8a068f
   docs/Models/Operations/ListMartechMembersRequest.md:
     id: 0ffeb9848ecf
     last_write_checksum: sha1:0da2aabd7fe1d9d7f999da4cbce44eebad7e26d6
@@ -4889,8 +4889,8 @@ trackedFiles:
     pristine_git_object: 1dc75c042372f3295a2a925c9a7a190beb7f7155
   docs/Models/Operations/PatchMartechMemberQueryParamFields.md:
     id: 9174ab459c0d
-    last_write_checksum: sha1:5f293bbbcaac82d4942b77f71b2e5b61a6d0783a
-    pristine_git_object: 3db9afffa43f1a9b363f972c70f72233ffd9abba
+    last_write_checksum: sha1:48cf2dbc098f38d4c8094ca6e3b1770d343de209
+    pristine_git_object: 3e80526f1091cd8c3976b04337e107f209947628
   docs/Models/Operations/PatchMartechMemberRequest.md:
     id: 15ab8fe175a3
     last_write_checksum: sha1:5f22ad70de4b35836e5b1a34630f5ef3aaca1f98
@@ -6861,8 +6861,8 @@ trackedFiles:
     pristine_git_object: 99078249f9969eaec58d885e4b22cc750c7fdd22
   docs/Models/Operations/UpdateMartechMemberQueryParamFields.md:
     id: 07459b76fcb9
-    last_write_checksum: sha1:f9fe0c0191c93ab9b6e00ba95be8055f6c9c894f
-    pristine_git_object: 8c4b7ae3803b864cce38ba1425c77eb51594f4fc
+    last_write_checksum: sha1:dfe313c528d644689594da7feb9888d20ded1478
+    pristine_git_object: 24ee64e4ed2ee52905aa80ff81ef8bceba40c197
   docs/Models/Operations/UpdateMartechMemberRequest.md:
     id: ced48763de4f
     last_write_checksum: sha1:659ca281895f4c0f66d7eee252dc972b1f11fd9d
@@ -8829,8 +8829,12 @@ trackedFiles:
     pristine_git_object: 424cb1982190821d3993bc7917eff7fbed390c78
   docs/Models/Shared/MarketingMember.md:
     id: c8ef2992fc63
-    last_write_checksum: sha1:8ff324687bbe72a79b0bb1648cf9cedb39a6a698
-    pristine_git_object: 6fc2ccb95b689358a456bcde09c6e1c16ad092ba
+    last_write_checksum: sha1:d7ebd84fd99b2786c0cdc7c24fd82b77da4faa18
+    pristine_git_object: c4b7702d7cb27f004f24e0d796c0955ecbd91ac7
+  docs/Models/Shared/MarketingMemberStatus.md:
+    id: f38f1c03fc48
+    last_write_checksum: sha1:0ba039d43f0fc6f2105a61c12a3cf0e5770c0bbc
+    pristine_git_object: 544d31a3fa671eeae51181290bdfc9de6382768c
   docs/Models/Shared/MarketingReport.md:
     id: a1b1eb9dfd67
     last_write_checksum: sha1:a648c6ae24313d65d59cbbe5225cca886da49f08
@@ -12045,8 +12049,8 @@ trackedFiles:
     pristine_git_object: 852103030698acce80b15ac8c16e396a03646f8e
   src/Models/Operations/CreateMartechMemberQueryParamFields.php:
     id: fb1607bac231
-    last_write_checksum: sha1:f3b5046dccaf7ff177818fa1d8cc61cf9b384c33
-    pristine_git_object: 35ebd01207939022b8b486248021922bf09207f9
+    last_write_checksum: sha1:4726f46b53c461ba1ae8b6c28928ca5c14c69c0d
+    pristine_git_object: c166fa48c4bcf90c898fa35e2d4a2be6f52af8eb
   src/Models/Operations/CreateMartechMemberRequest.php:
     id: b66314941de8
     last_write_checksum: sha1:22386022eeaccce560c1b785e901e224239f94e4
@@ -13337,8 +13341,8 @@ trackedFiles:
     pristine_git_object: 82f9cac1d776c5963a3ed2a3f1a1c3f5340867a9
   src/Models/Operations/GetMartechMemberQueryParamFields.php:
     id: 8d7ec1820db5
-    last_write_checksum: sha1:149583c62496327651cdf2f02c5fa9475a6b6761
-    pristine_git_object: 9df1e6773fd8496f5e9d3a542710560fc1daef75
+    last_write_checksum: sha1:1028640c2aba33e1b8d16fd560453ae09adfad9a
+    pristine_git_object: 5cc9136ba2b706048cdeaf43b1230d291de1fb35
   src/Models/Operations/GetMartechMemberRequest.php:
     id: d4c693326aeb
     last_write_checksum: sha1:5a2f14209608e4cdec991cb32909ba63f22ad5d3
@@ -14781,8 +14785,8 @@ trackedFiles:
     pristine_git_object: 310678dc76d1c45c480c56476bbf24fd082d8a24
   src/Models/Operations/ListMartechMembersQueryParamFields.php:
     id: 8ebdba3f1874
-    last_write_checksum: sha1:9afe5ed82d1e2745a182283dda01c9c28b122f6a
-    pristine_git_object: 306d790492674621cb4cd078267e0df43a7b79f4
+    last_write_checksum: sha1:69f73688d4f34f67e89e2f0c5dfe8e9faa5a68f1
+    pristine_git_object: 34e19d3db4ae67a33e0488d934c5d84501f5c248
   src/Models/Operations/ListMartechMembersRequest.php:
     id: 83f1b8a1f02a
     last_write_checksum: sha1:a091af435db905f325840a4ed3d7cc0c6513178c
@@ -16069,8 +16073,8 @@ trackedFiles:
     pristine_git_object: 6355624dd4b2013a4f943f745bbfc187aa2f2932
   src/Models/Operations/PatchMartechMemberQueryParamFields.php:
     id: 8a857af74683
-    last_write_checksum: sha1:c3cb4f442275904be0684563c25e891b62b00667
-    pristine_git_object: 83c7d4c6d040393c727ad5da7e46eed536a21cb6
+    last_write_checksum: sha1:fda4aa9fdc4684c17e4348e9284a16bb618694a7
+    pristine_git_object: 448f74ac45b3a5173edef717d7ae3d21a63c4e6d
   src/Models/Operations/PatchMartechMemberRequest.php:
     id: c9a329bd3b00
     last_write_checksum: sha1:c9b5a9c43e17be73f4f231416c5f130b97c4ceb9
@@ -18041,8 +18045,8 @@ trackedFiles:
     pristine_git_object: 1ae3c3873762dd1f60196b20cc9aef47dfaffe79
   src/Models/Operations/UpdateMartechMemberQueryParamFields.php:
     id: 1e9ee2d3264d
-    last_write_checksum: sha1:cbde528b500e4c3c2fbcab41164a647b5706da18
-    pristine_git_object: b09b7d305f3e01020b542ac65fc493a7fa2676ad
+    last_write_checksum: sha1:10f9cf7233911fd24889b1caa0e4ac769e3e3e3d
+    pristine_git_object: 50395ef30173f0eff68cc68680629093b2879982
   src/Models/Operations/UpdateMartechMemberRequest.php:
     id: 77841cd4600b
     last_write_checksum: sha1:3fc52895eb342611c660c9ab8998464afd010702
@@ -19905,8 +19909,12 @@ trackedFiles:
     pristine_git_object: 8b7a09061afdbe5e2233b3a209e483530ffcbedd
   src/Models/Shared/MarketingMember.php:
     id: 459b7ae3b619
-    last_write_checksum: sha1:fdc598b4529364c44a15d99a38cb592fe7e77a2c
-    pristine_git_object: f3b78512112541a5c6462968179df038fdd7f662
+    last_write_checksum: sha1:b6274112cb9a940a15be5dc6b8a072850de94773
+    pristine_git_object: d2f908d982673760778bccacb52e0ff4c27a49c8
+  src/Models/Shared/MarketingMemberStatus.php:
+    id: f916adcb10da
+    last_write_checksum: sha1:e32663fd12857328076743bec7c7591ec9ef1177
+    pristine_git_object: a0153a098bbf1e162771d39dddbbdf2e4336580b
   src/Models/Shared/MarketingReport.php:
     id: cbf4f5594430
     last_write_checksum: sha1:74755d27dbf912d61f96c1e5d5be60c1ed100bed
@@ -21429,8 +21437,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:8a288df83c2871892453ace6e3492b8645949a56
-    pristine_git_object: e4e75e4e9191cc83d435623674ceb749f9521cad
+    last_write_checksum: sha1:b70966a03e84a4747518e18373f459eefb1fcabe
+    pristine_git_object: 488db6419a5c7bfd0f07ab2757800047b150dea5
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -27598,7 +27606,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->unified->getUnifiedConnection()`:  `response.auth->audience` **Added**\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->auth->audience` **Added**\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->getUnifiedConnection()`:  `response.auth->audience` **Added**\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->auth->audience` **Added**\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->auth->audience` **Added**\n  *  `response.auth->audience` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->martech->createMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->getMartechMember()`: \n  *  `request->fields` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->listMartechMembers()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->status` **Added**\n* `unified-to->martech->patchMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->updateMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->createMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->getMartechMember()`: \n  *  `request->fields` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->listMartechMembers()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->status` **Added**\n* `unified-to->member->patchMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->updateMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

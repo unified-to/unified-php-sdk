@@ -20,5 +20,6 @@ enum GetMartechMemberQueryParamFields: string
     case Emails = 'emails';
     case ListIds = 'list_ids';
     case Tags = 'tags';
+    case Status = 'status';
     case Raw = 'raw';
 }
