@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b3881b35f991a103d30f955376d3b4f5
+  docChecksum: fca06522dcf65afa5ed17304efc0ad81
   docVersion: "1.0"
-  speakeasyVersion: 1.748.0
-  generationVersion: 2.852.1
-  releaseVersion: 1.6.39
-  configChecksum: 690678c8794936deed54467b2c19c637
+  speakeasyVersion: 1.750.0
+  generationVersion: 2.856.1
+  releaseVersion: 1.6.40
+  configChecksum: 359e3a8c6fa6d3b1a0492d6fca7f3f27
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 38a50069-a520-4362-a0e9-bb7f1353ea33
-  pristine_commit_hash: ef0d65199e6ce3acd09539111aef3b9fe559fbdb
-  pristine_tree_hash: 52e6577c53f6846ffbc7a9dac4415fe458d140ca
+  generation_id: 27059189-4c31-431b-a6e4-25f21544c179
+  pristine_commit_hash: 7bc16bfa467e3e15ece8860bd713eef4281d673b
+  pristine_tree_hash: 8115aec7c617ae4f325607567eb8ca00fb83a662
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -8397,8 +8397,24 @@ trackedFiles:
     pristine_git_object: 1d0faeb7cc3455e4d164b74118966d84bcdf643f
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:8ffec232288ac0618d86dbc6de3689e728860a57
-    pristine_git_object: 0ff9e71ce9dfb5201a21a0acc1d526344b9f9cdf
+    last_write_checksum: sha1:9824102689acb970989d0e2852a5c60dbde0a4f2
+    pristine_git_object: 3dcc3255a92da43768695b52d41ab0118f1b77c8
+  docs/Models/Shared/IntegrationSupport1.md:
+    id: 69bfb02bf695
+    last_write_checksum: sha1:e8f25a586232db83e63ca71efe510d83045f4d18
+    pristine_git_object: 3ce3aaa64345ca7079c8dcffa2351f30b16e9b3c
+  docs/Models/Shared/IntegrationSupport5.md:
+    id: ce6be78e05af
+    last_write_checksum: sha1:de9681d9c45ace4bc853f86743be97778db0e117
+    pristine_git_object: 2f1500ade557e788fbb41dbf073f184434ff8e31
+  docs/Models/Shared/IntegrationSupportSchemas1.md:
+    id: 0dfdaf67ec43
+    last_write_checksum: sha1:abce9715f62e3feb3173051dce79c1c99ce0f7b3
+    pristine_git_object: 5e97b01cf186c3bf06d9d7d87dfff360fff5a2ba
+  docs/Models/Shared/IntegrationSupportSchemas5.md:
+    id: 0af4c7369730
+    last_write_checksum: sha1:c9ece46b208c14cd30fa68e6abdd1ca06ee1785c
+    pristine_git_object: 25a059809d6d14301ddcd63e85a88eb3ca6712c8
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -10071,6 +10087,10 @@ trackedFiles:
     id: 7a82d2b61bb1
     last_write_checksum: sha1:45118fcb893c55f7b645a73f3e812e14292c6f80
     pristine_git_object: 064cdd70fcc415a698c34a3660edfab4c599e94f
+  docs/Models/Shared/VirtualWebhookBenefitId.md:
+    id: bf65b25a858b
+    last_write_checksum: sha1:473ef62360f4022e0778cdaa13067a7cadfc70f3
+    pristine_git_object: 9aeb2dcca248f3ec0b4726531be77b4addbe9a4c
   docs/Models/Shared/VirtualWebhookBillId.md:
     id: b9e67a178b5a
     last_write_checksum: sha1:bbb835a58746e47f322667464031d36c585f6f4f
@@ -10211,6 +10231,10 @@ trackedFiles:
     id: 951250d2848a
     last_write_checksum: sha1:944a56c7840b7309c492412b410cc00e049502d8
     pristine_git_object: 00e09351573769142dc1733f2e7444aeaea753c8
+  docs/Models/Shared/VirtualWebhookPaymentId.md:
+    id: 11dd3536a4c9
+    last_write_checksum: sha1:91fae08991ae353fc4fc798f1509963530a84f42
+    pristine_git_object: b6dcfa585191b0105c77876ce5ddff7ca3686675
   docs/Models/Shared/VirtualWebhookPipelineId.md:
     id: 2da56da3e722
     last_write_checksum: sha1:6a10cd1aabfcb5cf16dedadc9bb4db059e447c5d
@@ -19493,8 +19517,16 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:6342fc06dc85cd4a4e85f307f70fc24ea9ebb2be
-    pristine_git_object: 6b218f71995ec68b206745644e97812435592aa6
+    last_write_checksum: sha1:39f9c477b5a6c3865800f98c2e9a4a2aaaa9635b
+    pristine_git_object: 3d255ba93528e4cc8ad446d546fd25d991a77bd5
+  src/Models/Shared/IntegrationSupport1.php:
+    id: 6e7f67e79d5e
+    last_write_checksum: sha1:a88221696f5af5b92d07ae18555c006e895b7bf4
+    pristine_git_object: 71fd8151409250d70a4c6e8dd9da92347b3f2925
+  src/Models/Shared/IntegrationSupportSchemas1.php:
+    id: 92c5b8b3593b
+    last_write_checksum: sha1:c623932e8c07225f565a182d47e643e98bac274f
+    pristine_git_object: c513cec211026721180ca8ba5396aa2992a93752
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -21437,8 +21469,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:b70966a03e84a4747518e18373f459eefb1fcabe
-    pristine_git_object: 488db6419a5c7bfd0f07ab2757800047b150dea5
+    last_write_checksum: sha1:6e237e25a121916906979285686f40d5deeef8e4
+    pristine_git_object: 0ac2ea3df0db925bfe31937e747e8ccd98c83f1b
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -27606,7 +27638,12 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->martech->createMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->getMartechMember()`: \n  *  `request->fields` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->listMartechMembers()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->status` **Added**\n* `unified-to->martech->patchMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->martech->updateMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->createMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->getMartechMember()`: \n  *  `request->fields` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->listMartechMembers()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->status` **Added**\n* `unified-to->member->patchMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n* `unified-to->member->updateMartechMember()`: \n  *  `request` **Changed**\n  *  `response.status` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - USAGE.md
