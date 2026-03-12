@@ -14,6 +14,15 @@ class MarketingList
 {
     /**
      *
+     * @var ?PropertyMarketingListAddress $address
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMarketingListAddress|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyMarketingListAddress $address = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -38,6 +47,22 @@ class MarketingList
 
     /**
      *
+     * @var ?string $fromEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('from_email')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $fromEmail = null;
+
+    /**
+     *
+     * @var ?string $fromName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('from_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $fromName = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -51,6 +76,14 @@ class MarketingList
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
+
+    /**
+     *
+     * @var ?string $language
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $language = null;
 
     /**
      *
@@ -80,6 +113,22 @@ class MarketingList
 
     /**
      *
+     * @var ?string $state
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('state')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $state = null;
+
+    /**
+     *
+     * @var ?string $subject
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $subject = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -95,28 +144,40 @@ class MarketingList
     public ?string $userId = null;
 
     /**
+     * @param  ?PropertyMarketingListAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?\DateTime  $endAt
+     * @param  ?string  $fromEmail
+     * @param  ?string  $fromName
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $language
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?string  $state
+     * @param  ?string  $subject
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyMarketingListAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $fromEmail = null, ?string $fromName = null, ?string $id = null, ?bool $isActive = null, ?string $language = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?string $state = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
+        $this->address = $address;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->endAt = $endAt;
+        $this->fromEmail = $fromEmail;
+        $this->fromName = $fromName;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->language = $language;
         $this->name = $name;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->state = $state;
+        $this->subject = $subject;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

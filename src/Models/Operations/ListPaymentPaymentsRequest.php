@@ -36,6 +36,14 @@ class ListPaymentPaymentsRequest
     public ?string $contactId = null;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<ListPaymentPaymentsQueryParamFields> $fields
@@ -104,6 +112,14 @@ class ListPaymentPaymentsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      * The type to filter by
      *
      * @var ?string $type
@@ -123,6 +139,7 @@ class ListPaymentPaymentsRequest
      * @param  string  $connectionId
      * @param  ?string  $billId
      * @param  ?string  $contactId
+     * @param  ?string  $endLt
      * @param  ?array<ListPaymentPaymentsQueryParamFields>  $fields
      * @param  ?string  $invoiceId
      * @param  ?float  $limit
@@ -132,15 +149,17 @@ class ListPaymentPaymentsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $billId = null, ?string $contactId = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?string $linkId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $billId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?string $invoiceId = null, ?float $limit = null, ?string $linkId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->billId = $billId;
         $this->contactId = $contactId;
+        $this->endLt = $endLt;
         $this->fields = $fields;
         $this->invoiceId = $invoiceId;
         $this->limit = $limit;
@@ -150,6 +169,7 @@ class ListPaymentPaymentsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->type = $type;
         $this->updatedGte = $updatedGte;
     }

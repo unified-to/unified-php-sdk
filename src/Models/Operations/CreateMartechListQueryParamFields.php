@@ -20,5 +20,11 @@ enum CreateMartechListQueryParamFields: string
     case EndAt = 'end_at';
     case UserId = 'user_id';
     case IsActive = 'is_active';
+    case State = 'state';
+    case FromName = 'from_name';
+    case FromEmail = 'from_email';
+    case Subject = 'subject';
+    case Language = 'language';
+    case Address = 'address';
     case Raw = 'raw';
 }
