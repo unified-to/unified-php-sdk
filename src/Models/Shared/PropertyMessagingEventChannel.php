@@ -78,14 +78,6 @@ class PropertyMessagingEventChannel
 
     /**
      *
-     * @var ?string $parentChannelId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_channel_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $parentChannelId = null;
-
-    /**
-     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
@@ -127,14 +119,13 @@ class PropertyMessagingEventChannel
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<MessagingMember>  $members
-     * @param  ?string  $parentChannelId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentChannelId = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;
@@ -144,7 +135,6 @@ class PropertyMessagingEventChannel
         $this->isActive = $isActive;
         $this->isPrivate = $isPrivate;
         $this->members = $members;
-        $this->parentChannelId = $parentChannelId;
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

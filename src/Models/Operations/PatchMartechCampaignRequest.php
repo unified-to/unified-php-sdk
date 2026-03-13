@@ -13,7 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchMartechCampaignRequest
 {
     /**
-     * A marketing campaign or email send
      *
      * @var Shared\MarketingCampaign $marketingCampaign
      */

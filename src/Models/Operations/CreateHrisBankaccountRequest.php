@@ -13,7 +13,6 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateHrisBankaccountRequest
 {
     /**
-     * Employee payroll bank account for direct deposit.
      *
      * @var Shared\HrisBankaccount $hrisBankaccount
      */

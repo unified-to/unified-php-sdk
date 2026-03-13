@@ -21,16 +21,6 @@ class AdsCampaign
     public ?AdvertisingChannelType $advertisingChannelType = null;
 
     /**
-     * YOUTUBE_AND_PARTNERS
-     *
-     * @var ?PropertyAdsCampaignBidStrategy $bidStrategy
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignBidStrategy|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyAdsCampaignBidStrategy $bidStrategy = null;
-
-    /**
      *
      * @var ?float $budgetAmount
      */
@@ -140,16 +130,6 @@ class AdsCampaign
     public ?array $raw = null;
 
     /**
-     * $specialAdCategories
-     *
-     * @var ?array<string> $specialAdCategories
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('special_ad_categories')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $specialAdCategories = null;
-
-    /**
      *
      * @var ?\DateTime $startAt
      */
@@ -193,7 +173,6 @@ class AdsCampaign
 
     /**
      * @param  ?AdvertisingChannelType  $advertisingChannelType
-     * @param  ?PropertyAdsCampaignBidStrategy  $bidStrategy
      * @param  ?float  $budgetAmount
      * @param  ?BudgetPeriod  $budgetPeriod
      * @param  ?string  $campaignBudgetIdentifier
@@ -207,7 +186,6 @@ class AdsCampaign
      * @param  ?string  $organizationId
      * @param  ?float  $plannedSpendAmount
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<string>  $specialAdCategories
      * @param  ?\DateTime  $startAt
      * @param  ?AdsCampaignStatus  $status
      * @param  ?PropertyAdsCampaignTargeting  $targeting
@@ -215,10 +193,9 @@ class AdsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?AdvertisingChannelType $advertisingChannelType = null, ?PropertyAdsCampaignBidStrategy $bidStrategy = null, ?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?array $specialAdCategories = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?AdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->advertisingChannelType = $advertisingChannelType;
-        $this->bidStrategy = $bidStrategy;
         $this->budgetAmount = $budgetAmount;
         $this->budgetPeriod = $budgetPeriod;
         $this->campaignBudgetIdentifier = $campaignBudgetIdentifier;
@@ -232,7 +209,6 @@ class AdsCampaign
         $this->organizationId = $organizationId;
         $this->plannedSpendAmount = $plannedSpendAmount;
         $this->raw = $raw;
-        $this->specialAdCategories = $specialAdCategories;
         $this->startAt = $startAt;
         $this->status = $status;
         $this->targeting = $targeting;

@@ -186,10 +186,10 @@ class CommerceItem
     /**
      * first variant is the default variant
      *
-     * @var ?array<CommerceItemVariant> $variants
+     * @var ?array<CommerceItemvariant> $variants
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('variants')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemVariant>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $variants = null;
 
@@ -222,7 +222,7 @@ class CommerceItem
      * @param  ?string  $taxrateId
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
-     * @param  ?array<CommerceItemVariant>  $variants
+     * @param  ?array<CommerceItemvariant>  $variants
      * @param  ?string  $vendorName
      * @phpstan-pure
      */

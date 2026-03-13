@@ -18,7 +18,6 @@ enum UpdateCommerceItemQueryParamFields: string
     case PublicName = 'public_name';
     case Slug = 'slug';
     case Description = 'description';
-    case TaxrateId = 'taxrate_id';
     case GlobalCode = 'global_code';
     case PublicDescription = 'public_description';
     case IsActive = 'is_active';
@@ -31,6 +30,7 @@ enum UpdateCommerceItemQueryParamFields: string
     case CollectionIds = 'collection_ids';
     case AccountId = 'account_id';
     case Metadata = 'metadata';
-    case Raw = 'raw';
     case Collections = 'collections';
+    case TaxrateId = 'taxrate_id';
+    case Raw = 'raw';
 }

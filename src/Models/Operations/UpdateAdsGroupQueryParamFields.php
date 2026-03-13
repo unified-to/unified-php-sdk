@@ -37,9 +37,6 @@ enum UpdateAdsGroupQueryParamFields: string
     case CreativeIds = 'creative_ids';
     case OptimizationGoal = 'optimization_goal';
     case BillingEvent = 'billing_event';
-    case DailySpendCap = 'daily_spend_cap';
-    case LifetimeSpendCap = 'lifetime_spend_cap';
-    case AdGroupType = 'ad_group_type';
     case Currency = 'currency';
     case Metadata = 'metadata';
     case Raw = 'raw';

@@ -28,7 +28,7 @@ class ListCommerceInventoriesRequest
     public ?array $fields = null;
 
     /**
-     * The item variant ID to filter by (reference to CommerceItemVariant)
+     * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      *
      * @var ?string $itemVariantId
      */

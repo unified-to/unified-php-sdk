@@ -1,7 +1,5 @@
 # MarketingCampaign
 
-A marketing campaign or email send
-
 
 ## Fields
 
@@ -11,7 +9,7 @@ A marketing campaign or email send
 | `fromEmail`                                                                       | *?string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
 | `fromName`                                                                        | *?string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
 | `id`                                                                              | *?string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
-| `listIds`                                                                         | array<*string*>                                                                   | :heavy_minus_sign:                                                                | Associated list/audience IDs                                                      |
+| `listIds`                                                                         | array<*string*>                                                                   | :heavy_minus_sign:                                                                | Associated listaudience IDs                                                       |
 | `name`                                                                            | *?string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
 | `previewText`                                                                     | *?string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
 | `raw`                                                                             | array<string, *mixed*>                                                            | :heavy_minus_sign:                                                                | N/A                                                                               |

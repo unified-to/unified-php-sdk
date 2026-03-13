@@ -15,7 +15,6 @@ enum UpdateCommerceItemvariantQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case Name = 'name';
-    case Items = 'items';
     case PublicName = 'public_name';
     case Description = 'description';
     case PublicDescription = 'public_description';
@@ -38,5 +37,6 @@ enum UpdateCommerceItemvariantQueryParamFields: string
     case InventoryId = 'inventory_id';
     case RequiresShipping = 'requires_shipping';
     case Metadata = 'metadata';
+    case Items = 'items';
     case Raw = 'raw';
 }

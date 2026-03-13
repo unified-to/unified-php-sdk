@@ -17,7 +17,6 @@ enum CreateAdsAdQueryParamFields: string
     case Name = 'name';
     case CampaignId = 'campaign_id';
     case GroupId = 'group_id';
-    case ItemId = 'item_id';
     case OrganizationId = 'organization_id';
     case Status = 'status';
     case AdType = 'ad_type';
@@ -28,10 +27,6 @@ enum CreateAdsAdQueryParamFields: string
     case Description = 'description';
     case Cta = 'cta';
     case FinalUrl = 'final_url';
-    case Targeting = 'targeting';
-    case IsActive = 'is_active';
-    case EndAt = 'end_at';
-    case StartAt = 'start_at';
     case DisplayUrl = 'display_url';
     case Path1 = 'path1';
     case Path2 = 'path2';

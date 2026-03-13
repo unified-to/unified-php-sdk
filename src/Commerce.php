@@ -292,7 +292,7 @@ class Commerce
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant1', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CreateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -741,7 +741,7 @@ class Commerce
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant1', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\GetCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1175,7 +1175,7 @@ class Commerce
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceItemvariant1>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\ListCommerceItemvariantsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -1629,7 +1629,7 @@ class Commerce
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant1', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\PatchCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -2490,7 +2490,7 @@ class Commerce
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant1', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\UpdateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,

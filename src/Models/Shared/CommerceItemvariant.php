@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CommerceItemVariant
+class CommerceItemvariant
 {
     /**
      *
@@ -18,6 +18,14 @@ class CommerceItemVariant
     #[\Speakeasy\Serializer\Annotation\SerializedName('available_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $availableAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $createdAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $createdAt = null;
 
     /**
      *
@@ -74,6 +82,16 @@ class CommerceItemVariant
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_visible')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isVisible = null;
+
+    /**
+     * references CommerceItem
+     *
+     * @var ?array<CommerceReference> $items
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $items = null;
 
     /**
      *
@@ -148,6 +166,16 @@ class CommerceItemVariant
     public ?string $publicName = null;
 
     /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
      *
      * @var ?bool $requiresShipping
      */
@@ -192,6 +220,14 @@ class CommerceItemVariant
 
     /**
      *
+     * @var ?\DateTime $updatedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $updatedAt = null;
+
+    /**
+     *
      * @var ?float $weight
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight')]
@@ -217,6 +253,7 @@ class CommerceItemVariant
 
     /**
      * @param  ?\DateTime  $availableAt
+     * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?float  $height
      * @param  ?string  $id
@@ -224,6 +261,7 @@ class CommerceItemVariant
      * @param  ?bool  $isActive
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
+     * @param  ?array<CommerceReference>  $items
      * @param  ?float  $length
      * @param  ?array<CommerceItemMedia>  $media
      * @param  ?array<CommerceMetadata>  $metadata
@@ -232,19 +270,22 @@ class CommerceItemVariant
      * @param  ?array<CommerceItemPrice>  $prices
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
+     * @param  ?array<string, mixed>  $raw
      * @param  ?bool  $requiresShipping
      * @param  ?SizeUnit  $sizeUnit
      * @param  ?string  $sku
      * @param  ?array<string>  $tags
      * @param  ?float  $totalStock
+     * @param  ?\DateTime  $updatedAt
      * @param  ?float  $weight
      * @param  ?WeightUnit  $weightUnit
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $availableAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
+    public function __construct(?\DateTime $availableAt = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $items = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?\DateTime $updatedAt = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
     {
         $this->availableAt = $availableAt;
+        $this->createdAt = $createdAt;
         $this->description = $description;
         $this->height = $height;
         $this->id = $id;
@@ -252,6 +293,7 @@ class CommerceItemVariant
         $this->isActive = $isActive;
         $this->isFeatured = $isFeatured;
         $this->isVisible = $isVisible;
+        $this->items = $items;
         $this->length = $length;
         $this->media = $media;
         $this->metadata = $metadata;
@@ -260,11 +302,13 @@ class CommerceItemVariant
         $this->prices = $prices;
         $this->publicDescription = $publicDescription;
         $this->publicName = $publicName;
+        $this->raw = $raw;
         $this->requiresShipping = $requiresShipping;
         $this->sizeUnit = $sizeUnit;
         $this->sku = $sku;
         $this->tags = $tags;
         $this->totalStock = $totalStock;
+        $this->updatedAt = $updatedAt;
         $this->weight = $weight;
         $this->weightUnit = $weightUnit;
         $this->width = $width;

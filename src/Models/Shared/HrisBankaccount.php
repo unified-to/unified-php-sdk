@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** HrisBankaccount - Employee payroll bank account for direct deposit. */
 class HrisBankaccount
 {
     /**

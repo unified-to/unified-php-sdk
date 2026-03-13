@@ -230,7 +230,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant1(),
+    commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
 );
 
@@ -1312,7 +1312,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant1(),
+    commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2048,7 +2048,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant1(),
+    commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
     id: '<id>',
 );

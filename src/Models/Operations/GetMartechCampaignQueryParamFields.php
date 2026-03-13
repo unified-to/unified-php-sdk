@@ -12,6 +12,8 @@ namespace Unified\Unified_to\Models\Operations;
 enum GetMartechCampaignQueryParamFields: string
 {
     case Id = 'id';
+    case CreatedAt = 'created_at';
+    case UpdatedAt = 'updated_at';
     case Name = 'name';
     case Type = 'type';
     case Status = 'status';
@@ -22,7 +24,5 @@ enum GetMartechCampaignQueryParamFields: string
     case FromEmail = 'from_email';
     case ReplyToEmail = 'reply_to_email';
     case SendAt = 'send_at';
-    case CreatedAt = 'created_at';
-    case UpdatedAt = 'updated_at';
     case Raw = 'raw';
 }

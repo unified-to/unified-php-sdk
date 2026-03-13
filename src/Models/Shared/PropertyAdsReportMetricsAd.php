@@ -88,14 +88,6 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
-     * @var ?\DateTime $endAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?\DateTime $endAt = null;
-
-    /**
-     *
      * @var ?string $finalUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('final_url')]
@@ -125,22 +117,6 @@ class PropertyAdsReportMetricsAd
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     *
-     * @var ?bool $isActive
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?bool $isActive = null;
-
-    /**
-     *
-     * @var ?string $itemId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('item_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $itemId = null;
 
     /**
      * $metadata
@@ -196,29 +172,12 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
-     * @var ?\DateTime $startAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?\DateTime $startAt = null;
-
-    /**
-     *
      * @var ?PropertyAdsReportMetricsAdStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsAdStatus $status = null;
-
-    /**
-     *
-     * @var ?PropertyAdsReportMetricsAdTargeting $targeting
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdTargeting|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyAdsReportMetricsAdTargeting $targeting = null;
 
     /**
      *
@@ -238,26 +197,21 @@ class PropertyAdsReportMetricsAd
      * @param  ?string  $cta
      * @param  ?string  $description
      * @param  ?string  $displayUrl
-     * @param  ?\DateTime  $endAt
      * @param  ?string  $finalUrl
      * @param  ?string  $groupId
      * @param  ?string  $headline
      * @param  ?string  $id
-     * @param  ?bool  $isActive
-     * @param  ?string  $itemId
      * @param  ?array<AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $path1
      * @param  ?string  $path2
      * @param  ?array<string, mixed>  $raw
-     * @param  ?\DateTime  $startAt
      * @param  ?PropertyAdsReportMetricsAdStatus  $status
-     * @param  ?PropertyAdsReportMetricsAdTargeting  $targeting
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?\DateTime $endAt = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?bool $isActive = null, ?string $itemId = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?PropertyAdsReportMetricsAdTargeting $targeting = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $raw = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->adCopy = $adCopy;
         $this->adType = $adType;
@@ -268,22 +222,17 @@ class PropertyAdsReportMetricsAd
         $this->cta = $cta;
         $this->description = $description;
         $this->displayUrl = $displayUrl;
-        $this->endAt = $endAt;
         $this->finalUrl = $finalUrl;
         $this->groupId = $groupId;
         $this->headline = $headline;
         $this->id = $id;
-        $this->isActive = $isActive;
-        $this->itemId = $itemId;
         $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->path1 = $path1;
         $this->path2 = $path2;
         $this->raw = $raw;
-        $this->startAt = $startAt;
         $this->status = $status;
-        $this->targeting = $targeting;
         $this->updatedAt = $updatedAt;
     }
 }

@@ -14,10 +14,10 @@ class CreateCommerceItemvariantRequest
 {
     /**
      *
-     * @var Shared\CommerceItemvariant1 $commerceItemvariant
+     * @var Shared\CommerceItemvariant $commerceItemvariant
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
-    public Shared\CommerceItemvariant1 $commerceItemvariant;
+    public Shared\CommerceItemvariant $commerceItemvariant;
 
     /**
      * ID of the connection
@@ -44,13 +44,13 @@ class CreateCommerceItemvariantRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceItemvariant1  $commerceItemvariant
+     * @param  Shared\CommerceItemvariant  $commerceItemvariant
      * @param  string  $connectionId
      * @param  ?array<CreateCommerceItemvariantQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */
-    public function __construct(Shared\CommerceItemvariant1 $commerceItemvariant, string $connectionId, ?array $fields = null, ?string $raw = null)
+    public function __construct(Shared\CommerceItemvariant $commerceItemvariant, string $connectionId, ?array $fields = null, ?string $raw = null)
     {
         $this->commerceItemvariant = $commerceItemvariant;
         $this->connectionId = $connectionId;

@@ -16,7 +16,6 @@ enum ListMessagingChannelsQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case Name = 'name';
     case Description = 'description';
-    case ParentChannelId = 'parent_channel_id';
     case ParentId = 'parent_id';
     case HasSubchannels = 'has_subchannels';
     case Members = 'members';

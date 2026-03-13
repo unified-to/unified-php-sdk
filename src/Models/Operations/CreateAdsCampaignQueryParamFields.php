@@ -26,8 +26,6 @@ enum CreateAdsCampaignQueryParamFields: string
     case Goal = 'goal';
     case PlannedSpendAmount = 'planned_spend_amount';
     case FrequencyCap = 'frequency_cap';
-    case BidStrategy = 'bid_strategy';
-    case SpecialAdCategories = 'special_ad_categories';
     case AdvertisingChannelType = 'advertising_channel_type';
     case CampaignBudgetIdentifier = 'campaign_budget_identifier';
     case Currency = 'currency';

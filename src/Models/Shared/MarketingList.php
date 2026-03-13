@@ -47,22 +47,6 @@ class MarketingList
 
     /**
      *
-     * @var ?string $fromEmail
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('from_email')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $fromEmail = null;
-
-    /**
-     *
-     * @var ?string $fromName
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('from_name')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $fromName = null;
-
-    /**
-     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -105,19 +89,43 @@ class MarketingList
 
     /**
      *
+     * @var ?string $senderCompany
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sender_company')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $senderCompany = null;
+
+    /**
+     *
+     * @var ?string $senderEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sender_email')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $senderEmail = null;
+
+    /**
+     *
+     * @var ?string $senderName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sender_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $senderName = null;
+
+    /**
+     *
+     * @var ?string $senderPhone
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sender_phone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $senderPhone = null;
+
+    /**
+     *
      * @var ?\DateTime $startAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
-
-    /**
-     *
-     * @var ?string $state
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('state')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $state = null;
 
     /**
      *
@@ -148,35 +156,37 @@ class MarketingList
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?\DateTime  $endAt
-     * @param  ?string  $fromEmail
-     * @param  ?string  $fromName
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $language
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $senderCompany
+     * @param  ?string  $senderEmail
+     * @param  ?string  $senderName
+     * @param  ?string  $senderPhone
      * @param  ?\DateTime  $startAt
-     * @param  ?string  $state
      * @param  ?string  $subject
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyMarketingListAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $fromEmail = null, ?string $fromName = null, ?string $id = null, ?bool $isActive = null, ?string $language = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?string $state = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyMarketingListAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $language = null, ?string $name = null, ?array $raw = null, ?string $senderCompany = null, ?string $senderEmail = null, ?string $senderName = null, ?string $senderPhone = null, ?\DateTime $startAt = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->endAt = $endAt;
-        $this->fromEmail = $fromEmail;
-        $this->fromName = $fromName;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->language = $language;
         $this->name = $name;
         $this->raw = $raw;
+        $this->senderCompany = $senderCompany;
+        $this->senderEmail = $senderEmail;
+        $this->senderName = $senderName;
+        $this->senderPhone = $senderPhone;
         $this->startAt = $startAt;
-        $this->state = $state;
         $this->subject = $subject;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;

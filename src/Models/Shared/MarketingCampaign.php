@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** MarketingCampaign - A marketing campaign or email send */
 class MarketingCampaign
 {
     /**
@@ -45,7 +44,7 @@ class MarketingCampaign
     public ?string $id = null;
 
     /**
-     * Associated list/audience IDs
+     * Associated listaudience IDs
      *
      * @var ?array<string> $listIds
      */

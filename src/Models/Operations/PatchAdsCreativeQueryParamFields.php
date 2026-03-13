@@ -25,14 +25,10 @@ enum PatchAdsCreativeQueryParamFields: string
     case Width = 'width';
     case Height = 'height';
     case AssetUrls = 'asset_urls';
-    case PageIdentifier = 'page_identifier';
     case LinkUrl = 'link_url';
     case Body = 'body';
     case Title = 'title';
     case Cta = 'cta';
-    case ThumbnailUrl = 'thumbnail_url';
-    case ImageHash = 'image_hash';
-    case VideoId = 'video_id';
     case ThirdPartyTag = 'third_party_tag';
     case VastTagUrl = 'vast_tag_url';
     case ExternalCreativeReference = 'external_creative_reference';

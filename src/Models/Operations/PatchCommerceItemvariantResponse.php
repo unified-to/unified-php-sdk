@@ -35,18 +35,18 @@ class PatchCommerceItemvariantResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceItemvariant1 $commerceItemvariant
+     * @var ?Shared\CommerceItemvariant $commerceItemvariant
      */
-    public ?Shared\CommerceItemvariant1 $commerceItemvariant = null;
+    public ?Shared\CommerceItemvariant $commerceItemvariant = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceItemvariant1  $commerceItemvariant
+     * @param  ?Shared\CommerceItemvariant  $commerceItemvariant
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceItemvariant1 $commerceItemvariant = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceItemvariant $commerceItemvariant = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;

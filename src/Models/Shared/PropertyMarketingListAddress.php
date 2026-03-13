@@ -37,14 +37,6 @@ class PropertyMarketingListAddress
 
     /**
      *
-     * @var ?string $company
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('company')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $company = null;
-
-    /**
-     *
      * @var ?string $country
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
@@ -53,88 +45,46 @@ class PropertyMarketingListAddress
 
     /**
      *
-     * @var ?string $fromEmail
+     * @var ?string $countryCode
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('from_email')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('country_code')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $fromEmail = null;
+    public ?string $countryCode = null;
 
     /**
      *
-     * @var ?string $fromName
+     * @var ?string $postalCode
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('from_name')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('postal_code')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $fromName = null;
+    public ?string $postalCode = null;
 
     /**
      *
-     * @var ?string $language
+     * @var ?string $region
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('region')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $language = null;
-
-    /**
-     *
-     * @var ?string $phone
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('phone')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $phone = null;
-
-    /**
-     *
-     * @var ?string $state
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('state')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $state = null;
-
-    /**
-     *
-     * @var ?string $subject
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $subject = null;
-
-    /**
-     *
-     * @var ?string $zip
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('zip')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $zip = null;
+    public ?string $region = null;
 
     /**
      * @param  ?string  $address1
      * @param  ?string  $address2
      * @param  ?string  $city
-     * @param  ?string  $company
      * @param  ?string  $country
-     * @param  ?string  $fromEmail
-     * @param  ?string  $fromName
-     * @param  ?string  $language
-     * @param  ?string  $phone
-     * @param  ?string  $state
-     * @param  ?string  $subject
-     * @param  ?string  $zip
+     * @param  ?string  $countryCode
+     * @param  ?string  $postalCode
+     * @param  ?string  $region
      * @phpstan-pure
      */
-    public function __construct(?string $address1 = null, ?string $address2 = null, ?string $city = null, ?string $company = null, ?string $country = null, ?string $fromEmail = null, ?string $fromName = null, ?string $language = null, ?string $phone = null, ?string $state = null, ?string $subject = null, ?string $zip = null)
+    public function __construct(?string $address1 = null, ?string $address2 = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?string $postalCode = null, ?string $region = null)
     {
         $this->address1 = $address1;
         $this->address2 = $address2;
         $this->city = $city;
-        $this->company = $company;
         $this->country = $country;
-        $this->fromEmail = $fromEmail;
-        $this->fromName = $fromName;
-        $this->language = $language;
-        $this->phone = $phone;
-        $this->state = $state;
-        $this->subject = $subject;
-        $this->zip = $zip;
+        $this->countryCode = $countryCode;
+        $this->postalCode = $postalCode;
+        $this->region = $region;
     }
 }
