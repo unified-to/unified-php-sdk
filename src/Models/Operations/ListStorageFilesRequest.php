@@ -20,12 +20,27 @@ class ListStorageFilesRequest
     public string $connectionId;
 
     /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     *
+     * @var ?bool $expand
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=expand')]
+    public ?bool $expand = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<ListStorageFilesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
+
+    /**
+     *
+     * @var ?string $fulltext
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fulltext')]
+    public ?string $fulltext = null;
 
     /**
      *
@@ -97,7 +112,9 @@ class ListStorageFilesRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?bool  $expand
      * @param  ?array<ListStorageFilesQueryParamFields>  $fields
+     * @param  ?string  $fulltext
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -109,10 +126,12 @@ class ListStorageFilesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?bool $expand = null, ?array $fields = null, ?string $fulltext = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->expand = $expand;
         $this->fields = $fields;
+        $this->fulltext = $fulltext;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

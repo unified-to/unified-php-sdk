@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f4616b1bed10ff19984980d59c784b0b
+  docChecksum: 1ecbe864c08b26a953eed6ae60fbd088
   docVersion: "1.0"
-  speakeasyVersion: 1.753.0
-  generationVersion: 2.862.0
-  releaseVersion: 1.6.42
-  configChecksum: 9ef3e6b061d271c4d89f9d05df2f7dbb
+  speakeasyVersion: 1.755.0
+  generationVersion: 2.865.2
+  releaseVersion: 1.6.43
+  configChecksum: 26fb26e91126c234d2e1ab85b70dd3df
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 77d616e2-6a76-456e-a76a-7ec5d2633843
-  pristine_commit_hash: 80df8a97149e819527ad38416f0369bf209188be
-  pristine_tree_hash: 08a76a78b843ae06d5c8dbed0e7afa0b2d5df5cb
+  generation_id: ac2f4851-bf63-4fdc-ace1-b0cfdfd82363
+  pristine_commit_hash: 0649cf6317a6452815237698483c1fb2f03e2451
+  pristine_tree_hash: 49c8e51e61c31f85368b04b8baae413620636c2a
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -2849,8 +2849,8 @@ trackedFiles:
     pristine_git_object: 2c04ab42196bda821531c6ef7020dc94c6635efc
   docs/Models/Operations/ListAdsAdsRequest.md:
     id: bfba0206d878
-    last_write_checksum: sha1:d95dfde7ac9709b3b74403b0aa385ae5f2a1506c
-    pristine_git_object: 514b7caca852b639a5e3ea321787d155d2f64da5
+    last_write_checksum: sha1:a24d4904320eb6fcc0d70d4bc3d8716d25d89815
+    pristine_git_object: 7446dba70dccea79a92acd28d2e204f2b65ebebf
   docs/Models/Operations/ListAdsAdsResponse.md:
     id: 7ebe7542e1e5
     last_write_checksum: sha1:0368aacc8c9f8e0c9c7cab2b7bca3e0d5f1d7eb7
@@ -2873,8 +2873,8 @@ trackedFiles:
     pristine_git_object: 32502539564f3c35281853863c7008870b1d7adf
   docs/Models/Operations/ListAdsCreativesRequest.md:
     id: a2dbf8b2621b
-    last_write_checksum: sha1:789bcedf2df9899099e9dec7ab94539bc4d17481
-    pristine_git_object: d15f71f130c6b86a1a9e08afd49557e4a91eabbc
+    last_write_checksum: sha1:68dc01ce7c9dec366217d11506c9e5dc85e03eda
+    pristine_git_object: d43811591e25d7110ac5144091b89d254de04c83
   docs/Models/Operations/ListAdsCreativesResponse.md:
     id: 81b7861e66de
     last_write_checksum: sha1:5016354e091afc1c9d763221b0b4530a0818f456
@@ -2921,8 +2921,8 @@ trackedFiles:
     pristine_git_object: 5a697ad618b76e7d282b754166567addb8d2bef5
   docs/Models/Operations/ListAdsReportsRequest.md:
     id: 87347f9a8d43
-    last_write_checksum: sha1:f6857ff9b7ad25b40b6bc7a5b6993685b4d4a7a4
-    pristine_git_object: e7e0cba37af20a6e98bed651ec39fca756de034b
+    last_write_checksum: sha1:4f17b41ccac0bf94283efdf3f66a446d0777cbc2
+    pristine_git_object: 79463d76f1bf18a3afb62e882492920d07ae5d91
   docs/Models/Operations/ListAdsReportsResponse.md:
     id: 7e6bbf3d142a
     last_write_checksum: sha1:8dff96ad472a98522eed8531b62ea37344cc8a6b
@@ -3845,8 +3845,8 @@ trackedFiles:
     pristine_git_object: 7fc41ba5512c762c4da4896b07803cde88447f76
   docs/Models/Operations/ListStorageFilesRequest.md:
     id: 8449a3946aad
-    last_write_checksum: sha1:02a138719e4b56c07cc7454a82fb1e3b170f5495
-    pristine_git_object: f7952d02882c3ad66842a812888e6014684f4a2b
+    last_write_checksum: sha1:1ceb1b92270506f8a4d34bbefb58fed0d607b630
+    pristine_git_object: f55b7d8505a0c4f006399b81d681924602fed382
   docs/Models/Operations/ListStorageFilesResponse.md:
     id: 21aafd5ad978
     last_write_checksum: sha1:6a46baa32b3d680e3f1ae14143530f893f8b287e
@@ -8385,8 +8385,8 @@ trackedFiles:
     pristine_git_object: 1d0faeb7cc3455e4d164b74118966d84bcdf643f
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:67ec3561ed62f590accb3a6dcfae2b5ffb042e6a
-    pristine_git_object: 75a328ab46d730b1188cf78544ae9145325fa93d
+    last_write_checksum: sha1:c5adfdeb0ed17d80f266833df552813a2f9c0f04
+    pristine_git_object: 239065558f7c9b40fbc032a41fc4f3fe94e47361
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -8559,6 +8559,10 @@ trackedFiles:
     id: 496a01502ad5
     last_write_checksum: sha1:a2aa9e3c81098d2e7177b3122ff29d7499e390ec
     pristine_git_object: 3952897aeee6b5a19d5bf48d435189af91b2e7ee
+  docs/Models/Shared/ListFulltext.md:
+    id: 482adc30dceb
+    last_write_checksum: sha1:ab95e18c8daea34af6eb6e487bf3aca912e0c7ba
+    pristine_git_object: 851db371335d72206f38ea7c0c9e2e36eedc995f
   docs/Models/Shared/ListGroupId.md:
     id: 1de37c22a1ed
     last_write_checksum: sha1:6bfcbafe8611814851c4303d99bfd6a206622e70
@@ -13993,8 +13997,8 @@ trackedFiles:
     pristine_git_object: 27613626186ed86da203a438e0ac12d264b5f005
   src/Models/Operations/ListAdsAdsRequest.php:
     id: bf4c96ae8ce9
-    last_write_checksum: sha1:c951feef9d174b8a5cb8fa5e5d6aa7e64138cd4e
-    pristine_git_object: 2c0c211b2101742aeb68b36b0d79a817406627e3
+    last_write_checksum: sha1:58bac9206905e71fe8a0c9f884a4261f09e23864
+    pristine_git_object: 02d1d0a4c3cfa0ae8615028d34871a21ecb8659a
   src/Models/Operations/ListAdsAdsResponse.php:
     id: 3056bcc5044b
     last_write_checksum: sha1:6fea04ed695d4c991d30cb8e665b3a06179afa3e
@@ -14017,8 +14021,8 @@ trackedFiles:
     pristine_git_object: 3ba81cb1ee846ae10c82ea7a29ea74535d3b7fd8
   src/Models/Operations/ListAdsCreativesRequest.php:
     id: 1f1619159831
-    last_write_checksum: sha1:b638c356994c872a5ffd9dc37067f6a691d23f5d
-    pristine_git_object: 3718b407136acc876de0207a130070ffd4c59d06
+    last_write_checksum: sha1:fe4d64e0d9cefc8d86d0c60e62710ea4adfd14de
+    pristine_git_object: 9ac8a481bd2edd06b977e0d0895eecc839af3f29
   src/Models/Operations/ListAdsCreativesResponse.php:
     id: c51771b4fcb7
     last_write_checksum: sha1:2cab26be54ba1317debc4def35ba582b03665491
@@ -14065,8 +14069,8 @@ trackedFiles:
     pristine_git_object: 0771ec912b3b3ec42668863c0a493213ec9a4d09
   src/Models/Operations/ListAdsReportsRequest.php:
     id: 69605d1fcab0
-    last_write_checksum: sha1:31dba370041d018f953f2b5caee71ca93e2c9bdc
-    pristine_git_object: 9e91bceffd488b07eace5e862373c49743d16ce7
+    last_write_checksum: sha1:bc453a87e43036aab8541bb52c1876b8e6f4a0a0
+    pristine_git_object: 2472e19e3f2722efada1cc84e6de792c5f884107
   src/Models/Operations/ListAdsReportsResponse.php:
     id: 178b2c283a7a
     last_write_checksum: sha1:5b10a0ad28c99d2a2bbc925d24955119cf7c6ddf
@@ -14989,8 +14993,8 @@ trackedFiles:
     pristine_git_object: 52e283e0c19329f7a0018deb4e25128a83588561
   src/Models/Operations/ListStorageFilesRequest.php:
     id: 208ceda3b3b8
-    last_write_checksum: sha1:52452e42a3dce5404e2c55161739d6a811f77e47
-    pristine_git_object: 27168d00fbda36f444de0d17656d80d993198165
+    last_write_checksum: sha1:32a15390ac4b8be38a670371770ef792f0947250
+    pristine_git_object: 2e929bddf95ec633aa302d1c317c66bd55c51777
   src/Models/Operations/ListStorageFilesResponse.php:
     id: 6f9a487d761c
     last_write_checksum: sha1:287d9d30f4d90fd703fa2b1f344b76e9b19e77fc
@@ -19441,8 +19445,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:12fba97e0e316a7567e9720908d367fc444d2dec
-    pristine_git_object: 8d6e4189bec33db061e381975d525b74df316b65
+    last_write_checksum: sha1:24fffaac2f59499464843799e5e175b805738556
+    pristine_git_object: 07807dd7074ded885979d844023c11d6c2c04c27
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -19599,6 +19603,10 @@ trackedFiles:
     id: f6bd1120a50e
     last_write_checksum: sha1:d9741a315ec1d74fe89eda96854a1b81fece1d79
     pristine_git_object: b211d708342e126cebeb3091dde09a395eec3a33
+  src/Models/Shared/ListFulltext.php:
+    id: 7d3f582f3d4e
+    last_write_checksum: sha1:bed56e4ba01795e100c7adbf186876171cc090f5
+    pristine_git_object: c1626f40e340f447959ad3ca066aa6f98df7ab1f
   src/Models/Shared/ListGroupId.php:
     id: bff0da3a9c4a
     last_write_checksum: sha1:f52f5a19c65f8b0abd613dc64f21185abad996ca
@@ -21357,8 +21365,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:8d995aee387cb9be2875c7fbb13a8b8320e5bdfd
-    pristine_git_object: 5f2c40bd9dbab0352b8f4b63376f17ab2ccbb807
+    last_write_checksum: sha1:875923c77f58bf1d289dbc2ce71a90915370884e
+    pristine_git_object: e3f1934b867bbbe1df601d493088790ac9b7a8ae
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -27526,7 +27534,14 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->creative->createAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsAd()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsCreative()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsGroup()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsAds()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCreatives()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsGroups()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->createAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->getAdsAd()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->listAdsAds()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ad->patchAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ad->updateAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsAd()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->creative->updateAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to->creative->getAdsCreative()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->creative->listAdsCreatives()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->creative->patchAdsCreative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->martech->createMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->createAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->getAdsGroup()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->listAdsGroups()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->group->patchAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->updateAdsGroup()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->event->patchMessagingEvent()`: \n  *  `request->messagingEvent->channel->parentChannelId` **Removed** (Breaking ⚠️)\n  *  `response.channel->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->event->updateMessagingEvent()`: \n  *  `request->messagingEvent->channel->parentChannelId` **Removed** (Breaking ⚠️)\n  *  `response.channel->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->channel->listMessagingChannels()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->channel->getMessagingChannel()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->updateMessagingEvent()`: \n  *  `request->messagingEvent->channel->parentChannelId` **Removed** (Breaking ⚠️)\n  *  `response.channel->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->patchMessagingEvent()`: \n  *  `request->messagingEvent->channel->parentChannelId` **Removed** (Breaking ⚠️)\n  *  `response.channel->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->messaging->listMessagingChannels()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->messaging->getMessagingChannel()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.parentChannelId` **Removed** (Breaking ⚠️)\n* `unified-to->list->updateMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->list->patchMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->list->listMartechLists()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->list->getMartechList()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->list->createMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->martech->updateMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->martech->patchMartechList()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->martech->listMartechLists()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->martech->getMartechList()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->commerce->getCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->itemvariant->getCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->itemvariant->listCommerceItemvariants()`: \n  *  `request->fields` **Changed**\n* `unified-to->itemvariant->patchCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->itemvariant->updateCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->crm->createCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->crm->getCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->crm->listCrmDeals()`: \n  *  `request->fields` **Changed**\n* `unified-to->crm->patchCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->crm->updateCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->deal->createCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->deal->getCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->deal->listCrmDeals()`: \n  *  `request->fields` **Changed**\n* `unified-to->deal->patchCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->deal->updateCrmDeal()`: \n  *  `request->fields` **Changed**\n* `unified-to->martech->createMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->itemvariant->createCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->martech->getMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->martech->listMartechCampaigns()`: \n  *  `request->fields` **Changed**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->martech->patchMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->item->listCommerceItems()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->variants[]` **Changed**\n* `unified-to->martech->updateMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->item->getCommerceItem()`: \n  *  `request->fields` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->item->createCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->commerce->updateCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->commerce->patchCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->commerce->listCommerceItemvariants()`: \n  *  `request->fields` **Changed**\n* `unified-to->commerce->listCommerceItems()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->variants[]` **Changed**\n* `unified-to->commerce->getCommerceItem()`: \n  *  `request->fields` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->commerce->createCommerceItemvariant()`: \n  *  `request->fields` **Changed**\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request` **Changed**\n  *  `response.variants[]` **Changed**\n* `unified-to->campaign->updateMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->campaign->patchMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->campaign->listMartechCampaigns()`: \n  *  `request->fields` **Changed**\n* `unified-to->campaign->getMartechCampaign()`: \n  *  `request->fields` **Changed**\n* `unified-to->campaign->createMartechCampaign()`: \n  *  `request->fields` **Changed**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->storage->listStorageFiles()`:  `request` **Changed**
+  * `unified-to->file->listStorageFiles()`:  `request` **Changed**
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listFulltext` **Added**
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listFulltext` **Added**
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listFulltext` **Added**
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listFulltext` **Added**
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -52,7 +52,7 @@ class ListAdsReportsRequest
     public ?array $fields = null;
 
     /**
-     * The group ID to filter by (reference to HrisGroup)
+     * The group ID to filter by (reference to AdsGroup)
      *
      * @var ?string $groupId
      */
