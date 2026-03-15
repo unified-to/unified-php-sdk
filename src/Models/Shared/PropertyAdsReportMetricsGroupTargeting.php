@@ -12,273 +12,124 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyAdsReportMetricsGroupTargeting
 {
     /**
-     * $ageRanges
      *
-     * @var ?array<string> $ageRanges
+     * @var ?PropertyAdsReportMetricsGroupTargetingAudience $audience
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('age_ranges')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('audience')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $ageRanges = null;
+    public ?PropertyAdsReportMetricsGroupTargetingAudience $audience = null;
 
     /**
-     * $audiences
+     * Brand safety (Meta: excluded_publisher_categories, etc.; Google
      *
-     * @var ?array<string> $audiences
+     * @var ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('audiences')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('brand_safety')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $audiences = null;
+    public ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null;
 
     /**
-     * $behaviors
      *
-     * @var ?array<string> $behaviors
+     * @var ?PropertyAdsReportMetricsGroupTargetingContent $content
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('behaviors')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $behaviors = null;
+    public ?PropertyAdsReportMetricsGroupTargetingContent $content = null;
 
     /**
-     * $companies
+     * Demographic targeting (Meta: age_min, age_max, genders)
      *
-     * @var ?array<string> $companies
+     * @var ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('companies')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('demographic')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $companies = null;
+    public ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null;
 
     /**
-     * $companySizes
      *
-     * @var ?array<string> $companySizes
+     * @var ?PropertyAdsReportMetricsGroupTargetingDevice $device
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('company_sizes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('device')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $companySizes = null;
+    public ?PropertyAdsReportMetricsGroupTargetingDevice $device = null;
 
     /**
-     * $customAudiences
      *
-     * @var ?array<string> $customAudiences
+     * @var ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('custom_audiences')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('geographic')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $customAudiences = null;
+    public ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null;
 
     /**
-     * $degrees
+     * Language targeting (Meta
      *
-     * @var ?array<string> $degrees
+     * @var ?PropertyAdsReportMetricsGroupTargetingLanguage $language
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('degrees')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $degrees = null;
+    public ?PropertyAdsReportMetricsGroupTargetingLanguage $language = null;
 
     /**
-     * $devices
+     * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
      *
-     * @var ?array<string> $devices
+     * @var ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('devices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('optimization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $devices = null;
+    public ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null;
 
     /**
-     * $excludedAudiences
      *
-     * @var ?array<string> $excludedAudiences
+     * @var ?PropertyAdsReportMetricsGroupTargetingPlacement $placement
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_audiences')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('placement')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $excludedAudiences = null;
+    public ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null;
 
     /**
-     * $excludedLocations
+     * $schedule
      *
-     * @var ?array<string> $excludedLocations
+     * @var ?array<AdSchedule> $schedule
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_locations')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('schedule')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdSchedule>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $excludedLocations = null;
+    public ?array $schedule = null;
 
     /**
-     * $genders
-     *
-     * @var ?array<string> $genders
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('genders')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $genders = null;
-
-    /**
-     * $industries
-     *
-     * @var ?array<string> $industries
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('industries')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $industries = null;
-
-    /**
-     * $interests
-     *
-     * @var ?array<string> $interests
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('interests')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $interests = null;
-
-    /**
-     * $jobFunctions
-     *
-     * @var ?array<string> $jobFunctions
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('job_functions')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $jobFunctions = null;
-
-    /**
-     * $jobTitles
-     *
-     * @var ?array<string> $jobTitles
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('job_titles')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $jobTitles = null;
-
-    /**
-     * $keywords
-     *
-     * @var ?array<string> $keywords
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('keywords')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $keywords = null;
-
-    /**
-     * $languages
-     *
-     * @var ?array<string> $languages
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('languages')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $languages = null;
-
-    /**
-     * $locations
-     *
-     * @var ?array<string> $locations
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locations')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $locations = null;
-
-    /**
-     * $placements
-     *
-     * @var ?array<string> $placements
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('placements')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $placements = null;
-
-    /**
-     * $schools
-     *
-     * @var ?array<string> $schools
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('schools')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $schools = null;
-
-    /**
-     * $seniorities
-     *
-     * @var ?array<string> $seniorities
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('seniorities')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $seniorities = null;
-
-    /**
-     * $skills
-     *
-     * @var ?array<string> $skills
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('skills')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $skills = null;
-
-    /**
-     * @param  ?array<string>  $ageRanges
-     * @param  ?array<string>  $audiences
-     * @param  ?array<string>  $behaviors
-     * @param  ?array<string>  $companies
-     * @param  ?array<string>  $companySizes
-     * @param  ?array<string>  $customAudiences
-     * @param  ?array<string>  $degrees
-     * @param  ?array<string>  $devices
-     * @param  ?array<string>  $excludedAudiences
-     * @param  ?array<string>  $excludedLocations
-     * @param  ?array<string>  $genders
-     * @param  ?array<string>  $industries
-     * @param  ?array<string>  $interests
-     * @param  ?array<string>  $jobFunctions
-     * @param  ?array<string>  $jobTitles
-     * @param  ?array<string>  $keywords
-     * @param  ?array<string>  $languages
-     * @param  ?array<string>  $locations
-     * @param  ?array<string>  $placements
-     * @param  ?array<string>  $schools
-     * @param  ?array<string>  $seniorities
-     * @param  ?array<string>  $skills
+     * @param  ?PropertyAdsReportMetricsGroupTargetingAudience  $audience
+     * @param  ?PropertyAdsReportMetricsGroupTargetingBrandSafety  $brandSafety
+     * @param  ?PropertyAdsReportMetricsGroupTargetingContent  $content
+     * @param  ?PropertyAdsReportMetricsGroupTargetingDemographic  $demographic
+     * @param  ?PropertyAdsReportMetricsGroupTargetingDevice  $device
+     * @param  ?PropertyAdsReportMetricsGroupTargetingGeographic  $geographic
+     * @param  ?PropertyAdsReportMetricsGroupTargetingLanguage  $language
+     * @param  ?PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
+     * @param  ?PropertyAdsReportMetricsGroupTargetingPlacement  $placement
+     * @param  ?array<AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?array $ageRanges = null, ?array $audiences = null, ?array $behaviors = null, ?array $companies = null, ?array $companySizes = null, ?array $customAudiences = null, ?array $degrees = null, ?array $devices = null, ?array $excludedAudiences = null, ?array $excludedLocations = null, ?array $genders = null, ?array $industries = null, ?array $interests = null, ?array $jobFunctions = null, ?array $jobTitles = null, ?array $keywords = null, ?array $languages = null, ?array $locations = null, ?array $placements = null, ?array $schools = null, ?array $seniorities = null, ?array $skills = null)
+    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingLanguage $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
     {
-        $this->ageRanges = $ageRanges;
-        $this->audiences = $audiences;
-        $this->behaviors = $behaviors;
-        $this->companies = $companies;
-        $this->companySizes = $companySizes;
-        $this->customAudiences = $customAudiences;
-        $this->degrees = $degrees;
-        $this->devices = $devices;
-        $this->excludedAudiences = $excludedAudiences;
-        $this->excludedLocations = $excludedLocations;
-        $this->genders = $genders;
-        $this->industries = $industries;
-        $this->interests = $interests;
-        $this->jobFunctions = $jobFunctions;
-        $this->jobTitles = $jobTitles;
-        $this->keywords = $keywords;
-        $this->languages = $languages;
-        $this->locations = $locations;
-        $this->placements = $placements;
-        $this->schools = $schools;
-        $this->seniorities = $seniorities;
-        $this->skills = $skills;
+        $this->audience = $audience;
+        $this->brandSafety = $brandSafety;
+        $this->content = $content;
+        $this->demographic = $demographic;
+        $this->device = $device;
+        $this->geographic = $geographic;
+        $this->language = $language;
+        $this->optimization = $optimization;
+        $this->placement = $placement;
+        $this->schedule = $schedule;
     }
 }

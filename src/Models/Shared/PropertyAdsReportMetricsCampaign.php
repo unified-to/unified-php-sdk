@@ -47,6 +47,14 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
+     * @var ?string $category
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $category = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -176,6 +184,7 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?float  $budgetAmount
      * @param  ?PropertyAdsReportMetricsCampaignBudgetPeriod  $budgetPeriod
      * @param  ?string  $campaignBudgetIdentifier
+     * @param  ?string  $category
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
@@ -193,12 +202,13 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->advertisingChannelType = $advertisingChannelType;
         $this->budgetAmount = $budgetAmount;
         $this->budgetPeriod = $budgetPeriod;
         $this->campaignBudgetIdentifier = $campaignBudgetIdentifier;
+        $this->category = $category;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->endAt = $endAt;

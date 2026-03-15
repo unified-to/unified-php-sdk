@@ -30,6 +30,6 @@ enum CreateAdsAdQueryParamFields: string
     case DisplayUrl = 'display_url';
     case Path1 = 'path1';
     case Path2 = 'path2';
-    case Metadata = 'metadata';
+    case Promoted = 'promoted';
     case Raw = 'raw';
 }

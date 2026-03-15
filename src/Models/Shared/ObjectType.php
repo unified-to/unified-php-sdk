@@ -129,6 +129,8 @@ enum ObjectType: string
     case AdsGroup = 'ads_group';
     case AdsCreative = 'ads_creative';
     case AdsInsertionorder = 'ads_insertionorder';
+    case AdsTarget = 'ads_target';
+    case AdsPromoted = 'ads_promoted';
     case FormsForm = 'forms_form';
     case FormsSubmission = 'forms_submission';
     case ShippingCarrier = 'shipping_carrier';

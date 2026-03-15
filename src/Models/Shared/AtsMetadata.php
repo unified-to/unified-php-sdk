@@ -13,10 +13,10 @@ class AtsMetadata
 {
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<AtsMetadata1|string|float|bool>|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<One|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\AtsMetadata1|string|float|bool>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\One|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public array|string|float|bool|null $extraData = null;
 
@@ -55,20 +55,20 @@ class AtsMetadata
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<AtsMetadataSchemas1|string|float|bool>|null $value
+     * @var array<string, mixed>|string|float|bool|array<AtsMetadata1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\AtsMetadataSchemas1|string|float|bool>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\AtsMetadata1|string|float|bool>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public array|string|float|bool|null $value = null;
 
     /**
-     * @param  array<string, mixed>|string|float|bool|array<AtsMetadata1|string|float|bool>|null  $extraData
+     * @param  array<string, mixed>|string|float|bool|array<One|string|float|bool>|null  $extraData
      * @param  ?Format  $format
      * @param  ?string  $id
      * @param  ?string  $namespace
      * @param  ?string  $slug
-     * @param  array<string, mixed>|string|float|bool|array<AtsMetadataSchemas1|string|float|bool>|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<AtsMetadata1|string|float|bool>|null  $value
      * @phpstan-pure
      */
     public function __construct(array|string|float|bool|null $extraData = null, ?Format $format = null, ?string $id = null, ?string $namespace = null, ?string $slug = null, array|string|float|bool|null $value = null)

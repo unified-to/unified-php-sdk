@@ -38,6 +38,6 @@ enum ListAdsGroupsQueryParamFields: string
     case OptimizationGoal = 'optimization_goal';
     case BillingEvent = 'billing_event';
     case Currency = 'currency';
-    case Metadata = 'metadata';
+    case Promoted = 'promoted';
     case Raw = 'raw';
 }

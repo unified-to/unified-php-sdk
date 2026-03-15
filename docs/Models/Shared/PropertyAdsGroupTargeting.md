@@ -3,27 +3,15 @@
 
 ## Fields
 
-| Field               | Type                | Required            | Description         |
-| ------------------- | ------------------- | ------------------- | ------------------- |
-| `ageRanges`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `audiences`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `behaviors`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `companies`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `companySizes`      | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `customAudiences`   | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `degrees`           | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `devices`           | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `excludedAudiences` | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `excludedLocations` | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `genders`           | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `industries`        | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `interests`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `jobFunctions`      | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `jobTitles`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `keywords`          | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `languages`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `locations`         | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `placements`        | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `schools`           | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `seniorities`       | array<*string*>     | :heavy_minus_sign:  | N/A                 |
-| `skills`            | array<*string*>     | :heavy_minus_sign:  | N/A                 |
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `audience`                                                                                                    | [?Shared\PropertyAdsGroupTargetingAudience](../../Models/Shared/PropertyAdsGroupTargetingAudience.md)         | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `brandSafety`                                                                                                 | [?Shared\PropertyAdsGroupTargetingBrandSafety](../../Models/Shared/PropertyAdsGroupTargetingBrandSafety.md)   | :heavy_minus_sign:                                                                                            | Brand safety (Meta: excluded_publisher_categories, etc.; Google                                               |
+| `content`                                                                                                     | [?Shared\PropertyAdsGroupTargetingContent](../../Models/Shared/PropertyAdsGroupTargetingContent.md)           | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `demographic`                                                                                                 | [?Shared\PropertyAdsGroupTargetingDemographic](../../Models/Shared/PropertyAdsGroupTargetingDemographic.md)   | :heavy_minus_sign:                                                                                            | Demographic targeting (Meta: age_min, age_max, genders)                                                       |
+| `device`                                                                                                      | [?Shared\PropertyAdsGroupTargetingDevice](../../Models/Shared/PropertyAdsGroupTargetingDevice.md)             | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `geographic`                                                                                                  | [?Shared\PropertyAdsGroupTargetingGeographic](../../Models/Shared/PropertyAdsGroupTargetingGeographic.md)     | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `language`                                                                                                    | [?Shared\PropertyAdsGroupTargetingLanguage](../../Models/Shared/PropertyAdsGroupTargetingLanguage.md)         | :heavy_minus_sign:                                                                                            | Language targeting (Meta                                                                                      |
+| `optimization`                                                                                                | [?Shared\PropertyAdsGroupTargetingOptimization](../../Models/Shared/PropertyAdsGroupTargetingOptimization.md) | :heavy_minus_sign:                                                                                            | Optimization (Meta: targeting_automation; Google: observation vs targeting mode)                              |
+| `placement`                                                                                                   | [?Shared\PropertyAdsGroupTargetingPlacement](../../Models/Shared/PropertyAdsGroupTargetingPlacement.md)       | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `schedule`                                                                                                    | array<[Shared\AdSchedule](../../Models/Shared/AdSchedule.md)>                                                 | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |

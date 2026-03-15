@@ -119,16 +119,6 @@ class AdsAd
     public ?string $id = null;
 
     /**
-     * $metadata
-     *
-     * @var ?array<AdsMetadata> $metadata
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $metadata = null;
-
-    /**
      *
      * @var ?string $name
      */
@@ -159,6 +149,16 @@ class AdsAd
     #[\Speakeasy\Serializer\Annotation\SerializedName('path2')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $path2 = null;
+
+    /**
+     * $promoted
+     *
+     * @var ?array<AdsPromoted> $promoted
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $promoted = null;
 
     /**
      * $raw
@@ -201,17 +201,17 @@ class AdsAd
      * @param  ?string  $groupId
      * @param  ?string  $headline
      * @param  ?string  $id
-     * @param  ?array<AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $path1
      * @param  ?string  $path2
+     * @param  ?array<AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?AdsAdStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $adCopy = null, ?AdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $raw = null, ?AdsAdStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $adCopy = null, ?AdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?AdsAdStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->adCopy = $adCopy;
         $this->adType = $adType;
@@ -226,11 +226,11 @@ class AdsAd
         $this->groupId = $groupId;
         $this->headline = $headline;
         $this->id = $id;
-        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->path1 = $path1;
         $this->path2 = $path2;
+        $this->promoted = $promoted;
         $this->raw = $raw;
         $this->status = $status;
         $this->updatedAt = $updatedAt;

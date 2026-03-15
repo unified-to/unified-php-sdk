@@ -80,6 +80,10 @@ class UnifiedTo
 
     public Insertionorder $insertionorder;
 
+    public Promoted $promoted;
+
+    public Target $target;
+
     public Assessment $assessment;
 
     public Package $package;
@@ -332,6 +336,8 @@ class UnifiedTo
         $this->creative = new Creative($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
         $this->insertionorder = new Insertionorder($this->sdkConfiguration);
+        $this->promoted = new Promoted($this->sdkConfiguration);
+        $this->target = new Target($this->sdkConfiguration);
         $this->assessment = new Assessment($this->sdkConfiguration);
         $this->package = new Package($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);

@@ -22,7 +22,9 @@
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
+* [listAdsPromotedes](#listadspromotedes) - List all promotedes
 * [listAdsReports](#listadsreports) - List all reports
+* [listAdsTargets](#listadstargets) - List all targets
 * [patchAdsAd](#patchadsad) - Update an ad
 * [patchAdsCampaign](#patchadscampaign) - Update a campaign
 * [patchAdsCreative](#patchadscreative) - Update a creative
@@ -960,6 +962,56 @@ if ($response->adsOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAdsPromotedes
+
+List all promotedes
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsPromotedesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->listAdsPromotedes(
+    request: $request
+);
+
+if ($response->adsPromotedes !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsPromotedesRequest](../../Models/Operations/ListAdsPromotedesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListAdsPromotedesResponse](../../Models/Operations/ListAdsPromotedesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAdsReports
 
 List all reports
@@ -1003,6 +1055,56 @@ if ($response->adsReports !== null) {
 ### Response
 
 **[?Operations\ListAdsReportsResponse](../../Models/Operations/ListAdsReportsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAdsTargets
+
+List all targets
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsTargetsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->listAdsTargets(
+    request: $request
+);
+
+if ($response->adsTargets !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListAdsTargetsRequest](../../Models/Operations/ListAdsTargetsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\ListAdsTargetsResponse](../../Models/Operations/ListAdsTargetsResponse.md)**
 
 ### Errors
 

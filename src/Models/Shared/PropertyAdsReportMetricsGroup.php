@@ -31,11 +31,12 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?string $billingEvent
+     * @var ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_event')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBillingEvent|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $billingEvent = null;
+    public ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null;
 
     /**
      *
@@ -156,16 +157,6 @@ class PropertyAdsReportMetricsGroup
     public ?string $insertionorderId = null;
 
     /**
-     * $metadata
-     *
-     * @var ?array<AdsMetadata> $metadata
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $metadata = null;
-
-    /**
      *
      * @var ?string $name
      */
@@ -175,11 +166,12 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?string $optimizationGoal
+     * @var ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('optimization_goal')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupOptimizationGoal|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $optimizationGoal = null;
+    public ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null;
 
     /**
      *
@@ -205,6 +197,16 @@ class PropertyAdsReportMetricsGroup
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $parentId = null;
+
+    /**
+     * $promoted
+     *
+     * @var ?array<AdsPromoted> $promoted
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $promoted = null;
 
     /**
      * $raw
@@ -262,7 +264,7 @@ class PropertyAdsReportMetricsGroup
     /**
      * @param  ?float  $bidAmount
      * @param  ?PropertyAdsReportMetricsGroupBidStrategy  $bidStrategy
-     * @param  ?string  $billingEvent
+     * @param  ?PropertyAdsReportMetricsGroupBillingEvent  $billingEvent
      * @param  ?PropertyAdsReportMetricsGroupBudgetAllocationType  $budgetAllocationType
      * @param  ?float  $budgetAmount
      * @param  ?float  $budgetMaxAmount
@@ -277,12 +279,12 @@ class PropertyAdsReportMetricsGroup
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $insertionorderId
-     * @param  ?array<AdsMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?string  $optimizationGoal
+     * @param  ?PropertyAdsReportMetricsGroupOptimizationGoal  $optimizationGoal
      * @param  ?string  $organizationId
      * @param  ?PropertyAdsReportMetricsGroupPacing  $pacing
      * @param  ?string  $parentId
+     * @param  ?array<AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?PropertyAdsReportMetricsGroupStatus  $status
@@ -291,7 +293,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?string $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?array $metadata = null, ?string $name = null, ?string $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -310,12 +312,12 @@ class PropertyAdsReportMetricsGroup
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
         $this->insertionorderId = $insertionorderId;
-        $this->metadata = $metadata;
         $this->name = $name;
         $this->optimizationGoal = $optimizationGoal;
         $this->organizationId = $organizationId;
         $this->pacing = $pacing;
         $this->parentId = $parentId;
+        $this->promoted = $promoted;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->status = $status;

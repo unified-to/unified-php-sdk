@@ -36,6 +36,7 @@ class ListStorageFilesRequest
     public ?array $fields = null;
 
     /**
+     * The fulltext to filter by
      *
      * @var ?string $fulltext
      */

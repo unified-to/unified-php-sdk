@@ -29,5 +29,6 @@ enum CreateAdsCampaignQueryParamFields: string
     case AdvertisingChannelType = 'advertising_channel_type';
     case CampaignBudgetIdentifier = 'campaign_budget_identifier';
     case Currency = 'currency';
+    case Category = 'category';
     case Raw = 'raw';
 }

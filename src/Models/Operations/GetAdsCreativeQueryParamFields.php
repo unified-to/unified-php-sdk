@@ -34,7 +34,7 @@ enum GetAdsCreativeQueryParamFields: string
     case ExternalCreativeReference = 'external_creative_reference';
     case ExternalPlacementReference = 'external_placement_reference';
     case ExternalAdReference = 'external_ad_reference';
-    case Metadata = 'metadata';
+    case Promoted = 'promoted';
     case Path1 = 'path1';
     case Path2 = 'path2';
     case Raw = 'raw';
