@@ -22,7 +22,7 @@
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
-* [listAdsPromotedes](#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](#listadspromoteds) - List all promoteds
 * [listAdsReports](#listadsreports) - List all reports
 * [listAdsTargets](#listadstargets) - List all targets
 * [patchAdsAd](#patchadsad) - Update an ad
@@ -962,13 +962,13 @@ if ($response->adsOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsPromotedes
+## listAdsPromoteds
 
-List all promotedes
+List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="php" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```php
 declare(strict_types=1);
 
@@ -983,28 +983,28 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsPromotedesRequest(
+$request = new Operations\ListAdsPromotedsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsPromotedes(
+$response = $sdk->ads->listAdsPromoteds(
     request: $request
 );
 
-if ($response->adsPromotedes !== null) {
+if ($response->adsPromoteds !== null) {
     // handle response
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAdsPromotedesRequest](../../Models/Operations/ListAdsPromotedesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListAdsPromotedsRequest](../../Models/Operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListAdsPromotedesResponse](../../Models/Operations/ListAdsPromotedesResponse.md)**
+**[?Operations\ListAdsPromotedsResponse](../../Models/Operations/ListAdsPromotedsResponse.md)**
 
 ### Errors
 

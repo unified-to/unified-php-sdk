@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListAdsPromotedesRequest
+class ListAdsPromotedsRequest
 {
     /**
      * ID of the connection
@@ -22,7 +22,7 @@ class ListAdsPromotedesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAdsPromotedesQueryParamFields> $fields
+     * @var ?array<ListAdsPromotedsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -96,7 +96,7 @@ class ListAdsPromotedesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAdsPromotedesQueryParamFields>  $fields
+     * @param  ?array<ListAdsPromotedsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

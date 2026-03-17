@@ -33,4 +33,12 @@ enum UpdateCommerceItemQueryParamFields: string
     case Collections = 'collections';
     case TaxrateId = 'taxrate_id';
     case Raw = 'raw';
+    case IsVisible = 'is_visible';
+    case IsFeatured = 'is_featured';
+    case Weight = 'weight';
+    case WeightUnit = 'weight_unit';
+    case RequiresShipping = 'requires_shipping';
+    case Prices = 'prices';
+    case InventoryId = 'inventory_id';
+    case TotalStock = 'total_stock';
 }

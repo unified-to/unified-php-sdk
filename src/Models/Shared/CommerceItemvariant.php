@@ -236,12 +236,12 @@ class CommerceItemvariant
 
     /**
      *
-     * @var ?WeightUnit $weightUnit
+     * @var ?CommerceItemvariantWeightUnit $weightUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemvariantWeightUnit|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?WeightUnit $weightUnit = null;
+    public ?CommerceItemvariantWeightUnit $weightUnit = null;
 
     /**
      *
@@ -278,11 +278,11 @@ class CommerceItemvariant
      * @param  ?float  $totalStock
      * @param  ?\DateTime  $updatedAt
      * @param  ?float  $weight
-     * @param  ?WeightUnit  $weightUnit
+     * @param  ?CommerceItemvariantWeightUnit  $weightUnit
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $availableAt = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $items = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?\DateTime $updatedAt = null, ?float $weight = null, ?WeightUnit $weightUnit = null, ?float $width = null)
+    public function __construct(?\DateTime $availableAt = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $height = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isVisible = null, ?array $items = null, ?float $length = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $options = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?SizeUnit $sizeUnit = null, ?string $sku = null, ?array $tags = null, ?float $totalStock = null, ?\DateTime $updatedAt = null, ?float $weight = null, ?CommerceItemvariantWeightUnit $weightUnit = null, ?float $width = null)
     {
         $this->availableAt = $availableAt;
         $this->createdAt = $createdAt;

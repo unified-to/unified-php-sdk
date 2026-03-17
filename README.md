@@ -244,7 +244,7 @@ if ($response->accountingAccount !== null) {
 * [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
 * [listAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
-* [listAdsPromotedes](docs/sdks/ads/README.md#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](docs/sdks/ads/README.md#listadspromoteds) - List all promoteds
 * [listAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
 * [listAdsTargets](docs/sdks/ads/README.md#listadstargets) - List all targets
 * [patchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
@@ -1348,7 +1348,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
-* [listAdsPromotedes](docs/sdks/promoted/README.md#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](docs/sdks/promoted/README.md#listadspromoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
 

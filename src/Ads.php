@@ -1191,24 +1191,24 @@ class Ads
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      *
-     * @param  Operations\ListAdsPromotedesRequest  $request
-     * @return Operations\ListAdsPromotedesResponse
+     * @param  Operations\ListAdsPromotedsRequest  $request
+     * @return Operations\ListAdsPromotedsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAdsPromotedes(Operations\ListAdsPromotedesRequest $request, ?Options $options = null): Operations\ListAdsPromotedesResponse
+    public function listAdsPromoteds(Operations\ListAdsPromotedsRequest $request, ?Options $options = null): Operations\ListAdsPromotedsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted', Operations\ListAdsPromotedesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted', Operations\ListAdsPromotedsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAdsPromotedesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAdsPromotedsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsPromotedes', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsPromoteds', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1233,11 +1233,11 @@ class Ads
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AdsPromoted>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAdsPromotedesResponse(
+                $response = new Operations\ListAdsPromotedsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    adsPromotedes: $obj);
+                    adsPromoteds: $obj);
 
                 return $response;
             } else {

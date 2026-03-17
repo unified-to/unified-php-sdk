@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
-class ListAdsPromotedesResponse
+class ListAdsPromotedsResponse
 {
     /**
      * HTTP response content type for this operation
@@ -35,22 +35,22 @@ class ListAdsPromotedesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AdsPromoted> $adsPromotedes
+     * @var ?array<Shared\AdsPromoted> $adsPromoteds
      */
-    public ?array $adsPromotedes = null;
+    public ?array $adsPromoteds = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AdsPromoted>  $adsPromotedes
+     * @param  ?array<Shared\AdsPromoted>  $adsPromoteds
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $adsPromotedes = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $adsPromoteds = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->adsPromotedes = $adsPromotedes;
+        $this->adsPromoteds = $adsPromoteds;
     }
 }

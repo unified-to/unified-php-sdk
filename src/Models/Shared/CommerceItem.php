@@ -73,6 +73,14 @@ class CommerceItem
 
     /**
      *
+     * @var ?string $inventoryId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('inventory_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $inventoryId = null;
+
+    /**
+     *
      * @var ?bool $isActive
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
@@ -81,11 +89,27 @@ class CommerceItem
 
     /**
      *
+     * @var ?bool $isFeatured
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_featured')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isFeatured = null;
+
+    /**
+     *
      * @var ?bool $isTaxable
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_taxable')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isTaxable = null;
+
+    /**
+     *
+     * @var ?bool $isVisible
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_visible')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isVisible = null;
 
     /**
      * $media
@@ -116,6 +140,16 @@ class CommerceItem
     public ?string $name = null;
 
     /**
+     * $prices
+     *
+     * @var ?array<CommerceItemPrice> $prices
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $prices = null;
+
+    /**
      *
      * @var ?string $publicDescription
      */
@@ -143,6 +177,14 @@ class CommerceItem
 
     /**
      *
+     * @var ?bool $requiresShipping
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('requires_shipping')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $requiresShipping = null;
+
+    /**
+     *
      * @var ?string $slug
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('slug')]
@@ -166,6 +208,14 @@ class CommerceItem
     #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $taxrateId = null;
+
+    /**
+     *
+     * @var ?float $totalStock
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_stock')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalStock = null;
 
     /**
      *
@@ -202,6 +252,23 @@ class CommerceItem
     public ?string $vendorName = null;
 
     /**
+     *
+     * @var ?float $weight
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('weight')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $weight = null;
+
+    /**
+     *
+     * @var ?WeightUnit $weightUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?WeightUnit $weightUnit = null;
+
+    /**
      * @param  ?string  $accountId
      * @param  ?array<string>  $collectionIds
      * @param  ?array<CommerceReference>  $collections
@@ -209,24 +276,32 @@ class CommerceItem
      * @param  ?string  $description
      * @param  ?string  $globalCode
      * @param  ?string  $id
+     * @param  ?string  $inventoryId
      * @param  ?bool  $isActive
+     * @param  ?bool  $isFeatured
      * @param  ?bool  $isTaxable
+     * @param  ?bool  $isVisible
      * @param  ?array<CommerceItemMedia>  $media
      * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $name
+     * @param  ?array<CommerceItemPrice>  $prices
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
      * @param  ?array<string, mixed>  $raw
+     * @param  ?bool  $requiresShipping
      * @param  ?string  $slug
      * @param  ?array<string>  $tags
      * @param  ?string  $taxrateId
+     * @param  ?float  $totalStock
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<CommerceItemvariant>  $variants
      * @param  ?string  $vendorName
+     * @param  ?float  $weight
+     * @param  ?WeightUnit  $weightUnit
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?bool $isActive = null, ?bool $isTaxable = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
@@ -235,20 +310,28 @@ class CommerceItem
         $this->description = $description;
         $this->globalCode = $globalCode;
         $this->id = $id;
+        $this->inventoryId = $inventoryId;
         $this->isActive = $isActive;
+        $this->isFeatured = $isFeatured;
         $this->isTaxable = $isTaxable;
+        $this->isVisible = $isVisible;
         $this->media = $media;
         $this->metadata = $metadata;
         $this->name = $name;
+        $this->prices = $prices;
         $this->publicDescription = $publicDescription;
         $this->publicName = $publicName;
         $this->raw = $raw;
+        $this->requiresShipping = $requiresShipping;
         $this->slug = $slug;
         $this->tags = $tags;
         $this->taxrateId = $taxrateId;
+        $this->totalStock = $totalStock;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->variants = $variants;
         $this->vendorName = $vendorName;
+        $this->weight = $weight;
+        $this->weightUnit = $weightUnit;
     }
 }
