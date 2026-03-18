@@ -87,6 +87,14 @@ class AccountingExpense
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?string $paymentMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_method')]
@@ -169,6 +177,7 @@ class AccountingExpense
      * @param  ?string  $id
      * @param  ?array<AccountingLineitem>  $lineitems
      * @param  ?string  $name
+     * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
@@ -180,7 +189,7 @@ class AccountingExpense
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
@@ -191,6 +200,7 @@ class AccountingExpense
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->name = $name;
+        $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->postedAt = $postedAt;
         $this->raw = $raw;

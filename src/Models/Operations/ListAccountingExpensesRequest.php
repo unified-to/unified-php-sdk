@@ -81,6 +81,14 @@ class ListAccountingExpensesRequest
     public ?string $order = null;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     *
+     * @var ?string $orgId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
+    public ?string $orgId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -137,6 +145,7 @@ class ListAccountingExpensesRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orgId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
@@ -145,7 +154,7 @@ class ListAccountingExpensesRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->categoryId = $categoryId;
@@ -156,6 +165,7 @@ class ListAccountingExpensesRequest
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orgId = $orgId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

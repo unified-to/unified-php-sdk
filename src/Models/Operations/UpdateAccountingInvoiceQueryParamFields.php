@@ -38,5 +38,6 @@ enum UpdateAccountingInvoiceQueryParamFields: string
     case Type = 'type';
     case Attachments = 'attachments';
     case Send = 'send';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }
