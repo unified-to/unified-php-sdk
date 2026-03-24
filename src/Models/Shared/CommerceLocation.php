@@ -28,6 +28,16 @@ class CommerceLocation
     public ?PropertyCommerceLocationAddress $address = null;
 
     /**
+     * $categories
+     *
+     * @var ?array<string> $categories
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categories = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -61,6 +71,14 @@ class CommerceLocation
 
     /**
      *
+     * @var ?string $imageUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $imageUrl = null;
+
+    /**
+     *
      * @var ?bool $isActive
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
@@ -77,11 +95,62 @@ class CommerceLocation
 
     /**
      *
+     * @var ?float $latitude
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('latitude')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $latitude = null;
+
+    /**
+     *
+     * @var ?LocationType $locationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LocationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?LocationType $locationType = null;
+
+    /**
+     *
+     * @var ?float $longitude
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('longitude')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $longitude = null;
+
+    /**
+     * $media
+     *
+     * @var ?array<CommerceItemMedia> $media
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $media = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $parentId = null;
+
+    /**
+     *
+     * @var ?string $priceLevel
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('price_level')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $priceLevel = null;
+
+    /**
+     *
+     * @var ?float $rating
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('rating')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $rating = null;
 
     /**
      * $raw
@@ -95,6 +164,24 @@ class CommerceLocation
 
     /**
      *
+     * @var ?float $reviewCount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('review_count')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $reviewCount = null;
+
+    /**
+     * $telephones
+     *
+     * @var ?array<CommerceTelephone> $telephones
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceTelephone>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $telephones = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -102,31 +189,61 @@ class CommerceLocation
     public ?\DateTime $updatedAt = null;
 
     /**
+     *
+     * @var ?string $webUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('web_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $webUrl = null;
+
+    /**
      * @param  string  $name
      * @param  ?PropertyCommerceLocationAddress  $address
+     * @param  ?array<string>  $categories
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?string  $imageUrl
      * @param  ?bool  $isActive
      * @param  ?string  $languageLocale
+     * @param  ?float  $latitude
+     * @param  ?LocationType  $locationType
+     * @param  ?float  $longitude
+     * @param  ?array<CommerceItemMedia>  $media
      * @param  ?string  $parentId
+     * @param  ?string  $priceLevel
+     * @param  ?float  $rating
      * @param  ?array<string, mixed>  $raw
+     * @param  ?float  $reviewCount
+     * @param  ?array<CommerceTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $languageLocale = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $imageUrl = null, ?bool $isActive = null, ?string $languageLocale = null, ?float $latitude = null, ?LocationType $locationType = null, ?float $longitude = null, ?array $media = null, ?string $parentId = null, ?string $priceLevel = null, ?float $rating = null, ?array $raw = null, ?float $reviewCount = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->name = $name;
         $this->address = $address;
+        $this->categories = $categories;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
         $this->id = $id;
+        $this->imageUrl = $imageUrl;
         $this->isActive = $isActive;
         $this->languageLocale = $languageLocale;
+        $this->latitude = $latitude;
+        $this->locationType = $locationType;
+        $this->longitude = $longitude;
+        $this->media = $media;
         $this->parentId = $parentId;
+        $this->priceLevel = $priceLevel;
+        $this->rating = $rating;
         $this->raw = $raw;
+        $this->reviewCount = $reviewCount;
+        $this->telephones = $telephones;
         $this->updatedAt = $updatedAt;
+        $this->webUrl = $webUrl;
     }
 }

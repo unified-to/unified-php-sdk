@@ -16,6 +16,7 @@ enum PatchCommerceReviewQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case ItemId = 'item_id';
     case ItemVariantId = 'item_variant_id';
+    case LocationId = 'location_id';
     case Rating = 'rating';
     case Title = 'title';
     case Content = 'content';
@@ -33,5 +34,6 @@ enum PatchCommerceReviewQueryParamFields: string
     case IsPublic = 'is_public';
     case Comments = 'comments';
     case Metadata = 'metadata';
+    case Url = 'url';
     case Raw = 'raw';
 }

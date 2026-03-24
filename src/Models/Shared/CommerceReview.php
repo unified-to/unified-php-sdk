@@ -125,6 +125,14 @@ class CommerceReview
     public ?string $itemVariantId = null;
 
     /**
+     *
+     * @var ?string $locationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locationId = null;
+
+    /**
      * Photosvideos attached to the review
      *
      * @var ?array<CommerceItemMedia> $media
@@ -197,6 +205,14 @@ class CommerceReview
 
     /**
      *
+     * @var ?string $url
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $url = null;
+
+    /**
+     *
      * @var ?bool $verifiedPurchase
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('verified_purchase')]
@@ -218,6 +234,7 @@ class CommerceReview
      * @param  ?bool  $isPublic
      * @param  ?bool  $isVerified
      * @param  ?string  $itemVariantId
+     * @param  ?string  $locationId
      * @param  ?array<CommerceItemMedia>  $media
      * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?float  $rating
@@ -226,10 +243,11 @@ class CommerceReview
      * @param  ?string  $title
      * @param  ?float  $unhelpfulVotes
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $url
      * @param  ?bool  $verifiedPurchase
      * @phpstan-pure
      */
-    public function __construct(string $itemId, ?string $authorAvatarUrl = null, ?string $authorEmail = null, ?string $authorLocation = null, ?string $authorName = null, ?array $comments = null, ?string $content = null, ?\DateTime $createdAt = null, ?float $helpfulVotes = null, ?string $id = null, ?bool $isFeatured = null, ?bool $isPublic = null, ?bool $isVerified = null, ?string $itemVariantId = null, ?array $media = null, ?array $metadata = null, ?float $rating = null, ?array $raw = null, ?CommerceReviewStatus $status = null, ?string $title = null, ?float $unhelpfulVotes = null, ?\DateTime $updatedAt = null, ?bool $verifiedPurchase = null)
+    public function __construct(string $itemId, ?string $authorAvatarUrl = null, ?string $authorEmail = null, ?string $authorLocation = null, ?string $authorName = null, ?array $comments = null, ?string $content = null, ?\DateTime $createdAt = null, ?float $helpfulVotes = null, ?string $id = null, ?bool $isFeatured = null, ?bool $isPublic = null, ?bool $isVerified = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?float $rating = null, ?array $raw = null, ?CommerceReviewStatus $status = null, ?string $title = null, ?float $unhelpfulVotes = null, ?\DateTime $updatedAt = null, ?string $url = null, ?bool $verifiedPurchase = null)
     {
         $this->itemId = $itemId;
         $this->authorAvatarUrl = $authorAvatarUrl;
@@ -245,6 +263,7 @@ class CommerceReview
         $this->isPublic = $isPublic;
         $this->isVerified = $isVerified;
         $this->itemVariantId = $itemVariantId;
+        $this->locationId = $locationId;
         $this->media = $media;
         $this->metadata = $metadata;
         $this->rating = $rating;
@@ -253,6 +272,7 @@ class CommerceReview
         $this->title = $title;
         $this->unhelpfulVotes = $unhelpfulVotes;
         $this->updatedAt = $updatedAt;
+        $this->url = $url;
         $this->verifiedPurchase = $verifiedPurchase;
     }
 }

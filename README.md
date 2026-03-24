@@ -352,6 +352,10 @@ if ($response->accountingAccount !== null) {
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
+### [Availability](docs/sdks/availability/README.md)
+
+* [listCommerceAvailabilities](docs/sdks/availability/README.md#listcommerceavailabilities) - List all availabilities
+
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
 * [getAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
@@ -543,6 +547,7 @@ if ($response->accountingAccount !== null) {
 * [createCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [createCommerceItemvariant](docs/sdks/commerce/README.md#createcommerceitemvariant) - Create an itemvariant
 * [createCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
+* [createCommerceReservation](docs/sdks/commerce/README.md#createcommercereservation) - Create a reservation
 * [createCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [createCommerceSaleschannel](docs/sdks/commerce/README.md#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
@@ -550,13 +555,16 @@ if ($response->accountingAccount !== null) {
 * [getCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [getCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
+* [getCommerceReservation](docs/sdks/commerce/README.md#getcommercereservation) - Retrieve a reservation
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [listCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [listCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
+* [listCommerceReservations](docs/sdks/commerce/README.md#listcommercereservations) - List all reservations
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
@@ -564,6 +572,7 @@ if ($response->accountingAccount !== null) {
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [patchCommerceItemvariant](docs/sdks/commerce/README.md#patchcommerceitemvariant) - Update an itemvariant
 * [patchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
+* [patchCommerceReservation](docs/sdks/commerce/README.md#patchcommercereservation) - Update a reservation
 * [patchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [patchCommerceSaleschannel](docs/sdks/commerce/README.md#patchcommercesaleschannel) - Update a saleschannel
 * [removeCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
@@ -571,6 +580,7 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [removeCommerceItemvariant](docs/sdks/commerce/README.md#removecommerceitemvariant) - Remove an itemvariant
 * [removeCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
+* [removeCommerceReservation](docs/sdks/commerce/README.md#removecommercereservation) - Remove a reservation
 * [removeCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [removeCommerceSaleschannel](docs/sdks/commerce/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
@@ -578,6 +588,7 @@ if ($response->accountingAccount !== null) {
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [updateCommerceItemvariant](docs/sdks/commerce/README.md#updatecommerceitemvariant) - Update an itemvariant
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
+* [updateCommerceReservation](docs/sdks/commerce/README.md#updatecommercereservation) - Update a reservation
 * [updateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
 
@@ -1449,6 +1460,15 @@ if ($response->accountingAccount !== null) {
 * [patchVerificationRequest](docs/sdks/request/README.md#patchverificationrequest) - Update a request
 * [removeVerificationRequest](docs/sdks/request/README.md#removeverificationrequest) - Remove a request
 * [updateVerificationRequest](docs/sdks/request/README.md#updateverificationrequest) - Update a request
+
+### [Reservation](docs/sdks/reservation/README.md)
+
+* [createCommerceReservation](docs/sdks/reservation/README.md#createcommercereservation) - Create a reservation
+* [getCommerceReservation](docs/sdks/reservation/README.md#getcommercereservation) - Retrieve a reservation
+* [listCommerceReservations](docs/sdks/reservation/README.md#listcommercereservations) - List all reservations
+* [patchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
+* [removeCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
+* [updateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 

@@ -35,6 +35,16 @@ class AdsTarget
     public ?string $name = null;
 
     /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
      *
      * @var ?AdsTargetType $type
      */
@@ -47,14 +57,16 @@ class AdsTarget
      * @param  string  $id
      * @param  string  $value
      * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
      * @param  ?AdsTargetType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, string $value, ?string $name = null, ?AdsTargetType $type = null)
+    public function __construct(string $id, string $value, ?string $name = null, ?array $raw = null, ?AdsTargetType $type = null)
     {
         $this->id = $id;
         $this->value = $value;
         $this->name = $name;
+        $this->raw = $raw;
         $this->type = $type;
     }
 }

@@ -40,6 +40,14 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
 
     /**
      *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     *
      * @var ?string $department
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('department')]
@@ -125,6 +133,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
      * @param  ?array<ScimManager>  $additionalManagers
      * @param  ?\DateTime  $birthday
      * @param  ?string  $costCenter
+     * @param  ?string  $currency
      * @param  ?string  $department
      * @param  ?string  $division
      * @param  ?string  $employeeNumber
@@ -137,11 +146,12 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
      * @param  ?\DateTime  $startDate
      * @phpstan-pure
      */
-    public function __construct(?array $additionalManagers = null, ?\DateTime $birthday = null, ?string $costCenter = null, ?string $department = null, ?string $division = null, ?string $employeeNumber = null, ?\DateTime $endDate = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender = null, ?string $level = null, ?string $location = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager = null, ?string $organization = null, ?\DateTime $startDate = null)
+    public function __construct(?array $additionalManagers = null, ?\DateTime $birthday = null, ?string $costCenter = null, ?string $currency = null, ?string $department = null, ?string $division = null, ?string $employeeNumber = null, ?\DateTime $endDate = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender = null, ?string $level = null, ?string $location = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager = null, ?string $organization = null, ?\DateTime $startDate = null)
     {
         $this->additionalManagers = $additionalManagers;
         $this->birthday = $birthday;
         $this->costCenter = $costCenter;
+        $this->currency = $currency;
         $this->department = $department;
         $this->division = $division;
         $this->employeeNumber = $employeeNumber;

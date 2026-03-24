@@ -24,15 +24,6 @@ enum GetCommerceItemQueryParamFields: string
     case IsTaxable = 'is_taxable';
     case VendorName = 'vendor_name';
     case Type = 'type';
-    case Variants = 'variants';
-    case Tags = 'tags';
-    case Media = 'media';
-    case CollectionIds = 'collection_ids';
-    case AccountId = 'account_id';
-    case Metadata = 'metadata';
-    case Collections = 'collections';
-    case TaxrateId = 'taxrate_id';
-    case Raw = 'raw';
     case IsVisible = 'is_visible';
     case IsFeatured = 'is_featured';
     case Weight = 'weight';
@@ -41,4 +32,15 @@ enum GetCommerceItemQueryParamFields: string
     case Prices = 'prices';
     case InventoryId = 'inventory_id';
     case TotalStock = 'total_stock';
+    case Variants = 'variants';
+    case Tags = 'tags';
+    case Media = 'media';
+    case CollectionIds = 'collection_ids';
+    case AccountId = 'account_id';
+    case Metadata = 'metadata';
+    case Collections = 'collections';
+    case TaxrateId = 'taxrate_id';
+    case LocationId = 'location_id';
+    case Duration = 'duration';
+    case Raw = 'raw';
 }

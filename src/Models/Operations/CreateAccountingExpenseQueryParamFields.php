@@ -28,6 +28,6 @@ enum CreateAccountingExpenseQueryParamFields: string
     case ApprovedAt = 'approved_at';
     case ApproverUserId = 'approver_user_id';
     case Lineitems = 'lineitems';
-    case OrganizationId = 'organization_id';
     case Raw = 'raw';
+    case OrganizationId = 'organization_id';
 }

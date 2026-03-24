@@ -86,6 +86,14 @@ class AccountingAccount
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
@@ -172,6 +180,7 @@ class AccountingAccount
      * @param  ?string  $id
      * @param  ?bool  $isPayable
      * @param  ?string  $name
+     * @param  ?string  $organizationId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $section
@@ -183,7 +192,7 @@ class AccountingAccount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
@@ -194,6 +203,7 @@ class AccountingAccount
         $this->id = $id;
         $this->isPayable = $isPayable;
         $this->name = $name;
+        $this->organizationId = $organizationId;
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->section = $section;

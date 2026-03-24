@@ -9,6 +9,7 @@
 * [createCommerceItem](#createcommerceitem) - Create an item
 * [createCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
 * [createCommerceLocation](#createcommercelocation) - Create a location
+* [createCommerceReservation](#createcommercereservation) - Create a reservation
 * [createCommerceReview](#createcommercereview) - Create a review
 * [createCommerceSaleschannel](#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceCollection](#getcommercecollection) - Retrieve a collection
@@ -16,13 +17,16 @@
 * [getCommerceItem](#getcommerceitem) - Retrieve an item
 * [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceAvailabilities](#listcommerceavailabilities) - List all availabilities
 * [listCommerceCollections](#listcommercecollections) - List all collections
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [listCommerceItems](#listcommerceitems) - List all items
 * [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](#listcommercelocations) - List all locations
+* [listCommerceReservations](#listcommercereservations) - List all reservations
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
@@ -30,6 +34,7 @@
 * [patchCommerceItem](#patchcommerceitem) - Update an item
 * [patchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchCommerceReservation](#patchcommercereservation) - Update a reservation
 * [patchCommerceReview](#patchcommercereview) - Update a review
 * [patchCommerceSaleschannel](#patchcommercesaleschannel) - Update a saleschannel
 * [removeCommerceCollection](#removecommercecollection) - Remove a collection
@@ -37,6 +42,7 @@
 * [removeCommerceItem](#removecommerceitem) - Remove an item
 * [removeCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
 * [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeCommerceReservation](#removecommercereservation) - Remove a reservation
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [removeCommerceSaleschannel](#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceCollection](#updatecommercecollection) - Update a collection
@@ -44,6 +50,7 @@
 * [updateCommerceItem](#updatecommerceitem) - Update an item
 * [updateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
 * [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 * [updateCommerceReview](#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](#updatecommercesaleschannel) - Update a saleschannel
 
@@ -306,6 +313,58 @@ if ($response->commerceLocation !== null) {
 ### Response
 
 **[?Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCommerceReservation
+
+Create a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCommerceReservationRequest(
+    commerceReservation: new Shared\CommerceReservation(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->createCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceReservationRequest](../../Models/Operations/CreateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreateCommerceReservationResponse](../../Models/Operations/CreateCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -674,6 +733,57 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getCommerceReservation
+
+Retrieve a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceReservationRequest](../../Models/Operations/GetCommerceReservationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetCommerceReservationResponse](../../Models/Operations/GetCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getCommerceReview
 
 Retrieve a review
@@ -769,6 +879,56 @@ if ($response->commerceSaleschannel !== null) {
 ### Response
 
 **[?Operations\GetCommerceSaleschannelResponse](../../Models/Operations/GetCommerceSaleschannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCommerceAvailabilities
+
+List all availabilities
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCommerceAvailabilitiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->listCommerceAvailabilities(
+    request: $request
+);
+
+if ($response->commerceAvailabilities !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListCommerceAvailabilitiesRequest](../../Models/Operations/ListCommerceAvailabilitiesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\ListCommerceAvailabilitiesResponse](../../Models/Operations/ListCommerceAvailabilitiesResponse.md)**
 
 ### Errors
 
@@ -1019,6 +1179,56 @@ if ($response->commerceLocations !== null) {
 ### Response
 
 **[?Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCommerceReservations
+
+List all reservations
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCommerceReservationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->listCommerceReservations(
+    request: $request
+);
+
+if ($response->commerceReservations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceReservationsRequest](../../Models/Operations/ListCommerceReservationsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListCommerceReservationsResponse](../../Models/Operations/ListCommerceReservationsResponse.md)**
 
 ### Errors
 
@@ -1397,6 +1607,59 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchCommerceReservation
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceReservationRequest(
+    commerceReservation: new Shared\CommerceReservation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchCommerceReservationRequest](../../Models/Operations/PatchCommerceReservationRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\PatchCommerceReservationResponse](../../Models/Operations/PatchCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchCommerceReview
 
 Update a review
@@ -1753,6 +2016,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveCommerceLocationResponse](../../Models/Operations/RemoveCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceReservation
+
+Remove a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceReservation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceReservationRequest](../../Models/Operations/RemoveCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemoveCommerceReservationResponse](../../Models/Operations/RemoveCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -2126,6 +2440,59 @@ if ($response->commerceLocation !== null) {
 ### Response
 
 **[?Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCommerceReservation
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCommerceReservationRequest(
+    commerceReservation: new Shared\CommerceReservation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->updateCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateCommerceReservationRequest](../../Models/Operations/UpdateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\UpdateCommerceReservationResponse](../../Models/Operations/UpdateCommerceReservationResponse.md)**
 
 ### Errors
 

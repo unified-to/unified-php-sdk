@@ -42,6 +42,8 @@ enum ObjectType: string
     case CommerceReview = 'commerce_review';
     case CommerceSaleschannel = 'commerce_saleschannel';
     case CommerceItemvariant = 'commerce_itemvariant';
+    case CommerceReservation = 'commerce_reservation';
+    case CommerceAvailability = 'commerce_availability';
     case VerificationPackage = 'verification_package';
     case VerificationRequest = 'verification_request';
     case AssessmentPackage = 'assessment_package';

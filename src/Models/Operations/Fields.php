@@ -27,6 +27,7 @@ enum Fields: string
     case Group = 'group';
     case Subgroup = 'subgroup';
     case ParentId = 'parent_id';
+    case OrganizationId = 'organization_id';
     case Taxonomy = 'taxonomy';
     case Raw = 'raw';
 }

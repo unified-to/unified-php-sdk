@@ -70,6 +70,10 @@ enum PropertyConnectionPermissions: string
     case CommerceSaleschannelWrite = 'commerce_saleschannel_write';
     case CommerceItemvariantRead = 'commerce_itemvariant_read';
     case CommerceItemvariantWrite = 'commerce_itemvariant_write';
+    case CommerceReservationRead = 'commerce_reservation_read';
+    case CommerceReservationWrite = 'commerce_reservation_write';
+    case CommerceAvailabilityRead = 'commerce_availability_read';
+    case CommerceAvailabilityWrite = 'commerce_availability_write';
     case VerificationPackageRead = 'verification_package_read';
     case VerificationRequestRead = 'verification_request_read';
     case VerificationRequestWrite = 'verification_request_write';

@@ -121,6 +121,22 @@ class UcRecording
 
     /**
      *
+     * @var ?string $userName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userName = null;
+
+    /**
+     *
+     * @var ?string $userPhone
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_phone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $userPhone = null;
+
+    /**
+     *
      * @var ?string $webUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('web_url')]
@@ -141,10 +157,12 @@ class UcRecording
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?string  $userName
+     * @param  ?string  $userPhone
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
         $this->contactId = $contactId;
@@ -159,6 +177,8 @@ class UcRecording
         $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->userName = $userName;
+        $this->userPhone = $userPhone;
         $this->webUrl = $webUrl;
     }
 }

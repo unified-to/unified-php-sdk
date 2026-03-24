@@ -15,4 +15,5 @@ enum ListAdsTargetsQueryParamFields: string
     case Name = 'name';
     case Value = 'value';
     case Type = 'type';
+    case Raw = 'raw';
 }

@@ -20,6 +20,14 @@ class ListAccountingTransactionsRequest
     public string $connectionId;
 
     /**
+     * The account ID to filter by (reference to AccountingAccount)
+     *
+     * @var ?string $accountId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=account_id')]
+    public ?string $accountId = null;
+
+    /**
      * The contact ID to filter by (reference to AccountingContact)
      *
      * @var ?string $contactId
@@ -65,6 +73,14 @@ class ListAccountingTransactionsRequest
     public ?string $order = null;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     *
+     * @var ?string $orgId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=org_id')]
+    public ?string $orgId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -105,12 +121,14 @@ class ListAccountingTransactionsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $accountId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
      * @param  ?array<ListAccountingTransactionsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orgId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
@@ -118,15 +136,17 @@ class ListAccountingTransactionsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $accountId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->accountId = $accountId;
         $this->contactId = $contactId;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orgId = $orgId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

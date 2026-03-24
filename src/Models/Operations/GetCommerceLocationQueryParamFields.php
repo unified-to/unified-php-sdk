@@ -21,5 +21,16 @@ enum GetCommerceLocationQueryParamFields: string
     case LanguageLocale = 'language_locale';
     case ParentId = 'parent_id';
     case Currency = 'currency';
+    case LocationType = 'location_type';
+    case Telephones = 'telephones';
+    case Rating = 'rating';
+    case ReviewCount = 'review_count';
+    case PriceLevel = 'price_level';
+    case Latitude = 'latitude';
+    case Longitude = 'longitude';
+    case ImageUrl = 'image_url';
+    case WebUrl = 'web_url';
+    case Media = 'media';
     case Raw = 'raw';
+    case Categories = 'categories';
 }

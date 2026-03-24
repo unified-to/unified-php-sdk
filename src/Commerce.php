@@ -380,6 +380,73 @@ class Commerce
     }
 
     /**
+     * Create a reservation
+     *
+     * @param  Operations\CreateCommerceReservationRequest  $request
+     * @return Operations\CreateCommerceReservationResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function createCommerceReservation(Operations\CreateCommerceReservationRequest $request, ?Options $options = null): Operations\CreateCommerceReservationResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\CreateCommerceReservationRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReservationRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\CreateCommerceReservationResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceReservation: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
      * Create a review
      *
      * @param  Operations\CreateCommerceReviewRequest  $request
@@ -824,6 +891,68 @@ class Commerce
     }
 
     /**
+     * Retrieve a reservation
+     *
+     * @param  Operations\GetCommerceReservationRequest  $request
+     * @return Operations\GetCommerceReservationResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function getCommerceReservation(Operations\GetCommerceReservationRequest $request, ?Options $options = null): Operations\GetCommerceReservationResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\GetCommerceReservationRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReservationRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\GetCommerceReservationResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceReservation: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
      * Retrieve a review
      *
      * @param  Operations\GetCommerceReviewRequest  $request
@@ -933,6 +1062,68 @@ class Commerce
                     contentType: $contentType,
                     rawResponse: $httpResponse,
                     commerceSaleschannel: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * List all availabilities
+     *
+     * @param  Operations\ListCommerceAvailabilitiesRequest  $request
+     * @return Operations\ListCommerceAvailabilitiesResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function listCommerceAvailabilities(Operations\ListCommerceAvailabilitiesRequest $request, ?Options $options = null): Operations\ListCommerceAvailabilitiesResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/availability', Operations\ListCommerceAvailabilitiesRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceAvailabilitiesRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceAvailabilities', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceAvailability>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListCommerceAvailabilitiesResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceAvailabilities: $obj);
 
                 return $response;
             } else {
@@ -1243,6 +1434,68 @@ class Commerce
                     contentType: $contentType,
                     rawResponse: $httpResponse,
                     commerceLocations: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * List all reservations
+     *
+     * @param  Operations\ListCommerceReservationsRequest  $request
+     * @return Operations\ListCommerceReservationsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function listCommerceReservations(Operations\ListCommerceReservationsRequest $request, ?Options $options = null): Operations\ListCommerceReservationsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\ListCommerceReservationsRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReservationsRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReservations', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceReservation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListCommerceReservationsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceReservations: $obj);
 
                 return $response;
             } else {
@@ -1717,6 +1970,73 @@ class Commerce
     }
 
     /**
+     * Update a reservation
+     *
+     * @param  Operations\PatchCommerceReservationRequest  $request
+     * @return Operations\PatchCommerceReservationResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function patchCommerceReservation(Operations\PatchCommerceReservationRequest $request, ?Options $options = null): Operations\PatchCommerceReservationResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\PatchCommerceReservationRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReservationRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchCommerceReservationResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceReservation: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
      * Update a review
      *
      * @param  Operations\PatchCommerceReviewRequest  $request
@@ -2123,6 +2443,62 @@ class Commerce
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
             return new Operations\RemoveCommerceLocationResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        }
+    }
+
+    /**
+     * Remove a reservation
+     *
+     * @param  Operations\RemoveCommerceReservationRequest  $request
+     * @return Operations\RemoveCommerceReservationResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function removeCommerceReservation(Operations\RemoveCommerceReservationRequest $request, ?Options $options = null): Operations\RemoveCommerceReservationResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\RemoveCommerceReservationRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $httpOptions['headers']['Accept'] = '*/*';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemoveCommerceReservationResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemoveCommerceReservationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2563,6 +2939,73 @@ class Commerce
                     contentType: $contentType,
                     rawResponse: $httpResponse,
                     commerceLocation: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Update a reservation
+     *
+     * @param  Operations\UpdateCommerceReservationRequest  $request
+     * @return Operations\UpdateCommerceReservationResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function updateCommerceReservation(Operations\UpdateCommerceReservationRequest $request, ?Options $options = null): Operations\UpdateCommerceReservationResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\UpdateCommerceReservationRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReservationRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateCommerceReservationResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    commerceReservation: $obj);
 
                 return $response;
             } else {

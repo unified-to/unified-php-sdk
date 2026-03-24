@@ -122,6 +122,8 @@ class UnifiedTo
 
     public Commerce $commerce;
 
+    public Availability $availability;
+
     public Collection $collection;
 
     public Inventory $inventory;
@@ -131,6 +133,8 @@ class UnifiedTo
     public Itemvariant $itemvariant;
 
     public Location $location;
+
+    public Reservation $reservation;
 
     public Review $review;
 
@@ -357,11 +361,13 @@ class UnifiedTo
         $this->recording = new Recording($this->sdkConfiguration);
         $this->webinar = new Webinar($this->sdkConfiguration);
         $this->commerce = new Commerce($this->sdkConfiguration);
+        $this->availability = new Availability($this->sdkConfiguration);
         $this->collection = new Collection($this->sdkConfiguration);
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->itemvariant = new Itemvariant($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
+        $this->reservation = new Reservation($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);

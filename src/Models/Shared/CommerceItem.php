@@ -57,6 +57,14 @@ class CommerceItem
 
     /**
      *
+     * @var ?float $duration
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $duration = null;
+
+    /**
+     *
      * @var ?string $globalCode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('global_code')]
@@ -110,6 +118,14 @@ class CommerceItem
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_visible')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isVisible = null;
+
+    /**
+     *
+     * @var ?string $locationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locationId = null;
 
     /**
      * $media
@@ -274,6 +290,7 @@ class CommerceItem
      * @param  ?array<CommerceReference>  $collections
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?float  $duration
      * @param  ?string  $globalCode
      * @param  ?string  $id
      * @param  ?string  $inventoryId
@@ -281,6 +298,7 @@ class CommerceItem
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isTaxable
      * @param  ?bool  $isVisible
+     * @param  ?string  $locationId
      * @param  ?array<CommerceItemMedia>  $media
      * @param  ?array<CommerceMetadata>  $metadata
      * @param  ?string  $name
@@ -301,13 +319,14 @@ class CommerceItem
      * @param  ?WeightUnit  $weightUnit
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
+    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
     {
         $this->accountId = $accountId;
         $this->collectionIds = $collectionIds;
         $this->collections = $collections;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->duration = $duration;
         $this->globalCode = $globalCode;
         $this->id = $id;
         $this->inventoryId = $inventoryId;
@@ -315,6 +334,7 @@ class CommerceItem
         $this->isFeatured = $isFeatured;
         $this->isTaxable = $isTaxable;
         $this->isVisible = $isVisible;
+        $this->locationId = $locationId;
         $this->media = $media;
         $this->metadata = $metadata;
         $this->name = $name;

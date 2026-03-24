@@ -25,4 +25,6 @@ enum GetUcRecordingQueryParamFields: string
     case UserId = 'user_id';
     case Media = 'media';
     case Raw = 'raw';
+    case UserName = 'user_name';
+    case UserPhone = 'user_phone';
 }

@@ -51,6 +51,14 @@ class ListCommerceReviewsRequest
     public ?float $limit = null;
 
     /**
+     * The location ID to filter by (reference to CommerceLocation)
+     *
+     * @var ?string $locationId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=location_id')]
+    public ?string $locationId = null;
+
+    /**
      *
      * @var ?float $offset
      */
@@ -101,6 +109,7 @@ class ListCommerceReviewsRequest
      * @param  ?array<ListCommerceReviewsQueryParamFields>  $fields
      * @param  ?string  $itemId
      * @param  ?float  $limit
+     * @param  ?string  $locationId
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
@@ -109,13 +118,14 @@ class ListCommerceReviewsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?string $itemId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?string $itemId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;
         $this->fields = $fields;
         $this->itemId = $itemId;
         $this->limit = $limit;
+        $this->locationId = $locationId;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;

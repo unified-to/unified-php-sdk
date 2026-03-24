@@ -30,5 +30,6 @@ enum ListAdsCampaignsQueryParamFields: string
     case CampaignBudgetIdentifier = 'campaign_budget_identifier';
     case Currency = 'currency';
     case Category = 'category';
+    case HasEuPoliticalAds = 'has_eu_political_ads';
     case Raw = 'raw';
 }

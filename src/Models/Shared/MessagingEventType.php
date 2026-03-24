@@ -20,6 +20,7 @@ enum MessagingEventType: string
     case ChannelLeft = 'CHANNEL_LEFT';
     case ChannelCreated = 'CHANNEL_CREATED';
     case ChannelDeleted = 'CHANNEL_DELETED';
+    case ChannelRenamed = 'CHANNEL_RENAMED';
     case UserCreated = 'USER_CREATED';
     case UserDeleted = 'USER_DELETED';
     case UserUpdated = 'USER_UPDATED';
