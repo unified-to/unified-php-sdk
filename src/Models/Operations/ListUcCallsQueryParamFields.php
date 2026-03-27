@@ -21,7 +21,8 @@ enum ListUcCallsQueryParamFields: string
     case UserId = 'user_id';
     case Contacts = 'contacts';
     case IsPrivate = 'is_private';
-    case Raw = 'raw';
     case UserName = 'user_name';
     case UserPhone = 'user_phone';
+    case Type = 'type';
+    case Raw = 'raw';
 }

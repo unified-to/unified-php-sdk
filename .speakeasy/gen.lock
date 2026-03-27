@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 4b6bb302afd17171c278cb7394f80ddb
+  docChecksum: f77412ae0427c7004cdb97ca98cb5828
   docVersion: "1.0"
-  speakeasyVersion: 1.759.1
-  generationVersion: 2.869.10
-  releaseVersion: 1.6.47
-  configChecksum: 355c2f14829cb1fbb211b22371a82591
+  speakeasyVersion: 1.759.3
+  generationVersion: 2.869.25
+  releaseVersion: 1.6.48
+  configChecksum: 5eaac4550674e94c8463aa22f47e37a8
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 759ccbc7-b6c5-4d32-be3b-e6cf1a4e95cc
-  pristine_commit_hash: e28f09c55c02a09f2b874c9556467dcf21534a2a
-  pristine_tree_hash: 82beb7927cf04cfd4ad70fecff66a094f88738c3
+  generation_id: 71a2ec0a-46ad-4a98-b56f-66a13300757f
+  pristine_commit_hash: 54c2d23314717c005fb23b7f7b4105ea39b38d83
+  pristine_tree_hash: de3c581a13b077d7a00c2772d964a6bfddf9ccd4
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -1197,8 +1197,8 @@ trackedFiles:
     pristine_git_object: 93348a65c495cff528e3de0d563594f34050f5ab
   docs/Models/Operations/CreateUcRecordingQueryParamFields.md:
     id: ec1630fad2fb
-    last_write_checksum: sha1:84e2d62a52af964ff61e7052d66610cd210c65a1
-    pristine_git_object: 57ab13690446ac236e0bfae6f45c02d8526306ef
+    last_write_checksum: sha1:9738dcad47a92f6e726c86d0e6186ec8568974bf
+    pristine_git_object: afa54bc210785d7b509e1774becb1dcda99dc313
   docs/Models/Operations/CreateUcRecordingRequest.md:
     id: 62a329a230d8
     last_write_checksum: sha1:15c4c7715d37e2096dca7c2faead1633224bb1b9
@@ -2521,8 +2521,8 @@ trackedFiles:
     pristine_git_object: 5f9b654b21f31aacba325105187964df06b32731
   docs/Models/Operations/GetUcCallQueryParamFields.md:
     id: e6d967666418
-    last_write_checksum: sha1:eda36372fbf8a0bb69d6f3ee13789c4211412f81
-    pristine_git_object: 01cd2340739bb256f7f725195276c7fba210f159
+    last_write_checksum: sha1:c2dc83aaba58f20c7949386467d56e5758e5a06c
+    pristine_git_object: 4a4e0aab0a35d02d861e4cbf332a077312b57bab
   docs/Models/Operations/GetUcCallRequest.md:
     id: f8fb9134e9fd
     last_write_checksum: sha1:94fa49939506478b83a75f8ea76ac066a0e45124
@@ -2557,8 +2557,8 @@ trackedFiles:
     pristine_git_object: c95145c164beadf095189461c595f4ba91f46230
   docs/Models/Operations/GetUcRecordingQueryParamFields.md:
     id: 16fe8f12ab05
-    last_write_checksum: sha1:f92b25a5caab1df3902749f4de6bf479a0084d20
-    pristine_git_object: 15511a017b9f90d86b565075852dcd98c44b5b41
+    last_write_checksum: sha1:5122f9bbf71f94fa8b367a5eae06e0154b621215
+    pristine_git_object: d140308064b35aee6ebc1036ca32cf11ecbd8df0
   docs/Models/Operations/GetUcRecordingRequest.md:
     id: 50e3dd6c53c2
     last_write_checksum: sha1:a5fbeb38ef2cc3ecb936619323c739471a18a206
@@ -4021,8 +4021,8 @@ trackedFiles:
     pristine_git_object: 6d25d42c480b85efc7be448bca7525733545589a
   docs/Models/Operations/ListUcCallsQueryParamFields.md:
     id: 283f12d4dff3
-    last_write_checksum: sha1:a2cb4313d4b6d540a69137be95d35b8b8b53b7ca
-    pristine_git_object: f1a460fe967e4e3efef3bce9e09e03e2ecc33243
+    last_write_checksum: sha1:29eeb6cf9da810bf4ed40fe34c08008da6c2db8c
+    pristine_git_object: b47cc8439a13d5ebcee9ad34e5c2da69067cbeb9
   docs/Models/Operations/ListUcCallsRequest.md:
     id: 2ffb78fa1aa3
     last_write_checksum: sha1:b4d853cc8b216e33a2a79f1179e7a49748db1776
@@ -4057,8 +4057,8 @@ trackedFiles:
     pristine_git_object: 981ed7727777d521ef577c110520133afa77d89a
   docs/Models/Operations/ListUcRecordingsQueryParamFields.md:
     id: 1685d5f31e25
-    last_write_checksum: sha1:917cf724b972ea878eb209f82a87184672327368
-    pristine_git_object: e9e7bcace8204f335bf525ba4437795946ee8652
+    last_write_checksum: sha1:a11371e1842df254e8b6e04a4230f135db5ba484
+    pristine_git_object: 7778cc9aa663449f04998a4dfaa02f341e79158d
   docs/Models/Operations/ListUcRecordingsRequest.md:
     id: 9bb2dc967af5
     last_write_checksum: sha1:cbb505a9d1232a6341ca24966bb44cbd55ed7c16
@@ -5293,8 +5293,8 @@ trackedFiles:
     pristine_git_object: bf8c1bb100cba5d4567239286008e20cc249b8f3
   docs/Models/Operations/PatchUcRecordingQueryParamFields.md:
     id: 22718f3de6f4
-    last_write_checksum: sha1:9a87ec961a6b1a0e810bd52f643407c45a0d1f42
-    pristine_git_object: cd1d2a7bf720ab8a5e711442dce004d20ab4d006
+    last_write_checksum: sha1:1f989c512c846727f80fcd6cae392f44f040bdaa
+    pristine_git_object: 35cff8e0d4b80d6c3fe5f0430883f4349baf3892
   docs/Models/Operations/PatchUcRecordingRequest.md:
     id: b81164a6445d
     last_write_checksum: sha1:9ee2bc8ce10b3a98fd9f1e835f277562789b042f
@@ -7285,8 +7285,8 @@ trackedFiles:
     pristine_git_object: c7f3f1fa9c14b65607e20beb0da8a2099d412fff
   docs/Models/Operations/UpdateUcRecordingQueryParamFields.md:
     id: c0fb79980b1e
-    last_write_checksum: sha1:55ce78e6e8146bdc048538b545e2632272fbdf59
-    pristine_git_object: b3c1ba74c22525f0b29ec6976eeb7d088696aa1b
+    last_write_checksum: sha1:8aeb6d1c3f2dcf11d7da0ec08a873f492dead06a
+    pristine_git_object: bdf86fb779a6f0c78c6ed00950867afedb10908d
   docs/Models/Operations/UpdateUcRecordingRequest.md:
     id: d1cd3bfc52e6
     last_write_checksum: sha1:40d4d2b2637dad39f43d41c3d47560f33cc56db2
@@ -10405,8 +10405,12 @@ trackedFiles:
     pristine_git_object: ea47fecc369aebd9a369fae693ea891f2fa69a23
   docs/Models/Shared/UcCall.md:
     id: 8dd02ef84d6d
-    last_write_checksum: sha1:4681448071c8a9f7bb1f1362b6a28d376c11344d
-    pristine_git_object: e8cf0efd3c989006aef58a9294df8a6a3f9402b7
+    last_write_checksum: sha1:421f09ab32f9c23ab352de80325e73a1c0ea70c8
+    pristine_git_object: d686a3923e8204ed0c4e0234b48da8b9540acdd6
+  docs/Models/Shared/UcCallType.md:
+    id: 7b11eaaa6041
+    last_write_checksum: sha1:0af58b34e993234135c584f00e3a293c819850c3
+    pristine_git_object: e86430e7164d1e7af74604889078f7e104849b28
   docs/Models/Shared/UcComment.md:
     id: 540eae6161e3
     last_write_checksum: sha1:2a87594c2690f8ba0cefdb666cf562f23ecf6127
@@ -10425,8 +10429,8 @@ trackedFiles:
     pristine_git_object: d52f78d956e94073bf215301f2597a0748c42a00
   docs/Models/Shared/UcRecording.md:
     id: 76455bbf6009
-    last_write_checksum: sha1:85f4d8b60b8ca0b549fd8e0c9f89f76c1a758d36
-    pristine_git_object: f093d3d82b81cf4ba1798dc787536afbce3b133d
+    last_write_checksum: sha1:c42db2d8e6ee4cdd06ff24239168ae0ee0c2255c
+    pristine_git_object: 12d48c98507cf701c0d5d24321d3873ed4b57c72
   docs/Models/Shared/UcRecordingMedia.md:
     id: 566cdcf804fc
     last_write_checksum: sha1:a0fcdde060aab095254c428c0b6fab9aced44209
@@ -10435,6 +10439,10 @@ trackedFiles:
     id: 77506e111706
     last_write_checksum: sha1:385ac3d2d77901bfe645e947c4b4bef62ba3ccd6
     pristine_git_object: 72423840675bcf0dbc489611f1f66af801f211e9
+  docs/Models/Shared/UcRecordingType.md:
+    id: b865b55a7ae9
+    last_write_checksum: sha1:8b47b52f8e7bfddac79a6ebb9edcb556ef6dfec8
+    pristine_git_object: 0de76bab9183c1883c1889a3168c04374e5d33da
   docs/Models/Shared/UcTelephone.md:
     id: 9e963fd188e3
     last_write_checksum: sha1:5528e02c35642933f196383cef2b54fc1e07e1ad
@@ -12841,8 +12849,8 @@ trackedFiles:
     pristine_git_object: 790a315368c88be06377a77a0e0a07b13bf808f9
   src/Models/Operations/CreateUcRecordingQueryParamFields.php:
     id: 5f3908557ff9
-    last_write_checksum: sha1:b14d74348f360d3a1ccda964e2873e7516a8174d
-    pristine_git_object: e8a264f073330f722d00f53a973367d1b5a17e69
+    last_write_checksum: sha1:895b17f6624832dc669a1b32a3f17b15835ee9f1
+    pristine_git_object: ec766eb31153ca6c7100adfbe2e6151db7de9adc
   src/Models/Operations/CreateUcRecordingRequest.php:
     id: 78ee4bbe0c66
     last_write_checksum: sha1:85b21ca30d3a0eefe77a20ecf52c94c07c294d72
@@ -14165,8 +14173,8 @@ trackedFiles:
     pristine_git_object: 97f971151da5bbbfe5df3292453722d4f66e069c
   src/Models/Operations/GetUcCallQueryParamFields.php:
     id: a9a6fe2d6e0b
-    last_write_checksum: sha1:591a6471fd50f4451990c9e4e0b4f256dea0f1e0
-    pristine_git_object: a3515e5b441fefcf0cae8280408016128b2b818d
+    last_write_checksum: sha1:2d3c4910a904792b5e1aaf94cd03a0265dae7a8a
+    pristine_git_object: a96c0f3718f942355286039ef4663f39502405f4
   src/Models/Operations/GetUcCallRequest.php:
     id: b65e4c25122b
     last_write_checksum: sha1:ad894f6d78231680f9e638668e26a8db054a2208
@@ -14201,8 +14209,8 @@ trackedFiles:
     pristine_git_object: ee9bb4b539361eb63d58218d78e897b3538cf9db
   src/Models/Operations/GetUcRecordingQueryParamFields.php:
     id: 7962421a02ab
-    last_write_checksum: sha1:d1df2e12e0955a0f5de5959840e9f63b5a809f5b
-    pristine_git_object: 8a5a580a7163a33f1005f2e36c084daee1e47628
+    last_write_checksum: sha1:e88ddd1355d92cf48e45f56725b413ba29994144
+    pristine_git_object: d44136a4bf09a1968ef055cac3cf68210483f65d
   src/Models/Operations/GetUcRecordingRequest.php:
     id: 8f79377ea654
     last_write_checksum: sha1:21212763dcd2b9d4e7afe7b681ce8f897edefe81
@@ -15665,8 +15673,8 @@ trackedFiles:
     pristine_git_object: f813e41d246e316e7389adfd6c0ae2f6c50fd39d
   src/Models/Operations/ListUcCallsQueryParamFields.php:
     id: 3f587f048e1d
-    last_write_checksum: sha1:e259268042b277234cfb84af617c9ac9684445d1
-    pristine_git_object: 8145e06818d9ba62ef8d4a3e00c0de5600e1b324
+    last_write_checksum: sha1:ac3a7d7c18f0ef9529ca421d14993b4e7058e93f
+    pristine_git_object: e8d32f9aba8548d59f914ce8376a4afff51bd59e
   src/Models/Operations/ListUcCallsRequest.php:
     id: bb483df58f98
     last_write_checksum: sha1:efd8b52fe10c9a8ce255714da1f8be6cdb53dc18
@@ -15701,8 +15709,8 @@ trackedFiles:
     pristine_git_object: 5a7b7c2abcac4851bfb90a9a252d2f7b5c621d03
   src/Models/Operations/ListUcRecordingsQueryParamFields.php:
     id: 1c86bfbd091b
-    last_write_checksum: sha1:b478f99c46de522df67c60c9360d6adbbf117c66
-    pristine_git_object: f1f19d276dee706df5099a4149f0599d1d59fd0a
+    last_write_checksum: sha1:38b31df8358c69a1cb0f73a82d9d73968d4682fe
+    pristine_git_object: 9c0409ae9d504a50dfbd474596bbe7679f97e4ba
   src/Models/Operations/ListUcRecordingsRequest.php:
     id: bff33f001ea1
     last_write_checksum: sha1:41c50cd0b0b402bca7413c07c7398a34c9d86081
@@ -16937,8 +16945,8 @@ trackedFiles:
     pristine_git_object: d115d64bd33c009e2adbc007111df270fe90c9d4
   src/Models/Operations/PatchUcRecordingQueryParamFields.php:
     id: 26910d228c49
-    last_write_checksum: sha1:6fb802f0aa4cd4338db9d1d5a33713748235d95f
-    pristine_git_object: 0c9d17916166f2abe65b9e2aaf7f28d29f1448e9
+    last_write_checksum: sha1:1299d118720ec2bb8828c49fbbaf371315c7a5ef
+    pristine_git_object: 08fb11a0b8ff0f0451a4c19501d4eae25bf08187
   src/Models/Operations/PatchUcRecordingRequest.php:
     id: d43c500917e0
     last_write_checksum: sha1:3cbc43116f16335be6f3666f9f5cd849194583ee
@@ -18929,8 +18937,8 @@ trackedFiles:
     pristine_git_object: d1394138fdb5035fddd3cd74a15a50447da1ced4
   src/Models/Operations/UpdateUcRecordingQueryParamFields.php:
     id: 58a32f07788b
-    last_write_checksum: sha1:e18eaf7f69bf1a2b74f4c81d16492418a9d48059
-    pristine_git_object: a5228a24ca5b64ac687ba3e685c8d99524328553
+    last_write_checksum: sha1:191fedb3a4d92a4b3a9881b4612c20ec1a0f8206
+    pristine_git_object: bf64f53ee17eb234520e8c7f14e92bef3eb5b7e8
   src/Models/Operations/UpdateUcRecordingRequest.php:
     id: 432d9ff74bdc
     last_write_checksum: sha1:c84a150657c4652099096e1bcb33f74188500c30
@@ -21925,8 +21933,12 @@ trackedFiles:
     pristine_git_object: 38443695e46b2d652f7cf52309e165b3426490ba
   src/Models/Shared/UcCall.php:
     id: 663e8543d1c1
-    last_write_checksum: sha1:671dc5c64f6e22528d1d56d9c009c0b9be03adbd
-    pristine_git_object: 1714a45092566f2ea5193f84ee6c003192b3d778
+    last_write_checksum: sha1:5d8b0b9c7466e30a8d66133823c2d732215fcb60
+    pristine_git_object: c1d9790afe932667512f082ad3c3f6ebafdb4c66
+  src/Models/Shared/UcCallType.php:
+    id: c7498157cc18
+    last_write_checksum: sha1:d802ee63da9bdcadc9dee3717d477c66f9cfc93c
+    pristine_git_object: 40de75428c37aba9f82ecf6fc9eb57726fc806c2
   src/Models/Shared/UcComment.php:
     id: cd14bc10d02f
     last_write_checksum: sha1:bed5d4cbf680f6d12a9a0441f879f8d966ef7f46
@@ -21945,8 +21957,8 @@ trackedFiles:
     pristine_git_object: cb62c08d984c67a75a5c223c36a955303cf5b0c4
   src/Models/Shared/UcRecording.php:
     id: 8526a96ae2c7
-    last_write_checksum: sha1:d834b8263dd31ca71a0c139f5be847543f9c5b54
-    pristine_git_object: 9f76a5bf584af96c474f0d6375e582fb15ff5a75
+    last_write_checksum: sha1:4e52a74553a724b5ebd25fbdc74cb5850e57047d
+    pristine_git_object: a30be735b3eb4bab4401de0e0ebe4850442f2ef4
   src/Models/Shared/UcRecordingMedia.php:
     id: c92c47d4d193
     last_write_checksum: sha1:c19f6dc2f6788906dc43ef16a0681bb05f16ce8f
@@ -21955,6 +21967,10 @@ trackedFiles:
     id: c9547cfff84b
     last_write_checksum: sha1:54ce0d7dcfb2a60ae7d9ecd7778ce7438b76b950
     pristine_git_object: 1f8eef78d35372c81b7b1193f73188c0f8ed89b4
+  src/Models/Shared/UcRecordingType.php:
+    id: 461541c3dd41
+    last_write_checksum: sha1:afe9b8a11dbc95c7ffa99c1828755fb36fe0af3a
+    pristine_git_object: 143f3b073358a1670c41d7f5377bad2271ae0a92
   src/Models/Shared/UcTelephone.php:
     id: 7b3a73011a27
     last_write_checksum: sha1:43ebcdc99cfb9d26102111cc20e8b4c0975b4e00
@@ -22353,8 +22369,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:5a369eeb1897e2fd3081804dc287e6291c0e52e8
-    pristine_git_object: b729fda921b14827ca92615b2838ab790a73533e
+    last_write_checksum: sha1:8e12c9955de79aa35b13f6219368d8731fa79996
+    pristine_git_object: c6978ef49421f739aba541045a624e2e0c8697d2
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -28613,7 +28629,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->event->patchMessagingEvent()`: \n  *  `request->messagingEvent->type->enum(channelRenamed)` **Added**\n  *  `response.type->enum(channelRenamed)` **Added** (Breaking ⚠️)\n* `unified-to->event->updateMessagingEvent()`: \n  *  `request->messagingEvent->type->enum(channelRenamed)` **Added**\n  *  `response.type->enum(channelRenamed)` **Added** (Breaking ⚠️)\n* `unified-to->messaging->patchMessagingEvent()`: \n  *  `request->messagingEvent->type->enum(channelRenamed)` **Added**\n  *  `response.type->enum(channelRenamed)` **Added** (Breaking ⚠️)\n* `unified-to->messaging->updateMessagingEvent()`: \n  *  `request->messagingEvent->type->enum(channelRenamed)` **Added**\n  *  `response.type->enum(channelRenamed)` **Added** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->updateCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->listAccountingContacts()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->listAccountingTransactions()`:  `request` **Changed**\n* `unified-to->accounting->patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->accounting->patchAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->accounting->updateAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->account->createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->account->getAccountingAccount()`: \n  *  `request->fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->account->listAccountingAccounts()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->organizationId` **Added**\n* `unified-to->account->patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->account->updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->contact->createAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->contact->getAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->contact->listAccountingContacts()`: \n  *  `request->fields` **Changed**\n* `unified-to->contact->patchAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->contact->updateAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->campaign->hasEuPoliticalAds` **Added**\n* `unified-to->transaction->listAccountingTransactions()`:  `request` **Changed**\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->hasEuPoliticalAds` **Added**\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->campaign->hasEuPoliticalAds` **Added**\n* `unified-to->ads->listAdsTargets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->raw` **Added**\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->hasEuPoliticalAds` **Added**\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.hasEuPoliticalAds` **Added**\n* `unified-to->target->listAdsTargets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->raw` **Added**\n* `unified-to->recording->createUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->recording->getUcRecording()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->recording->listUcRecordings()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->recording->patchUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->recording->updateUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->commerce->createCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->createCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->getCommerceItem()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->getCommerceLocation()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->getCommerceReview()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->listCommerceItems()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->commerce->listCommerceLocations()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->commerce->listCommerceReviews()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->patchCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->patchCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->listAccountingAccounts()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->organizationId` **Added**\n* `unified-to->commerce->updateCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->createCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->getCommerceItem()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->listCommerceItems()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->item->patchCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->item->updateCommerceItem()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->location->createCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->location->getCommerceLocation()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->location->listCommerceLocations()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->location->patchCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->location->updateCommerceLocation()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->review->createCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->review->getCommerceReview()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->review->listCommerceReviews()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->review->patchCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->review->updateCommerceReview()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->scim->createScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->scim->getScimUsers()`:  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->scim->listScimUsers()`:  `response.[]->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->scim->patchScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->scim->updateScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->user->createScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->user->getScimUsers()`:  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->user->listScimUsers()`:  `response.[]->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->user->patchScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->user->updateScimUsers()`: \n  *  `request->scimUser->urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user->currency` **Added**\n* `unified-to->uc->createUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->uc->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->uc->getUcRecording()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->uc->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->uc->listUcRecordings()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->uc->patchUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->uc->updateUcRecording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->call->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->getAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->getAccountingAccount()`: \n  *  `request->fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->createAccountingContact()`: \n  *  `request->fields` **Changed**\n* `unified-to->call->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listSize` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listSize` **Added**\n* `unified-to->accounting->createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to->reservation->updateCommerceReservation()`: **Added**\n* `unified-to->reservation->removeCommerceReservation()`: **Added**\n* `unified-to->reservation->patchCommerceReservation()`: **Added**\n* `unified-to->reservation->listCommerceReservations()`: **Added**\n* `unified-to->reservation->getCommerceReservation()`: **Added**\n* `unified-to->reservation->createCommerceReservation()`: **Added**\n* `unified-to->availability->listCommerceAvailabilities()`: **Added**\n* `unified-to->commerce->updateCommerceReservation()`: **Added**\n* `unified-to->commerce->removeCommerceReservation()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listSize` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listSize` **Added**\n* `unified-to->commerce->patchCommerceReservation()`: **Added**\n* `unified-to->commerce->listCommerceReservations()`: **Added**\n* `unified-to->commerce->listCommerceAvailabilities()`: **Added**\n* `unified-to->commerce->getCommerceReservation()`: **Added**\n* `unified-to->commerce->createCommerceReservation()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->recording->createUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->recording->getUcRecording()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->recording->listUcRecordings()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->recording->patchUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->recording->updateUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->uc->createUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->uc->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->uc->getUcRecording()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->uc->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->uc->listUcRecordings()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->uc->patchUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->uc->updateUcRecording()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->call->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->call->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -105,6 +105,15 @@ class UcRecording
 
     /**
      *
+     * @var ?UcRecordingType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcRecordingType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?UcRecordingType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -155,6 +164,7 @@ class UcRecording
      * @param  ?array<UcRecordingMedia>  $media
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?UcRecordingType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName
@@ -162,7 +172,7 @@ class UcRecording
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
         $this->contactId = $contactId;
@@ -175,6 +185,7 @@ class UcRecording
         $this->media = $media;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
         $this->userName = $userName;

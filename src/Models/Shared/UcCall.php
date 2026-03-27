@@ -91,6 +91,15 @@ class UcCall
 
     /**
      *
+     * @var ?UcCallType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcCallType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?UcCallType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -131,13 +140,14 @@ class UcCall
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?PropertyUcCallTelephone  $telephone
+     * @param  ?UcCallType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName
      * @param  ?string  $userPhone
      * @phpstan-pure
      */
-    public function __construct(?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
+    public function __construct(?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
     {
         $this->contactId = $contactId;
         $this->contacts = $contacts;
@@ -148,6 +158,7 @@ class UcCall
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->telephone = $telephone;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
         $this->userName = $userName;
