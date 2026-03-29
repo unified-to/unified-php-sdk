@@ -12,6 +12,7 @@
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
+* [createHrisTimeoff](#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
 * [getHrisBankaccount](#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
@@ -43,6 +44,7 @@
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
+* [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [removeHrisBankaccount](#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
@@ -52,6 +54,7 @@
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
+* [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [updateHrisBankaccount](#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
@@ -61,6 +64,7 @@
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
+* [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
 ## createHrisBankaccount
@@ -474,6 +478,58 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHrisTimeoff
+
+Create a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisTimeoffRequest(
+    hrisTimeoff: new Shared\HrisTimeoff(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->createHrisTimeoff(
+    request: $request
+);
+
+if ($response->hrisTimeoff !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateHrisTimeoffRequest](../../Models/Operations/CreateHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreateHrisTimeoffResponse](../../Models/Operations/CreateHrisTimeoffResponse.md)**
 
 ### Errors
 
@@ -2075,6 +2131,59 @@ if ($response->hrisLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchHrisTimeoff
+
+Update a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisTimeoffRequest(
+    hrisTimeoff: new Shared\HrisTimeoff(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->patchHrisTimeoff(
+    request: $request
+);
+
+if ($response->hrisTimeoff !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchHrisTimeoffRequest](../../Models/Operations/PatchHrisTimeoffRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchHrisTimeoffResponse](../../Models/Operations/PatchHrisTimeoffResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchHrisTimeshift
 
 Update a timeshift
@@ -2534,6 +2643,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisTimeoff
+
+Remove a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisTimeoff" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisTimeoffRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->removeHrisTimeoff(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveHrisTimeoffRequest](../../Models/Operations/RemoveHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveHrisTimeoffResponse](../../Models/Operations/RemoveHrisTimeoffResponse.md)**
 
 ### Errors
 
@@ -3011,6 +3171,59 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisTimeoff
+
+Update a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisTimeoffRequest(
+    hrisTimeoff: new Shared\HrisTimeoff(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->updateHrisTimeoff(
+    request: $request
+);
+
+if ($response->hrisTimeoff !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateHrisTimeoffRequest](../../Models/Operations/UpdateHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\UpdateHrisTimeoffResponse](../../Models/Operations/UpdateHrisTimeoffResponse.md)**
 
 ### Errors
 

@@ -890,6 +890,7 @@ if ($response->accountingAccount !== null) {
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
@@ -921,6 +922,7 @@ if ($response->accountingAccount !== null) {
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
@@ -930,6 +932,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
@@ -939,6 +942,7 @@ if ($response->accountingAccount !== null) {
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1664,8 +1668,12 @@ if ($response->accountingAccount !== null) {
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
+* [createHrisTimeoff](docs/sdks/timeoff/README.md#createhristimeoff) - Create a timeoff
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
+* [patchHrisTimeoff](docs/sdks/timeoff/README.md#patchhristimeoff) - Update a timeoff
+* [removeHrisTimeoff](docs/sdks/timeoff/README.md#removehristimeoff) - Remove a timeoff
+* [updateHrisTimeoff](docs/sdks/timeoff/README.md#updatehristimeoff) - Update a timeoff
 
 ### [Timeshift](docs/sdks/timeshift/README.md)
 
