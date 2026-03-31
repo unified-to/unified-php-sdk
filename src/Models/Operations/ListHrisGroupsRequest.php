@@ -80,6 +80,14 @@ class ListHrisGroupsRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -97,10 +105,11 @@ class ListHrisGroupsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
@@ -111,6 +120,7 @@ class ListHrisGroupsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }

@@ -1,25 +1,25 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5123fef2d7f9f12ba6135b87f82ae573
+  docChecksum: 4b271fa62ae0cc77a25c0a077d2a284f
   docVersion: "1.0"
-  speakeasyVersion: 1.759.3
-  generationVersion: 2.869.25
-  releaseVersion: 1.6.49
-  configChecksum: fc4911ff399e5cfb06a3185ac1204d1d
+  speakeasyVersion: 1.760.0
+  generationVersion: 2.873.1
+  releaseVersion: 1.6.50
+  configChecksum: d192fcc531ec0d002cb0187d6241af73
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 0c75cad4-0d47-40d8-831b-21609d9c3c9e
-  pristine_commit_hash: 0397f60c0746e403dde2a6470c807f6e955f9882
-  pristine_tree_hash: aafb527b3ee1058798c209f14001f61695b4d7a5
+  generation_id: 592e7381-db75-4beb-9329-a083766d90a5
+  pristine_commit_hash: 2665bef8991cf72f01a1c4acc082e0a3a35a6ad0
+  pristine_tree_hash: 80700a3603c8d7dbe6910db1ed6c15d8a1fd767a
 features:
   php:
     constsAndDefaults: 0.2.2
-    core: 3.9.20
-    globalSecurity: 2.81.10
+    core: 3.9.21
+    globalSecurity: 2.81.12
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.1
     inputOutputModels: 2.83.0
@@ -3485,8 +3485,8 @@ trackedFiles:
     pristine_git_object: c55d235f18864f8913f48f7dc8973a3911432e74
   docs/Models/Operations/ListHrisGroupsRequest.md:
     id: 7f43fe7f68d9
-    last_write_checksum: sha1:a0c0aa8e4676040d0fc1690214269fb209778479
-    pristine_git_object: 44a2a33905b4f989e4b43317b681317ba12bf8e5
+    last_write_checksum: sha1:0b4d2baa4038e8181bb806916ba8e53d61be91f1
+    pristine_git_object: 63d9c991521e49ad6d8c4933cdc90c633d5e3f8d
   docs/Models/Operations/ListHrisGroupsResponse.md:
     id: 8d77d4d41417
     last_write_checksum: sha1:b8d58596e9f08764c864c32ba1d7eb50524d4548
@@ -15181,8 +15181,8 @@ trackedFiles:
     pristine_git_object: a2ffac4a5e56e6ff740b3ad09d108b2491fcf3cb
   src/Models/Operations/ListHrisGroupsRequest.php:
     id: ae8c6e029c9f
-    last_write_checksum: sha1:fa0fd19cc430557f65ca5aab235bb282b06fd68a
-    pristine_git_object: fca788c89970c162da1669944471a1b3115c475f
+    last_write_checksum: sha1:45882c9b37da88fd1d6a97a9d721d369b1908987
+    pristine_git_object: e26ef7b360c75fb78fef76a3a3e436e44eb8dc45
   src/Models/Operations/ListHrisGroupsResponse.php:
     id: 50e793d58969
     last_write_checksum: sha1:a6661b656b9dac38202f908ff5e88ed6f1f52818
@@ -22457,8 +22457,8 @@ trackedFiles:
     pristine_git_object: 372b1f6c7fd391d24f0c2276b903e1146b0d028e
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:7079952dfdf64ea337ef589315f01676918e6391
-    pristine_git_object: 36801f82a213d7fee07d676416abe4513a967a97
+    last_write_checksum: sha1:5b174e9867edb124f8379a3472954b3fe382820f
+    pristine_git_object: 1ef1c352fc91aadd06e7ab1f5cb3e84bc36c03dd
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:c910337ad5f5c90c8c34155c901743c579751cbe
@@ -22557,8 +22557,8 @@ trackedFiles:
     pristine_git_object: 5c60f38c023e60bed0f41e23e003dc05ab98d8b2
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
-    last_write_checksum: sha1:e9b1c7277595f8e786f774674b3177e449cff509
-    pristine_git_object: 6d9416c3195e719eb9f4f13d9c8cd0eb12893d05
+    last_write_checksum: sha1:9c6ea940f1040079d63715e5ea34fbe7e8342702
+    pristine_git_object: 4d7f89b75a343004560f5c2338df84eefe46e3ab
   src/User.php:
     id: 071661e35c43
     last_write_checksum: sha1:c42ff238ed2732602ba66b5b3149edcc9d72b358
@@ -22677,16 +22677,16 @@ trackedFiles:
     pristine_git_object: 7dbfdac20c12c8ee37ff0375b7b1cb46d1fda9b6
   src/Utils/Security.php:
     id: 564a31099977
-    last_write_checksum: sha1:8728d49cbf51b85f0f8002f3a3c62bc5d63d5051
-    pristine_git_object: 235b643c3d99da2e4fc7086df51228166b4b1767
+    last_write_checksum: sha1:b1d32b1e7f43b282b9a3a7ae5400a25670b8228f
+    pristine_git_object: c6b81bb7d109d7c9bb0345e17ab2f473120c1d06
   src/Utils/SecurityClient.php:
     id: de11afa826f4
     last_write_checksum: sha1:27dc9b377af40935df9a563ae18bbe0520857f43
     pristine_git_object: d3c92465a1cdd0eb085345e4b290d3f6b2371c31
   src/Utils/SecurityMetadata.php:
     id: 55ec148715b3
-    last_write_checksum: sha1:9535e45510ef01a72910e92fbf5ad6d748d0950e
-    pristine_git_object: a0313172a36574e78eabd11cdd0ee7954976d8be
+    last_write_checksum: sha1:1f36e9ff687cf12e4630a02d3003dfdc864bd6fc
+    pristine_git_object: 1770fbbdf5bce65904cf236119097b44af2c5722
   src/Utils/ServerDetails.php:
     id: 71ed88cf4f04
     last_write_checksum: sha1:3c096c1e5b96762eef068faaadcbb7e4fdaba9a8
@@ -22701,8 +22701,8 @@ trackedFiles:
     pristine_git_object: cd0d1f2e0c60f1ad5aa889e77d007b600ba501e4
   src/Utils/Utils.php:
     id: c902f57e2422
-    last_write_checksum: sha1:6888c007857c94687fa04ef58e2cb299db6f0e58
-    pristine_git_object: 78bfb00174e40b8c6c72268eff76b6c13f957f03
+    last_write_checksum: sha1:f98a456cd0837a28f43328ebadfd32cf302f3aba
+    pristine_git_object: 9cda9791d21cfc285ba1717fe358cc7d51c44b41
   src/Verification.php:
     id: 29eedacb3775
     last_write_checksum: sha1:2b14fda59b580858bfdaef8892bc5df07e2ae459
@@ -28755,20 +28755,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Php SDK Changes:
-  * `unified-to->hris->createHrisTimeoff()`: **Added**
-  * `unified-to->hris->patchHrisTimeoff()`: **Added**
-  * `unified-to->hris->removeHrisTimeoff()`: **Added**
-  * `unified-to->hris->updateHrisTimeoff()`: **Added**
-  * `unified-to->timeoff->createHrisTimeoff()`: **Added**
-  * `unified-to->timeoff->patchHrisTimeoff()`: **Added**
-  * `unified-to->timeoff->removeHrisTimeoff()`: **Added**
-  * `unified-to->timeoff->updateHrisTimeoff()`: **Added**
-  * `unified-to->hris->getHrisTimeoff()`:  `response.startAt` **Changed**
-  * `unified-to->hris->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**
-  * `unified-to->timeoff->getHrisTimeoff()`:  `response.startAt` **Changed**
-  * `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**
+releaseNotes: "## Php SDK Changes:\n* `unified-to->group->listHrisGroups()`: \n  *  `request->type` **Added**\n* `unified-to->hris->listHrisGroups()`: \n  *  `request->type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
