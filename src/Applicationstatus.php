@@ -47,8 +47,8 @@ class Applicationstatus
     /**
      * List all applicationstatuses
      *
-     * @param  Operations\ListAtsApplicationstatusesRequest  $request
-     * @return Operations\ListAtsApplicationstatusesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsApplicationstatuses(Operations\ListAtsApplicationstatusesRequest $request, ?Options $options = null): Operations\ListAtsApplicationstatusesResponse

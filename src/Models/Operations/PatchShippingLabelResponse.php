@@ -35,7 +35,7 @@ class PatchShippingLabelResponse
     /**
      * Successful
      *
-     * @var ?Shared\ShippingLabel $shippingLabel
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingLabel $shippingLabel
      */
     public ?Shared\ShippingLabel $shippingLabel = null;
 
@@ -43,7 +43,7 @@ class PatchShippingLabelResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ShippingLabel  $shippingLabel
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingLabel  $shippingLabel
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingLabel $shippingLabel = null)

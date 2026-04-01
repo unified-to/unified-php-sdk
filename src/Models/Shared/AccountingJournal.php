@@ -46,12 +46,20 @@ class AccountingJournal
     /**
      * new field name
      *
-     * @var ?array<AccountingJournalLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
+
+    /**
+     *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
 
     /**
      *
@@ -116,7 +124,8 @@ class AccountingJournal
      * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?string  $id
-     * @param  ?array<AccountingJournalLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>  $lineitems
+     * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
@@ -126,13 +135,14 @@ class AccountingJournal
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->reference = $reference;

@@ -30,7 +30,7 @@ class ListUnifiedIntegrationWorkspacesRequest
     /**
      * Filter the results on these categories
      *
-     * @var ?array<QueryParamCategories> $categories
+     * @var ?array<\Unified\Unified_to\Models\Operations\QueryParamCategories> $categories
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
     public ?array $categories = null;
@@ -73,7 +73,7 @@ class ListUnifiedIntegrationWorkspacesRequest
     /**
      * @param  string  $workspaceId
      * @param  ?bool  $active
-     * @param  ?array<QueryParamCategories>  $categories
+     * @param  ?array<\Unified\Unified_to\Models\Operations\QueryParamCategories>  $categories
      * @param  ?string  $env
      * @param  ?float  $limit
      * @param  ?float  $offset

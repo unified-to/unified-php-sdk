@@ -14,7 +14,7 @@ class CreateRepoBranchRequest
 {
     /**
      *
-     * @var Shared\RepoBranch $repoBranch
+     * @var \Unified\Unified_to\Models\Shared\RepoBranch $repoBranch
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoBranch $repoBranch;
@@ -30,7 +30,7 @@ class CreateRepoBranchRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateRepoBranchQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateRepoBranchQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateRepoBranchRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoBranch  $repoBranch
+     * @param  \Unified\Unified_to\Models\Shared\RepoBranch  $repoBranch
      * @param  string  $connectionId
-     * @param  ?array<CreateRepoBranchQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateRepoBranchQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

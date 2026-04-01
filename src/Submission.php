@@ -47,8 +47,8 @@ class Submission
     /**
      * Retrieve a submission
      *
-     * @param  Operations\GetFormsSubmissionRequest  $request
-     * @return Operations\GetFormsSubmissionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmissionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmissionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getFormsSubmission(Operations\GetFormsSubmissionRequest $request, ?Options $options = null): Operations\GetFormsSubmissionResponse
@@ -109,8 +109,8 @@ class Submission
     /**
      * List all submissions
      *
-     * @param  Operations\ListFormsSubmissionsRequest  $request
-     * @return Operations\ListFormsSubmissionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listFormsSubmissions(Operations\ListFormsSubmissionsRequest $request, ?Options $options = null): Operations\ListFormsSubmissionsResponse

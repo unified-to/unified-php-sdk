@@ -21,7 +21,7 @@ class AccountingSalesorder
 
     /**
      *
-     * @var ?PropertyAccountingSalesorderBillingAddress $billingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress|null')]
@@ -63,12 +63,20 @@ class AccountingSalesorder
     /**
      * $lineitems
      *
-     * @var ?array<AccountingLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lineitems = null;
+
+    /**
+     *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
 
     /**
      *
@@ -98,7 +106,7 @@ class AccountingSalesorder
 
     /**
      *
-     * @var ?PropertyAccountingSalesorderShippingAddress $shippingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderShippingAddress $shippingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('shipping_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderShippingAddress|null')]
@@ -107,7 +115,7 @@ class AccountingSalesorder
 
     /**
      *
-     * @var ?AccountingSalesorderStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingSalesorderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingSalesorderStatus|null')]
@@ -132,22 +140,23 @@ class AccountingSalesorder
 
     /**
      * @param  ?string  $accountId
-     * @param  ?PropertyAccountingSalesorderBillingAddress  $billingAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress  $billingAddress
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
-     * @param  ?array<AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $salesChannel
-     * @param  ?PropertyAccountingSalesorderShippingAddress  $shippingAddress
-     * @param  ?AccountingSalesorderStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderShippingAddress  $shippingAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingSalesorderStatus  $status
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
@@ -156,6 +165,7 @@ class AccountingSalesorder
         $this->currency = $currency;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->salesChannel = $salesChannel;

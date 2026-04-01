@@ -14,7 +14,7 @@ class PropertyAdsInsertionorderBidStrategy
 {
     /**
      *
-     * @var PropertyAdsInsertionorderBidStrategyType $type
+     * @var \Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyType')]
@@ -54,7 +54,7 @@ class PropertyAdsInsertionorderBidStrategy
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderBidStrategyPerformanceGoalType $performanceGoalType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyPerformanceGoalType $performanceGoalType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('performance_goal_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyPerformanceGoalType|null')]
@@ -79,7 +79,7 @@ class PropertyAdsInsertionorderBidStrategy
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_and_partners_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType|null')]
@@ -95,15 +95,15 @@ class PropertyAdsInsertionorderBidStrategy
     public ?string $youtubeAndPartnersValue = null;
 
     /**
-     * @param  PropertyAdsInsertionorderBidStrategyType  $type
+     * @param  \Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyType  $type
      * @param  ?string  $customBiddingAlgorithmId
      * @param  ?float  $fixedBidAmount
      * @param  ?float  $maxAverageCpmBidAmount
      * @param  ?float  $performanceGoalAmount
-     * @param  ?PropertyAdsInsertionorderBidStrategyPerformanceGoalType  $performanceGoalType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyPerformanceGoalType  $performanceGoalType
      * @param  ?bool  $raiseBidForDeals
      * @param  ?float  $targetRoas
-     * @param  ?PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
      * @param  ?string  $youtubeAndPartnersValue
      * @phpstan-pure
      */

@@ -20,7 +20,7 @@ class LmsTelephone
 
     /**
      *
-     * @var ?LmsTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\LmsTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LmsTelephoneType|null')]
@@ -29,7 +29,7 @@ class LmsTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?LmsTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\LmsTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?LmsTelephoneType $type = null)

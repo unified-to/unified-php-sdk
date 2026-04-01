@@ -13,7 +13,7 @@ class ScimEmail
 {
     /**
      *
-     * @var ScimEmailType $type
+     * @var \Unified\Unified_to\Models\Shared\ScimEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimEmailType')]
@@ -44,7 +44,7 @@ class ScimEmail
     public ?string $value = null;
 
     /**
-     * @param  ScimEmailType  $type
+     * @param  \Unified\Unified_to\Models\Shared\ScimEmailType  $type
      * @param  ?string  $display
      * @param  ?bool  $primary
      * @param  ?string  $value

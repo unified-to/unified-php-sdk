@@ -35,7 +35,7 @@ class CreatePaymentLinkResponse
     /**
      * Successful
      *
-     * @var ?Shared\PaymentLink $paymentLink
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentLink $paymentLink
      */
     public ?Shared\PaymentLink $paymentLink = null;
 
@@ -43,7 +43,7 @@ class CreatePaymentLinkResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\PaymentLink  $paymentLink
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentLink  $paymentLink
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\PaymentLink $paymentLink = null)

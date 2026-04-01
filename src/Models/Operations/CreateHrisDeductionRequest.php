@@ -15,7 +15,7 @@ class CreateHrisDeductionRequest
     /**
      * Employee-specific deduction/benefit enrolment.
      *
-     * @var Shared\HrisDeduction $hrisDeduction
+     * @var \Unified\Unified_to\Models\Shared\HrisDeduction $hrisDeduction
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisDeduction $hrisDeduction;
@@ -31,7 +31,7 @@ class CreateHrisDeductionRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisDeductionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisDeductionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateHrisDeductionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisDeduction  $hrisDeduction
+     * @param  \Unified\Unified_to\Models\Shared\HrisDeduction  $hrisDeduction
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisDeductionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisDeductionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

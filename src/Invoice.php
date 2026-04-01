@@ -47,8 +47,8 @@ class Invoice
     /**
      * Create an invoice
      *
-     * @param  Operations\CreateAccountingInvoiceRequest  $request
-     * @return Operations\CreateAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingInvoice(Operations\CreateAccountingInvoiceRequest $request, ?Options $options = null): Operations\CreateAccountingInvoiceResponse
@@ -114,8 +114,8 @@ class Invoice
     /**
      * Retrieve an invoice
      *
-     * @param  Operations\GetAccountingInvoiceRequest  $request
-     * @return Operations\GetAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingInvoice(Operations\GetAccountingInvoiceRequest $request, ?Options $options = null): Operations\GetAccountingInvoiceResponse
@@ -176,8 +176,8 @@ class Invoice
     /**
      * List all invoices
      *
-     * @param  Operations\ListAccountingInvoicesRequest  $request
-     * @return Operations\ListAccountingInvoicesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingInvoices(Operations\ListAccountingInvoicesRequest $request, ?Options $options = null): Operations\ListAccountingInvoicesResponse
@@ -238,8 +238,8 @@ class Invoice
     /**
      * Update an invoice
      *
-     * @param  Operations\PatchAccountingInvoiceRequest  $request
-     * @return Operations\PatchAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingInvoice(Operations\PatchAccountingInvoiceRequest $request, ?Options $options = null): Operations\PatchAccountingInvoiceResponse
@@ -305,8 +305,8 @@ class Invoice
     /**
      * Remove an invoice
      *
-     * @param  Operations\RemoveAccountingInvoiceRequest  $request
-     * @return Operations\RemoveAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingInvoice(Operations\RemoveAccountingInvoiceRequest $request, ?Options $options = null): Operations\RemoveAccountingInvoiceResponse
@@ -361,8 +361,8 @@ class Invoice
     /**
      * Update an invoice
      *
-     * @param  Operations\UpdateAccountingInvoiceRequest  $request
-     * @return Operations\UpdateAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingInvoice(Operations\UpdateAccountingInvoiceRequest $request, ?Options $options = null): Operations\UpdateAccountingInvoiceResponse

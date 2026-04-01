@@ -35,7 +35,7 @@ class GetAtsDocumentResponse
     /**
      * Successful
      *
-     * @var ?Shared\AtsDocument $atsDocument
+     * @var ?\Unified\Unified_to\Models\Shared\AtsDocument $atsDocument
      */
     public ?Shared\AtsDocument $atsDocument = null;
 
@@ -43,7 +43,7 @@ class GetAtsDocumentResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AtsDocument  $atsDocument
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsDocument  $atsDocument
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsDocument $atsDocument = null)

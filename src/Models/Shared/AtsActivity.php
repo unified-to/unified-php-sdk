@@ -22,7 +22,7 @@ class AtsActivity
     /**
      * $bcc
      *
-     * @var ?array<AtsEmail> $bcc
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $bcc
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bcc')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
@@ -40,7 +40,7 @@ class AtsActivity
     /**
      * $cc
      *
-     * @var ?array<AtsEmail> $cc
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $cc
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cc')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
@@ -75,7 +75,7 @@ class AtsActivity
 
     /**
      *
-     * @var ?PropertyAtsActivityFrom $from
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom $from
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom|null')]
@@ -143,7 +143,7 @@ class AtsActivity
     /**
      * $to
      *
-     * @var ?array<AtsEmail> $to
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $to
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('to')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
@@ -152,7 +152,7 @@ class AtsActivity
 
     /**
      *
-     * @var ?AtsActivityType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AtsActivityType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsActivityType|null')]
@@ -179,13 +179,13 @@ class AtsActivity
 
     /**
      * @param  ?string  $applicationId
-     * @param  ?array<AtsEmail>  $bcc
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $bcc
      * @param  ?string  $candidateId
-     * @param  ?array<AtsEmail>  $cc
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $cc
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?array<string>  $documentIds
-     * @param  ?PropertyAtsActivityFrom  $from
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsActivityFrom  $from
      * @param  ?string  $id
      * @param  ?string  $interviewId
      * @param  ?bool  $isPrivate
@@ -193,8 +193,8 @@ class AtsActivity
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $subType
      * @param  ?string  $title
-     * @param  ?array<AtsEmail>  $to
-     * @param  ?AtsActivityType  $type
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $to
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsActivityType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure

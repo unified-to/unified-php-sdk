@@ -35,7 +35,7 @@ class UpdateFormsFormResponse
     /**
      * Successful
      *
-     * @var ?Shared\FormsForm $formsForm
+     * @var ?\Unified\Unified_to\Models\Shared\FormsForm $formsForm
      */
     public ?Shared\FormsForm $formsForm = null;
 
@@ -43,7 +43,7 @@ class UpdateFormsFormResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\FormsForm  $formsForm
+     * @param  ?\Unified\Unified_to\Models\Shared\FormsForm  $formsForm
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\FormsForm $formsForm = null)

@@ -27,7 +27,7 @@ class VerificationPackage
 
     /**
      *
-     * @var VerificationPackageType $type
+     * @var \Unified\Unified_to\Models\Shared\VerificationPackageType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationPackageType')]
@@ -46,7 +46,7 @@ class VerificationPackage
     /**
      * average processing time in minutes
      *
-     * @var ?array<VerificationTime> $averageProcessingTimes
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationTime> $averageProcessingTimes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('average_processing_times')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationTime>|null')]
@@ -128,7 +128,7 @@ class VerificationPackage
     /**
      * Questions that need to be answered for this verification
      *
-     * @var ?array<VerificationParameter> $parameters
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationParameter> $parameters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parameters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationParameter>|null')]
@@ -164,7 +164,7 @@ class VerificationPackage
     public ?\DateTime $updatedAt = null;
 
     /**
-     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     * {country}-{state/province/territory} or just {country} 2-digit ISO codes
      *
      * @var ?array<string> $validRegions
      */
@@ -176,9 +176,9 @@ class VerificationPackage
     /**
      * @param  string  $id
      * @param  string  $name
-     * @param  VerificationPackageType  $type
+     * @param  \Unified\Unified_to\Models\Shared\VerificationPackageType  $type
      * @param  ?array<string>  $aliases
-     * @param  ?array<VerificationTime>  $averageProcessingTimes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationTime>  $averageProcessingTimes
      * @param  ?float  $costAmount
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -188,7 +188,7 @@ class VerificationPackage
      * @param  ?string  $infoUrl
      * @param  ?float  $maxScore
      * @param  ?bool  $needsIpAddress
-     * @param  ?array<VerificationParameter>  $parameters
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationParameter>  $parameters
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt

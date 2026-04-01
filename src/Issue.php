@@ -47,8 +47,8 @@ class Issue
     /**
      * Retrieve support issue
      *
-     * @param  Operations\GetUnifiedIssueRequest  $request
-     * @return Operations\GetUnifiedIssueResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIssueRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIssueResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIssue(Operations\GetUnifiedIssueRequest $request, ?Options $options = null): Operations\GetUnifiedIssueResponse
@@ -106,8 +106,8 @@ class Issue
     /**
      * List support issues
      *
-     * @param  ?Operations\ListUnifiedIssuesRequest  $request
-     * @return Operations\ListUnifiedIssuesResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIssues(?Operations\ListUnifiedIssuesRequest $request = null, ?Options $options = null): Operations\ListUnifiedIssuesResponse

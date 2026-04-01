@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Shared\IntegrationSchemasSandbox1
+* @var \Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1
 */
 Shared\IntegrationSchemasSandbox1 $value = /* values here */
 ```

@@ -47,8 +47,8 @@ class Page
     /**
      * Create a page
      *
-     * @param  Operations\CreateKmsPageRequest  $request
-     * @return Operations\CreateKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsPage(Operations\CreateKmsPageRequest $request, ?Options $options = null): Operations\CreateKmsPageResponse
@@ -114,8 +114,8 @@ class Page
     /**
      * Retrieve a page
      *
-     * @param  Operations\GetKmsPageRequest  $request
-     * @return Operations\GetKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsPage(Operations\GetKmsPageRequest $request, ?Options $options = null): Operations\GetKmsPageResponse
@@ -176,8 +176,8 @@ class Page
     /**
      * List all pages
      *
-     * @param  Operations\ListKmsPagesRequest  $request
-     * @return Operations\ListKmsPagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsPagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsPages(Operations\ListKmsPagesRequest $request, ?Options $options = null): Operations\ListKmsPagesResponse
@@ -238,8 +238,8 @@ class Page
     /**
      * Update a page
      *
-     * @param  Operations\PatchKmsPageRequest  $request
-     * @return Operations\PatchKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsPage(Operations\PatchKmsPageRequest $request, ?Options $options = null): Operations\PatchKmsPageResponse
@@ -305,8 +305,8 @@ class Page
     /**
      * Remove a page
      *
-     * @param  Operations\RemoveKmsPageRequest  $request
-     * @return Operations\RemoveKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsPage(Operations\RemoveKmsPageRequest $request, ?Options $options = null): Operations\RemoveKmsPageResponse
@@ -361,8 +361,8 @@ class Page
     /**
      * Update a page
      *
-     * @param  Operations\UpdateKmsPageRequest  $request
-     * @return Operations\UpdateKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsPage(Operations\UpdateKmsPageRequest $request, ?Options $options = null): Operations\UpdateKmsPageResponse

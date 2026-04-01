@@ -46,7 +46,7 @@ class ListLmsInstructorsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListLmsInstructorsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListLmsInstructorsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -108,7 +108,7 @@ class ListLmsInstructorsRequest
      * @param  ?string  $classId
      * @param  ?string  $companyId
      * @param  ?string  $courseId
-     * @param  ?array<ListLmsInstructorsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListLmsInstructorsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

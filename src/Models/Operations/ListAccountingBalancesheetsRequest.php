@@ -46,7 +46,7 @@ class ListAccountingBalancesheetsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingBalancesheetsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -116,7 +116,7 @@ class ListAccountingBalancesheetsRequest
      * @param  ?string  $categoryId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListAccountingBalancesheetsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

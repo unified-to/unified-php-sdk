@@ -22,7 +22,7 @@ class UcCall
     /**
      * $contacts
      *
-     * @var ?array<UcContact> $contacts
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcContact> $contacts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contacts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcContact>|null')]
@@ -82,7 +82,7 @@ class UcCall
     /**
      * The telephone number called
      *
-     * @var ?PropertyUcCallTelephone $telephone
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone $telephone
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephone')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone|null')]
@@ -91,7 +91,7 @@ class UcCall
 
     /**
      *
-     * @var ?UcCallType $type
+     * @var ?\Unified\Unified_to\Models\Shared\UcCallType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcCallType|null')]
@@ -132,15 +132,15 @@ class UcCall
 
     /**
      * @param  ?string  $contactId
-     * @param  ?array<UcContact>  $contacts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isPrivate
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PropertyUcCallTelephone  $telephone
-     * @param  ?UcCallType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone  $telephone
+     * @param  ?\Unified\Unified_to\Models\Shared\UcCallType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName

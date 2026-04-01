@@ -15,7 +15,7 @@ class CreateMartechMemberRequest
     /**
      * A member represents a person
      *
-     * @var Shared\MarketingMember $marketingMember
+     * @var \Unified\Unified_to\Models\Shared\MarketingMember $marketingMember
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MarketingMember $marketingMember;
@@ -31,7 +31,7 @@ class CreateMartechMemberRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateMartechMemberQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateMartechMemberQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateMartechMemberRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MarketingMember  $marketingMember
+     * @param  \Unified\Unified_to\Models\Shared\MarketingMember  $marketingMember
      * @param  string  $connectionId
-     * @param  ?array<CreateMartechMemberQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateMartechMemberQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

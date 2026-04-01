@@ -47,8 +47,8 @@ class Benefit
     /**
      * Create a benefit
      *
-     * @param  Operations\CreateHrisBenefitRequest  $request
-     * @return Operations\CreateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisBenefit(Operations\CreateHrisBenefitRequest $request, ?Options $options = null): Operations\CreateHrisBenefitResponse
@@ -114,8 +114,8 @@ class Benefit
     /**
      * Retrieve a benefit
      *
-     * @param  Operations\GetHrisBenefitRequest  $request
-     * @return Operations\GetHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisBenefit(Operations\GetHrisBenefitRequest $request, ?Options $options = null): Operations\GetHrisBenefitResponse
@@ -176,8 +176,8 @@ class Benefit
     /**
      * List all benefits
      *
-     * @param  Operations\ListHrisBenefitsRequest  $request
-     * @return Operations\ListHrisBenefitsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBenefitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisBenefits(Operations\ListHrisBenefitsRequest $request, ?Options $options = null): Operations\ListHrisBenefitsResponse
@@ -238,8 +238,8 @@ class Benefit
     /**
      * Update a benefit
      *
-     * @param  Operations\PatchHrisBenefitRequest  $request
-     * @return Operations\PatchHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisBenefit(Operations\PatchHrisBenefitRequest $request, ?Options $options = null): Operations\PatchHrisBenefitResponse
@@ -305,8 +305,8 @@ class Benefit
     /**
      * Remove a benefit
      *
-     * @param  Operations\RemoveHrisBenefitRequest  $request
-     * @return Operations\RemoveHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisBenefit(Operations\RemoveHrisBenefitRequest $request, ?Options $options = null): Operations\RemoveHrisBenefitResponse
@@ -361,8 +361,8 @@ class Benefit
     /**
      * Update a benefit
      *
-     * @param  Operations\UpdateHrisBenefitRequest  $request
-     * @return Operations\UpdateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisBenefit(Operations\UpdateHrisBenefitRequest $request, ?Options $options = null): Operations\UpdateHrisBenefitResponse

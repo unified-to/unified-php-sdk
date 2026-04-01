@@ -35,7 +35,7 @@ class ListStorageFilesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\StorageFile> $storageFiles
+     * @var ?array<\Unified\Unified_to\Models\Shared\StorageFile> $storageFiles
      */
     public ?array $storageFiles = null;
 
@@ -43,7 +43,7 @@ class ListStorageFilesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\StorageFile>  $storageFiles
+     * @param  ?array<\Unified\Unified_to\Models\Shared\StorageFile>  $storageFiles
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $storageFiles = null)

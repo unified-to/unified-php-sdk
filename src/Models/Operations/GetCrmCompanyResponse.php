@@ -35,7 +35,7 @@ class GetCrmCompanyResponse
     /**
      * Successful
      *
-     * @var ?Shared\CrmCompany $crmCompany
+     * @var ?\Unified\Unified_to\Models\Shared\CrmCompany $crmCompany
      */
     public ?Shared\CrmCompany $crmCompany = null;
 
@@ -43,7 +43,7 @@ class GetCrmCompanyResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CrmCompany  $crmCompany
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmCompany  $crmCompany
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CrmCompany $crmCompany = null)

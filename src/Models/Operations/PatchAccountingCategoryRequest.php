@@ -14,7 +14,7 @@ class PatchAccountingCategoryRequest
 {
     /**
      *
-     * @var Shared\AccountingCategory $accountingCategory
+     * @var \Unified\Unified_to\Models\Shared\AccountingCategory $accountingCategory
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingCategory $accountingCategory;
@@ -38,7 +38,7 @@ class PatchAccountingCategoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAccountingCategoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAccountingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAccountingCategoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingCategory  $accountingCategory
+     * @param  \Unified\Unified_to\Models\Shared\AccountingCategory  $accountingCategory
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAccountingCategoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAccountingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

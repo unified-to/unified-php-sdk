@@ -30,7 +30,7 @@ class GetCrmCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCrmCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCrmCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCrmCompanyRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCrmCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCrmCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

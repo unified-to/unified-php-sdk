@@ -30,7 +30,7 @@ class GetCommerceSaleschannelRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCommerceSaleschannelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCommerceSaleschannelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceSaleschannelRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCommerceSaleschannelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCommerceSaleschannelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

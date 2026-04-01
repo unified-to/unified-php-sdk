@@ -14,7 +14,7 @@ class AccountingProfitlossSection
     /**
      * $accounts
      *
-     * @var ?array<AccountingProfitlossAccount> $accounts
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossAccount> $accounts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('accounts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossAccount>|null')]
@@ -46,7 +46,7 @@ class AccountingProfitlossSection
     public ?float $totalAmount = null;
 
     /**
-     * @param  ?array<AccountingProfitlossAccount>  $accounts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossAccount>  $accounts
      * @param  ?string  $sectionName
      * @param  ?string  $sectionType
      * @param  ?float  $totalAmount

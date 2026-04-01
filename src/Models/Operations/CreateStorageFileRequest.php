@@ -14,7 +14,7 @@ class CreateStorageFileRequest
 {
     /**
      *
-     * @var Shared\StorageFile $storageFile
+     * @var \Unified\Unified_to\Models\Shared\StorageFile $storageFile
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\StorageFile $storageFile;
@@ -30,7 +30,7 @@ class CreateStorageFileRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateStorageFileQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateStorageFileQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateStorageFileRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\StorageFile  $storageFile
+     * @param  \Unified\Unified_to\Models\Shared\StorageFile  $storageFile
      * @param  string  $connectionId
-     * @param  ?array<CreateStorageFileQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateStorageFileQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

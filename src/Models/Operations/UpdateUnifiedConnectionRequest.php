@@ -15,7 +15,7 @@ class UpdateUnifiedConnectionRequest
     /**
      * A connection represents a specific authentication of an integration.
      *
-     * @var Shared\Connection $connection
+     * @var \Unified\Unified_to\Models\Shared\Connection $connection
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\Connection $connection;
@@ -29,7 +29,7 @@ class UpdateUnifiedConnectionRequest
     public string $id;
 
     /**
-     * @param  Shared\Connection  $connection
+     * @param  \Unified\Unified_to\Models\Shared\Connection  $connection
      * @param  string  $id
      * @phpstan-pure
      */

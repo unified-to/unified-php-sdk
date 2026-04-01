@@ -54,7 +54,7 @@ class CalendarRecording
     /**
      * $media
      *
-     * @var ?array<CalendarRecordingMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarRecordingMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarRecordingMedia>|null')]
@@ -101,7 +101,7 @@ class CalendarRecording
      * @param  ?string  $eventId
      * @param  ?\DateTime  $expiresAt
      * @param  ?string  $id
-     * @param  ?array<CalendarRecordingMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarRecordingMedia>  $media
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt

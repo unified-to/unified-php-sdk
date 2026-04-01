@@ -103,7 +103,7 @@ class HrisTimeoff
 
     /**
      *
-     * @var ?HrisTimeoffStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\HrisTimeoffStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffStatus|null')]
@@ -138,7 +138,7 @@ class HrisTimeoff
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reason
      * @param  ?\DateTime  $startAt
-     * @param  ?HrisTimeoffStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoffStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

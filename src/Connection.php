@@ -50,8 +50,8 @@ class Connection
      *
      * Used only to import existing customer credentials; use "Authorize new connection" instead
      *
-     * @param  Shared\Connection  $request
-     * @return Operations\CreateUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Shared\Connection  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedConnection(Shared\Connection $request, ?Options $options = null): Operations\CreateUnifiedConnectionResponse
@@ -114,8 +114,8 @@ class Connection
     /**
      * Retrieve connection
      *
-     * @param  Operations\GetUnifiedConnectionRequest  $request
-     * @return Operations\GetUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedConnection(Operations\GetUnifiedConnectionRequest $request, ?Options $options = null): Operations\GetUnifiedConnectionResponse
@@ -173,8 +173,8 @@ class Connection
     /**
      * List all connections
      *
-     * @param  ?Operations\ListUnifiedConnectionsRequest  $request
-     * @return Operations\ListUnifiedConnectionsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedConnections(?Operations\ListUnifiedConnectionsRequest $request = null, ?Options $options = null): Operations\ListUnifiedConnectionsResponse
@@ -235,8 +235,8 @@ class Connection
     /**
      * Update connection
      *
-     * @param  Operations\PatchUnifiedConnectionRequest  $request
-     * @return Operations\PatchUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedConnection(Operations\PatchUnifiedConnectionRequest $request, ?Options $options = null): Operations\PatchUnifiedConnectionResponse
@@ -299,8 +299,8 @@ class Connection
     /**
      * Remove connection
      *
-     * @param  Operations\RemoveUnifiedConnectionRequest  $request
-     * @return Operations\RemoveUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedConnection(Operations\RemoveUnifiedConnectionRequest $request, ?Options $options = null): Operations\RemoveUnifiedConnectionResponse
@@ -355,8 +355,8 @@ class Connection
     /**
      * Update connection
      *
-     * @param  Operations\UpdateUnifiedConnectionRequest  $request
-     * @return Operations\UpdateUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedConnection(Operations\UpdateUnifiedConnectionRequest $request, ?Options $options = null): Operations\UpdateUnifiedConnectionResponse

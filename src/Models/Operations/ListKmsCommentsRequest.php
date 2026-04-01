@@ -22,7 +22,7 @@ class ListKmsCommentsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListKmsCommentsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListKmsCommentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -105,7 +105,7 @@ class ListKmsCommentsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListKmsCommentsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListKmsCommentsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

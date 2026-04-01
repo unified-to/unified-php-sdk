@@ -87,7 +87,7 @@ class AtsDocument
 
     /**
      *
-     * @var ?AtsDocumentType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AtsDocumentType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsDocumentType|null')]
@@ -120,7 +120,7 @@ class AtsDocument
      * @param  ?string  $id
      * @param  ?string  $jobId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?AtsDocumentType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsDocumentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

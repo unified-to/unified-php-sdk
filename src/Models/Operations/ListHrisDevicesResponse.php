@@ -35,7 +35,7 @@ class ListHrisDevicesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisDevice> $hrisDevices
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisDevice> $hrisDevices
      */
     public ?array $hrisDevices = null;
 
@@ -43,7 +43,7 @@ class ListHrisDevicesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisDevice>  $hrisDevices
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisDevice>  $hrisDevices
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisDevices = null)

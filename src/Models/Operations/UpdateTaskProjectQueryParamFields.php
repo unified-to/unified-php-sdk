@@ -21,5 +21,6 @@ enum UpdateTaskProjectQueryParamFields: string
     case Description = 'description';
     case HasTasks = 'has_tasks';
     case HasChildren = 'has_children';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

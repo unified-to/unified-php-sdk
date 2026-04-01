@@ -21,7 +21,7 @@ class AtsCompensation
 
     /**
      *
-     * @var ?Frequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\Frequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Frequency|null')]
@@ -46,7 +46,7 @@ class AtsCompensation
 
     /**
      *
-     * @var ?AtsCompensationType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AtsCompensationType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsCompensationType|null')]
@@ -55,10 +55,10 @@ class AtsCompensation
 
     /**
      * @param  ?string  $currency
-     * @param  ?Frequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\Frequency  $frequency
      * @param  ?float  $max
      * @param  ?float  $min
-     * @param  ?AtsCompensationType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsCompensationType  $type
      * @phpstan-pure
      */
     public function __construct(?string $currency = null, ?Frequency $frequency = null, ?float $max = null, ?float $min = null, ?AtsCompensationType $type = null)

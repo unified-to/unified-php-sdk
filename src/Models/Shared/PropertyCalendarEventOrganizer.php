@@ -45,7 +45,7 @@ class PropertyCalendarEventOrganizer
 
     /**
      *
-     * @var ?PropertyCalendarEventOrganizerStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizerStatus|null')]
@@ -65,7 +65,7 @@ class PropertyCalendarEventOrganizer
      * @param  ?bool  $isCohost
      * @param  ?string  $name
      * @param  ?bool  $required
-     * @param  ?PropertyCalendarEventOrganizerStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizerStatus  $status
      * @param  ?string  $userId
      * @phpstan-pure
      */

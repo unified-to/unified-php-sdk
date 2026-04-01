@@ -14,7 +14,7 @@ class FormsSubmission
     /**
      * $answers
      *
-     * @var array<FormAnswer> $answers
+     * @var array<\Unified\Unified_to\Models\Shared\FormAnswer> $answers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\FormAnswer>')]
@@ -78,7 +78,7 @@ class FormsSubmission
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  array<FormAnswer>  $answers
+     * @param  array<\Unified\Unified_to\Models\Shared\FormAnswer>  $answers
      * @param  string  $formId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id

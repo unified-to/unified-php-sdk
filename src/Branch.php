@@ -47,8 +47,8 @@ class Branch
     /**
      * Create a branch
      *
-     * @param  Operations\CreateRepoBranchRequest  $request
-     * @return Operations\CreateRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoBranch(Operations\CreateRepoBranchRequest $request, ?Options $options = null): Operations\CreateRepoBranchResponse
@@ -114,8 +114,8 @@ class Branch
     /**
      * Retrieve a branch
      *
-     * @param  Operations\GetRepoBranchRequest  $request
-     * @return Operations\GetRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoBranch(Operations\GetRepoBranchRequest $request, ?Options $options = null): Operations\GetRepoBranchResponse
@@ -176,8 +176,8 @@ class Branch
     /**
      * List all branches
      *
-     * @param  Operations\ListRepoBranchesRequest  $request
-     * @return Operations\ListRepoBranchesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoBranchesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoBranchesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoBranches(Operations\ListRepoBranchesRequest $request, ?Options $options = null): Operations\ListRepoBranchesResponse
@@ -238,8 +238,8 @@ class Branch
     /**
      * Update a branch
      *
-     * @param  Operations\PatchRepoBranchRequest  $request
-     * @return Operations\PatchRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoBranch(Operations\PatchRepoBranchRequest $request, ?Options $options = null): Operations\PatchRepoBranchResponse
@@ -305,8 +305,8 @@ class Branch
     /**
      * Remove a branch
      *
-     * @param  Operations\RemoveRepoBranchRequest  $request
-     * @return Operations\RemoveRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoBranch(Operations\RemoveRepoBranchRequest $request, ?Options $options = null): Operations\RemoveRepoBranchResponse
@@ -361,8 +361,8 @@ class Branch
     /**
      * Update a branch
      *
-     * @param  Operations\UpdateRepoBranchRequest  $request
-     * @return Operations\UpdateRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoBranch(Operations\UpdateRepoBranchRequest $request, ?Options $options = null): Operations\UpdateRepoBranchResponse

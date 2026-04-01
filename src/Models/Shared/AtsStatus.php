@@ -47,7 +47,7 @@ class AtsStatus
 
     /**
      *
-     * @var ?AtsStatusStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsStatusStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsStatusStatus|null')]
@@ -59,7 +59,7 @@ class AtsStatus
      * @param  ?string  $id
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
-     * @param  ?AtsStatusStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsStatusStatus  $status
      * @phpstan-pure
      */
     public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)

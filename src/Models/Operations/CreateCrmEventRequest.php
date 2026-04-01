@@ -15,7 +15,7 @@ class CreateCrmEventRequest
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
      *
-     * @var Shared\CrmEvent $crmEvent
+     * @var \Unified\Unified_to\Models\Shared\CrmEvent $crmEvent
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmEvent $crmEvent;
@@ -31,7 +31,7 @@ class CreateCrmEventRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmEventQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateCrmEventRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmEvent  $crmEvent
+     * @param  \Unified\Unified_to\Models\Shared\CrmEvent  $crmEvent
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmEventQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

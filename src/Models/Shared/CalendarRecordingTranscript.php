@@ -20,7 +20,7 @@ class CalendarRecordingTranscript
 
     /**
      *
-     * @var ?PropertyCalendarRecordingTranscriptAttendee $attendee
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendee $attendee
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attendee')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendee|null')]
@@ -53,7 +53,7 @@ class CalendarRecordingTranscript
 
     /**
      * @param  string  $text
-     * @param  ?PropertyCalendarRecordingTranscriptAttendee  $attendee
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendee  $attendee
      * @param  ?\DateTime  $endAt
      * @param  ?string  $language
      * @param  ?\DateTime  $startAt

@@ -35,7 +35,7 @@ class ListUnifiedApicallsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\ApiCall> $apiCalls
+     * @var ?array<\Unified\Unified_to\Models\Shared\ApiCall> $apiCalls
      */
     public ?array $apiCalls = null;
 
@@ -43,7 +43,7 @@ class ListUnifiedApicallsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\ApiCall>  $apiCalls
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ApiCall>  $apiCalls
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $apiCalls = null)

@@ -35,7 +35,7 @@ class ListAccountingPurchaseordersResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingPurchaseorder> $accountingPurchaseorders
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingPurchaseorder> $accountingPurchaseorders
      */
     public ?array $accountingPurchaseorders = null;
 
@@ -43,7 +43,7 @@ class ListAccountingPurchaseordersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingPurchaseorder>  $accountingPurchaseorders
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPurchaseorder>  $accountingPurchaseorders
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingPurchaseorders = null)

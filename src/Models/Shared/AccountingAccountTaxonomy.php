@@ -13,7 +13,7 @@ class AccountingAccountTaxonomy
 {
     /**
      *
-     * @var AccountingAccountTaxonomyType $type
+     * @var \Unified\Unified_to\Models\Shared\AccountingAccountTaxonomyType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomyType')]
@@ -35,7 +35,7 @@ class AccountingAccountTaxonomy
     public ?string $originalType = null;
 
     /**
-     * @param  AccountingAccountTaxonomyType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AccountingAccountTaxonomyType  $type
      * @param  string  $value
      * @param  ?string  $originalType
      * @phpstan-pure

@@ -30,7 +30,7 @@ class ListUcCommentsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListUcCommentsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListUcCommentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListUcCommentsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $callId
-     * @param  ?array<ListUcCommentsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListUcCommentsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

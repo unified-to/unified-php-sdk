@@ -22,7 +22,7 @@ class ListKmsSpacesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListKmsSpacesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListKmsSpacesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListKmsSpacesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListKmsSpacesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListKmsSpacesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

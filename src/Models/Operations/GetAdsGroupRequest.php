@@ -30,7 +30,7 @@ class GetAdsGroupRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAdsGroupQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAdsGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAdsGroupRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAdsGroupQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAdsGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -14,7 +14,7 @@ class PatchMessagingMessageRequest
 {
     /**
      *
-     * @var Shared\MessagingMessage $messagingMessage
+     * @var \Unified\Unified_to\Models\Shared\MessagingMessage $messagingMessage
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MessagingMessage $messagingMessage;
@@ -38,7 +38,7 @@ class PatchMessagingMessageRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchMessagingMessageQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchMessagingMessageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchMessagingMessageRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MessagingMessage  $messagingMessage
+     * @param  \Unified\Unified_to\Models\Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchMessagingMessageQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchMessagingMessageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

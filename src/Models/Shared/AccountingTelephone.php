@@ -21,7 +21,7 @@ class AccountingTelephone
 
     /**
      *
-     * @var ?AccountingTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTelephoneType|null')]
@@ -30,7 +30,7 @@ class AccountingTelephone
 
     /**
      * @param  ?string  $telephone
-     * @param  ?AccountingTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(?string $telephone = null, ?AccountingTelephoneType $type = null)

@@ -30,7 +30,7 @@ class GetHrisCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisCompanyRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

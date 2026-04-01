@@ -110,7 +110,7 @@ class MarketingReport
     /**
      * URL-specific click data
      *
-     * @var ?array<MarketingReportLink> $links
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingReportLink> $links
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('links')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingReportLink>|null')]
@@ -228,7 +228,7 @@ class MarketingReport
      * @param  ?string  $id
      * @param  ?\DateTime  $lastClickAt
      * @param  ?\DateTime  $lastOpenAt
-     * @param  ?array<MarketingReportLink>  $links
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingReportLink>  $links
      * @param  ?string  $listId
      * @param  ?float  $openRate
      * @param  ?float  $opensTotal

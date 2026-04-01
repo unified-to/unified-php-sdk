@@ -37,7 +37,7 @@ class PropertyScimGroupMeta
 
     /**
      *
-     * @var ?ResourceType $resourceType
+     * @var ?\Unified\Unified_to\Models\Shared\ResourceType $resourceType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('resourceType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResourceType|null')]
@@ -56,7 +56,7 @@ class PropertyScimGroupMeta
      * @param  ?string  $created
      * @param  ?string  $lastModified
      * @param  ?string  $location
-     * @param  ?ResourceType  $resourceType
+     * @param  ?\Unified\Unified_to\Models\Shared\ResourceType  $resourceType
      * @param  ?string  $version
      * @phpstan-pure
      */

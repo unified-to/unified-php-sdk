@@ -47,8 +47,8 @@ class Change
     /**
      * Retrieve a change
      *
-     * @param  Operations\GetTaskChangeRequest  $request
-     * @return Operations\GetTaskChangeResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskChangeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskChangeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTaskChange(Operations\GetTaskChangeRequest $request, ?Options $options = null): Operations\GetTaskChangeResponse
@@ -109,8 +109,8 @@ class Change
     /**
      * List all changes
      *
-     * @param  Operations\ListTaskChangesRequest  $request
-     * @return Operations\ListTaskChangesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskChangesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskChangesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTaskChanges(Operations\ListTaskChangesRequest $request, ?Options $options = null): Operations\ListTaskChangesResponse

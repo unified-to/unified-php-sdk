@@ -30,7 +30,7 @@ class GetAccountingPurchaseorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingPurchaseorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingPurchaseorderRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingPurchaseorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

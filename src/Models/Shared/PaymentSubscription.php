@@ -109,7 +109,7 @@ class PaymentSubscription
 
     /**
      *
-     * @var ?IntervalUnit $intervalUnit
+     * @var ?\Unified\Unified_to\Models\Shared\IntervalUnit $intervalUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('interval_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IntervalUnit|null')]
@@ -127,7 +127,7 @@ class PaymentSubscription
     /**
      * $lineitems
      *
-     * @var ?array<PaymentLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentLineitem>|null')]
@@ -162,7 +162,7 @@ class PaymentSubscription
 
     /**
      *
-     * @var ?PaymentSubscriptionStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentSubscriptionStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentSubscriptionStatus|null')]
@@ -190,13 +190,13 @@ class PaymentSubscription
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?float  $interval
-     * @param  ?IntervalUnit  $intervalUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\IntervalUnit  $intervalUnit
      * @param  ?string  $invoiceId
-     * @param  ?array<PaymentLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentLineitem>  $lineitems
      * @param  ?float  $month
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PaymentSubscriptionStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentSubscriptionStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

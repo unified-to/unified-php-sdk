@@ -47,8 +47,8 @@ class Timeoff
     /**
      * Create a timeoff
      *
-     * @param  Operations\CreateHrisTimeoffRequest  $request
-     * @return Operations\CreateHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisTimeoff(Operations\CreateHrisTimeoffRequest $request, ?Options $options = null): Operations\CreateHrisTimeoffResponse
@@ -114,8 +114,8 @@ class Timeoff
     /**
      * Retrieve a timeoff
      *
-     * @param  Operations\GetHrisTimeoffRequest  $request
-     * @return Operations\GetHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisTimeoff(Operations\GetHrisTimeoffRequest $request, ?Options $options = null): Operations\GetHrisTimeoffResponse
@@ -176,8 +176,8 @@ class Timeoff
     /**
      * List all timeoffs
      *
-     * @param  Operations\ListHrisTimeoffsRequest  $request
-     * @return Operations\ListHrisTimeoffsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisTimeoffs(Operations\ListHrisTimeoffsRequest $request, ?Options $options = null): Operations\ListHrisTimeoffsResponse
@@ -238,8 +238,8 @@ class Timeoff
     /**
      * Update a timeoff
      *
-     * @param  Operations\PatchHrisTimeoffRequest  $request
-     * @return Operations\PatchHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisTimeoff(Operations\PatchHrisTimeoffRequest $request, ?Options $options = null): Operations\PatchHrisTimeoffResponse
@@ -305,8 +305,8 @@ class Timeoff
     /**
      * Remove a timeoff
      *
-     * @param  Operations\RemoveHrisTimeoffRequest  $request
-     * @return Operations\RemoveHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisTimeoff(Operations\RemoveHrisTimeoffRequest $request, ?Options $options = null): Operations\RemoveHrisTimeoffResponse
@@ -361,8 +361,8 @@ class Timeoff
     /**
      * Update a timeoff
      *
-     * @param  Operations\UpdateHrisTimeoffRequest  $request
-     * @return Operations\UpdateHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisTimeoff(Operations\UpdateHrisTimeoffRequest $request, ?Options $options = null): Operations\UpdateHrisTimeoffResponse

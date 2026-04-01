@@ -15,7 +15,7 @@ class PatchHrisBenefitRequest
     /**
      * Company-wide benefit plans available to employees.
      *
-     * @var Shared\HrisBenefit $hrisBenefit
+     * @var \Unified\Unified_to\Models\Shared\HrisBenefit $hrisBenefit
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisBenefit $hrisBenefit;
@@ -39,7 +39,7 @@ class PatchHrisBenefitRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchHrisBenefitQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchHrisBenefitQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchHrisBenefitRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisBenefit  $hrisBenefit
+     * @param  \Unified\Unified_to\Models\Shared\HrisBenefit  $hrisBenefit
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchHrisBenefitQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchHrisBenefitQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

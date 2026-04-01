@@ -14,7 +14,7 @@ class CreateAccountingTransactionRequest
 {
     /**
      *
-     * @var Shared\AccountingTransaction $accountingTransaction
+     * @var \Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingTransaction $accountingTransaction;
@@ -30,7 +30,7 @@ class CreateAccountingTransactionRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingTransactionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingTransactionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingTransactionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingTransaction  $accountingTransaction
+     * @param  \Unified\Unified_to\Models\Shared\AccountingTransaction  $accountingTransaction
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingTransactionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingTransactionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

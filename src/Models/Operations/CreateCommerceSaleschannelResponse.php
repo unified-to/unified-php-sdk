@@ -35,7 +35,7 @@ class CreateCommerceSaleschannelResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceSaleschannel $commerceSaleschannel
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceSaleschannel $commerceSaleschannel
      */
     public ?Shared\CommerceSaleschannel $commerceSaleschannel = null;
 
@@ -43,7 +43,7 @@ class CreateCommerceSaleschannelResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceSaleschannel  $commerceSaleschannel
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceSaleschannel  $commerceSaleschannel
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceSaleschannel $commerceSaleschannel = null)

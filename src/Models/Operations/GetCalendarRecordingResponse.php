@@ -35,7 +35,7 @@ class GetCalendarRecordingResponse
     /**
      * Successful
      *
-     * @var ?Shared\CalendarRecording $calendarRecording
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarRecording $calendarRecording
      */
     public ?Shared\CalendarRecording $calendarRecording = null;
 
@@ -43,7 +43,7 @@ class GetCalendarRecordingResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CalendarRecording  $calendarRecording
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarRecording  $calendarRecording
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CalendarRecording $calendarRecording = null)

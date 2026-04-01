@@ -35,7 +35,7 @@ class ListAtsCandidatesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AtsCandidate> $atsCandidates
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCandidate> $atsCandidates
      */
     public ?array $atsCandidates = null;
 
@@ -43,7 +43,7 @@ class ListAtsCandidatesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AtsCandidate>  $atsCandidates
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCandidate>  $atsCandidates
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $atsCandidates = null)

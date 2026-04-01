@@ -13,7 +13,7 @@ class IntegrationSupport
 {
     /**
      *
-     * @var ?FromWebhook $fromWebhook
+     * @var ?\Unified\Unified_to\Models\Shared\FromWebhook $fromWebhook
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from_webhook')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FromWebhook|null')]
@@ -32,7 +32,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListAccountId $listAccountId
+     * @var ?\Unified\Unified_to\Models\Shared\ListAccountId $listAccountId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_account_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAccountId|null')]
@@ -41,7 +41,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListAdId $listAdId
+     * @var ?\Unified\Unified_to\Models\Shared\ListAdId $listAdId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_ad_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListAdId|null')]
@@ -50,7 +50,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListApplicationId $listApplicationId
+     * @var ?\Unified\Unified_to\Models\Shared\ListApplicationId $listApplicationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_application_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListApplicationId|null')]
@@ -59,7 +59,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListBenefitId $listBenefitId
+     * @var ?\Unified\Unified_to\Models\Shared\ListBenefitId $listBenefitId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_benefit_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListBenefitId|null')]
@@ -68,7 +68,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListBillId $listBillId
+     * @var ?\Unified\Unified_to\Models\Shared\ListBillId $listBillId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_bill_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListBillId|null')]
@@ -77,7 +77,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListBranchId $listBranchId
+     * @var ?\Unified\Unified_to\Models\Shared\ListBranchId $listBranchId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_branch_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListBranchId|null')]
@@ -86,7 +86,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCalendarId $listCalendarId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCalendarId $listCalendarId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_calendar_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCalendarId|null')]
@@ -95,7 +95,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCallId $listCallId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCallId $listCallId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_call_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCallId|null')]
@@ -104,7 +104,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCampaignId $listCampaignId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCampaignId $listCampaignId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_campaign_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCampaignId|null')]
@@ -113,7 +113,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCandidateId $listCandidateId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCandidateId $listCandidateId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_candidate_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCandidateId|null')]
@@ -122,7 +122,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCarrierId $listCarrierId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCarrierId $listCarrierId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_carrier_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCarrierId|null')]
@@ -131,7 +131,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCategoryId $listCategoryId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCategoryId $listCategoryId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_category_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCategoryId|null')]
@@ -140,7 +140,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListChannelId $listChannelId
+     * @var ?\Unified\Unified_to\Models\Shared\ListChannelId $listChannelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_channel_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListChannelId|null')]
@@ -149,7 +149,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListClassId $listClassId
+     * @var ?\Unified\Unified_to\Models\Shared\ListClassId $listClassId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_class_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListClassId|null')]
@@ -158,7 +158,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCollectionId $listCollectionId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCollectionId $listCollectionId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_collection_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCollectionId|null')]
@@ -167,7 +167,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCompanyId $listCompanyId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCompanyId $listCompanyId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_company_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCompanyId|null')]
@@ -176,7 +176,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListContactId $listContactId
+     * @var ?\Unified\Unified_to\Models\Shared\ListContactId $listContactId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_contact_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContactId|null')]
@@ -185,7 +185,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListContentId $listContentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListContentId $listContentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_content_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListContentId|null')]
@@ -194,7 +194,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCourseId $listCourseId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCourseId $listCourseId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_course_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCourseId|null')]
@@ -203,7 +203,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListCustomerId $listCustomerId
+     * @var ?\Unified\Unified_to\Models\Shared\ListCustomerId $listCustomerId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_customer_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListCustomerId|null')]
@@ -212,7 +212,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListDealId $listDealId
+     * @var ?\Unified\Unified_to\Models\Shared\ListDealId $listDealId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_deal_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDealId|null')]
@@ -221,7 +221,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListDocumentId $listDocumentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListDocumentId $listDocumentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_document_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListDocumentId|null')]
@@ -230,7 +230,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListEndLt $listEndLt
+     * @var ?\Unified\Unified_to\Models\Shared\ListEndLt $listEndLt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_end_lt')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListEndLt|null')]
@@ -239,7 +239,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListEventId $listEventId
+     * @var ?\Unified\Unified_to\Models\Shared\ListEventId $listEventId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_event_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListEventId|null')]
@@ -248,7 +248,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListExpand $listExpand
+     * @var ?\Unified\Unified_to\Models\Shared\ListExpand $listExpand
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_expand')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListExpand|null')]
@@ -257,7 +257,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListFormId $listFormId
+     * @var ?\Unified\Unified_to\Models\Shared\ListFormId $listFormId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_form_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListFormId|null')]
@@ -266,7 +266,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListFulltext $listFulltext
+     * @var ?\Unified\Unified_to\Models\Shared\ListFulltext $listFulltext
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_fulltext')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListFulltext|null')]
@@ -275,7 +275,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListGroupId $listGroupId
+     * @var ?\Unified\Unified_to\Models\Shared\ListGroupId $listGroupId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_group_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListGroupId|null')]
@@ -284,7 +284,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListInstructorId $listInstructorId
+     * @var ?\Unified\Unified_to\Models\Shared\ListInstructorId $listInstructorId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_instructor_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInstructorId|null')]
@@ -293,7 +293,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListInterviewId $listInterviewId
+     * @var ?\Unified\Unified_to\Models\Shared\ListInterviewId $listInterviewId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_interview_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInterviewId|null')]
@@ -302,7 +302,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListInvoiceId $listInvoiceId
+     * @var ?\Unified\Unified_to\Models\Shared\ListInvoiceId $listInvoiceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_invoice_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListInvoiceId|null')]
@@ -311,7 +311,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListIoId $listIoId
+     * @var ?\Unified\Unified_to\Models\Shared\ListIoId $listIoId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_io_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListIoId|null')]
@@ -320,7 +320,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListItemId $listItemId
+     * @var ?\Unified\Unified_to\Models\Shared\ListItemId $listItemId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_item_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemId|null')]
@@ -329,7 +329,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListItemVariantId $listItemVariantId
+     * @var ?\Unified\Unified_to\Models\Shared\ListItemVariantId $listItemVariantId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_item_variant_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListItemVariantId|null')]
@@ -338,7 +338,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListJobId $listJobId
+     * @var ?\Unified\Unified_to\Models\Shared\ListJobId $listJobId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_job_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListJobId|null')]
@@ -347,7 +347,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListLabelId $listLabelId
+     * @var ?\Unified\Unified_to\Models\Shared\ListLabelId $listLabelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_label_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLabelId|null')]
@@ -356,7 +356,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListLeadId $listLeadId
+     * @var ?\Unified\Unified_to\Models\Shared\ListLeadId $listLeadId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_lead_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLeadId|null')]
@@ -365,7 +365,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListLimit $listLimit
+     * @var ?\Unified\Unified_to\Models\Shared\ListLimit $listLimit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_limit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLimit|null')]
@@ -374,7 +374,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListLinkId $listLinkId
+     * @var ?\Unified\Unified_to\Models\Shared\ListLinkId $listLinkId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_link_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLinkId|null')]
@@ -383,7 +383,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListListId $listListId
+     * @var ?\Unified\Unified_to\Models\Shared\ListListId $listListId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_list_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId|null')]
@@ -392,7 +392,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListLocationId $listLocationId
+     * @var ?\Unified\Unified_to\Models\Shared\ListLocationId $listLocationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_location_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListLocationId|null')]
@@ -401,7 +401,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListMemberId $listMemberId
+     * @var ?\Unified\Unified_to\Models\Shared\ListMemberId $listMemberId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_member_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListMemberId|null')]
@@ -410,7 +410,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListOffset $listOffset
+     * @var ?\Unified\Unified_to\Models\Shared\ListOffset $listOffset
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_offset')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOffset|null')]
@@ -419,7 +419,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListOrder $listOrder
+     * @var ?\Unified\Unified_to\Models\Shared\ListOrder $listOrder
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_order')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrder|null')]
@@ -428,7 +428,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListOrderId $listOrderId
+     * @var ?\Unified\Unified_to\Models\Shared\ListOrderId $listOrderId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_order_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrderId|null')]
@@ -437,7 +437,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListOrgId $listOrgId
+     * @var ?\Unified\Unified_to\Models\Shared\ListOrgId $listOrgId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_org_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListOrgId|null')]
@@ -446,7 +446,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListPackageId $listPackageId
+     * @var ?\Unified\Unified_to\Models\Shared\ListPackageId $listPackageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_package_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListPackageId|null')]
@@ -455,7 +455,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListPageId $listPageId
+     * @var ?\Unified\Unified_to\Models\Shared\ListPageId $listPageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_page_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListPageId|null')]
@@ -464,7 +464,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListParentId $listParentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListParentId $listParentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_parent_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListParentId|null')]
@@ -473,7 +473,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListPaymentId $listPaymentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListPaymentId $listPaymentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_payment_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListPaymentId|null')]
@@ -482,7 +482,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListPayslipId $listPayslipId
+     * @var ?\Unified\Unified_to\Models\Shared\ListPayslipId $listPayslipId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_payslip_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListPayslipId|null')]
@@ -491,7 +491,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListPipelineId $listPipelineId
+     * @var ?\Unified\Unified_to\Models\Shared\ListPipelineId $listPipelineId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_pipeline_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListPipelineId|null')]
@@ -500,7 +500,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListProjectId $listProjectId
+     * @var ?\Unified\Unified_to\Models\Shared\ListProjectId $listProjectId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_project_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListProjectId|null')]
@@ -509,7 +509,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListQuery $listQuery
+     * @var ?\Unified\Unified_to\Models\Shared\ListQuery $listQuery
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_query')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListQuery|null')]
@@ -518,7 +518,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListRawFields $listRawFields
+     * @var ?\Unified\Unified_to\Models\Shared\ListRawFields $listRawFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_raw_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListRawFields|null')]
@@ -527,7 +527,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListRepoId $listRepoId
+     * @var ?\Unified\Unified_to\Models\Shared\ListRepoId $listRepoId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_repo_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListRepoId|null')]
@@ -536,7 +536,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListRootId $listRootId
+     * @var ?\Unified\Unified_to\Models\Shared\ListRootId $listRootId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_root_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListRootId|null')]
@@ -545,7 +545,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSaleschannelId $listSaleschannelId
+     * @var ?\Unified\Unified_to\Models\Shared\ListSaleschannelId $listSaleschannelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_saleschannel_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSaleschannelId|null')]
@@ -554,7 +554,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListShipmentId $listShipmentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListShipmentId $listShipmentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_shipment_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListShipmentId|null')]
@@ -563,7 +563,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSize $listSize
+     * @var ?\Unified\Unified_to\Models\Shared\ListSize $listSize
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_size')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSize|null')]
@@ -572,7 +572,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSortByCreatedAt $listSortByCreatedAt
+     * @var ?\Unified\Unified_to\Models\Shared\ListSortByCreatedAt $listSortByCreatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_created_at')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByCreatedAt|null')]
@@ -581,7 +581,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSortByName $listSortByName
+     * @var ?\Unified\Unified_to\Models\Shared\ListSortByName $listSortByName
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_name')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByName|null')]
@@ -590,7 +590,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSortByUpdatedAt $listSortByUpdatedAt
+     * @var ?\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt $listSortByUpdatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_sort_by_updated_at')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt|null')]
@@ -599,7 +599,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListSpaceId $listSpaceId
+     * @var ?\Unified\Unified_to\Models\Shared\ListSpaceId $listSpaceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_space_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListSpaceId|null')]
@@ -608,7 +608,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListStartGte $listStartGte
+     * @var ?\Unified\Unified_to\Models\Shared\ListStartGte $listStartGte
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_start_gte')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListStartGte|null')]
@@ -617,7 +617,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListStatus $listStatus
+     * @var ?\Unified\Unified_to\Models\Shared\ListStatus $listStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListStatus|null')]
@@ -626,7 +626,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListStudentId $listStudentId
+     * @var ?\Unified\Unified_to\Models\Shared\ListStudentId $listStudentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_student_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListStudentId|null')]
@@ -635,7 +635,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListTaskId $listTaskId
+     * @var ?\Unified\Unified_to\Models\Shared\ListTaskId $listTaskId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_task_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTaskId|null')]
@@ -644,7 +644,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListTeacherId $listTeacherId
+     * @var ?\Unified\Unified_to\Models\Shared\ListTeacherId $listTeacherId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_teacher_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTeacherId|null')]
@@ -653,7 +653,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListTicketId $listTicketId
+     * @var ?\Unified\Unified_to\Models\Shared\ListTicketId $listTicketId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_ticket_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListTicketId|null')]
@@ -662,7 +662,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListType $listType
+     * @var ?\Unified\Unified_to\Models\Shared\ListType $listType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType|null')]
@@ -671,7 +671,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListUpdatedGte $listUpdatedGte
+     * @var ?\Unified\Unified_to\Models\Shared\ListUpdatedGte $listUpdatedGte
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_updated_gte')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUpdatedGte|null')]
@@ -680,7 +680,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListUserId $listUserId
+     * @var ?\Unified\Unified_to\Models\Shared\ListUserId $listUserId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_user_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserId|null')]
@@ -689,7 +689,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?ListUserMentionedId $listUserMentionedId
+     * @var ?\Unified\Unified_to\Models\Shared\ListUserMentionedId $listUserMentionedId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_user_mentioned_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUserMentionedId|null')]
@@ -708,7 +708,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookCalendarId $nativeWebhookCalendarId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookCalendarId $nativeWebhookCalendarId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_calendar_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookCalendarId|null')]
@@ -717,7 +717,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookCarrierId $nativeWebhookCarrierId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookCarrierId $nativeWebhookCarrierId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_carrier_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookCarrierId|null')]
@@ -726,7 +726,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookChannelId $nativeWebhookChannelId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookChannelId $nativeWebhookChannelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_channel_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookChannelId|null')]
@@ -735,7 +735,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookCompanyId $nativeWebhookCompanyId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookCompanyId $nativeWebhookCompanyId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_company_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookCompanyId|null')]
@@ -744,7 +744,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookCourseId $nativeWebhookCourseId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookCourseId $nativeWebhookCourseId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_course_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookCourseId|null')]
@@ -753,7 +753,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookEventId $nativeWebhookEventId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookEventId $nativeWebhookEventId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_event_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookEventId|null')]
@@ -762,7 +762,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookFormId $nativeWebhookFormId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookFormId $nativeWebhookFormId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_form_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookFormId|null')]
@@ -771,7 +771,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookIoId $nativeWebhookIoId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookIoId $nativeWebhookIoId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_io_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookIoId|null')]
@@ -780,7 +780,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookLabelId $nativeWebhookLabelId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookLabelId $nativeWebhookLabelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_label_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookLabelId|null')]
@@ -789,7 +789,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookMemberId $nativeWebhookMemberId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookMemberId $nativeWebhookMemberId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_member_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookMemberId|null')]
@@ -798,7 +798,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookOrderId $nativeWebhookOrderId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookOrderId $nativeWebhookOrderId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_order_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookOrderId|null')]
@@ -807,7 +807,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookParentId $nativeWebhookParentId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookParentId $nativeWebhookParentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_parent_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookParentId|null')]
@@ -816,7 +816,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookProjectId $nativeWebhookProjectId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookProjectId $nativeWebhookProjectId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_project_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookProjectId|null')]
@@ -825,7 +825,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookShipmentId $nativeWebhookShipmentId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookShipmentId $nativeWebhookShipmentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_shipment_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookShipmentId|null')]
@@ -834,7 +834,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookStudentId $nativeWebhookStudentId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookStudentId $nativeWebhookStudentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_student_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookStudentId|null')]
@@ -843,7 +843,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookTaskId $nativeWebhookTaskId
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookTaskId $nativeWebhookTaskId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_task_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookTaskId|null')]
@@ -852,7 +852,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?NativeWebhookType $nativeWebhookType
+     * @var ?\Unified\Unified_to\Models\Shared\NativeWebhookType $nativeWebhookType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('native_webhook_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NativeWebhookType|null')]
@@ -881,7 +881,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?SearchDomain $searchDomain
+     * @var ?\Unified\Unified_to\Models\Shared\SearchDomain $searchDomain
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('search_domain')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchDomain|null')]
@@ -890,7 +890,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?SearchEmail $searchEmail
+     * @var ?\Unified\Unified_to\Models\Shared\SearchEmail $searchEmail
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('search_email')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchEmail|null')]
@@ -899,7 +899,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?SearchLinkedinurl $searchLinkedinurl
+     * @var ?\Unified\Unified_to\Models\Shared\SearchLinkedinurl $searchLinkedinurl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('search_linkedinurl')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchLinkedinurl|null')]
@@ -908,7 +908,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?SearchName $searchName
+     * @var ?\Unified\Unified_to\Models\Shared\SearchName $searchName
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('search_name')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchName|null')]
@@ -917,7 +917,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?SearchTwitter $searchTwitter
+     * @var ?\Unified\Unified_to\Models\Shared\SearchTwitter $searchTwitter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('search_twitter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SearchTwitter|null')]
@@ -936,7 +936,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookAdId $virtualWebhookAdId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookAdId $virtualWebhookAdId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_ad_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookAdId|null')]
@@ -945,7 +945,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookApplicationId $virtualWebhookApplicationId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookApplicationId $virtualWebhookApplicationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_application_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookApplicationId|null')]
@@ -954,7 +954,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookBenefitId $virtualWebhookBenefitId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookBenefitId $virtualWebhookBenefitId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_benefit_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookBenefitId|null')]
@@ -963,7 +963,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookBillId $virtualWebhookBillId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookBillId $virtualWebhookBillId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_bill_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookBillId|null')]
@@ -972,7 +972,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookBranchId $virtualWebhookBranchId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookBranchId $virtualWebhookBranchId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_branch_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookBranchId|null')]
@@ -981,7 +981,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCalendarId $virtualWebhookCalendarId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCalendarId $virtualWebhookCalendarId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_calendar_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCalendarId|null')]
@@ -990,7 +990,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCallId $virtualWebhookCallId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCallId $virtualWebhookCallId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_call_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCallId|null')]
@@ -999,7 +999,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCampaignId $virtualWebhookCampaignId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCampaignId $virtualWebhookCampaignId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_campaign_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCampaignId|null')]
@@ -1008,7 +1008,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCandidateId $virtualWebhookCandidateId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCandidateId $virtualWebhookCandidateId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_candidate_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCandidateId|null')]
@@ -1017,7 +1017,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCarrierId $virtualWebhookCarrierId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCarrierId $virtualWebhookCarrierId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_carrier_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCarrierId|null')]
@@ -1026,7 +1026,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookChannelId $virtualWebhookChannelId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookChannelId $virtualWebhookChannelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_channel_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookChannelId|null')]
@@ -1035,7 +1035,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCollectionId $virtualWebhookCollectionId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCollectionId $virtualWebhookCollectionId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_collection_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCollectionId|null')]
@@ -1044,7 +1044,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCompanyId $virtualWebhookCompanyId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCompanyId $virtualWebhookCompanyId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_company_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCompanyId|null')]
@@ -1053,7 +1053,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookContactId $virtualWebhookContactId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookContactId $virtualWebhookContactId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_contact_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookContactId|null')]
@@ -1062,7 +1062,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCourseId $virtualWebhookCourseId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCourseId $virtualWebhookCourseId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_course_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCourseId|null')]
@@ -1071,7 +1071,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookCustomerId $virtualWebhookCustomerId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookCustomerId $virtualWebhookCustomerId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_customer_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookCustomerId|null')]
@@ -1080,7 +1080,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookDealId $virtualWebhookDealId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookDealId $virtualWebhookDealId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_deal_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookDealId|null')]
@@ -1089,7 +1089,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookEndLt $virtualWebhookEndLt
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookEndLt $virtualWebhookEndLt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_end_lt')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookEndLt|null')]
@@ -1098,7 +1098,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookEventId $virtualWebhookEventId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookEventId $virtualWebhookEventId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_event_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookEventId|null')]
@@ -1107,7 +1107,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookExpand $virtualWebhookExpand
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookExpand $virtualWebhookExpand
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_expand')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookExpand|null')]
@@ -1116,7 +1116,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookFields $virtualWebhookFields
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookFields $virtualWebhookFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookFields|null')]
@@ -1125,7 +1125,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookFormId $virtualWebhookFormId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookFormId $virtualWebhookFormId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_form_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookFormId|null')]
@@ -1134,7 +1134,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookGroupId $virtualWebhookGroupId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookGroupId $virtualWebhookGroupId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_group_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookGroupId|null')]
@@ -1143,7 +1143,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookInvoiceId $virtualWebhookInvoiceId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookInvoiceId $virtualWebhookInvoiceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_invoice_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookInvoiceId|null')]
@@ -1152,7 +1152,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookIoId $virtualWebhookIoId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookIoId $virtualWebhookIoId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_io_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookIoId|null')]
@@ -1161,7 +1161,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookItemId $virtualWebhookItemId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookItemId $virtualWebhookItemId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_item_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookItemId|null')]
@@ -1170,7 +1170,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookItemVariantId $virtualWebhookItemVariantId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_item_variant_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookItemVariantId|null')]
@@ -1179,7 +1179,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookJobId $virtualWebhookJobId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookJobId $virtualWebhookJobId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_job_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookJobId|null')]
@@ -1188,7 +1188,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookLabelId $virtualWebhookLabelId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookLabelId $virtualWebhookLabelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_label_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookLabelId|null')]
@@ -1197,7 +1197,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookLeadId $virtualWebhookLeadId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookLeadId $virtualWebhookLeadId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_lead_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookLeadId|null')]
@@ -1206,7 +1206,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookLimit $virtualWebhookLimit
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookLimit $virtualWebhookLimit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_limit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookLimit|null')]
@@ -1215,7 +1215,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookLinkId $virtualWebhookLinkId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookLinkId $virtualWebhookLinkId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_link_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookLinkId|null')]
@@ -1224,7 +1224,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookListId $virtualWebhookListId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookListId $virtualWebhookListId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_list_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookListId|null')]
@@ -1233,7 +1233,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookLocationId $virtualWebhookLocationId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookLocationId $virtualWebhookLocationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_location_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookLocationId|null')]
@@ -1242,7 +1242,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookMemberId $virtualWebhookMemberId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookMemberId $virtualWebhookMemberId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_member_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookMemberId|null')]
@@ -1251,7 +1251,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookOrderId $virtualWebhookOrderId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookOrderId $virtualWebhookOrderId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_order_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookOrderId|null')]
@@ -1260,7 +1260,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookOrgId $virtualWebhookOrgId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookOrgId $virtualWebhookOrgId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_org_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookOrgId|null')]
@@ -1269,7 +1269,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookPageId $virtualWebhookPageId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookPageId $virtualWebhookPageId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_page_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookPageId|null')]
@@ -1278,7 +1278,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookParentId $virtualWebhookParentId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookParentId $virtualWebhookParentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_parent_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookParentId|null')]
@@ -1287,7 +1287,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookPaymentId $virtualWebhookPaymentId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookPaymentId $virtualWebhookPaymentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_payment_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookPaymentId|null')]
@@ -1296,7 +1296,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookPipelineId $virtualWebhookPipelineId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookPipelineId $virtualWebhookPipelineId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_pipeline_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookPipelineId|null')]
@@ -1305,7 +1305,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookProjectId $virtualWebhookProjectId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookProjectId $virtualWebhookProjectId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_project_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookProjectId|null')]
@@ -1314,7 +1314,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookRepoId $virtualWebhookRepoId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookRepoId $virtualWebhookRepoId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_repo_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookRepoId|null')]
@@ -1323,7 +1323,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_saleschannel_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookSaleschannelId|null')]
@@ -1332,7 +1332,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookShipmentId $virtualWebhookShipmentId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookShipmentId $virtualWebhookShipmentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_shipment_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookShipmentId|null')]
@@ -1341,7 +1341,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookSpaceId $virtualWebhookSpaceId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookSpaceId $virtualWebhookSpaceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_space_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookSpaceId|null')]
@@ -1350,7 +1350,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookStartGte $virtualWebhookStartGte
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookStartGte $virtualWebhookStartGte
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_start_gte')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookStartGte|null')]
@@ -1359,7 +1359,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookStatus $virtualWebhookStatus
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookStatus $virtualWebhookStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookStatus|null')]
@@ -1368,7 +1368,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookStudentId $virtualWebhookStudentId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookStudentId $virtualWebhookStudentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_student_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookStudentId|null')]
@@ -1377,7 +1377,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookTaskId $virtualWebhookTaskId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookTaskId $virtualWebhookTaskId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_task_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookTaskId|null')]
@@ -1386,7 +1386,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookTicketId $virtualWebhookTicketId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookTicketId $virtualWebhookTicketId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_ticket_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookTicketId|null')]
@@ -1395,7 +1395,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookType $virtualWebhookType
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookType $virtualWebhookType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookType|null')]
@@ -1404,7 +1404,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_updated_gte')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookUpdatedGte|null')]
@@ -1413,7 +1413,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookUserId $virtualWebhookUserId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookUserId $virtualWebhookUserId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_user_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookUserId|null')]
@@ -1422,7 +1422,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_user_mentioned_id')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookUserMentionedId|null')]
@@ -1431,7 +1431,7 @@ class IntegrationSupport
 
     /**
      *
-     * @var ?PropertyIntegrationSupportWebhookEvents $webhookEvents
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents $webhookEvents
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_events')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents|null')]
@@ -1439,164 +1439,164 @@ class IntegrationSupport
     public ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null;
 
     /**
-     * @param  ?FromWebhook  $fromWebhook
+     * @param  ?\Unified\Unified_to\Models\Shared\FromWebhook  $fromWebhook
      * @param  ?array<string, string>  $inboundFields
-     * @param  ?ListAccountId  $listAccountId
-     * @param  ?ListAdId  $listAdId
-     * @param  ?ListApplicationId  $listApplicationId
-     * @param  ?ListBenefitId  $listBenefitId
-     * @param  ?ListBillId  $listBillId
-     * @param  ?ListBranchId  $listBranchId
-     * @param  ?ListCalendarId  $listCalendarId
-     * @param  ?ListCallId  $listCallId
-     * @param  ?ListCampaignId  $listCampaignId
-     * @param  ?ListCandidateId  $listCandidateId
-     * @param  ?ListCarrierId  $listCarrierId
-     * @param  ?ListCategoryId  $listCategoryId
-     * @param  ?ListChannelId  $listChannelId
-     * @param  ?ListClassId  $listClassId
-     * @param  ?ListCollectionId  $listCollectionId
-     * @param  ?ListCompanyId  $listCompanyId
-     * @param  ?ListContactId  $listContactId
-     * @param  ?ListContentId  $listContentId
-     * @param  ?ListCourseId  $listCourseId
-     * @param  ?ListCustomerId  $listCustomerId
-     * @param  ?ListDealId  $listDealId
-     * @param  ?ListDocumentId  $listDocumentId
-     * @param  ?ListEndLt  $listEndLt
-     * @param  ?ListEventId  $listEventId
-     * @param  ?ListExpand  $listExpand
-     * @param  ?ListFormId  $listFormId
-     * @param  ?ListFulltext  $listFulltext
-     * @param  ?ListGroupId  $listGroupId
-     * @param  ?ListInstructorId  $listInstructorId
-     * @param  ?ListInterviewId  $listInterviewId
-     * @param  ?ListInvoiceId  $listInvoiceId
-     * @param  ?ListIoId  $listIoId
-     * @param  ?ListItemId  $listItemId
-     * @param  ?ListItemVariantId  $listItemVariantId
-     * @param  ?ListJobId  $listJobId
-     * @param  ?ListLabelId  $listLabelId
-     * @param  ?ListLeadId  $listLeadId
-     * @param  ?ListLimit  $listLimit
-     * @param  ?ListLinkId  $listLinkId
-     * @param  ?ListListId  $listListId
-     * @param  ?ListLocationId  $listLocationId
-     * @param  ?ListMemberId  $listMemberId
-     * @param  ?ListOffset  $listOffset
-     * @param  ?ListOrder  $listOrder
-     * @param  ?ListOrderId  $listOrderId
-     * @param  ?ListOrgId  $listOrgId
-     * @param  ?ListPackageId  $listPackageId
-     * @param  ?ListPageId  $listPageId
-     * @param  ?ListParentId  $listParentId
-     * @param  ?ListPaymentId  $listPaymentId
-     * @param  ?ListPayslipId  $listPayslipId
-     * @param  ?ListPipelineId  $listPipelineId
-     * @param  ?ListProjectId  $listProjectId
-     * @param  ?ListQuery  $listQuery
-     * @param  ?ListRawFields  $listRawFields
-     * @param  ?ListRepoId  $listRepoId
-     * @param  ?ListRootId  $listRootId
-     * @param  ?ListSaleschannelId  $listSaleschannelId
-     * @param  ?ListShipmentId  $listShipmentId
-     * @param  ?ListSize  $listSize
-     * @param  ?ListSortByCreatedAt  $listSortByCreatedAt
-     * @param  ?ListSortByName  $listSortByName
-     * @param  ?ListSortByUpdatedAt  $listSortByUpdatedAt
-     * @param  ?ListSpaceId  $listSpaceId
-     * @param  ?ListStartGte  $listStartGte
-     * @param  ?ListStatus  $listStatus
-     * @param  ?ListStudentId  $listStudentId
-     * @param  ?ListTaskId  $listTaskId
-     * @param  ?ListTeacherId  $listTeacherId
-     * @param  ?ListTicketId  $listTicketId
-     * @param  ?ListType  $listType
-     * @param  ?ListUpdatedGte  $listUpdatedGte
-     * @param  ?ListUserId  $listUserId
-     * @param  ?ListUserMentionedId  $listUserMentionedId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListAccountId  $listAccountId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListAdId  $listAdId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListApplicationId  $listApplicationId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListBenefitId  $listBenefitId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListBillId  $listBillId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListBranchId  $listBranchId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCalendarId  $listCalendarId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCallId  $listCallId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCampaignId  $listCampaignId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCandidateId  $listCandidateId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCarrierId  $listCarrierId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCategoryId  $listCategoryId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListChannelId  $listChannelId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListClassId  $listClassId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCollectionId  $listCollectionId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCompanyId  $listCompanyId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListContactId  $listContactId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListContentId  $listContentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCourseId  $listCourseId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListCustomerId  $listCustomerId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListDealId  $listDealId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListDocumentId  $listDocumentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListEndLt  $listEndLt
+     * @param  ?\Unified\Unified_to\Models\Shared\ListEventId  $listEventId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListExpand  $listExpand
+     * @param  ?\Unified\Unified_to\Models\Shared\ListFormId  $listFormId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListFulltext  $listFulltext
+     * @param  ?\Unified\Unified_to\Models\Shared\ListGroupId  $listGroupId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListInstructorId  $listInstructorId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListInterviewId  $listInterviewId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListInvoiceId  $listInvoiceId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListIoId  $listIoId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListItemId  $listItemId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListItemVariantId  $listItemVariantId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListJobId  $listJobId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListLabelId  $listLabelId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListLeadId  $listLeadId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListLimit  $listLimit
+     * @param  ?\Unified\Unified_to\Models\Shared\ListLinkId  $listLinkId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListListId  $listListId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListLocationId  $listLocationId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListMemberId  $listMemberId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListOffset  $listOffset
+     * @param  ?\Unified\Unified_to\Models\Shared\ListOrder  $listOrder
+     * @param  ?\Unified\Unified_to\Models\Shared\ListOrderId  $listOrderId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListOrgId  $listOrgId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListPackageId  $listPackageId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListPageId  $listPageId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListParentId  $listParentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListPaymentId  $listPaymentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListPayslipId  $listPayslipId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListPipelineId  $listPipelineId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListProjectId  $listProjectId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListQuery  $listQuery
+     * @param  ?\Unified\Unified_to\Models\Shared\ListRawFields  $listRawFields
+     * @param  ?\Unified\Unified_to\Models\Shared\ListRepoId  $listRepoId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListRootId  $listRootId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSaleschannelId  $listSaleschannelId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListShipmentId  $listShipmentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSize  $listSize
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSortByCreatedAt  $listSortByCreatedAt
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSortByName  $listSortByName
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSortByUpdatedAt  $listSortByUpdatedAt
+     * @param  ?\Unified\Unified_to\Models\Shared\ListSpaceId  $listSpaceId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListStartGte  $listStartGte
+     * @param  ?\Unified\Unified_to\Models\Shared\ListStatus  $listStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\ListStudentId  $listStudentId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListTaskId  $listTaskId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListTeacherId  $listTeacherId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListTicketId  $listTicketId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListType  $listType
+     * @param  ?\Unified\Unified_to\Models\Shared\ListUpdatedGte  $listUpdatedGte
+     * @param  ?\Unified\Unified_to\Models\Shared\ListUserId  $listUserId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListUserMentionedId  $listUserMentionedId
      * @param  ?array<string, bool>  $methods
-     * @param  ?NativeWebhookCalendarId  $nativeWebhookCalendarId
-     * @param  ?NativeWebhookCarrierId  $nativeWebhookCarrierId
-     * @param  ?NativeWebhookChannelId  $nativeWebhookChannelId
-     * @param  ?NativeWebhookCompanyId  $nativeWebhookCompanyId
-     * @param  ?NativeWebhookCourseId  $nativeWebhookCourseId
-     * @param  ?NativeWebhookEventId  $nativeWebhookEventId
-     * @param  ?NativeWebhookFormId  $nativeWebhookFormId
-     * @param  ?NativeWebhookIoId  $nativeWebhookIoId
-     * @param  ?NativeWebhookLabelId  $nativeWebhookLabelId
-     * @param  ?NativeWebhookMemberId  $nativeWebhookMemberId
-     * @param  ?NativeWebhookOrderId  $nativeWebhookOrderId
-     * @param  ?NativeWebhookParentId  $nativeWebhookParentId
-     * @param  ?NativeWebhookProjectId  $nativeWebhookProjectId
-     * @param  ?NativeWebhookShipmentId  $nativeWebhookShipmentId
-     * @param  ?NativeWebhookStudentId  $nativeWebhookStudentId
-     * @param  ?NativeWebhookTaskId  $nativeWebhookTaskId
-     * @param  ?NativeWebhookType  $nativeWebhookType
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookCalendarId  $nativeWebhookCalendarId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookCarrierId  $nativeWebhookCarrierId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookChannelId  $nativeWebhookChannelId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookCompanyId  $nativeWebhookCompanyId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookCourseId  $nativeWebhookCourseId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookEventId  $nativeWebhookEventId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookFormId  $nativeWebhookFormId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookIoId  $nativeWebhookIoId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookLabelId  $nativeWebhookLabelId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookMemberId  $nativeWebhookMemberId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookOrderId  $nativeWebhookOrderId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookParentId  $nativeWebhookParentId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookProjectId  $nativeWebhookProjectId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookShipmentId  $nativeWebhookShipmentId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookStudentId  $nativeWebhookStudentId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookTaskId  $nativeWebhookTaskId
+     * @param  ?\Unified\Unified_to\Models\Shared\NativeWebhookType  $nativeWebhookType
      * @param  ?array<string, string>  $outboundFields
      * @param  ?array<string>  $rawObjects
-     * @param  ?SearchDomain  $searchDomain
-     * @param  ?SearchEmail  $searchEmail
-     * @param  ?SearchLinkedinurl  $searchLinkedinurl
-     * @param  ?SearchName  $searchName
-     * @param  ?SearchTwitter  $searchTwitter
+     * @param  ?\Unified\Unified_to\Models\Shared\SearchDomain  $searchDomain
+     * @param  ?\Unified\Unified_to\Models\Shared\SearchEmail  $searchEmail
+     * @param  ?\Unified\Unified_to\Models\Shared\SearchLinkedinurl  $searchLinkedinurl
+     * @param  ?\Unified\Unified_to\Models\Shared\SearchName  $searchName
+     * @param  ?\Unified\Unified_to\Models\Shared\SearchTwitter  $searchTwitter
      * @param  ?array<string>  $slowFields
-     * @param  ?VirtualWebhookAdId  $virtualWebhookAdId
-     * @param  ?VirtualWebhookApplicationId  $virtualWebhookApplicationId
-     * @param  ?VirtualWebhookBenefitId  $virtualWebhookBenefitId
-     * @param  ?VirtualWebhookBillId  $virtualWebhookBillId
-     * @param  ?VirtualWebhookBranchId  $virtualWebhookBranchId
-     * @param  ?VirtualWebhookCalendarId  $virtualWebhookCalendarId
-     * @param  ?VirtualWebhookCallId  $virtualWebhookCallId
-     * @param  ?VirtualWebhookCampaignId  $virtualWebhookCampaignId
-     * @param  ?VirtualWebhookCandidateId  $virtualWebhookCandidateId
-     * @param  ?VirtualWebhookCarrierId  $virtualWebhookCarrierId
-     * @param  ?VirtualWebhookChannelId  $virtualWebhookChannelId
-     * @param  ?VirtualWebhookCollectionId  $virtualWebhookCollectionId
-     * @param  ?VirtualWebhookCompanyId  $virtualWebhookCompanyId
-     * @param  ?VirtualWebhookContactId  $virtualWebhookContactId
-     * @param  ?VirtualWebhookCourseId  $virtualWebhookCourseId
-     * @param  ?VirtualWebhookCustomerId  $virtualWebhookCustomerId
-     * @param  ?VirtualWebhookDealId  $virtualWebhookDealId
-     * @param  ?VirtualWebhookEndLt  $virtualWebhookEndLt
-     * @param  ?VirtualWebhookEventId  $virtualWebhookEventId
-     * @param  ?VirtualWebhookExpand  $virtualWebhookExpand
-     * @param  ?VirtualWebhookFields  $virtualWebhookFields
-     * @param  ?VirtualWebhookFormId  $virtualWebhookFormId
-     * @param  ?VirtualWebhookGroupId  $virtualWebhookGroupId
-     * @param  ?VirtualWebhookInvoiceId  $virtualWebhookInvoiceId
-     * @param  ?VirtualWebhookIoId  $virtualWebhookIoId
-     * @param  ?VirtualWebhookItemId  $virtualWebhookItemId
-     * @param  ?VirtualWebhookItemVariantId  $virtualWebhookItemVariantId
-     * @param  ?VirtualWebhookJobId  $virtualWebhookJobId
-     * @param  ?VirtualWebhookLabelId  $virtualWebhookLabelId
-     * @param  ?VirtualWebhookLeadId  $virtualWebhookLeadId
-     * @param  ?VirtualWebhookLimit  $virtualWebhookLimit
-     * @param  ?VirtualWebhookLinkId  $virtualWebhookLinkId
-     * @param  ?VirtualWebhookListId  $virtualWebhookListId
-     * @param  ?VirtualWebhookLocationId  $virtualWebhookLocationId
-     * @param  ?VirtualWebhookMemberId  $virtualWebhookMemberId
-     * @param  ?VirtualWebhookOrderId  $virtualWebhookOrderId
-     * @param  ?VirtualWebhookOrgId  $virtualWebhookOrgId
-     * @param  ?VirtualWebhookPageId  $virtualWebhookPageId
-     * @param  ?VirtualWebhookParentId  $virtualWebhookParentId
-     * @param  ?VirtualWebhookPaymentId  $virtualWebhookPaymentId
-     * @param  ?VirtualWebhookPipelineId  $virtualWebhookPipelineId
-     * @param  ?VirtualWebhookProjectId  $virtualWebhookProjectId
-     * @param  ?VirtualWebhookRepoId  $virtualWebhookRepoId
-     * @param  ?VirtualWebhookSaleschannelId  $virtualWebhookSaleschannelId
-     * @param  ?VirtualWebhookShipmentId  $virtualWebhookShipmentId
-     * @param  ?VirtualWebhookSpaceId  $virtualWebhookSpaceId
-     * @param  ?VirtualWebhookStartGte  $virtualWebhookStartGte
-     * @param  ?VirtualWebhookStatus  $virtualWebhookStatus
-     * @param  ?VirtualWebhookStudentId  $virtualWebhookStudentId
-     * @param  ?VirtualWebhookTaskId  $virtualWebhookTaskId
-     * @param  ?VirtualWebhookTicketId  $virtualWebhookTicketId
-     * @param  ?VirtualWebhookType  $virtualWebhookType
-     * @param  ?VirtualWebhookUpdatedGte  $virtualWebhookUpdatedGte
-     * @param  ?VirtualWebhookUserId  $virtualWebhookUserId
-     * @param  ?VirtualWebhookUserMentionedId  $virtualWebhookUserMentionedId
-     * @param  ?PropertyIntegrationSupportWebhookEvents  $webhookEvents
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookAdId  $virtualWebhookAdId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookApplicationId  $virtualWebhookApplicationId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookBenefitId  $virtualWebhookBenefitId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookBillId  $virtualWebhookBillId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookBranchId  $virtualWebhookBranchId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCalendarId  $virtualWebhookCalendarId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCallId  $virtualWebhookCallId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCampaignId  $virtualWebhookCampaignId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCandidateId  $virtualWebhookCandidateId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCarrierId  $virtualWebhookCarrierId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookChannelId  $virtualWebhookChannelId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCollectionId  $virtualWebhookCollectionId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCompanyId  $virtualWebhookCompanyId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookContactId  $virtualWebhookContactId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCourseId  $virtualWebhookCourseId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookCustomerId  $virtualWebhookCustomerId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookDealId  $virtualWebhookDealId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookEndLt  $virtualWebhookEndLt
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookEventId  $virtualWebhookEventId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookExpand  $virtualWebhookExpand
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookFields  $virtualWebhookFields
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookFormId  $virtualWebhookFormId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookGroupId  $virtualWebhookGroupId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookInvoiceId  $virtualWebhookInvoiceId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookIoId  $virtualWebhookIoId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookItemId  $virtualWebhookItemId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookItemVariantId  $virtualWebhookItemVariantId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookJobId  $virtualWebhookJobId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLabelId  $virtualWebhookLabelId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLeadId  $virtualWebhookLeadId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLimit  $virtualWebhookLimit
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLinkId  $virtualWebhookLinkId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookListId  $virtualWebhookListId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLocationId  $virtualWebhookLocationId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookMemberId  $virtualWebhookMemberId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookOrderId  $virtualWebhookOrderId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookOrgId  $virtualWebhookOrgId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookPageId  $virtualWebhookPageId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookParentId  $virtualWebhookParentId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookPaymentId  $virtualWebhookPaymentId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookPipelineId  $virtualWebhookPipelineId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookProjectId  $virtualWebhookProjectId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookRepoId  $virtualWebhookRepoId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookSaleschannelId  $virtualWebhookSaleschannelId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookShipmentId  $virtualWebhookShipmentId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookSpaceId  $virtualWebhookSpaceId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookStartGte  $virtualWebhookStartGte
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookStatus  $virtualWebhookStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookStudentId  $virtualWebhookStudentId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookTaskId  $virtualWebhookTaskId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookTicketId  $virtualWebhookTicketId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookType  $virtualWebhookType
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookUpdatedGte  $virtualWebhookUpdatedGte
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookUserId  $virtualWebhookUserId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookUserMentionedId  $virtualWebhookUserMentionedId
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents  $webhookEvents
      * @phpstan-pure
      */
     public function __construct(?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListAdId $listAdId = null, ?ListApplicationId $listApplicationId = null, ?ListBenefitId $listBenefitId = null, ?ListBillId $listBillId = null, ?ListBranchId $listBranchId = null, ?ListCalendarId $listCalendarId = null, ?ListCallId $listCallId = null, ?ListCampaignId $listCampaignId = null, ?ListCandidateId $listCandidateId = null, ?ListCarrierId $listCarrierId = null, ?ListCategoryId $listCategoryId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListContentId $listContentId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListDealId $listDealId = null, ?ListDocumentId $listDocumentId = null, ?ListEndLt $listEndLt = null, ?ListEventId $listEventId = null, ?ListExpand $listExpand = null, ?ListFormId $listFormId = null, ?ListFulltext $listFulltext = null, ?ListGroupId $listGroupId = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListIoId $listIoId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLabelId $listLabelId = null, ?ListLeadId $listLeadId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListMemberId $listMemberId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrderId $listOrderId = null, ?ListOrgId $listOrgId = null, ?ListPackageId $listPackageId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListPaymentId $listPaymentId = null, ?ListPayslipId $listPayslipId = null, ?ListPipelineId $listPipelineId = null, ?ListProjectId $listProjectId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListRepoId $listRepoId = null, ?ListRootId $listRootId = null, ?ListSaleschannelId $listSaleschannelId = null, ?ListShipmentId $listShipmentId = null, ?ListSize $listSize = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStatus $listStatus = null, ?ListStudentId $listStudentId = null, ?ListTaskId $listTaskId = null, ?ListTeacherId $listTeacherId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?ListUserMentionedId $listUserMentionedId = null, ?array $methods = null, ?NativeWebhookCalendarId $nativeWebhookCalendarId = null, ?NativeWebhookCarrierId $nativeWebhookCarrierId = null, ?NativeWebhookChannelId $nativeWebhookChannelId = null, ?NativeWebhookCompanyId $nativeWebhookCompanyId = null, ?NativeWebhookCourseId $nativeWebhookCourseId = null, ?NativeWebhookEventId $nativeWebhookEventId = null, ?NativeWebhookFormId $nativeWebhookFormId = null, ?NativeWebhookIoId $nativeWebhookIoId = null, ?NativeWebhookLabelId $nativeWebhookLabelId = null, ?NativeWebhookMemberId $nativeWebhookMemberId = null, ?NativeWebhookOrderId $nativeWebhookOrderId = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?NativeWebhookShipmentId $nativeWebhookShipmentId = null, ?NativeWebhookStudentId $nativeWebhookStudentId = null, ?NativeWebhookTaskId $nativeWebhookTaskId = null, ?NativeWebhookType $nativeWebhookType = null, ?array $outboundFields = null, ?array $rawObjects = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookAdId $virtualWebhookAdId = null, ?VirtualWebhookApplicationId $virtualWebhookApplicationId = null, ?VirtualWebhookBenefitId $virtualWebhookBenefitId = null, ?VirtualWebhookBillId $virtualWebhookBillId = null, ?VirtualWebhookBranchId $virtualWebhookBranchId = null, ?VirtualWebhookCalendarId $virtualWebhookCalendarId = null, ?VirtualWebhookCallId $virtualWebhookCallId = null, ?VirtualWebhookCampaignId $virtualWebhookCampaignId = null, ?VirtualWebhookCandidateId $virtualWebhookCandidateId = null, ?VirtualWebhookCarrierId $virtualWebhookCarrierId = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCollectionId $virtualWebhookCollectionId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookCourseId $virtualWebhookCourseId = null, ?VirtualWebhookCustomerId $virtualWebhookCustomerId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookEndLt $virtualWebhookEndLt = null, ?VirtualWebhookEventId $virtualWebhookEventId = null, ?VirtualWebhookExpand $virtualWebhookExpand = null, ?VirtualWebhookFields $virtualWebhookFields = null, ?VirtualWebhookFormId $virtualWebhookFormId = null, ?VirtualWebhookGroupId $virtualWebhookGroupId = null, ?VirtualWebhookInvoiceId $virtualWebhookInvoiceId = null, ?VirtualWebhookIoId $virtualWebhookIoId = null, ?VirtualWebhookItemId $virtualWebhookItemId = null, ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLabelId $virtualWebhookLabelId = null, ?VirtualWebhookLeadId $virtualWebhookLeadId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookLinkId $virtualWebhookLinkId = null, ?VirtualWebhookListId $virtualWebhookListId = null, ?VirtualWebhookLocationId $virtualWebhookLocationId = null, ?VirtualWebhookMemberId $virtualWebhookMemberId = null, ?VirtualWebhookOrderId $virtualWebhookOrderId = null, ?VirtualWebhookOrgId $virtualWebhookOrgId = null, ?VirtualWebhookPageId $virtualWebhookPageId = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookPaymentId $virtualWebhookPaymentId = null, ?VirtualWebhookPipelineId $virtualWebhookPipelineId = null, ?VirtualWebhookProjectId $virtualWebhookProjectId = null, ?VirtualWebhookRepoId $virtualWebhookRepoId = null, ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId = null, ?VirtualWebhookShipmentId $virtualWebhookShipmentId = null, ?VirtualWebhookSpaceId $virtualWebhookSpaceId = null, ?VirtualWebhookStartGte $virtualWebhookStartGte = null, ?VirtualWebhookStatus $virtualWebhookStatus = null, ?VirtualWebhookStudentId $virtualWebhookStudentId = null, ?VirtualWebhookTaskId $virtualWebhookTaskId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)

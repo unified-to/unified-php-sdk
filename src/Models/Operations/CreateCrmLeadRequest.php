@@ -14,7 +14,7 @@ class CreateCrmLeadRequest
 {
     /**
      *
-     * @var Shared\CrmLead $crmLead
+     * @var \Unified\Unified_to\Models\Shared\CrmLead $crmLead
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmLead $crmLead;
@@ -30,7 +30,7 @@ class CreateCrmLeadRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmLeadQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmLeadQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCrmLeadRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmLead  $crmLead
+     * @param  \Unified\Unified_to\Models\Shared\CrmLead  $crmLead
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmLeadQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmLeadQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

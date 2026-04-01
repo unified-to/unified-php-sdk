@@ -14,7 +14,7 @@ class CreateMessagingMessageRequest
 {
     /**
      *
-     * @var Shared\MessagingMessage $messagingMessage
+     * @var \Unified\Unified_to\Models\Shared\MessagingMessage $messagingMessage
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MessagingMessage $messagingMessage;
@@ -30,7 +30,7 @@ class CreateMessagingMessageRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateMessagingMessageQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateMessagingMessageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateMessagingMessageRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MessagingMessage  $messagingMessage
+     * @param  \Unified\Unified_to\Models\Shared\MessagingMessage  $messagingMessage
      * @param  string  $connectionId
-     * @param  ?array<CreateMessagingMessageQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateMessagingMessageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

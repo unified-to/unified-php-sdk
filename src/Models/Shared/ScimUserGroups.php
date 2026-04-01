@@ -36,7 +36,7 @@ class ScimUserGroups
 
     /**
      *
-     * @var ?ScimUserGroupsType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimUserGroupsType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimUserGroupsType|null')]
@@ -47,7 +47,7 @@ class ScimUserGroups
      * @param  string  $value
      * @param  ?string  $dollarRef
      * @param  ?string  $display
-     * @param  ?ScimUserGroupsType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimUserGroupsType  $type
      * @phpstan-pure
      */
     public function __construct(string $value, ?string $dollarRef = null, ?string $display = null, ?ScimUserGroupsType $type = null)

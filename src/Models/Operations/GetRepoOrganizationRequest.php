@@ -30,7 +30,7 @@ class GetRepoOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetRepoOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetRepoOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetRepoOrganizationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetRepoOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetRepoOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

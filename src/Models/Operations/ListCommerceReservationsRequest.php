@@ -30,7 +30,7 @@ class ListCommerceReservationsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCommerceReservationsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCommerceReservationsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -122,7 +122,7 @@ class ListCommerceReservationsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLt
-     * @param  ?array<ListCommerceReservationsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceReservationsQueryParamFields>  $fields
      * @param  ?string  $itemId
      * @param  ?float  $limit
      * @param  ?string  $locationId

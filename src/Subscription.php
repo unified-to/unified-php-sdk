@@ -47,8 +47,8 @@ class Subscription
     /**
      * Create a subscription
      *
-     * @param  Operations\CreatePaymentSubscriptionRequest  $request
-     * @return Operations\CreatePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentSubscription(Operations\CreatePaymentSubscriptionRequest $request, ?Options $options = null): Operations\CreatePaymentSubscriptionResponse
@@ -114,8 +114,8 @@ class Subscription
     /**
      * Retrieve a subscription
      *
-     * @param  Operations\GetPaymentSubscriptionRequest  $request
-     * @return Operations\GetPaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentSubscription(Operations\GetPaymentSubscriptionRequest $request, ?Options $options = null): Operations\GetPaymentSubscriptionResponse
@@ -176,8 +176,8 @@ class Subscription
     /**
      * List all subscriptions
      *
-     * @param  Operations\ListPaymentSubscriptionsRequest  $request
-     * @return Operations\ListPaymentSubscriptionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentSubscriptions(Operations\ListPaymentSubscriptionsRequest $request, ?Options $options = null): Operations\ListPaymentSubscriptionsResponse
@@ -238,8 +238,8 @@ class Subscription
     /**
      * Update a subscription
      *
-     * @param  Operations\PatchPaymentSubscriptionRequest  $request
-     * @return Operations\PatchPaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentSubscription(Operations\PatchPaymentSubscriptionRequest $request, ?Options $options = null): Operations\PatchPaymentSubscriptionResponse
@@ -305,8 +305,8 @@ class Subscription
     /**
      * Remove a subscription
      *
-     * @param  Operations\RemovePaymentSubscriptionRequest  $request
-     * @return Operations\RemovePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentSubscription(Operations\RemovePaymentSubscriptionRequest $request, ?Options $options = null): Operations\RemovePaymentSubscriptionResponse
@@ -361,8 +361,8 @@ class Subscription
     /**
      * Update a subscription
      *
-     * @param  Operations\UpdatePaymentSubscriptionRequest  $request
-     * @return Operations\UpdatePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentSubscription(Operations\UpdatePaymentSubscriptionRequest $request, ?Options $options = null): Operations\UpdatePaymentSubscriptionResponse

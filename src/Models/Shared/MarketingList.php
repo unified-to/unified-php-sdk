@@ -14,7 +14,7 @@ class MarketingList
 {
     /**
      *
-     * @var ?PropertyMarketingListAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMarketingListAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMarketingListAddress|null')]
@@ -152,7 +152,7 @@ class MarketingList
     public ?string $userId = null;
 
     /**
-     * @param  ?PropertyMarketingListAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMarketingListAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?\DateTime  $endAt

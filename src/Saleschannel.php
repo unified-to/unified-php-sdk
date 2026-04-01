@@ -47,8 +47,8 @@ class Saleschannel
     /**
      * Create a saleschannel
      *
-     * @param  Operations\CreateCommerceSaleschannelRequest  $request
-     * @return Operations\CreateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceSaleschannel(Operations\CreateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\CreateCommerceSaleschannelResponse
@@ -114,8 +114,8 @@ class Saleschannel
     /**
      * Retrieve a saleschannel
      *
-     * @param  Operations\GetCommerceSaleschannelRequest  $request
-     * @return Operations\GetCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceSaleschannel(Operations\GetCommerceSaleschannelRequest $request, ?Options $options = null): Operations\GetCommerceSaleschannelResponse
@@ -176,8 +176,8 @@ class Saleschannel
     /**
      * List all saleschannels
      *
-     * @param  Operations\ListCommerceSaleschannelsRequest  $request
-     * @return Operations\ListCommerceSaleschannelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceSaleschannels(Operations\ListCommerceSaleschannelsRequest $request, ?Options $options = null): Operations\ListCommerceSaleschannelsResponse
@@ -238,8 +238,8 @@ class Saleschannel
     /**
      * Update a saleschannel
      *
-     * @param  Operations\PatchCommerceSaleschannelRequest  $request
-     * @return Operations\PatchCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceSaleschannel(Operations\PatchCommerceSaleschannelRequest $request, ?Options $options = null): Operations\PatchCommerceSaleschannelResponse
@@ -305,8 +305,8 @@ class Saleschannel
     /**
      * Remove a saleschannel
      *
-     * @param  Operations\RemoveCommerceSaleschannelRequest  $request
-     * @return Operations\RemoveCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceSaleschannel(Operations\RemoveCommerceSaleschannelRequest $request, ?Options $options = null): Operations\RemoveCommerceSaleschannelResponse
@@ -361,8 +361,8 @@ class Saleschannel
     /**
      * Update a saleschannel
      *
-     * @param  Operations\UpdateCommerceSaleschannelRequest  $request
-     * @return Operations\UpdateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceSaleschannel(Operations\UpdateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\UpdateCommerceSaleschannelResponse

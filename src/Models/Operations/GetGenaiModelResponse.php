@@ -35,7 +35,7 @@ class GetGenaiModelResponse
     /**
      * Successful
      *
-     * @var ?Shared\GenaiModel $genaiModel
+     * @var ?\Unified\Unified_to\Models\Shared\GenaiModel $genaiModel
      */
     public ?Shared\GenaiModel $genaiModel = null;
 
@@ -43,7 +43,7 @@ class GetGenaiModelResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\GenaiModel  $genaiModel
+     * @param  ?\Unified\Unified_to\Models\Shared\GenaiModel  $genaiModel
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\GenaiModel $genaiModel = null)

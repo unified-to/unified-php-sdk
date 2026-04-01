@@ -43,7 +43,7 @@ bool $value = /* values here */
 
 ```php
 /**
-* @var array<Shared\TaskMetadataSchemas1|string|float|bool>
+* @var array<\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|float|bool>
 */
 array $value = /* values here */
 ```

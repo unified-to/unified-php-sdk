@@ -35,7 +35,7 @@ class PatchAdsInsertionorderResponse
     /**
      * Successful
      *
-     * @var ?Shared\AdsInsertionorder $adsInsertionorder
+     * @var ?\Unified\Unified_to\Models\Shared\AdsInsertionorder $adsInsertionorder
      */
     public ?Shared\AdsInsertionorder $adsInsertionorder = null;
 
@@ -43,7 +43,7 @@ class PatchAdsInsertionorderResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AdsInsertionorder  $adsInsertionorder
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsInsertionorder  $adsInsertionorder
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AdsInsertionorder $adsInsertionorder = null)

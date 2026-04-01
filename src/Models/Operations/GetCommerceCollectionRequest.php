@@ -30,7 +30,7 @@ class GetCommerceCollectionRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCommerceCollectionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCommerceCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceCollectionRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCommerceCollectionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCommerceCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

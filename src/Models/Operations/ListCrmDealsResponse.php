@@ -35,7 +35,7 @@ class ListCrmDealsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CrmDeal> $crmDeals
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmDeal> $crmDeals
      */
     public ?array $crmDeals = null;
 
@@ -43,7 +43,7 @@ class ListCrmDealsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CrmDeal>  $crmDeals
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmDeal>  $crmDeals
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmDeals = null)

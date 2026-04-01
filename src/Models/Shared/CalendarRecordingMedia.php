@@ -14,7 +14,7 @@ class CalendarRecordingMedia
     /**
      * $attendees
      *
-     * @var ?array<CalendarAttendee> $attendees
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarAttendee> $attendees
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attendees')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarAttendee>|null')]
@@ -64,7 +64,7 @@ class CalendarRecordingMedia
     /**
      * $transcripts
      *
-     * @var ?array<CalendarRecordingTranscript> $transcripts
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarRecordingTranscript> $transcripts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transcripts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarRecordingTranscript>|null')]
@@ -72,13 +72,13 @@ class CalendarRecordingMedia
     public ?array $transcripts = null;
 
     /**
-     * @param  ?array<CalendarAttendee>  $attendees
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarAttendee>  $attendees
      * @param  ?\DateTime  $endAt
      * @param  ?string  $language
      * @param  ?string  $recordingDownloadUrl
      * @param  ?\DateTime  $startAt
      * @param  ?string  $transcriptDownloadUrl
-     * @param  ?array<CalendarRecordingTranscript>  $transcripts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarRecordingTranscript>  $transcripts
      * @phpstan-pure
      */
     public function __construct(?array $attendees = null, ?\DateTime $endAt = null, ?string $language = null, ?string $recordingDownloadUrl = null, ?\DateTime $startAt = null, ?string $transcriptDownloadUrl = null, ?array $transcripts = null)

@@ -38,7 +38,7 @@ class ScimManager
 
     /**
      *
-     * @var ?ScimManagerType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimManagerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimManagerType|null')]
@@ -57,7 +57,7 @@ class ScimManager
      * @param  ?string  $dollarRef
      * @param  ?string  $displayName
      * @param  ?string  $managerId
-     * @param  ?ScimManagerType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimManagerType  $type
      * @param  ?string  $value
      * @phpstan-pure
      */

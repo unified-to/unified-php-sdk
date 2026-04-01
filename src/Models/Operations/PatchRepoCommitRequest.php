@@ -14,7 +14,7 @@ class PatchRepoCommitRequest
 {
     /**
      *
-     * @var Shared\RepoCommit $repoCommit
+     * @var \Unified\Unified_to\Models\Shared\RepoCommit $repoCommit
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoCommit $repoCommit;
@@ -38,7 +38,7 @@ class PatchRepoCommitRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchRepoCommitQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchRepoCommitQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchRepoCommitRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoCommit  $repoCommit
+     * @param  \Unified\Unified_to\Models\Shared\RepoCommit  $repoCommit
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchRepoCommitQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchRepoCommitQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

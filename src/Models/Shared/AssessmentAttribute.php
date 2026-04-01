@@ -20,7 +20,7 @@ class AssessmentAttribute
 
     /**
      *
-     * @var AssessmentAttributeType $type
+     * @var \Unified\Unified_to\Models\Shared\AssessmentAttributeType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AssessmentAttributeType')]
@@ -52,7 +52,7 @@ class AssessmentAttribute
 
     /**
      *
-     * @var ?AssessmentAttributeStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AssessmentAttributeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AssessmentAttributeStatus|null')]
@@ -69,11 +69,11 @@ class AssessmentAttribute
 
     /**
      * @param  string  $label
-     * @param  AssessmentAttributeType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AssessmentAttributeType  $type
      * @param  ?string  $reference
      * @param  ?float  $scoreMax
      * @param  ?float  $scoreValue
-     * @param  ?AssessmentAttributeStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AssessmentAttributeStatus  $status
      * @param  ?string  $value
      * @phpstan-pure
      */

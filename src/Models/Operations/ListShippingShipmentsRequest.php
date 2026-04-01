@@ -30,7 +30,7 @@ class ListShippingShipmentsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListShippingShipmentsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListShippingShipmentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListShippingShipmentsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $carrierId
-     * @param  ?array<ListShippingShipmentsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListShippingShipmentsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

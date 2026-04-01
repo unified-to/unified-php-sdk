@@ -14,7 +14,7 @@ class PatchFormsFormRequest
 {
     /**
      *
-     * @var Shared\FormsForm $formsForm
+     * @var \Unified\Unified_to\Models\Shared\FormsForm $formsForm
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\FormsForm $formsForm;
@@ -38,7 +38,7 @@ class PatchFormsFormRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchFormsFormQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchFormsFormQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchFormsFormRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\FormsForm  $formsForm
+     * @param  \Unified\Unified_to\Models\Shared\FormsForm  $formsForm
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchFormsFormQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchFormsFormQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

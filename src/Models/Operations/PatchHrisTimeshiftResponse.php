@@ -35,7 +35,7 @@ class PatchHrisTimeshiftResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisTimeshift $hrisTimeshift
+     * @var ?\Unified\Unified_to\Models\Shared\HrisTimeshift $hrisTimeshift
      */
     public ?Shared\HrisTimeshift $hrisTimeshift = null;
 
@@ -43,7 +43,7 @@ class PatchHrisTimeshiftResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisTimeshift  $hrisTimeshift
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeshift  $hrisTimeshift
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisTimeshift $hrisTimeshift = null)

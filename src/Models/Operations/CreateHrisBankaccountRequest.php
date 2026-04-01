@@ -14,7 +14,7 @@ class CreateHrisBankaccountRequest
 {
     /**
      *
-     * @var Shared\HrisBankaccount $hrisBankaccount
+     * @var \Unified\Unified_to\Models\Shared\HrisBankaccount $hrisBankaccount
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisBankaccount $hrisBankaccount;
@@ -30,7 +30,7 @@ class CreateHrisBankaccountRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisBankaccountQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisBankaccountQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisBankaccountRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisBankaccount  $hrisBankaccount
+     * @param  \Unified\Unified_to\Models\Shared\HrisBankaccount  $hrisBankaccount
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisBankaccountQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisBankaccountQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -92,7 +92,7 @@ class AssessmentOrder
     /**
      * Filled-in answers to the package's parameter questions
      *
-     * @var ?array<AssessmentParameterInput> $parameters
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentParameterInput> $parameters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parameters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentParameterInput>|null')]
@@ -102,7 +102,7 @@ class AssessmentOrder
     /**
      * $profileAddresses
      *
-     * @var ?array<AssessmentAddress> $profileAddresses
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentAddress> $profileAddresses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profile_addresses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentAddress>|null')]
@@ -137,7 +137,7 @@ class AssessmentOrder
 
     /**
      *
-     * @var ?ProfileGender $profileGender
+     * @var ?\Unified\Unified_to\Models\Shared\ProfileGender $profileGender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profile_gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ProfileGender|null')]
@@ -225,7 +225,7 @@ class AssessmentOrder
     /**
      * Additional result attributes
      *
-     * @var ?array<AssessmentAttribute> $responseAttributes
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentAttribute> $responseAttributes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_attributes')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentAttribute>|null')]
@@ -243,7 +243,7 @@ class AssessmentOrder
     /**
      * $responseDetails
      *
-     * @var ?array<AssessmentResponseDetail> $responseDetails
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentResponseDetail> $responseDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_details')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentResponseDetail>|null')]
@@ -310,7 +310,7 @@ class AssessmentOrder
 
     /**
      *
-     * @var ?ResponseStatus $responseStatus
+     * @var ?\Unified\Unified_to\Models\Shared\ResponseStatus $responseStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResponseStatus|null')]
@@ -327,7 +327,7 @@ class AssessmentOrder
 
     /**
      *
-     * @var ?AssessmentOrderStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AssessmentOrderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AssessmentOrderStatus|null')]
@@ -369,12 +369,12 @@ class AssessmentOrder
      * @param  ?string  $id
      * @param  ?string  $jobId
      * @param  ?string  $packageId
-     * @param  ?array<AssessmentParameterInput>  $parameters
-     * @param  ?array<AssessmentAddress>  $profileAddresses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentParameterInput>  $parameters
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentAddress>  $profileAddresses
      * @param  ?string  $profileDateOfBirth
      * @param  ?array<string>  $profileEmails
      * @param  ?string  $profileFirstName
-     * @param  ?ProfileGender  $profileGender
+     * @param  ?\Unified\Unified_to\Models\Shared\ProfileGender  $profileGender
      * @param  ?string  $profileIpAddress
      * @param  ?string  $profileLastName
      * @param  ?string  $profileName
@@ -384,9 +384,9 @@ class AssessmentOrder
      * @param  ?array<string>  $profileTelephones
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
-     * @param  ?array<AssessmentAttribute>  $responseAttributes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentAttribute>  $responseAttributes
      * @param  ?\DateTime  $responseCompletedAt
-     * @param  ?array<AssessmentResponseDetail>  $responseDetails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentResponseDetail>  $responseDetails
      * @param  ?array<string>  $responseDownloadUrls
      * @param  ?\DateTime  $responseExpiresAt
      * @param  ?\DateTime  $responseIssuedAt
@@ -394,9 +394,9 @@ class AssessmentOrder
      * @param  ?string  $responseRedirectUrl
      * @param  ?float  $responseScore
      * @param  ?string  $responseSource
-     * @param  ?ResponseStatus  $responseStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\ResponseStatus  $responseStatus
      * @param  ?string  $responseUrl
-     * @param  ?AssessmentOrderStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AssessmentOrderStatus  $status
      * @param  ?string  $targetUrl
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webhookId

@@ -30,7 +30,7 @@ class GetAtsCandidateRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsCandidateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsCandidateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsCandidateRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsCandidateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsCandidateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

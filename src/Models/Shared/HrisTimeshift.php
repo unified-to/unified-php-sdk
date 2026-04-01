@@ -59,7 +59,7 @@ class HrisTimeshift
     /**
      * $compensation
      *
-     * @var ?array<HrisCompensation> $compensation
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisCompensation> $compensation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('compensation')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisCompensation>|null')]
@@ -139,7 +139,7 @@ class HrisTimeshift
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $companyId
-     * @param  ?array<HrisCompensation>  $compensation
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $groupId
      * @param  ?float  $hours

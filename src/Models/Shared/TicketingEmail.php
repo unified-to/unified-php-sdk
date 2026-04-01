@@ -20,7 +20,7 @@ class TicketingEmail
 
     /**
      *
-     * @var ?TicketingEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingEmailType|null')]
@@ -29,7 +29,7 @@ class TicketingEmail
 
     /**
      * @param  string  $email
-     * @param  ?TicketingEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?TicketingEmailType $type = null)

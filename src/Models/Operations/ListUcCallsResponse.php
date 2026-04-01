@@ -35,7 +35,7 @@ class ListUcCallsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\UcCall> $ucCalls
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcCall> $ucCalls
      */
     public ?array $ucCalls = null;
 
@@ -43,7 +43,7 @@ class ListUcCallsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\UcCall>  $ucCalls
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcCall>  $ucCalls
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ucCalls = null)

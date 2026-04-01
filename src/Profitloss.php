@@ -47,8 +47,8 @@ class Profitloss
     /**
      * Retrieve a profitloss
      *
-     * @param  Operations\GetAccountingProfitlossRequest  $request
-     * @return Operations\GetAccountingProfitlossResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingProfitlossRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingProfitlossResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingProfitloss(Operations\GetAccountingProfitlossRequest $request, ?Options $options = null): Operations\GetAccountingProfitlossResponse
@@ -109,8 +109,8 @@ class Profitloss
     /**
      * List all profitlosses
      *
-     * @param  Operations\ListAccountingProfitlossesRequest  $request
-     * @return Operations\ListAccountingProfitlossesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingProfitlosses(Operations\ListAccountingProfitlossesRequest $request, ?Options $options = null): Operations\ListAccountingProfitlossesResponse

@@ -30,7 +30,7 @@ class GetUcCallRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetUcCallQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetUcCallQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetUcCallRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetUcCallQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetUcCallQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

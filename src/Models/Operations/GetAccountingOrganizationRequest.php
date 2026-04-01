@@ -30,7 +30,7 @@ class GetAccountingOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingOrganizationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -13,7 +13,7 @@ class AdsCampaign
 {
     /**
      *
-     * @var ?AdvertisingChannelType $advertisingChannelType
+     * @var ?\Unified\Unified_to\Models\Shared\AdvertisingChannelType $advertisingChannelType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('advertising_channel_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdvertisingChannelType|null')]
@@ -30,7 +30,7 @@ class AdsCampaign
 
     /**
      *
-     * @var ?BudgetPeriod $budgetPeriod
+     * @var ?\Unified\Unified_to\Models\Shared\BudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BudgetPeriod|null')]
@@ -79,7 +79,7 @@ class AdsCampaign
 
     /**
      *
-     * @var ?PropertyAdsCampaignFrequencyCap $frequencyCap
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignFrequencyCap $frequencyCap
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignFrequencyCap|null')]
@@ -88,7 +88,7 @@ class AdsCampaign
 
     /**
      *
-     * @var ?Goal $goal
+     * @var ?\Unified\Unified_to\Models\Shared\Goal $goal
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('goal')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Goal|null')]
@@ -155,7 +155,7 @@ class AdsCampaign
 
     /**
      *
-     * @var ?AdsCampaignStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AdsCampaignStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsCampaignStatus|null')]
@@ -164,7 +164,7 @@ class AdsCampaign
 
     /**
      *
-     * @var ?PropertyAdsCampaignTargeting $targeting
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargeting|null')]
@@ -188,16 +188,16 @@ class AdsCampaign
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?AdvertisingChannelType  $advertisingChannelType
+     * @param  ?\Unified\Unified_to\Models\Shared\AdvertisingChannelType  $advertisingChannelType
      * @param  ?float  $budgetAmount
-     * @param  ?BudgetPeriod  $budgetPeriod
+     * @param  ?\Unified\Unified_to\Models\Shared\BudgetPeriod  $budgetPeriod
      * @param  ?string  $campaignBudgetIdentifier
      * @param  ?string  $category
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?PropertyAdsCampaignFrequencyCap  $frequencyCap
-     * @param  ?Goal  $goal
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignFrequencyCap  $frequencyCap
+     * @param  ?\Unified\Unified_to\Models\Shared\Goal  $goal
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $name
@@ -205,8 +205,8 @@ class AdsCampaign
      * @param  ?float  $plannedSpendAmount
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?AdsCampaignStatus  $status
-     * @param  ?PropertyAdsCampaignTargeting  $targeting
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsCampaignStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargeting  $targeting
      * @param  ?float  $totalSpendAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

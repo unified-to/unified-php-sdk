@@ -61,7 +61,7 @@ class ScimAddress
 
     /**
      *
-     * @var ?ScimAddressType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimAddressType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimAddressType|null')]
@@ -75,7 +75,7 @@ class ScimAddress
      * @param  ?string  $postalCode
      * @param  ?string  $region
      * @param  ?string  $streetAddress
-     * @param  ?ScimAddressType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimAddressType  $type
      * @phpstan-pure
      */
     public function __construct(?string $country = null, ?string $formatted = null, ?string $locality = null, ?string $postalCode = null, ?string $region = null, ?string $streetAddress = null, ?ScimAddressType $type = null)

@@ -35,7 +35,7 @@ class ListLmsInstructorsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\LmsInstructor> $lmsInstructors
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsInstructor> $lmsInstructors
      */
     public ?array $lmsInstructors = null;
 
@@ -43,7 +43,7 @@ class ListLmsInstructorsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\LmsInstructor>  $lmsInstructors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsInstructor>  $lmsInstructors
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $lmsInstructors = null)

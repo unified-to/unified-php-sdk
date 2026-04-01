@@ -43,7 +43,7 @@ bool $value = /* values here */
 
 ```php
 /**
-* @var array<Shared\One|string|float|bool>
+* @var array<\Unified\Unified_to\Models\Shared\One|string|float|bool>
 */
 array $value = /* values here */
 ```

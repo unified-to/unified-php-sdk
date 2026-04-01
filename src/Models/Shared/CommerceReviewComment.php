@@ -93,7 +93,7 @@ class CommerceReviewComment
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -112,7 +112,7 @@ class CommerceReviewComment
 
     /**
      *
-     * @var ?CommerceReviewCommentStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceReviewCommentStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceReviewCommentStatus|null')]
@@ -146,9 +146,9 @@ class CommerceReviewComment
      * @param  ?string  $id
      * @param  ?bool  $isPublic
      * @param  ?bool  $isVerified
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
-     * @param  ?CommerceReviewCommentStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceReviewCommentStatus  $status
      * @param  ?float  $unhelpfulVotes
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

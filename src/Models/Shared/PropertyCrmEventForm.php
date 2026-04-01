@@ -22,7 +22,7 @@ class PropertyCrmEventForm
     /**
      * $fields
      *
-     * @var ?array<CrmEventFormField> $fields
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEventFormField> $fields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEventFormField>|null')]
@@ -47,7 +47,7 @@ class PropertyCrmEventForm
 
     /**
      * @param  ?\DateTime  $archivedAt
-     * @param  ?array<CrmEventFormField>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmEventFormField>  $fields
      * @param  ?string  $name
      * @param  ?string  $redirectUrl
      * @phpstan-pure

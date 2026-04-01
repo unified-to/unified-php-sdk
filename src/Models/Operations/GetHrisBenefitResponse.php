@@ -35,7 +35,7 @@ class GetHrisBenefitResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisBenefit $hrisBenefit
+     * @var ?\Unified\Unified_to\Models\Shared\HrisBenefit $hrisBenefit
      */
     public ?Shared\HrisBenefit $hrisBenefit = null;
 
@@ -43,7 +43,7 @@ class GetHrisBenefitResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisBenefit  $hrisBenefit
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefit  $hrisBenefit
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisBenefit $hrisBenefit = null)

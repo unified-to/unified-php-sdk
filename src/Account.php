@@ -47,8 +47,8 @@ class Account
     /**
      * Create an account
      *
-     * @param  Operations\CreateAccountingAccountRequest  $request
-     * @return Operations\CreateAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingAccount(Operations\CreateAccountingAccountRequest $request, ?Options $options = null): Operations\CreateAccountingAccountResponse
@@ -114,8 +114,8 @@ class Account
     /**
      * Retrieve an account
      *
-     * @param  Operations\GetAccountingAccountRequest  $request
-     * @return Operations\GetAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingAccount(Operations\GetAccountingAccountRequest $request, ?Options $options = null): Operations\GetAccountingAccountResponse
@@ -176,8 +176,8 @@ class Account
     /**
      * List all accounts
      *
-     * @param  Operations\ListAccountingAccountsRequest  $request
-     * @return Operations\ListAccountingAccountsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingAccounts(Operations\ListAccountingAccountsRequest $request, ?Options $options = null): Operations\ListAccountingAccountsResponse
@@ -238,8 +238,8 @@ class Account
     /**
      * Update an account
      *
-     * @param  Operations\PatchAccountingAccountRequest  $request
-     * @return Operations\PatchAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingAccount(Operations\PatchAccountingAccountRequest $request, ?Options $options = null): Operations\PatchAccountingAccountResponse
@@ -305,8 +305,8 @@ class Account
     /**
      * Remove an account
      *
-     * @param  Operations\RemoveAccountingAccountRequest  $request
-     * @return Operations\RemoveAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingAccount(Operations\RemoveAccountingAccountRequest $request, ?Options $options = null): Operations\RemoveAccountingAccountResponse
@@ -361,8 +361,8 @@ class Account
     /**
      * Update an account
      *
-     * @param  Operations\UpdateAccountingAccountRequest  $request
-     * @return Operations\UpdateAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingAccount(Operations\UpdateAccountingAccountRequest $request, ?Options $options = null): Operations\UpdateAccountingAccountResponse

@@ -14,7 +14,7 @@ class PatchHrisEmployeeRequest
 {
     /**
      *
-     * @var Shared\HrisEmployee $hrisEmployee
+     * @var \Unified\Unified_to\Models\Shared\HrisEmployee $hrisEmployee
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisEmployee $hrisEmployee;
@@ -38,7 +38,7 @@ class PatchHrisEmployeeRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchHrisEmployeeQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchHrisEmployeeQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchHrisEmployeeRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisEmployee  $hrisEmployee
+     * @param  \Unified\Unified_to\Models\Shared\HrisEmployee  $hrisEmployee
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchHrisEmployeeQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchHrisEmployeeQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

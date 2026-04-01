@@ -75,7 +75,7 @@ class RepoPullrequest
 
     /**
      *
-     * @var ?RepoPullrequestStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\RepoPullrequestStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\RepoPullrequestStatus|null')]
@@ -108,7 +108,7 @@ class RepoPullrequest
      * @param  ?array<string>  $labels
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $repoId
-     * @param  ?RepoPullrequestStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\RepoPullrequestStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure

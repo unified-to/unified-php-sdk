@@ -29,7 +29,7 @@ class PropertyAdsGroupPacing
 
     /**
      *
-     * @var ?Period $period
+     * @var ?\Unified\Unified_to\Models\Shared\Period $period
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Period|null')]
@@ -47,7 +47,7 @@ class PropertyAdsGroupPacing
     /**
      * @param  ?float  $dailyMaxAmount
      * @param  ?float  $dailyMaxImpressions
-     * @param  ?Period  $period
+     * @param  ?\Unified\Unified_to\Models\Shared\Period  $period
      * @param  ?string  $type
      * @phpstan-pure
      */

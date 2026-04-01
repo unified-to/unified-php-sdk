@@ -47,8 +47,8 @@ class Promoted
     /**
      * List all promoteds
      *
-     * @param  Operations\ListAdsPromotedsRequest  $request
-     * @return Operations\ListAdsPromotedsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsPromotedsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsPromotedsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsPromoteds(Operations\ListAdsPromotedsRequest $request, ?Options $options = null): Operations\ListAdsPromotedsResponse

@@ -47,8 +47,8 @@ class Report
     /**
      * Retrieve a report
      *
-     * @param  Operations\GetAccountingReportRequest  $request
-     * @return Operations\GetAccountingReportResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingReportRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingReportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingReport(Operations\GetAccountingReportRequest $request, ?Options $options = null): Operations\GetAccountingReportResponse
@@ -109,8 +109,8 @@ class Report
     /**
      * List all reports
      *
-     * @param  Operations\ListAccountingReportsRequest  $request
-     * @return Operations\ListAccountingReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingReports(Operations\ListAccountingReportsRequest $request, ?Options $options = null): Operations\ListAccountingReportsResponse
@@ -171,8 +171,8 @@ class Report
     /**
      * List all reports
      *
-     * @param  Operations\ListAdsReportsRequest  $request
-     * @return Operations\ListAdsReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsReports(Operations\ListAdsReportsRequest $request, ?Options $options = null): Operations\ListAdsReportsResponse
@@ -233,8 +233,8 @@ class Report
     /**
      * List all reports
      *
-     * @param  Operations\ListMartechReportsRequest  $request
-     * @return Operations\ListMartechReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechReports(Operations\ListMartechReportsRequest $request, ?Options $options = null): Operations\ListMartechReportsResponse

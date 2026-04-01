@@ -88,7 +88,7 @@ class AccountingLineitem
     /**
      * $itemVariants
      *
-     * @var ?array<AccountingReference> $itemVariants
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingReference> $itemVariants
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('item_variants')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingReference>|null')]
@@ -98,7 +98,7 @@ class AccountingLineitem
     /**
      * $locations
      *
-     * @var ?array<AccountingReference> $locations
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingReference> $locations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('locations')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingReference>|null')]
@@ -187,8 +187,8 @@ class AccountingLineitem
      * @param  ?string  $itemId
      * @param  ?string  $itemName
      * @param  ?string  $itemSku
-     * @param  ?array<AccountingReference>  $itemVariants
-     * @param  ?array<AccountingReference>  $locations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $itemVariants
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $locations
      * @param  ?string  $notes
      * @param  ?float  $refundAmount
      * @param  ?\DateTime  $refundedAt

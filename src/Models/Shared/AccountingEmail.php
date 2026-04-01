@@ -21,7 +21,7 @@ class AccountingEmail
 
     /**
      *
-     * @var ?AccountingEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingEmailType|null')]
@@ -30,7 +30,7 @@ class AccountingEmail
 
     /**
      * @param  ?string  $email
-     * @param  ?AccountingEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingEmailType  $type
      * @phpstan-pure
      */
     public function __construct(?string $email = null, ?AccountingEmailType $type = null)

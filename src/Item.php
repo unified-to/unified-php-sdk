@@ -47,8 +47,8 @@ class Item
     /**
      * Create an item
      *
-     * @param  Operations\CreateCommerceItemRequest  $request
-     * @return Operations\CreateCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceItem(Operations\CreateCommerceItemRequest $request, ?Options $options = null): Operations\CreateCommerceItemResponse
@@ -114,8 +114,8 @@ class Item
     /**
      * Retrieve an item
      *
-     * @param  Operations\GetCommerceItemRequest  $request
-     * @return Operations\GetCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceItem(Operations\GetCommerceItemRequest $request, ?Options $options = null): Operations\GetCommerceItemResponse
@@ -176,8 +176,8 @@ class Item
     /**
      * List all items
      *
-     * @param  Operations\ListCommerceItemsRequest  $request
-     * @return Operations\ListCommerceItemsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceItems(Operations\ListCommerceItemsRequest $request, ?Options $options = null): Operations\ListCommerceItemsResponse
@@ -238,8 +238,8 @@ class Item
     /**
      * Update an item
      *
-     * @param  Operations\PatchCommerceItemRequest  $request
-     * @return Operations\PatchCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceItem(Operations\PatchCommerceItemRequest $request, ?Options $options = null): Operations\PatchCommerceItemResponse
@@ -305,8 +305,8 @@ class Item
     /**
      * Remove an item
      *
-     * @param  Operations\RemoveCommerceItemRequest  $request
-     * @return Operations\RemoveCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceItem(Operations\RemoveCommerceItemRequest $request, ?Options $options = null): Operations\RemoveCommerceItemResponse
@@ -361,8 +361,8 @@ class Item
     /**
      * Update an item
      *
-     * @param  Operations\UpdateCommerceItemRequest  $request
-     * @return Operations\UpdateCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceItem(Operations\UpdateCommerceItemRequest $request, ?Options $options = null): Operations\UpdateCommerceItemResponse

@@ -15,7 +15,7 @@ class CrmEvent
     /**
      * The call object, when type = call
      *
-     * @var ?PropertyCrmEventCall $call
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventCall $call
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('call')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventCall|null')]
@@ -63,7 +63,7 @@ class CrmEvent
     /**
      * The email object, when type = email
      *
-     * @var ?PropertyCrmEventEmail $email
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail $email
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('email')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail|null')]
@@ -72,7 +72,7 @@ class CrmEvent
 
     /**
      *
-     * @var ?PropertyCrmEventForm $form
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventForm $form
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('form')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventForm|null')]
@@ -99,7 +99,7 @@ class CrmEvent
 
     /**
      *
-     * @var ?PropertyCrmEventMarketingEmail $marketingEmail
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMarketingEmail $marketingEmail
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('marketing_email')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMarketingEmail|null')]
@@ -109,7 +109,7 @@ class CrmEvent
     /**
      * The meeting object, when type = meeting
      *
-     * @var ?PropertyCrmEventMeeting $meeting
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting $meeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting|null')]
@@ -119,7 +119,7 @@ class CrmEvent
     /**
      * The note object, when type = note
      *
-     * @var ?PropertyCrmEventNote $note
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote $note
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('note')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventNote|null')]
@@ -128,7 +128,7 @@ class CrmEvent
 
     /**
      *
-     * @var ?PropertyCrmEventPageView $pageView
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventPageView $pageView
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('page_view')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventPageView|null')]
@@ -148,7 +148,7 @@ class CrmEvent
     /**
      * The task object, when type = task
      *
-     * @var ?PropertyCrmEventTask $task
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTask $task
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('task')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTask|null')]
@@ -157,7 +157,7 @@ class CrmEvent
 
     /**
      *
-     * @var ?CrmEventType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CrmEventType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventType|null')]
@@ -181,22 +181,22 @@ class CrmEvent
     public ?string $userId = null;
 
     /**
-     * @param  ?PropertyCrmEventCall  $call
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventCall  $call
      * @param  ?array<string>  $companyIds
      * @param  ?array<string>  $contactIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
-     * @param  ?PropertyCrmEventEmail  $email
-     * @param  ?PropertyCrmEventForm  $form
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventEmail  $email
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventForm  $form
      * @param  ?string  $id
      * @param  ?array<string>  $leadIds
-     * @param  ?PropertyCrmEventMarketingEmail  $marketingEmail
-     * @param  ?PropertyCrmEventMeeting  $meeting
-     * @param  ?PropertyCrmEventNote  $note
-     * @param  ?PropertyCrmEventPageView  $pageView
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMarketingEmail  $marketingEmail
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting  $meeting
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote  $note
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventPageView  $pageView
      * @param  ?array<string, mixed>  $raw
-     * @param  ?PropertyCrmEventTask  $task
-     * @param  ?CrmEventType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTask  $task
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmEventType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

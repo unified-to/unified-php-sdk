@@ -14,7 +14,7 @@ class PatchAdsInsertionorderRequest
 {
     /**
      *
-     * @var Shared\AdsInsertionorder $adsInsertionorder
+     * @var \Unified\Unified_to\Models\Shared\AdsInsertionorder $adsInsertionorder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsInsertionorder $adsInsertionorder;
@@ -38,7 +38,7 @@ class PatchAdsInsertionorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAdsInsertionorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAdsInsertionorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAdsInsertionorderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsInsertionorder  $adsInsertionorder
+     * @param  \Unified\Unified_to\Models\Shared\AdsInsertionorder  $adsInsertionorder
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAdsInsertionorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAdsInsertionorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

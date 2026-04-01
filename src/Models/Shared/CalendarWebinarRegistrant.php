@@ -45,7 +45,7 @@ class CalendarWebinarRegistrant
 
     /**
      *
-     * @var ?RegistrationStatus $registrationStatus
+     * @var ?\Unified\Unified_to\Models\Shared\RegistrationStatus $registrationStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('registration_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\RegistrationStatus|null')]
@@ -57,7 +57,7 @@ class CalendarWebinarRegistrant
      * @param  ?string  $name
      * @param  ?\DateTime  $registeredAt
      * @param  ?string  $registrationReference
-     * @param  ?RegistrationStatus  $registrationStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\RegistrationStatus  $registrationStatus
      * @phpstan-pure
      */
     public function __construct(?string $email = null, ?string $name = null, ?\DateTime $registeredAt = null, ?string $registrationReference = null, ?RegistrationStatus $registrationStatus = null)

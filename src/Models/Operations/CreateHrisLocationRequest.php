@@ -14,7 +14,7 @@ class CreateHrisLocationRequest
 {
     /**
      *
-     * @var Shared\HrisLocation $hrisLocation
+     * @var \Unified\Unified_to\Models\Shared\HrisLocation $hrisLocation
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisLocation $hrisLocation;
@@ -30,7 +30,7 @@ class CreateHrisLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisLocationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisLocation  $hrisLocation
+     * @param  \Unified\Unified_to\Models\Shared\HrisLocation  $hrisLocation
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

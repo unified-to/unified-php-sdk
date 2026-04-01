@@ -30,7 +30,7 @@ class PropertyAdsGroupTargetingOptimization
 
     /**
      *
-     * @var ?PropertyAdsGroupTargetingOptimizationMode $mode
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimizationMode $mode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mode')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimizationMode|null')]
@@ -48,7 +48,7 @@ class PropertyAdsGroupTargetingOptimization
     /**
      * @param  ?bool  $advantageAudience
      * @param  ?bool  $advantagePlacements
-     * @param  ?PropertyAdsGroupTargetingOptimizationMode  $mode
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimizationMode  $mode
      * @param  ?bool  $targetingOptimizationExpansionAll
      * @phpstan-pure
      */

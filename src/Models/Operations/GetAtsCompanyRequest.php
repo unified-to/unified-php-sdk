@@ -30,7 +30,7 @@ class GetAtsCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsCompanyRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

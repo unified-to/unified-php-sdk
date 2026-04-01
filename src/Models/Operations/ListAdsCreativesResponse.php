@@ -35,7 +35,7 @@ class ListAdsCreativesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AdsCreative> $adsCreatives
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsCreative> $adsCreatives
      */
     public ?array $adsCreatives = null;
 
@@ -43,7 +43,7 @@ class ListAdsCreativesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AdsCreative>  $adsCreatives
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsCreative>  $adsCreatives
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $adsCreatives = null)

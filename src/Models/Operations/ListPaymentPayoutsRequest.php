@@ -22,7 +22,7 @@ class ListPaymentPayoutsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListPaymentPayoutsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListPaymentPayoutsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListPaymentPayoutsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListPaymentPayoutsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListPaymentPayoutsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

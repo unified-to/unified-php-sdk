@@ -21,7 +21,7 @@ class AdsKeyword
 
     /**
      *
-     * @var ?MatchType $matchType
+     * @var ?\Unified\Unified_to\Models\Shared\MatchType $matchType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('match_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MatchType|null')]
@@ -30,7 +30,7 @@ class AdsKeyword
 
     /**
      * @param  string  $text
-     * @param  ?MatchType  $matchType
+     * @param  ?\Unified\Unified_to\Models\Shared\MatchType  $matchType
      * @phpstan-pure
      */
     public function __construct(string $text, ?MatchType $matchType = null)

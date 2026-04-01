@@ -29,7 +29,7 @@ class HrisBankaccount
 
     /**
      *
-     * @var ?AccountType $accountType
+     * @var ?\Unified\Unified_to\Models\Shared\AccountType $accountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('account_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountType|null')]
@@ -121,7 +121,7 @@ class HrisBankaccount
     /**
      * @param  ?string  $accountNumber
      * @param  ?string  $accountNumberLast4
-     * @param  ?AccountType  $accountType
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountType  $accountType
      * @param  ?string  $bankName
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt

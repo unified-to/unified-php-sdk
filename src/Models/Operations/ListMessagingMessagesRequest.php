@@ -46,7 +46,7 @@ class ListMessagingMessagesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListMessagingMessagesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListMessagingMessagesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -147,7 +147,7 @@ class ListMessagingMessagesRequest
      * @param  ?string  $channelId
      * @param  ?string  $endLt
      * @param  ?bool  $expand
-     * @param  ?array<ListMessagingMessagesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListMessagingMessagesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

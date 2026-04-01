@@ -14,7 +14,7 @@ class AudienceCombination
     /**
      * $behaviors
      *
-     * @var ?array<AudienceSegment> $behaviors
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $behaviors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('behaviors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -24,7 +24,7 @@ class AudienceCombination
     /**
      * $demographics
      *
-     * @var ?array<AudienceSegment> $demographics
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $demographics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('demographics')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -34,7 +34,7 @@ class AudienceCombination
     /**
      * $interests
      *
-     * @var ?array<AudienceSegment> $interests
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $interests
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('interests')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -44,7 +44,7 @@ class AudienceCombination
     /**
      * $lifeEvents
      *
-     * @var ?array<AudienceSegment> $lifeEvents
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $lifeEvents
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('life_events')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -52,10 +52,10 @@ class AudienceCombination
     public ?array $lifeEvents = null;
 
     /**
-     * @param  ?array<AudienceSegment>  $behaviors
-     * @param  ?array<AudienceSegment>  $demographics
-     * @param  ?array<AudienceSegment>  $interests
-     * @param  ?array<AudienceSegment>  $lifeEvents
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $behaviors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $demographics
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $interests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $lifeEvents
      * @phpstan-pure
      */
     public function __construct(?array $behaviors = null, ?array $demographics = null, ?array $interests = null, ?array $lifeEvents = null)

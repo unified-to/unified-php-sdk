@@ -14,7 +14,7 @@ class PatchCommerceReviewRequest
 {
     /**
      *
-     * @var Shared\CommerceReview $commerceReview
+     * @var \Unified\Unified_to\Models\Shared\CommerceReview $commerceReview
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceReview $commerceReview;
@@ -38,7 +38,7 @@ class PatchCommerceReviewRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCommerceReviewQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCommerceReviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCommerceReviewRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceReview  $commerceReview
+     * @param  \Unified\Unified_to\Models\Shared\CommerceReview  $commerceReview
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCommerceReviewQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCommerceReviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

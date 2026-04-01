@@ -14,7 +14,7 @@ class CreateVerificationRequestRequest
 {
     /**
      *
-     * @var Shared\VerificationRequest $verificationRequest
+     * @var \Unified\Unified_to\Models\Shared\VerificationRequest $verificationRequest
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\VerificationRequest $verificationRequest;
@@ -30,7 +30,7 @@ class CreateVerificationRequestRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateVerificationRequestQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateVerificationRequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateVerificationRequestRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\VerificationRequest  $verificationRequest
+     * @param  \Unified\Unified_to\Models\Shared\VerificationRequest  $verificationRequest
      * @param  string  $connectionId
-     * @param  ?array<CreateVerificationRequestQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateVerificationRequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

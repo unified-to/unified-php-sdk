@@ -22,7 +22,7 @@ class ListVerificationPackagesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListVerificationPackagesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListVerificationPackagesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListVerificationPackagesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListVerificationPackagesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListVerificationPackagesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

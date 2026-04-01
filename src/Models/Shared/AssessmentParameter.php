@@ -64,7 +64,7 @@ class AssessmentParameter
 
     /**
      *
-     * @var ?AssessmentParameterType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AssessmentParameterType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AssessmentParameterType|null')]
@@ -88,7 +88,7 @@ class AssessmentParameter
      * @param  ?bool  $isRequired
      * @param  ?array<string>  $options
      * @param  ?string  $publicQuestion
-     * @param  ?AssessmentParameterType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AssessmentParameterType  $type
      * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */

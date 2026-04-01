@@ -47,8 +47,8 @@ class Salesorder
     /**
      * Create a salesorder
      *
-     * @param  Operations\CreateAccountingSalesorderRequest  $request
-     * @return Operations\CreateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingSalesorder(Operations\CreateAccountingSalesorderRequest $request, ?Options $options = null): Operations\CreateAccountingSalesorderResponse
@@ -114,8 +114,8 @@ class Salesorder
     /**
      * Retrieve a salesorder
      *
-     * @param  Operations\GetAccountingSalesorderRequest  $request
-     * @return Operations\GetAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingSalesorder(Operations\GetAccountingSalesorderRequest $request, ?Options $options = null): Operations\GetAccountingSalesorderResponse
@@ -176,8 +176,8 @@ class Salesorder
     /**
      * List all salesorders
      *
-     * @param  Operations\ListAccountingSalesordersRequest  $request
-     * @return Operations\ListAccountingSalesordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingSalesorders(Operations\ListAccountingSalesordersRequest $request, ?Options $options = null): Operations\ListAccountingSalesordersResponse
@@ -238,8 +238,8 @@ class Salesorder
     /**
      * Update a salesorder
      *
-     * @param  Operations\PatchAccountingSalesorderRequest  $request
-     * @return Operations\PatchAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingSalesorder(Operations\PatchAccountingSalesorderRequest $request, ?Options $options = null): Operations\PatchAccountingSalesorderResponse
@@ -305,8 +305,8 @@ class Salesorder
     /**
      * Remove a salesorder
      *
-     * @param  Operations\RemoveAccountingSalesorderRequest  $request
-     * @return Operations\RemoveAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingSalesorder(Operations\RemoveAccountingSalesorderRequest $request, ?Options $options = null): Operations\RemoveAccountingSalesorderResponse
@@ -361,8 +361,8 @@ class Salesorder
     /**
      * Update a salesorder
      *
-     * @param  Operations\UpdateAccountingSalesorderRequest  $request
-     * @return Operations\UpdateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingSalesorder(Operations\UpdateAccountingSalesorderRequest $request, ?Options $options = null): Operations\UpdateAccountingSalesorderResponse

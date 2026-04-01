@@ -14,7 +14,7 @@ class CreateUcCommentRequest
 {
     /**
      *
-     * @var Shared\UcComment $ucComment
+     * @var \Unified\Unified_to\Models\Shared\UcComment $ucComment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcComment $ucComment;
@@ -30,7 +30,7 @@ class CreateUcCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateUcCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateUcCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateUcCommentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcComment  $ucComment
+     * @param  \Unified\Unified_to\Models\Shared\UcComment  $ucComment
      * @param  string  $connectionId
-     * @param  ?array<CreateUcCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateUcCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

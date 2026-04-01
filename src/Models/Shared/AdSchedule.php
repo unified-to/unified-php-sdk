@@ -13,7 +13,7 @@ class AdSchedule
 {
     /**
      *
-     * @var DayOfWeek $dayOfWeek
+     * @var \Unified\Unified_to\Models\Shared\DayOfWeek $dayOfWeek
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('day_of_week')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DayOfWeek')]
@@ -58,7 +58,7 @@ class AdSchedule
     public ?float $startMinute = null;
 
     /**
-     * @param  DayOfWeek  $dayOfWeek
+     * @param  \Unified\Unified_to\Models\Shared\DayOfWeek  $dayOfWeek
      * @param  float  $endHour
      * @param  float  $startHour
      * @param  ?float  $bidModifier

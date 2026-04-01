@@ -47,8 +47,8 @@ class Person
     /**
      * Retrieve enrichment information for a person
      *
-     * @param  Operations\ListEnrichPeopleRequest  $request
-     * @return Operations\ListEnrichPeopleResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichPeople(Operations\ListEnrichPeopleRequest $request, ?Options $options = null): Operations\ListEnrichPeopleResponse

@@ -47,8 +47,8 @@ class Taxrate
     /**
      * Create a taxrate
      *
-     * @param  Operations\CreateAccountingTaxrateRequest  $request
-     * @return Operations\CreateAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingTaxrate(Operations\CreateAccountingTaxrateRequest $request, ?Options $options = null): Operations\CreateAccountingTaxrateResponse
@@ -114,8 +114,8 @@ class Taxrate
     /**
      * Retrieve a taxrate
      *
-     * @param  Operations\GetAccountingTaxrateRequest  $request
-     * @return Operations\GetAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTaxrate(Operations\GetAccountingTaxrateRequest $request, ?Options $options = null): Operations\GetAccountingTaxrateResponse
@@ -176,8 +176,8 @@ class Taxrate
     /**
      * List all taxrates
      *
-     * @param  Operations\ListAccountingTaxratesRequest  $request
-     * @return Operations\ListAccountingTaxratesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTaxrates(Operations\ListAccountingTaxratesRequest $request, ?Options $options = null): Operations\ListAccountingTaxratesResponse
@@ -238,8 +238,8 @@ class Taxrate
     /**
      * Update a taxrate
      *
-     * @param  Operations\PatchAccountingTaxrateRequest  $request
-     * @return Operations\PatchAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingTaxrate(Operations\PatchAccountingTaxrateRequest $request, ?Options $options = null): Operations\PatchAccountingTaxrateResponse
@@ -305,8 +305,8 @@ class Taxrate
     /**
      * Remove a taxrate
      *
-     * @param  Operations\RemoveAccountingTaxrateRequest  $request
-     * @return Operations\RemoveAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingTaxrate(Operations\RemoveAccountingTaxrateRequest $request, ?Options $options = null): Operations\RemoveAccountingTaxrateResponse
@@ -361,8 +361,8 @@ class Taxrate
     /**
      * Update a taxrate
      *
-     * @param  Operations\UpdateAccountingTaxrateRequest  $request
-     * @return Operations\UpdateAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingTaxrate(Operations\UpdateAccountingTaxrateRequest $request, ?Options $options = null): Operations\UpdateAccountingTaxrateResponse

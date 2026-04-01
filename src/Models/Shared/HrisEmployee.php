@@ -13,7 +13,7 @@ class HrisEmployee
 {
     /**
      *
-     * @var ?PropertyHrisEmployeeAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress|null')]
@@ -39,7 +39,7 @@ class HrisEmployee
     /**
      * $compensation
      *
-     * @var ?array<HrisCompensation> $compensation
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisCompensation> $compensation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('compensation')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisCompensation>|null')]
@@ -73,7 +73,7 @@ class HrisEmployee
     /**
      * $emails
      *
-     * @var ?array<HrisEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmail>|null')]
@@ -91,7 +91,7 @@ class HrisEmployee
     /**
      * $employeeRoles
      *
-     * @var ?array<PropertyHrisEmployeeEmployeeRoles> $employeeRoles
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles> $employeeRoles
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('employee_roles')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>|null')]
@@ -100,7 +100,7 @@ class HrisEmployee
 
     /**
      *
-     * @var ?EmploymentStatus $employmentStatus
+     * @var ?\Unified\Unified_to\Models\Shared\EmploymentStatus $employmentStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('employment_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentStatus|null')]
@@ -109,7 +109,7 @@ class HrisEmployee
 
     /**
      *
-     * @var ?HrisEmployeeEmploymentType $employmentType
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType $employmentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('employment_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType|null')]
@@ -126,7 +126,7 @@ class HrisEmployee
 
     /**
      *
-     * @var ?HrisEmployeeGender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmployeeGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeGender|null')]
@@ -136,7 +136,7 @@ class HrisEmployee
     /**
      * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
      *
-     * @var ?array<HrisGroup> $groups
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisGroup> $groups
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('groups')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisGroup>|null')]
@@ -194,7 +194,7 @@ class HrisEmployee
     /**
      * $locations
      *
-     * @var ?array<HrisLocation> $locations
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisLocation> $locations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('locations')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisLocation>|null')]
@@ -211,7 +211,7 @@ class HrisEmployee
 
     /**
      *
-     * @var ?MaritalStatus $maritalStatus
+     * @var ?\Unified\Unified_to\Models\Shared\MaritalStatus $maritalStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('marital_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus|null')]
@@ -221,7 +221,7 @@ class HrisEmployee
     /**
      * $metadata
      *
-     * @var ?array<HrisMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
@@ -257,7 +257,7 @@ class HrisEmployee
     /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      *
-     * @var ?array<HrisEmployeerelationship> $relationships
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmployeerelationship> $relationships
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('relationships')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmployeerelationship>|null')]
@@ -307,7 +307,7 @@ class HrisEmployee
     /**
      * $telephones
      *
-     * @var ?array<HrisTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>|null')]
@@ -355,41 +355,41 @@ class HrisEmployee
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyHrisEmployeeAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress  $address
      * @param  ?string  $bio
      * @param  ?string  $companyId
-     * @param  ?array<HrisCompensation>  $compensation
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $dateOfBirth
-     * @param  ?array<HrisEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisEmail>  $emails
      * @param  ?string  $employeeNumber
-     * @param  ?array<PropertyHrisEmployeeEmployeeRoles>  $employeeRoles
-     * @param  ?EmploymentStatus  $employmentStatus
-     * @param  ?HrisEmployeeEmploymentType  $employmentType
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>  $employeeRoles
+     * @param  ?\Unified\Unified_to\Models\Shared\EmploymentStatus  $employmentStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType  $employmentType
      * @param  ?string  $firstName
-     * @param  ?HrisEmployeeGender  $gender
-     * @param  ?array<HrisGroup>  $groups
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeeGender  $gender
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisGroup>  $groups
      * @param  ?bool  $hasMfa
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $languageLocale
      * @param  ?string  $lastName
-     * @param  ?array<HrisLocation>  $locations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisLocation>  $locations
      * @param  ?string  $managerId
-     * @param  ?MaritalStatus  $maritalStatus
-     * @param  ?array<HrisMetadata>  $metadata
+     * @param  ?\Unified\Unified_to\Models\Shared\MaritalStatus  $maritalStatus
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $pronouns
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<HrisEmployeerelationship>  $relationships
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisEmployeerelationship>  $relationships
      * @param  ?string  $salutation
      * @param  ?string  $ssnSin
      * @param  ?float  $storageQuotaAllocated
      * @param  ?float  $storageQuotaAvailable
      * @param  ?float  $storageQuotaUsed
-     * @param  ?array<HrisTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTelephone>  $telephones
      * @param  ?\DateTime  $terminatedAt
      * @param  ?string  $terminationReason
      * @param  ?string  $timezone

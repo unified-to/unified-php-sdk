@@ -35,7 +35,7 @@ class UpdateCrmEventResponse
     /**
      * Successful
      *
-     * @var ?Shared\CrmEvent $crmEvent
+     * @var ?\Unified\Unified_to\Models\Shared\CrmEvent $crmEvent
      */
     public ?Shared\CrmEvent $crmEvent = null;
 
@@ -43,7 +43,7 @@ class UpdateCrmEventResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CrmEvent  $crmEvent
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmEvent  $crmEvent
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CrmEvent $crmEvent = null)

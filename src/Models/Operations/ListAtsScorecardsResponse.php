@@ -35,7 +35,7 @@ class ListAtsScorecardsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AtsScorecard> $atsScorecards
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsScorecard> $atsScorecards
      */
     public ?array $atsScorecards = null;
 
@@ -43,7 +43,7 @@ class ListAtsScorecardsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AtsScorecard>  $atsScorecards
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsScorecard>  $atsScorecards
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $atsScorecards = null)

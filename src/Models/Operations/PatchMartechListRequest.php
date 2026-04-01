@@ -15,7 +15,7 @@ class PatchMartechListRequest
     /**
      * Mailing List
      *
-     * @var Shared\MarketingList $marketingList
+     * @var \Unified\Unified_to\Models\Shared\MarketingList $marketingList
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MarketingList $marketingList;
@@ -39,7 +39,7 @@ class PatchMartechListRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchMartechListQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchMartechListQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchMartechListRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MarketingList  $marketingList
+     * @param  \Unified\Unified_to\Models\Shared\MarketingList  $marketingList
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchMartechListQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchMartechListQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

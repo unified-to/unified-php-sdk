@@ -47,8 +47,8 @@ class Kms
     /**
      * Create a comment
      *
-     * @param  Operations\CreateKmsCommentRequest  $request
-     * @return Operations\CreateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsComment(Operations\CreateKmsCommentRequest $request, ?Options $options = null): Operations\CreateKmsCommentResponse
@@ -114,8 +114,8 @@ class Kms
     /**
      * Create a page
      *
-     * @param  Operations\CreateKmsPageRequest  $request
-     * @return Operations\CreateKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsPage(Operations\CreateKmsPageRequest $request, ?Options $options = null): Operations\CreateKmsPageResponse
@@ -181,8 +181,8 @@ class Kms
     /**
      * Create a space
      *
-     * @param  Operations\CreateKmsSpaceRequest  $request
-     * @return Operations\CreateKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsSpace(Operations\CreateKmsSpaceRequest $request, ?Options $options = null): Operations\CreateKmsSpaceResponse
@@ -248,8 +248,8 @@ class Kms
     /**
      * Retrieve a comment
      *
-     * @param  Operations\GetKmsCommentRequest  $request
-     * @return Operations\GetKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsComment(Operations\GetKmsCommentRequest $request, ?Options $options = null): Operations\GetKmsCommentResponse
@@ -310,8 +310,8 @@ class Kms
     /**
      * Retrieve a page
      *
-     * @param  Operations\GetKmsPageRequest  $request
-     * @return Operations\GetKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsPage(Operations\GetKmsPageRequest $request, ?Options $options = null): Operations\GetKmsPageResponse
@@ -372,8 +372,8 @@ class Kms
     /**
      * Retrieve a space
      *
-     * @param  Operations\GetKmsSpaceRequest  $request
-     * @return Operations\GetKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsSpace(Operations\GetKmsSpaceRequest $request, ?Options $options = null): Operations\GetKmsSpaceResponse
@@ -434,8 +434,8 @@ class Kms
     /**
      * List all comments
      *
-     * @param  Operations\ListKmsCommentsRequest  $request
-     * @return Operations\ListKmsCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsComments(Operations\ListKmsCommentsRequest $request, ?Options $options = null): Operations\ListKmsCommentsResponse
@@ -496,8 +496,8 @@ class Kms
     /**
      * List all pages
      *
-     * @param  Operations\ListKmsPagesRequest  $request
-     * @return Operations\ListKmsPagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsPagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsPages(Operations\ListKmsPagesRequest $request, ?Options $options = null): Operations\ListKmsPagesResponse
@@ -558,8 +558,8 @@ class Kms
     /**
      * List all spaces
      *
-     * @param  Operations\ListKmsSpacesRequest  $request
-     * @return Operations\ListKmsSpacesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsSpacesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsSpacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsSpaces(Operations\ListKmsSpacesRequest $request, ?Options $options = null): Operations\ListKmsSpacesResponse
@@ -620,8 +620,8 @@ class Kms
     /**
      * Update a comment
      *
-     * @param  Operations\PatchKmsCommentRequest  $request
-     * @return Operations\PatchKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsComment(Operations\PatchKmsCommentRequest $request, ?Options $options = null): Operations\PatchKmsCommentResponse
@@ -687,8 +687,8 @@ class Kms
     /**
      * Update a page
      *
-     * @param  Operations\PatchKmsPageRequest  $request
-     * @return Operations\PatchKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsPage(Operations\PatchKmsPageRequest $request, ?Options $options = null): Operations\PatchKmsPageResponse
@@ -754,8 +754,8 @@ class Kms
     /**
      * Update a space
      *
-     * @param  Operations\PatchKmsSpaceRequest  $request
-     * @return Operations\PatchKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsSpace(Operations\PatchKmsSpaceRequest $request, ?Options $options = null): Operations\PatchKmsSpaceResponse
@@ -821,8 +821,8 @@ class Kms
     /**
      * Remove a comment
      *
-     * @param  Operations\RemoveKmsCommentRequest  $request
-     * @return Operations\RemoveKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsComment(Operations\RemoveKmsCommentRequest $request, ?Options $options = null): Operations\RemoveKmsCommentResponse
@@ -877,8 +877,8 @@ class Kms
     /**
      * Remove a page
      *
-     * @param  Operations\RemoveKmsPageRequest  $request
-     * @return Operations\RemoveKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsPage(Operations\RemoveKmsPageRequest $request, ?Options $options = null): Operations\RemoveKmsPageResponse
@@ -933,8 +933,8 @@ class Kms
     /**
      * Remove a space
      *
-     * @param  Operations\RemoveKmsSpaceRequest  $request
-     * @return Operations\RemoveKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsSpace(Operations\RemoveKmsSpaceRequest $request, ?Options $options = null): Operations\RemoveKmsSpaceResponse
@@ -989,8 +989,8 @@ class Kms
     /**
      * Update a comment
      *
-     * @param  Operations\UpdateKmsCommentRequest  $request
-     * @return Operations\UpdateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsComment(Operations\UpdateKmsCommentRequest $request, ?Options $options = null): Operations\UpdateKmsCommentResponse
@@ -1056,8 +1056,8 @@ class Kms
     /**
      * Update a page
      *
-     * @param  Operations\UpdateKmsPageRequest  $request
-     * @return Operations\UpdateKmsPageResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsPage(Operations\UpdateKmsPageRequest $request, ?Options $options = null): Operations\UpdateKmsPageResponse
@@ -1123,8 +1123,8 @@ class Kms
     /**
      * Update a space
      *
-     * @param  Operations\UpdateKmsSpaceRequest  $request
-     * @return Operations\UpdateKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsSpace(Operations\UpdateKmsSpaceRequest $request, ?Options $options = null): Operations\UpdateKmsSpaceResponse

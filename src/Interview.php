@@ -47,8 +47,8 @@ class Interview
     /**
      * Create an interview
      *
-     * @param  Operations\CreateAtsInterviewRequest  $request
-     * @return Operations\CreateAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsInterview(Operations\CreateAtsInterviewRequest $request, ?Options $options = null): Operations\CreateAtsInterviewResponse
@@ -114,8 +114,8 @@ class Interview
     /**
      * Retrieve an interview
      *
-     * @param  Operations\GetAtsInterviewRequest  $request
-     * @return Operations\GetAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsInterview(Operations\GetAtsInterviewRequest $request, ?Options $options = null): Operations\GetAtsInterviewResponse
@@ -176,8 +176,8 @@ class Interview
     /**
      * List all interviews
      *
-     * @param  Operations\ListAtsInterviewsRequest  $request
-     * @return Operations\ListAtsInterviewsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsInterviews(Operations\ListAtsInterviewsRequest $request, ?Options $options = null): Operations\ListAtsInterviewsResponse
@@ -238,8 +238,8 @@ class Interview
     /**
      * Update an interview
      *
-     * @param  Operations\PatchAtsInterviewRequest  $request
-     * @return Operations\PatchAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsInterview(Operations\PatchAtsInterviewRequest $request, ?Options $options = null): Operations\PatchAtsInterviewResponse
@@ -305,8 +305,8 @@ class Interview
     /**
      * Remove an interview
      *
-     * @param  Operations\RemoveAtsInterviewRequest  $request
-     * @return Operations\RemoveAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsInterview(Operations\RemoveAtsInterviewRequest $request, ?Options $options = null): Operations\RemoveAtsInterviewResponse
@@ -361,8 +361,8 @@ class Interview
     /**
      * Update an interview
      *
-     * @param  Operations\UpdateAtsInterviewRequest  $request
-     * @return Operations\UpdateAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsInterview(Operations\UpdateAtsInterviewRequest $request, ?Options $options = null): Operations\UpdateAtsInterviewResponse

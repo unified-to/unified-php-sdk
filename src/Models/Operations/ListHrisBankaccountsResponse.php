@@ -35,7 +35,7 @@ class ListHrisBankaccountsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisBankaccount> $hrisBankaccounts
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisBankaccount> $hrisBankaccounts
      */
     public ?array $hrisBankaccounts = null;
 
@@ -43,7 +43,7 @@ class ListHrisBankaccountsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisBankaccount>  $hrisBankaccounts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisBankaccount>  $hrisBankaccounts
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisBankaccounts = null)

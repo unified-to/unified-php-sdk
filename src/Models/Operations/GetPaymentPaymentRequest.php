@@ -30,7 +30,7 @@ class GetPaymentPaymentRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetPaymentPaymentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetPaymentPaymentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetPaymentPaymentRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetPaymentPaymentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetPaymentPaymentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

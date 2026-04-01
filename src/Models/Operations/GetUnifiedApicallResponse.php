@@ -35,7 +35,7 @@ class GetUnifiedApicallResponse
     /**
      * Successful
      *
-     * @var ?Shared\ApiCall $apiCall
+     * @var ?\Unified\Unified_to\Models\Shared\ApiCall $apiCall
      */
     public ?Shared\ApiCall $apiCall = null;
 
@@ -43,7 +43,7 @@ class GetUnifiedApicallResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ApiCall  $apiCall
+     * @param  ?\Unified\Unified_to\Models\Shared\ApiCall  $apiCall
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ApiCall $apiCall = null)

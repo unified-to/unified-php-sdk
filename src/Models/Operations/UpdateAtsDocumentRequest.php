@@ -14,7 +14,7 @@ class UpdateAtsDocumentRequest
 {
     /**
      *
-     * @var Shared\AtsDocument $atsDocument
+     * @var \Unified\Unified_to\Models\Shared\AtsDocument $atsDocument
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsDocument $atsDocument;
@@ -38,7 +38,7 @@ class UpdateAtsDocumentRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAtsDocumentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAtsDocumentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAtsDocumentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsDocument  $atsDocument
+     * @param  \Unified\Unified_to\Models\Shared\AtsDocument  $atsDocument
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAtsDocumentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAtsDocumentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -35,7 +35,7 @@ class PatchAtsInterviewResponse
     /**
      * Successful
      *
-     * @var ?Shared\AtsInterview $atsInterview
+     * @var ?\Unified\Unified_to\Models\Shared\AtsInterview $atsInterview
      */
     public ?Shared\AtsInterview $atsInterview = null;
 
@@ -43,7 +43,7 @@ class PatchAtsInterviewResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AtsInterview  $atsInterview
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsInterview  $atsInterview
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsInterview $atsInterview = null)

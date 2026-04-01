@@ -22,7 +22,7 @@ class PropertyAdsReportMetricsGroup
     /**
      * YOUTUBE_AND_PARTNERS
      *
-     * @var ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategy $bidStrategy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategy|null')]
@@ -31,7 +31,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBillingEvent $billingEvent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBillingEvent|null')]
@@ -40,7 +40,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_allocation_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetAllocationType|null')]
@@ -65,7 +65,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod|null')]
@@ -74,7 +74,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit|null')]
@@ -125,7 +125,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap|null')]
@@ -166,7 +166,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('optimization_goal')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupOptimizationGoal|null')]
@@ -183,7 +183,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupPacing $pacing
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupPacing $pacing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pacing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupPacing|null')]
@@ -201,7 +201,7 @@ class PropertyAdsReportMetricsGroup
     /**
      * $promoted
      *
-     * @var ?array<AdsPromoted> $promoted
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
@@ -228,7 +228,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupStatus|null')]
@@ -237,7 +237,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargeting $targeting
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargeting|null')]
@@ -246,7 +246,7 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupType|null')]
@@ -263,33 +263,33 @@ class PropertyAdsReportMetricsGroup
 
     /**
      * @param  ?float  $bidAmount
-     * @param  ?PropertyAdsReportMetricsGroupBidStrategy  $bidStrategy
-     * @param  ?PropertyAdsReportMetricsGroupBillingEvent  $billingEvent
-     * @param  ?PropertyAdsReportMetricsGroupBudgetAllocationType  $budgetAllocationType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategy  $bidStrategy
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBillingEvent  $billingEvent
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetAllocationType  $budgetAllocationType
      * @param  ?float  $budgetAmount
      * @param  ?float  $budgetMaxAmount
-     * @param  ?PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
-     * @param  ?PropertyAdsReportMetricsGroupBudgetUnit  $budgetUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?PropertyAdsReportMetricsGroupFrequencyCap  $frequencyCap
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap  $frequencyCap
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $insertionorderId
      * @param  ?string  $name
-     * @param  ?PropertyAdsReportMetricsGroupOptimizationGoal  $optimizationGoal
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupOptimizationGoal  $optimizationGoal
      * @param  ?string  $organizationId
-     * @param  ?PropertyAdsReportMetricsGroupPacing  $pacing
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupPacing  $pacing
      * @param  ?string  $parentId
-     * @param  ?array<AdsPromoted>  $promoted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PropertyAdsReportMetricsGroupStatus  $status
-     * @param  ?PropertyAdsReportMetricsGroupTargeting  $targeting
-     * @param  ?PropertyAdsReportMetricsGroupType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargeting  $targeting
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

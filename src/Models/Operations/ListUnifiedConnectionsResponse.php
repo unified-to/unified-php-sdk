@@ -35,7 +35,7 @@ class ListUnifiedConnectionsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\Connection> $connections
+     * @var ?array<\Unified\Unified_to\Models\Shared\Connection> $connections
      */
     public ?array $connections = null;
 
@@ -43,7 +43,7 @@ class ListUnifiedConnectionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\Connection>  $connections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\Connection>  $connections
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $connections = null)

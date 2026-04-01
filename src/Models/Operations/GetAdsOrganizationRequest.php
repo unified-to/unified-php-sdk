@@ -30,7 +30,7 @@ class GetAdsOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAdsOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAdsOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAdsOrganizationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAdsOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAdsOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

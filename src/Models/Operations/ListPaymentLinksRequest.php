@@ -30,7 +30,7 @@ class ListPaymentLinksRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListPaymentLinksQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListPaymentLinksQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListPaymentLinksRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
-     * @param  ?array<ListPaymentLinksQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListPaymentLinksQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

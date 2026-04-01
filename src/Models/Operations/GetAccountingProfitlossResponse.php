@@ -35,7 +35,7 @@ class GetAccountingProfitlossResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingProfitloss $accountingProfitloss
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingProfitloss $accountingProfitloss
      */
     public ?Shared\AccountingProfitloss $accountingProfitloss = null;
 
@@ -43,7 +43,7 @@ class GetAccountingProfitlossResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingProfitloss  $accountingProfitloss
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingProfitloss  $accountingProfitloss
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingProfitloss $accountingProfitloss = null)

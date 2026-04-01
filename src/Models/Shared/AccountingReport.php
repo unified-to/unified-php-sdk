@@ -14,7 +14,7 @@ class AccountingReport
 {
     /**
      *
-     * @var ?PropertyAccountingReportBalanceSheet $balanceSheet
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportBalanceSheet $balanceSheet
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('balance_sheet')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportBalanceSheet|null')]
@@ -63,7 +63,7 @@ class AccountingReport
 
     /**
      *
-     * @var ?PropertyAccountingReportProfitAndLoss $profitAndLoss
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportProfitAndLoss $profitAndLoss
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profit_and_loss')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportProfitAndLoss|null')]
@@ -90,7 +90,7 @@ class AccountingReport
 
     /**
      *
-     * @var ?PropertyAccountingReportTrialBalance $trialBalance
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportTrialBalance $trialBalance
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_balance')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingReportTrialBalance|null')]
@@ -99,7 +99,7 @@ class AccountingReport
 
     /**
      *
-     * @var ?AccountingReportType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingReportType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingReportType|null')]
@@ -115,17 +115,17 @@ class AccountingReport
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyAccountingReportBalanceSheet  $balanceSheet
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportBalanceSheet  $balanceSheet
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?string  $name
-     * @param  ?PropertyAccountingReportProfitAndLoss  $profitAndLoss
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportProfitAndLoss  $profitAndLoss
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PropertyAccountingReportTrialBalance  $trialBalance
-     * @param  ?AccountingReportType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingReportTrialBalance  $trialBalance
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingReportType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

@@ -38,7 +38,7 @@ class ListMartechReportsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListMartechReportsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListMartechReportsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListMartechReportsRequest
      * @param  string  $connectionId
      * @param  ?string  $campaignId
      * @param  ?string  $endLt
-     * @param  ?array<ListMartechReportsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListMartechReportsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?string  $listId
      * @param  ?float  $offset

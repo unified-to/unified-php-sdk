@@ -35,7 +35,7 @@ class PatchUcContactResponse
     /**
      * Successful
      *
-     * @var ?Shared\UcContact $ucContact
+     * @var ?\Unified\Unified_to\Models\Shared\UcContact $ucContact
      */
     public ?Shared\UcContact $ucContact = null;
 
@@ -43,7 +43,7 @@ class PatchUcContactResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\UcContact  $ucContact
+     * @param  ?\Unified\Unified_to\Models\Shared\UcContact  $ucContact
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\UcContact $ucContact = null)

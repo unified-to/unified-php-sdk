@@ -22,7 +22,7 @@ class ListGenaiModelsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListGenaiModelsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListGenaiModelsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListGenaiModelsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListGenaiModelsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListGenaiModelsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

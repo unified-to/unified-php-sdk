@@ -73,7 +73,7 @@ class AccountingCashflow
     /**
      * $financingSections
      *
-     * @var ?array<AccountingCashflowSection> $financingSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection> $financingSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('financing_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>|null')]
@@ -91,7 +91,7 @@ class AccountingCashflow
     /**
      * $investingSections
      *
-     * @var ?array<AccountingCashflowSection> $investingSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection> $investingSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('investing_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>|null')]
@@ -117,7 +117,7 @@ class AccountingCashflow
     /**
      * $operatingSections
      *
-     * @var ?array<AccountingCashflowSection> $operatingSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection> $operatingSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('operating_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>|null')]
@@ -158,12 +158,12 @@ class AccountingCashflow
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?array<AccountingCashflowSection>  $financingSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $financingSections
      * @param  ?string  $id
-     * @param  ?array<AccountingCashflowSection>  $investingSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $investingSections
      * @param  ?string  $name
      * @param  ?float  $netChangeInCashAmount
-     * @param  ?array<AccountingCashflowSection>  $operatingSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $operatingSections
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt

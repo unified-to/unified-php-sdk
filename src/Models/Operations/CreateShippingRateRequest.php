@@ -14,7 +14,7 @@ class CreateShippingRateRequest
 {
     /**
      *
-     * @var Shared\ShippingRate $shippingRate
+     * @var \Unified\Unified_to\Models\Shared\ShippingRate $shippingRate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ShippingRate $shippingRate;
@@ -30,7 +30,7 @@ class CreateShippingRateRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateShippingRateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateShippingRateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateShippingRateRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\ShippingRate  $shippingRate
+     * @param  \Unified\Unified_to\Models\Shared\ShippingRate  $shippingRate
      * @param  string  $connectionId
-     * @param  ?array<CreateShippingRateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateShippingRateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

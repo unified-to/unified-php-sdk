@@ -35,7 +35,7 @@ class ListRepoPullrequestsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\RepoPullrequest> $repoPullrequests
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoPullrequest> $repoPullrequests
      */
     public ?array $repoPullrequests = null;
 
@@ -43,7 +43,7 @@ class ListRepoPullrequestsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\RepoPullrequest>  $repoPullrequests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoPullrequest>  $repoPullrequests
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $repoPullrequests = null)

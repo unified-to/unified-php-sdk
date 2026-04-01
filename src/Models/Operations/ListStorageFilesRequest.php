@@ -30,7 +30,7 @@ class ListStorageFilesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListStorageFilesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListStorageFilesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -114,7 +114,7 @@ class ListStorageFilesRequest
     /**
      * @param  string  $connectionId
      * @param  ?bool  $expand
-     * @param  ?array<ListStorageFilesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListStorageFilesQueryParamFields>  $fields
      * @param  ?string  $fulltext
      * @param  ?float  $limit
      * @param  ?float  $offset

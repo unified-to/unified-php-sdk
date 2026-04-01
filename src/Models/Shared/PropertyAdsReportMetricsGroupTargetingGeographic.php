@@ -14,7 +14,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     /**
      * $cities
      *
-     * @var ?array<CityTarget> $cities
+     * @var ?array<\Unified\Unified_to\Models\Shared\CityTarget> $cities
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cities')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CityTarget>|null')]
@@ -34,7 +34,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     /**
      * $excludedCities
      *
-     * @var ?array<CityTarget> $excludedCities
+     * @var ?array<\Unified\Unified_to\Models\Shared\CityTarget> $excludedCities
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_cities')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CityTarget>|null')]
@@ -64,7 +64,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     /**
      * $excludedRegions
      *
-     * @var ?array<RegionTarget> $excludedRegions
+     * @var ?array<\Unified\Unified_to\Models\Shared\RegionTarget> $excludedRegions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_regions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RegionTarget>|null')]
@@ -84,7 +84,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     /**
      * $locationTypes
      *
-     * @var ?array<PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes> $locationTypes
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes> $locationTypes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('location_types')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes>|null')]
@@ -103,7 +103,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingGeographicPresenceType $presenceType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicPresenceType $presenceType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('presence_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicPresenceType|null')]
@@ -113,7 +113,7 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     /**
      * $regions
      *
-     * @var ?array<RegionTarget> $regions
+     * @var ?array<\Unified\Unified_to\Models\Shared\RegionTarget> $regions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('regions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RegionTarget>|null')]
@@ -131,17 +131,17 @@ class PropertyAdsReportMetricsGroupTargetingGeographic
     public ?array $usDmas = null;
 
     /**
-     * @param  ?array<CityTarget>  $cities
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CityTarget>  $cities
      * @param  ?array<string>  $countries
-     * @param  ?array<CityTarget>  $excludedCities
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CityTarget>  $excludedCities
      * @param  ?array<string>  $excludedCountries
      * @param  ?array<string>  $excludedPostalCodes
-     * @param  ?array<RegionTarget>  $excludedRegions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RegionTarget>  $excludedRegions
      * @param  ?array<string>  $excludedUsDmas
-     * @param  ?array<PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes>  $locationTypes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes>  $locationTypes
      * @param  ?array<string>  $postalCodes
-     * @param  ?PropertyAdsReportMetricsGroupTargetingGeographicPresenceType  $presenceType
-     * @param  ?array<RegionTarget>  $regions
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographicPresenceType  $presenceType
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RegionTarget>  $regions
      * @param  ?array<string>  $usDmas
      * @phpstan-pure
      */

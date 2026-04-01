@@ -47,8 +47,8 @@ class Ats
     /**
      * Create an activity
      *
-     * @param  Operations\CreateAtsActivityRequest  $request
-     * @return Operations\CreateAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsActivity(Operations\CreateAtsActivityRequest $request, ?Options $options = null): Operations\CreateAtsActivityResponse
@@ -114,8 +114,8 @@ class Ats
     /**
      * Create an application
      *
-     * @param  Operations\CreateAtsApplicationRequest  $request
-     * @return Operations\CreateAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsApplication(Operations\CreateAtsApplicationRequest $request, ?Options $options = null): Operations\CreateAtsApplicationResponse
@@ -181,8 +181,8 @@ class Ats
     /**
      * Create a candidate
      *
-     * @param  Operations\CreateAtsCandidateRequest  $request
-     * @return Operations\CreateAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsCandidate(Operations\CreateAtsCandidateRequest $request, ?Options $options = null): Operations\CreateAtsCandidateResponse
@@ -248,8 +248,8 @@ class Ats
     /**
      * Create a company
      *
-     * @param  Operations\CreateAtsCompanyRequest  $request
-     * @return Operations\CreateAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsCompany(Operations\CreateAtsCompanyRequest $request, ?Options $options = null): Operations\CreateAtsCompanyResponse
@@ -315,8 +315,8 @@ class Ats
     /**
      * Create a document
      *
-     * @param  Operations\CreateAtsDocumentRequest  $request
-     * @return Operations\CreateAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsDocument(Operations\CreateAtsDocumentRequest $request, ?Options $options = null): Operations\CreateAtsDocumentResponse
@@ -382,8 +382,8 @@ class Ats
     /**
      * Create an interview
      *
-     * @param  Operations\CreateAtsInterviewRequest  $request
-     * @return Operations\CreateAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsInterview(Operations\CreateAtsInterviewRequest $request, ?Options $options = null): Operations\CreateAtsInterviewResponse
@@ -449,8 +449,8 @@ class Ats
     /**
      * Create a job
      *
-     * @param  Operations\CreateAtsJobRequest  $request
-     * @return Operations\CreateAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsJob(Operations\CreateAtsJobRequest $request, ?Options $options = null): Operations\CreateAtsJobResponse
@@ -516,8 +516,8 @@ class Ats
     /**
      * Create a scorecard
      *
-     * @param  Operations\CreateAtsScorecardRequest  $request
-     * @return Operations\CreateAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsScorecard(Operations\CreateAtsScorecardRequest $request, ?Options $options = null): Operations\CreateAtsScorecardResponse
@@ -583,8 +583,8 @@ class Ats
     /**
      * Retrieve an activity
      *
-     * @param  Operations\GetAtsActivityRequest  $request
-     * @return Operations\GetAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsActivity(Operations\GetAtsActivityRequest $request, ?Options $options = null): Operations\GetAtsActivityResponse
@@ -645,8 +645,8 @@ class Ats
     /**
      * Retrieve an application
      *
-     * @param  Operations\GetAtsApplicationRequest  $request
-     * @return Operations\GetAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsApplication(Operations\GetAtsApplicationRequest $request, ?Options $options = null): Operations\GetAtsApplicationResponse
@@ -707,8 +707,8 @@ class Ats
     /**
      * Retrieve a candidate
      *
-     * @param  Operations\GetAtsCandidateRequest  $request
-     * @return Operations\GetAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsCandidate(Operations\GetAtsCandidateRequest $request, ?Options $options = null): Operations\GetAtsCandidateResponse
@@ -769,8 +769,8 @@ class Ats
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetAtsCompanyRequest  $request
-     * @return Operations\GetAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsCompany(Operations\GetAtsCompanyRequest $request, ?Options $options = null): Operations\GetAtsCompanyResponse
@@ -831,8 +831,8 @@ class Ats
     /**
      * Retrieve a document
      *
-     * @param  Operations\GetAtsDocumentRequest  $request
-     * @return Operations\GetAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsDocument(Operations\GetAtsDocumentRequest $request, ?Options $options = null): Operations\GetAtsDocumentResponse
@@ -893,8 +893,8 @@ class Ats
     /**
      * Retrieve an interview
      *
-     * @param  Operations\GetAtsInterviewRequest  $request
-     * @return Operations\GetAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsInterview(Operations\GetAtsInterviewRequest $request, ?Options $options = null): Operations\GetAtsInterviewResponse
@@ -955,8 +955,8 @@ class Ats
     /**
      * Retrieve a job
      *
-     * @param  Operations\GetAtsJobRequest  $request
-     * @return Operations\GetAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsJob(Operations\GetAtsJobRequest $request, ?Options $options = null): Operations\GetAtsJobResponse
@@ -1017,8 +1017,8 @@ class Ats
     /**
      * Retrieve a scorecard
      *
-     * @param  Operations\GetAtsScorecardRequest  $request
-     * @return Operations\GetAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsScorecard(Operations\GetAtsScorecardRequest $request, ?Options $options = null): Operations\GetAtsScorecardResponse
@@ -1079,8 +1079,8 @@ class Ats
     /**
      * List all activities
      *
-     * @param  Operations\ListAtsActivitiesRequest  $request
-     * @return Operations\ListAtsActivitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsActivities(Operations\ListAtsActivitiesRequest $request, ?Options $options = null): Operations\ListAtsActivitiesResponse
@@ -1141,8 +1141,8 @@ class Ats
     /**
      * List all applications
      *
-     * @param  Operations\ListAtsApplicationsRequest  $request
-     * @return Operations\ListAtsApplicationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsApplications(Operations\ListAtsApplicationsRequest $request, ?Options $options = null): Operations\ListAtsApplicationsResponse
@@ -1203,8 +1203,8 @@ class Ats
     /**
      * List all applicationstatuses
      *
-     * @param  Operations\ListAtsApplicationstatusesRequest  $request
-     * @return Operations\ListAtsApplicationstatusesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsApplicationstatuses(Operations\ListAtsApplicationstatusesRequest $request, ?Options $options = null): Operations\ListAtsApplicationstatusesResponse
@@ -1265,8 +1265,8 @@ class Ats
     /**
      * List all candidates
      *
-     * @param  Operations\ListAtsCandidatesRequest  $request
-     * @return Operations\ListAtsCandidatesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsCandidates(Operations\ListAtsCandidatesRequest $request, ?Options $options = null): Operations\ListAtsCandidatesResponse
@@ -1327,8 +1327,8 @@ class Ats
     /**
      * List all companies
      *
-     * @param  Operations\ListAtsCompaniesRequest  $request
-     * @return Operations\ListAtsCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsCompanies(Operations\ListAtsCompaniesRequest $request, ?Options $options = null): Operations\ListAtsCompaniesResponse
@@ -1389,8 +1389,8 @@ class Ats
     /**
      * List all documents
      *
-     * @param  Operations\ListAtsDocumentsRequest  $request
-     * @return Operations\ListAtsDocumentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsDocuments(Operations\ListAtsDocumentsRequest $request, ?Options $options = null): Operations\ListAtsDocumentsResponse
@@ -1451,8 +1451,8 @@ class Ats
     /**
      * List all interviews
      *
-     * @param  Operations\ListAtsInterviewsRequest  $request
-     * @return Operations\ListAtsInterviewsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsInterviews(Operations\ListAtsInterviewsRequest $request, ?Options $options = null): Operations\ListAtsInterviewsResponse
@@ -1513,8 +1513,8 @@ class Ats
     /**
      * List all jobs
      *
-     * @param  Operations\ListAtsJobsRequest  $request
-     * @return Operations\ListAtsJobsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsJobs(Operations\ListAtsJobsRequest $request, ?Options $options = null): Operations\ListAtsJobsResponse
@@ -1575,8 +1575,8 @@ class Ats
     /**
      * List all scorecards
      *
-     * @param  Operations\ListAtsScorecardsRequest  $request
-     * @return Operations\ListAtsScorecardsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsScorecards(Operations\ListAtsScorecardsRequest $request, ?Options $options = null): Operations\ListAtsScorecardsResponse
@@ -1637,8 +1637,8 @@ class Ats
     /**
      * Update an activity
      *
-     * @param  Operations\PatchAtsActivityRequest  $request
-     * @return Operations\PatchAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsActivity(Operations\PatchAtsActivityRequest $request, ?Options $options = null): Operations\PatchAtsActivityResponse
@@ -1704,8 +1704,8 @@ class Ats
     /**
      * Update an application
      *
-     * @param  Operations\PatchAtsApplicationRequest  $request
-     * @return Operations\PatchAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsApplication(Operations\PatchAtsApplicationRequest $request, ?Options $options = null): Operations\PatchAtsApplicationResponse
@@ -1771,8 +1771,8 @@ class Ats
     /**
      * Update a candidate
      *
-     * @param  Operations\PatchAtsCandidateRequest  $request
-     * @return Operations\PatchAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsCandidate(Operations\PatchAtsCandidateRequest $request, ?Options $options = null): Operations\PatchAtsCandidateResponse
@@ -1838,8 +1838,8 @@ class Ats
     /**
      * Update a company
      *
-     * @param  Operations\PatchAtsCompanyRequest  $request
-     * @return Operations\PatchAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsCompany(Operations\PatchAtsCompanyRequest $request, ?Options $options = null): Operations\PatchAtsCompanyResponse
@@ -1905,8 +1905,8 @@ class Ats
     /**
      * Update a document
      *
-     * @param  Operations\PatchAtsDocumentRequest  $request
-     * @return Operations\PatchAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsDocument(Operations\PatchAtsDocumentRequest $request, ?Options $options = null): Operations\PatchAtsDocumentResponse
@@ -1972,8 +1972,8 @@ class Ats
     /**
      * Update an interview
      *
-     * @param  Operations\PatchAtsInterviewRequest  $request
-     * @return Operations\PatchAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsInterview(Operations\PatchAtsInterviewRequest $request, ?Options $options = null): Operations\PatchAtsInterviewResponse
@@ -2039,8 +2039,8 @@ class Ats
     /**
      * Update a job
      *
-     * @param  Operations\PatchAtsJobRequest  $request
-     * @return Operations\PatchAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsJob(Operations\PatchAtsJobRequest $request, ?Options $options = null): Operations\PatchAtsJobResponse
@@ -2106,8 +2106,8 @@ class Ats
     /**
      * Update a scorecard
      *
-     * @param  Operations\PatchAtsScorecardRequest  $request
-     * @return Operations\PatchAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsScorecard(Operations\PatchAtsScorecardRequest $request, ?Options $options = null): Operations\PatchAtsScorecardResponse
@@ -2173,8 +2173,8 @@ class Ats
     /**
      * Remove an activity
      *
-     * @param  Operations\RemoveAtsActivityRequest  $request
-     * @return Operations\RemoveAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsActivity(Operations\RemoveAtsActivityRequest $request, ?Options $options = null): Operations\RemoveAtsActivityResponse
@@ -2229,8 +2229,8 @@ class Ats
     /**
      * Remove an application
      *
-     * @param  Operations\RemoveAtsApplicationRequest  $request
-     * @return Operations\RemoveAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsApplication(Operations\RemoveAtsApplicationRequest $request, ?Options $options = null): Operations\RemoveAtsApplicationResponse
@@ -2285,8 +2285,8 @@ class Ats
     /**
      * Remove a candidate
      *
-     * @param  Operations\RemoveAtsCandidateRequest  $request
-     * @return Operations\RemoveAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsCandidate(Operations\RemoveAtsCandidateRequest $request, ?Options $options = null): Operations\RemoveAtsCandidateResponse
@@ -2341,8 +2341,8 @@ class Ats
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveAtsCompanyRequest  $request
-     * @return Operations\RemoveAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsCompany(Operations\RemoveAtsCompanyRequest $request, ?Options $options = null): Operations\RemoveAtsCompanyResponse
@@ -2397,8 +2397,8 @@ class Ats
     /**
      * Remove a document
      *
-     * @param  Operations\RemoveAtsDocumentRequest  $request
-     * @return Operations\RemoveAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsDocument(Operations\RemoveAtsDocumentRequest $request, ?Options $options = null): Operations\RemoveAtsDocumentResponse
@@ -2453,8 +2453,8 @@ class Ats
     /**
      * Remove an interview
      *
-     * @param  Operations\RemoveAtsInterviewRequest  $request
-     * @return Operations\RemoveAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsInterview(Operations\RemoveAtsInterviewRequest $request, ?Options $options = null): Operations\RemoveAtsInterviewResponse
@@ -2509,8 +2509,8 @@ class Ats
     /**
      * Remove a job
      *
-     * @param  Operations\RemoveAtsJobRequest  $request
-     * @return Operations\RemoveAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsJob(Operations\RemoveAtsJobRequest $request, ?Options $options = null): Operations\RemoveAtsJobResponse
@@ -2565,8 +2565,8 @@ class Ats
     /**
      * Remove a scorecard
      *
-     * @param  Operations\RemoveAtsScorecardRequest  $request
-     * @return Operations\RemoveAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsScorecard(Operations\RemoveAtsScorecardRequest $request, ?Options $options = null): Operations\RemoveAtsScorecardResponse
@@ -2621,8 +2621,8 @@ class Ats
     /**
      * Update an activity
      *
-     * @param  Operations\UpdateAtsActivityRequest  $request
-     * @return Operations\UpdateAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsActivity(Operations\UpdateAtsActivityRequest $request, ?Options $options = null): Operations\UpdateAtsActivityResponse
@@ -2688,8 +2688,8 @@ class Ats
     /**
      * Update an application
      *
-     * @param  Operations\UpdateAtsApplicationRequest  $request
-     * @return Operations\UpdateAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsApplication(Operations\UpdateAtsApplicationRequest $request, ?Options $options = null): Operations\UpdateAtsApplicationResponse
@@ -2755,8 +2755,8 @@ class Ats
     /**
      * Update a candidate
      *
-     * @param  Operations\UpdateAtsCandidateRequest  $request
-     * @return Operations\UpdateAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsCandidate(Operations\UpdateAtsCandidateRequest $request, ?Options $options = null): Operations\UpdateAtsCandidateResponse
@@ -2822,8 +2822,8 @@ class Ats
     /**
      * Update a company
      *
-     * @param  Operations\UpdateAtsCompanyRequest  $request
-     * @return Operations\UpdateAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsCompany(Operations\UpdateAtsCompanyRequest $request, ?Options $options = null): Operations\UpdateAtsCompanyResponse
@@ -2889,8 +2889,8 @@ class Ats
     /**
      * Update a document
      *
-     * @param  Operations\UpdateAtsDocumentRequest  $request
-     * @return Operations\UpdateAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsDocument(Operations\UpdateAtsDocumentRequest $request, ?Options $options = null): Operations\UpdateAtsDocumentResponse
@@ -2956,8 +2956,8 @@ class Ats
     /**
      * Update an interview
      *
-     * @param  Operations\UpdateAtsInterviewRequest  $request
-     * @return Operations\UpdateAtsInterviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsInterview(Operations\UpdateAtsInterviewRequest $request, ?Options $options = null): Operations\UpdateAtsInterviewResponse
@@ -3023,8 +3023,8 @@ class Ats
     /**
      * Update a job
      *
-     * @param  Operations\UpdateAtsJobRequest  $request
-     * @return Operations\UpdateAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsJob(Operations\UpdateAtsJobRequest $request, ?Options $options = null): Operations\UpdateAtsJobResponse
@@ -3090,8 +3090,8 @@ class Ats
     /**
      * Update a scorecard
      *
-     * @param  Operations\UpdateAtsScorecardRequest  $request
-     * @return Operations\UpdateAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsScorecard(Operations\UpdateAtsScorecardRequest $request, ?Options $options = null): Operations\UpdateAtsScorecardResponse

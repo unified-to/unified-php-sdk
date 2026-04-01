@@ -30,7 +30,7 @@ class GetMessagingChannelRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetMessagingChannelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetMessagingChannelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetMessagingChannelRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetMessagingChannelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetMessagingChannelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

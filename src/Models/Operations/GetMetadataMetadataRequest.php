@@ -30,7 +30,7 @@ class GetMetadataMetadataRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetMetadataMetadataQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetMetadataMetadataQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetMetadataMetadataRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetMetadataMetadataQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetMetadataMetadataQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

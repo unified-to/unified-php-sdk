@@ -14,7 +14,7 @@ class AtsApplication
     /**
      * $answers
      *
-     * @var ?array<AtsApplicationAnswer> $answers
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer> $answers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer>|null')]
@@ -72,7 +72,7 @@ class AtsApplication
     /**
      * $metadata
      *
-     * @var ?array<AtsMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
@@ -82,7 +82,7 @@ class AtsApplication
     /**
      * $offers
      *
-     * @var ?array<AtsOffer> $offers
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsOffer> $offers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('offers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsOffer>|null')]
@@ -133,7 +133,7 @@ class AtsApplication
 
     /**
      *
-     * @var ?AtsApplicationStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsApplicationStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsApplicationStatus|null')]
@@ -157,21 +157,21 @@ class AtsApplication
     public ?string $userId = null;
 
     /**
-     * @param  ?array<AtsApplicationAnswer>  $answers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsApplicationAnswer>  $answers
      * @param  ?\DateTime  $appliedAt
      * @param  ?string  $candidateId
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $hiredAt
      * @param  ?string  $id
      * @param  ?string  $jobId
-     * @param  ?array<AtsMetadata>  $metadata
-     * @param  ?array<AtsOffer>  $offers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsOffer>  $offers
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $rejectedAt
      * @param  ?string  $rejectedReason
      * @param  ?string  $source
-     * @param  ?AtsApplicationStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsApplicationStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

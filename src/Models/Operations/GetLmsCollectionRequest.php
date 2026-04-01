@@ -30,7 +30,7 @@ class GetLmsCollectionRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetLmsCollectionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetLmsCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetLmsCollectionRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetLmsCollectionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetLmsCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

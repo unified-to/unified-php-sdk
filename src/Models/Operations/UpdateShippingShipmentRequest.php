@@ -14,7 +14,7 @@ class UpdateShippingShipmentRequest
 {
     /**
      *
-     * @var Shared\ShippingShipment $shippingShipment
+     * @var \Unified\Unified_to\Models\Shared\ShippingShipment $shippingShipment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ShippingShipment $shippingShipment;
@@ -38,7 +38,7 @@ class UpdateShippingShipmentRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateShippingShipmentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateShippingShipmentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateShippingShipmentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\ShippingShipment  $shippingShipment
+     * @param  \Unified\Unified_to\Models\Shared\ShippingShipment  $shippingShipment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateShippingShipmentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateShippingShipmentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -47,8 +47,8 @@ class Embedding
     /**
      * Create an embedding
      *
-     * @param  Operations\CreateGenaiEmbeddingRequest  $request
-     * @return Operations\CreateGenaiEmbeddingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createGenaiEmbedding(Operations\CreateGenaiEmbeddingRequest $request, ?Options $options = null): Operations\CreateGenaiEmbeddingResponse

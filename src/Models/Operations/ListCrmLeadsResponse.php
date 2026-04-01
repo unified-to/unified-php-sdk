@@ -35,7 +35,7 @@ class ListCrmLeadsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CrmLead> $crmLeads
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmLead> $crmLeads
      */
     public ?array $crmLeads = null;
 
@@ -43,7 +43,7 @@ class ListCrmLeadsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CrmLead>  $crmLeads
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmLead>  $crmLeads
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmLeads = null)

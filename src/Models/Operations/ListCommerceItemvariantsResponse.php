@@ -35,7 +35,7 @@ class ListCommerceItemvariantsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CommerceItemvariant> $commerceItemvariants
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant> $commerceItemvariants
      */
     public ?array $commerceItemvariants = null;
 
@@ -43,7 +43,7 @@ class ListCommerceItemvariantsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceItemvariant>  $commerceItemvariants
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>  $commerceItemvariants
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceItemvariants = null)

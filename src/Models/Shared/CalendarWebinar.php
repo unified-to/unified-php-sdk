@@ -30,7 +30,7 @@ class CalendarWebinar
     /**
      * $conference
      *
-     * @var ?array<CalendarConference> $conference
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarConference> $conference
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('conference')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarConference>|null')]
@@ -127,7 +127,7 @@ class CalendarWebinar
 
     /**
      *
-     * @var ?PropertyCalendarWebinarOrganizer $organizer
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizer $organizer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organizer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizer|null')]
@@ -145,7 +145,7 @@ class CalendarWebinar
     /**
      * $panelists
      *
-     * @var ?array<CalendarWebinarPanelist> $panelists
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarWebinarPanelist> $panelists
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('panelists')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarWebinarPanelist>|null')]
@@ -165,7 +165,7 @@ class CalendarWebinar
     /**
      * $recurrence
      *
-     * @var ?array<CalendarEventRecurrence> $recurrence
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence> $recurrence
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurrence')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>|null')]
@@ -183,7 +183,7 @@ class CalendarWebinar
     /**
      * $registrants
      *
-     * @var ?array<CalendarWebinarRegistrant> $registrants
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarWebinarRegistrant> $registrants
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('registrants')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarWebinarRegistrant>|null')]
@@ -256,7 +256,7 @@ class CalendarWebinar
 
     /**
      *
-     * @var ?CalendarWebinarStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarWebinarStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarWebinarStatus|null')]
@@ -298,7 +298,7 @@ class CalendarWebinar
     /**
      * @param  ?string  $calendarId
      * @param  ?float  $capacity
-     * @param  ?array<CalendarConference>  $conference
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarConference>  $conference
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?bool  $hasPolls
@@ -310,13 +310,13 @@ class CalendarWebinar
      * @param  ?bool  $isWebcast
      * @param  ?string  $joinUrl
      * @param  ?string  $notes
-     * @param  ?PropertyCalendarWebinarOrganizer  $organizer
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizer  $organizer
      * @param  ?string  $panelistPassword
-     * @param  ?array<CalendarWebinarPanelist>  $panelists
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarWebinarPanelist>  $panelists
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<CalendarEventRecurrence>  $recurrence
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>  $recurrence
      * @param  ?string  $registrantPassword
-     * @param  ?array<CalendarWebinarRegistrant>  $registrants
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarWebinarRegistrant>  $registrants
      * @param  ?bool  $requireAddress
      * @param  ?bool  $requireCompany
      * @param  ?bool  $requireEmail
@@ -325,7 +325,7 @@ class CalendarWebinar
      * @param  ?bool  $requireLastName
      * @param  ?bool  $requirePhone
      * @param  ?\DateTime  $startAt
-     * @param  ?CalendarWebinarStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarWebinarStatus  $status
      * @param  ?string  $subject
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt

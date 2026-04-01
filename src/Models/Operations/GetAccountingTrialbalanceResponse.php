@@ -35,7 +35,7 @@ class GetAccountingTrialbalanceResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingTrialbalance $accountingTrialbalance
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTrialbalance $accountingTrialbalance
      */
     public ?Shared\AccountingTrialbalance $accountingTrialbalance = null;
 
@@ -43,7 +43,7 @@ class GetAccountingTrialbalanceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingTrialbalance  $accountingTrialbalance
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTrialbalance  $accountingTrialbalance
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingTrialbalance $accountingTrialbalance = null)

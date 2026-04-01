@@ -53,7 +53,7 @@ class CalendarWebinarPanelist
 
     /**
      *
-     * @var ?CalendarWebinarPanelistStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarWebinarPanelistStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarWebinarPanelistStatus|null')]
@@ -66,7 +66,7 @@ class CalendarWebinarPanelist
      * @param  ?string  $joinPassword
      * @param  ?string  $joinUrl
      * @param  ?string  $name
-     * @param  ?CalendarWebinarPanelistStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarWebinarPanelistStatus  $status
      * @phpstan-pure
      */
     public function __construct(?string $email = null, ?bool $isRequired = null, ?string $joinPassword = null, ?string $joinUrl = null, ?string $name = null, ?CalendarWebinarPanelistStatus $status = null)

@@ -69,7 +69,7 @@ class PropertyMessagingEventChannel
     /**
      * $members
      *
-     * @var ?array<MessagingMember> $members
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $members
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('members')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
@@ -118,7 +118,7 @@ class PropertyMessagingEventChannel
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
-     * @param  ?array<MessagingMember>  $members
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $members
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt

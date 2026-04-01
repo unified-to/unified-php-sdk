@@ -38,7 +38,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType|null')]
@@ -57,7 +57,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
      * @param  ?string  $dollarRef
      * @param  ?string  $displayName
      * @param  ?string  $managerId
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType  $type
      * @param  ?string  $value
      * @phpstan-pure
      */

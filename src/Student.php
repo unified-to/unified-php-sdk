@@ -47,8 +47,8 @@ class Student
     /**
      * Create a student
      *
-     * @param  Operations\CreateLmsStudentRequest  $request
-     * @return Operations\CreateLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsStudentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsStudent(Operations\CreateLmsStudentRequest $request, ?Options $options = null): Operations\CreateLmsStudentResponse
@@ -114,8 +114,8 @@ class Student
     /**
      * Retrieve a student
      *
-     * @param  Operations\GetLmsStudentRequest  $request
-     * @return Operations\GetLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsStudentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsStudent(Operations\GetLmsStudentRequest $request, ?Options $options = null): Operations\GetLmsStudentResponse
@@ -176,8 +176,8 @@ class Student
     /**
      * List all students
      *
-     * @param  Operations\ListLmsStudentsRequest  $request
-     * @return Operations\ListLmsStudentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsStudentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsStudentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsStudents(Operations\ListLmsStudentsRequest $request, ?Options $options = null): Operations\ListLmsStudentsResponse
@@ -238,8 +238,8 @@ class Student
     /**
      * Update a student
      *
-     * @param  Operations\PatchLmsStudentRequest  $request
-     * @return Operations\PatchLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsStudentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsStudent(Operations\PatchLmsStudentRequest $request, ?Options $options = null): Operations\PatchLmsStudentResponse
@@ -305,8 +305,8 @@ class Student
     /**
      * Remove a student
      *
-     * @param  Operations\RemoveLmsStudentRequest  $request
-     * @return Operations\RemoveLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsStudentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsStudent(Operations\RemoveLmsStudentRequest $request, ?Options $options = null): Operations\RemoveLmsStudentResponse
@@ -361,8 +361,8 @@ class Student
     /**
      * Update a student
      *
-     * @param  Operations\UpdateLmsStudentRequest  $request
-     * @return Operations\UpdateLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsStudentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsStudent(Operations\UpdateLmsStudentRequest $request, ?Options $options = null): Operations\UpdateLmsStudentResponse

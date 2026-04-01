@@ -14,7 +14,7 @@ class UpdateTaskCommentRequest
 {
     /**
      *
-     * @var Shared\TaskComment $taskComment
+     * @var \Unified\Unified_to\Models\Shared\TaskComment $taskComment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TaskComment $taskComment;
@@ -38,7 +38,7 @@ class UpdateTaskCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateTaskCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateTaskCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateTaskCommentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TaskComment  $taskComment
+     * @param  \Unified\Unified_to\Models\Shared\TaskComment  $taskComment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateTaskCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateTaskCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

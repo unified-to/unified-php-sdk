@@ -38,7 +38,7 @@ class PropertyHrisPayslipDeduction
 
     /**
      *
-     * @var ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionCoverageLevel $coverageLevel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('coverage_level')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionCoverageLevel|null')]
@@ -63,7 +63,7 @@ class PropertyHrisPayslipDeduction
 
     /**
      *
-     * @var ?PropertyHrisPayslipDeductionFrequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency|null')]
@@ -114,7 +114,7 @@ class PropertyHrisPayslipDeduction
 
     /**
      *
-     * @var ?PropertyHrisPayslipDeductionType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionType|null')]
@@ -141,16 +141,16 @@ class PropertyHrisPayslipDeduction
      * @param  ?float  $amount
      * @param  ?string  $benefitId
      * @param  ?string  $companyId
-     * @param  ?PropertyHrisPayslipDeductionCoverageLevel  $coverageLevel
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionCoverageLevel  $coverageLevel
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
-     * @param  ?PropertyHrisPayslipDeductionFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency  $frequency
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PropertyHrisPayslipDeductionType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

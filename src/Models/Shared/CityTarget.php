@@ -36,7 +36,7 @@ class CityTarget
 
     /**
      *
-     * @var ?RadiusUnit $radiusUnit
+     * @var ?\Unified\Unified_to\Models\Shared\RadiusUnit $radiusUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('radius_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\RadiusUnit|null')]
@@ -47,7 +47,7 @@ class CityTarget
      * @param  string  $id
      * @param  ?string  $name
      * @param  ?float  $radius
-     * @param  ?RadiusUnit  $radiusUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\RadiusUnit  $radiusUnit
      * @phpstan-pure
      */
     public function __construct(string $id, ?string $name = null, ?float $radius = null, ?RadiusUnit $radiusUnit = null)

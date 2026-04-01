@@ -47,8 +47,8 @@ class Creative
     /**
      * Create a creative
      *
-     * @param  Operations\CreateAdsCreativeRequest  $request
-     * @return Operations\CreateAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsCreative(Operations\CreateAdsCreativeRequest $request, ?Options $options = null): Operations\CreateAdsCreativeResponse
@@ -114,8 +114,8 @@ class Creative
     /**
      * Retrieve a creative
      *
-     * @param  Operations\GetAdsCreativeRequest  $request
-     * @return Operations\GetAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsCreative(Operations\GetAdsCreativeRequest $request, ?Options $options = null): Operations\GetAdsCreativeResponse
@@ -176,8 +176,8 @@ class Creative
     /**
      * List all creatives
      *
-     * @param  Operations\ListAdsCreativesRequest  $request
-     * @return Operations\ListAdsCreativesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsCreativesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsCreativesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsCreatives(Operations\ListAdsCreativesRequest $request, ?Options $options = null): Operations\ListAdsCreativesResponse
@@ -238,8 +238,8 @@ class Creative
     /**
      * Update a creative
      *
-     * @param  Operations\PatchAdsCreativeRequest  $request
-     * @return Operations\PatchAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsCreative(Operations\PatchAdsCreativeRequest $request, ?Options $options = null): Operations\PatchAdsCreativeResponse
@@ -305,8 +305,8 @@ class Creative
     /**
      * Remove a creative
      *
-     * @param  Operations\RemoveAdsCreativeRequest  $request
-     * @return Operations\RemoveAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsCreative(Operations\RemoveAdsCreativeRequest $request, ?Options $options = null): Operations\RemoveAdsCreativeResponse
@@ -361,8 +361,8 @@ class Creative
     /**
      * Update a creative
      *
-     * @param  Operations\UpdateAdsCreativeRequest  $request
-     * @return Operations\UpdateAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsCreative(Operations\UpdateAdsCreativeRequest $request, ?Options $options = null): Operations\UpdateAdsCreativeResponse

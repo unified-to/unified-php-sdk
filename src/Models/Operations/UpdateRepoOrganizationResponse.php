@@ -35,7 +35,7 @@ class UpdateRepoOrganizationResponse
     /**
      * Successful
      *
-     * @var ?Shared\RepoOrganization $repoOrganization
+     * @var ?\Unified\Unified_to\Models\Shared\RepoOrganization $repoOrganization
      */
     public ?Shared\RepoOrganization $repoOrganization = null;
 
@@ -43,7 +43,7 @@ class UpdateRepoOrganizationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\RepoOrganization  $repoOrganization
+     * @param  ?\Unified\Unified_to\Models\Shared\RepoOrganization  $repoOrganization
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\RepoOrganization $repoOrganization = null)

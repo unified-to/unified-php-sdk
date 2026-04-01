@@ -14,7 +14,7 @@ class CreateAtsDocumentRequest
 {
     /**
      *
-     * @var Shared\AtsDocument $atsDocument
+     * @var \Unified\Unified_to\Models\Shared\AtsDocument $atsDocument
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsDocument $atsDocument;
@@ -30,7 +30,7 @@ class CreateAtsDocumentRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAtsDocumentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAtsDocumentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAtsDocumentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsDocument  $atsDocument
+     * @param  \Unified\Unified_to\Models\Shared\AtsDocument  $atsDocument
      * @param  string  $connectionId
-     * @param  ?array<CreateAtsDocumentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAtsDocumentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

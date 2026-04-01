@@ -15,7 +15,7 @@ class EnrichCompany
     /**
      * The address of the company
      *
-     * @var ?PropertyEnrichCompanyAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress|null')]
@@ -179,7 +179,7 @@ class EnrichCompany
     /**
      * An array of telephones for this company
      *
-     * @var ?array<EnrichTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
@@ -235,7 +235,7 @@ class EnrichCompany
     public ?string $youtubeUrl = null;
 
     /**
-     * @param  ?PropertyEnrichCompanyAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyEnrichCompanyAddress  $address
      * @param  ?float  $alexaRank
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $crunchbaseUrl
@@ -255,7 +255,7 @@ class EnrichCompany
      * @param  ?string  $revenue
      * @param  ?float  $sicCode
      * @param  ?string  $stock
-     * @param  ?array<EnrichTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichTelephone>  $telephones
      * @param  ?string  $twitterHandle
      * @param  ?string  $twitterUrl
      * @param  ?\DateTime  $updatedAt

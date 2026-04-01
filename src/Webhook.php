@@ -49,8 +49,8 @@ class Webhook
      *
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      *
-     * @param  Operations\CreateUnifiedWebhookRequest  $request
-     * @return Operations\CreateUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedWebhook(Operations\CreateUnifiedWebhookRequest $request, ?Options $options = null): Operations\CreateUnifiedWebhookResponse
@@ -116,8 +116,8 @@ class Webhook
     /**
      * Retrieve webhook by its ID
      *
-     * @param  Operations\GetUnifiedWebhookRequest  $request
-     * @return Operations\GetUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedWebhook(Operations\GetUnifiedWebhookRequest $request, ?Options $options = null): Operations\GetUnifiedWebhookResponse
@@ -175,8 +175,8 @@ class Webhook
     /**
      * Returns all registered webhooks
      *
-     * @param  ?Operations\ListUnifiedWebhooksRequest  $request
-     * @return Operations\ListUnifiedWebhooksResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedWebhooks(?Operations\ListUnifiedWebhooksRequest $request = null, ?Options $options = null): Operations\ListUnifiedWebhooksResponse
@@ -237,8 +237,8 @@ class Webhook
     /**
      * Update webhook subscription
      *
-     * @param  Operations\PatchUnifiedWebhookRequest  $request
-     * @return Operations\PatchUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedWebhook(Operations\PatchUnifiedWebhookRequest $request, ?Options $options = null): Operations\PatchUnifiedWebhookResponse
@@ -301,8 +301,8 @@ class Webhook
     /**
      * Trigger webhook
      *
-     * @param  Operations\PatchUnifiedWebhookTriggerRequest  $request
-     * @return Operations\PatchUnifiedWebhookTriggerResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedWebhookTrigger(Operations\PatchUnifiedWebhookTriggerRequest $request, ?Options $options = null): Operations\PatchUnifiedWebhookTriggerResponse
@@ -357,8 +357,8 @@ class Webhook
     /**
      * Remove webhook subscription
      *
-     * @param  Operations\RemoveUnifiedWebhookRequest  $request
-     * @return Operations\RemoveUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedWebhook(Operations\RemoveUnifiedWebhookRequest $request, ?Options $options = null): Operations\RemoveUnifiedWebhookResponse
@@ -413,8 +413,8 @@ class Webhook
     /**
      * Update webhook subscription
      *
-     * @param  Operations\UpdateUnifiedWebhookRequest  $request
-     * @return Operations\UpdateUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedWebhook(Operations\UpdateUnifiedWebhookRequest $request, ?Options $options = null): Operations\UpdateUnifiedWebhookResponse
@@ -477,8 +477,8 @@ class Webhook
     /**
      * Trigger webhook
      *
-     * @param  Operations\UpdateUnifiedWebhookTriggerRequest  $request
-     * @return Operations\UpdateUnifiedWebhookTriggerResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedWebhookTrigger(Operations\UpdateUnifiedWebhookTriggerRequest $request, ?Options $options = null): Operations\UpdateUnifiedWebhookTriggerResponse

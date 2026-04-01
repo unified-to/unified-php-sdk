@@ -14,7 +14,7 @@ class PatchAtsJobRequest
 {
     /**
      *
-     * @var Shared\AtsJob $atsJob
+     * @var \Unified\Unified_to\Models\Shared\AtsJob $atsJob
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsJob $atsJob;
@@ -38,7 +38,7 @@ class PatchAtsJobRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAtsJobQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAtsJobQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAtsJobRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsJob  $atsJob
+     * @param  \Unified\Unified_to\Models\Shared\AtsJob  $atsJob
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAtsJobQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAtsJobQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

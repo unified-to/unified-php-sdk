@@ -14,7 +14,7 @@ class PatchTicketingCustomerRequest
 {
     /**
      *
-     * @var Shared\TicketingCustomer $ticketingCustomer
+     * @var \Unified\Unified_to\Models\Shared\TicketingCustomer $ticketingCustomer
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TicketingCustomer $ticketingCustomer;
@@ -38,7 +38,7 @@ class PatchTicketingCustomerRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchTicketingCustomerQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchTicketingCustomerQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchTicketingCustomerRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TicketingCustomer  $ticketingCustomer
+     * @param  \Unified\Unified_to\Models\Shared\TicketingCustomer  $ticketingCustomer
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchTicketingCustomerQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchTicketingCustomerQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

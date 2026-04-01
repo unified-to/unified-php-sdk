@@ -22,7 +22,7 @@ class ListAccountingTaxratesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingTaxratesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingTaxratesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListAccountingTaxratesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAccountingTaxratesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingTaxratesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

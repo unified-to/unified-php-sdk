@@ -14,7 +14,7 @@ class UpdateAtsScorecardRequest
 {
     /**
      *
-     * @var Shared\AtsScorecard $atsScorecard
+     * @var \Unified\Unified_to\Models\Shared\AtsScorecard $atsScorecard
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsScorecard $atsScorecard;
@@ -38,7 +38,7 @@ class UpdateAtsScorecardRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAtsScorecardQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAtsScorecardQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAtsScorecardRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsScorecard  $atsScorecard
+     * @param  \Unified\Unified_to\Models\Shared\AtsScorecard  $atsScorecard
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAtsScorecardQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAtsScorecardQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

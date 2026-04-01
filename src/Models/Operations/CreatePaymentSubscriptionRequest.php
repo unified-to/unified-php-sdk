@@ -14,7 +14,7 @@ class CreatePaymentSubscriptionRequest
 {
     /**
      *
-     * @var Shared\PaymentSubscription $paymentSubscription
+     * @var \Unified\Unified_to\Models\Shared\PaymentSubscription $paymentSubscription
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\PaymentSubscription $paymentSubscription;
@@ -30,7 +30,7 @@ class CreatePaymentSubscriptionRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreatePaymentSubscriptionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreatePaymentSubscriptionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\PaymentSubscription  $paymentSubscription
+     * @param  \Unified\Unified_to\Models\Shared\PaymentSubscription  $paymentSubscription
      * @param  string  $connectionId
-     * @param  ?array<CreatePaymentSubscriptionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

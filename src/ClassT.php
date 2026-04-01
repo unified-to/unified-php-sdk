@@ -47,8 +47,8 @@ class ClassT
     /**
      * Create a class
      *
-     * @param  Operations\CreateLmsClassRequest  $request
-     * @return Operations\CreateLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsClassRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsClass(Operations\CreateLmsClassRequest $request, ?Options $options = null): Operations\CreateLmsClassResponse
@@ -114,8 +114,8 @@ class ClassT
     /**
      * Retrieve a class
      *
-     * @param  Operations\GetLmsClassRequest  $request
-     * @return Operations\GetLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsClassRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsClass(Operations\GetLmsClassRequest $request, ?Options $options = null): Operations\GetLmsClassResponse
@@ -176,8 +176,8 @@ class ClassT
     /**
      * List all classes
      *
-     * @param  Operations\ListLmsClassesRequest  $request
-     * @return Operations\ListLmsClassesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsClassesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsClassesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsClasses(Operations\ListLmsClassesRequest $request, ?Options $options = null): Operations\ListLmsClassesResponse
@@ -238,8 +238,8 @@ class ClassT
     /**
      * Update a class
      *
-     * @param  Operations\PatchLmsClassRequest  $request
-     * @return Operations\PatchLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsClassRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsClass(Operations\PatchLmsClassRequest $request, ?Options $options = null): Operations\PatchLmsClassResponse
@@ -305,8 +305,8 @@ class ClassT
     /**
      * Remove a class
      *
-     * @param  Operations\RemoveLmsClassRequest  $request
-     * @return Operations\RemoveLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsClassRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsClass(Operations\RemoveLmsClassRequest $request, ?Options $options = null): Operations\RemoveLmsClassResponse
@@ -361,8 +361,8 @@ class ClassT
     /**
      * Update a class
      *
-     * @param  Operations\UpdateLmsClassRequest  $request
-     * @return Operations\UpdateLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsClassRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsClass(Operations\UpdateLmsClassRequest $request, ?Options $options = null): Operations\UpdateLmsClassResponse

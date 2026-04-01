@@ -14,7 +14,7 @@ class UpdateHrisCompanyRequest
 {
     /**
      *
-     * @var Shared\HrisCompany $hrisCompany
+     * @var \Unified\Unified_to\Models\Shared\HrisCompany $hrisCompany
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisCompany $hrisCompany;
@@ -38,7 +38,7 @@ class UpdateHrisCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateHrisCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateHrisCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateHrisCompanyRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisCompany  $hrisCompany
+     * @param  \Unified\Unified_to\Models\Shared\HrisCompany  $hrisCompany
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateHrisCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateHrisCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

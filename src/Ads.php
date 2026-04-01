@@ -47,8 +47,8 @@ class Ads
     /**
      * Create an ad
      *
-     * @param  Operations\CreateAdsAdRequest  $request
-     * @return Operations\CreateAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsAd(Operations\CreateAdsAdRequest $request, ?Options $options = null): Operations\CreateAdsAdResponse
@@ -114,8 +114,8 @@ class Ads
     /**
      * Create a campaign
      *
-     * @param  Operations\CreateAdsCampaignRequest  $request
-     * @return Operations\CreateAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsCampaign(Operations\CreateAdsCampaignRequest $request, ?Options $options = null): Operations\CreateAdsCampaignResponse
@@ -181,8 +181,8 @@ class Ads
     /**
      * Create a creative
      *
-     * @param  Operations\CreateAdsCreativeRequest  $request
-     * @return Operations\CreateAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsCreative(Operations\CreateAdsCreativeRequest $request, ?Options $options = null): Operations\CreateAdsCreativeResponse
@@ -248,8 +248,8 @@ class Ads
     /**
      * Create a group
      *
-     * @param  Operations\CreateAdsGroupRequest  $request
-     * @return Operations\CreateAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsGroup(Operations\CreateAdsGroupRequest $request, ?Options $options = null): Operations\CreateAdsGroupResponse
@@ -315,8 +315,8 @@ class Ads
     /**
      * Create an insertionorder
      *
-     * @param  Operations\CreateAdsInsertionorderRequest  $request
-     * @return Operations\CreateAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsInsertionorder(Operations\CreateAdsInsertionorderRequest $request, ?Options $options = null): Operations\CreateAdsInsertionorderResponse
@@ -382,8 +382,8 @@ class Ads
     /**
      * Create an organization
      *
-     * @param  Operations\CreateAdsOrganizationRequest  $request
-     * @return Operations\CreateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsOrganization(Operations\CreateAdsOrganizationRequest $request, ?Options $options = null): Operations\CreateAdsOrganizationResponse
@@ -449,8 +449,8 @@ class Ads
     /**
      * Retrieve an ad
      *
-     * @param  Operations\GetAdsAdRequest  $request
-     * @return Operations\GetAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsAd(Operations\GetAdsAdRequest $request, ?Options $options = null): Operations\GetAdsAdResponse
@@ -511,8 +511,8 @@ class Ads
     /**
      * Retrieve a campaign
      *
-     * @param  Operations\GetAdsCampaignRequest  $request
-     * @return Operations\GetAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsCampaign(Operations\GetAdsCampaignRequest $request, ?Options $options = null): Operations\GetAdsCampaignResponse
@@ -573,8 +573,8 @@ class Ads
     /**
      * Retrieve a creative
      *
-     * @param  Operations\GetAdsCreativeRequest  $request
-     * @return Operations\GetAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsCreative(Operations\GetAdsCreativeRequest $request, ?Options $options = null): Operations\GetAdsCreativeResponse
@@ -635,8 +635,8 @@ class Ads
     /**
      * Retrieve a group
      *
-     * @param  Operations\GetAdsGroupRequest  $request
-     * @return Operations\GetAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsGroup(Operations\GetAdsGroupRequest $request, ?Options $options = null): Operations\GetAdsGroupResponse
@@ -697,8 +697,8 @@ class Ads
     /**
      * Retrieve an insertionorder
      *
-     * @param  Operations\GetAdsInsertionorderRequest  $request
-     * @return Operations\GetAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsInsertionorder(Operations\GetAdsInsertionorderRequest $request, ?Options $options = null): Operations\GetAdsInsertionorderResponse
@@ -759,8 +759,8 @@ class Ads
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetAdsOrganizationRequest  $request
-     * @return Operations\GetAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsOrganization(Operations\GetAdsOrganizationRequest $request, ?Options $options = null): Operations\GetAdsOrganizationResponse
@@ -821,8 +821,8 @@ class Ads
     /**
      * List all ads
      *
-     * @param  Operations\ListAdsAdsRequest  $request
-     * @return Operations\ListAdsAdsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsAdsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsAdsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsAds(Operations\ListAdsAdsRequest $request, ?Options $options = null): Operations\ListAdsAdsResponse
@@ -883,8 +883,8 @@ class Ads
     /**
      * List all campaigns
      *
-     * @param  Operations\ListAdsCampaignsRequest  $request
-     * @return Operations\ListAdsCampaignsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsCampaignsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsCampaigns(Operations\ListAdsCampaignsRequest $request, ?Options $options = null): Operations\ListAdsCampaignsResponse
@@ -945,8 +945,8 @@ class Ads
     /**
      * List all creatives
      *
-     * @param  Operations\ListAdsCreativesRequest  $request
-     * @return Operations\ListAdsCreativesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsCreativesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsCreativesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsCreatives(Operations\ListAdsCreativesRequest $request, ?Options $options = null): Operations\ListAdsCreativesResponse
@@ -1007,8 +1007,8 @@ class Ads
     /**
      * List all groups
      *
-     * @param  Operations\ListAdsGroupsRequest  $request
-     * @return Operations\ListAdsGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsGroups(Operations\ListAdsGroupsRequest $request, ?Options $options = null): Operations\ListAdsGroupsResponse
@@ -1069,8 +1069,8 @@ class Ads
     /**
      * List all insertionorders
      *
-     * @param  Operations\ListAdsInsertionordersRequest  $request
-     * @return Operations\ListAdsInsertionordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsInsertionorders(Operations\ListAdsInsertionordersRequest $request, ?Options $options = null): Operations\ListAdsInsertionordersResponse
@@ -1131,8 +1131,8 @@ class Ads
     /**
      * List all organizations
      *
-     * @param  Operations\ListAdsOrganizationsRequest  $request
-     * @return Operations\ListAdsOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsOrganizations(Operations\ListAdsOrganizationsRequest $request, ?Options $options = null): Operations\ListAdsOrganizationsResponse
@@ -1193,8 +1193,8 @@ class Ads
     /**
      * List all promoteds
      *
-     * @param  Operations\ListAdsPromotedsRequest  $request
-     * @return Operations\ListAdsPromotedsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsPromotedsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsPromotedsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsPromoteds(Operations\ListAdsPromotedsRequest $request, ?Options $options = null): Operations\ListAdsPromotedsResponse
@@ -1255,8 +1255,8 @@ class Ads
     /**
      * List all reports
      *
-     * @param  Operations\ListAdsReportsRequest  $request
-     * @return Operations\ListAdsReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsReports(Operations\ListAdsReportsRequest $request, ?Options $options = null): Operations\ListAdsReportsResponse
@@ -1317,8 +1317,8 @@ class Ads
     /**
      * List all targets
      *
-     * @param  Operations\ListAdsTargetsRequest  $request
-     * @return Operations\ListAdsTargetsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsTargetsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsTargetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsTargets(Operations\ListAdsTargetsRequest $request, ?Options $options = null): Operations\ListAdsTargetsResponse
@@ -1379,8 +1379,8 @@ class Ads
     /**
      * Update an ad
      *
-     * @param  Operations\PatchAdsAdRequest  $request
-     * @return Operations\PatchAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsAd(Operations\PatchAdsAdRequest $request, ?Options $options = null): Operations\PatchAdsAdResponse
@@ -1446,8 +1446,8 @@ class Ads
     /**
      * Update a campaign
      *
-     * @param  Operations\PatchAdsCampaignRequest  $request
-     * @return Operations\PatchAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsCampaign(Operations\PatchAdsCampaignRequest $request, ?Options $options = null): Operations\PatchAdsCampaignResponse
@@ -1513,8 +1513,8 @@ class Ads
     /**
      * Update a creative
      *
-     * @param  Operations\PatchAdsCreativeRequest  $request
-     * @return Operations\PatchAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsCreative(Operations\PatchAdsCreativeRequest $request, ?Options $options = null): Operations\PatchAdsCreativeResponse
@@ -1580,8 +1580,8 @@ class Ads
     /**
      * Update a group
      *
-     * @param  Operations\PatchAdsGroupRequest  $request
-     * @return Operations\PatchAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsGroup(Operations\PatchAdsGroupRequest $request, ?Options $options = null): Operations\PatchAdsGroupResponse
@@ -1647,8 +1647,8 @@ class Ads
     /**
      * Update an insertionorder
      *
-     * @param  Operations\PatchAdsInsertionorderRequest  $request
-     * @return Operations\PatchAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsInsertionorder(Operations\PatchAdsInsertionorderRequest $request, ?Options $options = null): Operations\PatchAdsInsertionorderResponse
@@ -1714,8 +1714,8 @@ class Ads
     /**
      * Update an organization
      *
-     * @param  Operations\PatchAdsOrganizationRequest  $request
-     * @return Operations\PatchAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsOrganization(Operations\PatchAdsOrganizationRequest $request, ?Options $options = null): Operations\PatchAdsOrganizationResponse
@@ -1781,8 +1781,8 @@ class Ads
     /**
      * Remove an ad
      *
-     * @param  Operations\RemoveAdsAdRequest  $request
-     * @return Operations\RemoveAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsAd(Operations\RemoveAdsAdRequest $request, ?Options $options = null): Operations\RemoveAdsAdResponse
@@ -1837,8 +1837,8 @@ class Ads
     /**
      * Remove a campaign
      *
-     * @param  Operations\RemoveAdsCampaignRequest  $request
-     * @return Operations\RemoveAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsCampaign(Operations\RemoveAdsCampaignRequest $request, ?Options $options = null): Operations\RemoveAdsCampaignResponse
@@ -1893,8 +1893,8 @@ class Ads
     /**
      * Remove a creative
      *
-     * @param  Operations\RemoveAdsCreativeRequest  $request
-     * @return Operations\RemoveAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsCreative(Operations\RemoveAdsCreativeRequest $request, ?Options $options = null): Operations\RemoveAdsCreativeResponse
@@ -1949,8 +1949,8 @@ class Ads
     /**
      * Remove a group
      *
-     * @param  Operations\RemoveAdsGroupRequest  $request
-     * @return Operations\RemoveAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsGroup(Operations\RemoveAdsGroupRequest $request, ?Options $options = null): Operations\RemoveAdsGroupResponse
@@ -2005,8 +2005,8 @@ class Ads
     /**
      * Remove an insertionorder
      *
-     * @param  Operations\RemoveAdsInsertionorderRequest  $request
-     * @return Operations\RemoveAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsInsertionorder(Operations\RemoveAdsInsertionorderRequest $request, ?Options $options = null): Operations\RemoveAdsInsertionorderResponse
@@ -2061,8 +2061,8 @@ class Ads
     /**
      * Remove an organization
      *
-     * @param  Operations\RemoveAdsOrganizationRequest  $request
-     * @return Operations\RemoveAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsOrganization(Operations\RemoveAdsOrganizationRequest $request, ?Options $options = null): Operations\RemoveAdsOrganizationResponse
@@ -2117,8 +2117,8 @@ class Ads
     /**
      * Update an ad
      *
-     * @param  Operations\UpdateAdsAdRequest  $request
-     * @return Operations\UpdateAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsAd(Operations\UpdateAdsAdRequest $request, ?Options $options = null): Operations\UpdateAdsAdResponse
@@ -2184,8 +2184,8 @@ class Ads
     /**
      * Update a campaign
      *
-     * @param  Operations\UpdateAdsCampaignRequest  $request
-     * @return Operations\UpdateAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsCampaign(Operations\UpdateAdsCampaignRequest $request, ?Options $options = null): Operations\UpdateAdsCampaignResponse
@@ -2251,8 +2251,8 @@ class Ads
     /**
      * Update a creative
      *
-     * @param  Operations\UpdateAdsCreativeRequest  $request
-     * @return Operations\UpdateAdsCreativeResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCreativeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsCreative(Operations\UpdateAdsCreativeRequest $request, ?Options $options = null): Operations\UpdateAdsCreativeResponse
@@ -2318,8 +2318,8 @@ class Ads
     /**
      * Update a group
      *
-     * @param  Operations\UpdateAdsGroupRequest  $request
-     * @return Operations\UpdateAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsGroup(Operations\UpdateAdsGroupRequest $request, ?Options $options = null): Operations\UpdateAdsGroupResponse
@@ -2385,8 +2385,8 @@ class Ads
     /**
      * Update an insertionorder
      *
-     * @param  Operations\UpdateAdsInsertionorderRequest  $request
-     * @return Operations\UpdateAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsInsertionorder(Operations\UpdateAdsInsertionorderRequest $request, ?Options $options = null): Operations\UpdateAdsInsertionorderResponse
@@ -2452,8 +2452,8 @@ class Ads
     /**
      * Update an organization
      *
-     * @param  Operations\UpdateAdsOrganizationRequest  $request
-     * @return Operations\UpdateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsOrganization(Operations\UpdateAdsOrganizationRequest $request, ?Options $options = null): Operations\UpdateAdsOrganizationResponse

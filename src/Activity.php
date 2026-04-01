@@ -47,8 +47,8 @@ class Activity
     /**
      * Create an activity
      *
-     * @param  Operations\CreateAtsActivityRequest  $request
-     * @return Operations\CreateAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsActivity(Operations\CreateAtsActivityRequest $request, ?Options $options = null): Operations\CreateAtsActivityResponse
@@ -114,8 +114,8 @@ class Activity
     /**
      * Create an activity
      *
-     * @param  Operations\CreateLmsActivityRequest  $request
-     * @return Operations\CreateLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsActivity(Operations\CreateLmsActivityRequest $request, ?Options $options = null): Operations\CreateLmsActivityResponse
@@ -181,8 +181,8 @@ class Activity
     /**
      * Retrieve an activity
      *
-     * @param  Operations\GetAtsActivityRequest  $request
-     * @return Operations\GetAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsActivity(Operations\GetAtsActivityRequest $request, ?Options $options = null): Operations\GetAtsActivityResponse
@@ -243,8 +243,8 @@ class Activity
     /**
      * Retrieve an activity
      *
-     * @param  Operations\GetLmsActivityRequest  $request
-     * @return Operations\GetLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsActivity(Operations\GetLmsActivityRequest $request, ?Options $options = null): Operations\GetLmsActivityResponse
@@ -305,8 +305,8 @@ class Activity
     /**
      * List all activities
      *
-     * @param  Operations\ListAtsActivitiesRequest  $request
-     * @return Operations\ListAtsActivitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsActivities(Operations\ListAtsActivitiesRequest $request, ?Options $options = null): Operations\ListAtsActivitiesResponse
@@ -367,8 +367,8 @@ class Activity
     /**
      * List all activities
      *
-     * @param  Operations\ListLmsActivitiesRequest  $request
-     * @return Operations\ListLmsActivitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsActivitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsActivities(Operations\ListLmsActivitiesRequest $request, ?Options $options = null): Operations\ListLmsActivitiesResponse
@@ -429,8 +429,8 @@ class Activity
     /**
      * Update an activity
      *
-     * @param  Operations\PatchAtsActivityRequest  $request
-     * @return Operations\PatchAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsActivity(Operations\PatchAtsActivityRequest $request, ?Options $options = null): Operations\PatchAtsActivityResponse
@@ -496,8 +496,8 @@ class Activity
     /**
      * Update an activity
      *
-     * @param  Operations\PatchLmsActivityRequest  $request
-     * @return Operations\PatchLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsActivity(Operations\PatchLmsActivityRequest $request, ?Options $options = null): Operations\PatchLmsActivityResponse
@@ -563,8 +563,8 @@ class Activity
     /**
      * Remove an activity
      *
-     * @param  Operations\RemoveAtsActivityRequest  $request
-     * @return Operations\RemoveAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsActivity(Operations\RemoveAtsActivityRequest $request, ?Options $options = null): Operations\RemoveAtsActivityResponse
@@ -619,8 +619,8 @@ class Activity
     /**
      * Remove an activity
      *
-     * @param  Operations\RemoveLmsActivityRequest  $request
-     * @return Operations\RemoveLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsActivity(Operations\RemoveLmsActivityRequest $request, ?Options $options = null): Operations\RemoveLmsActivityResponse
@@ -675,8 +675,8 @@ class Activity
     /**
      * Update an activity
      *
-     * @param  Operations\UpdateAtsActivityRequest  $request
-     * @return Operations\UpdateAtsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsActivity(Operations\UpdateAtsActivityRequest $request, ?Options $options = null): Operations\UpdateAtsActivityResponse
@@ -742,8 +742,8 @@ class Activity
     /**
      * Update an activity
      *
-     * @param  Operations\UpdateLmsActivityRequest  $request
-     * @return Operations\UpdateLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsActivityRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsActivity(Operations\UpdateLmsActivityRequest $request, ?Options $options = null): Operations\UpdateLmsActivityResponse

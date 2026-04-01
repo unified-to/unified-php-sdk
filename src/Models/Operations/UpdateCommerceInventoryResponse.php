@@ -35,7 +35,7 @@ class UpdateCommerceInventoryResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceInventory $commerceInventory
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceInventory $commerceInventory
      */
     public ?Shared\CommerceInventory $commerceInventory = null;
 
@@ -43,7 +43,7 @@ class UpdateCommerceInventoryResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceInventory  $commerceInventory
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceInventory  $commerceInventory
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceInventory $commerceInventory = null)

@@ -47,8 +47,8 @@ class Course
     /**
      * Create a course
      *
-     * @param  Operations\CreateLmsCourseRequest  $request
-     * @return Operations\CreateLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCourseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsCourse(Operations\CreateLmsCourseRequest $request, ?Options $options = null): Operations\CreateLmsCourseResponse
@@ -114,8 +114,8 @@ class Course
     /**
      * Retrieve a course
      *
-     * @param  Operations\GetLmsCourseRequest  $request
-     * @return Operations\GetLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsCourseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsCourse(Operations\GetLmsCourseRequest $request, ?Options $options = null): Operations\GetLmsCourseResponse
@@ -176,8 +176,8 @@ class Course
     /**
      * List all courses
      *
-     * @param  Operations\ListLmsCoursesRequest  $request
-     * @return Operations\ListLmsCoursesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsCoursesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsCoursesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsCourses(Operations\ListLmsCoursesRequest $request, ?Options $options = null): Operations\ListLmsCoursesResponse
@@ -238,8 +238,8 @@ class Course
     /**
      * Update a course
      *
-     * @param  Operations\PatchLmsCourseRequest  $request
-     * @return Operations\PatchLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCourseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsCourse(Operations\PatchLmsCourseRequest $request, ?Options $options = null): Operations\PatchLmsCourseResponse
@@ -305,8 +305,8 @@ class Course
     /**
      * Remove a course
      *
-     * @param  Operations\RemoveLmsCourseRequest  $request
-     * @return Operations\RemoveLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCourseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsCourse(Operations\RemoveLmsCourseRequest $request, ?Options $options = null): Operations\RemoveLmsCourseResponse
@@ -361,8 +361,8 @@ class Course
     /**
      * Update a course
      *
-     * @param  Operations\UpdateLmsCourseRequest  $request
-     * @return Operations\UpdateLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCourseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsCourse(Operations\UpdateLmsCourseRequest $request, ?Options $options = null): Operations\UpdateLmsCourseResponse

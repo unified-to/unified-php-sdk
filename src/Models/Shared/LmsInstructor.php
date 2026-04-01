@@ -22,7 +22,7 @@ class LmsInstructor
     /**
      * $emails
      *
-     * @var ?array<LmsEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsEmail>|null')]
@@ -82,7 +82,7 @@ class LmsInstructor
     /**
      * $telephones
      *
-     * @var ?array<LmsTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsTelephone>|null')]
@@ -107,14 +107,14 @@ class LmsInstructor
 
     /**
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<LmsEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<LmsTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

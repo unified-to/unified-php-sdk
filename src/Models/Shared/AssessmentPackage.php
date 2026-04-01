@@ -28,7 +28,7 @@ class AssessmentPackage
 
     /**
      *
-     * @var AssessmentPackageType $type
+     * @var \Unified\Unified_to\Models\Shared\AssessmentPackageType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AssessmentPackageType')]
@@ -121,7 +121,7 @@ class AssessmentPackage
     /**
      * Questionsinputs needed for this assessment (aligned with verification)
      *
-     * @var ?array<AssessmentParameter> $parameters
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentParameter> $parameters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parameters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentParameter>|null')]
@@ -141,7 +141,7 @@ class AssessmentPackage
     /**
      * $regions
      *
-     * @var ?array<AssessmentPackageRegion> $regions
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentPackageRegion> $regions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('regions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentPackageRegion>|null')]
@@ -177,7 +177,7 @@ class AssessmentPackage
     /**
      * @param  string  $id
      * @param  string  $name
-     * @param  AssessmentPackageType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AssessmentPackageType  $type
      * @param  ?array<string>  $aliases
      * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdAt
@@ -188,9 +188,9 @@ class AssessmentPackage
      * @param  ?array<string>  $integrationTypes
      * @param  ?float  $maxScore
      * @param  ?bool  $needsIpAddress
-     * @param  ?array<AssessmentParameter>  $parameters
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentParameter>  $parameters
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<AssessmentPackageRegion>  $regions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentPackageRegion>  $regions
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId

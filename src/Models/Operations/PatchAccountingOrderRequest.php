@@ -14,7 +14,7 @@ class PatchAccountingOrderRequest
 {
     /**
      *
-     * @var Shared\AccountingOrder $accountingOrder
+     * @var \Unified\Unified_to\Models\Shared\AccountingOrder $accountingOrder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingOrder $accountingOrder;
@@ -38,7 +38,7 @@ class PatchAccountingOrderRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAccountingOrderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAccountingOrderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAccountingOrderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingOrder  $accountingOrder
+     * @param  \Unified\Unified_to\Models\Shared\AccountingOrder  $accountingOrder
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAccountingOrderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAccountingOrderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

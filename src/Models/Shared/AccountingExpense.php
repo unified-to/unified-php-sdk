@@ -70,7 +70,7 @@ class AccountingExpense
     /**
      * $lineitems
      *
-     * @var ?array<AccountingLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
@@ -175,7 +175,7 @@ class AccountingExpense
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
-     * @param  ?array<AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod

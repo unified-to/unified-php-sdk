@@ -14,7 +14,7 @@ class AtsJob
     /**
      * $addresses
      *
-     * @var ?array<AtsAddress> $addresses
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsAddress> $addresses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addresses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsAddress>|null')]
@@ -40,7 +40,7 @@ class AtsJob
     /**
      * $compensation
      *
-     * @var ?array<AtsCompensation> $compensation
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCompensation> $compensation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('compensation')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>|null')]
@@ -65,7 +65,7 @@ class AtsJob
 
     /**
      *
-     * @var ?EmploymentType $employmentType
+     * @var ?\Unified\Unified_to\Models\Shared\EmploymentType $employmentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('employment_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentType|null')]
@@ -75,7 +75,7 @@ class AtsJob
     /**
      * The departments/divisions/teams that this job belongs to
      *
-     * @var ?array<AtsGroup> $groups
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsGroup> $groups
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('groups')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsGroup>|null')]
@@ -111,7 +111,7 @@ class AtsJob
     /**
      * $metadata
      *
-     * @var ?array<AtsMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
@@ -153,7 +153,7 @@ class AtsJob
     /**
      * $openings
      *
-     * @var ?array<AtsJobOpening> $openings
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsJobOpening> $openings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('openings')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobOpening>|null')]
@@ -163,7 +163,7 @@ class AtsJob
     /**
      * Public job postings
      *
-     * @var ?array<AtsJobPosting> $postings
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsJobPosting> $postings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('postings')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobPosting>|null')]
@@ -183,7 +183,7 @@ class AtsJob
     /**
      * $questions
      *
-     * @var ?array<AtsJobQuestion> $questions
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsJobQuestion> $questions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('questions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>|null')]
@@ -230,7 +230,7 @@ class AtsJob
 
     /**
      *
-     * @var ?AtsJobStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsJobStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobStatus|null')]
@@ -246,31 +246,31 @@ class AtsJob
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?array<AtsAddress>  $addresses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsAddress>  $addresses
      * @param  ?\DateTime  $closedAt
      * @param  ?string  $companyId
-     * @param  ?array<AtsCompensation>  $compensation
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
-     * @param  ?EmploymentType  $employmentType
-     * @param  ?array<AtsGroup>  $groups
+     * @param  ?\Unified\Unified_to\Models\Shared\EmploymentType  $employmentType
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsGroup>  $groups
      * @param  ?array<string>  $hiringManagerIds
      * @param  ?string  $id
      * @param  ?string  $languageLocale
-     * @param  ?array<AtsMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?string  $minimumDegree
      * @param  ?float  $minimumExperienceYears
      * @param  ?string  $name
      * @param  ?float  $numberOfOpenings
-     * @param  ?array<AtsJobOpening>  $openings
-     * @param  ?array<AtsJobPosting>  $postings
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsJobOpening>  $openings
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsJobPosting>  $postings
      * @param  ?array<string>  $publicJobUrls
-     * @param  ?array<AtsJobQuestion>  $questions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsJobQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $recruiterIds
      * @param  ?bool  $remote
      * @param  ?array<string>  $skills
-     * @param  ?AtsJobStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsJobStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

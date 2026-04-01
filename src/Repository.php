@@ -47,8 +47,8 @@ class Repository
     /**
      * Create a repository
      *
-     * @param  Operations\CreateRepoRepositoryRequest  $request
-     * @return Operations\CreateRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoRepository(Operations\CreateRepoRepositoryRequest $request, ?Options $options = null): Operations\CreateRepoRepositoryResponse
@@ -114,8 +114,8 @@ class Repository
     /**
      * Retrieve a repository
      *
-     * @param  Operations\GetRepoRepositoryRequest  $request
-     * @return Operations\GetRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoRepository(Operations\GetRepoRepositoryRequest $request, ?Options $options = null): Operations\GetRepoRepositoryResponse
@@ -176,8 +176,8 @@ class Repository
     /**
      * List all repositories
      *
-     * @param  Operations\ListRepoRepositoriesRequest  $request
-     * @return Operations\ListRepoRepositoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoRepositoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoRepositories(Operations\ListRepoRepositoriesRequest $request, ?Options $options = null): Operations\ListRepoRepositoriesResponse
@@ -238,8 +238,8 @@ class Repository
     /**
      * Update a repository
      *
-     * @param  Operations\PatchRepoRepositoryRequest  $request
-     * @return Operations\PatchRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoRepository(Operations\PatchRepoRepositoryRequest $request, ?Options $options = null): Operations\PatchRepoRepositoryResponse
@@ -305,8 +305,8 @@ class Repository
     /**
      * Remove a repository
      *
-     * @param  Operations\RemoveRepoRepositoryRequest  $request
-     * @return Operations\RemoveRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoRepository(Operations\RemoveRepoRepositoryRequest $request, ?Options $options = null): Operations\RemoveRepoRepositoryResponse
@@ -361,8 +361,8 @@ class Repository
     /**
      * Update a repository
      *
-     * @param  Operations\UpdateRepoRepositoryRequest  $request
-     * @return Operations\UpdateRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoRepository(Operations\UpdateRepoRepositoryRequest $request, ?Options $options = null): Operations\UpdateRepoRepositoryResponse

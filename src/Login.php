@@ -48,8 +48,8 @@ class Login
      *
      * Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
      *
-     * @param  Operations\GetUnifiedIntegrationLoginRequest  $request
-     * @return Operations\GetUnifiedIntegrationLoginResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationLoginResponse

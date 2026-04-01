@@ -14,7 +14,7 @@ class PatchRepoPullrequestRequest
 {
     /**
      *
-     * @var Shared\RepoPullrequest $repoPullrequest
+     * @var \Unified\Unified_to\Models\Shared\RepoPullrequest $repoPullrequest
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoPullrequest $repoPullrequest;
@@ -38,7 +38,7 @@ class PatchRepoPullrequestRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchRepoPullrequestQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchRepoPullrequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchRepoPullrequestRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoPullrequest  $repoPullrequest
+     * @param  \Unified\Unified_to\Models\Shared\RepoPullrequest  $repoPullrequest
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchRepoPullrequestQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchRepoPullrequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

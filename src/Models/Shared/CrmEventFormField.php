@@ -22,7 +22,7 @@ class CrmEventFormField
     /**
      * $options
      *
-     * @var ?array<CrmEventFormOption> $options
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEventFormOption> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEventFormOption>|null')]
@@ -39,7 +39,7 @@ class CrmEventFormField
 
     /**
      *
-     * @var ?CrmEventFormFieldType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CrmEventFormFieldType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEventFormFieldType|null')]
@@ -48,9 +48,9 @@ class CrmEventFormField
 
     /**
      * @param  ?string  $name
-     * @param  ?array<CrmEventFormOption>  $options
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmEventFormOption>  $options
      * @param  ?bool  $required
-     * @param  ?CrmEventFormFieldType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmEventFormFieldType  $type
      * @phpstan-pure
      */
     public function __construct(?string $name = null, ?array $options = null, ?bool $required = null, ?CrmEventFormFieldType $type = null)

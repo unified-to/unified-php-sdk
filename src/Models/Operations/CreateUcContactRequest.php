@@ -15,7 +15,7 @@ class CreateUcContactRequest
     /**
      * A contact represents a person that optionally is associated with a call
      *
-     * @var Shared\UcContact $ucContact
+     * @var \Unified\Unified_to\Models\Shared\UcContact $ucContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcContact $ucContact;
@@ -31,7 +31,7 @@ class CreateUcContactRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateUcContactQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateUcContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateUcContactRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcContact  $ucContact
+     * @param  \Unified\Unified_to\Models\Shared\UcContact  $ucContact
      * @param  string  $connectionId
-     * @param  ?array<CreateUcContactQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateUcContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

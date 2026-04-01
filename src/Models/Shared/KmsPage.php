@@ -20,7 +20,7 @@ class KmsPage
 
     /**
      *
-     * @var KmsPageType $type
+     * @var \Unified\Unified_to\Models\Shared\KmsPageType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageType')]
@@ -69,7 +69,7 @@ class KmsPage
     /**
      * $metadata
      *
-     * @var ?array<KmsPageMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>|null')]
@@ -128,13 +128,13 @@ class KmsPage
 
     /**
      * @param  string  $title
-     * @param  KmsPageType  $type
+     * @param  \Unified\Unified_to\Models\Shared\KmsPageType  $type
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $downloadUrl
      * @param  ?bool  $hasChildren
      * @param  ?string  $id
      * @param  ?bool  $isActive
-     * @param  ?array<KmsPageMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $spaceId

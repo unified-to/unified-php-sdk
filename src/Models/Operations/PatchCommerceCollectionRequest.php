@@ -15,7 +15,7 @@ class PatchCommerceCollectionRequest
     /**
      * A collection of items/products/services
      *
-     * @var Shared\CommerceCollection $commerceCollection
+     * @var \Unified\Unified_to\Models\Shared\CommerceCollection $commerceCollection
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceCollection $commerceCollection;
@@ -39,7 +39,7 @@ class PatchCommerceCollectionRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCommerceCollectionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCommerceCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchCommerceCollectionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceCollection  $commerceCollection
+     * @param  \Unified\Unified_to\Models\Shared\CommerceCollection  $commerceCollection
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCommerceCollectionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCommerceCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

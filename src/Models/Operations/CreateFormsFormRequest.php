@@ -14,7 +14,7 @@ class CreateFormsFormRequest
 {
     /**
      *
-     * @var Shared\FormsForm $formsForm
+     * @var \Unified\Unified_to\Models\Shared\FormsForm $formsForm
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\FormsForm $formsForm;
@@ -30,7 +30,7 @@ class CreateFormsFormRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateFormsFormQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateFormsFormQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateFormsFormRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\FormsForm  $formsForm
+     * @param  \Unified\Unified_to\Models\Shared\FormsForm  $formsForm
      * @param  string  $connectionId
-     * @param  ?array<CreateFormsFormQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateFormsFormQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -47,8 +47,8 @@ class Cashflow
     /**
      * Retrieve a cashflow
      *
-     * @param  Operations\GetAccountingCashflowRequest  $request
-     * @return Operations\GetAccountingCashflowResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCashflowRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCashflowResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCashflow(Operations\GetAccountingCashflowRequest $request, ?Options $options = null): Operations\GetAccountingCashflowResponse
@@ -109,8 +109,8 @@ class Cashflow
     /**
      * List all cashflows
      *
-     * @param  Operations\ListAccountingCashflowsRequest  $request
-     * @return Operations\ListAccountingCashflowsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCashflowsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCashflowsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCashflows(Operations\ListAccountingCashflowsRequest $request, ?Options $options = null): Operations\ListAccountingCashflowsResponse

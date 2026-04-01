@@ -35,7 +35,7 @@ class GetUcCallResponse
     /**
      * Successful
      *
-     * @var ?Shared\UcCall $ucCall
+     * @var ?\Unified\Unified_to\Models\Shared\UcCall $ucCall
      */
     public ?Shared\UcCall $ucCall = null;
 
@@ -43,7 +43,7 @@ class GetUcCallResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\UcCall  $ucCall
+     * @param  ?\Unified\Unified_to\Models\Shared\UcCall  $ucCall
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\UcCall $ucCall = null)

@@ -47,8 +47,8 @@ class Calendar
     /**
      * Create a calendar
      *
-     * @param  Operations\CreateCalendarCalendarRequest  $request
-     * @return Operations\CreateCalendarCalendarResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarCalendarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarCalendar(Operations\CreateCalendarCalendarRequest $request, ?Options $options = null): Operations\CreateCalendarCalendarResponse
@@ -114,8 +114,8 @@ class Calendar
     /**
      * Create an event
      *
-     * @param  Operations\CreateCalendarEventRequest  $request
-     * @return Operations\CreateCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarEvent(Operations\CreateCalendarEventRequest $request, ?Options $options = null): Operations\CreateCalendarEventResponse
@@ -181,8 +181,8 @@ class Calendar
     /**
      * Create a link
      *
-     * @param  Operations\CreateCalendarLinkRequest  $request
-     * @return Operations\CreateCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarLink(Operations\CreateCalendarLinkRequest $request, ?Options $options = null): Operations\CreateCalendarLinkResponse
@@ -248,8 +248,8 @@ class Calendar
     /**
      * Create a webinar
      *
-     * @param  Operations\CreateCalendarWebinarRequest  $request
-     * @return Operations\CreateCalendarWebinarResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarWebinarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarWebinar(Operations\CreateCalendarWebinarRequest $request, ?Options $options = null): Operations\CreateCalendarWebinarResponse
@@ -315,8 +315,8 @@ class Calendar
     /**
      * Retrieve a calendar
      *
-     * @param  Operations\GetCalendarCalendarRequest  $request
-     * @return Operations\GetCalendarCalendarResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarCalendarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarCalendar(Operations\GetCalendarCalendarRequest $request, ?Options $options = null): Operations\GetCalendarCalendarResponse
@@ -377,8 +377,8 @@ class Calendar
     /**
      * Retrieve an event
      *
-     * @param  Operations\GetCalendarEventRequest  $request
-     * @return Operations\GetCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarEvent(Operations\GetCalendarEventRequest $request, ?Options $options = null): Operations\GetCalendarEventResponse
@@ -439,8 +439,8 @@ class Calendar
     /**
      * Retrieve a link
      *
-     * @param  Operations\GetCalendarLinkRequest  $request
-     * @return Operations\GetCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarLink(Operations\GetCalendarLinkRequest $request, ?Options $options = null): Operations\GetCalendarLinkResponse
@@ -501,8 +501,8 @@ class Calendar
     /**
      * Retrieve a recording
      *
-     * @param  Operations\GetCalendarRecordingRequest  $request
-     * @return Operations\GetCalendarRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarRecording(Operations\GetCalendarRecordingRequest $request, ?Options $options = null): Operations\GetCalendarRecordingResponse
@@ -563,8 +563,8 @@ class Calendar
     /**
      * Retrieve a webinar
      *
-     * @param  Operations\GetCalendarWebinarRequest  $request
-     * @return Operations\GetCalendarWebinarResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarWebinarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarWebinar(Operations\GetCalendarWebinarRequest $request, ?Options $options = null): Operations\GetCalendarWebinarResponse
@@ -625,8 +625,8 @@ class Calendar
     /**
      * List all busies
      *
-     * @param  Operations\ListCalendarBusiesRequest  $request
-     * @return Operations\ListCalendarBusiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarBusiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarBusiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarBusies(Operations\ListCalendarBusiesRequest $request, ?Options $options = null): Operations\ListCalendarBusiesResponse
@@ -687,8 +687,8 @@ class Calendar
     /**
      * List all calendars
      *
-     * @param  Operations\ListCalendarCalendarsRequest  $request
-     * @return Operations\ListCalendarCalendarsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarCalendarsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarCalendarsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarCalendars(Operations\ListCalendarCalendarsRequest $request, ?Options $options = null): Operations\ListCalendarCalendarsResponse
@@ -749,8 +749,8 @@ class Calendar
     /**
      * List all events
      *
-     * @param  Operations\ListCalendarEventsRequest  $request
-     * @return Operations\ListCalendarEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarEvents(Operations\ListCalendarEventsRequest $request, ?Options $options = null): Operations\ListCalendarEventsResponse
@@ -811,8 +811,8 @@ class Calendar
     /**
      * List all links
      *
-     * @param  Operations\ListCalendarLinksRequest  $request
-     * @return Operations\ListCalendarLinksResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarLinksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarLinks(Operations\ListCalendarLinksRequest $request, ?Options $options = null): Operations\ListCalendarLinksResponse
@@ -873,8 +873,8 @@ class Calendar
     /**
      * List all recordings
      *
-     * @param  Operations\ListCalendarRecordingsRequest  $request
-     * @return Operations\ListCalendarRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarRecordings(Operations\ListCalendarRecordingsRequest $request, ?Options $options = null): Operations\ListCalendarRecordingsResponse
@@ -935,8 +935,8 @@ class Calendar
     /**
      * List all webinars
      *
-     * @param  Operations\ListCalendarWebinarsRequest  $request
-     * @return Operations\ListCalendarWebinarsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarWebinarsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarWebinarsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarWebinars(Operations\ListCalendarWebinarsRequest $request, ?Options $options = null): Operations\ListCalendarWebinarsResponse
@@ -997,8 +997,8 @@ class Calendar
     /**
      * Update a calendar
      *
-     * @param  Operations\PatchCalendarCalendarRequest  $request
-     * @return Operations\PatchCalendarCalendarResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarCalendarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarCalendar(Operations\PatchCalendarCalendarRequest $request, ?Options $options = null): Operations\PatchCalendarCalendarResponse
@@ -1064,8 +1064,8 @@ class Calendar
     /**
      * Update an event
      *
-     * @param  Operations\PatchCalendarEventRequest  $request
-     * @return Operations\PatchCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarEvent(Operations\PatchCalendarEventRequest $request, ?Options $options = null): Operations\PatchCalendarEventResponse
@@ -1131,8 +1131,8 @@ class Calendar
     /**
      * Update a link
      *
-     * @param  Operations\PatchCalendarLinkRequest  $request
-     * @return Operations\PatchCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarLink(Operations\PatchCalendarLinkRequest $request, ?Options $options = null): Operations\PatchCalendarLinkResponse
@@ -1198,8 +1198,8 @@ class Calendar
     /**
      * Update a webinar
      *
-     * @param  Operations\PatchCalendarWebinarRequest  $request
-     * @return Operations\PatchCalendarWebinarResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarWebinarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarWebinar(Operations\PatchCalendarWebinarRequest $request, ?Options $options = null): Operations\PatchCalendarWebinarResponse
@@ -1265,8 +1265,8 @@ class Calendar
     /**
      * Remove a calendar
      *
-     * @param  Operations\RemoveCalendarCalendarRequest  $request
-     * @return Operations\RemoveCalendarCalendarResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarCalendarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarCalendar(Operations\RemoveCalendarCalendarRequest $request, ?Options $options = null): Operations\RemoveCalendarCalendarResponse
@@ -1321,8 +1321,8 @@ class Calendar
     /**
      * Remove an event
      *
-     * @param  Operations\RemoveCalendarEventRequest  $request
-     * @return Operations\RemoveCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarEvent(Operations\RemoveCalendarEventRequest $request, ?Options $options = null): Operations\RemoveCalendarEventResponse
@@ -1377,8 +1377,8 @@ class Calendar
     /**
      * Remove a link
      *
-     * @param  Operations\RemoveCalendarLinkRequest  $request
-     * @return Operations\RemoveCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarLink(Operations\RemoveCalendarLinkRequest $request, ?Options $options = null): Operations\RemoveCalendarLinkResponse
@@ -1433,8 +1433,8 @@ class Calendar
     /**
      * Remove a webinar
      *
-     * @param  Operations\RemoveCalendarWebinarRequest  $request
-     * @return Operations\RemoveCalendarWebinarResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarWebinar(Operations\RemoveCalendarWebinarRequest $request, ?Options $options = null): Operations\RemoveCalendarWebinarResponse
@@ -1489,8 +1489,8 @@ class Calendar
     /**
      * Update a calendar
      *
-     * @param  Operations\UpdateCalendarCalendarRequest  $request
-     * @return Operations\UpdateCalendarCalendarResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarCalendarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarCalendar(Operations\UpdateCalendarCalendarRequest $request, ?Options $options = null): Operations\UpdateCalendarCalendarResponse
@@ -1556,8 +1556,8 @@ class Calendar
     /**
      * Update an event
      *
-     * @param  Operations\UpdateCalendarEventRequest  $request
-     * @return Operations\UpdateCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarEvent(Operations\UpdateCalendarEventRequest $request, ?Options $options = null): Operations\UpdateCalendarEventResponse
@@ -1623,8 +1623,8 @@ class Calendar
     /**
      * Update a link
      *
-     * @param  Operations\UpdateCalendarLinkRequest  $request
-     * @return Operations\UpdateCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarLink(Operations\UpdateCalendarLinkRequest $request, ?Options $options = null): Operations\UpdateCalendarLinkResponse
@@ -1690,8 +1690,8 @@ class Calendar
     /**
      * Update a webinar
      *
-     * @param  Operations\UpdateCalendarWebinarRequest  $request
-     * @return Operations\UpdateCalendarWebinarResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarWebinar(Operations\UpdateCalendarWebinarRequest $request, ?Options $options = null): Operations\UpdateCalendarWebinarResponse

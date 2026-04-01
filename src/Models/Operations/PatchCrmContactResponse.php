@@ -35,7 +35,7 @@ class PatchCrmContactResponse
     /**
      * Successful
      *
-     * @var ?Shared\CrmContact $crmContact
+     * @var ?\Unified\Unified_to\Models\Shared\CrmContact $crmContact
      */
     public ?Shared\CrmContact $crmContact = null;
 
@@ -43,7 +43,7 @@ class PatchCrmContactResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CrmContact  $crmContact
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmContact  $crmContact
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CrmContact $crmContact = null)

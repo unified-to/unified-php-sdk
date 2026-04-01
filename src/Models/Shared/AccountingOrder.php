@@ -21,7 +21,7 @@ class AccountingOrder
 
     /**
      *
-     * @var ?PropertyAccountingOrderBillingAddress $billingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrderBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingOrderBillingAddress|null')]
@@ -63,7 +63,7 @@ class AccountingOrder
     /**
      * $lineitems
      *
-     * @var ?array<AccountingLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
@@ -90,7 +90,7 @@ class AccountingOrder
 
     /**
      *
-     * @var ?PropertyAccountingOrderShippingAddress $shippingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrderShippingAddress $shippingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('shipping_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingOrderShippingAddress|null')]
@@ -99,7 +99,7 @@ class AccountingOrder
 
     /**
      *
-     * @var ?AccountingOrderStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingOrderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingOrderStatus|null')]
@@ -116,7 +116,7 @@ class AccountingOrder
 
     /**
      *
-     * @var ?AccountingOrderType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingOrderType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingOrderType|null')]
@@ -133,18 +133,18 @@ class AccountingOrder
 
     /**
      * @param  ?string  $accountId
-     * @param  ?PropertyAccountingOrderBillingAddress  $billingAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrderBillingAddress  $billingAddress
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
-     * @param  ?array<AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
-     * @param  ?PropertyAccountingOrderShippingAddress  $shippingAddress
-     * @param  ?AccountingOrderStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrderShippingAddress  $shippingAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingOrderStatus  $status
      * @param  ?float  $totalAmount
-     * @param  ?AccountingOrderType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingOrderType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

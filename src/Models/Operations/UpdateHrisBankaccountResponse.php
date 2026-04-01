@@ -35,7 +35,7 @@ class UpdateHrisBankaccountResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisBankaccount $hrisBankaccount
+     * @var ?\Unified\Unified_to\Models\Shared\HrisBankaccount $hrisBankaccount
      */
     public ?Shared\HrisBankaccount $hrisBankaccount = null;
 
@@ -43,7 +43,7 @@ class UpdateHrisBankaccountResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisBankaccount  $hrisBankaccount
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisBankaccount  $hrisBankaccount
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisBankaccount $hrisBankaccount = null)

@@ -35,7 +35,7 @@ class ListKmsCommentsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\KmsComment> $kmsComments
+     * @var ?array<\Unified\Unified_to\Models\Shared\KmsComment> $kmsComments
      */
     public ?array $kmsComments = null;
 
@@ -43,7 +43,7 @@ class ListKmsCommentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\KmsComment>  $kmsComments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\KmsComment>  $kmsComments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $kmsComments = null)

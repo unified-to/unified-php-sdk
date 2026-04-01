@@ -20,7 +20,7 @@ class TicketingTelephone
 
     /**
      *
-     * @var ?TicketingTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTelephoneType|null')]
@@ -29,7 +29,7 @@ class TicketingTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?TicketingTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?TicketingTelephoneType $type = null)

@@ -18,6 +18,5 @@ enum LmsMediaType: string
     case Document = 'DOCUMENT';
     case Text = 'TEXT';
     case Html = 'HTML';
-    case Markdown = 'MARKDOWN';
     case Other = 'OTHER';
 }

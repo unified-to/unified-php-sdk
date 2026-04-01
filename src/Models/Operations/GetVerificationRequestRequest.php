@@ -30,7 +30,7 @@ class GetVerificationRequestRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetVerificationRequestQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetVerificationRequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetVerificationRequestRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetVerificationRequestQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetVerificationRequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

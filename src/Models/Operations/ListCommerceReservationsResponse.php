@@ -35,7 +35,7 @@ class ListCommerceReservationsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CommerceReservation> $commerceReservations
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReservation> $commerceReservations
      */
     public ?array $commerceReservations = null;
 
@@ -43,7 +43,7 @@ class ListCommerceReservationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceReservation>  $commerceReservations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReservation>  $commerceReservations
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceReservations = null)

@@ -14,7 +14,7 @@ class UpdateScimUsersRequest
 {
     /**
      *
-     * @var Shared\ScimUser $scimUser
+     * @var \Unified\Unified_to\Models\Shared\ScimUser $scimUser
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ScimUser $scimUser;
@@ -36,7 +36,7 @@ class UpdateScimUsersRequest
     public string $id;
 
     /**
-     * @param  Shared\ScimUser  $scimUser
+     * @param  \Unified\Unified_to\Models\Shared\ScimUser  $scimUser
      * @param  string  $connectionId
      * @param  string  $id
      * @phpstan-pure

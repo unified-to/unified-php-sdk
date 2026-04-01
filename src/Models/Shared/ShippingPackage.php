@@ -53,7 +53,7 @@ class ShippingPackage
 
     /**
      *
-     * @var ?ShippingPackageSizeUnit $sizeUnit
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingPackageSizeUnit $sizeUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('size_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingPackageSizeUnit|null')]
@@ -86,7 +86,7 @@ class ShippingPackage
 
     /**
      *
-     * @var ?ShippingPackageWeightUnit $weightUnit
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingPackageWeightUnit $weightUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingPackageWeightUnit|null')]
@@ -107,11 +107,11 @@ class ShippingPackage
      * @param  ?float  $height
      * @param  ?float  $insuredAmount
      * @param  ?float  $length
-     * @param  ?ShippingPackageSizeUnit  $sizeUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingPackageSizeUnit  $sizeUnit
      * @param  ?string  $trackingNumber
      * @param  ?float  $value
      * @param  ?float  $weight
-     * @param  ?ShippingPackageWeightUnit  $weightUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingPackageWeightUnit  $weightUnit
      * @param  ?float  $width
      * @phpstan-pure
      */

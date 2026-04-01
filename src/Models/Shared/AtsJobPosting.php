@@ -14,7 +14,7 @@ class AtsJobPosting
     /**
      * job-post-specific address
      *
-     * @var ?PropertyAtsJobPostingAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsJobPostingAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsJobPostingAddress|null')]
@@ -86,7 +86,7 @@ class AtsJobPosting
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyAtsJobPostingAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsJobPostingAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id

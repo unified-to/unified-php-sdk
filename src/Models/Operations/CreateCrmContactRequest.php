@@ -15,7 +15,7 @@ class CreateCrmContactRequest
     /**
      * A contact represents a person that optionally is associated with a deal and/or a company
      *
-     * @var Shared\CrmContact $crmContact
+     * @var \Unified\Unified_to\Models\Shared\CrmContact $crmContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmContact $crmContact;
@@ -31,7 +31,7 @@ class CreateCrmContactRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmContactQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateCrmContactRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmContact  $crmContact
+     * @param  \Unified\Unified_to\Models\Shared\CrmContact  $crmContact
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmContactQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -14,7 +14,7 @@ class PatchTaskProjectRequest
 {
     /**
      *
-     * @var Shared\TaskProject $taskProject
+     * @var \Unified\Unified_to\Models\Shared\TaskProject $taskProject
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TaskProject $taskProject;
@@ -38,7 +38,7 @@ class PatchTaskProjectRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchTaskProjectQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchTaskProjectQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchTaskProjectRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TaskProject  $taskProject
+     * @param  \Unified\Unified_to\Models\Shared\TaskProject  $taskProject
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchTaskProjectQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchTaskProjectQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

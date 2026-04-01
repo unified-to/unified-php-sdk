@@ -13,7 +13,7 @@ class PropertyAdsReportMetricsGroupTargeting
 {
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingAudience $audience
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience $audience
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('audience')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience|null')]
@@ -23,7 +23,7 @@ class PropertyAdsReportMetricsGroupTargeting
     /**
      * Brand safety (Meta: excluded_publisher_categories, etc.; Google
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('brand_safety')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety|null')]
@@ -32,7 +32,7 @@ class PropertyAdsReportMetricsGroupTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingContent $content
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent $content
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent|null')]
@@ -42,7 +42,7 @@ class PropertyAdsReportMetricsGroupTargeting
     /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic $demographic
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('demographic')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic|null')]
@@ -51,7 +51,7 @@ class PropertyAdsReportMetricsGroupTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingDevice $device
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice $device
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('device')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice|null')]
@@ -60,7 +60,7 @@ class PropertyAdsReportMetricsGroupTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic $geographic
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('geographic')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic|null')]
@@ -70,7 +70,7 @@ class PropertyAdsReportMetricsGroupTargeting
     /**
      * Language targeting (Meta
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingLanguage $language
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage $language
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage|null')]
@@ -80,7 +80,7 @@ class PropertyAdsReportMetricsGroupTargeting
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization $optimization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('optimization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization|null')]
@@ -89,7 +89,7 @@ class PropertyAdsReportMetricsGroupTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupTargetingPlacement $placement
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement $placement
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('placement')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement|null')]
@@ -99,7 +99,7 @@ class PropertyAdsReportMetricsGroupTargeting
     /**
      * $schedule
      *
-     * @var ?array<AdSchedule> $schedule
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdSchedule> $schedule
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('schedule')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdSchedule>|null')]
@@ -107,16 +107,16 @@ class PropertyAdsReportMetricsGroupTargeting
     public ?array $schedule = null;
 
     /**
-     * @param  ?PropertyAdsReportMetricsGroupTargetingAudience  $audience
-     * @param  ?PropertyAdsReportMetricsGroupTargetingBrandSafety  $brandSafety
-     * @param  ?PropertyAdsReportMetricsGroupTargetingContent  $content
-     * @param  ?PropertyAdsReportMetricsGroupTargetingDemographic  $demographic
-     * @param  ?PropertyAdsReportMetricsGroupTargetingDevice  $device
-     * @param  ?PropertyAdsReportMetricsGroupTargetingGeographic  $geographic
-     * @param  ?PropertyAdsReportMetricsGroupTargetingLanguage  $language
-     * @param  ?PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
-     * @param  ?PropertyAdsReportMetricsGroupTargetingPlacement  $placement
-     * @param  ?array<AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience  $audience
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety  $brandSafety
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent  $content
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic  $demographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice  $device
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic  $geographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage  $language
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement  $placement
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
     public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingLanguage $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)

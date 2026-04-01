@@ -35,7 +35,7 @@ class ListAccountingCreditmemoesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingCreditmemo> $accountingCreditmemoes
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCreditmemo> $accountingCreditmemoes
      */
     public ?array $accountingCreditmemoes = null;
 
@@ -43,7 +43,7 @@ class ListAccountingCreditmemoesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingCreditmemo>  $accountingCreditmemoes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCreditmemo>  $accountingCreditmemoes
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingCreditmemoes = null)

@@ -14,7 +14,7 @@ class CreateAtsApplicationRequest
 {
     /**
      *
-     * @var Shared\AtsApplication $atsApplication
+     * @var \Unified\Unified_to\Models\Shared\AtsApplication $atsApplication
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsApplication $atsApplication;
@@ -30,7 +30,7 @@ class CreateAtsApplicationRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAtsApplicationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAtsApplicationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAtsApplicationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsApplication  $atsApplication
+     * @param  \Unified\Unified_to\Models\Shared\AtsApplication  $atsApplication
      * @param  string  $connectionId
-     * @param  ?array<CreateAtsApplicationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAtsApplicationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -38,7 +38,7 @@ class HrisDeduction
 
     /**
      *
-     * @var ?HrisDeductionCoverageLevel $coverageLevel
+     * @var ?\Unified\Unified_to\Models\Shared\HrisDeductionCoverageLevel $coverageLevel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('coverage_level')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisDeductionCoverageLevel|null')]
@@ -63,7 +63,7 @@ class HrisDeduction
 
     /**
      *
-     * @var ?HrisDeductionFrequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\HrisDeductionFrequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisDeductionFrequency|null')]
@@ -114,7 +114,7 @@ class HrisDeduction
 
     /**
      *
-     * @var ?HrisDeductionType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisDeductionType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisDeductionType|null')]
@@ -141,16 +141,16 @@ class HrisDeduction
      * @param  ?float  $amount
      * @param  ?string  $benefitId
      * @param  ?string  $companyId
-     * @param  ?HrisDeductionCoverageLevel  $coverageLevel
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisDeductionCoverageLevel  $coverageLevel
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
-     * @param  ?HrisDeductionFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisDeductionFrequency  $frequency
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?HrisDeductionType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisDeductionType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

@@ -47,8 +47,8 @@ class Target
     /**
      * List all targets
      *
-     * @param  Operations\ListAdsTargetsRequest  $request
-     * @return Operations\ListAdsTargetsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsTargetsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsTargetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsTargets(Operations\ListAdsTargetsRequest $request, ?Options $options = null): Operations\ListAdsTargetsResponse

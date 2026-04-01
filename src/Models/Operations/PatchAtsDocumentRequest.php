@@ -14,7 +14,7 @@ class PatchAtsDocumentRequest
 {
     /**
      *
-     * @var Shared\AtsDocument $atsDocument
+     * @var \Unified\Unified_to\Models\Shared\AtsDocument $atsDocument
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsDocument $atsDocument;
@@ -38,7 +38,7 @@ class PatchAtsDocumentRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAtsDocumentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAtsDocumentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAtsDocumentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsDocument  $atsDocument
+     * @param  \Unified\Unified_to\Models\Shared\AtsDocument  $atsDocument
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAtsDocumentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAtsDocumentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

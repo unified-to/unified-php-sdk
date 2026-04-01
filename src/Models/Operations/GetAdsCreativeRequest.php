@@ -30,7 +30,7 @@ class GetAdsCreativeRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAdsCreativeQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAdsCreativeQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAdsCreativeRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAdsCreativeQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAdsCreativeQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

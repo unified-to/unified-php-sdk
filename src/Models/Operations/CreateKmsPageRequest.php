@@ -14,7 +14,7 @@ class CreateKmsPageRequest
 {
     /**
      *
-     * @var Shared\KmsPage $kmsPage
+     * @var \Unified\Unified_to\Models\Shared\KmsPage $kmsPage
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\KmsPage $kmsPage;
@@ -30,7 +30,7 @@ class CreateKmsPageRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateKmsPageQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateKmsPageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateKmsPageRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\KmsPage  $kmsPage
+     * @param  \Unified\Unified_to\Models\Shared\KmsPage  $kmsPage
      * @param  string  $connectionId
-     * @param  ?array<CreateKmsPageQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateKmsPageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

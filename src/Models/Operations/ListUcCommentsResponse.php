@@ -35,7 +35,7 @@ class ListUcCommentsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\UcComment> $ucComments
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcComment> $ucComments
      */
     public ?array $ucComments = null;
 
@@ -43,7 +43,7 @@ class ListUcCommentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\UcComment>  $ucComments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcComment>  $ucComments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ucComments = null)

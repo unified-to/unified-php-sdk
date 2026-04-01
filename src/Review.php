@@ -47,8 +47,8 @@ class Review
     /**
      * Create a review
      *
-     * @param  Operations\CreateCommerceReviewRequest  $request
-     * @return Operations\CreateCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceReview(Operations\CreateCommerceReviewRequest $request, ?Options $options = null): Operations\CreateCommerceReviewResponse
@@ -114,8 +114,8 @@ class Review
     /**
      * Retrieve a review
      *
-     * @param  Operations\GetCommerceReviewRequest  $request
-     * @return Operations\GetCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceReview(Operations\GetCommerceReviewRequest $request, ?Options $options = null): Operations\GetCommerceReviewResponse
@@ -176,8 +176,8 @@ class Review
     /**
      * List all reviews
      *
-     * @param  Operations\ListCommerceReviewsRequest  $request
-     * @return Operations\ListCommerceReviewsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceReviews(Operations\ListCommerceReviewsRequest $request, ?Options $options = null): Operations\ListCommerceReviewsResponse
@@ -238,8 +238,8 @@ class Review
     /**
      * Update a review
      *
-     * @param  Operations\PatchCommerceReviewRequest  $request
-     * @return Operations\PatchCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceReview(Operations\PatchCommerceReviewRequest $request, ?Options $options = null): Operations\PatchCommerceReviewResponse
@@ -305,8 +305,8 @@ class Review
     /**
      * Remove a review
      *
-     * @param  Operations\RemoveCommerceReviewRequest  $request
-     * @return Operations\RemoveCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceReview(Operations\RemoveCommerceReviewRequest $request, ?Options $options = null): Operations\RemoveCommerceReviewResponse
@@ -361,8 +361,8 @@ class Review
     /**
      * Update a review
      *
-     * @param  Operations\UpdateCommerceReviewRequest  $request
-     * @return Operations\UpdateCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceReview(Operations\UpdateCommerceReviewRequest $request, ?Options $options = null): Operations\UpdateCommerceReviewResponse

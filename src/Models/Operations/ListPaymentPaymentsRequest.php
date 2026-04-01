@@ -46,7 +46,7 @@ class ListPaymentPaymentsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListPaymentPaymentsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListPaymentPaymentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListPaymentPaymentsRequest
     public ?string $order = null;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      *
      * @var ?string $orgId
      */
@@ -148,7 +148,7 @@ class ListPaymentPaymentsRequest
      * @param  ?string  $billId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListPaymentPaymentsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListPaymentPaymentsQueryParamFields>  $fields
      * @param  ?string  $invoiceId
      * @param  ?float  $limit
      * @param  ?string  $linkId

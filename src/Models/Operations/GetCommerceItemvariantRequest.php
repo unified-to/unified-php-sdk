@@ -30,7 +30,7 @@ class GetCommerceItemvariantRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCommerceItemvariantQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCommerceItemvariantQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceItemvariantRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCommerceItemvariantQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCommerceItemvariantQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

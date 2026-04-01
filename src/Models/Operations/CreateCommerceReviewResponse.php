@@ -35,7 +35,7 @@ class CreateCommerceReviewResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceReview $commerceReview
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceReview $commerceReview
      */
     public ?Shared\CommerceReview $commerceReview = null;
 
@@ -43,7 +43,7 @@ class CreateCommerceReviewResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceReview  $commerceReview
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceReview  $commerceReview
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceReview $commerceReview = null)

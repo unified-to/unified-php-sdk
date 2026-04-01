@@ -30,7 +30,7 @@ class GetAtsInterviewRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsInterviewQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsInterviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsInterviewRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsInterviewQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsInterviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

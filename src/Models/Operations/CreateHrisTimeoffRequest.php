@@ -14,7 +14,7 @@ class CreateHrisTimeoffRequest
 {
     /**
      *
-     * @var Shared\HrisTimeoff $hrisTimeoff
+     * @var \Unified\Unified_to\Models\Shared\HrisTimeoff $hrisTimeoff
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisTimeoff $hrisTimeoff;
@@ -30,7 +30,7 @@ class CreateHrisTimeoffRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisTimeoffQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisTimeoffQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisTimeoffRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisTimeoff  $hrisTimeoff
+     * @param  \Unified\Unified_to\Models\Shared\HrisTimeoff  $hrisTimeoff
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisTimeoffQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisTimeoffQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

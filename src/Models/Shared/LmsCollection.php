@@ -46,7 +46,7 @@ class LmsCollection
     /**
      * $media
      *
-     * @var ?array<LmsMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMedia>|null')]
@@ -92,7 +92,7 @@ class LmsCollection
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
-     * @param  ?array<LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw

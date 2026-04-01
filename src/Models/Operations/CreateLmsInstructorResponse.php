@@ -35,7 +35,7 @@ class CreateLmsInstructorResponse
     /**
      * Successful
      *
-     * @var ?Shared\LmsInstructor $lmsInstructor
+     * @var ?\Unified\Unified_to\Models\Shared\LmsInstructor $lmsInstructor
      */
     public ?Shared\LmsInstructor $lmsInstructor = null;
 
@@ -43,7 +43,7 @@ class CreateLmsInstructorResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\LmsInstructor  $lmsInstructor
+     * @param  ?\Unified\Unified_to\Models\Shared\LmsInstructor  $lmsInstructor
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\LmsInstructor $lmsInstructor = null)

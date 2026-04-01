@@ -55,7 +55,7 @@ class PropertyAdsGroupTargetingBrandSafety
     /**
      * $publisherVisibilityCategories
      *
-     * @var ?array<PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories> $publisherVisibilityCategories
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories> $publisherVisibilityCategories
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('publisher_visibility_categories')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories>|null')]
@@ -67,7 +67,7 @@ class PropertyAdsGroupTargetingBrandSafety
      * @param  ?array<string>  $brandSafetyContentFilterLevels
      * @param  ?array<string>  $excludedContentLabels
      * @param  ?array<string>  $excludedPublisherCategories
-     * @param  ?array<PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories>  $publisherVisibilityCategories
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories>  $publisherVisibilityCategories
      * @phpstan-pure
      */
     public function __construct(?array $blockListIds = null, ?array $brandSafetyContentFilterLevels = null, ?array $excludedContentLabels = null, ?array $excludedPublisherCategories = null, ?array $publisherVisibilityCategories = null)

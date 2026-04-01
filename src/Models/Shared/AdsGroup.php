@@ -22,7 +22,7 @@ class AdsGroup
     /**
      * YOUTUBE_AND_PARTNERS
      *
-     * @var ?PropertyAdsGroupBidStrategy $bidStrategy
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategy $bidStrategy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategy|null')]
@@ -31,7 +31,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?BillingEvent $billingEvent
+     * @var ?\Unified\Unified_to\Models\Shared\BillingEvent $billingEvent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BillingEvent|null')]
@@ -40,7 +40,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?BudgetAllocationType $budgetAllocationType
+     * @var ?\Unified\Unified_to\Models\Shared\BudgetAllocationType $budgetAllocationType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_allocation_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BudgetAllocationType|null')]
@@ -65,7 +65,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?AdsGroupBudgetPeriod $budgetPeriod
+     * @var ?\Unified\Unified_to\Models\Shared\AdsGroupBudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupBudgetPeriod|null')]
@@ -74,7 +74,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?BudgetUnit $budgetUnit
+     * @var ?\Unified\Unified_to\Models\Shared\BudgetUnit $budgetUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\BudgetUnit|null')]
@@ -125,7 +125,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?PropertyAdsGroupFrequencyCap $frequencyCap
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap $frequencyCap
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap|null')]
@@ -166,7 +166,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?OptimizationGoal $optimizationGoal
+     * @var ?\Unified\Unified_to\Models\Shared\OptimizationGoal $optimizationGoal
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('optimization_goal')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\OptimizationGoal|null')]
@@ -183,7 +183,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?PropertyAdsGroupPacing $pacing
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacing $pacing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pacing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacing|null')]
@@ -201,7 +201,7 @@ class AdsGroup
     /**
      * $promoted
      *
-     * @var ?array<AdsPromoted> $promoted
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
@@ -228,7 +228,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?AdsGroupStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AdsGroupStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupStatus|null')]
@@ -237,7 +237,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?PropertyAdsGroupTargeting $targeting
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargeting|null')]
@@ -246,7 +246,7 @@ class AdsGroup
 
     /**
      *
-     * @var ?AdsGroupType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AdsGroupType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupType|null')]
@@ -263,33 +263,33 @@ class AdsGroup
 
     /**
      * @param  ?float  $bidAmount
-     * @param  ?PropertyAdsGroupBidStrategy  $bidStrategy
-     * @param  ?BillingEvent  $billingEvent
-     * @param  ?BudgetAllocationType  $budgetAllocationType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategy  $bidStrategy
+     * @param  ?\Unified\Unified_to\Models\Shared\BillingEvent  $billingEvent
+     * @param  ?\Unified\Unified_to\Models\Shared\BudgetAllocationType  $budgetAllocationType
      * @param  ?float  $budgetAmount
      * @param  ?float  $budgetMaxAmount
-     * @param  ?AdsGroupBudgetPeriod  $budgetPeriod
-     * @param  ?BudgetUnit  $budgetUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupBudgetPeriod  $budgetPeriod
+     * @param  ?\Unified\Unified_to\Models\Shared\BudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?PropertyAdsGroupFrequencyCap  $frequencyCap
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap  $frequencyCap
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $insertionorderId
      * @param  ?string  $name
-     * @param  ?OptimizationGoal  $optimizationGoal
+     * @param  ?\Unified\Unified_to\Models\Shared\OptimizationGoal  $optimizationGoal
      * @param  ?string  $organizationId
-     * @param  ?PropertyAdsGroupPacing  $pacing
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacing  $pacing
      * @param  ?string  $parentId
-     * @param  ?array<AdsPromoted>  $promoted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?AdsGroupStatus  $status
-     * @param  ?PropertyAdsGroupTargeting  $targeting
-     * @param  ?AdsGroupType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargeting  $targeting
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

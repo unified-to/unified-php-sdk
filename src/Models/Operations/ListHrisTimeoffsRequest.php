@@ -38,7 +38,7 @@ class ListHrisTimeoffsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisTimeoffsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeoffsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListHrisTimeoffsRequest
      * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?string  $endLt
-     * @param  ?array<ListHrisTimeoffsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeoffsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

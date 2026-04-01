@@ -21,7 +21,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('Gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender|null')]
@@ -46,7 +46,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User
 
     /**
      * @param  ?\DateTime  $dateOfBirth
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender  $gender
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender  $gender
      * @param  ?string  $manager
      * @param  ?string  $team
      * @phpstan-pure

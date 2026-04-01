@@ -13,7 +13,7 @@ class PropertyAdsReportMetricsCampaign
 {
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('advertising_channel_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignAdvertisingChannelType|null')]
@@ -30,7 +30,7 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetPeriod|null')]
@@ -79,7 +79,7 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignFrequencyCap|null')]
@@ -88,7 +88,7 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignGoal $goal
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignGoal $goal
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('goal')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignGoal|null')]
@@ -155,7 +155,7 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignStatus|null')]
@@ -164,7 +164,7 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargeting $targeting
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargeting $targeting
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('targeting')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargeting|null')]
@@ -188,16 +188,16 @@ class PropertyAdsReportMetricsCampaign
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyAdsReportMetricsCampaignAdvertisingChannelType  $advertisingChannelType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignAdvertisingChannelType  $advertisingChannelType
      * @param  ?float  $budgetAmount
-     * @param  ?PropertyAdsReportMetricsCampaignBudgetPeriod  $budgetPeriod
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetPeriod  $budgetPeriod
      * @param  ?string  $campaignBudgetIdentifier
      * @param  ?string  $category
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?PropertyAdsReportMetricsCampaignFrequencyCap  $frequencyCap
-     * @param  ?PropertyAdsReportMetricsCampaignGoal  $goal
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignFrequencyCap  $frequencyCap
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignGoal  $goal
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $name
@@ -205,8 +205,8 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?float  $plannedSpendAmount
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?PropertyAdsReportMetricsCampaignStatus  $status
-     * @param  ?PropertyAdsReportMetricsCampaignTargeting  $targeting
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargeting  $targeting
      * @param  ?float  $totalSpendAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

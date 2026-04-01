@@ -35,7 +35,7 @@ class ListHrisDeductionsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisDeduction> $hrisDeductions
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisDeduction> $hrisDeductions
      */
     public ?array $hrisDeductions = null;
 
@@ -43,7 +43,7 @@ class ListHrisDeductionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisDeduction>  $hrisDeductions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisDeduction>  $hrisDeductions
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisDeductions = null)

@@ -47,8 +47,8 @@ class Insertionorder
     /**
      * Create an insertionorder
      *
-     * @param  Operations\CreateAdsInsertionorderRequest  $request
-     * @return Operations\CreateAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsInsertionorder(Operations\CreateAdsInsertionorderRequest $request, ?Options $options = null): Operations\CreateAdsInsertionorderResponse
@@ -114,8 +114,8 @@ class Insertionorder
     /**
      * Retrieve an insertionorder
      *
-     * @param  Operations\GetAdsInsertionorderRequest  $request
-     * @return Operations\GetAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsInsertionorder(Operations\GetAdsInsertionorderRequest $request, ?Options $options = null): Operations\GetAdsInsertionorderResponse
@@ -176,8 +176,8 @@ class Insertionorder
     /**
      * List all insertionorders
      *
-     * @param  Operations\ListAdsInsertionordersRequest  $request
-     * @return Operations\ListAdsInsertionordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsInsertionorders(Operations\ListAdsInsertionordersRequest $request, ?Options $options = null): Operations\ListAdsInsertionordersResponse
@@ -238,8 +238,8 @@ class Insertionorder
     /**
      * Update an insertionorder
      *
-     * @param  Operations\PatchAdsInsertionorderRequest  $request
-     * @return Operations\PatchAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsInsertionorder(Operations\PatchAdsInsertionorderRequest $request, ?Options $options = null): Operations\PatchAdsInsertionorderResponse
@@ -305,8 +305,8 @@ class Insertionorder
     /**
      * Remove an insertionorder
      *
-     * @param  Operations\RemoveAdsInsertionorderRequest  $request
-     * @return Operations\RemoveAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsInsertionorder(Operations\RemoveAdsInsertionorderRequest $request, ?Options $options = null): Operations\RemoveAdsInsertionorderResponse
@@ -361,8 +361,8 @@ class Insertionorder
     /**
      * Update an insertionorder
      *
-     * @param  Operations\UpdateAdsInsertionorderRequest  $request
-     * @return Operations\UpdateAdsInsertionorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsInsertionorder(Operations\UpdateAdsInsertionorderRequest $request, ?Options $options = null): Operations\UpdateAdsInsertionorderResponse

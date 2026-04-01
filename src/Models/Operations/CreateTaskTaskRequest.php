@@ -14,7 +14,7 @@ class CreateTaskTaskRequest
 {
     /**
      *
-     * @var Shared\TaskTask $taskTask
+     * @var \Unified\Unified_to\Models\Shared\TaskTask $taskTask
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TaskTask $taskTask;
@@ -30,7 +30,7 @@ class CreateTaskTaskRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateTaskTaskQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateTaskTaskQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateTaskTaskRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TaskTask  $taskTask
+     * @param  \Unified\Unified_to\Models\Shared\TaskTask  $taskTask
      * @param  string  $connectionId
-     * @param  ?array<CreateTaskTaskQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateTaskTaskQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

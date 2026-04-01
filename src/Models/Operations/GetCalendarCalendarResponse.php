@@ -35,7 +35,7 @@ class GetCalendarCalendarResponse
     /**
      * Successful
      *
-     * @var ?Shared\CalendarCalendar $calendarCalendar
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarCalendar $calendarCalendar
      */
     public ?Shared\CalendarCalendar $calendarCalendar = null;
 
@@ -43,7 +43,7 @@ class GetCalendarCalendarResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CalendarCalendar  $calendarCalendar
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarCalendar  $calendarCalendar
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CalendarCalendar $calendarCalendar = null)

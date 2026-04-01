@@ -35,7 +35,7 @@ class ListUnifiedIntegrationsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\Integration> $integrations
+     * @var ?array<\Unified\Unified_to\Models\Shared\Integration> $integrations
      */
     public ?array $integrations = null;
 
@@ -43,7 +43,7 @@ class ListUnifiedIntegrationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\Integration>  $integrations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\Integration>  $integrations
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $integrations = null)

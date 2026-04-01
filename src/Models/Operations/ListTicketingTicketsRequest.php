@@ -30,7 +30,7 @@ class ListTicketingTicketsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListTicketingTicketsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListTicketingTicketsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListTicketingTicketsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $customerId
-     * @param  ?array<ListTicketingTicketsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListTicketingTicketsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -35,7 +35,7 @@ class GetMartechCampaignResponse
     /**
      * Successful
      *
-     * @var ?Shared\MarketingCampaign $marketingCampaign
+     * @var ?\Unified\Unified_to\Models\Shared\MarketingCampaign $marketingCampaign
      */
     public ?Shared\MarketingCampaign $marketingCampaign = null;
 
@@ -43,7 +43,7 @@ class GetMartechCampaignResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\MarketingCampaign  $marketingCampaign
+     * @param  ?\Unified\Unified_to\Models\Shared\MarketingCampaign  $marketingCampaign
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MarketingCampaign $marketingCampaign = null)

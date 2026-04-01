@@ -47,8 +47,8 @@ class Payment
     /**
      * Create a link
      *
-     * @param  Operations\CreatePaymentLinkRequest  $request
-     * @return Operations\CreatePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentLink(Operations\CreatePaymentLinkRequest $request, ?Options $options = null): Operations\CreatePaymentLinkResponse
@@ -114,8 +114,8 @@ class Payment
     /**
      * Create a payment
      *
-     * @param  Operations\CreatePaymentPaymentRequest  $request
-     * @return Operations\CreatePaymentPaymentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentPaymentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentPayment(Operations\CreatePaymentPaymentRequest $request, ?Options $options = null): Operations\CreatePaymentPaymentResponse
@@ -181,8 +181,8 @@ class Payment
     /**
      * Create a subscription
      *
-     * @param  Operations\CreatePaymentSubscriptionRequest  $request
-     * @return Operations\CreatePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentSubscription(Operations\CreatePaymentSubscriptionRequest $request, ?Options $options = null): Operations\CreatePaymentSubscriptionResponse
@@ -248,8 +248,8 @@ class Payment
     /**
      * Retrieve a link
      *
-     * @param  Operations\GetPaymentLinkRequest  $request
-     * @return Operations\GetPaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentLink(Operations\GetPaymentLinkRequest $request, ?Options $options = null): Operations\GetPaymentLinkResponse
@@ -310,8 +310,8 @@ class Payment
     /**
      * Retrieve a payment
      *
-     * @param  Operations\GetPaymentPaymentRequest  $request
-     * @return Operations\GetPaymentPaymentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentPaymentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentPayment(Operations\GetPaymentPaymentRequest $request, ?Options $options = null): Operations\GetPaymentPaymentResponse
@@ -372,8 +372,8 @@ class Payment
     /**
      * Retrieve a payout
      *
-     * @param  Operations\GetPaymentPayoutRequest  $request
-     * @return Operations\GetPaymentPayoutResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentPayout(Operations\GetPaymentPayoutRequest $request, ?Options $options = null): Operations\GetPaymentPayoutResponse
@@ -434,8 +434,8 @@ class Payment
     /**
      * Retrieve a refund
      *
-     * @param  Operations\GetPaymentRefundRequest  $request
-     * @return Operations\GetPaymentRefundResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentRefund(Operations\GetPaymentRefundRequest $request, ?Options $options = null): Operations\GetPaymentRefundResponse
@@ -496,8 +496,8 @@ class Payment
     /**
      * Retrieve a subscription
      *
-     * @param  Operations\GetPaymentSubscriptionRequest  $request
-     * @return Operations\GetPaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentSubscription(Operations\GetPaymentSubscriptionRequest $request, ?Options $options = null): Operations\GetPaymentSubscriptionResponse
@@ -558,8 +558,8 @@ class Payment
     /**
      * List all links
      *
-     * @param  Operations\ListPaymentLinksRequest  $request
-     * @return Operations\ListPaymentLinksResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentLinks(Operations\ListPaymentLinksRequest $request, ?Options $options = null): Operations\ListPaymentLinksResponse
@@ -620,8 +620,8 @@ class Payment
     /**
      * List all payments
      *
-     * @param  Operations\ListPaymentPaymentsRequest  $request
-     * @return Operations\ListPaymentPaymentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentPaymentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentPaymentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentPayments(Operations\ListPaymentPaymentsRequest $request, ?Options $options = null): Operations\ListPaymentPaymentsResponse
@@ -682,8 +682,8 @@ class Payment
     /**
      * List all payouts
      *
-     * @param  Operations\ListPaymentPayoutsRequest  $request
-     * @return Operations\ListPaymentPayoutsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentPayouts(Operations\ListPaymentPayoutsRequest $request, ?Options $options = null): Operations\ListPaymentPayoutsResponse
@@ -744,8 +744,8 @@ class Payment
     /**
      * List all refunds
      *
-     * @param  Operations\ListPaymentRefundsRequest  $request
-     * @return Operations\ListPaymentRefundsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentRefunds(Operations\ListPaymentRefundsRequest $request, ?Options $options = null): Operations\ListPaymentRefundsResponse
@@ -806,8 +806,8 @@ class Payment
     /**
      * List all subscriptions
      *
-     * @param  Operations\ListPaymentSubscriptionsRequest  $request
-     * @return Operations\ListPaymentSubscriptionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentSubscriptions(Operations\ListPaymentSubscriptionsRequest $request, ?Options $options = null): Operations\ListPaymentSubscriptionsResponse
@@ -868,8 +868,8 @@ class Payment
     /**
      * Update a link
      *
-     * @param  Operations\PatchPaymentLinkRequest  $request
-     * @return Operations\PatchPaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentLink(Operations\PatchPaymentLinkRequest $request, ?Options $options = null): Operations\PatchPaymentLinkResponse
@@ -935,8 +935,8 @@ class Payment
     /**
      * Update a payment
      *
-     * @param  Operations\PatchPaymentPaymentRequest  $request
-     * @return Operations\PatchPaymentPaymentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentPaymentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentPayment(Operations\PatchPaymentPaymentRequest $request, ?Options $options = null): Operations\PatchPaymentPaymentResponse
@@ -1002,8 +1002,8 @@ class Payment
     /**
      * Update a subscription
      *
-     * @param  Operations\PatchPaymentSubscriptionRequest  $request
-     * @return Operations\PatchPaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentSubscription(Operations\PatchPaymentSubscriptionRequest $request, ?Options $options = null): Operations\PatchPaymentSubscriptionResponse
@@ -1069,8 +1069,8 @@ class Payment
     /**
      * Remove a link
      *
-     * @param  Operations\RemovePaymentLinkRequest  $request
-     * @return Operations\RemovePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentLink(Operations\RemovePaymentLinkRequest $request, ?Options $options = null): Operations\RemovePaymentLinkResponse
@@ -1125,8 +1125,8 @@ class Payment
     /**
      * Remove a payment
      *
-     * @param  Operations\RemovePaymentPaymentRequest  $request
-     * @return Operations\RemovePaymentPaymentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentPaymentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentPayment(Operations\RemovePaymentPaymentRequest $request, ?Options $options = null): Operations\RemovePaymentPaymentResponse
@@ -1181,8 +1181,8 @@ class Payment
     /**
      * Remove a subscription
      *
-     * @param  Operations\RemovePaymentSubscriptionRequest  $request
-     * @return Operations\RemovePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentSubscription(Operations\RemovePaymentSubscriptionRequest $request, ?Options $options = null): Operations\RemovePaymentSubscriptionResponse
@@ -1237,8 +1237,8 @@ class Payment
     /**
      * Update a link
      *
-     * @param  Operations\UpdatePaymentLinkRequest  $request
-     * @return Operations\UpdatePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentLink(Operations\UpdatePaymentLinkRequest $request, ?Options $options = null): Operations\UpdatePaymentLinkResponse
@@ -1304,8 +1304,8 @@ class Payment
     /**
      * Update a payment
      *
-     * @param  Operations\UpdatePaymentPaymentRequest  $request
-     * @return Operations\UpdatePaymentPaymentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentPaymentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentPayment(Operations\UpdatePaymentPaymentRequest $request, ?Options $options = null): Operations\UpdatePaymentPaymentResponse
@@ -1371,8 +1371,8 @@ class Payment
     /**
      * Update a subscription
      *
-     * @param  Operations\UpdatePaymentSubscriptionRequest  $request
-     * @return Operations\UpdatePaymentSubscriptionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentSubscription(Operations\UpdatePaymentSubscriptionRequest $request, ?Options $options = null): Operations\UpdatePaymentSubscriptionResponse

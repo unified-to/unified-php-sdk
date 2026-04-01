@@ -14,7 +14,7 @@ class UpdateAccountingTaxrateRequest
 {
     /**
      *
-     * @var Shared\AccountingTaxrate $accountingTaxrate
+     * @var \Unified\Unified_to\Models\Shared\AccountingTaxrate $accountingTaxrate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingTaxrate $accountingTaxrate;
@@ -38,7 +38,7 @@ class UpdateAccountingTaxrateRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingTaxrateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAccountingTaxrateRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingTaxrate  $accountingTaxrate
+     * @param  \Unified\Unified_to\Models\Shared\AccountingTaxrate  $accountingTaxrate
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingTaxrateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

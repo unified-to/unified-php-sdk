@@ -47,8 +47,8 @@ class Scorecard
     /**
      * Create a scorecard
      *
-     * @param  Operations\CreateAtsScorecardRequest  $request
-     * @return Operations\CreateAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsScorecard(Operations\CreateAtsScorecardRequest $request, ?Options $options = null): Operations\CreateAtsScorecardResponse
@@ -114,8 +114,8 @@ class Scorecard
     /**
      * Retrieve a scorecard
      *
-     * @param  Operations\GetAtsScorecardRequest  $request
-     * @return Operations\GetAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsScorecard(Operations\GetAtsScorecardRequest $request, ?Options $options = null): Operations\GetAtsScorecardResponse
@@ -176,8 +176,8 @@ class Scorecard
     /**
      * List all scorecards
      *
-     * @param  Operations\ListAtsScorecardsRequest  $request
-     * @return Operations\ListAtsScorecardsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsScorecards(Operations\ListAtsScorecardsRequest $request, ?Options $options = null): Operations\ListAtsScorecardsResponse
@@ -238,8 +238,8 @@ class Scorecard
     /**
      * Update a scorecard
      *
-     * @param  Operations\PatchAtsScorecardRequest  $request
-     * @return Operations\PatchAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsScorecard(Operations\PatchAtsScorecardRequest $request, ?Options $options = null): Operations\PatchAtsScorecardResponse
@@ -305,8 +305,8 @@ class Scorecard
     /**
      * Remove a scorecard
      *
-     * @param  Operations\RemoveAtsScorecardRequest  $request
-     * @return Operations\RemoveAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsScorecard(Operations\RemoveAtsScorecardRequest $request, ?Options $options = null): Operations\RemoveAtsScorecardResponse
@@ -361,8 +361,8 @@ class Scorecard
     /**
      * Update a scorecard
      *
-     * @param  Operations\UpdateAtsScorecardRequest  $request
-     * @return Operations\UpdateAtsScorecardResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsScorecard(Operations\UpdateAtsScorecardRequest $request, ?Options $options = null): Operations\UpdateAtsScorecardResponse

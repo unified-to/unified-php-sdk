@@ -47,8 +47,8 @@ class Martech
     /**
      * Create a campaign
      *
-     * @param  Operations\CreateMartechCampaignRequest  $request
-     * @return Operations\CreateMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechCampaign(Operations\CreateMartechCampaignRequest $request, ?Options $options = null): Operations\CreateMartechCampaignResponse
@@ -114,8 +114,8 @@ class Martech
     /**
      * Create a list
      *
-     * @param  Operations\CreateMartechListRequest  $request
-     * @return Operations\CreateMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechList(Operations\CreateMartechListRequest $request, ?Options $options = null): Operations\CreateMartechListResponse
@@ -181,8 +181,8 @@ class Martech
     /**
      * Create a member
      *
-     * @param  Operations\CreateMartechMemberRequest  $request
-     * @return Operations\CreateMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechMember(Operations\CreateMartechMemberRequest $request, ?Options $options = null): Operations\CreateMartechMemberResponse
@@ -248,8 +248,8 @@ class Martech
     /**
      * Retrieve a campaign
      *
-     * @param  Operations\GetMartechCampaignRequest  $request
-     * @return Operations\GetMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechCampaign(Operations\GetMartechCampaignRequest $request, ?Options $options = null): Operations\GetMartechCampaignResponse
@@ -310,8 +310,8 @@ class Martech
     /**
      * Retrieve a list
      *
-     * @param  Operations\GetMartechListRequest  $request
-     * @return Operations\GetMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechList(Operations\GetMartechListRequest $request, ?Options $options = null): Operations\GetMartechListResponse
@@ -372,8 +372,8 @@ class Martech
     /**
      * Retrieve a member
      *
-     * @param  Operations\GetMartechMemberRequest  $request
-     * @return Operations\GetMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechMember(Operations\GetMartechMemberRequest $request, ?Options $options = null): Operations\GetMartechMemberResponse
@@ -434,8 +434,8 @@ class Martech
     /**
      * List all campaigns
      *
-     * @param  Operations\ListMartechCampaignsRequest  $request
-     * @return Operations\ListMartechCampaignsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechCampaignsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechCampaigns(Operations\ListMartechCampaignsRequest $request, ?Options $options = null): Operations\ListMartechCampaignsResponse
@@ -496,8 +496,8 @@ class Martech
     /**
      * List all lists
      *
-     * @param  Operations\ListMartechListsRequest  $request
-     * @return Operations\ListMartechListsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechListsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechLists(Operations\ListMartechListsRequest $request, ?Options $options = null): Operations\ListMartechListsResponse
@@ -558,8 +558,8 @@ class Martech
     /**
      * List all members
      *
-     * @param  Operations\ListMartechMembersRequest  $request
-     * @return Operations\ListMartechMembersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechMembersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechMembers(Operations\ListMartechMembersRequest $request, ?Options $options = null): Operations\ListMartechMembersResponse
@@ -620,8 +620,8 @@ class Martech
     /**
      * List all reports
      *
-     * @param  Operations\ListMartechReportsRequest  $request
-     * @return Operations\ListMartechReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechReports(Operations\ListMartechReportsRequest $request, ?Options $options = null): Operations\ListMartechReportsResponse
@@ -682,8 +682,8 @@ class Martech
     /**
      * Update a campaign
      *
-     * @param  Operations\PatchMartechCampaignRequest  $request
-     * @return Operations\PatchMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechCampaign(Operations\PatchMartechCampaignRequest $request, ?Options $options = null): Operations\PatchMartechCampaignResponse
@@ -749,8 +749,8 @@ class Martech
     /**
      * Update a list
      *
-     * @param  Operations\PatchMartechListRequest  $request
-     * @return Operations\PatchMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechList(Operations\PatchMartechListRequest $request, ?Options $options = null): Operations\PatchMartechListResponse
@@ -816,8 +816,8 @@ class Martech
     /**
      * Update a member
      *
-     * @param  Operations\PatchMartechMemberRequest  $request
-     * @return Operations\PatchMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechMember(Operations\PatchMartechMemberRequest $request, ?Options $options = null): Operations\PatchMartechMemberResponse
@@ -883,8 +883,8 @@ class Martech
     /**
      * Remove a campaign
      *
-     * @param  Operations\RemoveMartechCampaignRequest  $request
-     * @return Operations\RemoveMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechCampaign(Operations\RemoveMartechCampaignRequest $request, ?Options $options = null): Operations\RemoveMartechCampaignResponse
@@ -939,8 +939,8 @@ class Martech
     /**
      * Remove a list
      *
-     * @param  Operations\RemoveMartechListRequest  $request
-     * @return Operations\RemoveMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechList(Operations\RemoveMartechListRequest $request, ?Options $options = null): Operations\RemoveMartechListResponse
@@ -995,8 +995,8 @@ class Martech
     /**
      * Remove a member
      *
-     * @param  Operations\RemoveMartechMemberRequest  $request
-     * @return Operations\RemoveMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechMember(Operations\RemoveMartechMemberRequest $request, ?Options $options = null): Operations\RemoveMartechMemberResponse
@@ -1051,8 +1051,8 @@ class Martech
     /**
      * Update a campaign
      *
-     * @param  Operations\UpdateMartechCampaignRequest  $request
-     * @return Operations\UpdateMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechCampaign(Operations\UpdateMartechCampaignRequest $request, ?Options $options = null): Operations\UpdateMartechCampaignResponse
@@ -1118,8 +1118,8 @@ class Martech
     /**
      * Update a list
      *
-     * @param  Operations\UpdateMartechListRequest  $request
-     * @return Operations\UpdateMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechList(Operations\UpdateMartechListRequest $request, ?Options $options = null): Operations\UpdateMartechListResponse
@@ -1185,8 +1185,8 @@ class Martech
     /**
      * Update a member
      *
-     * @param  Operations\UpdateMartechMemberRequest  $request
-     * @return Operations\UpdateMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechMember(Operations\UpdateMartechMemberRequest $request, ?Options $options = null): Operations\UpdateMartechMemberResponse

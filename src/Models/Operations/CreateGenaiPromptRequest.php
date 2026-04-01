@@ -14,7 +14,7 @@ class CreateGenaiPromptRequest
 {
     /**
      *
-     * @var Shared\GenaiPrompt $genaiPrompt
+     * @var \Unified\Unified_to\Models\Shared\GenaiPrompt $genaiPrompt
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\GenaiPrompt $genaiPrompt;
@@ -30,7 +30,7 @@ class CreateGenaiPromptRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateGenaiPromptQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateGenaiPromptQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateGenaiPromptRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\GenaiPrompt  $genaiPrompt
+     * @param  \Unified\Unified_to\Models\Shared\GenaiPrompt  $genaiPrompt
      * @param  string  $connectionId
-     * @param  ?array<CreateGenaiPromptQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateGenaiPromptQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

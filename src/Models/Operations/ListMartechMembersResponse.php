@@ -35,7 +35,7 @@ class ListMartechMembersResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\MarketingMember> $marketingMembers
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingMember> $marketingMembers
      */
     public ?array $marketingMembers = null;
 
@@ -43,7 +43,7 @@ class ListMartechMembersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\MarketingMember>  $marketingMembers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingMember>  $marketingMembers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $marketingMembers = null)

@@ -47,8 +47,8 @@ class Enrich
     /**
      * Retrieve enrichment information for a company
      *
-     * @param  Operations\ListEnrichCompaniesRequest  $request
-     * @return Operations\ListEnrichCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichCompanies(Operations\ListEnrichCompaniesRequest $request, ?Options $options = null): Operations\ListEnrichCompaniesResponse
@@ -109,8 +109,8 @@ class Enrich
     /**
      * Retrieve enrichment information for a person
      *
-     * @param  Operations\ListEnrichPeopleRequest  $request
-     * @return Operations\ListEnrichPeopleResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichPeople(Operations\ListEnrichPeopleRequest $request, ?Options $options = null): Operations\ListEnrichPeopleResponse

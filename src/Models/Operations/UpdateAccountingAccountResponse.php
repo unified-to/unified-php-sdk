@@ -35,7 +35,7 @@ class UpdateAccountingAccountResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingAccount $accountingAccount
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
      */
     public ?Shared\AccountingAccount $accountingAccount = null;
 
@@ -43,7 +43,7 @@ class UpdateAccountingAccountResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingAccount  $accountingAccount
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingAccount  $accountingAccount
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingAccount $accountingAccount = null)

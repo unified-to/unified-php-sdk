@@ -35,7 +35,7 @@ class GetLmsActivityResponse
     /**
      * Successful
      *
-     * @var ?Shared\LmsActivity $lmsActivity
+     * @var ?\Unified\Unified_to\Models\Shared\LmsActivity $lmsActivity
      */
     public ?Shared\LmsActivity $lmsActivity = null;
 
@@ -43,7 +43,7 @@ class GetLmsActivityResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\LmsActivity  $lmsActivity
+     * @param  ?\Unified\Unified_to\Models\Shared\LmsActivity  $lmsActivity
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\LmsActivity $lmsActivity = null)

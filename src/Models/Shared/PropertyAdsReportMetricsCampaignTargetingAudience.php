@@ -14,7 +14,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $behaviors
      *
-     * @var ?array<AudienceSegment> $behaviors
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $behaviors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('behaviors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -24,7 +24,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $combinationSpec
      *
-     * @var ?array<AudienceCombination> $combinationSpec
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceCombination> $combinationSpec
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('combination_spec')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceCombination>|null')]
@@ -34,7 +34,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $customAudiences
      *
-     * @var ?array<AudienceSegment> $customAudiences
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $customAudiences
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('custom_audiences')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -44,7 +44,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $excludedBehaviors
      *
-     * @var ?array<AudienceSegment> $excludedBehaviors
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $excludedBehaviors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_behaviors')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -54,7 +54,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $excludedCustomAudiences
      *
-     * @var ?array<AudienceSegment> $excludedCustomAudiences
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $excludedCustomAudiences
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_custom_audiences')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -64,7 +64,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $excludedInterests
      *
-     * @var ?array<AudienceSegment> $excludedInterests
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $excludedInterests
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_interests')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -74,7 +74,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $interests
      *
-     * @var ?array<AudienceSegment> $interests
+     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $interests
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('interests')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
@@ -84,7 +84,7 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     /**
      * $lookalikeAudiences
      *
-     * @var ?array<LookalikeAudience> $lookalikeAudiences
+     * @var ?array<\Unified\Unified_to\Models\Shared\LookalikeAudience> $lookalikeAudiences
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lookalike_audiences')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LookalikeAudience>|null')]
@@ -92,14 +92,14 @@ class PropertyAdsReportMetricsCampaignTargetingAudience
     public ?array $lookalikeAudiences = null;
 
     /**
-     * @param  ?array<AudienceSegment>  $behaviors
-     * @param  ?array<AudienceCombination>  $combinationSpec
-     * @param  ?array<AudienceSegment>  $customAudiences
-     * @param  ?array<AudienceSegment>  $excludedBehaviors
-     * @param  ?array<AudienceSegment>  $excludedCustomAudiences
-     * @param  ?array<AudienceSegment>  $excludedInterests
-     * @param  ?array<AudienceSegment>  $interests
-     * @param  ?array<LookalikeAudience>  $lookalikeAudiences
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $behaviors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceCombination>  $combinationSpec
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $customAudiences
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $excludedBehaviors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $excludedCustomAudiences
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $excludedInterests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $interests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LookalikeAudience>  $lookalikeAudiences
      * @phpstan-pure
      */
     public function __construct(?array $behaviors = null, ?array $combinationSpec = null, ?array $customAudiences = null, ?array $excludedBehaviors = null, ?array $excludedCustomAudiences = null, ?array $excludedInterests = null, ?array $interests = null, ?array $lookalikeAudiences = null)

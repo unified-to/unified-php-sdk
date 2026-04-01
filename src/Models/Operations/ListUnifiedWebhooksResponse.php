@@ -35,7 +35,7 @@ class ListUnifiedWebhooksResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\Webhook> $webhooks
+     * @var ?array<\Unified\Unified_to\Models\Shared\Webhook> $webhooks
      */
     public ?array $webhooks = null;
 
@@ -43,7 +43,7 @@ class ListUnifiedWebhooksResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\Webhook>  $webhooks
+     * @param  ?array<\Unified\Unified_to\Models\Shared\Webhook>  $webhooks
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $webhooks = null)

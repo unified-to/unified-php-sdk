@@ -49,8 +49,8 @@ class Integration
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *
-     * @param  Operations\GetUnifiedIntegrationAuthRequest  $request
-     * @return Operations\GetUnifiedIntegrationAuthResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationAuthResponse
@@ -110,8 +110,8 @@ class Integration
      *
      * No authentication required as this is to be used by front-end interface
      *
-     * @param  Operations\ListUnifiedIntegrationWorkspacesRequest  $request
-     * @return Operations\ListUnifiedIntegrationWorkspacesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrationWorkspaces(Operations\ListUnifiedIntegrationWorkspacesRequest $request, ?Options $options = null): Operations\ListUnifiedIntegrationWorkspacesResponse
@@ -172,8 +172,8 @@ class Integration
     /**
      * Returns all integrations
      *
-     * @param  ?Operations\ListUnifiedIntegrationsRequest  $request
-     * @return Operations\ListUnifiedIntegrationsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrations(?Operations\ListUnifiedIntegrationsRequest $request = null, ?Options $options = null): Operations\ListUnifiedIntegrationsResponse

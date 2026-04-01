@@ -47,8 +47,8 @@ class Contact
     /**
      * Create a contact
      *
-     * @param  Operations\CreateAccountingContactRequest  $request
-     * @return Operations\CreateAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingContact(Operations\CreateAccountingContactRequest $request, ?Options $options = null): Operations\CreateAccountingContactResponse
@@ -114,8 +114,8 @@ class Contact
     /**
      * Create a contact
      *
-     * @param  Operations\CreateCrmContactRequest  $request
-     * @return Operations\CreateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmContact(Operations\CreateCrmContactRequest $request, ?Options $options = null): Operations\CreateCrmContactResponse
@@ -181,8 +181,8 @@ class Contact
     /**
      * Create a contact
      *
-     * @param  Operations\CreateUcContactRequest  $request
-     * @return Operations\CreateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcContact(Operations\CreateUcContactRequest $request, ?Options $options = null): Operations\CreateUcContactResponse
@@ -248,8 +248,8 @@ class Contact
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetAccountingContactRequest  $request
-     * @return Operations\GetAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingContact(Operations\GetAccountingContactRequest $request, ?Options $options = null): Operations\GetAccountingContactResponse
@@ -310,8 +310,8 @@ class Contact
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetCrmContactRequest  $request
-     * @return Operations\GetCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmContact(Operations\GetCrmContactRequest $request, ?Options $options = null): Operations\GetCrmContactResponse
@@ -372,8 +372,8 @@ class Contact
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetUcContactRequest  $request
-     * @return Operations\GetUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcContact(Operations\GetUcContactRequest $request, ?Options $options = null): Operations\GetUcContactResponse
@@ -434,8 +434,8 @@ class Contact
     /**
      * List all contacts
      *
-     * @param  Operations\ListAccountingContactsRequest  $request
-     * @return Operations\ListAccountingContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingContacts(Operations\ListAccountingContactsRequest $request, ?Options $options = null): Operations\ListAccountingContactsResponse
@@ -496,8 +496,8 @@ class Contact
     /**
      * List all contacts
      *
-     * @param  Operations\ListCrmContactsRequest  $request
-     * @return Operations\ListCrmContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmContacts(Operations\ListCrmContactsRequest $request, ?Options $options = null): Operations\ListCrmContactsResponse
@@ -558,8 +558,8 @@ class Contact
     /**
      * List all contacts
      *
-     * @param  Operations\ListUcContactsRequest  $request
-     * @return Operations\ListUcContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcContacts(Operations\ListUcContactsRequest $request, ?Options $options = null): Operations\ListUcContactsResponse
@@ -620,8 +620,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\PatchAccountingContactRequest  $request
-     * @return Operations\PatchAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingContact(Operations\PatchAccountingContactRequest $request, ?Options $options = null): Operations\PatchAccountingContactResponse
@@ -687,8 +687,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\PatchCrmContactRequest  $request
-     * @return Operations\PatchCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmContact(Operations\PatchCrmContactRequest $request, ?Options $options = null): Operations\PatchCrmContactResponse
@@ -754,8 +754,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\PatchUcContactRequest  $request
-     * @return Operations\PatchUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcContact(Operations\PatchUcContactRequest $request, ?Options $options = null): Operations\PatchUcContactResponse
@@ -821,8 +821,8 @@ class Contact
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveAccountingContactRequest  $request
-     * @return Operations\RemoveAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingContact(Operations\RemoveAccountingContactRequest $request, ?Options $options = null): Operations\RemoveAccountingContactResponse
@@ -877,8 +877,8 @@ class Contact
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveCrmContactRequest  $request
-     * @return Operations\RemoveCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmContact(Operations\RemoveCrmContactRequest $request, ?Options $options = null): Operations\RemoveCrmContactResponse
@@ -933,8 +933,8 @@ class Contact
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveUcContactRequest  $request
-     * @return Operations\RemoveUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcContact(Operations\RemoveUcContactRequest $request, ?Options $options = null): Operations\RemoveUcContactResponse
@@ -989,8 +989,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateAccountingContactRequest  $request
-     * @return Operations\UpdateAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingContact(Operations\UpdateAccountingContactRequest $request, ?Options $options = null): Operations\UpdateAccountingContactResponse
@@ -1056,8 +1056,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateCrmContactRequest  $request
-     * @return Operations\UpdateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmContact(Operations\UpdateCrmContactRequest $request, ?Options $options = null): Operations\UpdateCrmContactResponse
@@ -1123,8 +1123,8 @@ class Contact
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateUcContactRequest  $request
-     * @return Operations\UpdateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcContact(Operations\UpdateUcContactRequest $request, ?Options $options = null): Operations\UpdateUcContactResponse

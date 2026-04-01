@@ -38,7 +38,7 @@ class AccountingBalancesheetItem
     /**
      * $subItems
      *
-     * @var ?array<AccountingBalancesheetItem> $subItems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem> $subItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
@@ -49,7 +49,7 @@ class AccountingBalancesheetItem
      * @param  ?string  $accountId
      * @param  ?float  $amount
      * @param  ?string  $name
-     * @param  ?array<AccountingBalancesheetItem>  $subItems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $subItems
      * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?float $amount = null, ?string $name = null, ?array $subItems = null)

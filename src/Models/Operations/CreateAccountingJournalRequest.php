@@ -14,7 +14,7 @@ class CreateAccountingJournalRequest
 {
     /**
      *
-     * @var Shared\AccountingJournal $accountingJournal
+     * @var \Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingJournal $accountingJournal;
@@ -30,7 +30,7 @@ class CreateAccountingJournalRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingJournalQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingJournalQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingJournalRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingJournal  $accountingJournal
+     * @param  \Unified\Unified_to\Models\Shared\AccountingJournal  $accountingJournal
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingJournalQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingJournalQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

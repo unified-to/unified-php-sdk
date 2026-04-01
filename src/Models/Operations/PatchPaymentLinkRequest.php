@@ -14,7 +14,7 @@ class PatchPaymentLinkRequest
 {
     /**
      *
-     * @var Shared\PaymentLink $paymentLink
+     * @var \Unified\Unified_to\Models\Shared\PaymentLink $paymentLink
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\PaymentLink $paymentLink;
@@ -38,7 +38,7 @@ class PatchPaymentLinkRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchPaymentLinkQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchPaymentLinkQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchPaymentLinkRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\PaymentLink  $paymentLink
+     * @param  \Unified\Unified_to\Models\Shared\PaymentLink  $paymentLink
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchPaymentLinkQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchPaymentLinkQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

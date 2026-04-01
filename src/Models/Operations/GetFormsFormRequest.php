@@ -30,7 +30,7 @@ class GetFormsFormRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetFormsFormQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetFormsFormQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetFormsFormRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetFormsFormQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetFormsFormQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

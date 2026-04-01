@@ -35,7 +35,7 @@ class GetVerificationPackageResponse
     /**
      * Successful
      *
-     * @var ?Shared\VerificationPackage $verificationPackage
+     * @var ?\Unified\Unified_to\Models\Shared\VerificationPackage $verificationPackage
      */
     public ?Shared\VerificationPackage $verificationPackage = null;
 
@@ -43,7 +43,7 @@ class GetVerificationPackageResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\VerificationPackage  $verificationPackage
+     * @param  ?\Unified\Unified_to\Models\Shared\VerificationPackage  $verificationPackage
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\VerificationPackage $verificationPackage = null)

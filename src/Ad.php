@@ -47,8 +47,8 @@ class Ad
     /**
      * Create an ad
      *
-     * @param  Operations\CreateAdsAdRequest  $request
-     * @return Operations\CreateAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsAd(Operations\CreateAdsAdRequest $request, ?Options $options = null): Operations\CreateAdsAdResponse
@@ -114,8 +114,8 @@ class Ad
     /**
      * Retrieve an ad
      *
-     * @param  Operations\GetAdsAdRequest  $request
-     * @return Operations\GetAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsAd(Operations\GetAdsAdRequest $request, ?Options $options = null): Operations\GetAdsAdResponse
@@ -176,8 +176,8 @@ class Ad
     /**
      * List all ads
      *
-     * @param  Operations\ListAdsAdsRequest  $request
-     * @return Operations\ListAdsAdsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsAdsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsAdsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsAds(Operations\ListAdsAdsRequest $request, ?Options $options = null): Operations\ListAdsAdsResponse
@@ -238,8 +238,8 @@ class Ad
     /**
      * Update an ad
      *
-     * @param  Operations\PatchAdsAdRequest  $request
-     * @return Operations\PatchAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsAd(Operations\PatchAdsAdRequest $request, ?Options $options = null): Operations\PatchAdsAdResponse
@@ -305,8 +305,8 @@ class Ad
     /**
      * Remove an ad
      *
-     * @param  Operations\RemoveAdsAdRequest  $request
-     * @return Operations\RemoveAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsAd(Operations\RemoveAdsAdRequest $request, ?Options $options = null): Operations\RemoveAdsAdResponse
@@ -361,8 +361,8 @@ class Ad
     /**
      * Update an ad
      *
-     * @param  Operations\UpdateAdsAdRequest  $request
-     * @return Operations\UpdateAdsAdResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsAdRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsAd(Operations\UpdateAdsAdRequest $request, ?Options $options = null): Operations\UpdateAdsAdResponse

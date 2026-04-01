@@ -47,8 +47,8 @@ class Repo
     /**
      * Create a branch
      *
-     * @param  Operations\CreateRepoBranchRequest  $request
-     * @return Operations\CreateRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoBranch(Operations\CreateRepoBranchRequest $request, ?Options $options = null): Operations\CreateRepoBranchResponse
@@ -114,8 +114,8 @@ class Repo
     /**
      * Create a commit
      *
-     * @param  Operations\CreateRepoCommitRequest  $request
-     * @return Operations\CreateRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoCommit(Operations\CreateRepoCommitRequest $request, ?Options $options = null): Operations\CreateRepoCommitResponse
@@ -181,8 +181,8 @@ class Repo
     /**
      * Create an organization
      *
-     * @param  Operations\CreateRepoOrganizationRequest  $request
-     * @return Operations\CreateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoOrganization(Operations\CreateRepoOrganizationRequest $request, ?Options $options = null): Operations\CreateRepoOrganizationResponse
@@ -248,8 +248,8 @@ class Repo
     /**
      * Create a pullrequest
      *
-     * @param  Operations\CreateRepoPullrequestRequest  $request
-     * @return Operations\CreateRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoPullrequest(Operations\CreateRepoPullrequestRequest $request, ?Options $options = null): Operations\CreateRepoPullrequestResponse
@@ -315,8 +315,8 @@ class Repo
     /**
      * Create a repository
      *
-     * @param  Operations\CreateRepoRepositoryRequest  $request
-     * @return Operations\CreateRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoRepository(Operations\CreateRepoRepositoryRequest $request, ?Options $options = null): Operations\CreateRepoRepositoryResponse
@@ -382,8 +382,8 @@ class Repo
     /**
      * Retrieve a branch
      *
-     * @param  Operations\GetRepoBranchRequest  $request
-     * @return Operations\GetRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoBranch(Operations\GetRepoBranchRequest $request, ?Options $options = null): Operations\GetRepoBranchResponse
@@ -444,8 +444,8 @@ class Repo
     /**
      * Retrieve a commit
      *
-     * @param  Operations\GetRepoCommitRequest  $request
-     * @return Operations\GetRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoCommit(Operations\GetRepoCommitRequest $request, ?Options $options = null): Operations\GetRepoCommitResponse
@@ -506,8 +506,8 @@ class Repo
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetRepoOrganizationRequest  $request
-     * @return Operations\GetRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoOrganization(Operations\GetRepoOrganizationRequest $request, ?Options $options = null): Operations\GetRepoOrganizationResponse
@@ -568,8 +568,8 @@ class Repo
     /**
      * Retrieve a pullrequest
      *
-     * @param  Operations\GetRepoPullrequestRequest  $request
-     * @return Operations\GetRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoPullrequest(Operations\GetRepoPullrequestRequest $request, ?Options $options = null): Operations\GetRepoPullrequestResponse
@@ -630,8 +630,8 @@ class Repo
     /**
      * Retrieve a repository
      *
-     * @param  Operations\GetRepoRepositoryRequest  $request
-     * @return Operations\GetRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoRepository(Operations\GetRepoRepositoryRequest $request, ?Options $options = null): Operations\GetRepoRepositoryResponse
@@ -692,8 +692,8 @@ class Repo
     /**
      * List all branches
      *
-     * @param  Operations\ListRepoBranchesRequest  $request
-     * @return Operations\ListRepoBranchesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoBranchesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoBranchesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoBranches(Operations\ListRepoBranchesRequest $request, ?Options $options = null): Operations\ListRepoBranchesResponse
@@ -754,8 +754,8 @@ class Repo
     /**
      * List all commits
      *
-     * @param  Operations\ListRepoCommitsRequest  $request
-     * @return Operations\ListRepoCommitsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoCommits(Operations\ListRepoCommitsRequest $request, ?Options $options = null): Operations\ListRepoCommitsResponse
@@ -816,8 +816,8 @@ class Repo
     /**
      * List all organizations
      *
-     * @param  Operations\ListRepoOrganizationsRequest  $request
-     * @return Operations\ListRepoOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoOrganizations(Operations\ListRepoOrganizationsRequest $request, ?Options $options = null): Operations\ListRepoOrganizationsResponse
@@ -878,8 +878,8 @@ class Repo
     /**
      * List all pullrequests
      *
-     * @param  Operations\ListRepoPullrequestsRequest  $request
-     * @return Operations\ListRepoPullrequestsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequestsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoPullrequests(Operations\ListRepoPullrequestsRequest $request, ?Options $options = null): Operations\ListRepoPullrequestsResponse
@@ -940,8 +940,8 @@ class Repo
     /**
      * List all repositories
      *
-     * @param  Operations\ListRepoRepositoriesRequest  $request
-     * @return Operations\ListRepoRepositoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoRepositoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoRepositories(Operations\ListRepoRepositoriesRequest $request, ?Options $options = null): Operations\ListRepoRepositoriesResponse
@@ -1002,8 +1002,8 @@ class Repo
     /**
      * Update a branch
      *
-     * @param  Operations\PatchRepoBranchRequest  $request
-     * @return Operations\PatchRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoBranch(Operations\PatchRepoBranchRequest $request, ?Options $options = null): Operations\PatchRepoBranchResponse
@@ -1069,8 +1069,8 @@ class Repo
     /**
      * Update a commit
      *
-     * @param  Operations\PatchRepoCommitRequest  $request
-     * @return Operations\PatchRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoCommit(Operations\PatchRepoCommitRequest $request, ?Options $options = null): Operations\PatchRepoCommitResponse
@@ -1136,8 +1136,8 @@ class Repo
     /**
      * Update an organization
      *
-     * @param  Operations\PatchRepoOrganizationRequest  $request
-     * @return Operations\PatchRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoOrganization(Operations\PatchRepoOrganizationRequest $request, ?Options $options = null): Operations\PatchRepoOrganizationResponse
@@ -1203,8 +1203,8 @@ class Repo
     /**
      * Update a pullrequest
      *
-     * @param  Operations\PatchRepoPullrequestRequest  $request
-     * @return Operations\PatchRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoPullrequest(Operations\PatchRepoPullrequestRequest $request, ?Options $options = null): Operations\PatchRepoPullrequestResponse
@@ -1270,8 +1270,8 @@ class Repo
     /**
      * Update a repository
      *
-     * @param  Operations\PatchRepoRepositoryRequest  $request
-     * @return Operations\PatchRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoRepository(Operations\PatchRepoRepositoryRequest $request, ?Options $options = null): Operations\PatchRepoRepositoryResponse
@@ -1337,8 +1337,8 @@ class Repo
     /**
      * Remove a branch
      *
-     * @param  Operations\RemoveRepoBranchRequest  $request
-     * @return Operations\RemoveRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoBranch(Operations\RemoveRepoBranchRequest $request, ?Options $options = null): Operations\RemoveRepoBranchResponse
@@ -1393,8 +1393,8 @@ class Repo
     /**
      * Remove a commit
      *
-     * @param  Operations\RemoveRepoCommitRequest  $request
-     * @return Operations\RemoveRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoCommit(Operations\RemoveRepoCommitRequest $request, ?Options $options = null): Operations\RemoveRepoCommitResponse
@@ -1449,8 +1449,8 @@ class Repo
     /**
      * Remove an organization
      *
-     * @param  Operations\RemoveRepoOrganizationRequest  $request
-     * @return Operations\RemoveRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoOrganization(Operations\RemoveRepoOrganizationRequest $request, ?Options $options = null): Operations\RemoveRepoOrganizationResponse
@@ -1505,8 +1505,8 @@ class Repo
     /**
      * Remove a pullrequest
      *
-     * @param  Operations\RemoveRepoPullrequestRequest  $request
-     * @return Operations\RemoveRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoPullrequest(Operations\RemoveRepoPullrequestRequest $request, ?Options $options = null): Operations\RemoveRepoPullrequestResponse
@@ -1561,8 +1561,8 @@ class Repo
     /**
      * Remove a repository
      *
-     * @param  Operations\RemoveRepoRepositoryRequest  $request
-     * @return Operations\RemoveRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoRepository(Operations\RemoveRepoRepositoryRequest $request, ?Options $options = null): Operations\RemoveRepoRepositoryResponse
@@ -1617,8 +1617,8 @@ class Repo
     /**
      * Update a branch
      *
-     * @param  Operations\UpdateRepoBranchRequest  $request
-     * @return Operations\UpdateRepoBranchResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoBranch(Operations\UpdateRepoBranchRequest $request, ?Options $options = null): Operations\UpdateRepoBranchResponse
@@ -1684,8 +1684,8 @@ class Repo
     /**
      * Update a commit
      *
-     * @param  Operations\UpdateRepoCommitRequest  $request
-     * @return Operations\UpdateRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoCommit(Operations\UpdateRepoCommitRequest $request, ?Options $options = null): Operations\UpdateRepoCommitResponse
@@ -1751,8 +1751,8 @@ class Repo
     /**
      * Update an organization
      *
-     * @param  Operations\UpdateRepoOrganizationRequest  $request
-     * @return Operations\UpdateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoOrganization(Operations\UpdateRepoOrganizationRequest $request, ?Options $options = null): Operations\UpdateRepoOrganizationResponse
@@ -1818,8 +1818,8 @@ class Repo
     /**
      * Update a pullrequest
      *
-     * @param  Operations\UpdateRepoPullrequestRequest  $request
-     * @return Operations\UpdateRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoPullrequest(Operations\UpdateRepoPullrequestRequest $request, ?Options $options = null): Operations\UpdateRepoPullrequestResponse
@@ -1885,8 +1885,8 @@ class Repo
     /**
      * Update a repository
      *
-     * @param  Operations\UpdateRepoRepositoryRequest  $request
-     * @return Operations\UpdateRepoRepositoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoRepository(Operations\UpdateRepoRepositoryRequest $request, ?Options $options = null): Operations\UpdateRepoRepositoryResponse

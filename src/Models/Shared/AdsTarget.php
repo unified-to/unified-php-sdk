@@ -46,7 +46,7 @@ class AdsTarget
 
     /**
      *
-     * @var ?AdsTargetType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AdsTargetType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsTargetType|null')]
@@ -58,7 +58,7 @@ class AdsTarget
      * @param  string  $value
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?AdsTargetType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsTargetType  $type
      * @phpstan-pure
      */
     public function __construct(string $id, string $value, ?string $name = null, ?array $raw = null, ?AdsTargetType $type = null)

@@ -35,7 +35,7 @@ class ListAtsDocumentsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AtsDocument> $atsDocuments
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsDocument> $atsDocuments
      */
     public ?array $atsDocuments = null;
 
@@ -43,7 +43,7 @@ class ListAtsDocumentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AtsDocument>  $atsDocuments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsDocument>  $atsDocuments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $atsDocuments = null)

@@ -22,7 +22,7 @@ class PropertyShippingShipmentCustoms
 
     /**
      *
-     * @var ?ContentsType $contentsType
+     * @var ?\Unified\Unified_to\Models\Shared\ContentsType $contentsType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contents_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ContentsType|null')]
@@ -47,7 +47,7 @@ class PropertyShippingShipmentCustoms
 
     /**
      *
-     * @var ?DutiesPaidBy $dutiesPaidBy
+     * @var ?\Unified\Unified_to\Models\Shared\DutiesPaidBy $dutiesPaidBy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duties_paid_by')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DutiesPaidBy|null')]
@@ -57,7 +57,7 @@ class PropertyShippingShipmentCustoms
     /**
      * Customs items
      *
-     * @var ?array<ShippingCustomsItem> $items
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingCustomsItem> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingCustomsItem>|null')]
@@ -66,7 +66,7 @@ class PropertyShippingShipmentCustoms
 
     /**
      *
-     * @var ?NonDeliveryOption $nonDeliveryOption
+     * @var ?\Unified\Unified_to\Models\Shared\NonDeliveryOption $nonDeliveryOption
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('non_delivery_option')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\NonDeliveryOption|null')]
@@ -117,7 +117,7 @@ class PropertyShippingShipmentCustoms
 
     /**
      *
-     * @var ?TaxesPaidBy $taxesPaidBy
+     * @var ?\Unified\Unified_to\Models\Shared\TaxesPaidBy $taxesPaidBy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('taxes_paid_by')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxesPaidBy|null')]
@@ -126,18 +126,18 @@ class PropertyShippingShipmentCustoms
 
     /**
      * @param  ?float  $amount
-     * @param  ?ContentsType  $contentsType
+     * @param  ?\Unified\Unified_to\Models\Shared\ContentsType  $contentsType
      * @param  ?string  $currency
      * @param  ?string  $description
-     * @param  ?DutiesPaidBy  $dutiesPaidBy
-     * @param  ?array<ShippingCustomsItem>  $items
-     * @param  ?NonDeliveryOption  $nonDeliveryOption
+     * @param  ?\Unified\Unified_to\Models\Shared\DutiesPaidBy  $dutiesPaidBy
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingCustomsItem>  $items
+     * @param  ?\Unified\Unified_to\Models\Shared\NonDeliveryOption  $nonDeliveryOption
      * @param  ?string  $recipientEori
      * @param  ?string  $recipientTaxNumber
      * @param  ?array<string>  $restrictions
      * @param  ?string  $shipperEori
      * @param  ?string  $shipperTaxNumber
-     * @param  ?TaxesPaidBy  $taxesPaidBy
+     * @param  ?\Unified\Unified_to\Models\Shared\TaxesPaidBy  $taxesPaidBy
      * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?ContentsType $contentsType = null, ?string $currency = null, ?string $description = null, ?DutiesPaidBy $dutiesPaidBy = null, ?array $items = null, ?NonDeliveryOption $nonDeliveryOption = null, ?string $recipientEori = null, ?string $recipientTaxNumber = null, ?array $restrictions = null, ?string $shipperEori = null, ?string $shipperTaxNumber = null, ?TaxesPaidBy $taxesPaidBy = null)

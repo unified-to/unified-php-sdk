@@ -14,7 +14,7 @@ class UpdateRepoRepositoryRequest
 {
     /**
      *
-     * @var Shared\RepoRepository $repoRepository
+     * @var \Unified\Unified_to\Models\Shared\RepoRepository $repoRepository
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoRepository $repoRepository;
@@ -38,7 +38,7 @@ class UpdateRepoRepositoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateRepoRepositoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateRepoRepositoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateRepoRepositoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoRepository  $repoRepository
+     * @param  \Unified\Unified_to\Models\Shared\RepoRepository  $repoRepository
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateRepoRepositoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateRepoRepositoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

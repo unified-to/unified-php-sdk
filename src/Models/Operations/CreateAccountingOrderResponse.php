@@ -35,7 +35,7 @@ class CreateAccountingOrderResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingOrder $accountingOrder
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingOrder $accountingOrder
      */
     public ?Shared\AccountingOrder $accountingOrder = null;
 
@@ -43,7 +43,7 @@ class CreateAccountingOrderResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingOrder  $accountingOrder
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingOrder  $accountingOrder
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingOrder $accountingOrder = null)

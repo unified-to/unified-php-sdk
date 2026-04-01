@@ -35,7 +35,7 @@ class UpdateKmsSpaceResponse
     /**
      * Successful
      *
-     * @var ?Shared\KmsSpace $kmsSpace
+     * @var ?\Unified\Unified_to\Models\Shared\KmsSpace $kmsSpace
      */
     public ?Shared\KmsSpace $kmsSpace = null;
 
@@ -43,7 +43,7 @@ class UpdateKmsSpaceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\KmsSpace  $kmsSpace
+     * @param  ?\Unified\Unified_to\Models\Shared\KmsSpace  $kmsSpace
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\KmsSpace $kmsSpace = null)

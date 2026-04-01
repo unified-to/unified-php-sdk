@@ -14,7 +14,7 @@ class MessagingMessage
     /**
      * $attachments
      *
-     * @var ?array<MessagingAttachment> $attachments
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingAttachment> $attachments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingAttachment>|null')]
@@ -24,7 +24,7 @@ class MessagingMessage
     /**
      * for email systems, this field represents the From value
      *
-     * @var ?PropertyMessagingMessageAuthorMember $authorMember
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember $authorMember
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('author_member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember|null')]
@@ -34,7 +34,7 @@ class MessagingMessage
     /**
      * $buttons
      *
-     * @var ?array<MessagingButton> $buttons
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingButton> $buttons
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('buttons')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingButton>|null')]
@@ -62,7 +62,7 @@ class MessagingMessage
     /**
      * Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
      *
-     * @var ?array<MessagingReference> $channels
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingReference> $channels
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('channels')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingReference>|null')]
@@ -80,7 +80,7 @@ class MessagingMessage
     /**
      * for email systems, this field represents the To value
      *
-     * @var ?array<MessagingMember> $destinationMembers
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $destinationMembers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('destination_members')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
@@ -98,7 +98,7 @@ class MessagingMessage
     /**
      * for email systems, this field represents the BCC value
      *
-     * @var ?array<MessagingMember> $hiddenMembers
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $hiddenMembers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('hidden_members')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
@@ -124,7 +124,7 @@ class MessagingMessage
     /**
      * for email systems, this field represents the CC value
      *
-     * @var ?array<MessagingMember> $mentionedMembers
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMember> $mentionedMembers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mentioned_members')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMember>|null')]
@@ -184,7 +184,7 @@ class MessagingMessage
     /**
      * $reactions
      *
-     * @var ?array<MessagingReaction> $reactions
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingReaction> $reactions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('reactions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingReaction>|null')]
@@ -232,26 +232,26 @@ class MessagingMessage
     public ?string $webUrl = null;
 
     /**
-     * @param  ?array<MessagingAttachment>  $attachments
-     * @param  ?PropertyMessagingMessageAuthorMember  $authorMember
-     * @param  ?array<MessagingButton>  $buttons
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingAttachment>  $attachments
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingMessageAuthorMember  $authorMember
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingButton>  $buttons
      * @param  ?string  $channelId
      * @param  ?array<string>  $channelIds
-     * @param  ?array<MessagingReference>  $channels
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingReference>  $channels
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<MessagingMember>  $destinationMembers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $destinationMembers
      * @param  ?bool  $hasChildren
-     * @param  ?array<MessagingMember>  $hiddenMembers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $hiddenMembers
      * @param  ?string  $id
      * @param  ?bool  $isUnread
-     * @param  ?array<MessagingMember>  $mentionedMembers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $mentionedMembers
      * @param  ?string  $message
      * @param  ?string  $messageHtml
      * @param  ?string  $messageMarkdown
      * @param  ?string  $messageThreadIdentifier
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<MessagingReaction>  $reactions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingReaction>  $reactions
      * @param  ?string  $reference
      * @param  ?string  $rootMessageId
      * @param  ?string  $subject

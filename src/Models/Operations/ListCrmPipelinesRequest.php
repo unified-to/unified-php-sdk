@@ -22,7 +22,7 @@ class ListCrmPipelinesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCrmPipelinesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmPipelinesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListCrmPipelinesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListCrmPipelinesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmPipelinesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

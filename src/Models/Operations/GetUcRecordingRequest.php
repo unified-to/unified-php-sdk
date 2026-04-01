@@ -30,7 +30,7 @@ class GetUcRecordingRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetUcRecordingQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetUcRecordingRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetUcRecordingQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

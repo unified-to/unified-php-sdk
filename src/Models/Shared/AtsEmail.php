@@ -28,7 +28,7 @@ class AtsEmail
 
     /**
      *
-     * @var ?AtsEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AtsEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsEmailType|null')]
@@ -38,7 +38,7 @@ class AtsEmail
     /**
      * @param  string  $email
      * @param  ?string  $name
-     * @param  ?AtsEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?string $name = null, ?AtsEmailType $type = null)

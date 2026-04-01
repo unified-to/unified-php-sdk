@@ -30,7 +30,7 @@ class ShippingShipment
     /**
      * Customs information
      *
-     * @var ?PropertyShippingShipmentCustoms $customs
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentCustoms $customs
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customs')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingShipmentCustoms|null')]
@@ -40,7 +40,7 @@ class ShippingShipment
     /**
      * Origin address
      *
-     * @var ?PropertyShippingShipmentFromAddress $fromAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentFromAddress $fromAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingShipmentFromAddress|null')]
@@ -58,7 +58,7 @@ class ShippingShipment
     /**
      * Insurance details
      *
-     * @var ?PropertyShippingShipmentInsurance $insurance
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentInsurance $insurance
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('insurance')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingShipmentInsurance|null')]
@@ -132,7 +132,7 @@ class ShippingShipment
     /**
      * Array of packages in this shipment
      *
-     * @var ?array<ShippingPackage> $packages
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingPackage> $packages
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('packages')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingPackage>|null')]
@@ -208,7 +208,7 @@ class ShippingShipment
     /**
      * Return address (may differ from from_address)
      *
-     * @var ?PropertyShippingShipmentReturnAddress $returnAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentReturnAddress $returnAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('return_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingShipmentReturnAddress|null')]
@@ -233,7 +233,7 @@ class ShippingShipment
 
     /**
      *
-     * @var ?ReturnType $returnType
+     * @var ?\Unified\Unified_to\Models\Shared\ReturnType $returnType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('return_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ReturnType|null')]
@@ -268,7 +268,7 @@ class ShippingShipment
 
     /**
      *
-     * @var ?ShippingShipmentStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingShipmentStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingShipmentStatus|null')]
@@ -278,7 +278,7 @@ class ShippingShipment
     /**
      * Destination address
      *
-     * @var ?PropertyShippingShipmentToAddress $toAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentToAddress $toAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('to_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingShipmentToAddress|null')]
@@ -320,10 +320,10 @@ class ShippingShipment
     /**
      * @param  ?string  $carrierId
      * @param  ?\DateTime  $createdAt
-     * @param  ?PropertyShippingShipmentCustoms  $customs
-     * @param  ?PropertyShippingShipmentFromAddress  $fromAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentCustoms  $customs
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentFromAddress  $fromAddress
      * @param  ?string  $id
-     * @param  ?PropertyShippingShipmentInsurance  $insurance
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentInsurance  $insurance
      * @param  ?bool  $isAdultSignatureRequired
      * @param  ?bool  $isInternational
      * @param  ?bool  $isRateGuaranteed
@@ -332,7 +332,7 @@ class ShippingShipment
      * @param  ?string  $labelId
      * @param  ?string  $orderId
      * @param  ?string  $originalShipmentId
-     * @param  ?array<ShippingPackage>  $packages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingPackage>  $packages
      * @param  ?float  $rateAmount
      * @param  ?string  $rateCurrency
      * @param  ?float  $rateEstimatedDays
@@ -341,15 +341,15 @@ class ShippingShipment
      * @param  ?string  $rateServiceName
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $referenceNumber
-     * @param  ?PropertyShippingShipmentReturnAddress  $returnAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentReturnAddress  $returnAddress
      * @param  ?string  $returnAuthorizationNumber
      * @param  ?string  $returnReason
-     * @param  ?ReturnType  $returnType
+     * @param  ?\Unified\Unified_to\Models\Shared\ReturnType  $returnType
      * @param  ?string  $serviceCode
      * @param  ?\DateTime  $shippedAt
      * @param  ?array<string>  $specialInstructions
-     * @param  ?ShippingShipmentStatus  $status
-     * @param  ?PropertyShippingShipmentToAddress  $toAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingShipmentStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingShipmentToAddress  $toAddress
      * @param  ?string  $trackingId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $warehouseLocationId

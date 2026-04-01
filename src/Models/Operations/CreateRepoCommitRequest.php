@@ -14,7 +14,7 @@ class CreateRepoCommitRequest
 {
     /**
      *
-     * @var Shared\RepoCommit $repoCommit
+     * @var \Unified\Unified_to\Models\Shared\RepoCommit $repoCommit
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoCommit $repoCommit;
@@ -30,7 +30,7 @@ class CreateRepoCommitRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateRepoCommitQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateRepoCommitQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateRepoCommitRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoCommit  $repoCommit
+     * @param  \Unified\Unified_to\Models\Shared\RepoCommit  $repoCommit
      * @param  string  $connectionId
-     * @param  ?array<CreateRepoCommitQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateRepoCommitQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -22,7 +22,7 @@ class ListShippingLabelsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListShippingLabelsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListShippingLabelsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListShippingLabelsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListShippingLabelsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListShippingLabelsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

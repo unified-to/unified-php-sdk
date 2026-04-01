@@ -47,8 +47,8 @@ class Scim
     /**
      * Create group
      *
-     * @param  Operations\CreateScimGroupsRequest  $request
-     * @return Operations\CreateScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createScimGroups(Operations\CreateScimGroupsRequest $request, ?Options $options = null): Operations\CreateScimGroupsResponse
@@ -111,8 +111,8 @@ class Scim
     /**
      * Create user
      *
-     * @param  Operations\CreateScimUsersRequest  $request
-     * @return Operations\CreateScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createScimUsers(Operations\CreateScimUsersRequest $request, ?Options $options = null): Operations\CreateScimUsersResponse
@@ -178,8 +178,8 @@ class Scim
     /**
      * Get group
      *
-     * @param  Operations\GetScimGroupsRequest  $request
-     * @return Operations\GetScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getScimGroups(Operations\GetScimGroupsRequest $request, ?Options $options = null): Operations\GetScimGroupsResponse
@@ -237,8 +237,8 @@ class Scim
     /**
      * Get user
      *
-     * @param  Operations\GetScimUsersRequest  $request
-     * @return Operations\GetScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getScimUsers(Operations\GetScimUsersRequest $request, ?Options $options = null): Operations\GetScimUsersResponse
@@ -296,8 +296,8 @@ class Scim
     /**
      * List groups
      *
-     * @param  Operations\ListScimGroupsRequest  $request
-     * @return Operations\ListScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listScimGroups(Operations\ListScimGroupsRequest $request, ?Options $options = null): Operations\ListScimGroupsResponse
@@ -358,8 +358,8 @@ class Scim
     /**
      * List users
      *
-     * @param  Operations\ListScimUsersRequest  $request
-     * @return Operations\ListScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listScimUsers(Operations\ListScimUsersRequest $request, ?Options $options = null): Operations\ListScimUsersResponse
@@ -420,8 +420,8 @@ class Scim
     /**
      * Update group
      *
-     * @param  Operations\PatchScimGroupsRequest  $request
-     * @return Operations\PatchScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchScimGroups(Operations\PatchScimGroupsRequest $request, ?Options $options = null): Operations\PatchScimGroupsResponse
@@ -484,8 +484,8 @@ class Scim
     /**
      * Update user
      *
-     * @param  Operations\PatchScimUsersRequest  $request
-     * @return Operations\PatchScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchScimUsers(Operations\PatchScimUsersRequest $request, ?Options $options = null): Operations\PatchScimUsersResponse
@@ -548,8 +548,8 @@ class Scim
     /**
      * Delete group
      *
-     * @param  Operations\RemoveScimGroupsRequest  $request
-     * @return Operations\RemoveScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeScimGroups(Operations\RemoveScimGroupsRequest $request, ?Options $options = null): Operations\RemoveScimGroupsResponse
@@ -604,8 +604,8 @@ class Scim
     /**
      * Delete user
      *
-     * @param  Operations\RemoveScimUsersRequest  $request
-     * @return Operations\RemoveScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeScimUsers(Operations\RemoveScimUsersRequest $request, ?Options $options = null): Operations\RemoveScimUsersResponse
@@ -660,8 +660,8 @@ class Scim
     /**
      * Update group
      *
-     * @param  Operations\UpdateScimGroupsRequest  $request
-     * @return Operations\UpdateScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateScimGroups(Operations\UpdateScimGroupsRequest $request, ?Options $options = null): Operations\UpdateScimGroupsResponse
@@ -724,8 +724,8 @@ class Scim
     /**
      * Update user
      *
-     * @param  Operations\UpdateScimUsersRequest  $request
-     * @return Operations\UpdateScimUsersResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateScimUsersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateScimUsersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateScimUsers(Operations\UpdateScimUsersRequest $request, ?Options $options = null): Operations\UpdateScimUsersResponse

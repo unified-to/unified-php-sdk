@@ -30,7 +30,7 @@ class GetTicketingNoteRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetTicketingNoteQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetTicketingNoteQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetTicketingNoteRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetTicketingNoteQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetTicketingNoteQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

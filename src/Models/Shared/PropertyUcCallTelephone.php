@@ -21,7 +21,7 @@ class PropertyUcCallTelephone
 
     /**
      *
-     * @var ?PropertyUcCallTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType|null')]
@@ -30,7 +30,7 @@ class PropertyUcCallTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?PropertyUcCallTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?PropertyUcCallTelephoneType $type = null)

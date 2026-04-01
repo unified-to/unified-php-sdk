@@ -14,7 +14,7 @@ class PropertyAdsReportMetricsCampaignTargetingContent
     /**
      * $excludedKeywords
      *
-     * @var ?array<AdsKeyword> $excludedKeywords
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsKeyword> $excludedKeywords
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_keywords')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsKeyword>|null')]
@@ -44,7 +44,7 @@ class PropertyAdsReportMetricsCampaignTargetingContent
     /**
      * $keywords
      *
-     * @var ?array<AdsKeyword> $keywords
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsKeyword> $keywords
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('keywords')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsKeyword>|null')]
@@ -73,7 +73,7 @@ class PropertyAdsReportMetricsCampaignTargetingContent
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingContentVideo $video
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContentVideo $video
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('video')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContentVideo|null')]
@@ -81,13 +81,13 @@ class PropertyAdsReportMetricsCampaignTargetingContent
     public ?PropertyAdsReportMetricsCampaignTargetingContentVideo $video = null;
 
     /**
-     * @param  ?array<AdsKeyword>  $excludedKeywords
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsKeyword>  $excludedKeywords
      * @param  ?array<string>  $excludedTopics
      * @param  ?array<string>  $excludedUrls
-     * @param  ?array<AdsKeyword>  $keywords
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsKeyword>  $keywords
      * @param  ?array<string>  $topics
      * @param  ?array<string>  $urls
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingContentVideo  $video
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContentVideo  $video
      * @phpstan-pure
      */
     public function __construct(?array $excludedKeywords = null, ?array $excludedTopics = null, ?array $excludedUrls = null, ?array $keywords = null, ?array $topics = null, ?array $urls = null, ?PropertyAdsReportMetricsCampaignTargetingContentVideo $video = null)

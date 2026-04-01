@@ -14,7 +14,7 @@ class AccountingBalancesheet
     /**
      * $assets
      *
-     * @var ?array<AccountingBalancesheetItem> $assets
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem> $assets
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('assets')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
@@ -48,7 +48,7 @@ class AccountingBalancesheet
     /**
      * $equity
      *
-     * @var ?array<AccountingBalancesheetItem> $equity
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem> $equity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('equity')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
@@ -66,7 +66,7 @@ class AccountingBalancesheet
     /**
      * $liabilities
      *
-     * @var ?array<AccountingBalancesheetItem> $liabilities
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem> $liabilities
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('liabilities')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>|null')]
@@ -116,13 +116,13 @@ class AccountingBalancesheet
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?array<AccountingBalancesheetItem>  $assets
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $assets
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?array<AccountingBalancesheetItem>  $equity
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $equity
      * @param  ?string  $id
-     * @param  ?array<AccountingBalancesheetItem>  $liabilities
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $liabilities
      * @param  ?string  $name
      * @param  ?float  $netAssetsAmount
      * @param  ?array<string, mixed>  $raw

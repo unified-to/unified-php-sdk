@@ -14,7 +14,7 @@ class UpdateAccountingPurchaseorderRequest
 {
     /**
      *
-     * @var Shared\AccountingPurchaseorder $accountingPurchaseorder
+     * @var \Unified\Unified_to\Models\Shared\AccountingPurchaseorder $accountingPurchaseorder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingPurchaseorder $accountingPurchaseorder;
@@ -38,7 +38,7 @@ class UpdateAccountingPurchaseorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingPurchaseorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAccountingPurchaseorderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingPurchaseorder  $accountingPurchaseorder
+     * @param  \Unified\Unified_to\Models\Shared\AccountingPurchaseorder  $accountingPurchaseorder
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingPurchaseorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

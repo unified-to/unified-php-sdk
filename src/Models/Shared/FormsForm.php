@@ -53,7 +53,7 @@ class FormsForm
     /**
      * $fields
      *
-     * @var ?array<FormField> $fields
+     * @var ?array<\Unified\Unified_to\Models\Shared\FormField> $fields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\FormField>|null')]
@@ -140,7 +140,7 @@ class FormsForm
      * @param  ?string  $confirmationRedirectUrl
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
-     * @param  ?array<FormField>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Shared\FormField>  $fields
      * @param  ?bool  $hasMultipleSubmissions
      * @param  ?bool  $hasProgressBar
      * @param  ?bool  $hasShuffleQuestions

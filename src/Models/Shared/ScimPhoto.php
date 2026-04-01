@@ -29,7 +29,7 @@ class ScimPhoto
 
     /**
      *
-     * @var ?ScimPhotoType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimPhotoType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimPhotoType|null')]
@@ -47,7 +47,7 @@ class ScimPhoto
     /**
      * @param  ?string  $display
      * @param  ?bool  $primary
-     * @param  ?ScimPhotoType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimPhotoType  $type
      * @param  ?string  $value
      * @phpstan-pure
      */

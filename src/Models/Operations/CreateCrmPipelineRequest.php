@@ -14,7 +14,7 @@ class CreateCrmPipelineRequest
 {
     /**
      *
-     * @var Shared\CrmPipeline $crmPipeline
+     * @var \Unified\Unified_to\Models\Shared\CrmPipeline $crmPipeline
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmPipeline $crmPipeline;
@@ -30,7 +30,7 @@ class CreateCrmPipelineRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmPipelineQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmPipelineQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCrmPipelineRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmPipeline  $crmPipeline
+     * @param  \Unified\Unified_to\Models\Shared\CrmPipeline  $crmPipeline
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmPipelineQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmPipelineQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

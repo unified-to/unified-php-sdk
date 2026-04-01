@@ -38,7 +38,7 @@ class PropertyCrmEventTask
 
     /**
      *
-     * @var ?Priority $priority
+     * @var ?\Unified\Unified_to\Models\Shared\Priority $priority
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('priority')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Priority|null')]
@@ -47,7 +47,7 @@ class PropertyCrmEventTask
 
     /**
      *
-     * @var ?PropertyCrmEventTaskStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus|null')]
@@ -58,8 +58,8 @@ class PropertyCrmEventTask
      * @param  ?string  $description
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $name
-     * @param  ?Priority  $priority
-     * @param  ?PropertyCrmEventTaskStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\Priority  $priority
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus  $status
      * @phpstan-pure
      */
     public function __construct(?string $description = null, ?\DateTime $dueAt = null, ?string $name = null, ?Priority $priority = null, ?PropertyCrmEventTaskStatus $status = null)

@@ -14,7 +14,7 @@ class UpdateLmsCollectionRequest
 {
     /**
      *
-     * @var Shared\LmsCollection $lmsCollection
+     * @var \Unified\Unified_to\Models\Shared\LmsCollection $lmsCollection
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\LmsCollection $lmsCollection;
@@ -38,7 +38,7 @@ class UpdateLmsCollectionRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateLmsCollectionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateLmsCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateLmsCollectionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\LmsCollection  $lmsCollection
+     * @param  \Unified\Unified_to\Models\Shared\LmsCollection  $lmsCollection
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateLmsCollectionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateLmsCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

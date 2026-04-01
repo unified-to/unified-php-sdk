@@ -14,7 +14,7 @@ class PatchVerificationRequestRequest
 {
     /**
      *
-     * @var Shared\VerificationRequest $verificationRequest
+     * @var \Unified\Unified_to\Models\Shared\VerificationRequest $verificationRequest
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\VerificationRequest $verificationRequest;
@@ -38,7 +38,7 @@ class PatchVerificationRequestRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchVerificationRequestQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchVerificationRequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchVerificationRequestRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\VerificationRequest  $verificationRequest
+     * @param  \Unified\Unified_to\Models\Shared\VerificationRequest  $verificationRequest
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchVerificationRequestQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchVerificationRequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

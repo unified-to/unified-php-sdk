@@ -47,8 +47,8 @@ class Balancesheet
     /**
      * Retrieve a balancesheet
      *
-     * @param  Operations\GetAccountingBalancesheetRequest  $request
-     * @return Operations\GetAccountingBalancesheetResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingBalancesheet(Operations\GetAccountingBalancesheetRequest $request, ?Options $options = null): Operations\GetAccountingBalancesheetResponse
@@ -109,8 +109,8 @@ class Balancesheet
     /**
      * List all balancesheets
      *
-     * @param  Operations\ListAccountingBalancesheetsRequest  $request
-     * @return Operations\ListAccountingBalancesheetsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingBalancesheets(Operations\ListAccountingBalancesheetsRequest $request, ?Options $options = null): Operations\ListAccountingBalancesheetsResponse

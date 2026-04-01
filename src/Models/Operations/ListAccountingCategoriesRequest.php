@@ -22,7 +22,7 @@ class ListAccountingCategoriesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingCategoriesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingCategoriesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListAccountingCategoriesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAccountingCategoriesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingCategoriesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

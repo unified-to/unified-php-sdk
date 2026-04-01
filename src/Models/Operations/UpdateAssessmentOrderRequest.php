@@ -14,7 +14,7 @@ class UpdateAssessmentOrderRequest
 {
     /**
      *
-     * @var Shared\AssessmentOrder $assessmentOrder
+     * @var \Unified\Unified_to\Models\Shared\AssessmentOrder $assessmentOrder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AssessmentOrder $assessmentOrder;
@@ -38,7 +38,7 @@ class UpdateAssessmentOrderRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAssessmentOrderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAssessmentOrderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAssessmentOrderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AssessmentOrder  $assessmentOrder
+     * @param  \Unified\Unified_to\Models\Shared\AssessmentOrder  $assessmentOrder
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAssessmentOrderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAssessmentOrderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

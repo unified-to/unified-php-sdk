@@ -35,7 +35,7 @@ class ListUnifiedIssuesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\Issue> $issues
+     * @var ?array<\Unified\Unified_to\Models\Shared\Issue> $issues
      */
     public ?array $issues = null;
 
@@ -43,7 +43,7 @@ class ListUnifiedIssuesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\Issue>  $issues
+     * @param  ?array<\Unified\Unified_to\Models\Shared\Issue>  $issues
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $issues = null)

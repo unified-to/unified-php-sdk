@@ -47,8 +47,8 @@ class Apicall
     /**
      * Retrieve specific API Call by its ID
      *
-     * @param  Operations\GetUnifiedApicallRequest  $request
-     * @return Operations\GetUnifiedApicallResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedApicall(Operations\GetUnifiedApicallRequest $request, ?Options $options = null): Operations\GetUnifiedApicallResponse
@@ -106,8 +106,8 @@ class Apicall
     /**
      * Returns API Calls
      *
-     * @param  ?Operations\ListUnifiedApicallsRequest  $request
-     * @return Operations\ListUnifiedApicallsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedApicalls(?Operations\ListUnifiedApicallsRequest $request = null, ?Options $options = null): Operations\ListUnifiedApicallsResponse

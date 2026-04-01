@@ -53,7 +53,7 @@ class ShippingLabel
 
     /**
      *
-     * @var ?LabelFormat $labelFormat
+     * @var ?\Unified\Unified_to\Models\Shared\LabelFormat $labelFormat
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('label_format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LabelFormat|null')]
@@ -104,7 +104,7 @@ class ShippingLabel
 
     /**
      *
-     * @var ?ShippingLabelStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingLabelStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingLabelStatus|null')]
@@ -133,13 +133,13 @@ class ShippingLabel
      * @param  ?bool  $isVoided
      * @param  ?float  $labelCost
      * @param  ?string  $labelCostCurrency
-     * @param  ?LabelFormat  $labelFormat
+     * @param  ?\Unified\Unified_to\Models\Shared\LabelFormat  $labelFormat
      * @param  ?string  $labelUrl
      * @param  ?string  $rateId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $serviceCode
      * @param  ?string  $shipmentId
-     * @param  ?ShippingLabelStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingLabelStatus  $status
      * @param  ?string  $trackingNumber
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

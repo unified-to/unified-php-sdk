@@ -47,8 +47,8 @@ class Expense
     /**
      * Create an expense
      *
-     * @param  Operations\CreateAccountingExpenseRequest  $request
-     * @return Operations\CreateAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingExpense(Operations\CreateAccountingExpenseRequest $request, ?Options $options = null): Operations\CreateAccountingExpenseResponse
@@ -114,8 +114,8 @@ class Expense
     /**
      * Retrieve an expense
      *
-     * @param  Operations\GetAccountingExpenseRequest  $request
-     * @return Operations\GetAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingExpense(Operations\GetAccountingExpenseRequest $request, ?Options $options = null): Operations\GetAccountingExpenseResponse
@@ -176,8 +176,8 @@ class Expense
     /**
      * List all expenses
      *
-     * @param  Operations\ListAccountingExpensesRequest  $request
-     * @return Operations\ListAccountingExpensesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingExpenses(Operations\ListAccountingExpensesRequest $request, ?Options $options = null): Operations\ListAccountingExpensesResponse
@@ -238,8 +238,8 @@ class Expense
     /**
      * Update an expense
      *
-     * @param  Operations\PatchAccountingExpenseRequest  $request
-     * @return Operations\PatchAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingExpense(Operations\PatchAccountingExpenseRequest $request, ?Options $options = null): Operations\PatchAccountingExpenseResponse
@@ -305,8 +305,8 @@ class Expense
     /**
      * Remove an expense
      *
-     * @param  Operations\RemoveAccountingExpenseRequest  $request
-     * @return Operations\RemoveAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingExpense(Operations\RemoveAccountingExpenseRequest $request, ?Options $options = null): Operations\RemoveAccountingExpenseResponse
@@ -361,8 +361,8 @@ class Expense
     /**
      * Update an expense
      *
-     * @param  Operations\UpdateAccountingExpenseRequest  $request
-     * @return Operations\UpdateAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingExpense(Operations\UpdateAccountingExpenseRequest $request, ?Options $options = null): Operations\UpdateAccountingExpenseResponse

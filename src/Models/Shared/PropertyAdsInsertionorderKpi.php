@@ -45,7 +45,7 @@ class PropertyAdsInsertionorderKpi
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderKpiType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpiType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpiType|null')]
@@ -57,7 +57,7 @@ class PropertyAdsInsertionorderKpi
      * @param  ?float  $amount
      * @param  ?float  $percentage
      * @param  ?string  $stringValue
-     * @param  ?PropertyAdsInsertionorderKpiType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpiType  $type
      * @phpstan-pure
      */
     public function __construct(?string $algorithmId = null, ?float $amount = null, ?float $percentage = null, ?string $stringValue = null, ?PropertyAdsInsertionorderKpiType $type = null)

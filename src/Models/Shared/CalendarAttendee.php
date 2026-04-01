@@ -45,7 +45,7 @@ class CalendarAttendee
 
     /**
      *
-     * @var ?CalendarAttendeeStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarAttendeeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarAttendeeStatus|null')]
@@ -65,7 +65,7 @@ class CalendarAttendee
      * @param  ?bool  $isCohost
      * @param  ?string  $name
      * @param  ?bool  $required
-     * @param  ?CalendarAttendeeStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarAttendeeStatus  $status
      * @param  ?string  $userId
      * @phpstan-pure
      */

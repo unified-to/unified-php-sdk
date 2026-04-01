@@ -35,7 +35,7 @@ class UpdateTicketingTicketResponse
     /**
      * Successful
      *
-     * @var ?Shared\TicketingTicket $ticketingTicket
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingTicket $ticketingTicket
      */
     public ?Shared\TicketingTicket $ticketingTicket = null;
 
@@ -43,7 +43,7 @@ class UpdateTicketingTicketResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\TicketingTicket  $ticketingTicket
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingTicket  $ticketingTicket
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TicketingTicket $ticketingTicket = null)

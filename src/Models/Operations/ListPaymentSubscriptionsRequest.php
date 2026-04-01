@@ -38,7 +38,7 @@ class ListPaymentSubscriptionsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListPaymentSubscriptionsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -107,7 +107,7 @@ class ListPaymentSubscriptionsRequest
      * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListPaymentSubscriptionsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

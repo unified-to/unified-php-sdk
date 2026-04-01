@@ -35,7 +35,7 @@ class UpdateRepoBranchResponse
     /**
      * Successful
      *
-     * @var ?Shared\RepoBranch $repoBranch
+     * @var ?\Unified\Unified_to\Models\Shared\RepoBranch $repoBranch
      */
     public ?Shared\RepoBranch $repoBranch = null;
 
@@ -43,7 +43,7 @@ class UpdateRepoBranchResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\RepoBranch  $repoBranch
+     * @param  ?\Unified\Unified_to\Models\Shared\RepoBranch  $repoBranch
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\RepoBranch $repoBranch = null)

@@ -22,7 +22,7 @@ class ListMessagingChannelsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListMessagingChannelsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListMessagingChannelsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -96,7 +96,7 @@ class ListMessagingChannelsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListMessagingChannelsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListMessagingChannelsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

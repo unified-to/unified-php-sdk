@@ -35,7 +35,7 @@ class UpdateHrisGroupResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisGroup $hrisGroup
+     * @var ?\Unified\Unified_to\Models\Shared\HrisGroup $hrisGroup
      */
     public ?Shared\HrisGroup $hrisGroup = null;
 
@@ -43,7 +43,7 @@ class UpdateHrisGroupResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisGroup  $hrisGroup
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisGroup  $hrisGroup
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisGroup $hrisGroup = null)

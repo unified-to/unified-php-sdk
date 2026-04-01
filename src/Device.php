@@ -47,8 +47,8 @@ class Device
     /**
      * Create a device
      *
-     * @param  Operations\CreateHrisDeviceRequest  $request
-     * @return Operations\CreateHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisDevice(Operations\CreateHrisDeviceRequest $request, ?Options $options = null): Operations\CreateHrisDeviceResponse
@@ -114,8 +114,8 @@ class Device
     /**
      * Retrieve a device
      *
-     * @param  Operations\GetHrisDeviceRequest  $request
-     * @return Operations\GetHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisDevice(Operations\GetHrisDeviceRequest $request, ?Options $options = null): Operations\GetHrisDeviceResponse
@@ -176,8 +176,8 @@ class Device
     /**
      * List all devices
      *
-     * @param  Operations\ListHrisDevicesRequest  $request
-     * @return Operations\ListHrisDevicesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDevicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDevicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisDevices(Operations\ListHrisDevicesRequest $request, ?Options $options = null): Operations\ListHrisDevicesResponse
@@ -238,8 +238,8 @@ class Device
     /**
      * Update a device
      *
-     * @param  Operations\PatchHrisDeviceRequest  $request
-     * @return Operations\PatchHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisDevice(Operations\PatchHrisDeviceRequest $request, ?Options $options = null): Operations\PatchHrisDeviceResponse
@@ -305,8 +305,8 @@ class Device
     /**
      * Remove a device
      *
-     * @param  Operations\RemoveHrisDeviceRequest  $request
-     * @return Operations\RemoveHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisDevice(Operations\RemoveHrisDeviceRequest $request, ?Options $options = null): Operations\RemoveHrisDeviceResponse
@@ -361,8 +361,8 @@ class Device
     /**
      * Update a device
      *
-     * @param  Operations\UpdateHrisDeviceRequest  $request
-     * @return Operations\UpdateHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisDevice(Operations\UpdateHrisDeviceRequest $request, ?Options $options = null): Operations\UpdateHrisDeviceResponse

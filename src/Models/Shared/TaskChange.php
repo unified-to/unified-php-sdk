@@ -30,7 +30,7 @@ class TaskChange
     /**
      * $items
      *
-     * @var ?array<TaskChangeItem> $items
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskChangeItem> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TaskChangeItem>|null')]
@@ -74,7 +74,7 @@ class TaskChange
     /**
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
-     * @param  ?array<TaskChangeItem>  $items
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskChangeItem>  $items
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taskId
      * @param  ?\DateTime  $updatedAt

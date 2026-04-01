@@ -30,7 +30,7 @@ class GetAdsInsertionorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAdsInsertionorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAdsInsertionorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAdsInsertionorderRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAdsInsertionorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAdsInsertionorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

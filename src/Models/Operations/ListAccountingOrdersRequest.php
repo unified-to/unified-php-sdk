@@ -20,9 +20,17 @@ class ListAccountingOrdersRequest
     public string $connectionId;
 
     /**
+     * The contact ID to filter by (reference to AccountingContact)
+     *
+     * @var ?string $contactId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=contact_id')]
+    public ?string $contactId = null;
+
+    /**
      * Fields to return
      *
-     * @var ?array<ListAccountingOrdersQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingOrdersQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -96,7 +104,8 @@ class ListAccountingOrdersRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAccountingOrdersQueryParamFields>  $fields
+     * @param  ?string  $contactId
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingOrdersQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -108,9 +117,10 @@ class ListAccountingOrdersRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->contactId = $contactId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;

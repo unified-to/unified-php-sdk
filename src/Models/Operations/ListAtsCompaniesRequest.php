@@ -22,7 +22,7 @@ class ListAtsCompaniesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAtsCompaniesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsCompaniesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListAtsCompaniesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAtsCompaniesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsCompaniesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -35,7 +35,7 @@ class UpdateCrmDealResponse
     /**
      * Successful
      *
-     * @var ?Shared\CrmDeal $crmDeal
+     * @var ?\Unified\Unified_to\Models\Shared\CrmDeal $crmDeal
      */
     public ?Shared\CrmDeal $crmDeal = null;
 
@@ -43,7 +43,7 @@ class UpdateCrmDealResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CrmDeal  $crmDeal
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmDeal  $crmDeal
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CrmDeal $crmDeal = null)

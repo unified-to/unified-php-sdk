@@ -47,7 +47,7 @@ class AdsCreative
 
     /**
      *
-     * @var ?CreativeType $creativeType
+     * @var ?\Unified\Unified_to\Models\Shared\CreativeType $creativeType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('creative_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CreativeType|null')]
@@ -104,7 +104,7 @@ class AdsCreative
 
     /**
      *
-     * @var ?HostingSource $hostingSource
+     * @var ?\Unified\Unified_to\Models\Shared\HostingSource $hostingSource
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('hosting_source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HostingSource|null')]
@@ -170,7 +170,7 @@ class AdsCreative
     /**
      * $promoted
      *
-     * @var ?array<AdsPromoted> $promoted
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
@@ -189,7 +189,7 @@ class AdsCreative
 
     /**
      *
-     * @var ?AdsCreativeStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AdsCreativeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsCreativeStatus|null')]
@@ -241,14 +241,14 @@ class AdsCreative
      * @param  ?string  $body
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
-     * @param  ?CreativeType  $creativeType
+     * @param  ?\Unified\Unified_to\Models\Shared\CreativeType  $creativeType
      * @param  ?string  $cta
      * @param  ?string  $externalAdReference
      * @param  ?string  $externalCreativeReference
      * @param  ?string  $externalPlacementReference
      * @param  ?string  $groupId
      * @param  ?float  $height
-     * @param  ?HostingSource  $hostingSource
+     * @param  ?\Unified\Unified_to\Models\Shared\HostingSource  $hostingSource
      * @param  ?string  $id
      * @param  ?string  $itemId
      * @param  ?string  $linkUrl
@@ -256,9 +256,9 @@ class AdsCreative
      * @param  ?string  $organizationId
      * @param  ?string  $path1
      * @param  ?string  $path2
-     * @param  ?array<AdsPromoted>  $promoted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
-     * @param  ?AdsCreativeStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsCreativeStatus  $status
      * @param  ?string  $thirdPartyTag
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt

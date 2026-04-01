@@ -14,7 +14,7 @@ class GenaiEmbedding
     /**
      * $content
      *
-     * @var ?array<GenaiEmbeddingContent> $content
+     * @var ?array<\Unified\Unified_to\Models\Shared\GenaiEmbeddingContent> $content
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiEmbeddingContent>|null')]
@@ -39,7 +39,7 @@ class GenaiEmbedding
 
     /**
      *
-     * @var ?EncondingFormat $encondingFormat
+     * @var ?\Unified\Unified_to\Models\Shared\EncondingFormat $encondingFormat
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('enconding_format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EncondingFormat|null')]
@@ -97,10 +97,10 @@ class GenaiEmbedding
     public ?string $type = null;
 
     /**
-     * @param  ?array<GenaiEmbeddingContent>  $content
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiEmbeddingContent>  $content
      * @param  ?float  $dimension
      * @param  ?string  $embeddings
-     * @param  ?EncondingFormat  $encondingFormat
+     * @param  ?\Unified\Unified_to\Models\Shared\EncondingFormat  $encondingFormat
      * @param  ?string  $id
      * @param  ?float  $maxTokens
      * @param  ?string  $modelId

@@ -14,7 +14,7 @@ class CalendarEvent
     /**
      * $attachments
      *
-     * @var ?array<CalendarAttachment> $attachments
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarAttachment> $attachments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarAttachment>|null')]
@@ -24,7 +24,7 @@ class CalendarEvent
     /**
      * $attendees
      *
-     * @var ?array<CalendarAttendee> $attendees
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarAttendee> $attendees
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attendees')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarAttendee>|null')]
@@ -42,7 +42,7 @@ class CalendarEvent
     /**
      * $conference
      *
-     * @var ?array<CalendarConference> $conference
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarConference> $conference
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('conference')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarConference>|null')]
@@ -123,7 +123,7 @@ class CalendarEvent
 
     /**
      *
-     * @var ?PropertyCalendarEventOrganizer $organizer
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizer $organizer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organizer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizer|null')]
@@ -143,7 +143,7 @@ class CalendarEvent
     /**
      * $recurrence
      *
-     * @var ?array<CalendarEventRecurrence> $recurrence
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence> $recurrence
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurrence')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>|null')]
@@ -176,7 +176,7 @@ class CalendarEvent
 
     /**
      *
-     * @var ?CalendarEventStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarEventStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventStatus|null')]
@@ -216,10 +216,10 @@ class CalendarEvent
     public ?string $webUrl = null;
 
     /**
-     * @param  ?array<CalendarAttachment>  $attachments
-     * @param  ?array<CalendarAttendee>  $attendees
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarAttachment>  $attachments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarAttendee>  $attendees
      * @param  ?string  $calendarId
-     * @param  ?array<CalendarConference>  $conference
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarConference>  $conference
      * @param  ?string  $createdAt
      * @param  ?string  $endAt
      * @param  ?bool  $hasConference
@@ -229,13 +229,13 @@ class CalendarEvent
      * @param  ?bool  $isPrivate
      * @param  ?string  $location
      * @param  ?string  $notes
-     * @param  ?PropertyCalendarEventOrganizer  $organizer
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarEventOrganizer  $organizer
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<CalendarEventRecurrence>  $recurrence
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>  $recurrence
      * @param  ?string  $recurringEventId
      * @param  ?bool  $sendNotifications
      * @param  ?string  $startAt
-     * @param  ?CalendarEventStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarEventStatus  $status
      * @param  ?string  $subject
      * @param  ?string  $timezone
      * @param  ?string  $updatedAt

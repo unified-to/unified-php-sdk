@@ -30,7 +30,7 @@ class ListHrisBenefitsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisBenefitsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisBenefitsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -90,7 +90,7 @@ class ListHrisBenefitsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<ListHrisBenefitsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisBenefitsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

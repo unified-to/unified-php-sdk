@@ -38,7 +38,7 @@ class AccountingCashflowItem
     /**
      * $subItems
      *
-     * @var ?array<AccountingCashflowItem> $subItems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem> $subItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem>|null')]
@@ -59,7 +59,7 @@ class AccountingCashflowItem
      * @param  ?string  $accountId
      * @param  ?float  $amount
      * @param  ?string  $name
-     * @param  ?array<AccountingCashflowItem>  $subItems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem>  $subItems
      * @param  ?array<string>  $transactionIds
      * @phpstan-pure
      */

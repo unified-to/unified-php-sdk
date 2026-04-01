@@ -14,7 +14,7 @@ class CreateAccountingCreditmemoRequest
 {
     /**
      *
-     * @var Shared\AccountingCreditmemo $accountingCreditmemo
+     * @var \Unified\Unified_to\Models\Shared\AccountingCreditmemo $accountingCreditmemo
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingCreditmemo $accountingCreditmemo;
@@ -30,7 +30,7 @@ class CreateAccountingCreditmemoRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingCreditmemoQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingCreditmemoRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingCreditmemo  $accountingCreditmemo
+     * @param  \Unified\Unified_to\Models\Shared\AccountingCreditmemo  $accountingCreditmemo
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingCreditmemoQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

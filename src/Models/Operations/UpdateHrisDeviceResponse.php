@@ -35,7 +35,7 @@ class UpdateHrisDeviceResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisDevice $hrisDevice
+     * @var ?\Unified\Unified_to\Models\Shared\HrisDevice $hrisDevice
      */
     public ?Shared\HrisDevice $hrisDevice = null;
 
@@ -43,7 +43,7 @@ class UpdateHrisDeviceResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisDevice  $hrisDevice
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisDevice  $hrisDevice
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisDevice $hrisDevice = null)

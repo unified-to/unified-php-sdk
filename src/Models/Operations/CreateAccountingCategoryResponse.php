@@ -35,7 +35,7 @@ class CreateAccountingCategoryResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingCategory $accountingCategory
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCategory $accountingCategory
      */
     public ?Shared\AccountingCategory $accountingCategory = null;
 
@@ -43,7 +43,7 @@ class CreateAccountingCategoryResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingCategory  $accountingCategory
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCategory  $accountingCategory
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingCategory $accountingCategory = null)

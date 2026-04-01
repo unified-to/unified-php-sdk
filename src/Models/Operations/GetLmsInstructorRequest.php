@@ -30,7 +30,7 @@ class GetLmsInstructorRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetLmsInstructorQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetLmsInstructorQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetLmsInstructorRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetLmsInstructorQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetLmsInstructorQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

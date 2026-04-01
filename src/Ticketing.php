@@ -47,8 +47,8 @@ class Ticketing
     /**
      * Create a category
      *
-     * @param  Operations\CreateTicketingCategoryRequest  $request
-     * @return Operations\CreateTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingCategory(Operations\CreateTicketingCategoryRequest $request, ?Options $options = null): Operations\CreateTicketingCategoryResponse
@@ -114,8 +114,8 @@ class Ticketing
     /**
      * Create a customer
      *
-     * @param  Operations\CreateTicketingCustomerRequest  $request
-     * @return Operations\CreateTicketingCustomerResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingCustomer(Operations\CreateTicketingCustomerRequest $request, ?Options $options = null): Operations\CreateTicketingCustomerResponse
@@ -181,8 +181,8 @@ class Ticketing
     /**
      * Create a note
      *
-     * @param  Operations\CreateTicketingNoteRequest  $request
-     * @return Operations\CreateTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingNote(Operations\CreateTicketingNoteRequest $request, ?Options $options = null): Operations\CreateTicketingNoteResponse
@@ -248,8 +248,8 @@ class Ticketing
     /**
      * Create a ticket
      *
-     * @param  Operations\CreateTicketingTicketRequest  $request
-     * @return Operations\CreateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingTicket(Operations\CreateTicketingTicketRequest $request, ?Options $options = null): Operations\CreateTicketingTicketResponse
@@ -315,8 +315,8 @@ class Ticketing
     /**
      * Retrieve a category
      *
-     * @param  Operations\GetTicketingCategoryRequest  $request
-     * @return Operations\GetTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingCategory(Operations\GetTicketingCategoryRequest $request, ?Options $options = null): Operations\GetTicketingCategoryResponse
@@ -377,8 +377,8 @@ class Ticketing
     /**
      * Retrieve a customer
      *
-     * @param  Operations\GetTicketingCustomerRequest  $request
-     * @return Operations\GetTicketingCustomerResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingCustomer(Operations\GetTicketingCustomerRequest $request, ?Options $options = null): Operations\GetTicketingCustomerResponse
@@ -439,8 +439,8 @@ class Ticketing
     /**
      * Retrieve a note
      *
-     * @param  Operations\GetTicketingNoteRequest  $request
-     * @return Operations\GetTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingNote(Operations\GetTicketingNoteRequest $request, ?Options $options = null): Operations\GetTicketingNoteResponse
@@ -501,8 +501,8 @@ class Ticketing
     /**
      * Retrieve a ticket
      *
-     * @param  Operations\GetTicketingTicketRequest  $request
-     * @return Operations\GetTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingTicket(Operations\GetTicketingTicketRequest $request, ?Options $options = null): Operations\GetTicketingTicketResponse
@@ -563,8 +563,8 @@ class Ticketing
     /**
      * List all categories
      *
-     * @param  Operations\ListTicketingCategoriesRequest  $request
-     * @return Operations\ListTicketingCategoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingCategories(Operations\ListTicketingCategoriesRequest $request, ?Options $options = null): Operations\ListTicketingCategoriesResponse
@@ -625,8 +625,8 @@ class Ticketing
     /**
      * List all customers
      *
-     * @param  Operations\ListTicketingCustomersRequest  $request
-     * @return Operations\ListTicketingCustomersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingCustomers(Operations\ListTicketingCustomersRequest $request, ?Options $options = null): Operations\ListTicketingCustomersResponse
@@ -687,8 +687,8 @@ class Ticketing
     /**
      * List all notes
      *
-     * @param  Operations\ListTicketingNotesRequest  $request
-     * @return Operations\ListTicketingNotesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingNotes(Operations\ListTicketingNotesRequest $request, ?Options $options = null): Operations\ListTicketingNotesResponse
@@ -749,8 +749,8 @@ class Ticketing
     /**
      * List all tickets
      *
-     * @param  Operations\ListTicketingTicketsRequest  $request
-     * @return Operations\ListTicketingTicketsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingTickets(Operations\ListTicketingTicketsRequest $request, ?Options $options = null): Operations\ListTicketingTicketsResponse
@@ -811,8 +811,8 @@ class Ticketing
     /**
      * Update a category
      *
-     * @param  Operations\PatchTicketingCategoryRequest  $request
-     * @return Operations\PatchTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingCategory(Operations\PatchTicketingCategoryRequest $request, ?Options $options = null): Operations\PatchTicketingCategoryResponse
@@ -878,8 +878,8 @@ class Ticketing
     /**
      * Update a customer
      *
-     * @param  Operations\PatchTicketingCustomerRequest  $request
-     * @return Operations\PatchTicketingCustomerResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingCustomer(Operations\PatchTicketingCustomerRequest $request, ?Options $options = null): Operations\PatchTicketingCustomerResponse
@@ -945,8 +945,8 @@ class Ticketing
     /**
      * Update a note
      *
-     * @param  Operations\PatchTicketingNoteRequest  $request
-     * @return Operations\PatchTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingNote(Operations\PatchTicketingNoteRequest $request, ?Options $options = null): Operations\PatchTicketingNoteResponse
@@ -1012,8 +1012,8 @@ class Ticketing
     /**
      * Update a ticket
      *
-     * @param  Operations\PatchTicketingTicketRequest  $request
-     * @return Operations\PatchTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingTicket(Operations\PatchTicketingTicketRequest $request, ?Options $options = null): Operations\PatchTicketingTicketResponse
@@ -1079,8 +1079,8 @@ class Ticketing
     /**
      * Remove a category
      *
-     * @param  Operations\RemoveTicketingCategoryRequest  $request
-     * @return Operations\RemoveTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingCategory(Operations\RemoveTicketingCategoryRequest $request, ?Options $options = null): Operations\RemoveTicketingCategoryResponse
@@ -1135,8 +1135,8 @@ class Ticketing
     /**
      * Remove a customer
      *
-     * @param  Operations\RemoveTicketingCustomerRequest  $request
-     * @return Operations\RemoveTicketingCustomerResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingCustomer(Operations\RemoveTicketingCustomerRequest $request, ?Options $options = null): Operations\RemoveTicketingCustomerResponse
@@ -1191,8 +1191,8 @@ class Ticketing
     /**
      * Remove a note
      *
-     * @param  Operations\RemoveTicketingNoteRequest  $request
-     * @return Operations\RemoveTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingNote(Operations\RemoveTicketingNoteRequest $request, ?Options $options = null): Operations\RemoveTicketingNoteResponse
@@ -1247,8 +1247,8 @@ class Ticketing
     /**
      * Remove a ticket
      *
-     * @param  Operations\RemoveTicketingTicketRequest  $request
-     * @return Operations\RemoveTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingTicket(Operations\RemoveTicketingTicketRequest $request, ?Options $options = null): Operations\RemoveTicketingTicketResponse
@@ -1303,8 +1303,8 @@ class Ticketing
     /**
      * Update a category
      *
-     * @param  Operations\UpdateTicketingCategoryRequest  $request
-     * @return Operations\UpdateTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingCategory(Operations\UpdateTicketingCategoryRequest $request, ?Options $options = null): Operations\UpdateTicketingCategoryResponse
@@ -1370,8 +1370,8 @@ class Ticketing
     /**
      * Update a customer
      *
-     * @param  Operations\UpdateTicketingCustomerRequest  $request
-     * @return Operations\UpdateTicketingCustomerResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingCustomer(Operations\UpdateTicketingCustomerRequest $request, ?Options $options = null): Operations\UpdateTicketingCustomerResponse
@@ -1437,8 +1437,8 @@ class Ticketing
     /**
      * Update a note
      *
-     * @param  Operations\UpdateTicketingNoteRequest  $request
-     * @return Operations\UpdateTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingNote(Operations\UpdateTicketingNoteRequest $request, ?Options $options = null): Operations\UpdateTicketingNoteResponse
@@ -1504,8 +1504,8 @@ class Ticketing
     /**
      * Update a ticket
      *
-     * @param  Operations\UpdateTicketingTicketRequest  $request
-     * @return Operations\UpdateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingTicket(Operations\UpdateTicketingTicketRequest $request, ?Options $options = null): Operations\UpdateTicketingTicketResponse

@@ -35,7 +35,7 @@ class UpdateHrisTimeoffResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisTimeoff $hrisTimeoff
+     * @var ?\Unified\Unified_to\Models\Shared\HrisTimeoff $hrisTimeoff
      */
     public ?Shared\HrisTimeoff $hrisTimeoff = null;
 
@@ -43,7 +43,7 @@ class UpdateHrisTimeoffResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisTimeoff  $hrisTimeoff
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoff  $hrisTimeoff
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisTimeoff $hrisTimeoff = null)

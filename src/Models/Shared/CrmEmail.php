@@ -21,7 +21,7 @@ class CrmEmail
 
     /**
      *
-     * @var ?CrmEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CrmEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmEmailType|null')]
@@ -30,7 +30,7 @@ class CrmEmail
 
     /**
      * @param  ?string  $email
-     * @param  ?CrmEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmEmailType  $type
      * @phpstan-pure
      */
     public function __construct(?string $email = null, ?CrmEmailType $type = null)

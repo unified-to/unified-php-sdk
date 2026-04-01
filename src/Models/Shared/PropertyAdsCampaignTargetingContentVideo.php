@@ -14,7 +14,7 @@ class PropertyAdsCampaignTargetingContentVideo
     /**
      * $durations
      *
-     * @var ?array<PropertyAdsCampaignTargetingContentVideoDurations> $durations
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoDurations> $durations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('durations')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoDurations>|null')]
@@ -44,7 +44,7 @@ class PropertyAdsCampaignTargetingContentVideo
     /**
      * $playerSizes
      *
-     * @var ?array<PropertyAdsCampaignTargetingContentVideoPlayerSizes> $playerSizes
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPlayerSizes> $playerSizes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('player_sizes')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPlayerSizes>|null')]
@@ -54,7 +54,7 @@ class PropertyAdsCampaignTargetingContentVideo
     /**
      * $positions
      *
-     * @var ?array<PropertyAdsCampaignTargetingContentVideoPositions> $positions
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPositions> $positions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('positions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPositions>|null')]
@@ -82,11 +82,11 @@ class PropertyAdsCampaignTargetingContentVideo
     public ?array $youtubeVideos = null;
 
     /**
-     * @param  ?array<PropertyAdsCampaignTargetingContentVideoDurations>  $durations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoDurations>  $durations
      * @param  ?array<string>  $excludedYoutubeChannels
      * @param  ?array<string>  $excludedYoutubeVideos
-     * @param  ?array<PropertyAdsCampaignTargetingContentVideoPlayerSizes>  $playerSizes
-     * @param  ?array<PropertyAdsCampaignTargetingContentVideoPositions>  $positions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPlayerSizes>  $playerSizes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContentVideoPositions>  $positions
      * @param  ?array<string>  $youtubeChannels
      * @param  ?array<string>  $youtubeVideos
      * @phpstan-pure

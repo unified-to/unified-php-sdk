@@ -22,7 +22,7 @@ class AtsOffer
     /**
      * compensation details for the offer
      *
-     * @var ?array<AtsCompensation> $compensation
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCompensation> $compensation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('compensation')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCompensation>|null')]
@@ -97,7 +97,7 @@ class AtsOffer
 
     /**
      *
-     * @var ?AtsOfferStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsOfferStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsOfferStatus|null')]
@@ -114,7 +114,7 @@ class AtsOffer
 
     /**
      * @param  ?\DateTime  $acceptedAt
-     * @param  ?array<AtsCompensation>  $compensation
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
      * @param  ?string  $employeeUserId
@@ -123,7 +123,7 @@ class AtsOffer
      * @param  ?\DateTime  $rejectedAt
      * @param  ?\DateTime  $sentAt
      * @param  ?\DateTime  $startAt
-     * @param  ?AtsOfferStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsOfferStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

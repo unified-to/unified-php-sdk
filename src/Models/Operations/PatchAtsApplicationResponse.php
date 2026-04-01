@@ -35,7 +35,7 @@ class PatchAtsApplicationResponse
     /**
      * Successful
      *
-     * @var ?Shared\AtsApplication $atsApplication
+     * @var ?\Unified\Unified_to\Models\Shared\AtsApplication $atsApplication
      */
     public ?Shared\AtsApplication $atsApplication = null;
 
@@ -43,7 +43,7 @@ class PatchAtsApplicationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AtsApplication  $atsApplication
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsApplication  $atsApplication
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsApplication $atsApplication = null)

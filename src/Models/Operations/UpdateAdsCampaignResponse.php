@@ -35,7 +35,7 @@ class UpdateAdsCampaignResponse
     /**
      * Successful
      *
-     * @var ?Shared\AdsCampaign $adsCampaign
+     * @var ?\Unified\Unified_to\Models\Shared\AdsCampaign $adsCampaign
      */
     public ?Shared\AdsCampaign $adsCampaign = null;
 
@@ -43,7 +43,7 @@ class UpdateAdsCampaignResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AdsCampaign  $adsCampaign
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsCampaign  $adsCampaign
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AdsCampaign $adsCampaign = null)

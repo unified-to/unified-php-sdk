@@ -30,7 +30,7 @@ class GetTaskTaskRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetTaskTaskQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetTaskTaskQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetTaskTaskRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetTaskTaskQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetTaskTaskQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

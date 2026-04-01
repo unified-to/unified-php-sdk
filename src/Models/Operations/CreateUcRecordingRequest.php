@@ -14,7 +14,7 @@ class CreateUcRecordingRequest
 {
     /**
      *
-     * @var Shared\UcRecording $ucRecording
+     * @var \Unified\Unified_to\Models\Shared\UcRecording $ucRecording
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcRecording $ucRecording;
@@ -30,7 +30,7 @@ class CreateUcRecordingRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateUcRecordingQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateUcRecordingRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcRecording  $ucRecording
+     * @param  \Unified\Unified_to\Models\Shared\UcRecording  $ucRecording
      * @param  string  $connectionId
-     * @param  ?array<CreateUcRecordingQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

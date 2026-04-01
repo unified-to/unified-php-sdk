@@ -22,7 +22,7 @@ class ListTicketingCategoriesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListTicketingCategoriesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListTicketingCategoriesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListTicketingCategoriesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListTicketingCategoriesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListTicketingCategoriesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

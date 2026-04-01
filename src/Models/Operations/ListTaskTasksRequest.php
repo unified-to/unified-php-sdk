@@ -22,7 +22,7 @@ class ListTaskTasksRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListTaskTasksQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListTaskTasksQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -113,7 +113,7 @@ class ListTaskTasksRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListTaskTasksQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListTaskTasksQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

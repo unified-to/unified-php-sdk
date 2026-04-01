@@ -14,7 +14,7 @@ class CreateCalendarCalendarRequest
 {
     /**
      *
-     * @var Shared\CalendarCalendar $calendarCalendar
+     * @var \Unified\Unified_to\Models\Shared\CalendarCalendar $calendarCalendar
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarCalendar $calendarCalendar;
@@ -30,7 +30,7 @@ class CreateCalendarCalendarRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCalendarCalendarQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCalendarCalendarQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCalendarCalendarRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarCalendar  $calendarCalendar
+     * @param  \Unified\Unified_to\Models\Shared\CalendarCalendar  $calendarCalendar
      * @param  string  $connectionId
-     * @param  ?array<CreateCalendarCalendarQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCalendarCalendarQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

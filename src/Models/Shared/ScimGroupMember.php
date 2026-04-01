@@ -36,7 +36,7 @@ class ScimGroupMember
 
     /**
      *
-     * @var ?Operation $operation
+     * @var ?\Unified\Unified_to\Models\Shared\Operation $operation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('operation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Operation|null')]
@@ -45,7 +45,7 @@ class ScimGroupMember
 
     /**
      *
-     * @var ?ScimGroupMemberType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimGroupMemberType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimGroupMemberType|null')]
@@ -56,8 +56,8 @@ class ScimGroupMember
      * @param  string  $value
      * @param  ?string  $dollarRef
      * @param  ?string  $display
-     * @param  ?Operation  $operation
-     * @param  ?ScimGroupMemberType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\Operation  $operation
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimGroupMemberType  $type
      * @phpstan-pure
      */
     public function __construct(string $value, ?string $dollarRef = null, ?string $display = null, ?Operation $operation = null, ?ScimGroupMemberType $type = null)

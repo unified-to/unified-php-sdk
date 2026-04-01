@@ -35,7 +35,7 @@ class CreateAccountingTaxrateResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingTaxrate $accountingTaxrate
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTaxrate $accountingTaxrate
      */
     public ?Shared\AccountingTaxrate $accountingTaxrate = null;
 
@@ -43,7 +43,7 @@ class CreateAccountingTaxrateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingTaxrate  $accountingTaxrate
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTaxrate  $accountingTaxrate
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingTaxrate $accountingTaxrate = null)

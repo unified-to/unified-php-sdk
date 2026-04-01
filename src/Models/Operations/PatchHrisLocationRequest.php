@@ -14,7 +14,7 @@ class PatchHrisLocationRequest
 {
     /**
      *
-     * @var Shared\HrisLocation $hrisLocation
+     * @var \Unified\Unified_to\Models\Shared\HrisLocation $hrisLocation
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisLocation $hrisLocation;
@@ -38,7 +38,7 @@ class PatchHrisLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchHrisLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchHrisLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchHrisLocationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisLocation  $hrisLocation
+     * @param  \Unified\Unified_to\Models\Shared\HrisLocation  $hrisLocation
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchHrisLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchHrisLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

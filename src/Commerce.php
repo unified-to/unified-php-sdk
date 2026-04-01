@@ -47,8 +47,8 @@ class Commerce
     /**
      * Create a collection
      *
-     * @param  Operations\CreateCommerceCollectionRequest  $request
-     * @return Operations\CreateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceCollection(Operations\CreateCommerceCollectionRequest $request, ?Options $options = null): Operations\CreateCommerceCollectionResponse
@@ -114,8 +114,8 @@ class Commerce
     /**
      * Create an inventory
      *
-     * @param  Operations\CreateCommerceInventoryRequest  $request
-     * @return Operations\CreateCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceInventory(Operations\CreateCommerceInventoryRequest $request, ?Options $options = null): Operations\CreateCommerceInventoryResponse
@@ -181,8 +181,8 @@ class Commerce
     /**
      * Create an item
      *
-     * @param  Operations\CreateCommerceItemRequest  $request
-     * @return Operations\CreateCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceItem(Operations\CreateCommerceItemRequest $request, ?Options $options = null): Operations\CreateCommerceItemResponse
@@ -248,8 +248,8 @@ class Commerce
     /**
      * Create an itemvariant
      *
-     * @param  Operations\CreateCommerceItemvariantRequest  $request
-     * @return Operations\CreateCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceItemvariant(Operations\CreateCommerceItemvariantRequest $request, ?Options $options = null): Operations\CreateCommerceItemvariantResponse
@@ -315,8 +315,8 @@ class Commerce
     /**
      * Create a location
      *
-     * @param  Operations\CreateCommerceLocationRequest  $request
-     * @return Operations\CreateCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceLocation(Operations\CreateCommerceLocationRequest $request, ?Options $options = null): Operations\CreateCommerceLocationResponse
@@ -382,8 +382,8 @@ class Commerce
     /**
      * Create a reservation
      *
-     * @param  Operations\CreateCommerceReservationRequest  $request
-     * @return Operations\CreateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceReservation(Operations\CreateCommerceReservationRequest $request, ?Options $options = null): Operations\CreateCommerceReservationResponse
@@ -449,8 +449,8 @@ class Commerce
     /**
      * Create a review
      *
-     * @param  Operations\CreateCommerceReviewRequest  $request
-     * @return Operations\CreateCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceReview(Operations\CreateCommerceReviewRequest $request, ?Options $options = null): Operations\CreateCommerceReviewResponse
@@ -516,8 +516,8 @@ class Commerce
     /**
      * Create a saleschannel
      *
-     * @param  Operations\CreateCommerceSaleschannelRequest  $request
-     * @return Operations\CreateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceSaleschannel(Operations\CreateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\CreateCommerceSaleschannelResponse
@@ -583,8 +583,8 @@ class Commerce
     /**
      * Retrieve a collection
      *
-     * @param  Operations\GetCommerceCollectionRequest  $request
-     * @return Operations\GetCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceCollection(Operations\GetCommerceCollectionRequest $request, ?Options $options = null): Operations\GetCommerceCollectionResponse
@@ -645,8 +645,8 @@ class Commerce
     /**
      * Retrieve an inventory
      *
-     * @param  Operations\GetCommerceInventoryRequest  $request
-     * @return Operations\GetCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceInventory(Operations\GetCommerceInventoryRequest $request, ?Options $options = null): Operations\GetCommerceInventoryResponse
@@ -707,8 +707,8 @@ class Commerce
     /**
      * Retrieve an item
      *
-     * @param  Operations\GetCommerceItemRequest  $request
-     * @return Operations\GetCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceItem(Operations\GetCommerceItemRequest $request, ?Options $options = null): Operations\GetCommerceItemResponse
@@ -769,8 +769,8 @@ class Commerce
     /**
      * Retrieve an itemvariant
      *
-     * @param  Operations\GetCommerceItemvariantRequest  $request
-     * @return Operations\GetCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceItemvariant(Operations\GetCommerceItemvariantRequest $request, ?Options $options = null): Operations\GetCommerceItemvariantResponse
@@ -831,8 +831,8 @@ class Commerce
     /**
      * Retrieve a location
      *
-     * @param  Operations\GetCommerceLocationRequest  $request
-     * @return Operations\GetCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceLocation(Operations\GetCommerceLocationRequest $request, ?Options $options = null): Operations\GetCommerceLocationResponse
@@ -893,8 +893,8 @@ class Commerce
     /**
      * Retrieve a reservation
      *
-     * @param  Operations\GetCommerceReservationRequest  $request
-     * @return Operations\GetCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceReservation(Operations\GetCommerceReservationRequest $request, ?Options $options = null): Operations\GetCommerceReservationResponse
@@ -955,8 +955,8 @@ class Commerce
     /**
      * Retrieve a review
      *
-     * @param  Operations\GetCommerceReviewRequest  $request
-     * @return Operations\GetCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceReview(Operations\GetCommerceReviewRequest $request, ?Options $options = null): Operations\GetCommerceReviewResponse
@@ -1017,8 +1017,8 @@ class Commerce
     /**
      * Retrieve a saleschannel
      *
-     * @param  Operations\GetCommerceSaleschannelRequest  $request
-     * @return Operations\GetCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceSaleschannel(Operations\GetCommerceSaleschannelRequest $request, ?Options $options = null): Operations\GetCommerceSaleschannelResponse
@@ -1079,8 +1079,8 @@ class Commerce
     /**
      * List all availabilities
      *
-     * @param  Operations\ListCommerceAvailabilitiesRequest  $request
-     * @return Operations\ListCommerceAvailabilitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceAvailabilities(Operations\ListCommerceAvailabilitiesRequest $request, ?Options $options = null): Operations\ListCommerceAvailabilitiesResponse
@@ -1141,8 +1141,8 @@ class Commerce
     /**
      * List all collections
      *
-     * @param  Operations\ListCommerceCollectionsRequest  $request
-     * @return Operations\ListCommerceCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceCollections(Operations\ListCommerceCollectionsRequest $request, ?Options $options = null): Operations\ListCommerceCollectionsResponse
@@ -1203,8 +1203,8 @@ class Commerce
     /**
      * List all inventories
      *
-     * @param  Operations\ListCommerceInventoriesRequest  $request
-     * @return Operations\ListCommerceInventoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceInventories(Operations\ListCommerceInventoriesRequest $request, ?Options $options = null): Operations\ListCommerceInventoriesResponse
@@ -1265,8 +1265,8 @@ class Commerce
     /**
      * List all items
      *
-     * @param  Operations\ListCommerceItemsRequest  $request
-     * @return Operations\ListCommerceItemsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceItems(Operations\ListCommerceItemsRequest $request, ?Options $options = null): Operations\ListCommerceItemsResponse
@@ -1327,8 +1327,8 @@ class Commerce
     /**
      * List all itemvariants
      *
-     * @param  Operations\ListCommerceItemvariantsRequest  $request
-     * @return Operations\ListCommerceItemvariantsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceItemvariants(Operations\ListCommerceItemvariantsRequest $request, ?Options $options = null): Operations\ListCommerceItemvariantsResponse
@@ -1389,8 +1389,8 @@ class Commerce
     /**
      * List all locations
      *
-     * @param  Operations\ListCommerceLocationsRequest  $request
-     * @return Operations\ListCommerceLocationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceLocations(Operations\ListCommerceLocationsRequest $request, ?Options $options = null): Operations\ListCommerceLocationsResponse
@@ -1451,8 +1451,8 @@ class Commerce
     /**
      * List all reservations
      *
-     * @param  Operations\ListCommerceReservationsRequest  $request
-     * @return Operations\ListCommerceReservationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceReservations(Operations\ListCommerceReservationsRequest $request, ?Options $options = null): Operations\ListCommerceReservationsResponse
@@ -1513,8 +1513,8 @@ class Commerce
     /**
      * List all reviews
      *
-     * @param  Operations\ListCommerceReviewsRequest  $request
-     * @return Operations\ListCommerceReviewsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceReviews(Operations\ListCommerceReviewsRequest $request, ?Options $options = null): Operations\ListCommerceReviewsResponse
@@ -1575,8 +1575,8 @@ class Commerce
     /**
      * List all saleschannels
      *
-     * @param  Operations\ListCommerceSaleschannelsRequest  $request
-     * @return Operations\ListCommerceSaleschannelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceSaleschannels(Operations\ListCommerceSaleschannelsRequest $request, ?Options $options = null): Operations\ListCommerceSaleschannelsResponse
@@ -1637,8 +1637,8 @@ class Commerce
     /**
      * Update a collection
      *
-     * @param  Operations\PatchCommerceCollectionRequest  $request
-     * @return Operations\PatchCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceCollection(Operations\PatchCommerceCollectionRequest $request, ?Options $options = null): Operations\PatchCommerceCollectionResponse
@@ -1704,8 +1704,8 @@ class Commerce
     /**
      * Update an inventory
      *
-     * @param  Operations\PatchCommerceInventoryRequest  $request
-     * @return Operations\PatchCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceInventory(Operations\PatchCommerceInventoryRequest $request, ?Options $options = null): Operations\PatchCommerceInventoryResponse
@@ -1771,8 +1771,8 @@ class Commerce
     /**
      * Update an item
      *
-     * @param  Operations\PatchCommerceItemRequest  $request
-     * @return Operations\PatchCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceItem(Operations\PatchCommerceItemRequest $request, ?Options $options = null): Operations\PatchCommerceItemResponse
@@ -1838,8 +1838,8 @@ class Commerce
     /**
      * Update an itemvariant
      *
-     * @param  Operations\PatchCommerceItemvariantRequest  $request
-     * @return Operations\PatchCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceItemvariant(Operations\PatchCommerceItemvariantRequest $request, ?Options $options = null): Operations\PatchCommerceItemvariantResponse
@@ -1905,8 +1905,8 @@ class Commerce
     /**
      * Update a location
      *
-     * @param  Operations\PatchCommerceLocationRequest  $request
-     * @return Operations\PatchCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceLocation(Operations\PatchCommerceLocationRequest $request, ?Options $options = null): Operations\PatchCommerceLocationResponse
@@ -1972,8 +1972,8 @@ class Commerce
     /**
      * Update a reservation
      *
-     * @param  Operations\PatchCommerceReservationRequest  $request
-     * @return Operations\PatchCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceReservation(Operations\PatchCommerceReservationRequest $request, ?Options $options = null): Operations\PatchCommerceReservationResponse
@@ -2039,8 +2039,8 @@ class Commerce
     /**
      * Update a review
      *
-     * @param  Operations\PatchCommerceReviewRequest  $request
-     * @return Operations\PatchCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceReview(Operations\PatchCommerceReviewRequest $request, ?Options $options = null): Operations\PatchCommerceReviewResponse
@@ -2106,8 +2106,8 @@ class Commerce
     /**
      * Update a saleschannel
      *
-     * @param  Operations\PatchCommerceSaleschannelRequest  $request
-     * @return Operations\PatchCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceSaleschannel(Operations\PatchCommerceSaleschannelRequest $request, ?Options $options = null): Operations\PatchCommerceSaleschannelResponse
@@ -2173,8 +2173,8 @@ class Commerce
     /**
      * Remove a collection
      *
-     * @param  Operations\RemoveCommerceCollectionRequest  $request
-     * @return Operations\RemoveCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceCollection(Operations\RemoveCommerceCollectionRequest $request, ?Options $options = null): Operations\RemoveCommerceCollectionResponse
@@ -2229,8 +2229,8 @@ class Commerce
     /**
      * Remove an inventory
      *
-     * @param  Operations\RemoveCommerceInventoryRequest  $request
-     * @return Operations\RemoveCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceInventory(Operations\RemoveCommerceInventoryRequest $request, ?Options $options = null): Operations\RemoveCommerceInventoryResponse
@@ -2285,8 +2285,8 @@ class Commerce
     /**
      * Remove an item
      *
-     * @param  Operations\RemoveCommerceItemRequest  $request
-     * @return Operations\RemoveCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceItem(Operations\RemoveCommerceItemRequest $request, ?Options $options = null): Operations\RemoveCommerceItemResponse
@@ -2341,8 +2341,8 @@ class Commerce
     /**
      * Remove an itemvariant
      *
-     * @param  Operations\RemoveCommerceItemvariantRequest  $request
-     * @return Operations\RemoveCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceItemvariant(Operations\RemoveCommerceItemvariantRequest $request, ?Options $options = null): Operations\RemoveCommerceItemvariantResponse
@@ -2397,8 +2397,8 @@ class Commerce
     /**
      * Remove a location
      *
-     * @param  Operations\RemoveCommerceLocationRequest  $request
-     * @return Operations\RemoveCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceLocation(Operations\RemoveCommerceLocationRequest $request, ?Options $options = null): Operations\RemoveCommerceLocationResponse
@@ -2453,8 +2453,8 @@ class Commerce
     /**
      * Remove a reservation
      *
-     * @param  Operations\RemoveCommerceReservationRequest  $request
-     * @return Operations\RemoveCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceReservation(Operations\RemoveCommerceReservationRequest $request, ?Options $options = null): Operations\RemoveCommerceReservationResponse
@@ -2509,8 +2509,8 @@ class Commerce
     /**
      * Remove a review
      *
-     * @param  Operations\RemoveCommerceReviewRequest  $request
-     * @return Operations\RemoveCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceReview(Operations\RemoveCommerceReviewRequest $request, ?Options $options = null): Operations\RemoveCommerceReviewResponse
@@ -2565,8 +2565,8 @@ class Commerce
     /**
      * Remove a saleschannel
      *
-     * @param  Operations\RemoveCommerceSaleschannelRequest  $request
-     * @return Operations\RemoveCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceSaleschannel(Operations\RemoveCommerceSaleschannelRequest $request, ?Options $options = null): Operations\RemoveCommerceSaleschannelResponse
@@ -2621,8 +2621,8 @@ class Commerce
     /**
      * Update a collection
      *
-     * @param  Operations\UpdateCommerceCollectionRequest  $request
-     * @return Operations\UpdateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceCollection(Operations\UpdateCommerceCollectionRequest $request, ?Options $options = null): Operations\UpdateCommerceCollectionResponse
@@ -2688,8 +2688,8 @@ class Commerce
     /**
      * Update an inventory
      *
-     * @param  Operations\UpdateCommerceInventoryRequest  $request
-     * @return Operations\UpdateCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceInventory(Operations\UpdateCommerceInventoryRequest $request, ?Options $options = null): Operations\UpdateCommerceInventoryResponse
@@ -2755,8 +2755,8 @@ class Commerce
     /**
      * Update an item
      *
-     * @param  Operations\UpdateCommerceItemRequest  $request
-     * @return Operations\UpdateCommerceItemResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceItem(Operations\UpdateCommerceItemRequest $request, ?Options $options = null): Operations\UpdateCommerceItemResponse
@@ -2822,8 +2822,8 @@ class Commerce
     /**
      * Update an itemvariant
      *
-     * @param  Operations\UpdateCommerceItemvariantRequest  $request
-     * @return Operations\UpdateCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceItemvariant(Operations\UpdateCommerceItemvariantRequest $request, ?Options $options = null): Operations\UpdateCommerceItemvariantResponse
@@ -2889,8 +2889,8 @@ class Commerce
     /**
      * Update a location
      *
-     * @param  Operations\UpdateCommerceLocationRequest  $request
-     * @return Operations\UpdateCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceLocation(Operations\UpdateCommerceLocationRequest $request, ?Options $options = null): Operations\UpdateCommerceLocationResponse
@@ -2956,8 +2956,8 @@ class Commerce
     /**
      * Update a reservation
      *
-     * @param  Operations\UpdateCommerceReservationRequest  $request
-     * @return Operations\UpdateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceReservation(Operations\UpdateCommerceReservationRequest $request, ?Options $options = null): Operations\UpdateCommerceReservationResponse
@@ -3023,8 +3023,8 @@ class Commerce
     /**
      * Update a review
      *
-     * @param  Operations\UpdateCommerceReviewRequest  $request
-     * @return Operations\UpdateCommerceReviewResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceReview(Operations\UpdateCommerceReviewRequest $request, ?Options $options = null): Operations\UpdateCommerceReviewResponse
@@ -3090,8 +3090,8 @@ class Commerce
     /**
      * Update a saleschannel
      *
-     * @param  Operations\UpdateCommerceSaleschannelRequest  $request
-     * @return Operations\UpdateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceSaleschannel(Operations\UpdateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\UpdateCommerceSaleschannelResponse

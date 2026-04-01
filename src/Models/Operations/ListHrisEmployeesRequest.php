@@ -30,7 +30,7 @@ class ListHrisEmployeesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisEmployeesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisEmployeesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -90,7 +90,7 @@ class ListHrisEmployeesRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<ListHrisEmployeesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisEmployeesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

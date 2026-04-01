@@ -35,7 +35,7 @@ class GetAccountingExpenseResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingExpense $accountingExpense
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingExpense $accountingExpense
      */
     public ?Shared\AccountingExpense $accountingExpense = null;
 
@@ -43,7 +43,7 @@ class GetAccountingExpenseResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingExpense  $accountingExpense
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingExpense  $accountingExpense
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingExpense $accountingExpense = null)

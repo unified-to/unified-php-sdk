@@ -14,7 +14,7 @@ class UpdateMessagingEventRequest
 {
     /**
      *
-     * @var Shared\MessagingEvent $messagingEvent
+     * @var \Unified\Unified_to\Models\Shared\MessagingEvent $messagingEvent
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MessagingEvent $messagingEvent;
@@ -38,7 +38,7 @@ class UpdateMessagingEventRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateMessagingEventQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateMessagingEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateMessagingEventRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MessagingEvent  $messagingEvent
+     * @param  \Unified\Unified_to\Models\Shared\MessagingEvent  $messagingEvent
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateMessagingEventQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateMessagingEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

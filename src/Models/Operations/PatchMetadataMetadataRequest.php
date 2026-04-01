@@ -14,7 +14,7 @@ class PatchMetadataMetadataRequest
 {
     /**
      *
-     * @var Shared\MetadataMetadata $metadataMetadata
+     * @var \Unified\Unified_to\Models\Shared\MetadataMetadata $metadataMetadata
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MetadataMetadata $metadataMetadata;
@@ -38,7 +38,7 @@ class PatchMetadataMetadataRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchMetadataMetadataQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchMetadataMetadataQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchMetadataMetadataRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MetadataMetadata  $metadataMetadata
+     * @param  \Unified\Unified_to\Models\Shared\MetadataMetadata  $metadataMetadata
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchMetadataMetadataQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchMetadataMetadataQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

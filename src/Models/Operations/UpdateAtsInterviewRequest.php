@@ -14,7 +14,7 @@ class UpdateAtsInterviewRequest
 {
     /**
      *
-     * @var Shared\AtsInterview $atsInterview
+     * @var \Unified\Unified_to\Models\Shared\AtsInterview $atsInterview
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsInterview $atsInterview;
@@ -38,7 +38,7 @@ class UpdateAtsInterviewRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAtsInterviewQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAtsInterviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAtsInterviewRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsInterview  $atsInterview
+     * @param  \Unified\Unified_to\Models\Shared\AtsInterview  $atsInterview
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAtsInterviewQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAtsInterviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

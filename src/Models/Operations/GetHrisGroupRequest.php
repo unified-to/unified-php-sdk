@@ -30,7 +30,7 @@ class GetHrisGroupRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisGroupQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisGroupRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisGroupQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

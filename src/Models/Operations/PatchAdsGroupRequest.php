@@ -14,7 +14,7 @@ class PatchAdsGroupRequest
 {
     /**
      *
-     * @var Shared\AdsGroup $adsGroup
+     * @var \Unified\Unified_to\Models\Shared\AdsGroup $adsGroup
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsGroup $adsGroup;
@@ -38,7 +38,7 @@ class PatchAdsGroupRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAdsGroupQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAdsGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAdsGroupRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsGroup  $adsGroup
+     * @param  \Unified\Unified_to\Models\Shared\AdsGroup  $adsGroup
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAdsGroupQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAdsGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

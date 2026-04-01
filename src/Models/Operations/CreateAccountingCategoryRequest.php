@@ -14,7 +14,7 @@ class CreateAccountingCategoryRequest
 {
     /**
      *
-     * @var Shared\AccountingCategory $accountingCategory
+     * @var \Unified\Unified_to\Models\Shared\AccountingCategory $accountingCategory
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingCategory $accountingCategory;
@@ -30,7 +30,7 @@ class CreateAccountingCategoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingCategoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingCategoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingCategory  $accountingCategory
+     * @param  \Unified\Unified_to\Models\Shared\AccountingCategory  $accountingCategory
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingCategoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

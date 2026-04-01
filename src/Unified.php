@@ -50,8 +50,8 @@ class Unified
      *
      * Used only to import existing customer credentials; use "Authorize new connection" instead
      *
-     * @param  Shared\Connection  $request
-     * @return Operations\CreateUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Shared\Connection  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedConnection(Shared\Connection $request, ?Options $options = null): Operations\CreateUnifiedConnectionResponse
@@ -115,7 +115,7 @@ class Unified
      * Create new environments
      *
      * @param  array<string>  $request
-     * @return Operations\CreateUnifiedEnvironmentResponse
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedEnvironmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedEnvironment(array $request, ?Options $options = null): Operations\CreateUnifiedEnvironmentResponse
@@ -180,8 +180,8 @@ class Unified
      *
      * The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
      *
-     * @param  Operations\CreateUnifiedWebhookRequest  $request
-     * @return Operations\CreateUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedWebhook(Operations\CreateUnifiedWebhookRequest $request, ?Options $options = null): Operations\CreateUnifiedWebhookResponse
@@ -247,8 +247,8 @@ class Unified
     /**
      * Retrieve specific API Call by its ID
      *
-     * @param  Operations\GetUnifiedApicallRequest  $request
-     * @return Operations\GetUnifiedApicallResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedApicallRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedApicallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedApicall(Operations\GetUnifiedApicallRequest $request, ?Options $options = null): Operations\GetUnifiedApicallResponse
@@ -306,8 +306,8 @@ class Unified
     /**
      * Retrieve connection
      *
-     * @param  Operations\GetUnifiedConnectionRequest  $request
-     * @return Operations\GetUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedConnection(Operations\GetUnifiedConnectionRequest $request, ?Options $options = null): Operations\GetUnifiedConnectionResponse
@@ -367,8 +367,8 @@ class Unified
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *
-     * @param  Operations\GetUnifiedIntegrationAuthRequest  $request
-     * @return Operations\GetUnifiedIntegrationAuthResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationAuthResponse
@@ -426,8 +426,8 @@ class Unified
     /**
      * Retrieve support issue
      *
-     * @param  Operations\GetUnifiedIssueRequest  $request
-     * @return Operations\GetUnifiedIssueResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIssueRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIssueResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIssue(Operations\GetUnifiedIssueRequest $request, ?Options $options = null): Operations\GetUnifiedIssueResponse
@@ -485,8 +485,8 @@ class Unified
     /**
      * Retrieve webhook by its ID
      *
-     * @param  Operations\GetUnifiedWebhookRequest  $request
-     * @return Operations\GetUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedWebhook(Operations\GetUnifiedWebhookRequest $request, ?Options $options = null): Operations\GetUnifiedWebhookResponse
@@ -544,8 +544,8 @@ class Unified
     /**
      * Returns API Calls
      *
-     * @param  ?Operations\ListUnifiedApicallsRequest  $request
-     * @return Operations\ListUnifiedApicallsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedApicallsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedApicallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedApicalls(?Operations\ListUnifiedApicallsRequest $request = null, ?Options $options = null): Operations\ListUnifiedApicallsResponse
@@ -606,8 +606,8 @@ class Unified
     /**
      * List all connections
      *
-     * @param  ?Operations\ListUnifiedConnectionsRequest  $request
-     * @return Operations\ListUnifiedConnectionsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedConnectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedConnections(?Operations\ListUnifiedConnectionsRequest $request = null, ?Options $options = null): Operations\ListUnifiedConnectionsResponse
@@ -668,7 +668,7 @@ class Unified
     /**
      * Returns all environments
      *
-     * @return Operations\ListUnifiedEnvironmentsResponse
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedEnvironmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedEnvironments(?Options $options = null): Operations\ListUnifiedEnvironmentsResponse
@@ -728,8 +728,8 @@ class Unified
      *
      * No authentication required as this is to be used by front-end interface
      *
-     * @param  Operations\ListUnifiedIntegrationWorkspacesRequest  $request
-     * @return Operations\ListUnifiedIntegrationWorkspacesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationWorkspacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrationWorkspaces(Operations\ListUnifiedIntegrationWorkspacesRequest $request, ?Options $options = null): Operations\ListUnifiedIntegrationWorkspacesResponse
@@ -790,8 +790,8 @@ class Unified
     /**
      * Returns all integrations
      *
-     * @param  ?Operations\ListUnifiedIntegrationsRequest  $request
-     * @return Operations\ListUnifiedIntegrationsResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIntegrations(?Operations\ListUnifiedIntegrationsRequest $request = null, ?Options $options = null): Operations\ListUnifiedIntegrationsResponse
@@ -852,8 +852,8 @@ class Unified
     /**
      * List support issues
      *
-     * @param  ?Operations\ListUnifiedIssuesRequest  $request
-     * @return Operations\ListUnifiedIssuesResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedIssuesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedIssuesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedIssues(?Operations\ListUnifiedIssuesRequest $request = null, ?Options $options = null): Operations\ListUnifiedIssuesResponse
@@ -914,8 +914,8 @@ class Unified
     /**
      * Returns all registered webhooks
      *
-     * @param  ?Operations\ListUnifiedWebhooksRequest  $request
-     * @return Operations\ListUnifiedWebhooksResponse
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedWebhooksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWebhooksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedWebhooks(?Operations\ListUnifiedWebhooksRequest $request = null, ?Options $options = null): Operations\ListUnifiedWebhooksResponse
@@ -976,8 +976,8 @@ class Unified
     /**
      * Update connection
      *
-     * @param  Operations\PatchUnifiedConnectionRequest  $request
-     * @return Operations\PatchUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedConnection(Operations\PatchUnifiedConnectionRequest $request, ?Options $options = null): Operations\PatchUnifiedConnectionResponse
@@ -1040,8 +1040,8 @@ class Unified
     /**
      * Update webhook subscription
      *
-     * @param  Operations\PatchUnifiedWebhookRequest  $request
-     * @return Operations\PatchUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedWebhook(Operations\PatchUnifiedWebhookRequest $request, ?Options $options = null): Operations\PatchUnifiedWebhookResponse
@@ -1104,8 +1104,8 @@ class Unified
     /**
      * Trigger webhook
      *
-     * @param  Operations\PatchUnifiedWebhookTriggerRequest  $request
-     * @return Operations\PatchUnifiedWebhookTriggerResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUnifiedWebhookTrigger(Operations\PatchUnifiedWebhookTriggerRequest $request, ?Options $options = null): Operations\PatchUnifiedWebhookTriggerResponse
@@ -1160,8 +1160,8 @@ class Unified
     /**
      * Remove connection
      *
-     * @param  Operations\RemoveUnifiedConnectionRequest  $request
-     * @return Operations\RemoveUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedConnection(Operations\RemoveUnifiedConnectionRequest $request, ?Options $options = null): Operations\RemoveUnifiedConnectionResponse
@@ -1216,8 +1216,8 @@ class Unified
     /**
      * Remove an environment
      *
-     * @param  Operations\RemoveUnifiedEnvironmentRequest  $request
-     * @return Operations\RemoveUnifiedEnvironmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedEnvironmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedEnvironmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedEnvironment(Operations\RemoveUnifiedEnvironmentRequest $request, ?Options $options = null): Operations\RemoveUnifiedEnvironmentResponse
@@ -1275,8 +1275,8 @@ class Unified
     /**
      * Remove webhook subscription
      *
-     * @param  Operations\RemoveUnifiedWebhookRequest  $request
-     * @return Operations\RemoveUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedWebhook(Operations\RemoveUnifiedWebhookRequest $request, ?Options $options = null): Operations\RemoveUnifiedWebhookResponse
@@ -1331,8 +1331,8 @@ class Unified
     /**
      * Update connection
      *
-     * @param  Operations\UpdateUnifiedConnectionRequest  $request
-     * @return Operations\UpdateUnifiedConnectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedConnectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedConnection(Operations\UpdateUnifiedConnectionRequest $request, ?Options $options = null): Operations\UpdateUnifiedConnectionResponse
@@ -1395,8 +1395,8 @@ class Unified
     /**
      * Update webhook subscription
      *
-     * @param  Operations\UpdateUnifiedWebhookRequest  $request
-     * @return Operations\UpdateUnifiedWebhookResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedWebhook(Operations\UpdateUnifiedWebhookRequest $request, ?Options $options = null): Operations\UpdateUnifiedWebhookResponse
@@ -1459,8 +1459,8 @@ class Unified
     /**
      * Trigger webhook
      *
-     * @param  Operations\UpdateUnifiedWebhookTriggerRequest  $request
-     * @return Operations\UpdateUnifiedWebhookTriggerResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUnifiedWebhookTriggerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUnifiedWebhookTrigger(Operations\UpdateUnifiedWebhookTriggerRequest $request, ?Options $options = null): Operations\UpdateUnifiedWebhookTriggerResponse

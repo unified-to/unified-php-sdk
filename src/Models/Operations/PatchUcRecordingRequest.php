@@ -14,7 +14,7 @@ class PatchUcRecordingRequest
 {
     /**
      *
-     * @var Shared\UcRecording $ucRecording
+     * @var \Unified\Unified_to\Models\Shared\UcRecording $ucRecording
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcRecording $ucRecording;
@@ -38,7 +38,7 @@ class PatchUcRecordingRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchUcRecordingQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchUcRecordingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchUcRecordingRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcRecording  $ucRecording
+     * @param  \Unified\Unified_to\Models\Shared\UcRecording  $ucRecording
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchUcRecordingQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchUcRecordingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

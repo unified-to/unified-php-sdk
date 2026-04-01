@@ -62,7 +62,7 @@ class PaymentPayout
 
     /**
      *
-     * @var ?PaymentPayoutStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentPayoutStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPayoutStatus|null')]
@@ -84,7 +84,7 @@ class PaymentPayout
      * @param  ?string  $id
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
-     * @param  ?PaymentPayoutStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentPayoutStatus  $status
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */

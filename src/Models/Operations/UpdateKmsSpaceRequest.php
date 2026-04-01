@@ -14,7 +14,7 @@ class UpdateKmsSpaceRequest
 {
     /**
      *
-     * @var Shared\KmsSpace $kmsSpace
+     * @var \Unified\Unified_to\Models\Shared\KmsSpace $kmsSpace
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\KmsSpace $kmsSpace;
@@ -38,7 +38,7 @@ class UpdateKmsSpaceRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateKmsSpaceQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateKmsSpaceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateKmsSpaceRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\KmsSpace  $kmsSpace
+     * @param  \Unified\Unified_to\Models\Shared\KmsSpace  $kmsSpace
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateKmsSpaceQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateKmsSpaceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

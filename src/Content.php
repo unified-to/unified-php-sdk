@@ -47,8 +47,8 @@ class Content
     /**
      * Create a content
      *
-     * @param  Operations\CreateLmsContentRequest  $request
-     * @return Operations\CreateLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsContentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsContent(Operations\CreateLmsContentRequest $request, ?Options $options = null): Operations\CreateLmsContentResponse
@@ -114,8 +114,8 @@ class Content
     /**
      * Retrieve a content
      *
-     * @param  Operations\GetLmsContentRequest  $request
-     * @return Operations\GetLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsContentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsContent(Operations\GetLmsContentRequest $request, ?Options $options = null): Operations\GetLmsContentResponse
@@ -176,8 +176,8 @@ class Content
     /**
      * List all contents
      *
-     * @param  Operations\ListLmsContentsRequest  $request
-     * @return Operations\ListLmsContentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsContentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsContentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsContents(Operations\ListLmsContentsRequest $request, ?Options $options = null): Operations\ListLmsContentsResponse
@@ -238,8 +238,8 @@ class Content
     /**
      * Update a content
      *
-     * @param  Operations\PatchLmsContentRequest  $request
-     * @return Operations\PatchLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsContentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsContent(Operations\PatchLmsContentRequest $request, ?Options $options = null): Operations\PatchLmsContentResponse
@@ -305,8 +305,8 @@ class Content
     /**
      * Remove a content
      *
-     * @param  Operations\RemoveLmsContentRequest  $request
-     * @return Operations\RemoveLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsContentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsContent(Operations\RemoveLmsContentRequest $request, ?Options $options = null): Operations\RemoveLmsContentResponse
@@ -361,8 +361,8 @@ class Content
     /**
      * Update a content
      *
-     * @param  Operations\UpdateLmsContentRequest  $request
-     * @return Operations\UpdateLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsContentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsContent(Operations\UpdateLmsContentRequest $request, ?Options $options = null): Operations\UpdateLmsContentResponse

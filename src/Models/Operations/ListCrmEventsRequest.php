@@ -46,7 +46,7 @@ class ListCrmEventsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCrmEventsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmEventsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -131,7 +131,7 @@ class ListCrmEventsRequest
      * @param  ?string  $companyId
      * @param  ?string  $contactId
      * @param  ?string  $dealId
-     * @param  ?array<ListCrmEventsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmEventsQueryParamFields>  $fields
      * @param  ?string  $leadId
      * @param  ?float  $limit
      * @param  ?float  $offset

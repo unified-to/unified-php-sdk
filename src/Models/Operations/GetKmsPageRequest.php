@@ -30,7 +30,7 @@ class GetKmsPageRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetKmsPageQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetKmsPageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetKmsPageRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetKmsPageQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetKmsPageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

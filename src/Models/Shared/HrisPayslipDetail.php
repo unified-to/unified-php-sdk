@@ -52,7 +52,7 @@ class HrisPayslipDetail
 
     /**
      *
-     * @var ?HrisPayslipDetailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisPayslipDetailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipDetailType|null')]
@@ -65,7 +65,7 @@ class HrisPayslipDetail
      * @param  ?string  $description
      * @param  ?float  $employeeAmount
      * @param  ?string  $name
-     * @param  ?HrisPayslipDetailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisPayslipDetailType  $type
      * @phpstan-pure
      */
     public function __construct(float $amount, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)

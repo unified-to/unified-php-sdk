@@ -30,7 +30,7 @@ class GetAccountingCreditmemoRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingCreditmemoQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingCreditmemoQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingCreditmemoRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingCreditmemoQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingCreditmemoQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

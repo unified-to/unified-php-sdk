@@ -47,8 +47,8 @@ class Busy
     /**
      * List all busies
      *
-     * @param  Operations\ListCalendarBusiesRequest  $request
-     * @return Operations\ListCalendarBusiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarBusiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarBusiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarBusies(Operations\ListCalendarBusiesRequest $request, ?Options $options = null): Operations\ListCalendarBusiesResponse

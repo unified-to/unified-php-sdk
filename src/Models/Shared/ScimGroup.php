@@ -45,7 +45,7 @@ class ScimGroup
     /**
      * An array of members
      *
-     * @var ?array<ScimGroupMember> $members
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimGroupMember> $members
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('members')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimGroupMember>|null')]
@@ -54,7 +54,7 @@ class ScimGroup
 
     /**
      *
-     * @var ?PropertyScimGroupMeta $meta
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimGroupMeta $meta
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimGroupMeta|null')]
@@ -64,7 +64,7 @@ class ScimGroup
     /**
      * Array of schema URIs
      *
-     * @var ?array<PropertyScimGroupSchemas> $schemas
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyScimGroupSchemas> $schemas
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('schemas')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyScimGroupSchemas>|null')]
@@ -76,9 +76,9 @@ class ScimGroup
      * @param  ?string  $externalId
      * @param  ?string  $groupType
      * @param  ?string  $id
-     * @param  ?array<ScimGroupMember>  $members
-     * @param  ?PropertyScimGroupMeta  $meta
-     * @param  ?array<PropertyScimGroupSchemas>  $schemas
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimGroupMember>  $members
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimGroupMeta  $meta
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyScimGroupSchemas>  $schemas
      * @phpstan-pure
      */
     public function __construct(string $displayName, ?string $externalId = null, ?string $groupType = null, ?string $id = null, ?array $members = null, ?PropertyScimGroupMeta $meta = null, ?array $schemas = null)

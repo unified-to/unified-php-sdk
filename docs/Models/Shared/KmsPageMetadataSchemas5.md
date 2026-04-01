@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Shared\KmsPageMetadataSchemas1
+* @var \Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1
 */
 Shared\KmsPageMetadataSchemas1 $value = /* values here */
 ```

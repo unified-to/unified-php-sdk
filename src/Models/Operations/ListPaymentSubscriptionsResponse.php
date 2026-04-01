@@ -35,7 +35,7 @@ class ListPaymentSubscriptionsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\PaymentSubscription> $paymentSubscriptions
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentSubscription> $paymentSubscriptions
      */
     public ?array $paymentSubscriptions = null;
 
@@ -43,7 +43,7 @@ class ListPaymentSubscriptionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\PaymentSubscription>  $paymentSubscriptions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentSubscription>  $paymentSubscriptions
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $paymentSubscriptions = null)

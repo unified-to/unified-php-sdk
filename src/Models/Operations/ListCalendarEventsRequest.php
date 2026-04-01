@@ -46,7 +46,7 @@ class ListCalendarEventsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCalendarEventsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCalendarEventsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -116,7 +116,7 @@ class ListCalendarEventsRequest
      * @param  ?string  $calendarId
      * @param  ?string  $endLt
      * @param  ?bool  $expand
-     * @param  ?array<ListCalendarEventsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarEventsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

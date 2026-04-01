@@ -35,7 +35,7 @@ class ListEnrichPeopleResponse
     /**
      * Successful
      *
-     * @var ?Shared\EnrichPerson $enrichPerson
+     * @var ?\Unified\Unified_to\Models\Shared\EnrichPerson $enrichPerson
      */
     public ?Shared\EnrichPerson $enrichPerson = null;
 
@@ -43,7 +43,7 @@ class ListEnrichPeopleResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\EnrichPerson  $enrichPerson
+     * @param  ?\Unified\Unified_to\Models\Shared\EnrichPerson  $enrichPerson
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\EnrichPerson $enrichPerson = null)

@@ -30,7 +30,7 @@ class GetCommerceInventoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCommerceInventoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCommerceInventoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceInventoryRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCommerceInventoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCommerceInventoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -47,8 +47,8 @@ class Company
     /**
      * Create a company
      *
-     * @param  Operations\CreateAtsCompanyRequest  $request
-     * @return Operations\CreateAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsCompany(Operations\CreateAtsCompanyRequest $request, ?Options $options = null): Operations\CreateAtsCompanyResponse
@@ -114,8 +114,8 @@ class Company
     /**
      * Create a company
      *
-     * @param  Operations\CreateCrmCompanyRequest  $request
-     * @return Operations\CreateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmCompany(Operations\CreateCrmCompanyRequest $request, ?Options $options = null): Operations\CreateCrmCompanyResponse
@@ -181,8 +181,8 @@ class Company
     /**
      * Create a company
      *
-     * @param  Operations\CreateHrisCompanyRequest  $request
-     * @return Operations\CreateHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisCompany(Operations\CreateHrisCompanyRequest $request, ?Options $options = null): Operations\CreateHrisCompanyResponse
@@ -248,8 +248,8 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetAtsCompanyRequest  $request
-     * @return Operations\GetAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsCompany(Operations\GetAtsCompanyRequest $request, ?Options $options = null): Operations\GetAtsCompanyResponse
@@ -310,8 +310,8 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetCrmCompanyRequest  $request
-     * @return Operations\GetCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmCompany(Operations\GetCrmCompanyRequest $request, ?Options $options = null): Operations\GetCrmCompanyResponse
@@ -372,8 +372,8 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetHrisCompanyRequest  $request
-     * @return Operations\GetHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisCompany(Operations\GetHrisCompanyRequest $request, ?Options $options = null): Operations\GetHrisCompanyResponse
@@ -434,8 +434,8 @@ class Company
     /**
      * List all companies
      *
-     * @param  Operations\ListAtsCompaniesRequest  $request
-     * @return Operations\ListAtsCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsCompanies(Operations\ListAtsCompaniesRequest $request, ?Options $options = null): Operations\ListAtsCompaniesResponse
@@ -496,8 +496,8 @@ class Company
     /**
      * List all companies
      *
-     * @param  Operations\ListCrmCompaniesRequest  $request
-     * @return Operations\ListCrmCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request, ?Options $options = null): Operations\ListCrmCompaniesResponse
@@ -558,8 +558,8 @@ class Company
     /**
      * Retrieve enrichment information for a company
      *
-     * @param  Operations\ListEnrichCompaniesRequest  $request
-     * @return Operations\ListEnrichCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listEnrichCompanies(Operations\ListEnrichCompaniesRequest $request, ?Options $options = null): Operations\ListEnrichCompaniesResponse
@@ -620,8 +620,8 @@ class Company
     /**
      * List all companies
      *
-     * @param  Operations\ListHrisCompaniesRequest  $request
-     * @return Operations\ListHrisCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisCompanies(Operations\ListHrisCompaniesRequest $request, ?Options $options = null): Operations\ListHrisCompaniesResponse
@@ -682,8 +682,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\PatchAtsCompanyRequest  $request
-     * @return Operations\PatchAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsCompany(Operations\PatchAtsCompanyRequest $request, ?Options $options = null): Operations\PatchAtsCompanyResponse
@@ -749,8 +749,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\PatchCrmCompanyRequest  $request
-     * @return Operations\PatchCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request, ?Options $options = null): Operations\PatchCrmCompanyResponse
@@ -816,8 +816,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\PatchHrisCompanyRequest  $request
-     * @return Operations\PatchHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisCompany(Operations\PatchHrisCompanyRequest $request, ?Options $options = null): Operations\PatchHrisCompanyResponse
@@ -883,8 +883,8 @@ class Company
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveAtsCompanyRequest  $request
-     * @return Operations\RemoveAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsCompany(Operations\RemoveAtsCompanyRequest $request, ?Options $options = null): Operations\RemoveAtsCompanyResponse
@@ -939,8 +939,8 @@ class Company
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveCrmCompanyRequest  $request
-     * @return Operations\RemoveCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request, ?Options $options = null): Operations\RemoveCrmCompanyResponse
@@ -995,8 +995,8 @@ class Company
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveHrisCompanyRequest  $request
-     * @return Operations\RemoveHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisCompany(Operations\RemoveHrisCompanyRequest $request, ?Options $options = null): Operations\RemoveHrisCompanyResponse
@@ -1051,8 +1051,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\UpdateAtsCompanyRequest  $request
-     * @return Operations\UpdateAtsCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsCompany(Operations\UpdateAtsCompanyRequest $request, ?Options $options = null): Operations\UpdateAtsCompanyResponse
@@ -1118,8 +1118,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\UpdateCrmCompanyRequest  $request
-     * @return Operations\UpdateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request, ?Options $options = null): Operations\UpdateCrmCompanyResponse
@@ -1185,8 +1185,8 @@ class Company
     /**
      * Update a company
      *
-     * @param  Operations\UpdateHrisCompanyRequest  $request
-     * @return Operations\UpdateHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisCompany(Operations\UpdateHrisCompanyRequest $request, ?Options $options = null): Operations\UpdateHrisCompanyResponse

@@ -14,7 +14,7 @@ class PatchCrmLeadRequest
 {
     /**
      *
-     * @var Shared\CrmLead $crmLead
+     * @var \Unified\Unified_to\Models\Shared\CrmLead $crmLead
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmLead $crmLead;
@@ -38,7 +38,7 @@ class PatchCrmLeadRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCrmLeadQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCrmLeadQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCrmLeadRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmLead  $crmLead
+     * @param  \Unified\Unified_to\Models\Shared\CrmLead  $crmLead
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCrmLeadQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCrmLeadQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

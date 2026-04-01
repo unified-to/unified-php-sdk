@@ -13,7 +13,7 @@ class HrisEmployeerelationship
 {
     /**
      *
-     * @var ?PropertyHrisEmployeerelationshipAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeerelationshipAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisEmployeerelationshipAddress|null')]
@@ -23,7 +23,7 @@ class HrisEmployeerelationship
     /**
      * $emails
      *
-     * @var ?array<HrisEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisEmail>|null')]
@@ -89,7 +89,7 @@ class HrisEmployeerelationship
     /**
      * $telephones
      *
-     * @var ?array<HrisTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>|null')]
@@ -98,7 +98,7 @@ class HrisEmployeerelationship
 
     /**
      *
-     * @var ?HrisEmployeerelationshipType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmployeerelationshipType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeerelationshipType|null')]
@@ -106,8 +106,8 @@ class HrisEmployeerelationship
     public ?HrisEmployeerelationshipType $type = null;
 
     /**
-     * @param  ?PropertyHrisEmployeerelationshipAddress  $address
-     * @param  ?array<HrisEmail>  $emails
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeerelationshipAddress  $address
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisEmail>  $emails
      * @param  ?\DateTime  $endAt
      * @param  ?string  $firstName
      * @param  ?bool  $isBeneficiary
@@ -115,8 +115,8 @@ class HrisEmployeerelationship
      * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?\DateTime  $startAt
-     * @param  ?array<HrisTelephone>  $telephones
-     * @param  ?HrisEmployeerelationshipType  $type
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTelephone>  $telephones
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeerelationshipType  $type
      * @phpstan-pure
      */
     public function __construct(?PropertyHrisEmployeerelationshipAddress $address = null, ?array $emails = null, ?\DateTime $endAt = null, ?string $firstName = null, ?bool $isBeneficiary = null, ?bool $isDependent = null, ?string $lastName = null, ?string $name = null, ?\DateTime $startAt = null, ?array $telephones = null, ?HrisEmployeerelationshipType $type = null)

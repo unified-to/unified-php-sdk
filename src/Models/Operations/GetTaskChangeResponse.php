@@ -35,7 +35,7 @@ class GetTaskChangeResponse
     /**
      * Successful
      *
-     * @var ?Shared\TaskChange $taskChange
+     * @var ?\Unified\Unified_to\Models\Shared\TaskChange $taskChange
      */
     public ?Shared\TaskChange $taskChange = null;
 
@@ -43,7 +43,7 @@ class GetTaskChangeResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\TaskChange  $taskChange
+     * @param  ?\Unified\Unified_to\Models\Shared\TaskChange  $taskChange
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TaskChange $taskChange = null)

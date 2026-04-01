@@ -21,7 +21,7 @@ class AdsAd
 
     /**
      *
-     * @var ?AdType $adType
+     * @var ?\Unified\Unified_to\Models\Shared\AdType $adType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ad_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdType|null')]
@@ -153,7 +153,7 @@ class AdsAd
     /**
      * $promoted
      *
-     * @var ?array<AdsPromoted> $promoted
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
@@ -172,7 +172,7 @@ class AdsAd
 
     /**
      *
-     * @var ?AdsAdStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AdsAdStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsAdStatus|null')]
@@ -189,7 +189,7 @@ class AdsAd
 
     /**
      * @param  ?string  $adCopy
-     * @param  ?AdType  $adType
+     * @param  ?\Unified\Unified_to\Models\Shared\AdType  $adType
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creativeAssetUrl
@@ -205,9 +205,9 @@ class AdsAd
      * @param  ?string  $organizationId
      * @param  ?string  $path1
      * @param  ?string  $path2
-     * @param  ?array<AdsPromoted>  $promoted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
-     * @param  ?AdsAdStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsAdStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

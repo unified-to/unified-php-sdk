@@ -14,7 +14,7 @@ class PatchHrisTimeoffRequest
 {
     /**
      *
-     * @var Shared\HrisTimeoff $hrisTimeoff
+     * @var \Unified\Unified_to\Models\Shared\HrisTimeoff $hrisTimeoff
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisTimeoff $hrisTimeoff;
@@ -38,7 +38,7 @@ class PatchHrisTimeoffRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchHrisTimeoffQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchHrisTimeoffQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchHrisTimeoffRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisTimeoff  $hrisTimeoff
+     * @param  \Unified\Unified_to\Models\Shared\HrisTimeoff  $hrisTimeoff
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchHrisTimeoffQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchHrisTimeoffQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

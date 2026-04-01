@@ -35,7 +35,7 @@ class ListRepoOrganizationsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\RepoOrganization> $repoOrganizations
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoOrganization> $repoOrganizations
      */
     public ?array $repoOrganizations = null;
 
@@ -43,7 +43,7 @@ class ListRepoOrganizationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\RepoOrganization>  $repoOrganizations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoOrganization>  $repoOrganizations
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $repoOrganizations = null)

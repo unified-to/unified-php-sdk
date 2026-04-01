@@ -48,7 +48,7 @@ class ApiCall
 
     /**
      *
-     * @var ApiCallType $type
+     * @var \Unified\Unified_to\Models\Shared\ApiCallType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ApiCallType')]
@@ -172,7 +172,7 @@ class ApiCall
      * @param  string  $name
      * @param  string  $path
      * @param  string  $status
-     * @param  ApiCallType  $type
+     * @param  \Unified\Unified_to\Models\Shared\ApiCallType  $type
      * @param  ?string  $connectionId
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $endapiResponseTime

@@ -35,7 +35,7 @@ class PatchAdsGroupResponse
     /**
      * Successful
      *
-     * @var ?Shared\AdsGroup $adsGroup
+     * @var ?\Unified\Unified_to\Models\Shared\AdsGroup $adsGroup
      */
     public ?Shared\AdsGroup $adsGroup = null;
 
@@ -43,7 +43,7 @@ class PatchAdsGroupResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AdsGroup  $adsGroup
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsGroup  $adsGroup
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AdsGroup $adsGroup = null)

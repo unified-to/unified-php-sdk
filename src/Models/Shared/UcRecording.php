@@ -78,7 +78,7 @@ class UcRecording
     /**
      * $media
      *
-     * @var ?array<UcRecordingMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcRecordingMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcRecordingMedia>|null')]
@@ -105,7 +105,7 @@ class UcRecording
 
     /**
      *
-     * @var ?UcRecordingType $type
+     * @var ?\Unified\Unified_to\Models\Shared\UcRecordingType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcRecordingType|null')]
@@ -161,10 +161,10 @@ class UcRecording
      * @param  ?\DateTime  $endAt
      * @param  ?\DateTime  $expiresAt
      * @param  ?string  $id
-     * @param  ?array<UcRecordingMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcRecordingMedia>  $media
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?UcRecordingType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\UcRecordingType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName

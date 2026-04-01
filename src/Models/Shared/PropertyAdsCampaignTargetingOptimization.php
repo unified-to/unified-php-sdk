@@ -30,7 +30,7 @@ class PropertyAdsCampaignTargetingOptimization
 
     /**
      *
-     * @var ?Mode $mode
+     * @var ?\Unified\Unified_to\Models\Shared\Mode $mode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mode')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Mode|null')]
@@ -48,7 +48,7 @@ class PropertyAdsCampaignTargetingOptimization
     /**
      * @param  ?bool  $advantageAudience
      * @param  ?bool  $advantagePlacements
-     * @param  ?Mode  $mode
+     * @param  ?\Unified\Unified_to\Models\Shared\Mode  $mode
      * @param  ?bool  $targetingOptimizationExpansionAll
      * @phpstan-pure
      */

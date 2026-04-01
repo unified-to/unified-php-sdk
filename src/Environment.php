@@ -48,7 +48,7 @@ class Environment
      * Create new environments
      *
      * @param  array<string>  $request
-     * @return Operations\CreateUnifiedEnvironmentResponse
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedEnvironmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUnifiedEnvironment(array $request, ?Options $options = null): Operations\CreateUnifiedEnvironmentResponse
@@ -111,7 +111,7 @@ class Environment
     /**
      * Returns all environments
      *
-     * @return Operations\ListUnifiedEnvironmentsResponse
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedEnvironmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUnifiedEnvironments(?Options $options = null): Operations\ListUnifiedEnvironmentsResponse
@@ -169,8 +169,8 @@ class Environment
     /**
      * Remove an environment
      *
-     * @param  Operations\RemoveUnifiedEnvironmentRequest  $request
-     * @return Operations\RemoveUnifiedEnvironmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedEnvironmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedEnvironmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUnifiedEnvironment(Operations\RemoveUnifiedEnvironmentRequest $request, ?Options $options = null): Operations\RemoveUnifiedEnvironmentResponse

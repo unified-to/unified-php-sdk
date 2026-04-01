@@ -14,7 +14,7 @@ class CreatePaymentLinkRequest
 {
     /**
      *
-     * @var Shared\PaymentLink $paymentLink
+     * @var \Unified\Unified_to\Models\Shared\PaymentLink $paymentLink
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\PaymentLink $paymentLink;
@@ -30,7 +30,7 @@ class CreatePaymentLinkRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreatePaymentLinkQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreatePaymentLinkQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreatePaymentLinkRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\PaymentLink  $paymentLink
+     * @param  \Unified\Unified_to\Models\Shared\PaymentLink  $paymentLink
      * @param  string  $connectionId
-     * @param  ?array<CreatePaymentLinkQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreatePaymentLinkQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

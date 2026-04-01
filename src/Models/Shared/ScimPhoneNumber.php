@@ -29,7 +29,7 @@ class ScimPhoneNumber
 
     /**
      *
-     * @var ?ScimPhoneNumberType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimPhoneNumberType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimPhoneNumberType|null')]
@@ -47,7 +47,7 @@ class ScimPhoneNumber
     /**
      * @param  ?string  $display
      * @param  ?bool  $primary
-     * @param  ?ScimPhoneNumberType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimPhoneNumberType  $type
      * @param  ?string  $value
      * @phpstan-pure
      */

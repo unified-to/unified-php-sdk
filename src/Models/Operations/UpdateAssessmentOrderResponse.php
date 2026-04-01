@@ -35,7 +35,7 @@ class UpdateAssessmentOrderResponse
     /**
      * Successful
      *
-     * @var ?Shared\AssessmentOrder $assessmentOrder
+     * @var ?\Unified\Unified_to\Models\Shared\AssessmentOrder $assessmentOrder
      */
     public ?Shared\AssessmentOrder $assessmentOrder = null;
 
@@ -43,7 +43,7 @@ class UpdateAssessmentOrderResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AssessmentOrder  $assessmentOrder
+     * @param  ?\Unified\Unified_to\Models\Shared\AssessmentOrder  $assessmentOrder
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AssessmentOrder $assessmentOrder = null)

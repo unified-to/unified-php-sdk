@@ -35,7 +35,7 @@ class ListScimGroupsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\ScimGroup> $scimGroups
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimGroup> $scimGroups
      */
     public ?array $scimGroups = null;
 
@@ -43,7 +43,7 @@ class ListScimGroupsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\ScimGroup>  $scimGroups
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimGroup>  $scimGroups
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $scimGroups = null)

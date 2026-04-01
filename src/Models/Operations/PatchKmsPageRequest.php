@@ -14,7 +14,7 @@ class PatchKmsPageRequest
 {
     /**
      *
-     * @var Shared\KmsPage $kmsPage
+     * @var \Unified\Unified_to\Models\Shared\KmsPage $kmsPage
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\KmsPage $kmsPage;
@@ -38,7 +38,7 @@ class PatchKmsPageRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchKmsPageQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchKmsPageQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchKmsPageRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\KmsPage  $kmsPage
+     * @param  \Unified\Unified_to\Models\Shared\KmsPage  $kmsPage
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchKmsPageQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchKmsPageQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

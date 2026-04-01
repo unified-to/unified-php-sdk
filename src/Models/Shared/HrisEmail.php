@@ -20,7 +20,7 @@ class HrisEmail
 
     /**
      *
-     * @var ?HrisEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmailType|null')]
@@ -29,7 +29,7 @@ class HrisEmail
 
     /**
      * @param  string  $email
-     * @param  ?HrisEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?HrisEmailType $type = null)

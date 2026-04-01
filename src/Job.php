@@ -47,8 +47,8 @@ class Job
     /**
      * Create a job
      *
-     * @param  Operations\CreateAtsJobRequest  $request
-     * @return Operations\CreateAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsJob(Operations\CreateAtsJobRequest $request, ?Options $options = null): Operations\CreateAtsJobResponse
@@ -114,8 +114,8 @@ class Job
     /**
      * Retrieve a job
      *
-     * @param  Operations\GetAtsJobRequest  $request
-     * @return Operations\GetAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsJob(Operations\GetAtsJobRequest $request, ?Options $options = null): Operations\GetAtsJobResponse
@@ -176,8 +176,8 @@ class Job
     /**
      * List all jobs
      *
-     * @param  Operations\ListAtsJobsRequest  $request
-     * @return Operations\ListAtsJobsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsJobs(Operations\ListAtsJobsRequest $request, ?Options $options = null): Operations\ListAtsJobsResponse
@@ -238,8 +238,8 @@ class Job
     /**
      * Update a job
      *
-     * @param  Operations\PatchAtsJobRequest  $request
-     * @return Operations\PatchAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsJob(Operations\PatchAtsJobRequest $request, ?Options $options = null): Operations\PatchAtsJobResponse
@@ -305,8 +305,8 @@ class Job
     /**
      * Remove a job
      *
-     * @param  Operations\RemoveAtsJobRequest  $request
-     * @return Operations\RemoveAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsJob(Operations\RemoveAtsJobRequest $request, ?Options $options = null): Operations\RemoveAtsJobResponse
@@ -361,8 +361,8 @@ class Job
     /**
      * Update a job
      *
-     * @param  Operations\UpdateAtsJobRequest  $request
-     * @return Operations\UpdateAtsJobResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsJob(Operations\UpdateAtsJobRequest $request, ?Options $options = null): Operations\UpdateAtsJobResponse

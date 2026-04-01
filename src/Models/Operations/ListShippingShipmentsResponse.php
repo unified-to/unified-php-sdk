@@ -35,7 +35,7 @@ class ListShippingShipmentsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\ShippingShipment> $shippingShipments
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingShipment> $shippingShipments
      */
     public ?array $shippingShipments = null;
 
@@ -43,7 +43,7 @@ class ListShippingShipmentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\ShippingShipment>  $shippingShipments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingShipment>  $shippingShipments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $shippingShipments = null)

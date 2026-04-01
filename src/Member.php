@@ -47,8 +47,8 @@ class Member
     /**
      * Create a member
      *
-     * @param  Operations\CreateMartechMemberRequest  $request
-     * @return Operations\CreateMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechMember(Operations\CreateMartechMemberRequest $request, ?Options $options = null): Operations\CreateMartechMemberResponse
@@ -114,8 +114,8 @@ class Member
     /**
      * Retrieve a member
      *
-     * @param  Operations\GetMartechMemberRequest  $request
-     * @return Operations\GetMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechMember(Operations\GetMartechMemberRequest $request, ?Options $options = null): Operations\GetMartechMemberResponse
@@ -176,8 +176,8 @@ class Member
     /**
      * List all members
      *
-     * @param  Operations\ListMartechMembersRequest  $request
-     * @return Operations\ListMartechMembersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechMembersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechMembers(Operations\ListMartechMembersRequest $request, ?Options $options = null): Operations\ListMartechMembersResponse
@@ -238,8 +238,8 @@ class Member
     /**
      * Update a member
      *
-     * @param  Operations\PatchMartechMemberRequest  $request
-     * @return Operations\PatchMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechMember(Operations\PatchMartechMemberRequest $request, ?Options $options = null): Operations\PatchMartechMemberResponse
@@ -305,8 +305,8 @@ class Member
     /**
      * Remove a member
      *
-     * @param  Operations\RemoveMartechMemberRequest  $request
-     * @return Operations\RemoveMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechMember(Operations\RemoveMartechMemberRequest $request, ?Options $options = null): Operations\RemoveMartechMemberResponse
@@ -361,8 +361,8 @@ class Member
     /**
      * Update a member
      *
-     * @param  Operations\UpdateMartechMemberRequest  $request
-     * @return Operations\UpdateMartechMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechMember(Operations\UpdateMartechMemberRequest $request, ?Options $options = null): Operations\UpdateMartechMemberResponse

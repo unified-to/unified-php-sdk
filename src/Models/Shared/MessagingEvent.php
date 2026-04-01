@@ -13,7 +13,7 @@ class MessagingEvent
 {
     /**
      *
-     * @var ?PropertyMessagingEventButton $button
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventButton $button
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('button')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingEventButton|null')]
@@ -22,7 +22,7 @@ class MessagingEvent
 
     /**
      *
-     * @var ?PropertyMessagingEventChannel $channel
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventChannel $channel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('channel')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingEventChannel|null')]
@@ -55,7 +55,7 @@ class MessagingEvent
 
     /**
      *
-     * @var ?PropertyMessagingEventMessage $message
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessage $message
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('message')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessage|null')]
@@ -74,7 +74,7 @@ class MessagingEvent
 
     /**
      *
-     * @var ?MessagingEventType $type
+     * @var ?\Unified\Unified_to\Models\Shared\MessagingEventType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MessagingEventType|null')]
@@ -83,7 +83,7 @@ class MessagingEvent
 
     /**
      *
-     * @var ?PropertyMessagingEventUser $user
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventUser $user
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingEventUser|null')]
@@ -91,15 +91,15 @@ class MessagingEvent
     public ?PropertyMessagingEventUser $user = null;
 
     /**
-     * @param  ?PropertyMessagingEventButton  $button
-     * @param  ?PropertyMessagingEventChannel  $channel
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventButton  $button
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventChannel  $channel
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?bool  $isReplacingOriginal
-     * @param  ?PropertyMessagingEventMessage  $message
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessage  $message
      * @param  ?array<string, mixed>  $raw
-     * @param  ?MessagingEventType  $type
-     * @param  ?PropertyMessagingEventUser  $user
+     * @param  ?\Unified\Unified_to\Models\Shared\MessagingEventType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventUser  $user
      * @phpstan-pure
      */
     public function __construct(?PropertyMessagingEventButton $button = null, ?PropertyMessagingEventChannel $channel = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isReplacingOriginal = null, ?PropertyMessagingEventMessage $message = null, ?array $raw = null, ?MessagingEventType $type = null, ?PropertyMessagingEventUser $user = null)

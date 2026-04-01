@@ -14,7 +14,7 @@ class CreateCommerceLocationRequest
 {
     /**
      *
-     * @var Shared\CommerceLocation $commerceLocation
+     * @var \Unified\Unified_to\Models\Shared\CommerceLocation $commerceLocation
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceLocation $commerceLocation;
@@ -30,7 +30,7 @@ class CreateCommerceLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCommerceLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCommerceLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCommerceLocationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceLocation  $commerceLocation
+     * @param  \Unified\Unified_to\Models\Shared\CommerceLocation  $commerceLocation
      * @param  string  $connectionId
-     * @param  ?array<CreateCommerceLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCommerceLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

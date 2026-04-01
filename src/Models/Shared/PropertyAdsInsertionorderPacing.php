@@ -29,7 +29,7 @@ class PropertyAdsInsertionorderPacing
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderPacingPeriod $period
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacingPeriod $period
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('period')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacingPeriod|null')]
@@ -47,7 +47,7 @@ class PropertyAdsInsertionorderPacing
     /**
      * @param  ?float  $dailyMaxAmount
      * @param  ?float  $dailyMaxImpressions
-     * @param  ?PropertyAdsInsertionorderPacingPeriod  $period
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacingPeriod  $period
      * @param  ?string  $type
      * @phpstan-pure
      */

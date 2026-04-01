@@ -45,7 +45,7 @@ class PropertyCalendarWebinarOrganizer
 
     /**
      *
-     * @var ?PropertyCalendarWebinarOrganizerStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizerStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizerStatus|null')]
@@ -65,7 +65,7 @@ class PropertyCalendarWebinarOrganizer
      * @param  ?bool  $isCohost
      * @param  ?string  $name
      * @param  ?bool  $required
-     * @param  ?PropertyCalendarWebinarOrganizerStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizerStatus  $status
      * @param  ?string  $userId
      * @phpstan-pure
      */

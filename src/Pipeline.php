@@ -47,8 +47,8 @@ class Pipeline
     /**
      * Create a pipeline
      *
-     * @param  Operations\CreateCrmPipelineRequest  $request
-     * @return Operations\CreateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmPipeline(Operations\CreateCrmPipelineRequest $request, ?Options $options = null): Operations\CreateCrmPipelineResponse
@@ -114,8 +114,8 @@ class Pipeline
     /**
      * Retrieve a pipeline
      *
-     * @param  Operations\GetCrmPipelineRequest  $request
-     * @return Operations\GetCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmPipeline(Operations\GetCrmPipelineRequest $request, ?Options $options = null): Operations\GetCrmPipelineResponse
@@ -176,8 +176,8 @@ class Pipeline
     /**
      * List all pipelines
      *
-     * @param  Operations\ListCrmPipelinesRequest  $request
-     * @return Operations\ListCrmPipelinesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmPipelines(Operations\ListCrmPipelinesRequest $request, ?Options $options = null): Operations\ListCrmPipelinesResponse
@@ -238,8 +238,8 @@ class Pipeline
     /**
      * Update a pipeline
      *
-     * @param  Operations\PatchCrmPipelineRequest  $request
-     * @return Operations\PatchCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmPipeline(Operations\PatchCrmPipelineRequest $request, ?Options $options = null): Operations\PatchCrmPipelineResponse
@@ -305,8 +305,8 @@ class Pipeline
     /**
      * Remove a pipeline
      *
-     * @param  Operations\RemoveCrmPipelineRequest  $request
-     * @return Operations\RemoveCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmPipeline(Operations\RemoveCrmPipelineRequest $request, ?Options $options = null): Operations\RemoveCrmPipelineResponse
@@ -361,8 +361,8 @@ class Pipeline
     /**
      * Update a pipeline
      *
-     * @param  Operations\UpdateCrmPipelineRequest  $request
-     * @return Operations\UpdateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmPipeline(Operations\UpdateCrmPipelineRequest $request, ?Options $options = null): Operations\UpdateCrmPipelineResponse

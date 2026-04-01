@@ -30,7 +30,7 @@ class ListCommerceReviewsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCommerceReviewsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCommerceReviewsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -106,7 +106,7 @@ class ListCommerceReviewsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
-     * @param  ?array<ListCommerceReviewsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceReviewsQueryParamFields>  $fields
      * @param  ?string  $itemId
      * @param  ?float  $limit
      * @param  ?string  $locationId

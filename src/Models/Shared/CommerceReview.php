@@ -53,7 +53,7 @@ class CommerceReview
     /**
      * $comments
      *
-     * @var ?array<CommerceReviewComment> $comments
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReviewComment> $comments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('comments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReviewComment>|null')]
@@ -135,7 +135,7 @@ class CommerceReview
     /**
      * Photosvideos attached to the review
      *
-     * @var ?array<CommerceItemMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
@@ -145,7 +145,7 @@ class CommerceReview
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -172,7 +172,7 @@ class CommerceReview
 
     /**
      *
-     * @var ?CommerceReviewStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceReviewStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceReviewStatus|null')]
@@ -225,7 +225,7 @@ class CommerceReview
      * @param  ?string  $authorEmail
      * @param  ?string  $authorLocation
      * @param  ?string  $authorName
-     * @param  ?array<CommerceReviewComment>  $comments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReviewComment>  $comments
      * @param  ?string  $content
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $helpfulVotes
@@ -235,11 +235,11 @@ class CommerceReview
      * @param  ?bool  $isVerified
      * @param  ?string  $itemVariantId
      * @param  ?string  $locationId
-     * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?float  $rating
      * @param  ?array<string, mixed>  $raw
-     * @param  ?CommerceReviewStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceReviewStatus  $status
      * @param  ?string  $title
      * @param  ?float  $unhelpfulVotes
      * @param  ?\DateTime  $updatedAt

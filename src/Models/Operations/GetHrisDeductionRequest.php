@@ -30,7 +30,7 @@ class GetHrisDeductionRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisDeductionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisDeductionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisDeductionRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisDeductionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisDeductionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

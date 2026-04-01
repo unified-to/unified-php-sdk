@@ -46,7 +46,7 @@ class ListAtsActivitiesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAtsActivitiesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsActivitiesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -140,7 +140,7 @@ class ListAtsActivitiesRequest
      * @param  ?string  $applicationId
      * @param  ?string  $candidateId
      * @param  ?string  $documentId
-     * @param  ?array<ListAtsActivitiesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsActivitiesQueryParamFields>  $fields
      * @param  ?string  $interviewId
      * @param  ?string  $jobId
      * @param  ?float  $limit

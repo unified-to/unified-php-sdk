@@ -35,7 +35,7 @@ class GetAtsJobResponse
     /**
      * Successful
      *
-     * @var ?Shared\AtsJob $atsJob
+     * @var ?\Unified\Unified_to\Models\Shared\AtsJob $atsJob
      */
     public ?Shared\AtsJob $atsJob = null;
 
@@ -43,7 +43,7 @@ class GetAtsJobResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AtsJob  $atsJob
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsJob  $atsJob
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsJob $atsJob = null)

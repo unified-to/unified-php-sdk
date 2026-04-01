@@ -35,7 +35,7 @@ class ListMetadataMetadatasResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\MetadataMetadata> $metadataMetadatas
+     * @var ?array<\Unified\Unified_to\Models\Shared\MetadataMetadata> $metadataMetadatas
      */
     public ?array $metadataMetadatas = null;
 
@@ -43,7 +43,7 @@ class ListMetadataMetadatasResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\MetadataMetadata>  $metadataMetadatas
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MetadataMetadata>  $metadataMetadatas
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $metadataMetadatas = null)

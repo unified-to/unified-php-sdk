@@ -35,7 +35,7 @@ class GetShippingCarrierResponse
     /**
      * Successful
      *
-     * @var ?Shared\ShippingCarrier $shippingCarrier
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingCarrier $shippingCarrier
      */
     public ?Shared\ShippingCarrier $shippingCarrier = null;
 
@@ -43,7 +43,7 @@ class GetShippingCarrierResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ShippingCarrier  $shippingCarrier
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingCarrier  $shippingCarrier
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingCarrier $shippingCarrier = null)

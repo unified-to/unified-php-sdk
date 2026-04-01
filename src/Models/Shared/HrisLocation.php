@@ -13,7 +13,7 @@ class HrisLocation
 {
     /**
      *
-     * @var ?PropertyHrisLocationAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisLocationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisLocationAddress|null')]
@@ -121,7 +121,7 @@ class HrisLocation
     /**
      * $telephones
      *
-     * @var ?array<HrisTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisTelephone>|null')]
@@ -145,7 +145,7 @@ class HrisLocation
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyHrisLocationAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisLocationAddress  $address
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -158,7 +158,7 @@ class HrisLocation
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<HrisTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTelephone>  $telephones
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

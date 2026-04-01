@@ -14,7 +14,7 @@ class UpdateHrisGroupRequest
 {
     /**
      *
-     * @var Shared\HrisGroup $hrisGroup
+     * @var \Unified\Unified_to\Models\Shared\HrisGroup $hrisGroup
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisGroup $hrisGroup;
@@ -38,7 +38,7 @@ class UpdateHrisGroupRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateHrisGroupQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateHrisGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateHrisGroupRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisGroup  $hrisGroup
+     * @param  \Unified\Unified_to\Models\Shared\HrisGroup  $hrisGroup
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateHrisGroupQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateHrisGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -35,7 +35,7 @@ class ListCrmEventsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CrmEvent> $crmEvents
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEvent> $crmEvents
      */
     public ?array $crmEvents = null;
 
@@ -43,7 +43,7 @@ class ListCrmEventsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CrmEvent>  $crmEvents
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmEvent>  $crmEvents
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmEvents = null)

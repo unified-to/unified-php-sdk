@@ -35,7 +35,7 @@ class ListAccountingOrganizationsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingOrganization> $accountingOrganizations
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingOrganization> $accountingOrganizations
      */
     public ?array $accountingOrganizations = null;
 
@@ -43,7 +43,7 @@ class ListAccountingOrganizationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingOrganization>  $accountingOrganizations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingOrganization>  $accountingOrganizations
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingOrganizations = null)

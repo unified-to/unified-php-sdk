@@ -35,7 +35,7 @@ class GetAccountingTransactionResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingTransaction $accountingTransaction
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTransaction $accountingTransaction
      */
     public ?Shared\AccountingTransaction $accountingTransaction = null;
 
@@ -43,7 +43,7 @@ class GetAccountingTransactionResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingTransaction  $accountingTransaction
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTransaction  $accountingTransaction
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingTransaction $accountingTransaction = null)

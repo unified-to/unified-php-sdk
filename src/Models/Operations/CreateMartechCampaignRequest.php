@@ -14,7 +14,7 @@ class CreateMartechCampaignRequest
 {
     /**
      *
-     * @var Shared\MarketingCampaign $marketingCampaign
+     * @var \Unified\Unified_to\Models\Shared\MarketingCampaign $marketingCampaign
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MarketingCampaign $marketingCampaign;
@@ -30,7 +30,7 @@ class CreateMartechCampaignRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateMartechCampaignQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateMartechCampaignQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateMartechCampaignRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MarketingCampaign  $marketingCampaign
+     * @param  \Unified\Unified_to\Models\Shared\MarketingCampaign  $marketingCampaign
      * @param  string  $connectionId
-     * @param  ?array<CreateMartechCampaignQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateMartechCampaignQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -35,7 +35,7 @@ class ListCrmPipelinesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CrmPipeline> $crmPipelines
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmPipeline> $crmPipelines
      */
     public ?array $crmPipelines = null;
 
@@ -43,7 +43,7 @@ class ListCrmPipelinesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CrmPipeline>  $crmPipelines
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmPipeline>  $crmPipelines
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmPipelines = null)

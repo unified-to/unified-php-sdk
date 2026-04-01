@@ -35,7 +35,7 @@ class GetAdsCreativeResponse
     /**
      * Successful
      *
-     * @var ?Shared\AdsCreative $adsCreative
+     * @var ?\Unified\Unified_to\Models\Shared\AdsCreative $adsCreative
      */
     public ?Shared\AdsCreative $adsCreative = null;
 
@@ -43,7 +43,7 @@ class GetAdsCreativeResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AdsCreative  $adsCreative
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsCreative  $adsCreative
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AdsCreative $adsCreative = null)

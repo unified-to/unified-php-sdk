@@ -30,7 +30,7 @@ class ShippingRate
     /**
      * Origin address
      *
-     * @var ?PropertyShippingRateFromAddress $fromAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingRateFromAddress $fromAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('from_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingRateFromAddress|null')]
@@ -48,7 +48,7 @@ class ShippingRate
     /**
      * Multiple packages (alternative to package)
      *
-     * @var ?array<ShippingPackage> $packages
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingPackage> $packages
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('packages')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingPackage>|null')]
@@ -58,7 +58,7 @@ class ShippingRate
     /**
      * $rates
      *
-     * @var ?array<ShippingRateRate> $rates
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingRateRate> $rates
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('rates')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingRateRate>|null')]
@@ -94,7 +94,7 @@ class ShippingRate
     /**
      * Destination address
      *
-     * @var ?PropertyShippingRateToAddress $toAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingRateToAddress $toAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('to_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingRateToAddress|null')]
@@ -104,14 +104,14 @@ class ShippingRate
     /**
      * @param  ?string  $carrierId
      * @param  ?string  $currency
-     * @param  ?PropertyShippingRateFromAddress  $fromAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingRateFromAddress  $fromAddress
      * @param  ?string  $id
-     * @param  ?array<ShippingPackage>  $packages
-     * @param  ?array<ShippingRateRate>  $rates
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingPackage>  $packages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingRateRate>  $rates
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $shipByAt
      * @param  ?string  $shipmentId
-     * @param  ?PropertyShippingRateToAddress  $toAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingRateToAddress  $toAddress
      * @phpstan-pure
      */
     public function __construct(?string $carrierId = null, ?string $currency = null, ?PropertyShippingRateFromAddress $fromAddress = null, ?string $id = null, ?array $packages = null, ?array $rates = null, ?array $raw = null, ?\DateTime $shipByAt = null, ?string $shipmentId = null, ?PropertyShippingRateToAddress $toAddress = null)

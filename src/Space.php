@@ -47,8 +47,8 @@ class Space
     /**
      * Create a space
      *
-     * @param  Operations\CreateKmsSpaceRequest  $request
-     * @return Operations\CreateKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsSpace(Operations\CreateKmsSpaceRequest $request, ?Options $options = null): Operations\CreateKmsSpaceResponse
@@ -114,8 +114,8 @@ class Space
     /**
      * Retrieve a space
      *
-     * @param  Operations\GetKmsSpaceRequest  $request
-     * @return Operations\GetKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsSpace(Operations\GetKmsSpaceRequest $request, ?Options $options = null): Operations\GetKmsSpaceResponse
@@ -176,8 +176,8 @@ class Space
     /**
      * List all spaces
      *
-     * @param  Operations\ListKmsSpacesRequest  $request
-     * @return Operations\ListKmsSpacesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsSpacesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsSpacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsSpaces(Operations\ListKmsSpacesRequest $request, ?Options $options = null): Operations\ListKmsSpacesResponse
@@ -238,8 +238,8 @@ class Space
     /**
      * Update a space
      *
-     * @param  Operations\PatchKmsSpaceRequest  $request
-     * @return Operations\PatchKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsSpace(Operations\PatchKmsSpaceRequest $request, ?Options $options = null): Operations\PatchKmsSpaceResponse
@@ -305,8 +305,8 @@ class Space
     /**
      * Remove a space
      *
-     * @param  Operations\RemoveKmsSpaceRequest  $request
-     * @return Operations\RemoveKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsSpace(Operations\RemoveKmsSpaceRequest $request, ?Options $options = null): Operations\RemoveKmsSpaceResponse
@@ -361,8 +361,8 @@ class Space
     /**
      * Update a space
      *
-     * @param  Operations\UpdateKmsSpaceRequest  $request
-     * @return Operations\UpdateKmsSpaceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsSpaceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsSpace(Operations\UpdateKmsSpaceRequest $request, ?Options $options = null): Operations\UpdateKmsSpaceResponse

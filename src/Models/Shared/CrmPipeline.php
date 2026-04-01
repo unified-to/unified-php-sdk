@@ -72,7 +72,7 @@ class CrmPipeline
     /**
      * $stages
      *
-     * @var ?array<CrmStage> $stages
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmStage> $stages
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('stages')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmStage>|null')]
@@ -95,7 +95,7 @@ class CrmPipeline
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<CrmStage>  $stages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmStage>  $stages
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

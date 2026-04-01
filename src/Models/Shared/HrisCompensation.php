@@ -29,7 +29,7 @@ class HrisCompensation
 
     /**
      *
-     * @var ?HrisCompensationFrequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\HrisCompensationFrequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationFrequency|null')]
@@ -54,7 +54,7 @@ class HrisCompensation
 
     /**
      *
-     * @var ?HrisCompensationType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisCompensationType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisCompensationType|null')]
@@ -64,10 +64,10 @@ class HrisCompensation
     /**
      * @param  ?float  $amount
      * @param  ?string  $currency
-     * @param  ?HrisCompensationFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisCompensationFrequency  $frequency
      * @param  ?string  $groupId
      * @param  ?string  $notes
-     * @param  ?HrisCompensationType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisCompensationType  $type
      * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?string $groupId = null, ?string $notes = null, ?HrisCompensationType $type = null)

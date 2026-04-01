@@ -35,7 +35,7 @@ class ListPaymentLinksResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\PaymentLink> $paymentLinks
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentLink> $paymentLinks
      */
     public ?array $paymentLinks = null;
 
@@ -43,7 +43,7 @@ class ListPaymentLinksResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\PaymentLink>  $paymentLinks
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentLink>  $paymentLinks
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $paymentLinks = null)

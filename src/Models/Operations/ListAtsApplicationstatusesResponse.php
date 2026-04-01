@@ -35,7 +35,7 @@ class ListAtsApplicationstatusesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AtsStatus> $atsStatuses
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsStatus> $atsStatuses
      */
     public ?array $atsStatuses = null;
 
@@ -43,7 +43,7 @@ class ListAtsApplicationstatusesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AtsStatus>  $atsStatuses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsStatus>  $atsStatuses
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $atsStatuses = null)

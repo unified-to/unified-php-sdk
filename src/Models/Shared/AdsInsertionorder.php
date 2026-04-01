@@ -14,7 +14,7 @@ class AdsInsertionorder
     /**
      * YOUTUBE_AND_PARTNERS
      *
-     * @var ?PropertyAdsInsertionorderBidStrategy $bidStrategy
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategy $bidStrategy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('bid_strategy')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategy|null')]
@@ -24,7 +24,7 @@ class AdsInsertionorder
     /**
      * $budgetSegments
      *
-     * @var ?array<AdsInsertionorderBudgetSegment> $budgetSegments
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetSegment> $budgetSegments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_segments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetSegment>|null')]
@@ -33,7 +33,7 @@ class AdsInsertionorder
 
     /**
      *
-     * @var ?AdsInsertionorderBudgetUnit $budgetUnit
+     * @var ?\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetUnit $budgetUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetUnit|null')]
@@ -58,7 +58,7 @@ class AdsInsertionorder
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderFrequencyCap $frequencyCap
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCap $frequencyCap
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency_cap')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCap|null')]
@@ -75,7 +75,7 @@ class AdsInsertionorder
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderKpi $kpi
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpi $kpi
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('kpi')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpi|null')]
@@ -100,7 +100,7 @@ class AdsInsertionorder
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderPacing $pacing
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacing $pacing
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pacing')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacing|null')]
@@ -127,7 +127,7 @@ class AdsInsertionorder
 
     /**
      *
-     * @var ?AdsInsertionorderStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AdsInsertionorderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsInsertionorderStatus|null')]
@@ -143,20 +143,20 @@ class AdsInsertionorder
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyAdsInsertionorderBidStrategy  $bidStrategy
-     * @param  ?array<AdsInsertionorderBudgetSegment>  $budgetSegments
-     * @param  ?AdsInsertionorderBudgetUnit  $budgetUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderBidStrategy  $bidStrategy
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetSegment>  $budgetSegments
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsInsertionorderBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
-     * @param  ?PropertyAdsInsertionorderFrequencyCap  $frequencyCap
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCap  $frequencyCap
      * @param  ?string  $id
-     * @param  ?PropertyAdsInsertionorderKpi  $kpi
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpi  $kpi
      * @param  ?string  $name
      * @param  ?string  $organizationId
-     * @param  ?PropertyAdsInsertionorderPacing  $pacing
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacing  $pacing
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
-     * @param  ?AdsInsertionorderStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsInsertionorderStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

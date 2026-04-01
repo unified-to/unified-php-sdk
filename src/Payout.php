@@ -47,8 +47,8 @@ class Payout
     /**
      * Retrieve a payout
      *
-     * @param  Operations\GetPaymentPayoutRequest  $request
-     * @return Operations\GetPaymentPayoutResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentPayout(Operations\GetPaymentPayoutRequest $request, ?Options $options = null): Operations\GetPaymentPayoutResponse
@@ -109,8 +109,8 @@ class Payout
     /**
      * List all payouts
      *
-     * @param  Operations\ListPaymentPayoutsRequest  $request
-     * @return Operations\ListPaymentPayoutsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentPayouts(Operations\ListPaymentPayoutsRequest $request, ?Options $options = null): Operations\ListPaymentPayoutsResponse

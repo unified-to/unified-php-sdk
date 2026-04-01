@@ -15,7 +15,7 @@ class UpdateCrmDealRequest
     /**
      * A deal represents an opportunity with companies and/or contacts
      *
-     * @var Shared\CrmDeal $crmDeal
+     * @var \Unified\Unified_to\Models\Shared\CrmDeal $crmDeal
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmDeal $crmDeal;
@@ -39,7 +39,7 @@ class UpdateCrmDealRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCrmDealQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCrmDealQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class UpdateCrmDealRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmDeal  $crmDeal
+     * @param  \Unified\Unified_to\Models\Shared\CrmDeal  $crmDeal
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCrmDealQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCrmDealQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

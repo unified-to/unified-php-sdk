@@ -22,7 +22,7 @@ class ListMetadataMetadatasRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListMetadataMetadatasQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListMetadataMetadatasQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListMetadataMetadatasRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListMetadataMetadatasQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListMetadataMetadatasQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

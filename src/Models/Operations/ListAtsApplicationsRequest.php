@@ -38,7 +38,7 @@ class ListAtsApplicationsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAtsApplicationsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsApplicationsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -107,7 +107,7 @@ class ListAtsApplicationsRequest
      * @param  string  $connectionId
      * @param  ?string  $candidateId
      * @param  ?string  $companyId
-     * @param  ?array<ListAtsApplicationsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsApplicationsQueryParamFields>  $fields
      * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset

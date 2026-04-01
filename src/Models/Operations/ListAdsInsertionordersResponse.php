@@ -35,7 +35,7 @@ class ListAdsInsertionordersResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AdsInsertionorder> $adsInsertionorders
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsInsertionorder> $adsInsertionorders
      */
     public ?array $adsInsertionorders = null;
 
@@ -43,7 +43,7 @@ class ListAdsInsertionordersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AdsInsertionorder>  $adsInsertionorders
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsInsertionorder>  $adsInsertionorders
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $adsInsertionorders = null)

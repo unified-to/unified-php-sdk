@@ -14,7 +14,7 @@ class UpdateAccountingBillRequest
 {
     /**
      *
-     * @var Shared\AccountingBill $accountingBill
+     * @var \Unified\Unified_to\Models\Shared\AccountingBill $accountingBill
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingBill $accountingBill;
@@ -38,7 +38,7 @@ class UpdateAccountingBillRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingBillQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingBillQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAccountingBillRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingBill  $accountingBill
+     * @param  \Unified\Unified_to\Models\Shared\AccountingBill  $accountingBill
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingBillQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingBillQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

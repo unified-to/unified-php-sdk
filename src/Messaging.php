@@ -47,8 +47,8 @@ class Messaging
     /**
      * Create a message
      *
-     * @param  Operations\CreateMessagingMessageRequest  $request
-     * @return Operations\CreateMessagingMessageResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMessagingMessage(Operations\CreateMessagingMessageRequest $request, ?Options $options = null): Operations\CreateMessagingMessageResponse
@@ -114,8 +114,8 @@ class Messaging
     /**
      * Retrieve a channel
      *
-     * @param  Operations\GetMessagingChannelRequest  $request
-     * @return Operations\GetMessagingChannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMessagingChannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMessagingChannel(Operations\GetMessagingChannelRequest $request, ?Options $options = null): Operations\GetMessagingChannelResponse
@@ -176,8 +176,8 @@ class Messaging
     /**
      * Retrieve a message
      *
-     * @param  Operations\GetMessagingMessageRequest  $request
-     * @return Operations\GetMessagingMessageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMessagingMessage(Operations\GetMessagingMessageRequest $request, ?Options $options = null): Operations\GetMessagingMessageResponse
@@ -238,8 +238,8 @@ class Messaging
     /**
      * List all channels
      *
-     * @param  Operations\ListMessagingChannelsRequest  $request
-     * @return Operations\ListMessagingChannelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMessagingChannels(Operations\ListMessagingChannelsRequest $request, ?Options $options = null): Operations\ListMessagingChannelsResponse
@@ -300,8 +300,8 @@ class Messaging
     /**
      * List all messages
      *
-     * @param  Operations\ListMessagingMessagesRequest  $request
-     * @return Operations\ListMessagingMessagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMessagingMessagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMessagingMessagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMessagingMessages(Operations\ListMessagingMessagesRequest $request, ?Options $options = null): Operations\ListMessagingMessagesResponse
@@ -362,8 +362,8 @@ class Messaging
     /**
      * Update an event
      *
-     * @param  Operations\PatchMessagingEventRequest  $request
-     * @return Operations\PatchMessagingEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMessagingEvent(Operations\PatchMessagingEventRequest $request, ?Options $options = null): Operations\PatchMessagingEventResponse
@@ -429,8 +429,8 @@ class Messaging
     /**
      * Update a message
      *
-     * @param  Operations\PatchMessagingMessageRequest  $request
-     * @return Operations\PatchMessagingMessageResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMessagingMessage(Operations\PatchMessagingMessageRequest $request, ?Options $options = null): Operations\PatchMessagingMessageResponse
@@ -496,8 +496,8 @@ class Messaging
     /**
      * Remove a message
      *
-     * @param  Operations\RemoveMessagingMessageRequest  $request
-     * @return Operations\RemoveMessagingMessageResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMessagingMessage(Operations\RemoveMessagingMessageRequest $request, ?Options $options = null): Operations\RemoveMessagingMessageResponse
@@ -552,8 +552,8 @@ class Messaging
     /**
      * Update an event
      *
-     * @param  Operations\UpdateMessagingEventRequest  $request
-     * @return Operations\UpdateMessagingEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMessagingEvent(Operations\UpdateMessagingEventRequest $request, ?Options $options = null): Operations\UpdateMessagingEventResponse
@@ -619,8 +619,8 @@ class Messaging
     /**
      * Update a message
      *
-     * @param  Operations\UpdateMessagingMessageRequest  $request
-     * @return Operations\UpdateMessagingMessageResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMessagingMessage(Operations\UpdateMessagingMessageRequest $request, ?Options $options = null): Operations\UpdateMessagingMessageResponse

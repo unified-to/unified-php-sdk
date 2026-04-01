@@ -15,7 +15,7 @@ class PatchAccountingAccountRequest
     /**
      * Chart of accounts
      *
-     * @var Shared\AccountingAccount $accountingAccount
+     * @var \Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingAccount $accountingAccount;
@@ -39,7 +39,7 @@ class PatchAccountingAccountRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAccountingAccountQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAccountingAccountQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchAccountingAccountRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingAccount  $accountingAccount
+     * @param  \Unified\Unified_to\Models\Shared\AccountingAccount  $accountingAccount
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAccountingAccountQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAccountingAccountQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

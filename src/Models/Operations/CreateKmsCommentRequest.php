@@ -14,7 +14,7 @@ class CreateKmsCommentRequest
 {
     /**
      *
-     * @var Shared\KmsComment $kmsComment
+     * @var \Unified\Unified_to\Models\Shared\KmsComment $kmsComment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\KmsComment $kmsComment;
@@ -30,7 +30,7 @@ class CreateKmsCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateKmsCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateKmsCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateKmsCommentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\KmsComment  $kmsComment
+     * @param  \Unified\Unified_to\Models\Shared\KmsComment  $kmsComment
      * @param  string  $connectionId
-     * @param  ?array<CreateKmsCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateKmsCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

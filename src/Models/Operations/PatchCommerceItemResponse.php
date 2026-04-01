@@ -35,7 +35,7 @@ class PatchCommerceItemResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceItem $commerceItem
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceItem $commerceItem
      */
     public ?Shared\CommerceItem $commerceItem = null;
 
@@ -43,7 +43,7 @@ class PatchCommerceItemResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceItem  $commerceItem
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceItem  $commerceItem
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceItem $commerceItem = null)

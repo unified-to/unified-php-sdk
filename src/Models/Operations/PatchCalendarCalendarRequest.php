@@ -14,7 +14,7 @@ class PatchCalendarCalendarRequest
 {
     /**
      *
-     * @var Shared\CalendarCalendar $calendarCalendar
+     * @var \Unified\Unified_to\Models\Shared\CalendarCalendar $calendarCalendar
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarCalendar $calendarCalendar;
@@ -38,7 +38,7 @@ class PatchCalendarCalendarRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCalendarCalendarQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCalendarCalendarQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCalendarCalendarRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarCalendar  $calendarCalendar
+     * @param  \Unified\Unified_to\Models\Shared\CalendarCalendar  $calendarCalendar
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCalendarCalendarQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCalendarCalendarQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

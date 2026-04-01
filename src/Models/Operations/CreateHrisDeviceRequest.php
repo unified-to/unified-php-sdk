@@ -14,7 +14,7 @@ class CreateHrisDeviceRequest
 {
     /**
      *
-     * @var Shared\HrisDevice $hrisDevice
+     * @var \Unified\Unified_to\Models\Shared\HrisDevice $hrisDevice
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisDevice $hrisDevice;
@@ -30,7 +30,7 @@ class CreateHrisDeviceRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisDeviceQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisDeviceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisDeviceRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisDevice  $hrisDevice
+     * @param  \Unified\Unified_to\Models\Shared\HrisDevice  $hrisDevice
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisDeviceQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisDeviceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

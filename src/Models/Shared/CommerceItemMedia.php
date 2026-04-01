@@ -45,7 +45,7 @@ class CommerceItemMedia
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -62,7 +62,7 @@ class CommerceItemMedia
 
     /**
      *
-     * @var ?CommerceItemMediaType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceItemMediaType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemMediaType|null')]
@@ -82,9 +82,9 @@ class CommerceItemMedia
      * @param  ?string  $alt
      * @param  ?float  $height
      * @param  ?string  $id
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?float  $position
-     * @param  ?CommerceItemMediaType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceItemMediaType  $type
      * @param  ?float  $width
      * @phpstan-pure
      */

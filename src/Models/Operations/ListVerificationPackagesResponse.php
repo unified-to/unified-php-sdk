@@ -35,7 +35,7 @@ class ListVerificationPackagesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\VerificationPackage> $verificationPackages
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationPackage> $verificationPackages
      */
     public ?array $verificationPackages = null;
 
@@ -43,7 +43,7 @@ class ListVerificationPackagesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\VerificationPackage>  $verificationPackages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationPackage>  $verificationPackages
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $verificationPackages = null)

@@ -35,7 +35,7 @@ class ListTicketingTicketsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\TicketingTicket> $ticketingTickets
+     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingTicket> $ticketingTickets
      */
     public ?array $ticketingTickets = null;
 
@@ -43,7 +43,7 @@ class ListTicketingTicketsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\TicketingTicket>  $ticketingTickets
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingTicket>  $ticketingTickets
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ticketingTickets = null)

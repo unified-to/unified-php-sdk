@@ -30,7 +30,7 @@ class GetCommerceLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCommerceLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCommerceLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCommerceLocationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCommerceLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCommerceLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

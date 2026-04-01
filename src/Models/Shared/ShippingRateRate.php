@@ -149,7 +149,7 @@ class ShippingRateRate
     /**
      * Additional charges
      *
-     * @var ?array<ShippingRateSurcharge> $surcharges
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingRateSurcharge> $surcharges
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('surcharges')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingRateSurcharge>|null')]
@@ -190,7 +190,7 @@ class ShippingRateRate
      * @param  ?bool  $isTrackable
      * @param  ?string  $packageType
      * @param  ?string  $rateSource
-     * @param  ?array<ShippingRateSurcharge>  $surcharges
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingRateSurcharge>  $surcharges
      * @param  ?float  $taxAmount
      * @param  ?float  $transitHours
      * @phpstan-pure

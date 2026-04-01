@@ -28,7 +28,7 @@ class PropertyAtsActivityFrom
 
     /**
      *
-     * @var ?PropertyAtsActivityFromType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType|null')]
@@ -38,7 +38,7 @@ class PropertyAtsActivityFrom
     /**
      * @param  string  $email
      * @param  ?string  $name
-     * @param  ?PropertyAtsActivityFromType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsActivityFromType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?string $name = null, ?PropertyAtsActivityFromType $type = null)

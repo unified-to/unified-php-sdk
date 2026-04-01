@@ -35,7 +35,7 @@ class GetPaymentRefundResponse
     /**
      * Successful
      *
-     * @var ?Shared\PaymentRefund $paymentRefund
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentRefund $paymentRefund
      */
     public ?Shared\PaymentRefund $paymentRefund = null;
 
@@ -43,7 +43,7 @@ class GetPaymentRefundResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\PaymentRefund  $paymentRefund
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentRefund  $paymentRefund
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\PaymentRefund $paymentRefund = null)

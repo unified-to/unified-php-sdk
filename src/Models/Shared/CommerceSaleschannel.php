@@ -14,7 +14,7 @@ class CommerceSaleschannel
     /**
      * points to a CommerceCollection
      *
-     * @var ?array<CommerceReference> $collections
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReference> $collections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('collections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReference>|null')]
@@ -80,7 +80,7 @@ class CommerceSaleschannel
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?array<CommerceReference>  $collections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReference>  $collections
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id

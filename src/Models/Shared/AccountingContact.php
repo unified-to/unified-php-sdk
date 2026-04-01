@@ -14,7 +14,7 @@ class AccountingContact
     /**
      * $associatedContacts
      *
-     * @var ?array<AccountingAssociatedContact> $associatedContacts
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact> $associatedContacts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('associated_contacts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact>|null')]
@@ -23,7 +23,7 @@ class AccountingContact
 
     /**
      *
-     * @var ?PropertyAccountingContactBillingAddress $billingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress|null')]
@@ -49,7 +49,7 @@ class AccountingContact
     /**
      * $emails
      *
-     * @var ?array<AccountingEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
@@ -131,7 +131,7 @@ class AccountingContact
     /**
      * $paymentMethods
      *
-     * @var ?array<AccountingContactPaymentMethod> $paymentMethods
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod> $paymentMethods
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_methods')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>|null')]
@@ -158,7 +158,7 @@ class AccountingContact
 
     /**
      *
-     * @var ?PropertyAccountingContactShippingAddress $shippingAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress $shippingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('shipping_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress|null')]
@@ -167,7 +167,7 @@ class AccountingContact
 
     /**
      *
-     * @var ?TaxExemption $taxExemption
+     * @var ?\Unified\Unified_to\Models\Shared\TaxExemption $taxExemption
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_exemption')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaxExemption|null')]
@@ -185,7 +185,7 @@ class AccountingContact
     /**
      * $telephones
      *
-     * @var ?array<AccountingTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTelephone>|null')]
@@ -209,12 +209,12 @@ class AccountingContact
     public ?string $currency = null;
 
     /**
-     * @param  ?array<AccountingAssociatedContact>  $associatedContacts
-     * @param  ?PropertyAccountingContactBillingAddress  $billingAddress
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact>  $associatedContacts
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress  $billingAddress
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
-     * @param  ?array<AccountingEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $identification
@@ -224,13 +224,13 @@ class AccountingContact
      * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?string  $organizationId
-     * @param  ?array<AccountingContactPaymentMethod>  $paymentMethods
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>  $paymentMethods
      * @param  ?string  $portalUrl
      * @param  ?array<string, mixed>  $raw
-     * @param  ?PropertyAccountingContactShippingAddress  $shippingAddress
-     * @param  ?TaxExemption  $taxExemption
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactShippingAddress  $shippingAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\TaxExemption  $taxExemption
      * @param  ?string  $taxNumber
-     * @param  ?array<AccountingTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

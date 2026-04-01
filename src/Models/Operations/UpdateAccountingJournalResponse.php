@@ -35,7 +35,7 @@ class UpdateAccountingJournalResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingJournal $accountingJournal
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingJournal $accountingJournal
      */
     public ?Shared\AccountingJournal $accountingJournal = null;
 
@@ -43,7 +43,7 @@ class UpdateAccountingJournalResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingJournal  $accountingJournal
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingJournal  $accountingJournal
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingJournal $accountingJournal = null)

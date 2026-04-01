@@ -14,7 +14,7 @@ class CreateAccountingExpenseRequest
 {
     /**
      *
-     * @var Shared\AccountingExpense $accountingExpense
+     * @var \Unified\Unified_to\Models\Shared\AccountingExpense $accountingExpense
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingExpense $accountingExpense;
@@ -30,7 +30,7 @@ class CreateAccountingExpenseRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingExpenseQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingExpenseQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingExpenseRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingExpense  $accountingExpense
+     * @param  \Unified\Unified_to\Models\Shared\AccountingExpense  $accountingExpense
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingExpenseQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingExpenseQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

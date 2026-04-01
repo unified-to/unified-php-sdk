@@ -78,7 +78,7 @@ class AtsScorecard
     /**
      * $questions
      *
-     * @var ?array<AtsScorecardQuestion> $questions
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion> $questions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('questions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>|null')]
@@ -97,7 +97,7 @@ class AtsScorecard
 
     /**
      *
-     * @var ?Recommendation $recommendation
+     * @var ?\Unified\Unified_to\Models\Shared\Recommendation $recommendation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recommendation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Recommendation|null')]
@@ -121,9 +121,9 @@ class AtsScorecard
      * @param  ?string  $interviewId
      * @param  ?string  $interviewerId
      * @param  ?string  $jobId
-     * @param  ?array<AtsScorecardQuestion>  $questions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
-     * @param  ?Recommendation  $recommendation
+     * @param  ?\Unified\Unified_to\Models\Shared\Recommendation  $recommendation
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

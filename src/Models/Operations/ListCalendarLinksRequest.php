@@ -22,7 +22,7 @@ class ListCalendarLinksRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCalendarLinksQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCalendarLinksQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -81,7 +81,7 @@ class ListCalendarLinksRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListCalendarLinksQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarLinksQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

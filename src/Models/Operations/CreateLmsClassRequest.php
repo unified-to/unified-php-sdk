@@ -14,7 +14,7 @@ class CreateLmsClassRequest
 {
     /**
      *
-     * @var Shared\LmsClass $lmsClass
+     * @var \Unified\Unified_to\Models\Shared\LmsClass $lmsClass
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\LmsClass $lmsClass;
@@ -30,7 +30,7 @@ class CreateLmsClassRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateLmsClassQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateLmsClassQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateLmsClassRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\LmsClass  $lmsClass
+     * @param  \Unified\Unified_to\Models\Shared\LmsClass  $lmsClass
      * @param  string  $connectionId
-     * @param  ?array<CreateLmsClassQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateLmsClassQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

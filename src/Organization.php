@@ -47,8 +47,8 @@ class Organization
     /**
      * Create an organization
      *
-     * @param  Operations\CreateAdsOrganizationRequest  $request
-     * @return Operations\CreateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsOrganization(Operations\CreateAdsOrganizationRequest $request, ?Options $options = null): Operations\CreateAdsOrganizationResponse
@@ -114,8 +114,8 @@ class Organization
     /**
      * Create an organization
      *
-     * @param  Operations\CreateRepoOrganizationRequest  $request
-     * @return Operations\CreateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoOrganization(Operations\CreateRepoOrganizationRequest $request, ?Options $options = null): Operations\CreateRepoOrganizationResponse
@@ -181,8 +181,8 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetAccountingOrganizationRequest  $request
-     * @return Operations\GetAccountingOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingOrganization(Operations\GetAccountingOrganizationRequest $request, ?Options $options = null): Operations\GetAccountingOrganizationResponse
@@ -243,8 +243,8 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetAdsOrganizationRequest  $request
-     * @return Operations\GetAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsOrganization(Operations\GetAdsOrganizationRequest $request, ?Options $options = null): Operations\GetAdsOrganizationResponse
@@ -305,8 +305,8 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetRepoOrganizationRequest  $request
-     * @return Operations\GetRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoOrganization(Operations\GetRepoOrganizationRequest $request, ?Options $options = null): Operations\GetRepoOrganizationResponse
@@ -367,8 +367,8 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  Operations\ListAccountingOrganizationsRequest  $request
-     * @return Operations\ListAccountingOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingOrganizations(Operations\ListAccountingOrganizationsRequest $request, ?Options $options = null): Operations\ListAccountingOrganizationsResponse
@@ -429,8 +429,8 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  Operations\ListAdsOrganizationsRequest  $request
-     * @return Operations\ListAdsOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsOrganizations(Operations\ListAdsOrganizationsRequest $request, ?Options $options = null): Operations\ListAdsOrganizationsResponse
@@ -491,8 +491,8 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  Operations\ListRepoOrganizationsRequest  $request
-     * @return Operations\ListRepoOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoOrganizations(Operations\ListRepoOrganizationsRequest $request, ?Options $options = null): Operations\ListRepoOrganizationsResponse
@@ -553,8 +553,8 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  Operations\PatchAdsOrganizationRequest  $request
-     * @return Operations\PatchAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsOrganization(Operations\PatchAdsOrganizationRequest $request, ?Options $options = null): Operations\PatchAdsOrganizationResponse
@@ -620,8 +620,8 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  Operations\PatchRepoOrganizationRequest  $request
-     * @return Operations\PatchRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoOrganization(Operations\PatchRepoOrganizationRequest $request, ?Options $options = null): Operations\PatchRepoOrganizationResponse
@@ -687,8 +687,8 @@ class Organization
     /**
      * Remove an organization
      *
-     * @param  Operations\RemoveAdsOrganizationRequest  $request
-     * @return Operations\RemoveAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsOrganization(Operations\RemoveAdsOrganizationRequest $request, ?Options $options = null): Operations\RemoveAdsOrganizationResponse
@@ -743,8 +743,8 @@ class Organization
     /**
      * Remove an organization
      *
-     * @param  Operations\RemoveRepoOrganizationRequest  $request
-     * @return Operations\RemoveRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoOrganization(Operations\RemoveRepoOrganizationRequest $request, ?Options $options = null): Operations\RemoveRepoOrganizationResponse
@@ -799,8 +799,8 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  Operations\UpdateAdsOrganizationRequest  $request
-     * @return Operations\UpdateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsOrganization(Operations\UpdateAdsOrganizationRequest $request, ?Options $options = null): Operations\UpdateAdsOrganizationResponse
@@ -866,8 +866,8 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  Operations\UpdateRepoOrganizationRequest  $request
-     * @return Operations\UpdateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoOrganization(Operations\UpdateRepoOrganizationRequest $request, ?Options $options = null): Operations\UpdateRepoOrganizationResponse

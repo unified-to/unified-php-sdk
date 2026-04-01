@@ -30,7 +30,7 @@ class PropertyAdsReportMetricsCampaignTargetingOptimization
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingOptimizationMode $mode
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimizationMode $mode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mode')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimizationMode|null')]
@@ -48,7 +48,7 @@ class PropertyAdsReportMetricsCampaignTargetingOptimization
     /**
      * @param  ?bool  $advantageAudience
      * @param  ?bool  $advantagePlacements
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingOptimizationMode  $mode
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimizationMode  $mode
      * @param  ?bool  $targetingOptimizationExpansionAll
      * @phpstan-pure
      */

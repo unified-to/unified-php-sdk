@@ -37,7 +37,7 @@ class PropertyAdsInsertionorderFrequencyCap
 
     /**
      *
-     * @var ?PropertyAdsInsertionorderFrequencyCapTimeUnit $timeUnit
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCapTimeUnit $timeUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('time_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCapTimeUnit|null')]
@@ -56,7 +56,7 @@ class PropertyAdsInsertionorderFrequencyCap
      * @param  ?bool  $isUnlimited
      * @param  ?float  $maxImpressions
      * @param  ?float  $maxViews
-     * @param  ?PropertyAdsInsertionorderFrequencyCapTimeUnit  $timeUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCapTimeUnit  $timeUnit
      * @param  ?float  $timeUnitCount
      * @phpstan-pure
      */

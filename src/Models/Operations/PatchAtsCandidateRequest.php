@@ -14,7 +14,7 @@ class PatchAtsCandidateRequest
 {
     /**
      *
-     * @var Shared\AtsCandidate $atsCandidate
+     * @var \Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsCandidate $atsCandidate;
@@ -38,7 +38,7 @@ class PatchAtsCandidateRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAtsCandidateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAtsCandidateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAtsCandidateRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsCandidate  $atsCandidate
+     * @param  \Unified\Unified_to\Models\Shared\AtsCandidate  $atsCandidate
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAtsCandidateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAtsCandidateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

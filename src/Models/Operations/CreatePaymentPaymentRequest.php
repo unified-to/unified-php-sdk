@@ -14,7 +14,7 @@ class CreatePaymentPaymentRequest
 {
     /**
      *
-     * @var Shared\PaymentPayment $paymentPayment
+     * @var \Unified\Unified_to\Models\Shared\PaymentPayment $paymentPayment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\PaymentPayment $paymentPayment;
@@ -30,7 +30,7 @@ class CreatePaymentPaymentRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreatePaymentPaymentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreatePaymentPaymentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreatePaymentPaymentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\PaymentPayment  $paymentPayment
+     * @param  \Unified\Unified_to\Models\Shared\PaymentPayment  $paymentPayment
      * @param  string  $connectionId
-     * @param  ?array<CreatePaymentPaymentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreatePaymentPaymentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -45,7 +45,7 @@ class ShippingTrackingEvent
 
     /**
      *
-     * @var ?PropertyShippingTrackingEventLocationAddress $locationAddress
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyShippingTrackingEventLocationAddress $locationAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('location_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyShippingTrackingEventLocationAddress|null')]
@@ -86,7 +86,7 @@ class ShippingTrackingEvent
 
     /**
      *
-     * @var ?ShippingTrackingEventStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingTrackingEventStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingTrackingEventStatus|null')]
@@ -98,12 +98,12 @@ class ShippingTrackingEvent
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $eventCode
-     * @param  ?PropertyShippingTrackingEventLocationAddress  $locationAddress
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingTrackingEventLocationAddress  $locationAddress
      * @param  ?string  $locationId
      * @param  ?string  $locationName
      * @param  ?string  $notes
      * @param  ?string  $signedBy
-     * @param  ?ShippingTrackingEventStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingTrackingEventStatus  $status
      * @phpstan-pure
      */
     public function __construct(?string $carrierStatusCode = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $eventCode = null, ?PropertyShippingTrackingEventLocationAddress $locationAddress = null, ?string $locationId = null, ?string $locationName = null, ?string $notes = null, ?string $signedBy = null, ?ShippingTrackingEventStatus $status = null)

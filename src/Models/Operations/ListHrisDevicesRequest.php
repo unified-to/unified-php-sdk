@@ -22,7 +22,7 @@ class ListHrisDevicesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisDevicesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisDevicesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListHrisDevicesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListHrisDevicesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisDevicesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

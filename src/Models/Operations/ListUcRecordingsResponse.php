@@ -35,7 +35,7 @@ class ListUcRecordingsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\UcRecording> $ucRecordings
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcRecording> $ucRecordings
      */
     public ?array $ucRecordings = null;
 
@@ -43,7 +43,7 @@ class ListUcRecordingsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\UcRecording>  $ucRecordings
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcRecording>  $ucRecordings
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $ucRecordings = null)

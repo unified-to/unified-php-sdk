@@ -13,7 +13,7 @@ class KmsPageMetadata
 {
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<KmsPageMetadata1|string|float|bool>|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|float|bool>|null')]
@@ -22,7 +22,7 @@ class KmsPageMetadata
 
     /**
      *
-     * @var ?KmsPageMetadataFormat $format
+     * @var ?\Unified\Unified_to\Models\Shared\KmsPageMetadataFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsPageMetadataFormat|null')]
@@ -55,7 +55,7 @@ class KmsPageMetadata
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<KmsPageMetadataSchemas1|string|float|bool>|null $value
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|float|bool>|null')]
@@ -63,12 +63,12 @@ class KmsPageMetadata
     public array|string|float|bool|null $value = null;
 
     /**
-     * @param  array<string, mixed>|string|float|bool|array<KmsPageMetadata1|string|float|bool>|null  $extraData
-     * @param  ?KmsPageMetadataFormat  $format
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadata1|string|float|bool>|null  $extraData
+     * @param  ?\Unified\Unified_to\Models\Shared\KmsPageMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $namespace
      * @param  ?string  $slug
-     * @param  array<string, mixed>|string|float|bool|array<KmsPageMetadataSchemas1|string|float|bool>|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\KmsPageMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
     public function __construct(array|string|float|bool|null $extraData = null, ?KmsPageMetadataFormat $format = null, ?string $id = null, ?string $namespace = null, ?string $slug = null, array|string|float|bool|null $value = null)

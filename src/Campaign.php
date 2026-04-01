@@ -47,8 +47,8 @@ class Campaign
     /**
      * Create a campaign
      *
-     * @param  Operations\CreateAdsCampaignRequest  $request
-     * @return Operations\CreateAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsCampaign(Operations\CreateAdsCampaignRequest $request, ?Options $options = null): Operations\CreateAdsCampaignResponse
@@ -114,8 +114,8 @@ class Campaign
     /**
      * Create a campaign
      *
-     * @param  Operations\CreateMartechCampaignRequest  $request
-     * @return Operations\CreateMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechCampaign(Operations\CreateMartechCampaignRequest $request, ?Options $options = null): Operations\CreateMartechCampaignResponse
@@ -181,8 +181,8 @@ class Campaign
     /**
      * Retrieve a campaign
      *
-     * @param  Operations\GetAdsCampaignRequest  $request
-     * @return Operations\GetAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsCampaign(Operations\GetAdsCampaignRequest $request, ?Options $options = null): Operations\GetAdsCampaignResponse
@@ -243,8 +243,8 @@ class Campaign
     /**
      * Retrieve a campaign
      *
-     * @param  Operations\GetMartechCampaignRequest  $request
-     * @return Operations\GetMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechCampaign(Operations\GetMartechCampaignRequest $request, ?Options $options = null): Operations\GetMartechCampaignResponse
@@ -305,8 +305,8 @@ class Campaign
     /**
      * List all campaigns
      *
-     * @param  Operations\ListAdsCampaignsRequest  $request
-     * @return Operations\ListAdsCampaignsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsCampaignsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsCampaigns(Operations\ListAdsCampaignsRequest $request, ?Options $options = null): Operations\ListAdsCampaignsResponse
@@ -367,8 +367,8 @@ class Campaign
     /**
      * List all campaigns
      *
-     * @param  Operations\ListMartechCampaignsRequest  $request
-     * @return Operations\ListMartechCampaignsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechCampaignsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechCampaigns(Operations\ListMartechCampaignsRequest $request, ?Options $options = null): Operations\ListMartechCampaignsResponse
@@ -429,8 +429,8 @@ class Campaign
     /**
      * Update a campaign
      *
-     * @param  Operations\PatchAdsCampaignRequest  $request
-     * @return Operations\PatchAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsCampaign(Operations\PatchAdsCampaignRequest $request, ?Options $options = null): Operations\PatchAdsCampaignResponse
@@ -496,8 +496,8 @@ class Campaign
     /**
      * Update a campaign
      *
-     * @param  Operations\PatchMartechCampaignRequest  $request
-     * @return Operations\PatchMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechCampaign(Operations\PatchMartechCampaignRequest $request, ?Options $options = null): Operations\PatchMartechCampaignResponse
@@ -563,8 +563,8 @@ class Campaign
     /**
      * Remove a campaign
      *
-     * @param  Operations\RemoveAdsCampaignRequest  $request
-     * @return Operations\RemoveAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsCampaign(Operations\RemoveAdsCampaignRequest $request, ?Options $options = null): Operations\RemoveAdsCampaignResponse
@@ -619,8 +619,8 @@ class Campaign
     /**
      * Remove a campaign
      *
-     * @param  Operations\RemoveMartechCampaignRequest  $request
-     * @return Operations\RemoveMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechCampaign(Operations\RemoveMartechCampaignRequest $request, ?Options $options = null): Operations\RemoveMartechCampaignResponse
@@ -675,8 +675,8 @@ class Campaign
     /**
      * Update a campaign
      *
-     * @param  Operations\UpdateAdsCampaignRequest  $request
-     * @return Operations\UpdateAdsCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsCampaign(Operations\UpdateAdsCampaignRequest $request, ?Options $options = null): Operations\UpdateAdsCampaignResponse
@@ -742,8 +742,8 @@ class Campaign
     /**
      * Update a campaign
      *
-     * @param  Operations\UpdateMartechCampaignRequest  $request
-     * @return Operations\UpdateMartechCampaignResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechCampaignRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechCampaign(Operations\UpdateMartechCampaignRequest $request, ?Options $options = null): Operations\UpdateMartechCampaignResponse

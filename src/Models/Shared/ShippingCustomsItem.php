@@ -77,7 +77,7 @@ class ShippingCustomsItem
 
     /**
      *
-     * @var ?ShippingCustomsItemWeightUnit $weightUnit
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingCustomsItemWeightUnit $weightUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingCustomsItemWeightUnit|null')]
@@ -93,7 +93,7 @@ class ShippingCustomsItem
      * @param  ?float  $quantity
      * @param  ?string  $sku
      * @param  ?float  $weight
-     * @param  ?ShippingCustomsItemWeightUnit  $weightUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingCustomsItemWeightUnit  $weightUnit
      * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?string $countryOfOrigin = null, ?string $currency = null, ?string $description = null, ?string $harmonizedTariffCode = null, ?float $quantity = null, ?string $sku = null, ?float $weight = null, ?ShippingCustomsItemWeightUnit $weightUnit = null)

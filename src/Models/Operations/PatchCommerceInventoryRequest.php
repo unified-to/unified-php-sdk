@@ -14,7 +14,7 @@ class PatchCommerceInventoryRequest
 {
     /**
      *
-     * @var Shared\CommerceInventory $commerceInventory
+     * @var \Unified\Unified_to\Models\Shared\CommerceInventory $commerceInventory
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceInventory $commerceInventory;
@@ -38,7 +38,7 @@ class PatchCommerceInventoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCommerceInventoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCommerceInventoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCommerceInventoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceInventory  $commerceInventory
+     * @param  \Unified\Unified_to\Models\Shared\CommerceInventory  $commerceInventory
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCommerceInventoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCommerceInventoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

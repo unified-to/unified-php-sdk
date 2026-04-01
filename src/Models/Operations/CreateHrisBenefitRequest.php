@@ -15,7 +15,7 @@ class CreateHrisBenefitRequest
     /**
      * Company-wide benefit plans available to employees.
      *
-     * @var Shared\HrisBenefit $hrisBenefit
+     * @var \Unified\Unified_to\Models\Shared\HrisBenefit $hrisBenefit
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisBenefit $hrisBenefit;
@@ -31,7 +31,7 @@ class CreateHrisBenefitRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisBenefitQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisBenefitQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateHrisBenefitRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisBenefit  $hrisBenefit
+     * @param  \Unified\Unified_to\Models\Shared\HrisBenefit  $hrisBenefit
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisBenefitQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisBenefitQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

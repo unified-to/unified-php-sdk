@@ -14,7 +14,7 @@ class UpdateHrisTimeshiftRequest
 {
     /**
      *
-     * @var Shared\HrisTimeshift $hrisTimeshift
+     * @var \Unified\Unified_to\Models\Shared\HrisTimeshift $hrisTimeshift
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisTimeshift $hrisTimeshift;
@@ -38,7 +38,7 @@ class UpdateHrisTimeshiftRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateHrisTimeshiftQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateHrisTimeshiftRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisTimeshift  $hrisTimeshift
+     * @param  \Unified\Unified_to\Models\Shared\HrisTimeshift  $hrisTimeshift
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateHrisTimeshiftQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

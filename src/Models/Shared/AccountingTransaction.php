@@ -22,7 +22,7 @@ class AccountingTransaction
     /**
      * $contacts
      *
-     * @var ?array<AccountingTransactionContact> $contacts
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact> $contacts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contacts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact>|null')]
@@ -64,7 +64,7 @@ class AccountingTransaction
     /**
      * $lineitems
      *
-     * @var ?array<AccountingTransactionLineItem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>|null')]
@@ -163,12 +163,12 @@ class AccountingTransaction
 
     /**
      * @param  ?string  $accountId
-     * @param  ?array<AccountingTransactionContact>  $contacts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $customerMessage
      * @param  ?string  $id
-     * @param  ?array<AccountingTransactionLineItem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>  $lineitems
      * @param  ?string  $memo
      * @param  ?string  $paymentMethod
      * @param  ?string  $paymentTerms

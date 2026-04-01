@@ -47,8 +47,8 @@ class Commit
     /**
      * Create a commit
      *
-     * @param  Operations\CreateRepoCommitRequest  $request
-     * @return Operations\CreateRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoCommit(Operations\CreateRepoCommitRequest $request, ?Options $options = null): Operations\CreateRepoCommitResponse
@@ -114,8 +114,8 @@ class Commit
     /**
      * Retrieve a commit
      *
-     * @param  Operations\GetRepoCommitRequest  $request
-     * @return Operations\GetRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoCommit(Operations\GetRepoCommitRequest $request, ?Options $options = null): Operations\GetRepoCommitResponse
@@ -176,8 +176,8 @@ class Commit
     /**
      * List all commits
      *
-     * @param  Operations\ListRepoCommitsRequest  $request
-     * @return Operations\ListRepoCommitsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoCommits(Operations\ListRepoCommitsRequest $request, ?Options $options = null): Operations\ListRepoCommitsResponse
@@ -238,8 +238,8 @@ class Commit
     /**
      * Update a commit
      *
-     * @param  Operations\PatchRepoCommitRequest  $request
-     * @return Operations\PatchRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoCommit(Operations\PatchRepoCommitRequest $request, ?Options $options = null): Operations\PatchRepoCommitResponse
@@ -305,8 +305,8 @@ class Commit
     /**
      * Remove a commit
      *
-     * @param  Operations\RemoveRepoCommitRequest  $request
-     * @return Operations\RemoveRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoCommit(Operations\RemoveRepoCommitRequest $request, ?Options $options = null): Operations\RemoveRepoCommitResponse
@@ -361,8 +361,8 @@ class Commit
     /**
      * Update a commit
      *
-     * @param  Operations\UpdateRepoCommitRequest  $request
-     * @return Operations\UpdateRepoCommitResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoCommit(Operations\UpdateRepoCommitRequest $request, ?Options $options = null): Operations\UpdateRepoCommitResponse

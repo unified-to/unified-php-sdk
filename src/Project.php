@@ -47,8 +47,8 @@ class Project
     /**
      * Create a project
      *
-     * @param  Operations\CreateTaskProjectRequest  $request
-     * @return Operations\CreateTaskProjectResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTaskProject(Operations\CreateTaskProjectRequest $request, ?Options $options = null): Operations\CreateTaskProjectResponse
@@ -114,8 +114,8 @@ class Project
     /**
      * Retrieve a project
      *
-     * @param  Operations\GetTaskProjectRequest  $request
-     * @return Operations\GetTaskProjectResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTaskProject(Operations\GetTaskProjectRequest $request, ?Options $options = null): Operations\GetTaskProjectResponse
@@ -176,8 +176,8 @@ class Project
     /**
      * List all projects
      *
-     * @param  Operations\ListTaskProjectsRequest  $request
-     * @return Operations\ListTaskProjectsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTaskProjects(Operations\ListTaskProjectsRequest $request, ?Options $options = null): Operations\ListTaskProjectsResponse
@@ -238,8 +238,8 @@ class Project
     /**
      * Update a project
      *
-     * @param  Operations\PatchTaskProjectRequest  $request
-     * @return Operations\PatchTaskProjectResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTaskProject(Operations\PatchTaskProjectRequest $request, ?Options $options = null): Operations\PatchTaskProjectResponse
@@ -305,8 +305,8 @@ class Project
     /**
      * Remove a project
      *
-     * @param  Operations\RemoveTaskProjectRequest  $request
-     * @return Operations\RemoveTaskProjectResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTaskProject(Operations\RemoveTaskProjectRequest $request, ?Options $options = null): Operations\RemoveTaskProjectResponse
@@ -361,8 +361,8 @@ class Project
     /**
      * Update a project
      *
-     * @param  Operations\UpdateTaskProjectRequest  $request
-     * @return Operations\UpdateTaskProjectResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTaskProject(Operations\UpdateTaskProjectRequest $request, ?Options $options = null): Operations\UpdateTaskProjectResponse

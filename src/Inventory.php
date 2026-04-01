@@ -47,8 +47,8 @@ class Inventory
     /**
      * Create an inventory
      *
-     * @param  Operations\CreateCommerceInventoryRequest  $request
-     * @return Operations\CreateCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceInventory(Operations\CreateCommerceInventoryRequest $request, ?Options $options = null): Operations\CreateCommerceInventoryResponse
@@ -114,8 +114,8 @@ class Inventory
     /**
      * Retrieve an inventory
      *
-     * @param  Operations\GetCommerceInventoryRequest  $request
-     * @return Operations\GetCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceInventory(Operations\GetCommerceInventoryRequest $request, ?Options $options = null): Operations\GetCommerceInventoryResponse
@@ -176,8 +176,8 @@ class Inventory
     /**
      * List all inventories
      *
-     * @param  Operations\ListCommerceInventoriesRequest  $request
-     * @return Operations\ListCommerceInventoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceInventories(Operations\ListCommerceInventoriesRequest $request, ?Options $options = null): Operations\ListCommerceInventoriesResponse
@@ -238,8 +238,8 @@ class Inventory
     /**
      * Update an inventory
      *
-     * @param  Operations\PatchCommerceInventoryRequest  $request
-     * @return Operations\PatchCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceInventory(Operations\PatchCommerceInventoryRequest $request, ?Options $options = null): Operations\PatchCommerceInventoryResponse
@@ -305,8 +305,8 @@ class Inventory
     /**
      * Remove an inventory
      *
-     * @param  Operations\RemoveCommerceInventoryRequest  $request
-     * @return Operations\RemoveCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceInventory(Operations\RemoveCommerceInventoryRequest $request, ?Options $options = null): Operations\RemoveCommerceInventoryResponse
@@ -361,8 +361,8 @@ class Inventory
     /**
      * Update an inventory
      *
-     * @param  Operations\UpdateCommerceInventoryRequest  $request
-     * @return Operations\UpdateCommerceInventoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceInventory(Operations\UpdateCommerceInventoryRequest $request, ?Options $options = null): Operations\UpdateCommerceInventoryResponse

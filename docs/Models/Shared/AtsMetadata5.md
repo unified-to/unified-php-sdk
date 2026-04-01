@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Shared\AtsMetadata1
+* @var \Unified\Unified_to\Models\Shared\AtsMetadata1
 */
 Shared\AtsMetadata1 $value = /* values here */
 ```

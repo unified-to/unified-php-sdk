@@ -35,7 +35,7 @@ class ListPaymentRefundsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\PaymentRefund> $paymentRefunds
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentRefund> $paymentRefunds
      */
     public ?array $paymentRefunds = null;
 
@@ -43,7 +43,7 @@ class ListPaymentRefundsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\PaymentRefund>  $paymentRefunds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentRefund>  $paymentRefunds
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $paymentRefunds = null)

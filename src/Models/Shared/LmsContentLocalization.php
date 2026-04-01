@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class LmsContentShapeLocalization
+class LmsContentLocalization
 {
     /**
      *
@@ -36,27 +36,15 @@ class LmsContentShapeLocalization
     public ?string $name = null;
 
     /**
-     * $tags
-     *
-     * @var ?array<string> $tags
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $tags = null;
-
-    /**
      * @param  ?string  $description
      * @param  ?string  $language
      * @param  ?string  $name
-     * @param  ?array<string>  $tags
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, ?string $language = null, ?string $name = null, ?array $tags = null)
+    public function __construct(?string $description = null, ?string $language = null, ?string $name = null)
     {
         $this->description = $description;
         $this->language = $language;
         $this->name = $name;
-        $this->tags = $tags;
     }
 }

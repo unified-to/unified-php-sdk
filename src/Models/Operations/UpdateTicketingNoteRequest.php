@@ -14,7 +14,7 @@ class UpdateTicketingNoteRequest
 {
     /**
      *
-     * @var Shared\TicketingNote $ticketingNote
+     * @var \Unified\Unified_to\Models\Shared\TicketingNote $ticketingNote
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TicketingNote $ticketingNote;
@@ -38,7 +38,7 @@ class UpdateTicketingNoteRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateTicketingNoteQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateTicketingNoteQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateTicketingNoteRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TicketingNote  $ticketingNote
+     * @param  \Unified\Unified_to\Models\Shared\TicketingNote  $ticketingNote
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateTicketingNoteQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateTicketingNoteQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

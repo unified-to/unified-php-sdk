@@ -30,7 +30,7 @@ class GetHrisTimeshiftRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisTimeshiftQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisTimeshiftQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisTimeshiftRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisTimeshiftQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisTimeshiftQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -14,7 +14,7 @@ class UpdateAccountingContactRequest
 {
     /**
      *
-     * @var Shared\AccountingContact $accountingContact
+     * @var \Unified\Unified_to\Models\Shared\AccountingContact $accountingContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingContact $accountingContact;
@@ -38,7 +38,7 @@ class UpdateAccountingContactRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingContactQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAccountingContactRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingContact  $accountingContact
+     * @param  \Unified\Unified_to\Models\Shared\AccountingContact  $accountingContact
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingContactQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

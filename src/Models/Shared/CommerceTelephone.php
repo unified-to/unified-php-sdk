@@ -20,7 +20,7 @@ class CommerceTelephone
 
     /**
      *
-     * @var ?CommerceTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceTelephoneType|null')]
@@ -29,7 +29,7 @@ class CommerceTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?CommerceTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?CommerceTelephoneType $type = null)

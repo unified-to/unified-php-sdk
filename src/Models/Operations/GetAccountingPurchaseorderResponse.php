@@ -35,7 +35,7 @@ class GetAccountingPurchaseorderResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingPurchaseorder $accountingPurchaseorder
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingPurchaseorder $accountingPurchaseorder
      */
     public ?Shared\AccountingPurchaseorder $accountingPurchaseorder = null;
 
@@ -43,7 +43,7 @@ class GetAccountingPurchaseorderResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingPurchaseorder  $accountingPurchaseorder
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingPurchaseorder  $accountingPurchaseorder
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingPurchaseorder $accountingPurchaseorder = null)

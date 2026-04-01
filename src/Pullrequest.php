@@ -47,8 +47,8 @@ class Pullrequest
     /**
      * Create a pullrequest
      *
-     * @param  Operations\CreateRepoPullrequestRequest  $request
-     * @return Operations\CreateRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createRepoPullrequest(Operations\CreateRepoPullrequestRequest $request, ?Options $options = null): Operations\CreateRepoPullrequestResponse
@@ -114,8 +114,8 @@ class Pullrequest
     /**
      * Retrieve a pullrequest
      *
-     * @param  Operations\GetRepoPullrequestRequest  $request
-     * @return Operations\GetRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getRepoPullrequest(Operations\GetRepoPullrequestRequest $request, ?Options $options = null): Operations\GetRepoPullrequestResponse
@@ -176,8 +176,8 @@ class Pullrequest
     /**
      * List all pullrequests
      *
-     * @param  Operations\ListRepoPullrequestsRequest  $request
-     * @return Operations\ListRepoPullrequestsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequestsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listRepoPullrequests(Operations\ListRepoPullrequestsRequest $request, ?Options $options = null): Operations\ListRepoPullrequestsResponse
@@ -238,8 +238,8 @@ class Pullrequest
     /**
      * Update a pullrequest
      *
-     * @param  Operations\PatchRepoPullrequestRequest  $request
-     * @return Operations\PatchRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchRepoPullrequest(Operations\PatchRepoPullrequestRequest $request, ?Options $options = null): Operations\PatchRepoPullrequestResponse
@@ -305,8 +305,8 @@ class Pullrequest
     /**
      * Remove a pullrequest
      *
-     * @param  Operations\RemoveRepoPullrequestRequest  $request
-     * @return Operations\RemoveRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeRepoPullrequest(Operations\RemoveRepoPullrequestRequest $request, ?Options $options = null): Operations\RemoveRepoPullrequestResponse
@@ -361,8 +361,8 @@ class Pullrequest
     /**
      * Update a pullrequest
      *
-     * @param  Operations\UpdateRepoPullrequestRequest  $request
-     * @return Operations\UpdateRepoPullrequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateRepoPullrequest(Operations\UpdateRepoPullrequestRequest $request, ?Options $options = null): Operations\UpdateRepoPullrequestResponse

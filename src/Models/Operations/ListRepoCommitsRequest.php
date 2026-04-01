@@ -30,7 +30,7 @@ class ListRepoCommitsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListRepoCommitsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListRepoCommitsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListRepoCommitsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $branchId
-     * @param  ?array<ListRepoCommitsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListRepoCommitsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -30,7 +30,7 @@ class ListCalendarWebinarsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCalendarWebinarsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCalendarWebinarsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -106,7 +106,7 @@ class ListCalendarWebinarsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLt
-     * @param  ?array<ListCalendarWebinarsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarWebinarsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

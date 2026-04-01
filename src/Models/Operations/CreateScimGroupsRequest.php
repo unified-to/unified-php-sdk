@@ -14,7 +14,7 @@ class CreateScimGroupsRequest
 {
     /**
      *
-     * @var Shared\ScimGroup $scimGroup
+     * @var \Unified\Unified_to\Models\Shared\ScimGroup $scimGroup
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ScimGroup $scimGroup;
@@ -28,7 +28,7 @@ class CreateScimGroupsRequest
     public string $connectionId;
 
     /**
-     * @param  Shared\ScimGroup  $scimGroup
+     * @param  \Unified\Unified_to\Models\Shared\ScimGroup  $scimGroup
      * @param  string  $connectionId
      * @phpstan-pure
      */

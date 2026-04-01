@@ -52,7 +52,7 @@ class LmsMedia
 
     /**
      *
-     * @var ?LmsMediaType $type
+     * @var ?\Unified\Unified_to\Models\Shared\LmsMediaType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LmsMediaType|null')]
@@ -65,7 +65,7 @@ class LmsMedia
      * @param  ?string  $description
      * @param  ?string  $name
      * @param  ?string  $thumbnailUrl
-     * @param  ?LmsMediaType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\LmsMediaType  $type
      * @phpstan-pure
      */
     public function __construct(string $url, ?string $content = null, ?string $description = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null)

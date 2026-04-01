@@ -35,7 +35,7 @@ class ListHrisTimeshiftsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisTimeshift> $hrisTimeshifts
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisTimeshift> $hrisTimeshifts
      */
     public ?array $hrisTimeshifts = null;
 
@@ -43,7 +43,7 @@ class ListHrisTimeshiftsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisTimeshift>  $hrisTimeshifts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTimeshift>  $hrisTimeshifts
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisTimeshifts = null)

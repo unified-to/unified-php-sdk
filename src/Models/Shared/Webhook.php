@@ -21,7 +21,7 @@ class Webhook
 
     /**
      *
-     * @var Event $event
+     * @var \Unified\Unified_to\Models\Shared\Event $event
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Event')]
@@ -29,7 +29,7 @@ class Webhook
 
     /**
      *
-     * @var ObjectType $objectType
+     * @var \Unified\Unified_to\Models\Shared\ObjectType $objectType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
@@ -69,7 +69,7 @@ class Webhook
 
     /**
      *
-     * @var ?DbType $dbType
+     * @var ?\Unified\Unified_to\Models\Shared\DbType $dbType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('db_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DbType|null')]
@@ -178,7 +178,7 @@ class Webhook
 
     /**
      *
-     * @var ?WebhookType $webhookType
+     * @var ?\Unified\Unified_to\Models\Shared\WebhookType $webhookType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookType|null')]
@@ -203,13 +203,13 @@ class Webhook
 
     /**
      * @param  string  $connectionId
-     * @param  Event  $event
-     * @param  ObjectType  $objectType
+     * @param  \Unified\Unified_to\Models\Shared\Event  $event
+     * @param  \Unified\Unified_to\Models\Shared\ObjectType  $objectType
      * @param  ?\DateTime  $checkedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $dbNamePrefix
      * @param  ?string  $dbSchema
-     * @param  ?DbType  $dbType
+     * @param  ?\Unified\Unified_to\Models\Shared\DbType  $dbType
      * @param  ?string  $dbUrl
      * @param  ?string  $environment
      * @param  ?string  $fields
@@ -223,7 +223,7 @@ class Webhook
      * @param  ?float  $pageMaxLimit
      * @param  ?array<string>  $runs
      * @param  ?\DateTime  $updatedAt
-     * @param  ?WebhookType  $webhookType
+     * @param  ?\Unified\Unified_to\Models\Shared\WebhookType  $webhookType
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */

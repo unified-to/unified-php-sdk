@@ -47,8 +47,8 @@ class Rate
     /**
      * Create a rate
      *
-     * @param  Operations\CreateShippingRateRequest  $request
-     * @return Operations\CreateShippingRateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingRateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingRateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createShippingRate(Operations\CreateShippingRateRequest $request, ?Options $options = null): Operations\CreateShippingRateResponse

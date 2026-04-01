@@ -35,7 +35,7 @@ class ListCalendarRecordingsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CalendarRecording> $calendarRecordings
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarRecording> $calendarRecordings
      */
     public ?array $calendarRecordings = null;
 
@@ -43,7 +43,7 @@ class ListCalendarRecordingsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CalendarRecording>  $calendarRecordings
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarRecording>  $calendarRecordings
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $calendarRecordings = null)

@@ -14,7 +14,7 @@ class CreateAccountingTaxrateRequest
 {
     /**
      *
-     * @var Shared\AccountingTaxrate $accountingTaxrate
+     * @var \Unified\Unified_to\Models\Shared\AccountingTaxrate $accountingTaxrate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingTaxrate $accountingTaxrate;
@@ -30,7 +30,7 @@ class CreateAccountingTaxrateRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingTaxrateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingTaxrateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingTaxrateRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingTaxrate  $accountingTaxrate
+     * @param  \Unified\Unified_to\Models\Shared\AccountingTaxrate  $accountingTaxrate
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingTaxrateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingTaxrateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

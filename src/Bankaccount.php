@@ -47,8 +47,8 @@ class Bankaccount
     /**
      * Create a bankaccount
      *
-     * @param  Operations\CreateHrisBankaccountRequest  $request
-     * @return Operations\CreateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisBankaccount(Operations\CreateHrisBankaccountRequest $request, ?Options $options = null): Operations\CreateHrisBankaccountResponse
@@ -114,8 +114,8 @@ class Bankaccount
     /**
      * Retrieve a bankaccount
      *
-     * @param  Operations\GetHrisBankaccountRequest  $request
-     * @return Operations\GetHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisBankaccount(Operations\GetHrisBankaccountRequest $request, ?Options $options = null): Operations\GetHrisBankaccountResponse
@@ -176,8 +176,8 @@ class Bankaccount
     /**
      * List all bankaccounts
      *
-     * @param  Operations\ListHrisBankaccountsRequest  $request
-     * @return Operations\ListHrisBankaccountsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccountsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisBankaccounts(Operations\ListHrisBankaccountsRequest $request, ?Options $options = null): Operations\ListHrisBankaccountsResponse
@@ -238,8 +238,8 @@ class Bankaccount
     /**
      * Update a bankaccount
      *
-     * @param  Operations\PatchHrisBankaccountRequest  $request
-     * @return Operations\PatchHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisBankaccount(Operations\PatchHrisBankaccountRequest $request, ?Options $options = null): Operations\PatchHrisBankaccountResponse
@@ -305,8 +305,8 @@ class Bankaccount
     /**
      * Remove a bankaccount
      *
-     * @param  Operations\RemoveHrisBankaccountRequest  $request
-     * @return Operations\RemoveHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisBankaccount(Operations\RemoveHrisBankaccountRequest $request, ?Options $options = null): Operations\RemoveHrisBankaccountResponse
@@ -361,8 +361,8 @@ class Bankaccount
     /**
      * Update a bankaccount
      *
-     * @param  Operations\UpdateHrisBankaccountRequest  $request
-     * @return Operations\UpdateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisBankaccount(Operations\UpdateHrisBankaccountRequest $request, ?Options $options = null): Operations\UpdateHrisBankaccountResponse

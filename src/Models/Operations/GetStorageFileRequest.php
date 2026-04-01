@@ -30,7 +30,7 @@ class GetStorageFileRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetStorageFileQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetStorageFileQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetStorageFileRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetStorageFileQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetStorageFileQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

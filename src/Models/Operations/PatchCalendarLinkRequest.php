@@ -14,7 +14,7 @@ class PatchCalendarLinkRequest
 {
     /**
      *
-     * @var Shared\CalendarLink $calendarLink
+     * @var \Unified\Unified_to\Models\Shared\CalendarLink $calendarLink
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarLink $calendarLink;
@@ -38,7 +38,7 @@ class PatchCalendarLinkRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCalendarLinkQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCalendarLinkQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCalendarLinkRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarLink  $calendarLink
+     * @param  \Unified\Unified_to\Models\Shared\CalendarLink  $calendarLink
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCalendarLinkQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCalendarLinkQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -13,7 +13,7 @@ class AccountingOrganization
 {
     /**
      *
-     * @var ?PropertyAccountingOrganizationAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationAddress|null')]
@@ -127,7 +127,7 @@ class AccountingOrganization
     public ?string $website = null;
 
     /**
-     * @param  ?PropertyAccountingOrganizationAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?float  $fiscalYearEndMonth

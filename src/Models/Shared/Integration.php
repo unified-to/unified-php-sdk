@@ -15,7 +15,7 @@ class Integration
     /**
      * The categories of support solutions that this integration has
      *
-     * @var array<PropertyIntegrationCategories> $categories
+     * @var array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories> $categories
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>')]
@@ -45,7 +45,7 @@ class Integration
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<Integration1|string|float|bool>|null $api
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\Integration1|string|float|bool>|null $api
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('api')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\Integration1|string|float|bool>|null')]
@@ -142,7 +142,7 @@ class Integration
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<IntegrationSchemas1|string|float|bool>|null $partnership
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemas1|string|float|bool>|null $partnership
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('partnership')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemas1|string|float|bool>|null')]
@@ -167,7 +167,7 @@ class Integration
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<IntegrationSchemasSaml1|string|float|bool>|null $saml
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSaml1|string|float|bool>|null $saml
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('saml')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSaml1|string|float|bool>|null')]
@@ -176,7 +176,7 @@ class Integration
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<IntegrationSchemasSandbox1|string|float|bool>|null $sandbox
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1|string|float|bool>|null $sandbox
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sandbox')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1|string|float|bool>|null')]
@@ -186,7 +186,7 @@ class Integration
     /**
      * $support
      *
-     * @var ?array<string, IntegrationSupport> $support
+     * @var ?array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport> $support
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('support')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>|null')]
@@ -246,11 +246,11 @@ class Integration
     public ?string $webUrl = null;
 
     /**
-     * @param  array<PropertyIntegrationCategories>  $categories
+     * @param  array<\Unified\Unified_to\Models\Shared\PropertyIntegrationCategories>  $categories
      * @param  string  $name
      * @param  string  $type
      * @param  ?float  $activeHealthyConnections
-     * @param  array<string, mixed>|string|float|bool|array<Integration1|string|float|bool>|null  $api
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\Integration1|string|float|bool>|null  $api
      * @param  ?string  $apiDocsUrl
      * @param  ?bool  $beta
      * @param  ?string  $color
@@ -262,12 +262,12 @@ class Integration
      * @param  ?bool  $isActive
      * @param  ?bool  $isHidden
      * @param  ?string  $logoUrl
-     * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemas1|string|float|bool>|null  $partnership
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemas1|string|float|bool>|null  $partnership
      * @param  ?float  $popularity
      * @param  ?string  $rateLimitDescription
-     * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemasSaml1|string|float|bool>|null  $saml
-     * @param  array<string, mixed>|string|float|bool|array<IntegrationSchemasSandbox1|string|float|bool>|null  $sandbox
-     * @param  ?array<string, IntegrationSupport>  $support
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSaml1|string|float|bool>|null  $saml
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1|string|float|bool>|null  $sandbox
+     * @param  ?array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>  $support
      * @param  ?\DateTime  $testedAt
      * @param  ?string  $textColor
      * @param  ?array<string>  $tokenInstructions

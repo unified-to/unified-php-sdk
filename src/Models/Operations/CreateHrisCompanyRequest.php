@@ -14,7 +14,7 @@ class CreateHrisCompanyRequest
 {
     /**
      *
-     * @var Shared\HrisCompany $hrisCompany
+     * @var \Unified\Unified_to\Models\Shared\HrisCompany $hrisCompany
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisCompany $hrisCompany;
@@ -30,7 +30,7 @@ class CreateHrisCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisCompanyRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisCompany  $hrisCompany
+     * @param  \Unified\Unified_to\Models\Shared\HrisCompany  $hrisCompany
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

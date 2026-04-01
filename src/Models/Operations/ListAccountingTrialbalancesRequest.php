@@ -30,7 +30,7 @@ class ListAccountingTrialbalancesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingTrialbalancesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListAccountingTrialbalancesRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLt
-     * @param  ?array<ListAccountingTrialbalancesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

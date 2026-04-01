@@ -35,7 +35,7 @@ class UpdateStorageFileResponse
     /**
      * Successful
      *
-     * @var ?Shared\StorageFile $storageFile
+     * @var ?\Unified\Unified_to\Models\Shared\StorageFile $storageFile
      */
     public ?Shared\StorageFile $storageFile = null;
 
@@ -43,7 +43,7 @@ class UpdateStorageFileResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\StorageFile  $storageFile
+     * @param  ?\Unified\Unified_to\Models\Shared\StorageFile  $storageFile
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\StorageFile $storageFile = null)

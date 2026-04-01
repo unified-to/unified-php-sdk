@@ -103,7 +103,7 @@ class TicketingTicket
 
     /**
      *
-     * @var ?TicketingTicketStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingTicketStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TicketingTicketStatus|null')]
@@ -164,7 +164,7 @@ class TicketingTicket
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
      * @param  ?string  $sourceRef
-     * @param  ?TicketingTicketStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingTicketStatus  $status
      * @param  ?string  $subject
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt

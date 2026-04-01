@@ -35,7 +35,7 @@ class MetadataMetadata
 
     /**
      *
-     * @var ?MetadataMetadataFormat $format
+     * @var ?\Unified\Unified_to\Models\Shared\MetadataMetadataFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MetadataMetadataFormat|null')]
@@ -116,7 +116,7 @@ class MetadataMetadata
      * @param  string  $name
      * @param  string  $objectType
      * @param  ?\DateTime  $createdAt
-     * @param  ?MetadataMetadataFormat  $format
+     * @param  ?\Unified\Unified_to\Models\Shared\MetadataMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?bool  $isRequired
      * @param  ?array<string, mixed>  $objects

@@ -15,7 +15,7 @@ class UpdateMartechMemberRequest
     /**
      * A member represents a person
      *
-     * @var Shared\MarketingMember $marketingMember
+     * @var \Unified\Unified_to\Models\Shared\MarketingMember $marketingMember
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\MarketingMember $marketingMember;
@@ -39,7 +39,7 @@ class UpdateMartechMemberRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateMartechMemberQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateMartechMemberQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class UpdateMartechMemberRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\MarketingMember  $marketingMember
+     * @param  \Unified\Unified_to\Models\Shared\MarketingMember  $marketingMember
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateMartechMemberQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateMartechMemberQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

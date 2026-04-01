@@ -13,7 +13,7 @@ class AtsCandidate
 {
     /**
      *
-     * @var ?PropertyAtsCandidateAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress|null')]
@@ -55,7 +55,7 @@ class AtsCandidate
     /**
      * $education
      *
-     * @var ?array<AtsCandidateEducation> $education
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCandidateEducation> $education
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('education')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCandidateEducation>|null')]
@@ -65,7 +65,7 @@ class AtsCandidate
     /**
      * $emails
      *
-     * @var ?array<AtsEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsEmail>|null')]
@@ -75,7 +75,7 @@ class AtsCandidate
     /**
      * $experiences
      *
-     * @var ?array<AtsCandidateExperience> $experiences
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsCandidateExperience> $experiences
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('experiences')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsCandidateExperience>|null')]
@@ -135,7 +135,7 @@ class AtsCandidate
     /**
      * $metadata
      *
-     * @var ?array<AtsMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
@@ -152,7 +152,7 @@ class AtsCandidate
 
     /**
      *
-     * @var ?Origin $origin
+     * @var ?\Unified\Unified_to\Models\Shared\Origin $origin
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('origin')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Origin|null')]
@@ -202,7 +202,7 @@ class AtsCandidate
     /**
      * $telephones
      *
-     * @var ?array<AtsTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsTelephone>|null')]
@@ -242,28 +242,28 @@ class AtsCandidate
     public ?string $webUrl = null;
 
     /**
-     * @param  ?PropertyAtsCandidateAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsCandidateAddress  $address
      * @param  ?string  $companyId
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $dateOfBirth
-     * @param  ?array<AtsCandidateEducation>  $education
-     * @param  ?array<AtsEmail>  $emails
-     * @param  ?array<AtsCandidateExperience>  $experiences
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCandidateEducation>  $education
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCandidateExperience>  $experiences
      * @param  ?string  $externalIdentifier
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
-     * @param  ?array<AtsMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?Origin  $origin
+     * @param  ?\Unified\Unified_to\Models\Shared\Origin  $origin
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $skills
      * @param  ?array<string>  $sources
      * @param  ?array<string>  $tags
-     * @param  ?array<AtsTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId

@@ -35,7 +35,7 @@ class PatchCrmLeadResponse
     /**
      * Successful
      *
-     * @var ?Shared\CrmLead $crmLead
+     * @var ?\Unified\Unified_to\Models\Shared\CrmLead $crmLead
      */
     public ?Shared\CrmLead $crmLead = null;
 
@@ -43,7 +43,7 @@ class PatchCrmLeadResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CrmLead  $crmLead
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmLead  $crmLead
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CrmLead $crmLead = null)

@@ -38,7 +38,7 @@ class ListAtsScorecardsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAtsScorecardsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsScorecardsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListAtsScorecardsRequest
      * @param  string  $connectionId
      * @param  ?string  $applicationId
      * @param  ?string  $candidateId
-     * @param  ?array<ListAtsScorecardsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsScorecardsQueryParamFields>  $fields
      * @param  ?string  $interviewId
      * @param  ?string  $jobId
      * @param  ?float  $limit

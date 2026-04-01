@@ -20,7 +20,7 @@ class HrisTelephone
 
     /**
      *
-     * @var ?HrisTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTelephoneType|null')]
@@ -29,7 +29,7 @@ class HrisTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?HrisTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?HrisTelephoneType $type = null)

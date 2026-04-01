@@ -47,8 +47,8 @@ class Passthrough
     /**
      * Passthrough POST
      *
-     * @param  Operations\CreatePassthroughJsonRequest  $request
-     * @return Operations\CreatePassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePassthroughJsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPassthroughJson(Operations\CreatePassthroughJsonRequest $request, ?Options $options = null): Operations\CreatePassthroughJsonResponse
@@ -172,8 +172,8 @@ class Passthrough
     /**
      * Passthrough POST
      *
-     * @param  Operations\CreatePassthroughRawRequest  $request
-     * @return Operations\CreatePassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePassthroughRawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPassthroughRaw(Operations\CreatePassthroughRawRequest $request, ?Options $options = null): Operations\CreatePassthroughRawResponse
@@ -297,8 +297,8 @@ class Passthrough
     /**
      * Passthrough GET
      *
-     * @param  Operations\ListPassthroughsRequest  $request
-     * @return Operations\ListPassthroughsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPassthroughsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPassthroughs(Operations\ListPassthroughsRequest $request, ?Options $options = null): Operations\ListPassthroughsResponse
@@ -418,8 +418,8 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\PatchPassthroughJsonRequest  $request
-     * @return Operations\PatchPassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPassthroughJsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPassthroughJson(Operations\PatchPassthroughJsonRequest $request, ?Options $options = null): Operations\PatchPassthroughJsonResponse
@@ -543,8 +543,8 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\PatchPassthroughRawRequest  $request
-     * @return Operations\PatchPassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPassthroughRawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPassthroughRaw(Operations\PatchPassthroughRawRequest $request, ?Options $options = null): Operations\PatchPassthroughRawResponse
@@ -668,8 +668,8 @@ class Passthrough
     /**
      * Passthrough DELETE
      *
-     * @param  Operations\RemovePassthroughRequest  $request
-     * @return Operations\RemovePassthroughResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePassthroughRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePassthrough(Operations\RemovePassthroughRequest $request, ?Options $options = null): Operations\RemovePassthroughResponse
@@ -789,8 +789,8 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\UpdatePassthroughJsonRequest  $request
-     * @return Operations\UpdatePassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthroughJsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughJsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePassthroughJson(Operations\UpdatePassthroughJsonRequest $request, ?Options $options = null): Operations\UpdatePassthroughJsonResponse
@@ -914,8 +914,8 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  Operations\UpdatePassthroughRawRequest  $request
-     * @return Operations\UpdatePassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthroughRawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughRawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePassthroughRaw(Operations\UpdatePassthroughRawRequest $request, ?Options $options = null): Operations\UpdatePassthroughRawResponse

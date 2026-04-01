@@ -48,8 +48,8 @@ class Auth
      *
      * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
      *
-     * @param  Operations\GetUnifiedIntegrationAuthRequest  $request
-     * @return Operations\GetUnifiedIntegrationAuthResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationAuth(Operations\GetUnifiedIntegrationAuthRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationAuthResponse
@@ -109,8 +109,8 @@ class Auth
      *
      * Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
      *
-     * @param  Operations\GetUnifiedIntegrationLoginRequest  $request
-     * @return Operations\GetUnifiedIntegrationLoginResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationLoginResponse

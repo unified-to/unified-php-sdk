@@ -14,7 +14,7 @@ class PatchAdsOrganizationRequest
 {
     /**
      *
-     * @var Shared\AdsOrganization $adsOrganization
+     * @var \Unified\Unified_to\Models\Shared\AdsOrganization $adsOrganization
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsOrganization $adsOrganization;
@@ -38,7 +38,7 @@ class PatchAdsOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAdsOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAdsOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAdsOrganizationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsOrganization  $adsOrganization
+     * @param  \Unified\Unified_to\Models\Shared\AdsOrganization  $adsOrganization
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAdsOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAdsOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

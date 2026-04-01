@@ -47,8 +47,8 @@ class Application
     /**
      * Create an application
      *
-     * @param  Operations\CreateAtsApplicationRequest  $request
-     * @return Operations\CreateAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsApplication(Operations\CreateAtsApplicationRequest $request, ?Options $options = null): Operations\CreateAtsApplicationResponse
@@ -114,8 +114,8 @@ class Application
     /**
      * Retrieve an application
      *
-     * @param  Operations\GetAtsApplicationRequest  $request
-     * @return Operations\GetAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsApplication(Operations\GetAtsApplicationRequest $request, ?Options $options = null): Operations\GetAtsApplicationResponse
@@ -176,8 +176,8 @@ class Application
     /**
      * List all applications
      *
-     * @param  Operations\ListAtsApplicationsRequest  $request
-     * @return Operations\ListAtsApplicationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsApplications(Operations\ListAtsApplicationsRequest $request, ?Options $options = null): Operations\ListAtsApplicationsResponse
@@ -238,8 +238,8 @@ class Application
     /**
      * Update an application
      *
-     * @param  Operations\PatchAtsApplicationRequest  $request
-     * @return Operations\PatchAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsApplication(Operations\PatchAtsApplicationRequest $request, ?Options $options = null): Operations\PatchAtsApplicationResponse
@@ -305,8 +305,8 @@ class Application
     /**
      * Remove an application
      *
-     * @param  Operations\RemoveAtsApplicationRequest  $request
-     * @return Operations\RemoveAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsApplication(Operations\RemoveAtsApplicationRequest $request, ?Options $options = null): Operations\RemoveAtsApplicationResponse
@@ -361,8 +361,8 @@ class Application
     /**
      * Update an application
      *
-     * @param  Operations\UpdateAtsApplicationRequest  $request
-     * @return Operations\UpdateAtsApplicationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsApplication(Operations\UpdateAtsApplicationRequest $request, ?Options $options = null): Operations\UpdateAtsApplicationResponse

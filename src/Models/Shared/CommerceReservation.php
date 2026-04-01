@@ -135,7 +135,7 @@ class CommerceReservation
 
     /**
      *
-     * @var ?CommerceReservationStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceReservationStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceReservationStatus|null')]
@@ -174,7 +174,7 @@ class CommerceReservation
      * @param  ?string  $staffName
      * @param  ?string  $staffUserId
      * @param  ?\DateTime  $startAt
-     * @param  ?CommerceReservationStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceReservationStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      * @phpstan-pure

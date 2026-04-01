@@ -31,7 +31,7 @@ class AccountingProfitlossCategory
     /**
      * $subItems
      *
-     * @var ?array<AccountingProfitlossSubcategory> $subItems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSubcategory> $subItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSubcategory>|null')]
@@ -41,7 +41,7 @@ class AccountingProfitlossCategory
     /**
      * @param  ?float  $amount
      * @param  ?string  $name
-     * @param  ?array<AccountingProfitlossSubcategory>  $subItems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSubcategory>  $subItems
      * @phpstan-pure
      */
     public function __construct(?float $amount = null, ?string $name = null, ?array $subItems = null)

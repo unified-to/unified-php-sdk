@@ -13,7 +13,7 @@ class Issue
 {
     /**
      *
-     * @var IssueStatus $status
+     * @var \Unified\Unified_to\Models\Shared\IssueStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\IssueStatus')]
@@ -107,7 +107,7 @@ class Issue
     public ?string $url = null;
 
     /**
-     * @param  IssueStatus  $status
+     * @param  \Unified\Unified_to\Models\Shared\IssueStatus  $status
      * @param  string  $ticketRef
      * @param  string  $title
      * @param  string  $workspaceId

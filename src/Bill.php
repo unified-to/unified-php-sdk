@@ -47,8 +47,8 @@ class Bill
     /**
      * Create a bill
      *
-     * @param  Operations\CreateAccountingBillRequest  $request
-     * @return Operations\CreateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingBill(Operations\CreateAccountingBillRequest $request, ?Options $options = null): Operations\CreateAccountingBillResponse
@@ -114,8 +114,8 @@ class Bill
     /**
      * Retrieve a bill
      *
-     * @param  Operations\GetAccountingBillRequest  $request
-     * @return Operations\GetAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingBill(Operations\GetAccountingBillRequest $request, ?Options $options = null): Operations\GetAccountingBillResponse
@@ -176,8 +176,8 @@ class Bill
     /**
      * List all bills
      *
-     * @param  Operations\ListAccountingBillsRequest  $request
-     * @return Operations\ListAccountingBillsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBillsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBillsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingBills(Operations\ListAccountingBillsRequest $request, ?Options $options = null): Operations\ListAccountingBillsResponse
@@ -238,8 +238,8 @@ class Bill
     /**
      * Update a bill
      *
-     * @param  Operations\PatchAccountingBillRequest  $request
-     * @return Operations\PatchAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingBill(Operations\PatchAccountingBillRequest $request, ?Options $options = null): Operations\PatchAccountingBillResponse
@@ -305,8 +305,8 @@ class Bill
     /**
      * Remove a bill
      *
-     * @param  Operations\RemoveAccountingBillRequest  $request
-     * @return Operations\RemoveAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingBill(Operations\RemoveAccountingBillRequest $request, ?Options $options = null): Operations\RemoveAccountingBillResponse
@@ -361,8 +361,8 @@ class Bill
     /**
      * Update a bill
      *
-     * @param  Operations\UpdateAccountingBillRequest  $request
-     * @return Operations\UpdateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingBill(Operations\UpdateAccountingBillRequest $request, ?Options $options = null): Operations\UpdateAccountingBillResponse

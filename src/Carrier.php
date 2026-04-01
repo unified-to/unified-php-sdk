@@ -47,8 +47,8 @@ class Carrier
     /**
      * Retrieve a carrier
      *
-     * @param  Operations\GetShippingCarrierRequest  $request
-     * @return Operations\GetShippingCarrierResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrierRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingCarrierResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getShippingCarrier(Operations\GetShippingCarrierRequest $request, ?Options $options = null): Operations\GetShippingCarrierResponse
@@ -109,8 +109,8 @@ class Carrier
     /**
      * List all carriers
      *
-     * @param  Operations\ListShippingCarriersRequest  $request
-     * @return Operations\ListShippingCarriersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingCarriersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listShippingCarriers(Operations\ListShippingCarriersRequest $request, ?Options $options = null): Operations\ListShippingCarriersResponse

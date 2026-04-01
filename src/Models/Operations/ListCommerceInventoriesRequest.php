@@ -22,7 +22,7 @@ class ListCommerceInventoriesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCommerceInventoriesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCommerceInventoriesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -97,7 +97,7 @@ class ListCommerceInventoriesRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListCommerceInventoriesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceInventoriesQueryParamFields>  $fields
      * @param  ?string  $itemVariantId
      * @param  ?float  $limit
      * @param  ?string  $locationId

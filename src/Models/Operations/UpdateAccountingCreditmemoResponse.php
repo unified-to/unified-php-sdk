@@ -35,7 +35,7 @@ class UpdateAccountingCreditmemoResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingCreditmemo $accountingCreditmemo
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCreditmemo $accountingCreditmemo
      */
     public ?Shared\AccountingCreditmemo $accountingCreditmemo = null;
 
@@ -43,7 +43,7 @@ class UpdateAccountingCreditmemoResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingCreditmemo  $accountingCreditmemo
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCreditmemo  $accountingCreditmemo
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingCreditmemo $accountingCreditmemo = null)

@@ -15,7 +15,7 @@ class Connection
     /**
      * The Integration categories that this connection supports
      *
-     * @var array<PropertyConnectionCategories> $categories
+     * @var array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories> $categories
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('categories')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>')]
@@ -31,7 +31,7 @@ class Connection
     /**
      * $permissions
      *
-     * @var array<PropertyConnectionPermissions> $permissions
+     * @var array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions> $permissions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('permissions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>')]
@@ -40,7 +40,7 @@ class Connection
     /**
      * An authentication object that represents a specific authorized user's connection to an integration.
      *
-     * @var ?PropertyConnectionAuth $auth
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyConnectionAuth $auth
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('auth')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyConnectionAuth|null')]
@@ -160,10 +160,10 @@ class Connection
     public ?string $environment = null;
 
     /**
-     * @param  array<PropertyConnectionCategories>  $categories
+     * @param  array<\Unified\Unified_to\Models\Shared\PropertyConnectionCategories>  $categories
      * @param  string  $integrationType
-     * @param  array<PropertyConnectionPermissions>  $permissions
-     * @param  ?PropertyConnectionAuth  $auth
+     * @param  array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>  $permissions
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyConnectionAuth  $auth
      * @param  ?string  $authAwsArn
      * @param  ?string  $authAzureKeyvaultId
      * @param  ?string  $authGcpSecretName

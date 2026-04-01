@@ -47,8 +47,8 @@ class Refund
     /**
      * Retrieve a refund
      *
-     * @param  Operations\GetPaymentRefundRequest  $request
-     * @return Operations\GetPaymentRefundResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentRefund(Operations\GetPaymentRefundRequest $request, ?Options $options = null): Operations\GetPaymentRefundResponse
@@ -109,8 +109,8 @@ class Refund
     /**
      * List all refunds
      *
-     * @param  Operations\ListPaymentRefundsRequest  $request
-     * @return Operations\ListPaymentRefundsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentRefunds(Operations\ListPaymentRefundsRequest $request, ?Options $options = null): Operations\ListPaymentRefundsResponse

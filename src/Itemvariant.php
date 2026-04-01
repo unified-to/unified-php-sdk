@@ -47,8 +47,8 @@ class Itemvariant
     /**
      * Create an itemvariant
      *
-     * @param  Operations\CreateCommerceItemvariantRequest  $request
-     * @return Operations\CreateCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceItemvariant(Operations\CreateCommerceItemvariantRequest $request, ?Options $options = null): Operations\CreateCommerceItemvariantResponse
@@ -114,8 +114,8 @@ class Itemvariant
     /**
      * Retrieve an itemvariant
      *
-     * @param  Operations\GetCommerceItemvariantRequest  $request
-     * @return Operations\GetCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceItemvariant(Operations\GetCommerceItemvariantRequest $request, ?Options $options = null): Operations\GetCommerceItemvariantResponse
@@ -176,8 +176,8 @@ class Itemvariant
     /**
      * List all itemvariants
      *
-     * @param  Operations\ListCommerceItemvariantsRequest  $request
-     * @return Operations\ListCommerceItemvariantsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceItemvariants(Operations\ListCommerceItemvariantsRequest $request, ?Options $options = null): Operations\ListCommerceItemvariantsResponse
@@ -238,8 +238,8 @@ class Itemvariant
     /**
      * Update an itemvariant
      *
-     * @param  Operations\PatchCommerceItemvariantRequest  $request
-     * @return Operations\PatchCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceItemvariant(Operations\PatchCommerceItemvariantRequest $request, ?Options $options = null): Operations\PatchCommerceItemvariantResponse
@@ -305,8 +305,8 @@ class Itemvariant
     /**
      * Remove an itemvariant
      *
-     * @param  Operations\RemoveCommerceItemvariantRequest  $request
-     * @return Operations\RemoveCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceItemvariant(Operations\RemoveCommerceItemvariantRequest $request, ?Options $options = null): Operations\RemoveCommerceItemvariantResponse
@@ -361,8 +361,8 @@ class Itemvariant
     /**
      * Update an itemvariant
      *
-     * @param  Operations\UpdateCommerceItemvariantRequest  $request
-     * @return Operations\UpdateCommerceItemvariantResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceItemvariant(Operations\UpdateCommerceItemvariantRequest $request, ?Options $options = null): Operations\UpdateCommerceItemvariantResponse

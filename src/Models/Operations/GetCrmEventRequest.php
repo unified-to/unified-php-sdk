@@ -30,7 +30,7 @@ class GetCrmEventRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCrmEventQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCrmEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCrmEventRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCrmEventQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCrmEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

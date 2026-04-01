@@ -46,7 +46,7 @@ class VerificationRequest
     /**
      * $parameters
      *
-     * @var ?array<VerificationParameterInput> $parameters
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationParameterInput> $parameters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parameters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationParameterInput>|null')]
@@ -56,7 +56,7 @@ class VerificationRequest
     /**
      * $profileAddresses
      *
-     * @var ?array<VerificationAddress> $profileAddresses
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationAddress> $profileAddresses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profile_addresses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationAddress>|null')]
@@ -83,7 +83,7 @@ class VerificationRequest
 
     /**
      *
-     * @var ?VerificationRequestProfileGender $profileGender
+     * @var ?\Unified\Unified_to\Models\Shared\VerificationRequestProfileGender $profileGender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('profile_gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationRequestProfileGender|null')]
@@ -145,7 +145,7 @@ class VerificationRequest
     /**
      * $responseDetails
      *
-     * @var ?array<VerificationResponseDetail> $responseDetails
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationResponseDetail> $responseDetails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_details')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationResponseDetail>|null')]
@@ -204,7 +204,7 @@ class VerificationRequest
 
     /**
      *
-     * @var ?VerificationRequestResponseStatus $responseStatus
+     * @var ?\Unified\Unified_to\Models\Shared\VerificationRequestResponseStatus $responseStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('response_status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationRequestResponseStatus|null')]
@@ -232,25 +232,25 @@ class VerificationRequest
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?string  $packageId
-     * @param  ?array<VerificationParameterInput>  $parameters
-     * @param  ?array<VerificationAddress>  $profileAddresses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationParameterInput>  $parameters
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationAddress>  $profileAddresses
      * @param  ?string  $profileDateOfBirth
      * @param  ?array<string>  $profileEmails
-     * @param  ?VerificationRequestProfileGender  $profileGender
+     * @param  ?\Unified\Unified_to\Models\Shared\VerificationRequestProfileGender  $profileGender
      * @param  ?string  $profileIpAddress
      * @param  ?string  $profileName
      * @param  ?string  $profileNationalIdentifier
      * @param  ?array<string>  $profileTelephones
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $responseCompletedAt
-     * @param  ?array<VerificationResponseDetail>  $responseDetails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationResponseDetail>  $responseDetails
      * @param  ?array<string>  $responseDownloadUrls
      * @param  ?\DateTime  $responseExpiresAt
      * @param  ?\DateTime  $responseIssuedAt
      * @param  ?string  $responseRedirectUrl
      * @param  ?float  $responseScore
      * @param  ?string  $responseSource
-     * @param  ?VerificationRequestResponseStatus  $responseStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\VerificationRequestResponseStatus  $responseStatus
      * @param  ?string  $targetUrl
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

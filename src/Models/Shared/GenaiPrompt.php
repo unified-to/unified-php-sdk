@@ -48,7 +48,7 @@ class GenaiPrompt
     /**
      * $messages
      *
-     * @var ?array<GenaiContent> $messages
+     * @var ?array<\Unified\Unified_to\Models\Shared\GenaiContent> $messages
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('messages')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiContent>|null')]
@@ -104,7 +104,7 @@ class GenaiPrompt
      * @param  ?string  $mcpAuthorizationToken
      * @param  ?array<string>  $mcpDeferredTools
      * @param  ?string  $mcpUrl
-     * @param  ?array<GenaiContent>  $messages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiContent>  $messages
      * @param  ?string  $modelId
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $responses

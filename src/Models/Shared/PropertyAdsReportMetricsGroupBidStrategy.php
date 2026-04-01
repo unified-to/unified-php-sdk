@@ -14,7 +14,7 @@ class PropertyAdsReportMetricsGroupBidStrategy
 {
     /**
      *
-     * @var PropertyAdsReportMetricsGroupBidStrategyType $type
+     * @var \Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyType')]
@@ -54,7 +54,7 @@ class PropertyAdsReportMetricsGroupBidStrategy
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType $performanceGoalType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType $performanceGoalType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('performance_goal_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType|null')]
@@ -79,7 +79,7 @@ class PropertyAdsReportMetricsGroupBidStrategy
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType $youtubeAndPartnersType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_and_partners_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType|null')]
@@ -95,15 +95,15 @@ class PropertyAdsReportMetricsGroupBidStrategy
     public ?string $youtubeAndPartnersValue = null;
 
     /**
-     * @param  PropertyAdsReportMetricsGroupBidStrategyType  $type
+     * @param  \Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyType  $type
      * @param  ?string  $customBiddingAlgorithmId
      * @param  ?float  $fixedBidAmount
      * @param  ?float  $maxAverageCpmBidAmount
      * @param  ?float  $performanceGoalAmount
-     * @param  ?PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType  $performanceGoalType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType  $performanceGoalType
      * @param  ?bool  $raiseBidForDeals
      * @param  ?float  $targetRoas
-     * @param  ?PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType  $youtubeAndPartnersType
      * @param  ?string  $youtubeAndPartnersValue
      * @phpstan-pure
      */

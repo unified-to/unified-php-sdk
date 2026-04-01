@@ -35,7 +35,7 @@ class PatchRepoPullrequestResponse
     /**
      * Successful
      *
-     * @var ?Shared\RepoPullrequest $repoPullrequest
+     * @var ?\Unified\Unified_to\Models\Shared\RepoPullrequest $repoPullrequest
      */
     public ?Shared\RepoPullrequest $repoPullrequest = null;
 
@@ -43,7 +43,7 @@ class PatchRepoPullrequestResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\RepoPullrequest  $repoPullrequest
+     * @param  ?\Unified\Unified_to\Models\Shared\RepoPullrequest  $repoPullrequest
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\RepoPullrequest $repoPullrequest = null)

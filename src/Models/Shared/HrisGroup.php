@@ -89,7 +89,7 @@ class HrisGroup
 
     /**
      *
-     * @var ?HrisGroupType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisGroupType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupType|null')]
@@ -124,7 +124,7 @@ class HrisGroup
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?HrisGroupType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure

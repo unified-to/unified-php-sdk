@@ -35,7 +35,7 @@ class ListFormsSubmissionsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\FormsSubmission> $formsSubmissions
+     * @var ?array<\Unified\Unified_to\Models\Shared\FormsSubmission> $formsSubmissions
      */
     public ?array $formsSubmissions = null;
 
@@ -43,7 +43,7 @@ class ListFormsSubmissionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\FormsSubmission>  $formsSubmissions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\FormsSubmission>  $formsSubmissions
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $formsSubmissions = null)

@@ -24,5 +24,6 @@ enum GetAccountingSalesorderQueryParamFields: string
     case Status = 'status';
     case Lineitems = 'lineitems';
     case SalesChannel = 'sales_channel';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

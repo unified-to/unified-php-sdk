@@ -47,8 +47,8 @@ class Document
     /**
      * Create a document
      *
-     * @param  Operations\CreateAtsDocumentRequest  $request
-     * @return Operations\CreateAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsDocument(Operations\CreateAtsDocumentRequest $request, ?Options $options = null): Operations\CreateAtsDocumentResponse
@@ -114,8 +114,8 @@ class Document
     /**
      * Retrieve a document
      *
-     * @param  Operations\GetAtsDocumentRequest  $request
-     * @return Operations\GetAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsDocument(Operations\GetAtsDocumentRequest $request, ?Options $options = null): Operations\GetAtsDocumentResponse
@@ -176,8 +176,8 @@ class Document
     /**
      * List all documents
      *
-     * @param  Operations\ListAtsDocumentsRequest  $request
-     * @return Operations\ListAtsDocumentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsDocuments(Operations\ListAtsDocumentsRequest $request, ?Options $options = null): Operations\ListAtsDocumentsResponse
@@ -238,8 +238,8 @@ class Document
     /**
      * Update a document
      *
-     * @param  Operations\PatchAtsDocumentRequest  $request
-     * @return Operations\PatchAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsDocument(Operations\PatchAtsDocumentRequest $request, ?Options $options = null): Operations\PatchAtsDocumentResponse
@@ -305,8 +305,8 @@ class Document
     /**
      * Remove a document
      *
-     * @param  Operations\RemoveAtsDocumentRequest  $request
-     * @return Operations\RemoveAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsDocument(Operations\RemoveAtsDocumentRequest $request, ?Options $options = null): Operations\RemoveAtsDocumentResponse
@@ -361,8 +361,8 @@ class Document
     /**
      * Update a document
      *
-     * @param  Operations\UpdateAtsDocumentRequest  $request
-     * @return Operations\UpdateAtsDocumentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsDocument(Operations\UpdateAtsDocumentRequest $request, ?Options $options = null): Operations\UpdateAtsDocumentResponse

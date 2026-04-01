@@ -47,8 +47,8 @@ class Trialbalance
     /**
      * Retrieve a trialbalance
      *
-     * @param  Operations\GetAccountingTrialbalanceRequest  $request
-     * @return Operations\GetAccountingTrialbalanceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTrialbalance(Operations\GetAccountingTrialbalanceRequest $request, ?Options $options = null): Operations\GetAccountingTrialbalanceResponse
@@ -109,8 +109,8 @@ class Trialbalance
     /**
      * List all trialbalances
      *
-     * @param  Operations\ListAccountingTrialbalancesRequest  $request
-     * @return Operations\ListAccountingTrialbalancesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTrialbalances(Operations\ListAccountingTrialbalancesRequest $request, ?Options $options = null): Operations\ListAccountingTrialbalancesResponse

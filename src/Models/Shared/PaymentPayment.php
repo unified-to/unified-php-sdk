@@ -103,7 +103,7 @@ class PaymentPayment
 
     /**
      *
-     * @var ?PaymentPaymentType $type
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentPaymentType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPaymentType|null')]
@@ -139,7 +139,7 @@ class PaymentPayment
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?float  $totalAmount
-     * @param  ?PaymentPaymentType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentPaymentType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

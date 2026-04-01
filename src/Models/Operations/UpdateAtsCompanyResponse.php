@@ -35,7 +35,7 @@ class UpdateAtsCompanyResponse
     /**
      * Successful
      *
-     * @var ?Shared\AtsCompany $atsCompany
+     * @var ?\Unified\Unified_to\Models\Shared\AtsCompany $atsCompany
      */
     public ?Shared\AtsCompany $atsCompany = null;
 
@@ -43,7 +43,7 @@ class UpdateAtsCompanyResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AtsCompany  $atsCompany
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsCompany  $atsCompany
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AtsCompany $atsCompany = null)

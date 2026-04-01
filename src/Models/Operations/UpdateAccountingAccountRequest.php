@@ -15,7 +15,7 @@ class UpdateAccountingAccountRequest
     /**
      * Chart of accounts
      *
-     * @var Shared\AccountingAccount $accountingAccount
+     * @var \Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingAccount $accountingAccount;
@@ -39,7 +39,7 @@ class UpdateAccountingAccountRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingAccountQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingAccountQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class UpdateAccountingAccountRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingAccount  $accountingAccount
+     * @param  \Unified\Unified_to\Models\Shared\AccountingAccount  $accountingAccount
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingAccountQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingAccountQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

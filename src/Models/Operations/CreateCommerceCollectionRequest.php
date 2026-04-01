@@ -15,7 +15,7 @@ class CreateCommerceCollectionRequest
     /**
      * A collection of items/products/services
      *
-     * @var Shared\CommerceCollection $commerceCollection
+     * @var \Unified\Unified_to\Models\Shared\CommerceCollection $commerceCollection
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceCollection $commerceCollection;
@@ -31,7 +31,7 @@ class CreateCommerceCollectionRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCommerceCollectionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCommerceCollectionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateCommerceCollectionRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceCollection  $commerceCollection
+     * @param  \Unified\Unified_to\Models\Shared\CommerceCollection  $commerceCollection
      * @param  string  $connectionId
-     * @param  ?array<CreateCommerceCollectionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCommerceCollectionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -30,7 +30,7 @@ class GetHrisLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisLocationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

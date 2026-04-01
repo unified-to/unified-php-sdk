@@ -47,8 +47,8 @@ class Creditmemo
     /**
      * Create a creditmemo
      *
-     * @param  Operations\CreateAccountingCreditmemoRequest  $request
-     * @return Operations\CreateAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingCreditmemo(Operations\CreateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\CreateAccountingCreditmemoResponse
@@ -114,8 +114,8 @@ class Creditmemo
     /**
      * Retrieve a creditmemo
      *
-     * @param  Operations\GetAccountingCreditmemoRequest  $request
-     * @return Operations\GetAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCreditmemo(Operations\GetAccountingCreditmemoRequest $request, ?Options $options = null): Operations\GetAccountingCreditmemoResponse
@@ -176,8 +176,8 @@ class Creditmemo
     /**
      * List all creditmemoes
      *
-     * @param  Operations\ListAccountingCreditmemoesRequest  $request
-     * @return Operations\ListAccountingCreditmemoesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCreditmemoes(Operations\ListAccountingCreditmemoesRequest $request, ?Options $options = null): Operations\ListAccountingCreditmemoesResponse
@@ -238,8 +238,8 @@ class Creditmemo
     /**
      * Update a creditmemo
      *
-     * @param  Operations\PatchAccountingCreditmemoRequest  $request
-     * @return Operations\PatchAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingCreditmemo(Operations\PatchAccountingCreditmemoRequest $request, ?Options $options = null): Operations\PatchAccountingCreditmemoResponse
@@ -305,8 +305,8 @@ class Creditmemo
     /**
      * Remove a creditmemo
      *
-     * @param  Operations\RemoveAccountingCreditmemoRequest  $request
-     * @return Operations\RemoveAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingCreditmemo(Operations\RemoveAccountingCreditmemoRequest $request, ?Options $options = null): Operations\RemoveAccountingCreditmemoResponse
@@ -361,8 +361,8 @@ class Creditmemo
     /**
      * Update a creditmemo
      *
-     * @param  Operations\UpdateAccountingCreditmemoRequest  $request
-     * @return Operations\UpdateAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingCreditmemo(Operations\UpdateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\UpdateAccountingCreditmemoResponse

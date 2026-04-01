@@ -95,7 +95,7 @@ class AtsInterview
 
     /**
      *
-     * @var ?AtsInterviewStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsInterviewStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsInterviewStatus|null')]
@@ -131,7 +131,7 @@ class AtsInterview
      * @param  ?string  $location
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?AtsInterviewStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsInterviewStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure

@@ -47,8 +47,8 @@ class Location
     /**
      * Create a location
      *
-     * @param  Operations\CreateCommerceLocationRequest  $request
-     * @return Operations\CreateCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceLocation(Operations\CreateCommerceLocationRequest $request, ?Options $options = null): Operations\CreateCommerceLocationResponse
@@ -114,8 +114,8 @@ class Location
     /**
      * Create a location
      *
-     * @param  Operations\CreateHrisLocationRequest  $request
-     * @return Operations\CreateHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisLocation(Operations\CreateHrisLocationRequest $request, ?Options $options = null): Operations\CreateHrisLocationResponse
@@ -181,8 +181,8 @@ class Location
     /**
      * Retrieve a location
      *
-     * @param  Operations\GetCommerceLocationRequest  $request
-     * @return Operations\GetCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceLocation(Operations\GetCommerceLocationRequest $request, ?Options $options = null): Operations\GetCommerceLocationResponse
@@ -243,8 +243,8 @@ class Location
     /**
      * Retrieve a location
      *
-     * @param  Operations\GetHrisLocationRequest  $request
-     * @return Operations\GetHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisLocation(Operations\GetHrisLocationRequest $request, ?Options $options = null): Operations\GetHrisLocationResponse
@@ -305,8 +305,8 @@ class Location
     /**
      * List all locations
      *
-     * @param  Operations\ListCommerceLocationsRequest  $request
-     * @return Operations\ListCommerceLocationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceLocations(Operations\ListCommerceLocationsRequest $request, ?Options $options = null): Operations\ListCommerceLocationsResponse
@@ -367,8 +367,8 @@ class Location
     /**
      * List all locations
      *
-     * @param  Operations\ListHrisLocationsRequest  $request
-     * @return Operations\ListHrisLocationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisLocations(Operations\ListHrisLocationsRequest $request, ?Options $options = null): Operations\ListHrisLocationsResponse
@@ -429,8 +429,8 @@ class Location
     /**
      * Update a location
      *
-     * @param  Operations\PatchCommerceLocationRequest  $request
-     * @return Operations\PatchCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceLocation(Operations\PatchCommerceLocationRequest $request, ?Options $options = null): Operations\PatchCommerceLocationResponse
@@ -496,8 +496,8 @@ class Location
     /**
      * Update a location
      *
-     * @param  Operations\PatchHrisLocationRequest  $request
-     * @return Operations\PatchHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisLocation(Operations\PatchHrisLocationRequest $request, ?Options $options = null): Operations\PatchHrisLocationResponse
@@ -563,8 +563,8 @@ class Location
     /**
      * Remove a location
      *
-     * @param  Operations\RemoveCommerceLocationRequest  $request
-     * @return Operations\RemoveCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceLocation(Operations\RemoveCommerceLocationRequest $request, ?Options $options = null): Operations\RemoveCommerceLocationResponse
@@ -619,8 +619,8 @@ class Location
     /**
      * Remove a location
      *
-     * @param  Operations\RemoveHrisLocationRequest  $request
-     * @return Operations\RemoveHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisLocation(Operations\RemoveHrisLocationRequest $request, ?Options $options = null): Operations\RemoveHrisLocationResponse
@@ -675,8 +675,8 @@ class Location
     /**
      * Update a location
      *
-     * @param  Operations\UpdateCommerceLocationRequest  $request
-     * @return Operations\UpdateCommerceLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceLocation(Operations\UpdateCommerceLocationRequest $request, ?Options $options = null): Operations\UpdateCommerceLocationResponse
@@ -742,8 +742,8 @@ class Location
     /**
      * Update a location
      *
-     * @param  Operations\UpdateHrisLocationRequest  $request
-     * @return Operations\UpdateHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisLocation(Operations\UpdateHrisLocationRequest $request, ?Options $options = null): Operations\UpdateHrisLocationResponse

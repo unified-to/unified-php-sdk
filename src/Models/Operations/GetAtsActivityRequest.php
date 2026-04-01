@@ -30,7 +30,7 @@ class GetAtsActivityRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsActivityQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsActivityQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsActivityRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsActivityQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsActivityQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

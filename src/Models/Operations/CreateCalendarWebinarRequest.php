@@ -14,7 +14,7 @@ class CreateCalendarWebinarRequest
 {
     /**
      *
-     * @var Shared\CalendarWebinar $calendarWebinar
+     * @var \Unified\Unified_to\Models\Shared\CalendarWebinar $calendarWebinar
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarWebinar $calendarWebinar;
@@ -30,7 +30,7 @@ class CreateCalendarWebinarRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCalendarWebinarQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCalendarWebinarQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCalendarWebinarRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarWebinar  $calendarWebinar
+     * @param  \Unified\Unified_to\Models\Shared\CalendarWebinar  $calendarWebinar
      * @param  string  $connectionId
-     * @param  ?array<CreateCalendarWebinarQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCalendarWebinarQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

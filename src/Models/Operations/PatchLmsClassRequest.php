@@ -14,7 +14,7 @@ class PatchLmsClassRequest
 {
     /**
      *
-     * @var Shared\LmsClass $lmsClass
+     * @var \Unified\Unified_to\Models\Shared\LmsClass $lmsClass
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\LmsClass $lmsClass;
@@ -38,7 +38,7 @@ class PatchLmsClassRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchLmsClassQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchLmsClassQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchLmsClassRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\LmsClass  $lmsClass
+     * @param  \Unified\Unified_to\Models\Shared\LmsClass  $lmsClass
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchLmsClassQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchLmsClassQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

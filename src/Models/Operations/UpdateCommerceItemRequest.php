@@ -14,7 +14,7 @@ class UpdateCommerceItemRequest
 {
     /**
      *
-     * @var Shared\CommerceItem $commerceItem
+     * @var \Unified\Unified_to\Models\Shared\CommerceItem $commerceItem
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceItem $commerceItem;
@@ -38,7 +38,7 @@ class UpdateCommerceItemRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCommerceItemQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceItemQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCommerceItemRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceItem  $commerceItem
+     * @param  \Unified\Unified_to\Models\Shared\CommerceItem  $commerceItem
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCommerceItemQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceItemQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

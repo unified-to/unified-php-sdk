@@ -30,7 +30,7 @@ class GetAccountingTransactionRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingTransactionQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingTransactionQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingTransactionRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingTransactionQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingTransactionQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

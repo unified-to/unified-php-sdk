@@ -14,7 +14,7 @@ class PropertyAdsGroupBidStrategy
 {
     /**
      *
-     * @var PropertyAdsGroupBidStrategyType $type
+     * @var \Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategyType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategyType')]
@@ -54,7 +54,7 @@ class PropertyAdsGroupBidStrategy
 
     /**
      *
-     * @var ?PerformanceGoalType $performanceGoalType
+     * @var ?\Unified\Unified_to\Models\Shared\PerformanceGoalType $performanceGoalType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('performance_goal_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PerformanceGoalType|null')]
@@ -79,7 +79,7 @@ class PropertyAdsGroupBidStrategy
 
     /**
      *
-     * @var ?YoutubeAndPartnersType $youtubeAndPartnersType
+     * @var ?\Unified\Unified_to\Models\Shared\YoutubeAndPartnersType $youtubeAndPartnersType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('youtube_and_partners_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\YoutubeAndPartnersType|null')]
@@ -95,15 +95,15 @@ class PropertyAdsGroupBidStrategy
     public ?string $youtubeAndPartnersValue = null;
 
     /**
-     * @param  PropertyAdsGroupBidStrategyType  $type
+     * @param  \Unified\Unified_to\Models\Shared\PropertyAdsGroupBidStrategyType  $type
      * @param  ?string  $customBiddingAlgorithmId
      * @param  ?float  $fixedBidAmount
      * @param  ?float  $maxAverageCpmBidAmount
      * @param  ?float  $performanceGoalAmount
-     * @param  ?PerformanceGoalType  $performanceGoalType
+     * @param  ?\Unified\Unified_to\Models\Shared\PerformanceGoalType  $performanceGoalType
      * @param  ?bool  $raiseBidForDeals
      * @param  ?float  $targetRoas
-     * @param  ?YoutubeAndPartnersType  $youtubeAndPartnersType
+     * @param  ?\Unified\Unified_to\Models\Shared\YoutubeAndPartnersType  $youtubeAndPartnersType
      * @param  ?string  $youtubeAndPartnersValue
      * @phpstan-pure
      */

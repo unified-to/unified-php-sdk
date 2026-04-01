@@ -22,7 +22,7 @@ class ScimUser
     /**
      * $addresses
      *
-     * @var ?array<ScimAddress> $addresses
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimAddress> $addresses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('addresses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimAddress>|null')]
@@ -40,7 +40,7 @@ class ScimUser
     /**
      * $emails
      *
-     * @var ?array<ScimEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimEmail>|null')]
@@ -50,7 +50,7 @@ class ScimUser
     /**
      * $entitlements
      *
-     * @var ?array<ScimEntitlement> $entitlements
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimEntitlement> $entitlements
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('entitlements')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimEntitlement>|null')]
@@ -68,7 +68,7 @@ class ScimUser
     /**
      * $groups
      *
-     * @var ?array<ScimUserGroups> $groups
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimUserGroups> $groups
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('groups')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimUserGroups>|null')]
@@ -86,7 +86,7 @@ class ScimUser
     /**
      * $ims
      *
-     * @var ?array<ScimIms> $ims
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimIms> $ims
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ims')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimIms>|null')]
@@ -103,7 +103,7 @@ class ScimUser
 
     /**
      *
-     * @var ?PropertyScimUserMeta $meta
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserMeta $meta
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meta')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserMeta|null')]
@@ -112,7 +112,7 @@ class ScimUser
 
     /**
      *
-     * @var ?PropertyScimUserName $name
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserName $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserName|null')]
@@ -138,7 +138,7 @@ class ScimUser
     /**
      * $phoneNumbers
      *
-     * @var ?array<ScimPhoneNumber> $phoneNumbers
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimPhoneNumber> $phoneNumbers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('phoneNumbers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimPhoneNumber>|null')]
@@ -148,7 +148,7 @@ class ScimUser
     /**
      * $photos
      *
-     * @var ?array<ScimPhoto> $photos
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimPhoto> $photos
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('photos')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimPhoto>|null')]
@@ -174,7 +174,7 @@ class ScimUser
     /**
      * Student, Faculty, ...
      *
-     * @var ?array<ScimRole> $roles
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimRole> $roles
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('roles')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimRole>|null')]
@@ -184,7 +184,7 @@ class ScimUser
     /**
      * $schemas
      *
-     * @var ?array<PropertyScimUserSchemas> $schemas
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyScimUserSchemas> $schemas
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('schemas')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyScimUserSchemas>|null')]
@@ -210,7 +210,7 @@ class ScimUser
     /**
      * an organization.
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User|null')]
@@ -219,7 +219,7 @@ class ScimUser
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User|null')]
@@ -228,7 +228,7 @@ class ScimUser
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('urn:ietf:params:scim:schemas:extension:peakon:2.0:User')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User|null')]
@@ -254,7 +254,7 @@ class ScimUser
     /**
      * $x509Certificates
      *
-     * @var ?array<ScimRole> $x509Certificates
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimRole> $x509Certificates
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('x509Certificates')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimRole>|null')]
@@ -263,33 +263,33 @@ class ScimUser
 
     /**
      * @param  ?bool  $active
-     * @param  ?array<ScimAddress>  $addresses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimAddress>  $addresses
      * @param  ?string  $displayName
-     * @param  ?array<ScimEmail>  $emails
-     * @param  ?array<ScimEntitlement>  $entitlements
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimEntitlement>  $entitlements
      * @param  ?string  $externalId
-     * @param  ?array<ScimUserGroups>  $groups
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimUserGroups>  $groups
      * @param  ?string  $id
-     * @param  ?array<ScimIms>  $ims
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimIms>  $ims
      * @param  ?string  $locale
-     * @param  ?PropertyScimUserMeta  $meta
-     * @param  ?PropertyScimUserName  $name
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserMeta  $meta
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserName  $name
      * @param  ?string  $nickName
      * @param  ?string  $password
-     * @param  ?array<ScimPhoneNumber>  $phoneNumbers
-     * @param  ?array<ScimPhoto>  $photos
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimPhoneNumber>  $phoneNumbers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimPhoto>  $photos
      * @param  ?string  $preferredLanguage
      * @param  ?string  $profileUrl
-     * @param  ?array<ScimRole>  $roles
-     * @param  ?array<PropertyScimUserSchemas>  $schemas
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimRole>  $roles
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyScimUserSchemas>  $schemas
      * @param  ?string  $timezone
      * @param  ?string  $title
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User  $urnIetfParamsScimSchemasExtensionEnterprise20User
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User  $urnIetfParamsScimSchemasExtensionLatticeAttributes10User
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User  $urnIetfParamsScimSchemasExtensionPeakon20User
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User  $urnIetfParamsScimSchemasExtensionEnterprise20User
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User  $urnIetfParamsScimSchemasExtensionLatticeAttributes10User
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User  $urnIetfParamsScimSchemasExtensionPeakon20User
      * @param  ?string  $userName
      * @param  ?string  $userType
-     * @param  ?array<ScimRole>  $x509Certificates
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimRole>  $x509Certificates
      * @phpstan-pure
      */
     public function __construct(?bool $active = null, ?array $addresses = null, ?string $displayName = null, ?array $emails = null, ?array $entitlements = null, ?string $externalId = null, ?array $groups = null, ?string $id = null, ?array $ims = null, ?string $locale = null, ?PropertyScimUserMeta $meta = null, ?PropertyScimUserName $name = null, ?string $nickName = null, ?string $password = null, ?array $phoneNumbers = null, ?array $photos = null, ?string $preferredLanguage = null, ?string $profileUrl = null, ?array $roles = null, ?array $schemas = null, ?string $timezone = null, ?string $title = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User $urnIetfParamsScimSchemasExtensionEnterprise20User = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User $urnIetfParamsScimSchemasExtensionLatticeAttributes10User = null, ?PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User $urnIetfParamsScimSchemasExtensionPeakon20User = null, ?string $userName = null, ?string $userType = null, ?array $x509Certificates = null)

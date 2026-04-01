@@ -102,7 +102,7 @@ class TaskTask
     /**
      * $metadata
      *
-     * @var ?array<TaskMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TaskMetadata>|null')]
@@ -161,7 +161,7 @@ class TaskTask
 
     /**
      *
-     * @var ?TaskTaskStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\TaskTaskStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskTaskStatus|null')]
@@ -205,14 +205,14 @@ class TaskTask
      * @param  ?array<string>  $groupIds
      * @param  ?bool  $hasChildren
      * @param  ?string  $id
-     * @param  ?array<TaskMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $notes
      * @param  ?string  $parentId
      * @param  ?string  $priority
      * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?TaskTaskStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\TaskTaskStatus  $status
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url

@@ -14,7 +14,7 @@ class PatchShippingLabelRequest
 {
     /**
      *
-     * @var Shared\ShippingLabel $shippingLabel
+     * @var \Unified\Unified_to\Models\Shared\ShippingLabel $shippingLabel
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ShippingLabel $shippingLabel;
@@ -38,7 +38,7 @@ class PatchShippingLabelRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchShippingLabelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchShippingLabelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchShippingLabelRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\ShippingLabel  $shippingLabel
+     * @param  \Unified\Unified_to\Models\Shared\ShippingLabel  $shippingLabel
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchShippingLabelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchShippingLabelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

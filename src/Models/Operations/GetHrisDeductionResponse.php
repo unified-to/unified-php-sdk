@@ -35,7 +35,7 @@ class GetHrisDeductionResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisDeduction $hrisDeduction
+     * @var ?\Unified\Unified_to\Models\Shared\HrisDeduction $hrisDeduction
      */
     public ?Shared\HrisDeduction $hrisDeduction = null;
 
@@ -43,7 +43,7 @@ class GetHrisDeductionResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisDeduction  $hrisDeduction
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisDeduction  $hrisDeduction
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisDeduction $hrisDeduction = null)

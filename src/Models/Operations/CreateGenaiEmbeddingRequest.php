@@ -14,7 +14,7 @@ class CreateGenaiEmbeddingRequest
 {
     /**
      *
-     * @var Shared\GenaiEmbedding $genaiEmbedding
+     * @var \Unified\Unified_to\Models\Shared\GenaiEmbedding $genaiEmbedding
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\GenaiEmbedding $genaiEmbedding;
@@ -30,7 +30,7 @@ class CreateGenaiEmbeddingRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateGenaiEmbeddingQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateGenaiEmbeddingRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\GenaiEmbedding  $genaiEmbedding
+     * @param  \Unified\Unified_to\Models\Shared\GenaiEmbedding  $genaiEmbedding
      * @param  string  $connectionId
-     * @param  ?array<CreateGenaiEmbeddingQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

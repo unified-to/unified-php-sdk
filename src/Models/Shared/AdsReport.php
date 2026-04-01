@@ -46,7 +46,7 @@ class AdsReport
     /**
      * $metrics
      *
-     * @var ?array<AdsReportMetrics> $metrics
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsReportMetrics> $metrics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metrics')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsReportMetrics>|null')]
@@ -92,7 +92,7 @@ class AdsReport
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
-     * @param  ?array<AdsReportMetrics>  $metrics
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsReportMetrics>  $metrics
      * @param  ?string  $organizationId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt

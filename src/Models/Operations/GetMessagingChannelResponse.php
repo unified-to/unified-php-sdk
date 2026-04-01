@@ -35,7 +35,7 @@ class GetMessagingChannelResponse
     /**
      * Successful
      *
-     * @var ?Shared\MessagingChannel $messagingChannel
+     * @var ?\Unified\Unified_to\Models\Shared\MessagingChannel $messagingChannel
      */
     public ?Shared\MessagingChannel $messagingChannel = null;
 
@@ -43,7 +43,7 @@ class GetMessagingChannelResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\MessagingChannel  $messagingChannel
+     * @param  ?\Unified\Unified_to\Models\Shared\MessagingChannel  $messagingChannel
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MessagingChannel $messagingChannel = null)

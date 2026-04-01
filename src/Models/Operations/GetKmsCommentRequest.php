@@ -30,7 +30,7 @@ class GetKmsCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetKmsCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetKmsCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetKmsCommentRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetKmsCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetKmsCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

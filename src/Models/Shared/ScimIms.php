@@ -29,7 +29,7 @@ class ScimIms
 
     /**
      *
-     * @var ?ScimImsType $type
+     * @var ?\Unified\Unified_to\Models\Shared\ScimImsType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ScimImsType|null')]
@@ -47,7 +47,7 @@ class ScimIms
     /**
      * @param  ?string  $display
      * @param  ?bool  $primary
-     * @param  ?ScimImsType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimImsType  $type
      * @param  ?string  $value
      * @phpstan-pure
      */

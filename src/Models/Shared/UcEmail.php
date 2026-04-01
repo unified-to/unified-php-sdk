@@ -20,7 +20,7 @@ class UcEmail
 
     /**
      *
-     * @var ?UcEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\UcEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcEmailType|null')]
@@ -29,7 +29,7 @@ class UcEmail
 
     /**
      * @param  string  $email
-     * @param  ?UcEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\UcEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?UcEmailType $type = null)

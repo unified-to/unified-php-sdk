@@ -13,7 +13,7 @@ class HrisCompany
 {
     /**
      *
-     * @var ?PropertyHrisCompanyAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress|null')]
@@ -71,7 +71,7 @@ class HrisCompany
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  ?PropertyHrisCompanyAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?string  $legalName

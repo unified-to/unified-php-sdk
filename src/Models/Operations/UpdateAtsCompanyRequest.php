@@ -14,7 +14,7 @@ class UpdateAtsCompanyRequest
 {
     /**
      *
-     * @var Shared\AtsCompany $atsCompany
+     * @var \Unified\Unified_to\Models\Shared\AtsCompany $atsCompany
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsCompany $atsCompany;
@@ -38,7 +38,7 @@ class UpdateAtsCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAtsCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAtsCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAtsCompanyRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsCompany  $atsCompany
+     * @param  \Unified\Unified_to\Models\Shared\AtsCompany  $atsCompany
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAtsCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAtsCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

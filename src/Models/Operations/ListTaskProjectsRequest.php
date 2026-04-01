@@ -30,7 +30,7 @@ class ListTaskProjectsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListTaskProjectsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListTaskProjectsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -106,7 +106,7 @@ class ListTaskProjectsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<ListTaskProjectsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListTaskProjectsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

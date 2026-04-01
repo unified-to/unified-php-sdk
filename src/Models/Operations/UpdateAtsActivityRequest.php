@@ -14,7 +14,7 @@ class UpdateAtsActivityRequest
 {
     /**
      *
-     * @var Shared\AtsActivity $atsActivity
+     * @var \Unified\Unified_to\Models\Shared\AtsActivity $atsActivity
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsActivity $atsActivity;
@@ -38,7 +38,7 @@ class UpdateAtsActivityRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAtsActivityQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAtsActivityQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAtsActivityRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsActivity  $atsActivity
+     * @param  \Unified\Unified_to\Models\Shared\AtsActivity  $atsActivity
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAtsActivityQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAtsActivityQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

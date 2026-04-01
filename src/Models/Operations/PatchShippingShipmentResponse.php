@@ -35,7 +35,7 @@ class PatchShippingShipmentResponse
     /**
      * Successful
      *
-     * @var ?Shared\ShippingShipment $shippingShipment
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingShipment $shippingShipment
      */
     public ?Shared\ShippingShipment $shippingShipment = null;
 
@@ -43,7 +43,7 @@ class PatchShippingShipmentResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ShippingShipment  $shippingShipment
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingShipment  $shippingShipment
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingShipment $shippingShipment = null)

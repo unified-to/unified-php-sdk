@@ -47,8 +47,8 @@ class Accounting
     /**
      * Create an account
      *
-     * @param  Operations\CreateAccountingAccountRequest  $request
-     * @return Operations\CreateAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingAccount(Operations\CreateAccountingAccountRequest $request, ?Options $options = null): Operations\CreateAccountingAccountResponse
@@ -114,8 +114,8 @@ class Accounting
     /**
      * Create a bill
      *
-     * @param  Operations\CreateAccountingBillRequest  $request
-     * @return Operations\CreateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingBill(Operations\CreateAccountingBillRequest $request, ?Options $options = null): Operations\CreateAccountingBillResponse
@@ -181,8 +181,8 @@ class Accounting
     /**
      * Create a category
      *
-     * @param  Operations\CreateAccountingCategoryRequest  $request
-     * @return Operations\CreateAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingCategory(Operations\CreateAccountingCategoryRequest $request, ?Options $options = null): Operations\CreateAccountingCategoryResponse
@@ -248,8 +248,8 @@ class Accounting
     /**
      * Create a contact
      *
-     * @param  Operations\CreateAccountingContactRequest  $request
-     * @return Operations\CreateAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingContact(Operations\CreateAccountingContactRequest $request, ?Options $options = null): Operations\CreateAccountingContactResponse
@@ -315,8 +315,8 @@ class Accounting
     /**
      * Create a creditmemo
      *
-     * @param  Operations\CreateAccountingCreditmemoRequest  $request
-     * @return Operations\CreateAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingCreditmemo(Operations\CreateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\CreateAccountingCreditmemoResponse
@@ -382,8 +382,8 @@ class Accounting
     /**
      * Create an expense
      *
-     * @param  Operations\CreateAccountingExpenseRequest  $request
-     * @return Operations\CreateAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingExpense(Operations\CreateAccountingExpenseRequest $request, ?Options $options = null): Operations\CreateAccountingExpenseResponse
@@ -449,8 +449,8 @@ class Accounting
     /**
      * Create an invoice
      *
-     * @param  Operations\CreateAccountingInvoiceRequest  $request
-     * @return Operations\CreateAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingInvoice(Operations\CreateAccountingInvoiceRequest $request, ?Options $options = null): Operations\CreateAccountingInvoiceResponse
@@ -516,8 +516,8 @@ class Accounting
     /**
      * Create a journal
      *
-     * @param  Operations\CreateAccountingJournalRequest  $request
-     * @return Operations\CreateAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingJournal(Operations\CreateAccountingJournalRequest $request, ?Options $options = null): Operations\CreateAccountingJournalResponse
@@ -583,8 +583,8 @@ class Accounting
     /**
      * Create an order
      *
-     * @param  Operations\CreateAccountingOrderRequest  $request
-     * @return Operations\CreateAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingOrder(Operations\CreateAccountingOrderRequest $request, ?Options $options = null): Operations\CreateAccountingOrderResponse
@@ -650,8 +650,8 @@ class Accounting
     /**
      * Create a purchaseorder
      *
-     * @param  Operations\CreateAccountingPurchaseorderRequest  $request
-     * @return Operations\CreateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingPurchaseorder(Operations\CreateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\CreateAccountingPurchaseorderResponse
@@ -717,8 +717,8 @@ class Accounting
     /**
      * Create a salesorder
      *
-     * @param  Operations\CreateAccountingSalesorderRequest  $request
-     * @return Operations\CreateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingSalesorder(Operations\CreateAccountingSalesorderRequest $request, ?Options $options = null): Operations\CreateAccountingSalesorderResponse
@@ -784,8 +784,8 @@ class Accounting
     /**
      * Create a taxrate
      *
-     * @param  Operations\CreateAccountingTaxrateRequest  $request
-     * @return Operations\CreateAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingTaxrate(Operations\CreateAccountingTaxrateRequest $request, ?Options $options = null): Operations\CreateAccountingTaxrateResponse
@@ -851,8 +851,8 @@ class Accounting
     /**
      * Create a transaction
      *
-     * @param  Operations\CreateAccountingTransactionRequest  $request
-     * @return Operations\CreateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingTransaction(Operations\CreateAccountingTransactionRequest $request, ?Options $options = null): Operations\CreateAccountingTransactionResponse
@@ -918,8 +918,8 @@ class Accounting
     /**
      * Retrieve an account
      *
-     * @param  Operations\GetAccountingAccountRequest  $request
-     * @return Operations\GetAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingAccount(Operations\GetAccountingAccountRequest $request, ?Options $options = null): Operations\GetAccountingAccountResponse
@@ -980,8 +980,8 @@ class Accounting
     /**
      * Retrieve a balancesheet
      *
-     * @param  Operations\GetAccountingBalancesheetRequest  $request
-     * @return Operations\GetAccountingBalancesheetResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingBalancesheet(Operations\GetAccountingBalancesheetRequest $request, ?Options $options = null): Operations\GetAccountingBalancesheetResponse
@@ -1042,8 +1042,8 @@ class Accounting
     /**
      * Retrieve a bill
      *
-     * @param  Operations\GetAccountingBillRequest  $request
-     * @return Operations\GetAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingBill(Operations\GetAccountingBillRequest $request, ?Options $options = null): Operations\GetAccountingBillResponse
@@ -1104,8 +1104,8 @@ class Accounting
     /**
      * Retrieve a cashflow
      *
-     * @param  Operations\GetAccountingCashflowRequest  $request
-     * @return Operations\GetAccountingCashflowResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCashflowRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCashflowResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCashflow(Operations\GetAccountingCashflowRequest $request, ?Options $options = null): Operations\GetAccountingCashflowResponse
@@ -1166,8 +1166,8 @@ class Accounting
     /**
      * Retrieve a category
      *
-     * @param  Operations\GetAccountingCategoryRequest  $request
-     * @return Operations\GetAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCategory(Operations\GetAccountingCategoryRequest $request, ?Options $options = null): Operations\GetAccountingCategoryResponse
@@ -1228,8 +1228,8 @@ class Accounting
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetAccountingContactRequest  $request
-     * @return Operations\GetAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingContact(Operations\GetAccountingContactRequest $request, ?Options $options = null): Operations\GetAccountingContactResponse
@@ -1290,8 +1290,8 @@ class Accounting
     /**
      * Retrieve a creditmemo
      *
-     * @param  Operations\GetAccountingCreditmemoRequest  $request
-     * @return Operations\GetAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCreditmemo(Operations\GetAccountingCreditmemoRequest $request, ?Options $options = null): Operations\GetAccountingCreditmemoResponse
@@ -1352,8 +1352,8 @@ class Accounting
     /**
      * Retrieve an expense
      *
-     * @param  Operations\GetAccountingExpenseRequest  $request
-     * @return Operations\GetAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingExpense(Operations\GetAccountingExpenseRequest $request, ?Options $options = null): Operations\GetAccountingExpenseResponse
@@ -1414,8 +1414,8 @@ class Accounting
     /**
      * Retrieve an invoice
      *
-     * @param  Operations\GetAccountingInvoiceRequest  $request
-     * @return Operations\GetAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingInvoice(Operations\GetAccountingInvoiceRequest $request, ?Options $options = null): Operations\GetAccountingInvoiceResponse
@@ -1476,8 +1476,8 @@ class Accounting
     /**
      * Retrieve a journal
      *
-     * @param  Operations\GetAccountingJournalRequest  $request
-     * @return Operations\GetAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingJournal(Operations\GetAccountingJournalRequest $request, ?Options $options = null): Operations\GetAccountingJournalResponse
@@ -1538,8 +1538,8 @@ class Accounting
     /**
      * Retrieve an order
      *
-     * @param  Operations\GetAccountingOrderRequest  $request
-     * @return Operations\GetAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingOrder(Operations\GetAccountingOrderRequest $request, ?Options $options = null): Operations\GetAccountingOrderResponse
@@ -1600,8 +1600,8 @@ class Accounting
     /**
      * Retrieve an organization
      *
-     * @param  Operations\GetAccountingOrganizationRequest  $request
-     * @return Operations\GetAccountingOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingOrganization(Operations\GetAccountingOrganizationRequest $request, ?Options $options = null): Operations\GetAccountingOrganizationResponse
@@ -1662,8 +1662,8 @@ class Accounting
     /**
      * Retrieve a profitloss
      *
-     * @param  Operations\GetAccountingProfitlossRequest  $request
-     * @return Operations\GetAccountingProfitlossResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingProfitlossRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingProfitlossResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingProfitloss(Operations\GetAccountingProfitlossRequest $request, ?Options $options = null): Operations\GetAccountingProfitlossResponse
@@ -1724,8 +1724,8 @@ class Accounting
     /**
      * Retrieve a purchaseorder
      *
-     * @param  Operations\GetAccountingPurchaseorderRequest  $request
-     * @return Operations\GetAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingPurchaseorder(Operations\GetAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\GetAccountingPurchaseorderResponse
@@ -1786,8 +1786,8 @@ class Accounting
     /**
      * Retrieve a report
      *
-     * @param  Operations\GetAccountingReportRequest  $request
-     * @return Operations\GetAccountingReportResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingReportRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingReportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingReport(Operations\GetAccountingReportRequest $request, ?Options $options = null): Operations\GetAccountingReportResponse
@@ -1848,8 +1848,8 @@ class Accounting
     /**
      * Retrieve a salesorder
      *
-     * @param  Operations\GetAccountingSalesorderRequest  $request
-     * @return Operations\GetAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingSalesorder(Operations\GetAccountingSalesorderRequest $request, ?Options $options = null): Operations\GetAccountingSalesorderResponse
@@ -1910,8 +1910,8 @@ class Accounting
     /**
      * Retrieve a taxrate
      *
-     * @param  Operations\GetAccountingTaxrateRequest  $request
-     * @return Operations\GetAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTaxrate(Operations\GetAccountingTaxrateRequest $request, ?Options $options = null): Operations\GetAccountingTaxrateResponse
@@ -1972,8 +1972,8 @@ class Accounting
     /**
      * Retrieve a transaction
      *
-     * @param  Operations\GetAccountingTransactionRequest  $request
-     * @return Operations\GetAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTransaction(Operations\GetAccountingTransactionRequest $request, ?Options $options = null): Operations\GetAccountingTransactionResponse
@@ -2034,8 +2034,8 @@ class Accounting
     /**
      * Retrieve a trialbalance
      *
-     * @param  Operations\GetAccountingTrialbalanceRequest  $request
-     * @return Operations\GetAccountingTrialbalanceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTrialbalance(Operations\GetAccountingTrialbalanceRequest $request, ?Options $options = null): Operations\GetAccountingTrialbalanceResponse
@@ -2096,8 +2096,8 @@ class Accounting
     /**
      * List all accounts
      *
-     * @param  Operations\ListAccountingAccountsRequest  $request
-     * @return Operations\ListAccountingAccountsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingAccounts(Operations\ListAccountingAccountsRequest $request, ?Options $options = null): Operations\ListAccountingAccountsResponse
@@ -2158,8 +2158,8 @@ class Accounting
     /**
      * List all balancesheets
      *
-     * @param  Operations\ListAccountingBalancesheetsRequest  $request
-     * @return Operations\ListAccountingBalancesheetsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingBalancesheets(Operations\ListAccountingBalancesheetsRequest $request, ?Options $options = null): Operations\ListAccountingBalancesheetsResponse
@@ -2220,8 +2220,8 @@ class Accounting
     /**
      * List all bills
      *
-     * @param  Operations\ListAccountingBillsRequest  $request
-     * @return Operations\ListAccountingBillsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBillsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBillsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingBills(Operations\ListAccountingBillsRequest $request, ?Options $options = null): Operations\ListAccountingBillsResponse
@@ -2282,8 +2282,8 @@ class Accounting
     /**
      * List all cashflows
      *
-     * @param  Operations\ListAccountingCashflowsRequest  $request
-     * @return Operations\ListAccountingCashflowsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCashflowsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCashflowsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCashflows(Operations\ListAccountingCashflowsRequest $request, ?Options $options = null): Operations\ListAccountingCashflowsResponse
@@ -2344,8 +2344,8 @@ class Accounting
     /**
      * List all categories
      *
-     * @param  Operations\ListAccountingCategoriesRequest  $request
-     * @return Operations\ListAccountingCategoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCategories(Operations\ListAccountingCategoriesRequest $request, ?Options $options = null): Operations\ListAccountingCategoriesResponse
@@ -2406,8 +2406,8 @@ class Accounting
     /**
      * List all contacts
      *
-     * @param  Operations\ListAccountingContactsRequest  $request
-     * @return Operations\ListAccountingContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingContacts(Operations\ListAccountingContactsRequest $request, ?Options $options = null): Operations\ListAccountingContactsResponse
@@ -2468,8 +2468,8 @@ class Accounting
     /**
      * List all creditmemoes
      *
-     * @param  Operations\ListAccountingCreditmemoesRequest  $request
-     * @return Operations\ListAccountingCreditmemoesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCreditmemoes(Operations\ListAccountingCreditmemoesRequest $request, ?Options $options = null): Operations\ListAccountingCreditmemoesResponse
@@ -2530,8 +2530,8 @@ class Accounting
     /**
      * List all expenses
      *
-     * @param  Operations\ListAccountingExpensesRequest  $request
-     * @return Operations\ListAccountingExpensesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingExpenses(Operations\ListAccountingExpensesRequest $request, ?Options $options = null): Operations\ListAccountingExpensesResponse
@@ -2592,8 +2592,8 @@ class Accounting
     /**
      * List all invoices
      *
-     * @param  Operations\ListAccountingInvoicesRequest  $request
-     * @return Operations\ListAccountingInvoicesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingInvoices(Operations\ListAccountingInvoicesRequest $request, ?Options $options = null): Operations\ListAccountingInvoicesResponse
@@ -2654,8 +2654,8 @@ class Accounting
     /**
      * List all journals
      *
-     * @param  Operations\ListAccountingJournalsRequest  $request
-     * @return Operations\ListAccountingJournalsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingJournalsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingJournals(Operations\ListAccountingJournalsRequest $request, ?Options $options = null): Operations\ListAccountingJournalsResponse
@@ -2716,8 +2716,8 @@ class Accounting
     /**
      * List all orders
      *
-     * @param  Operations\ListAccountingOrdersRequest  $request
-     * @return Operations\ListAccountingOrdersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrdersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrdersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingOrders(Operations\ListAccountingOrdersRequest $request, ?Options $options = null): Operations\ListAccountingOrdersResponse
@@ -2778,8 +2778,8 @@ class Accounting
     /**
      * List all organizations
      *
-     * @param  Operations\ListAccountingOrganizationsRequest  $request
-     * @return Operations\ListAccountingOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingOrganizations(Operations\ListAccountingOrganizationsRequest $request, ?Options $options = null): Operations\ListAccountingOrganizationsResponse
@@ -2840,8 +2840,8 @@ class Accounting
     /**
      * List all profitlosses
      *
-     * @param  Operations\ListAccountingProfitlossesRequest  $request
-     * @return Operations\ListAccountingProfitlossesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingProfitlosses(Operations\ListAccountingProfitlossesRequest $request, ?Options $options = null): Operations\ListAccountingProfitlossesResponse
@@ -2902,8 +2902,8 @@ class Accounting
     /**
      * List all purchaseorders
      *
-     * @param  Operations\ListAccountingPurchaseordersRequest  $request
-     * @return Operations\ListAccountingPurchaseordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingPurchaseorders(Operations\ListAccountingPurchaseordersRequest $request, ?Options $options = null): Operations\ListAccountingPurchaseordersResponse
@@ -2964,8 +2964,8 @@ class Accounting
     /**
      * List all reports
      *
-     * @param  Operations\ListAccountingReportsRequest  $request
-     * @return Operations\ListAccountingReportsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingReportsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingReports(Operations\ListAccountingReportsRequest $request, ?Options $options = null): Operations\ListAccountingReportsResponse
@@ -3026,8 +3026,8 @@ class Accounting
     /**
      * List all salesorders
      *
-     * @param  Operations\ListAccountingSalesordersRequest  $request
-     * @return Operations\ListAccountingSalesordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingSalesorders(Operations\ListAccountingSalesordersRequest $request, ?Options $options = null): Operations\ListAccountingSalesordersResponse
@@ -3088,8 +3088,8 @@ class Accounting
     /**
      * List all taxrates
      *
-     * @param  Operations\ListAccountingTaxratesRequest  $request
-     * @return Operations\ListAccountingTaxratesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTaxrates(Operations\ListAccountingTaxratesRequest $request, ?Options $options = null): Operations\ListAccountingTaxratesResponse
@@ -3150,8 +3150,8 @@ class Accounting
     /**
      * List all transactions
      *
-     * @param  Operations\ListAccountingTransactionsRequest  $request
-     * @return Operations\ListAccountingTransactionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTransactions(Operations\ListAccountingTransactionsRequest $request, ?Options $options = null): Operations\ListAccountingTransactionsResponse
@@ -3212,8 +3212,8 @@ class Accounting
     /**
      * List all trialbalances
      *
-     * @param  Operations\ListAccountingTrialbalancesRequest  $request
-     * @return Operations\ListAccountingTrialbalancesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTrialbalances(Operations\ListAccountingTrialbalancesRequest $request, ?Options $options = null): Operations\ListAccountingTrialbalancesResponse
@@ -3274,8 +3274,8 @@ class Accounting
     /**
      * Update an account
      *
-     * @param  Operations\PatchAccountingAccountRequest  $request
-     * @return Operations\PatchAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingAccount(Operations\PatchAccountingAccountRequest $request, ?Options $options = null): Operations\PatchAccountingAccountResponse
@@ -3341,8 +3341,8 @@ class Accounting
     /**
      * Update a bill
      *
-     * @param  Operations\PatchAccountingBillRequest  $request
-     * @return Operations\PatchAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingBill(Operations\PatchAccountingBillRequest $request, ?Options $options = null): Operations\PatchAccountingBillResponse
@@ -3408,8 +3408,8 @@ class Accounting
     /**
      * Update a category
      *
-     * @param  Operations\PatchAccountingCategoryRequest  $request
-     * @return Operations\PatchAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingCategory(Operations\PatchAccountingCategoryRequest $request, ?Options $options = null): Operations\PatchAccountingCategoryResponse
@@ -3475,8 +3475,8 @@ class Accounting
     /**
      * Update a contact
      *
-     * @param  Operations\PatchAccountingContactRequest  $request
-     * @return Operations\PatchAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingContact(Operations\PatchAccountingContactRequest $request, ?Options $options = null): Operations\PatchAccountingContactResponse
@@ -3542,8 +3542,8 @@ class Accounting
     /**
      * Update a creditmemo
      *
-     * @param  Operations\PatchAccountingCreditmemoRequest  $request
-     * @return Operations\PatchAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingCreditmemo(Operations\PatchAccountingCreditmemoRequest $request, ?Options $options = null): Operations\PatchAccountingCreditmemoResponse
@@ -3609,8 +3609,8 @@ class Accounting
     /**
      * Update an expense
      *
-     * @param  Operations\PatchAccountingExpenseRequest  $request
-     * @return Operations\PatchAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingExpense(Operations\PatchAccountingExpenseRequest $request, ?Options $options = null): Operations\PatchAccountingExpenseResponse
@@ -3676,8 +3676,8 @@ class Accounting
     /**
      * Update an invoice
      *
-     * @param  Operations\PatchAccountingInvoiceRequest  $request
-     * @return Operations\PatchAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingInvoice(Operations\PatchAccountingInvoiceRequest $request, ?Options $options = null): Operations\PatchAccountingInvoiceResponse
@@ -3743,8 +3743,8 @@ class Accounting
     /**
      * Update a journal
      *
-     * @param  Operations\PatchAccountingJournalRequest  $request
-     * @return Operations\PatchAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingJournal(Operations\PatchAccountingJournalRequest $request, ?Options $options = null): Operations\PatchAccountingJournalResponse
@@ -3810,8 +3810,8 @@ class Accounting
     /**
      * Update an order
      *
-     * @param  Operations\PatchAccountingOrderRequest  $request
-     * @return Operations\PatchAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingOrder(Operations\PatchAccountingOrderRequest $request, ?Options $options = null): Operations\PatchAccountingOrderResponse
@@ -3877,8 +3877,8 @@ class Accounting
     /**
      * Update a purchaseorder
      *
-     * @param  Operations\PatchAccountingPurchaseorderRequest  $request
-     * @return Operations\PatchAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingPurchaseorder(Operations\PatchAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\PatchAccountingPurchaseorderResponse
@@ -3944,8 +3944,8 @@ class Accounting
     /**
      * Update a salesorder
      *
-     * @param  Operations\PatchAccountingSalesorderRequest  $request
-     * @return Operations\PatchAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingSalesorder(Operations\PatchAccountingSalesorderRequest $request, ?Options $options = null): Operations\PatchAccountingSalesorderResponse
@@ -4011,8 +4011,8 @@ class Accounting
     /**
      * Update a taxrate
      *
-     * @param  Operations\PatchAccountingTaxrateRequest  $request
-     * @return Operations\PatchAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingTaxrate(Operations\PatchAccountingTaxrateRequest $request, ?Options $options = null): Operations\PatchAccountingTaxrateResponse
@@ -4078,8 +4078,8 @@ class Accounting
     /**
      * Update a transaction
      *
-     * @param  Operations\PatchAccountingTransactionRequest  $request
-     * @return Operations\PatchAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingTransaction(Operations\PatchAccountingTransactionRequest $request, ?Options $options = null): Operations\PatchAccountingTransactionResponse
@@ -4145,8 +4145,8 @@ class Accounting
     /**
      * Remove an account
      *
-     * @param  Operations\RemoveAccountingAccountRequest  $request
-     * @return Operations\RemoveAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingAccount(Operations\RemoveAccountingAccountRequest $request, ?Options $options = null): Operations\RemoveAccountingAccountResponse
@@ -4201,8 +4201,8 @@ class Accounting
     /**
      * Remove a bill
      *
-     * @param  Operations\RemoveAccountingBillRequest  $request
-     * @return Operations\RemoveAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingBill(Operations\RemoveAccountingBillRequest $request, ?Options $options = null): Operations\RemoveAccountingBillResponse
@@ -4257,8 +4257,8 @@ class Accounting
     /**
      * Remove a category
      *
-     * @param  Operations\RemoveAccountingCategoryRequest  $request
-     * @return Operations\RemoveAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingCategory(Operations\RemoveAccountingCategoryRequest $request, ?Options $options = null): Operations\RemoveAccountingCategoryResponse
@@ -4313,8 +4313,8 @@ class Accounting
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveAccountingContactRequest  $request
-     * @return Operations\RemoveAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingContact(Operations\RemoveAccountingContactRequest $request, ?Options $options = null): Operations\RemoveAccountingContactResponse
@@ -4369,8 +4369,8 @@ class Accounting
     /**
      * Remove a creditmemo
      *
-     * @param  Operations\RemoveAccountingCreditmemoRequest  $request
-     * @return Operations\RemoveAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingCreditmemo(Operations\RemoveAccountingCreditmemoRequest $request, ?Options $options = null): Operations\RemoveAccountingCreditmemoResponse
@@ -4425,8 +4425,8 @@ class Accounting
     /**
      * Remove an expense
      *
-     * @param  Operations\RemoveAccountingExpenseRequest  $request
-     * @return Operations\RemoveAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingExpense(Operations\RemoveAccountingExpenseRequest $request, ?Options $options = null): Operations\RemoveAccountingExpenseResponse
@@ -4481,8 +4481,8 @@ class Accounting
     /**
      * Remove an invoice
      *
-     * @param  Operations\RemoveAccountingInvoiceRequest  $request
-     * @return Operations\RemoveAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingInvoice(Operations\RemoveAccountingInvoiceRequest $request, ?Options $options = null): Operations\RemoveAccountingInvoiceResponse
@@ -4537,8 +4537,8 @@ class Accounting
     /**
      * Remove a journal
      *
-     * @param  Operations\RemoveAccountingJournalRequest  $request
-     * @return Operations\RemoveAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingJournal(Operations\RemoveAccountingJournalRequest $request, ?Options $options = null): Operations\RemoveAccountingJournalResponse
@@ -4593,8 +4593,8 @@ class Accounting
     /**
      * Remove an order
      *
-     * @param  Operations\RemoveAccountingOrderRequest  $request
-     * @return Operations\RemoveAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingOrder(Operations\RemoveAccountingOrderRequest $request, ?Options $options = null): Operations\RemoveAccountingOrderResponse
@@ -4649,8 +4649,8 @@ class Accounting
     /**
      * Remove a purchaseorder
      *
-     * @param  Operations\RemoveAccountingPurchaseorderRequest  $request
-     * @return Operations\RemoveAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingPurchaseorder(Operations\RemoveAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\RemoveAccountingPurchaseorderResponse
@@ -4705,8 +4705,8 @@ class Accounting
     /**
      * Remove a salesorder
      *
-     * @param  Operations\RemoveAccountingSalesorderRequest  $request
-     * @return Operations\RemoveAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingSalesorder(Operations\RemoveAccountingSalesorderRequest $request, ?Options $options = null): Operations\RemoveAccountingSalesorderResponse
@@ -4761,8 +4761,8 @@ class Accounting
     /**
      * Remove a taxrate
      *
-     * @param  Operations\RemoveAccountingTaxrateRequest  $request
-     * @return Operations\RemoveAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingTaxrate(Operations\RemoveAccountingTaxrateRequest $request, ?Options $options = null): Operations\RemoveAccountingTaxrateResponse
@@ -4817,8 +4817,8 @@ class Accounting
     /**
      * Remove a transaction
      *
-     * @param  Operations\RemoveAccountingTransactionRequest  $request
-     * @return Operations\RemoveAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingTransaction(Operations\RemoveAccountingTransactionRequest $request, ?Options $options = null): Operations\RemoveAccountingTransactionResponse
@@ -4873,8 +4873,8 @@ class Accounting
     /**
      * Update an account
      *
-     * @param  Operations\UpdateAccountingAccountRequest  $request
-     * @return Operations\UpdateAccountingAccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingAccount(Operations\UpdateAccountingAccountRequest $request, ?Options $options = null): Operations\UpdateAccountingAccountResponse
@@ -4940,8 +4940,8 @@ class Accounting
     /**
      * Update a bill
      *
-     * @param  Operations\UpdateAccountingBillRequest  $request
-     * @return Operations\UpdateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBillRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingBill(Operations\UpdateAccountingBillRequest $request, ?Options $options = null): Operations\UpdateAccountingBillResponse
@@ -5007,8 +5007,8 @@ class Accounting
     /**
      * Update a category
      *
-     * @param  Operations\UpdateAccountingCategoryRequest  $request
-     * @return Operations\UpdateAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingCategory(Operations\UpdateAccountingCategoryRequest $request, ?Options $options = null): Operations\UpdateAccountingCategoryResponse
@@ -5074,8 +5074,8 @@ class Accounting
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateAccountingContactRequest  $request
-     * @return Operations\UpdateAccountingContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingContact(Operations\UpdateAccountingContactRequest $request, ?Options $options = null): Operations\UpdateAccountingContactResponse
@@ -5141,8 +5141,8 @@ class Accounting
     /**
      * Update a creditmemo
      *
-     * @param  Operations\UpdateAccountingCreditmemoRequest  $request
-     * @return Operations\UpdateAccountingCreditmemoResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingCreditmemo(Operations\UpdateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\UpdateAccountingCreditmemoResponse
@@ -5208,8 +5208,8 @@ class Accounting
     /**
      * Update an expense
      *
-     * @param  Operations\UpdateAccountingExpenseRequest  $request
-     * @return Operations\UpdateAccountingExpenseResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingExpense(Operations\UpdateAccountingExpenseRequest $request, ?Options $options = null): Operations\UpdateAccountingExpenseResponse
@@ -5275,8 +5275,8 @@ class Accounting
     /**
      * Update an invoice
      *
-     * @param  Operations\UpdateAccountingInvoiceRequest  $request
-     * @return Operations\UpdateAccountingInvoiceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingInvoice(Operations\UpdateAccountingInvoiceRequest $request, ?Options $options = null): Operations\UpdateAccountingInvoiceResponse
@@ -5342,8 +5342,8 @@ class Accounting
     /**
      * Update a journal
      *
-     * @param  Operations\UpdateAccountingJournalRequest  $request
-     * @return Operations\UpdateAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingJournal(Operations\UpdateAccountingJournalRequest $request, ?Options $options = null): Operations\UpdateAccountingJournalResponse
@@ -5409,8 +5409,8 @@ class Accounting
     /**
      * Update an order
      *
-     * @param  Operations\UpdateAccountingOrderRequest  $request
-     * @return Operations\UpdateAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingOrder(Operations\UpdateAccountingOrderRequest $request, ?Options $options = null): Operations\UpdateAccountingOrderResponse
@@ -5476,8 +5476,8 @@ class Accounting
     /**
      * Update a purchaseorder
      *
-     * @param  Operations\UpdateAccountingPurchaseorderRequest  $request
-     * @return Operations\UpdateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingPurchaseorder(Operations\UpdateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\UpdateAccountingPurchaseorderResponse
@@ -5543,8 +5543,8 @@ class Accounting
     /**
      * Update a salesorder
      *
-     * @param  Operations\UpdateAccountingSalesorderRequest  $request
-     * @return Operations\UpdateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingSalesorder(Operations\UpdateAccountingSalesorderRequest $request, ?Options $options = null): Operations\UpdateAccountingSalesorderResponse
@@ -5610,8 +5610,8 @@ class Accounting
     /**
      * Update a taxrate
      *
-     * @param  Operations\UpdateAccountingTaxrateRequest  $request
-     * @return Operations\UpdateAccountingTaxrateResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingTaxrate(Operations\UpdateAccountingTaxrateRequest $request, ?Options $options = null): Operations\UpdateAccountingTaxrateResponse
@@ -5677,8 +5677,8 @@ class Accounting
     /**
      * Update a transaction
      *
-     * @param  Operations\UpdateAccountingTransactionRequest  $request
-     * @return Operations\UpdateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingTransaction(Operations\UpdateAccountingTransactionRequest $request, ?Options $options = null): Operations\UpdateAccountingTransactionResponse

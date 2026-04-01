@@ -47,8 +47,8 @@ class Group
     /**
      * Create a group
      *
-     * @param  Operations\CreateAdsGroupRequest  $request
-     * @return Operations\CreateAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAdsGroup(Operations\CreateAdsGroupRequest $request, ?Options $options = null): Operations\CreateAdsGroupResponse
@@ -114,8 +114,8 @@ class Group
     /**
      * Create a group
      *
-     * @param  Operations\CreateHrisGroupRequest  $request
-     * @return Operations\CreateHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisGroup(Operations\CreateHrisGroupRequest $request, ?Options $options = null): Operations\CreateHrisGroupResponse
@@ -181,8 +181,8 @@ class Group
     /**
      * Create group
      *
-     * @param  Operations\CreateScimGroupsRequest  $request
-     * @return Operations\CreateScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createScimGroups(Operations\CreateScimGroupsRequest $request, ?Options $options = null): Operations\CreateScimGroupsResponse
@@ -245,8 +245,8 @@ class Group
     /**
      * Retrieve a group
      *
-     * @param  Operations\GetAdsGroupRequest  $request
-     * @return Operations\GetAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAdsGroup(Operations\GetAdsGroupRequest $request, ?Options $options = null): Operations\GetAdsGroupResponse
@@ -307,8 +307,8 @@ class Group
     /**
      * Retrieve a group
      *
-     * @param  Operations\GetHrisGroupRequest  $request
-     * @return Operations\GetHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisGroup(Operations\GetHrisGroupRequest $request, ?Options $options = null): Operations\GetHrisGroupResponse
@@ -369,8 +369,8 @@ class Group
     /**
      * Get group
      *
-     * @param  Operations\GetScimGroupsRequest  $request
-     * @return Operations\GetScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getScimGroups(Operations\GetScimGroupsRequest $request, ?Options $options = null): Operations\GetScimGroupsResponse
@@ -428,8 +428,8 @@ class Group
     /**
      * List all groups
      *
-     * @param  Operations\ListAdsGroupsRequest  $request
-     * @return Operations\ListAdsGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAdsGroups(Operations\ListAdsGroupsRequest $request, ?Options $options = null): Operations\ListAdsGroupsResponse
@@ -490,8 +490,8 @@ class Group
     /**
      * List all groups
      *
-     * @param  Operations\ListHrisGroupsRequest  $request
-     * @return Operations\ListHrisGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisGroups(Operations\ListHrisGroupsRequest $request, ?Options $options = null): Operations\ListHrisGroupsResponse
@@ -552,8 +552,8 @@ class Group
     /**
      * List groups
      *
-     * @param  Operations\ListScimGroupsRequest  $request
-     * @return Operations\ListScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listScimGroups(Operations\ListScimGroupsRequest $request, ?Options $options = null): Operations\ListScimGroupsResponse
@@ -614,8 +614,8 @@ class Group
     /**
      * Update a group
      *
-     * @param  Operations\PatchAdsGroupRequest  $request
-     * @return Operations\PatchAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAdsGroup(Operations\PatchAdsGroupRequest $request, ?Options $options = null): Operations\PatchAdsGroupResponse
@@ -681,8 +681,8 @@ class Group
     /**
      * Update a group
      *
-     * @param  Operations\PatchHrisGroupRequest  $request
-     * @return Operations\PatchHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisGroup(Operations\PatchHrisGroupRequest $request, ?Options $options = null): Operations\PatchHrisGroupResponse
@@ -748,8 +748,8 @@ class Group
     /**
      * Update group
      *
-     * @param  Operations\PatchScimGroupsRequest  $request
-     * @return Operations\PatchScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchScimGroups(Operations\PatchScimGroupsRequest $request, ?Options $options = null): Operations\PatchScimGroupsResponse
@@ -812,8 +812,8 @@ class Group
     /**
      * Remove a group
      *
-     * @param  Operations\RemoveAdsGroupRequest  $request
-     * @return Operations\RemoveAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAdsGroup(Operations\RemoveAdsGroupRequest $request, ?Options $options = null): Operations\RemoveAdsGroupResponse
@@ -868,8 +868,8 @@ class Group
     /**
      * Remove a group
      *
-     * @param  Operations\RemoveHrisGroupRequest  $request
-     * @return Operations\RemoveHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisGroup(Operations\RemoveHrisGroupRequest $request, ?Options $options = null): Operations\RemoveHrisGroupResponse
@@ -924,8 +924,8 @@ class Group
     /**
      * Delete group
      *
-     * @param  Operations\RemoveScimGroupsRequest  $request
-     * @return Operations\RemoveScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeScimGroups(Operations\RemoveScimGroupsRequest $request, ?Options $options = null): Operations\RemoveScimGroupsResponse
@@ -980,8 +980,8 @@ class Group
     /**
      * Update a group
      *
-     * @param  Operations\UpdateAdsGroupRequest  $request
-     * @return Operations\UpdateAdsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAdsGroup(Operations\UpdateAdsGroupRequest $request, ?Options $options = null): Operations\UpdateAdsGroupResponse
@@ -1047,8 +1047,8 @@ class Group
     /**
      * Update a group
      *
-     * @param  Operations\UpdateHrisGroupRequest  $request
-     * @return Operations\UpdateHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisGroup(Operations\UpdateHrisGroupRequest $request, ?Options $options = null): Operations\UpdateHrisGroupResponse
@@ -1114,8 +1114,8 @@ class Group
     /**
      * Update group
      *
-     * @param  Operations\UpdateScimGroupsRequest  $request
-     * @return Operations\UpdateScimGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateScimGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateScimGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateScimGroups(Operations\UpdateScimGroupsRequest $request, ?Options $options = null): Operations\UpdateScimGroupsResponse

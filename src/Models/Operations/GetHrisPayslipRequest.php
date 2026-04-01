@@ -30,7 +30,7 @@ class GetHrisPayslipRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisPayslipQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisPayslipQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisPayslipRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisPayslipQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisPayslipQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

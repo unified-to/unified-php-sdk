@@ -30,7 +30,7 @@ class GetAtsScorecardRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsScorecardQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsScorecardQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsScorecardRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsScorecardQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsScorecardQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

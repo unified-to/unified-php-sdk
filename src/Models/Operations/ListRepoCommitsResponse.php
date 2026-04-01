@@ -35,7 +35,7 @@ class ListRepoCommitsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\RepoCommit> $repoCommits
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoCommit> $repoCommits
      */
     public ?array $repoCommits = null;
 
@@ -43,7 +43,7 @@ class ListRepoCommitsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\RepoCommit>  $repoCommits
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoCommit>  $repoCommits
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $repoCommits = null)

@@ -14,7 +14,7 @@ class UpdateStorageFileRequest
 {
     /**
      *
-     * @var Shared\StorageFile $storageFile
+     * @var \Unified\Unified_to\Models\Shared\StorageFile $storageFile
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\StorageFile $storageFile;
@@ -38,7 +38,7 @@ class UpdateStorageFileRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateStorageFileQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateStorageFileQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateStorageFileRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\StorageFile  $storageFile
+     * @param  \Unified\Unified_to\Models\Shared\StorageFile  $storageFile
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateStorageFileQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateStorageFileQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

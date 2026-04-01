@@ -47,8 +47,8 @@ class Forms
     /**
      * Create a form
      *
-     * @param  Operations\CreateFormsFormRequest  $request
-     * @return Operations\CreateFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateFormsFormRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createFormsForm(Operations\CreateFormsFormRequest $request, ?Options $options = null): Operations\CreateFormsFormResponse
@@ -114,8 +114,8 @@ class Forms
     /**
      * Retrieve a form
      *
-     * @param  Operations\GetFormsFormRequest  $request
-     * @return Operations\GetFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsFormRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getFormsForm(Operations\GetFormsFormRequest $request, ?Options $options = null): Operations\GetFormsFormResponse
@@ -176,8 +176,8 @@ class Forms
     /**
      * Retrieve a submission
      *
-     * @param  Operations\GetFormsSubmissionRequest  $request
-     * @return Operations\GetFormsSubmissionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmissionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmissionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getFormsSubmission(Operations\GetFormsSubmissionRequest $request, ?Options $options = null): Operations\GetFormsSubmissionResponse
@@ -238,8 +238,8 @@ class Forms
     /**
      * List all forms
      *
-     * @param  Operations\ListFormsFormsRequest  $request
-     * @return Operations\ListFormsFormsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsFormsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsFormsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listFormsForms(Operations\ListFormsFormsRequest $request, ?Options $options = null): Operations\ListFormsFormsResponse
@@ -300,8 +300,8 @@ class Forms
     /**
      * List all submissions
      *
-     * @param  Operations\ListFormsSubmissionsRequest  $request
-     * @return Operations\ListFormsSubmissionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listFormsSubmissions(Operations\ListFormsSubmissionsRequest $request, ?Options $options = null): Operations\ListFormsSubmissionsResponse
@@ -362,8 +362,8 @@ class Forms
     /**
      * Update a form
      *
-     * @param  Operations\PatchFormsFormRequest  $request
-     * @return Operations\PatchFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchFormsFormRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchFormsForm(Operations\PatchFormsFormRequest $request, ?Options $options = null): Operations\PatchFormsFormResponse
@@ -429,8 +429,8 @@ class Forms
     /**
      * Remove a form
      *
-     * @param  Operations\RemoveFormsFormRequest  $request
-     * @return Operations\RemoveFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveFormsFormRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeFormsForm(Operations\RemoveFormsFormRequest $request, ?Options $options = null): Operations\RemoveFormsFormResponse
@@ -485,8 +485,8 @@ class Forms
     /**
      * Update a form
      *
-     * @param  Operations\UpdateFormsFormRequest  $request
-     * @return Operations\UpdateFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateFormsFormRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateFormsForm(Operations\UpdateFormsFormRequest $request, ?Options $options = null): Operations\UpdateFormsFormResponse

@@ -14,7 +14,7 @@ class CreateHrisGroupRequest
 {
     /**
      *
-     * @var Shared\HrisGroup $hrisGroup
+     * @var \Unified\Unified_to\Models\Shared\HrisGroup $hrisGroup
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\HrisGroup $hrisGroup;
@@ -30,7 +30,7 @@ class CreateHrisGroupRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateHrisGroupQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateHrisGroupQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateHrisGroupRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\HrisGroup  $hrisGroup
+     * @param  \Unified\Unified_to\Models\Shared\HrisGroup  $hrisGroup
      * @param  string  $connectionId
-     * @param  ?array<CreateHrisGroupQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateHrisGroupQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

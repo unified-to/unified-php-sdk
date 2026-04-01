@@ -30,7 +30,7 @@ class GetMartechListRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetMartechListQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetMartechListQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetMartechListRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetMartechListQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetMartechListQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

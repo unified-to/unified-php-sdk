@@ -14,7 +14,7 @@ class UpdateCalendarEventRequest
 {
     /**
      *
-     * @var Shared\CalendarEvent $calendarEvent
+     * @var \Unified\Unified_to\Models\Shared\CalendarEvent $calendarEvent
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarEvent $calendarEvent;
@@ -38,7 +38,7 @@ class UpdateCalendarEventRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCalendarEventQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCalendarEventQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCalendarEventRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarEvent  $calendarEvent
+     * @param  \Unified\Unified_to\Models\Shared\CalendarEvent  $calendarEvent
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCalendarEventQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCalendarEventQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

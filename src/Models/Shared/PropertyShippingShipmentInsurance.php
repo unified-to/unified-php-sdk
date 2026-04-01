@@ -22,7 +22,7 @@ class PropertyShippingShipmentInsurance
 
     /**
      *
-     * @var ?CoverageType $coverageType
+     * @var ?\Unified\Unified_to\Models\Shared\CoverageType $coverageType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('coverage_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CoverageType|null')]
@@ -79,7 +79,7 @@ class PropertyShippingShipmentInsurance
 
     /**
      * @param  ?float  $coverageAmount
-     * @param  ?CoverageType  $coverageType
+     * @param  ?\Unified\Unified_to\Models\Shared\CoverageType  $coverageType
      * @param  ?string  $currency
      * @param  ?float  $insuranceCost
      * @param  ?string  $insuranceCostCurrency

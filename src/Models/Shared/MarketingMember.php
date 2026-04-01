@@ -23,7 +23,7 @@ class MarketingMember
     /**
      * An array of email addresses for this member
      *
-     * @var ?array<MarketingEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingEmail>|null')]
@@ -84,7 +84,7 @@ class MarketingMember
 
     /**
      *
-     * @var ?MarketingMemberStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\MarketingMemberStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingMemberStatus|null')]
@@ -111,14 +111,14 @@ class MarketingMember
 
     /**
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<MarketingEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $lastName
      * @param  ?array<string>  $listIds
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?MarketingMemberStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\MarketingMemberStatus  $status
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

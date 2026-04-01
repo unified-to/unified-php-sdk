@@ -14,7 +14,7 @@ class UpdateCommerceInventoryRequest
 {
     /**
      *
-     * @var Shared\CommerceInventory $commerceInventory
+     * @var \Unified\Unified_to\Models\Shared\CommerceInventory $commerceInventory
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceInventory $commerceInventory;
@@ -38,7 +38,7 @@ class UpdateCommerceInventoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCommerceInventoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCommerceInventoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceInventory  $commerceInventory
+     * @param  \Unified\Unified_to\Models\Shared\CommerceInventory  $commerceInventory
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCommerceInventoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceInventoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

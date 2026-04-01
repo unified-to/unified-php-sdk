@@ -32,7 +32,7 @@ class CommerceItem
     /**
      * points to Collection with id, name, and type fields
      *
-     * @var ?array<CommerceReference> $collections
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReference> $collections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('collections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReference>|null')]
@@ -130,7 +130,7 @@ class CommerceItem
     /**
      * $media
      *
-     * @var ?array<CommerceItemMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
@@ -140,7 +140,7 @@ class CommerceItem
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -158,7 +158,7 @@ class CommerceItem
     /**
      * $prices
      *
-     * @var ?array<CommerceItemPrice> $prices
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemPrice> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>|null')]
@@ -252,7 +252,7 @@ class CommerceItem
     /**
      * first variant is the default variant
      *
-     * @var ?array<CommerceItemvariant> $variants
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant> $variants
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('variants')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>|null')]
@@ -277,7 +277,7 @@ class CommerceItem
 
     /**
      *
-     * @var ?WeightUnit $weightUnit
+     * @var ?\Unified\Unified_to\Models\Shared\WeightUnit $weightUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeightUnit|null')]
@@ -287,7 +287,7 @@ class CommerceItem
     /**
      * @param  ?string  $accountId
      * @param  ?array<string>  $collectionIds
-     * @param  ?array<CommerceReference>  $collections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReference>  $collections
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?float  $duration
@@ -299,10 +299,10 @@ class CommerceItem
      * @param  ?bool  $isTaxable
      * @param  ?bool  $isVisible
      * @param  ?string  $locationId
-     * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?array<CommerceItemPrice>  $prices
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>  $prices
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
      * @param  ?array<string, mixed>  $raw
@@ -313,10 +313,10 @@ class CommerceItem
      * @param  ?float  $totalStock
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
-     * @param  ?array<CommerceItemvariant>  $variants
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>  $variants
      * @param  ?string  $vendorName
      * @param  ?float  $weight
-     * @param  ?WeightUnit  $weightUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\WeightUnit  $weightUnit
      * @phpstan-pure
      */
     public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)

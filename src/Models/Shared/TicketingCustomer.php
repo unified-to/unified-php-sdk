@@ -22,7 +22,7 @@ class TicketingCustomer
     /**
      * $emails
      *
-     * @var ?array<TicketingEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingEmail>|null')]
@@ -68,7 +68,7 @@ class TicketingCustomer
     /**
      * $telephones
      *
-     * @var ?array<TicketingTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingTelephone>|null')]
@@ -85,12 +85,12 @@ class TicketingCustomer
 
     /**
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<TicketingEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingEmail>  $emails
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
-     * @param  ?array<TicketingTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

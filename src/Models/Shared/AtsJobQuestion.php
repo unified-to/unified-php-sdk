@@ -20,7 +20,7 @@ class AtsJobQuestion
 
     /**
      *
-     * @var AtsJobQuestionType $type
+     * @var \Unified\Unified_to\Models\Shared\AtsJobQuestionType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobQuestionType')]
@@ -70,7 +70,7 @@ class AtsJobQuestion
 
     /**
      * @param  string  $question
-     * @param  AtsJobQuestionType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AtsJobQuestionType  $type
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?array<string>  $options

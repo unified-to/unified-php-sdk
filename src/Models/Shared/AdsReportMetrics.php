@@ -13,7 +13,7 @@ class AdsReportMetrics
 {
     /**
      *
-     * @var ?PropertyAdsReportMetricsAd $ad
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAd $ad
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ad')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAd|null')]
@@ -22,7 +22,7 @@ class AdsReportMetrics
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaign $campaign
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaign $campaign
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('campaign')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaign|null')]
@@ -31,7 +31,7 @@ class AdsReportMetrics
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroup $group
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup $group
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('group')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup|null')]
@@ -40,7 +40,7 @@ class AdsReportMetrics
 
     /**
      *
-     * @var ?AdsReportMetricsType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AdsReportMetricsType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsReportMetricsType|null')]
@@ -56,10 +56,10 @@ class AdsReportMetrics
     public ?float $value = null;
 
     /**
-     * @param  ?PropertyAdsReportMetricsAd  $ad
-     * @param  ?PropertyAdsReportMetricsCampaign  $campaign
-     * @param  ?PropertyAdsReportMetricsGroup  $group
-     * @param  ?AdsReportMetricsType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAd  $ad
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaign  $campaign
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup  $group
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsReportMetricsType  $type
      * @param  ?float  $value
      * @phpstan-pure
      */

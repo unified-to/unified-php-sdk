@@ -30,7 +30,7 @@ class ListAdsGroupsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAdsGroupsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAdsGroupsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -114,7 +114,7 @@ class ListAdsGroupsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $campaignId
-     * @param  ?array<ListAdsGroupsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsGroupsQueryParamFields>  $fields
      * @param  ?string  $ioId
      * @param  ?float  $limit
      * @param  ?float  $offset

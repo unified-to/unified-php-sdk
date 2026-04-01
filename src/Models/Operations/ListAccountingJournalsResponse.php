@@ -35,7 +35,7 @@ class ListAccountingJournalsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingJournal> $accountingJournals
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingJournal> $accountingJournals
      */
     public ?array $accountingJournals = null;
 
@@ -43,7 +43,7 @@ class ListAccountingJournalsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingJournal>  $accountingJournals
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingJournal>  $accountingJournals
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingJournals = null)

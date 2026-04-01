@@ -14,7 +14,7 @@ class UpdateLmsStudentRequest
 {
     /**
      *
-     * @var Shared\LmsStudent $lmsStudent
+     * @var \Unified\Unified_to\Models\Shared\LmsStudent $lmsStudent
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\LmsStudent $lmsStudent;
@@ -38,7 +38,7 @@ class UpdateLmsStudentRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateLmsStudentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateLmsStudentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateLmsStudentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\LmsStudent  $lmsStudent
+     * @param  \Unified\Unified_to\Models\Shared\LmsStudent  $lmsStudent
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateLmsStudentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateLmsStudentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

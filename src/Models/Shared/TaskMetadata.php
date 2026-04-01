@@ -13,7 +13,7 @@ class TaskMetadata
 {
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<TaskMetadata1|string|float|bool>|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadata1|string|float|bool>|null')]
@@ -22,7 +22,7 @@ class TaskMetadata
 
     /**
      *
-     * @var ?TaskMetadataFormat $format
+     * @var ?\Unified\Unified_to\Models\Shared\TaskMetadataFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TaskMetadataFormat|null')]
@@ -71,7 +71,7 @@ class TaskMetadata
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<TaskMetadataSchemas1|string|float|bool>|null $value
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|float|bool>|null')]
@@ -79,14 +79,14 @@ class TaskMetadata
     public array|string|float|bool|null $value = null;
 
     /**
-     * @param  array<string, mixed>|string|float|bool|array<TaskMetadata1|string|float|bool>|null  $extraData
-     * @param  ?TaskMetadataFormat  $format
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadata1|string|float|bool>|null  $extraData
+     * @param  ?\Unified\Unified_to\Models\Shared\TaskMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?string  $key
      * @param  ?string  $namespace
      * @param  ?string  $slug
      * @param  ?string  $type
-     * @param  array<string, mixed>|string|float|bool|array<TaskMetadataSchemas1|string|float|bool>|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\TaskMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
     public function __construct(array|string|float|bool|null $extraData = null, ?TaskMetadataFormat $format = null, ?string $id = null, ?string $key = null, ?string $namespace = null, ?string $slug = null, ?string $type = null, array|string|float|bool|null $value = null)

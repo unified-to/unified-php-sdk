@@ -15,7 +15,7 @@ class CreateAssessmentPackageRequest
     /**
      * Used by assessment providers to SUBMIT packages to ATS systems
      *
-     * @var Shared\AssessmentPackage $assessmentPackage
+     * @var \Unified\Unified_to\Models\Shared\AssessmentPackage $assessmentPackage
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AssessmentPackage $assessmentPackage;
@@ -29,7 +29,7 @@ class CreateAssessmentPackageRequest
     public string $connectionId;
 
     /**
-     * @param  Shared\AssessmentPackage  $assessmentPackage
+     * @param  \Unified\Unified_to\Models\Shared\AssessmentPackage  $assessmentPackage
      * @param  string  $connectionId
      * @phpstan-pure
      */

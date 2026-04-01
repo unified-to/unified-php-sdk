@@ -35,7 +35,7 @@ class ListTaskCommentsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\TaskComment> $taskComments
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskComment> $taskComments
      */
     public ?array $taskComments = null;
 
@@ -43,7 +43,7 @@ class ListTaskCommentsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\TaskComment>  $taskComments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskComment>  $taskComments
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $taskComments = null)

@@ -38,7 +38,7 @@ class ListUcCallsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListUcCallsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListUcCallsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListUcCallsRequest
      * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListUcCallsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListUcCallsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

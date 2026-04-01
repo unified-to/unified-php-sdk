@@ -35,7 +35,7 @@ class ListHrisLocationsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisLocation> $hrisLocations
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisLocation> $hrisLocations
      */
     public ?array $hrisLocations = null;
 
@@ -43,7 +43,7 @@ class ListHrisLocationsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisLocation>  $hrisLocations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisLocation>  $hrisLocations
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisLocations = null)

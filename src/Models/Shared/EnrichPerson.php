@@ -15,7 +15,7 @@ class EnrichPerson
     /**
      * The address of the person
      *
-     * @var ?PropertyEnrichPersonAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress|null')]
@@ -65,7 +65,7 @@ class EnrichPerson
     /**
      * An array of email addresses for this person
      *
-     * @var ?array<EnrichEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichEmail>|null')]
@@ -90,7 +90,7 @@ class EnrichPerson
 
     /**
      *
-     * @var ?Gender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\Gender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender|null')]
@@ -166,7 +166,7 @@ class EnrichPerson
     /**
      * An array of telephones for this person
      *
-     * @var ?array<EnrichTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichTelephone>|null')]
@@ -224,7 +224,7 @@ class EnrichPerson
     /**
      * $workHistories
      *
-     * @var ?array<EnrichPersonWorkHistory> $workHistories
+     * @var ?array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory> $workHistories
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('work_histories')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>|null')]
@@ -232,16 +232,16 @@ class EnrichPerson
     public ?array $workHistories = null;
 
     /**
-     * @param  ?PropertyEnrichPersonAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress  $address
      * @param  ?string  $bio
      * @param  ?string  $birthdate
      * @param  ?string  $company
      * @param  ?string  $companyDomain
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<EnrichEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichEmail>  $emails
      * @param  ?string  $facebookUrl
      * @param  ?string  $firstName
-     * @param  ?Gender  $gender
+     * @param  ?\Unified\Unified_to\Models\Shared\Gender  $gender
      * @param  ?string  $githubUrl
      * @param  ?string  $githubUsername
      * @param  ?string  $id
@@ -250,14 +250,14 @@ class EnrichPerson
      * @param  ?string  $linkedinUrl
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<EnrichTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichTelephone>  $telephones
      * @param  ?string  $timezone
      * @param  ?string  $title
      * @param  ?string  $twitterHandle
      * @param  ?string  $twitterUrl
      * @param  ?\DateTime  $updatedAt
      * @param  ?float  $utcOffset
-     * @param  ?array<EnrichPersonWorkHistory>  $workHistories
+     * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>  $workHistories
      * @phpstan-pure
      */
     public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?Gender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)

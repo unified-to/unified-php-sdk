@@ -14,7 +14,7 @@ class CreateRepoRepositoryRequest
 {
     /**
      *
-     * @var Shared\RepoRepository $repoRepository
+     * @var \Unified\Unified_to\Models\Shared\RepoRepository $repoRepository
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoRepository $repoRepository;
@@ -30,7 +30,7 @@ class CreateRepoRepositoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateRepoRepositoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateRepoRepositoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateRepoRepositoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoRepository  $repoRepository
+     * @param  \Unified\Unified_to\Models\Shared\RepoRepository  $repoRepository
      * @param  string  $connectionId
-     * @param  ?array<CreateRepoRepositoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateRepoRepositoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

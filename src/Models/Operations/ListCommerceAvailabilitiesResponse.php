@@ -35,7 +35,7 @@ class ListCommerceAvailabilitiesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CommerceAvailability> $commerceAvailabilities
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceAvailability> $commerceAvailabilities
      */
     public ?array $commerceAvailabilities = null;
 
@@ -43,7 +43,7 @@ class ListCommerceAvailabilitiesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceAvailability>  $commerceAvailabilities
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceAvailability>  $commerceAvailabilities
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceAvailabilities = null)

@@ -14,7 +14,7 @@ class StoragePermission
     /**
      * $roles
      *
-     * @var array<PropertyStoragePermissionRoles> $roles
+     * @var array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles> $roles
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('roles')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>')]
@@ -53,7 +53,7 @@ class StoragePermission
     public ?string $userId = null;
 
     /**
-     * @param  array<PropertyStoragePermissionRoles>  $roles
+     * @param  array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>  $roles
      * @param  ?string  $groupId
      * @param  ?bool  $isHidden
      * @param  ?bool  $isPublic

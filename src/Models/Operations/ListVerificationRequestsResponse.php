@@ -35,7 +35,7 @@ class ListVerificationRequestsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\VerificationRequest> $verificationRequests
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationRequest> $verificationRequests
      */
     public ?array $verificationRequests = null;
 
@@ -43,7 +43,7 @@ class ListVerificationRequestsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\VerificationRequest>  $verificationRequests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationRequest>  $verificationRequests
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $verificationRequests = null)

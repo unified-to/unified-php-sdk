@@ -47,8 +47,8 @@ class Purchaseorder
     /**
      * Create a purchaseorder
      *
-     * @param  Operations\CreateAccountingPurchaseorderRequest  $request
-     * @return Operations\CreateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingPurchaseorder(Operations\CreateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\CreateAccountingPurchaseorderResponse
@@ -114,8 +114,8 @@ class Purchaseorder
     /**
      * Retrieve a purchaseorder
      *
-     * @param  Operations\GetAccountingPurchaseorderRequest  $request
-     * @return Operations\GetAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingPurchaseorder(Operations\GetAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\GetAccountingPurchaseorderResponse
@@ -176,8 +176,8 @@ class Purchaseorder
     /**
      * List all purchaseorders
      *
-     * @param  Operations\ListAccountingPurchaseordersRequest  $request
-     * @return Operations\ListAccountingPurchaseordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingPurchaseorders(Operations\ListAccountingPurchaseordersRequest $request, ?Options $options = null): Operations\ListAccountingPurchaseordersResponse
@@ -238,8 +238,8 @@ class Purchaseorder
     /**
      * Update a purchaseorder
      *
-     * @param  Operations\PatchAccountingPurchaseorderRequest  $request
-     * @return Operations\PatchAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingPurchaseorder(Operations\PatchAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\PatchAccountingPurchaseorderResponse
@@ -305,8 +305,8 @@ class Purchaseorder
     /**
      * Remove a purchaseorder
      *
-     * @param  Operations\RemoveAccountingPurchaseorderRequest  $request
-     * @return Operations\RemoveAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingPurchaseorder(Operations\RemoveAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\RemoveAccountingPurchaseorderResponse
@@ -361,8 +361,8 @@ class Purchaseorder
     /**
      * Update a purchaseorder
      *
-     * @param  Operations\UpdateAccountingPurchaseorderRequest  $request
-     * @return Operations\UpdateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingPurchaseorder(Operations\UpdateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\UpdateAccountingPurchaseorderResponse

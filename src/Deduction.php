@@ -47,8 +47,8 @@ class Deduction
     /**
      * Create a deduction
      *
-     * @param  Operations\CreateHrisDeductionRequest  $request
-     * @return Operations\CreateHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisDeduction(Operations\CreateHrisDeductionRequest $request, ?Options $options = null): Operations\CreateHrisDeductionResponse
@@ -114,8 +114,8 @@ class Deduction
     /**
      * Retrieve a deduction
      *
-     * @param  Operations\GetHrisDeductionRequest  $request
-     * @return Operations\GetHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisDeduction(Operations\GetHrisDeductionRequest $request, ?Options $options = null): Operations\GetHrisDeductionResponse
@@ -176,8 +176,8 @@ class Deduction
     /**
      * List all deductions
      *
-     * @param  Operations\ListHrisDeductionsRequest  $request
-     * @return Operations\ListHrisDeductionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDeductionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisDeductions(Operations\ListHrisDeductionsRequest $request, ?Options $options = null): Operations\ListHrisDeductionsResponse
@@ -238,8 +238,8 @@ class Deduction
     /**
      * Update a deduction
      *
-     * @param  Operations\PatchHrisDeductionRequest  $request
-     * @return Operations\PatchHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisDeduction(Operations\PatchHrisDeductionRequest $request, ?Options $options = null): Operations\PatchHrisDeductionResponse
@@ -305,8 +305,8 @@ class Deduction
     /**
      * Remove a deduction
      *
-     * @param  Operations\RemoveHrisDeductionRequest  $request
-     * @return Operations\RemoveHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisDeduction(Operations\RemoveHrisDeductionRequest $request, ?Options $options = null): Operations\RemoveHrisDeductionResponse
@@ -361,8 +361,8 @@ class Deduction
     /**
      * Update a deduction
      *
-     * @param  Operations\UpdateHrisDeductionRequest  $request
-     * @return Operations\UpdateHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisDeduction(Operations\UpdateHrisDeductionRequest $request, ?Options $options = null): Operations\UpdateHrisDeductionResponse

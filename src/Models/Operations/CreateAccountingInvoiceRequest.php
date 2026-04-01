@@ -14,7 +14,7 @@ class CreateAccountingInvoiceRequest
 {
     /**
      *
-     * @var Shared\AccountingInvoice $accountingInvoice
+     * @var \Unified\Unified_to\Models\Shared\AccountingInvoice $accountingInvoice
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingInvoice $accountingInvoice;
@@ -30,7 +30,7 @@ class CreateAccountingInvoiceRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingInvoiceQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingInvoiceRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingInvoice  $accountingInvoice
+     * @param  \Unified\Unified_to\Models\Shared\AccountingInvoice  $accountingInvoice
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingInvoiceQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingInvoiceQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

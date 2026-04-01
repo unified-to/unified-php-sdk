@@ -47,8 +47,8 @@ class Transaction
     /**
      * Create a transaction
      *
-     * @param  Operations\CreateAccountingTransactionRequest  $request
-     * @return Operations\CreateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingTransaction(Operations\CreateAccountingTransactionRequest $request, ?Options $options = null): Operations\CreateAccountingTransactionResponse
@@ -114,8 +114,8 @@ class Transaction
     /**
      * Retrieve a transaction
      *
-     * @param  Operations\GetAccountingTransactionRequest  $request
-     * @return Operations\GetAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingTransaction(Operations\GetAccountingTransactionRequest $request, ?Options $options = null): Operations\GetAccountingTransactionResponse
@@ -176,8 +176,8 @@ class Transaction
     /**
      * List all transactions
      *
-     * @param  Operations\ListAccountingTransactionsRequest  $request
-     * @return Operations\ListAccountingTransactionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingTransactions(Operations\ListAccountingTransactionsRequest $request, ?Options $options = null): Operations\ListAccountingTransactionsResponse
@@ -238,8 +238,8 @@ class Transaction
     /**
      * Update a transaction
      *
-     * @param  Operations\PatchAccountingTransactionRequest  $request
-     * @return Operations\PatchAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingTransaction(Operations\PatchAccountingTransactionRequest $request, ?Options $options = null): Operations\PatchAccountingTransactionResponse
@@ -305,8 +305,8 @@ class Transaction
     /**
      * Remove a transaction
      *
-     * @param  Operations\RemoveAccountingTransactionRequest  $request
-     * @return Operations\RemoveAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingTransaction(Operations\RemoveAccountingTransactionRequest $request, ?Options $options = null): Operations\RemoveAccountingTransactionResponse
@@ -361,8 +361,8 @@ class Transaction
     /**
      * Update a transaction
      *
-     * @param  Operations\UpdateAccountingTransactionRequest  $request
-     * @return Operations\UpdateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingTransaction(Operations\UpdateAccountingTransactionRequest $request, ?Options $options = null): Operations\UpdateAccountingTransactionResponse

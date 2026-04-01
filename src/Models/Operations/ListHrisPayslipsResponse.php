@@ -35,7 +35,7 @@ class ListHrisPayslipsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisPayslip> $hrisPayslips
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisPayslip> $hrisPayslips
      */
     public ?array $hrisPayslips = null;
 
@@ -43,7 +43,7 @@ class ListHrisPayslipsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisPayslip>  $hrisPayslips
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisPayslip>  $hrisPayslips
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisPayslips = null)

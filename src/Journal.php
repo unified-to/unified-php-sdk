@@ -47,8 +47,8 @@ class Journal
     /**
      * Create a journal
      *
-     * @param  Operations\CreateAccountingJournalRequest  $request
-     * @return Operations\CreateAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingJournal(Operations\CreateAccountingJournalRequest $request, ?Options $options = null): Operations\CreateAccountingJournalResponse
@@ -114,8 +114,8 @@ class Journal
     /**
      * Retrieve a journal
      *
-     * @param  Operations\GetAccountingJournalRequest  $request
-     * @return Operations\GetAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingJournal(Operations\GetAccountingJournalRequest $request, ?Options $options = null): Operations\GetAccountingJournalResponse
@@ -176,8 +176,8 @@ class Journal
     /**
      * List all journals
      *
-     * @param  Operations\ListAccountingJournalsRequest  $request
-     * @return Operations\ListAccountingJournalsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingJournalsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingJournals(Operations\ListAccountingJournalsRequest $request, ?Options $options = null): Operations\ListAccountingJournalsResponse
@@ -238,8 +238,8 @@ class Journal
     /**
      * Update a journal
      *
-     * @param  Operations\PatchAccountingJournalRequest  $request
-     * @return Operations\PatchAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingJournal(Operations\PatchAccountingJournalRequest $request, ?Options $options = null): Operations\PatchAccountingJournalResponse
@@ -305,8 +305,8 @@ class Journal
     /**
      * Remove a journal
      *
-     * @param  Operations\RemoveAccountingJournalRequest  $request
-     * @return Operations\RemoveAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingJournal(Operations\RemoveAccountingJournalRequest $request, ?Options $options = null): Operations\RemoveAccountingJournalResponse
@@ -361,8 +361,8 @@ class Journal
     /**
      * Update a journal
      *
-     * @param  Operations\UpdateAccountingJournalRequest  $request
-     * @return Operations\UpdateAccountingJournalResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingJournalRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingJournal(Operations\UpdateAccountingJournalRequest $request, ?Options $options = null): Operations\UpdateAccountingJournalResponse

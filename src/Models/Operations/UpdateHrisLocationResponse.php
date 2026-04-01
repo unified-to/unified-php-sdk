@@ -35,7 +35,7 @@ class UpdateHrisLocationResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisLocation $hrisLocation
+     * @var ?\Unified\Unified_to\Models\Shared\HrisLocation $hrisLocation
      */
     public ?Shared\HrisLocation $hrisLocation = null;
 
@@ -43,7 +43,7 @@ class UpdateHrisLocationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisLocation  $hrisLocation
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisLocation  $hrisLocation
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisLocation $hrisLocation = null)

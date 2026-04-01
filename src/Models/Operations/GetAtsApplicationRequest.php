@@ -30,7 +30,7 @@ class GetAtsApplicationRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAtsApplicationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAtsApplicationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAtsApplicationRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAtsApplicationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAtsApplicationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

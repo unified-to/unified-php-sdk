@@ -22,7 +22,7 @@ class ListCommerceCollectionsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCommerceCollectionsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCommerceCollectionsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -112,7 +112,7 @@ class ListCommerceCollectionsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListCommerceCollectionsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceCollectionsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

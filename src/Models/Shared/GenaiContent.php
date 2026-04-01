@@ -20,7 +20,7 @@ class GenaiContent
 
     /**
      *
-     * @var ?Role $role
+     * @var ?\Unified\Unified_to\Models\Shared\Role $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Role|null')]
@@ -29,7 +29,7 @@ class GenaiContent
 
     /**
      * @param  string  $content
-     * @param  ?Role  $role
+     * @param  ?\Unified\Unified_to\Models\Shared\Role  $role
      * @phpstan-pure
      */
     public function __construct(string $content, ?Role $role = null)

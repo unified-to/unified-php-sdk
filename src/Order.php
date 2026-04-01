@@ -47,8 +47,8 @@ class Order
     /**
      * Create an order
      *
-     * @param  Operations\CreateAccountingOrderRequest  $request
-     * @return Operations\CreateAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingOrder(Operations\CreateAccountingOrderRequest $request, ?Options $options = null): Operations\CreateAccountingOrderResponse
@@ -114,8 +114,8 @@ class Order
     /**
      * Retrieve an order
      *
-     * @param  Operations\GetAccountingOrderRequest  $request
-     * @return Operations\GetAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingOrder(Operations\GetAccountingOrderRequest $request, ?Options $options = null): Operations\GetAccountingOrderResponse
@@ -176,8 +176,8 @@ class Order
     /**
      * List all orders
      *
-     * @param  Operations\ListAccountingOrdersRequest  $request
-     * @return Operations\ListAccountingOrdersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrdersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrdersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingOrders(Operations\ListAccountingOrdersRequest $request, ?Options $options = null): Operations\ListAccountingOrdersResponse
@@ -238,8 +238,8 @@ class Order
     /**
      * Update an order
      *
-     * @param  Operations\PatchAccountingOrderRequest  $request
-     * @return Operations\PatchAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingOrder(Operations\PatchAccountingOrderRequest $request, ?Options $options = null): Operations\PatchAccountingOrderResponse
@@ -305,8 +305,8 @@ class Order
     /**
      * Update an order
      *
-     * @param  Operations\PatchAssessmentOrderRequest  $request
-     * @return Operations\PatchAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAssessmentOrder(Operations\PatchAssessmentOrderRequest $request, ?Options $options = null): Operations\PatchAssessmentOrderResponse
@@ -372,8 +372,8 @@ class Order
     /**
      * Remove an order
      *
-     * @param  Operations\RemoveAccountingOrderRequest  $request
-     * @return Operations\RemoveAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingOrder(Operations\RemoveAccountingOrderRequest $request, ?Options $options = null): Operations\RemoveAccountingOrderResponse
@@ -428,8 +428,8 @@ class Order
     /**
      * Update an order
      *
-     * @param  Operations\UpdateAccountingOrderRequest  $request
-     * @return Operations\UpdateAccountingOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingOrder(Operations\UpdateAccountingOrderRequest $request, ?Options $options = null): Operations\UpdateAccountingOrderResponse
@@ -495,8 +495,8 @@ class Order
     /**
      * Update an order
      *
-     * @param  Operations\UpdateAssessmentOrderRequest  $request
-     * @return Operations\UpdateAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAssessmentOrder(Operations\UpdateAssessmentOrderRequest $request, ?Options $options = null): Operations\UpdateAssessmentOrderResponse

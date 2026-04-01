@@ -14,7 +14,7 @@ class UpdateCommerceSaleschannelRequest
 {
     /**
      *
-     * @var Shared\CommerceSaleschannel $commerceSaleschannel
+     * @var \Unified\Unified_to\Models\Shared\CommerceSaleschannel $commerceSaleschannel
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceSaleschannel $commerceSaleschannel;
@@ -38,7 +38,7 @@ class UpdateCommerceSaleschannelRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCommerceSaleschannelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCommerceSaleschannelRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceSaleschannel  $commerceSaleschannel
+     * @param  \Unified\Unified_to\Models\Shared\CommerceSaleschannel  $commerceSaleschannel
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCommerceSaleschannelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

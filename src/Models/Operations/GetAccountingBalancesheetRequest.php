@@ -30,7 +30,7 @@ class GetAccountingBalancesheetRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingBalancesheetQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingBalancesheetQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingBalancesheetRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingBalancesheetQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingBalancesheetQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

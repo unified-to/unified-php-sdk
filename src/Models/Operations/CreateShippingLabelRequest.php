@@ -14,7 +14,7 @@ class CreateShippingLabelRequest
 {
     /**
      *
-     * @var Shared\ShippingLabel $shippingLabel
+     * @var \Unified\Unified_to\Models\Shared\ShippingLabel $shippingLabel
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ShippingLabel $shippingLabel;
@@ -30,7 +30,7 @@ class CreateShippingLabelRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateShippingLabelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateShippingLabelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateShippingLabelRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\ShippingLabel  $shippingLabel
+     * @param  \Unified\Unified_to\Models\Shared\ShippingLabel  $shippingLabel
      * @param  string  $connectionId
-     * @param  ?array<CreateShippingLabelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateShippingLabelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

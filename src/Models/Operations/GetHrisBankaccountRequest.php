@@ -30,7 +30,7 @@ class GetHrisBankaccountRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetHrisBankaccountQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetHrisBankaccountQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetHrisBankaccountRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetHrisBankaccountQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetHrisBankaccountQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

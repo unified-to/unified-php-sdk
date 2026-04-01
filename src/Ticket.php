@@ -47,8 +47,8 @@ class Ticket
     /**
      * Create a ticket
      *
-     * @param  Operations\CreateTicketingTicketRequest  $request
-     * @return Operations\CreateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingTicket(Operations\CreateTicketingTicketRequest $request, ?Options $options = null): Operations\CreateTicketingTicketResponse
@@ -114,8 +114,8 @@ class Ticket
     /**
      * Retrieve a ticket
      *
-     * @param  Operations\GetTicketingTicketRequest  $request
-     * @return Operations\GetTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingTicket(Operations\GetTicketingTicketRequest $request, ?Options $options = null): Operations\GetTicketingTicketResponse
@@ -176,8 +176,8 @@ class Ticket
     /**
      * List all tickets
      *
-     * @param  Operations\ListTicketingTicketsRequest  $request
-     * @return Operations\ListTicketingTicketsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingTickets(Operations\ListTicketingTicketsRequest $request, ?Options $options = null): Operations\ListTicketingTicketsResponse
@@ -238,8 +238,8 @@ class Ticket
     /**
      * Update a ticket
      *
-     * @param  Operations\PatchTicketingTicketRequest  $request
-     * @return Operations\PatchTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingTicket(Operations\PatchTicketingTicketRequest $request, ?Options $options = null): Operations\PatchTicketingTicketResponse
@@ -305,8 +305,8 @@ class Ticket
     /**
      * Remove a ticket
      *
-     * @param  Operations\RemoveTicketingTicketRequest  $request
-     * @return Operations\RemoveTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingTicket(Operations\RemoveTicketingTicketRequest $request, ?Options $options = null): Operations\RemoveTicketingTicketResponse
@@ -361,8 +361,8 @@ class Ticket
     /**
      * Update a ticket
      *
-     * @param  Operations\UpdateTicketingTicketRequest  $request
-     * @return Operations\UpdateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingTicket(Operations\UpdateTicketingTicketRequest $request, ?Options $options = null): Operations\UpdateTicketingTicketResponse

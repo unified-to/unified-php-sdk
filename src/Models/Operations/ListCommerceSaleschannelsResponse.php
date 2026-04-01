@@ -35,7 +35,7 @@ class ListCommerceSaleschannelsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CommerceSaleschannel> $commerceSaleschannels
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceSaleschannel> $commerceSaleschannels
      */
     public ?array $commerceSaleschannels = null;
 
@@ -43,7 +43,7 @@ class ListCommerceSaleschannelsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceSaleschannel>  $commerceSaleschannels
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceSaleschannel>  $commerceSaleschannels
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceSaleschannels = null)

@@ -35,7 +35,7 @@ class GetAccountingOrganizationResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingOrganization $accountingOrganization
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingOrganization $accountingOrganization
      */
     public ?Shared\AccountingOrganization $accountingOrganization = null;
 
@@ -43,7 +43,7 @@ class GetAccountingOrganizationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingOrganization  $accountingOrganization
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingOrganization  $accountingOrganization
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingOrganization $accountingOrganization = null)

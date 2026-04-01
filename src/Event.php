@@ -47,8 +47,8 @@ class Event
     /**
      * Create an event
      *
-     * @param  Operations\CreateCalendarEventRequest  $request
-     * @return Operations\CreateCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarEvent(Operations\CreateCalendarEventRequest $request, ?Options $options = null): Operations\CreateCalendarEventResponse
@@ -114,8 +114,8 @@ class Event
     /**
      * Create an event
      *
-     * @param  Operations\CreateCrmEventRequest  $request
-     * @return Operations\CreateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmEvent(Operations\CreateCrmEventRequest $request, ?Options $options = null): Operations\CreateCrmEventResponse
@@ -181,8 +181,8 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  Operations\GetCalendarEventRequest  $request
-     * @return Operations\GetCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarEvent(Operations\GetCalendarEventRequest $request, ?Options $options = null): Operations\GetCalendarEventResponse
@@ -243,8 +243,8 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  Operations\GetCrmEventRequest  $request
-     * @return Operations\GetCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmEvent(Operations\GetCrmEventRequest $request, ?Options $options = null): Operations\GetCrmEventResponse
@@ -305,8 +305,8 @@ class Event
     /**
      * List all events
      *
-     * @param  Operations\ListCalendarEventsRequest  $request
-     * @return Operations\ListCalendarEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarEvents(Operations\ListCalendarEventsRequest $request, ?Options $options = null): Operations\ListCalendarEventsResponse
@@ -367,8 +367,8 @@ class Event
     /**
      * List all events
      *
-     * @param  Operations\ListCrmEventsRequest  $request
-     * @return Operations\ListCrmEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmEvents(Operations\ListCrmEventsRequest $request, ?Options $options = null): Operations\ListCrmEventsResponse
@@ -429,8 +429,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\PatchCalendarEventRequest  $request
-     * @return Operations\PatchCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarEvent(Operations\PatchCalendarEventRequest $request, ?Options $options = null): Operations\PatchCalendarEventResponse
@@ -496,8 +496,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\PatchCrmEventRequest  $request
-     * @return Operations\PatchCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmEvent(Operations\PatchCrmEventRequest $request, ?Options $options = null): Operations\PatchCrmEventResponse
@@ -563,8 +563,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\PatchMessagingEventRequest  $request
-     * @return Operations\PatchMessagingEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMessagingEvent(Operations\PatchMessagingEventRequest $request, ?Options $options = null): Operations\PatchMessagingEventResponse
@@ -630,8 +630,8 @@ class Event
     /**
      * Remove an event
      *
-     * @param  Operations\RemoveCalendarEventRequest  $request
-     * @return Operations\RemoveCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarEvent(Operations\RemoveCalendarEventRequest $request, ?Options $options = null): Operations\RemoveCalendarEventResponse
@@ -686,8 +686,8 @@ class Event
     /**
      * Remove an event
      *
-     * @param  Operations\RemoveCrmEventRequest  $request
-     * @return Operations\RemoveCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmEvent(Operations\RemoveCrmEventRequest $request, ?Options $options = null): Operations\RemoveCrmEventResponse
@@ -742,8 +742,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\UpdateCalendarEventRequest  $request
-     * @return Operations\UpdateCalendarEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarEvent(Operations\UpdateCalendarEventRequest $request, ?Options $options = null): Operations\UpdateCalendarEventResponse
@@ -809,8 +809,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\UpdateCrmEventRequest  $request
-     * @return Operations\UpdateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmEvent(Operations\UpdateCrmEventRequest $request, ?Options $options = null): Operations\UpdateCrmEventResponse
@@ -876,8 +876,8 @@ class Event
     /**
      * Update an event
      *
-     * @param  Operations\UpdateMessagingEventRequest  $request
-     * @return Operations\UpdateMessagingEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMessagingEvent(Operations\UpdateMessagingEventRequest $request, ?Options $options = null): Operations\UpdateMessagingEventResponse

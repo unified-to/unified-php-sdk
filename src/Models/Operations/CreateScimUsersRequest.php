@@ -14,7 +14,7 @@ class CreateScimUsersRequest
 {
     /**
      *
-     * @var Shared\ScimUser $scimUser
+     * @var \Unified\Unified_to\Models\Shared\ScimUser $scimUser
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\ScimUser $scimUser;
@@ -63,7 +63,7 @@ class CreateScimUsersRequest
     public ?float $startIndex = null;
 
     /**
-     * @param  Shared\ScimUser  $scimUser
+     * @param  \Unified\Unified_to\Models\Shared\ScimUser  $scimUser
      * @param  string  $connectionId
      * @param  ?float  $count
      * @param  ?string  $filter

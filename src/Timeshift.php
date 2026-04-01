@@ -47,8 +47,8 @@ class Timeshift
     /**
      * Create a timeshift
      *
-     * @param  Operations\CreateHrisTimeshiftRequest  $request
-     * @return Operations\CreateHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisTimeshift(Operations\CreateHrisTimeshiftRequest $request, ?Options $options = null): Operations\CreateHrisTimeshiftResponse
@@ -114,8 +114,8 @@ class Timeshift
     /**
      * Retrieve a timeshift
      *
-     * @param  Operations\GetHrisTimeshiftRequest  $request
-     * @return Operations\GetHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisTimeshift(Operations\GetHrisTimeshiftRequest $request, ?Options $options = null): Operations\GetHrisTimeshiftResponse
@@ -176,8 +176,8 @@ class Timeshift
     /**
      * List all timeshifts
      *
-     * @param  Operations\ListHrisTimeshiftsRequest  $request
-     * @return Operations\ListHrisTimeshiftsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisTimeshifts(Operations\ListHrisTimeshiftsRequest $request, ?Options $options = null): Operations\ListHrisTimeshiftsResponse
@@ -238,8 +238,8 @@ class Timeshift
     /**
      * Update a timeshift
      *
-     * @param  Operations\PatchHrisTimeshiftRequest  $request
-     * @return Operations\PatchHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisTimeshift(Operations\PatchHrisTimeshiftRequest $request, ?Options $options = null): Operations\PatchHrisTimeshiftResponse
@@ -305,8 +305,8 @@ class Timeshift
     /**
      * Remove a timeshift
      *
-     * @param  Operations\RemoveHrisTimeshiftRequest  $request
-     * @return Operations\RemoveHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisTimeshift(Operations\RemoveHrisTimeshiftRequest $request, ?Options $options = null): Operations\RemoveHrisTimeshiftResponse
@@ -361,8 +361,8 @@ class Timeshift
     /**
      * Update a timeshift
      *
-     * @param  Operations\UpdateHrisTimeshiftRequest  $request
-     * @return Operations\UpdateHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisTimeshift(Operations\UpdateHrisTimeshiftRequest $request, ?Options $options = null): Operations\UpdateHrisTimeshiftResponse

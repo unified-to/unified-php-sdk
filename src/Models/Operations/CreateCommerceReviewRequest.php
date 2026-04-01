@@ -14,7 +14,7 @@ class CreateCommerceReviewRequest
 {
     /**
      *
-     * @var Shared\CommerceReview $commerceReview
+     * @var \Unified\Unified_to\Models\Shared\CommerceReview $commerceReview
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceReview $commerceReview;
@@ -30,7 +30,7 @@ class CreateCommerceReviewRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCommerceReviewQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCommerceReviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCommerceReviewRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceReview  $commerceReview
+     * @param  \Unified\Unified_to\Models\Shared\CommerceReview  $commerceReview
      * @param  string  $connectionId
-     * @param  ?array<CreateCommerceReviewQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCommerceReviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

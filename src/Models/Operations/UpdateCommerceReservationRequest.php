@@ -14,7 +14,7 @@ class UpdateCommerceReservationRequest
 {
     /**
      *
-     * @var Shared\CommerceReservation $commerceReservation
+     * @var \Unified\Unified_to\Models\Shared\CommerceReservation $commerceReservation
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceReservation $commerceReservation;
@@ -38,7 +38,7 @@ class UpdateCommerceReservationRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCommerceReservationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceReservationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCommerceReservationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceReservation  $commerceReservation
+     * @param  \Unified\Unified_to\Models\Shared\CommerceReservation  $commerceReservation
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCommerceReservationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCommerceReservationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

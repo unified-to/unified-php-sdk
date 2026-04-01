@@ -47,7 +47,7 @@ class HrisPayslip
     /**
      * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      *
-     * @var ?PropertyHrisPayslipDeduction $deduction
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeduction $deduction
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('deduction')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeduction|null')]
@@ -57,7 +57,7 @@ class HrisPayslip
     /**
      * $details
      *
-     * @var ?array<HrisPayslipDetail> $details
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail> $details
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('details')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>|null')]
@@ -106,7 +106,7 @@ class HrisPayslip
 
     /**
      *
-     * @var ?PaymentType $paymentType
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentType $paymentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentType|null')]
@@ -142,14 +142,14 @@ class HrisPayslip
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
-     * @param  ?PropertyHrisPayslipDeduction  $deduction
-     * @param  ?array<HrisPayslipDetail>  $details
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeduction  $deduction
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>  $details
      * @param  ?\DateTime  $endAt
      * @param  ?float  $grossAmount
      * @param  ?string  $id
      * @param  ?float  $netAmount
      * @param  ?\DateTime  $paidAt
-     * @param  ?PaymentType  $paymentType
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentType  $paymentType
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId

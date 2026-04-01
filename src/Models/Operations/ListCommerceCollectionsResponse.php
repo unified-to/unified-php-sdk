@@ -35,7 +35,7 @@ class ListCommerceCollectionsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CommerceCollection> $commerceCollections
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceCollection> $commerceCollections
      */
     public ?array $commerceCollections = null;
 
@@ -43,7 +43,7 @@ class ListCommerceCollectionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CommerceCollection>  $commerceCollections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceCollection>  $commerceCollections
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $commerceCollections = null)

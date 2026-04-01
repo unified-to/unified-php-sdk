@@ -14,7 +14,7 @@ class CreateAdsInsertionorderRequest
 {
     /**
      *
-     * @var Shared\AdsInsertionorder $adsInsertionorder
+     * @var \Unified\Unified_to\Models\Shared\AdsInsertionorder $adsInsertionorder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsInsertionorder $adsInsertionorder;
@@ -30,7 +30,7 @@ class CreateAdsInsertionorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAdsInsertionorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAdsInsertionorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAdsInsertionorderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsInsertionorder  $adsInsertionorder
+     * @param  \Unified\Unified_to\Models\Shared\AdsInsertionorder  $adsInsertionorder
      * @param  string  $connectionId
-     * @param  ?array<CreateAdsInsertionorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAdsInsertionorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

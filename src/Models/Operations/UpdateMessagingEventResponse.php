@@ -35,7 +35,7 @@ class UpdateMessagingEventResponse
     /**
      * Successful
      *
-     * @var ?Shared\MessagingEvent $messagingEvent
+     * @var ?\Unified\Unified_to\Models\Shared\MessagingEvent $messagingEvent
      */
     public ?Shared\MessagingEvent $messagingEvent = null;
 
@@ -43,7 +43,7 @@ class UpdateMessagingEventResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\MessagingEvent  $messagingEvent
+     * @param  ?\Unified\Unified_to\Models\Shared\MessagingEvent  $messagingEvent
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MessagingEvent $messagingEvent = null)

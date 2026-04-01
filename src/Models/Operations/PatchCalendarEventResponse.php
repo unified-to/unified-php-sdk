@@ -35,7 +35,7 @@ class PatchCalendarEventResponse
     /**
      * Successful
      *
-     * @var ?Shared\CalendarEvent $calendarEvent
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarEvent $calendarEvent
      */
     public ?Shared\CalendarEvent $calendarEvent = null;
 
@@ -43,7 +43,7 @@ class PatchCalendarEventResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CalendarEvent  $calendarEvent
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarEvent  $calendarEvent
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CalendarEvent $calendarEvent = null)

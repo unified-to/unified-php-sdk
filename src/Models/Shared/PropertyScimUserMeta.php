@@ -37,7 +37,7 @@ class PropertyScimUserMeta
 
     /**
      *
-     * @var ?PropertyScimUserMetaResourceType $resourceType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserMetaResourceType $resourceType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('resourceType')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserMetaResourceType|null')]
@@ -56,7 +56,7 @@ class PropertyScimUserMeta
      * @param  ?string  $created
      * @param  ?string  $lastModified
      * @param  ?string  $location
-     * @param  ?PropertyScimUserMetaResourceType  $resourceType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserMetaResourceType  $resourceType
      * @param  ?string  $version
      * @phpstan-pure
      */

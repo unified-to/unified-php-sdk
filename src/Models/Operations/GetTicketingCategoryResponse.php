@@ -35,7 +35,7 @@ class GetTicketingCategoryResponse
     /**
      * Successful
      *
-     * @var ?Shared\TicketingCategory $ticketingCategory
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingCategory $ticketingCategory
      */
     public ?Shared\TicketingCategory $ticketingCategory = null;
 
@@ -43,7 +43,7 @@ class GetTicketingCategoryResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\TicketingCategory  $ticketingCategory
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingCategory  $ticketingCategory
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TicketingCategory $ticketingCategory = null)

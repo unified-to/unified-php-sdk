@@ -45,7 +45,7 @@ class PropertyCalendarRecordingTranscriptAttendee
 
     /**
      *
-     * @var ?PropertyCalendarRecordingTranscriptAttendeeStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendeeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendeeStatus|null')]
@@ -65,7 +65,7 @@ class PropertyCalendarRecordingTranscriptAttendee
      * @param  ?bool  $isCohost
      * @param  ?string  $name
      * @param  ?bool  $required
-     * @param  ?PropertyCalendarRecordingTranscriptAttendeeStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarRecordingTranscriptAttendeeStatus  $status
      * @param  ?string  $userId
      * @phpstan-pure
      */

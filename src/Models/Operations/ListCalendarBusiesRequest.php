@@ -38,7 +38,7 @@ class ListCalendarBusiesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCalendarBusiesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCalendarBusiesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListCalendarBusiesRequest
      * @param  string  $connectionId
      * @param  ?string  $calendarId
      * @param  ?string  $endLt
-     * @param  ?array<ListCalendarBusiesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarBusiesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

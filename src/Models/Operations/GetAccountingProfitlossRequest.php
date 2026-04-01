@@ -30,7 +30,7 @@ class GetAccountingProfitlossRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingProfitlossQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingProfitlossQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingProfitlossRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingProfitlossQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingProfitlossQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

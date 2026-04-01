@@ -47,8 +47,8 @@ class Lead
     /**
      * Create a lead
      *
-     * @param  Operations\CreateCrmLeadRequest  $request
-     * @return Operations\CreateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmLead(Operations\CreateCrmLeadRequest $request, ?Options $options = null): Operations\CreateCrmLeadResponse
@@ -114,8 +114,8 @@ class Lead
     /**
      * Retrieve a lead
      *
-     * @param  Operations\GetCrmLeadRequest  $request
-     * @return Operations\GetCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmLead(Operations\GetCrmLeadRequest $request, ?Options $options = null): Operations\GetCrmLeadResponse
@@ -176,8 +176,8 @@ class Lead
     /**
      * List all leads
      *
-     * @param  Operations\ListCrmLeadsRequest  $request
-     * @return Operations\ListCrmLeadsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmLeads(Operations\ListCrmLeadsRequest $request, ?Options $options = null): Operations\ListCrmLeadsResponse
@@ -238,8 +238,8 @@ class Lead
     /**
      * Update a lead
      *
-     * @param  Operations\PatchCrmLeadRequest  $request
-     * @return Operations\PatchCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmLead(Operations\PatchCrmLeadRequest $request, ?Options $options = null): Operations\PatchCrmLeadResponse
@@ -305,8 +305,8 @@ class Lead
     /**
      * Remove a lead
      *
-     * @param  Operations\RemoveCrmLeadRequest  $request
-     * @return Operations\RemoveCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmLead(Operations\RemoveCrmLeadRequest $request, ?Options $options = null): Operations\RemoveCrmLeadResponse
@@ -361,8 +361,8 @@ class Lead
     /**
      * Update a lead
      *
-     * @param  Operations\UpdateCrmLeadRequest  $request
-     * @return Operations\UpdateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmLead(Operations\UpdateCrmLeadRequest $request, ?Options $options = null): Operations\UpdateCrmLeadResponse

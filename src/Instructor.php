@@ -47,8 +47,8 @@ class Instructor
     /**
      * Create an instructor
      *
-     * @param  Operations\CreateLmsInstructorRequest  $request
-     * @return Operations\CreateLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsInstructorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsInstructor(Operations\CreateLmsInstructorRequest $request, ?Options $options = null): Operations\CreateLmsInstructorResponse
@@ -114,8 +114,8 @@ class Instructor
     /**
      * Retrieve an instructor
      *
-     * @param  Operations\GetLmsInstructorRequest  $request
-     * @return Operations\GetLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsInstructorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsInstructor(Operations\GetLmsInstructorRequest $request, ?Options $options = null): Operations\GetLmsInstructorResponse
@@ -176,8 +176,8 @@ class Instructor
     /**
      * List all instructors
      *
-     * @param  Operations\ListLmsInstructorsRequest  $request
-     * @return Operations\ListLmsInstructorsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsInstructorsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsInstructorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsInstructors(Operations\ListLmsInstructorsRequest $request, ?Options $options = null): Operations\ListLmsInstructorsResponse
@@ -238,8 +238,8 @@ class Instructor
     /**
      * Update an instructor
      *
-     * @param  Operations\PatchLmsInstructorRequest  $request
-     * @return Operations\PatchLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsInstructorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsInstructor(Operations\PatchLmsInstructorRequest $request, ?Options $options = null): Operations\PatchLmsInstructorResponse
@@ -305,8 +305,8 @@ class Instructor
     /**
      * Remove an instructor
      *
-     * @param  Operations\RemoveLmsInstructorRequest  $request
-     * @return Operations\RemoveLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsInstructorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsInstructor(Operations\RemoveLmsInstructorRequest $request, ?Options $options = null): Operations\RemoveLmsInstructorResponse
@@ -361,8 +361,8 @@ class Instructor
     /**
      * Update an instructor
      *
-     * @param  Operations\UpdateLmsInstructorRequest  $request
-     * @return Operations\UpdateLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsInstructorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsInstructor(Operations\UpdateLmsInstructorRequest $request, ?Options $options = null): Operations\UpdateLmsInstructorResponse

@@ -64,7 +64,7 @@ class VerificationParameter
 
     /**
      *
-     * @var ?VerificationParameterType $type
+     * @var ?\Unified\Unified_to\Models\Shared\VerificationParameterType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VerificationParameterType|null')]
@@ -88,7 +88,7 @@ class VerificationParameter
      * @param  ?bool  $isRequired
      * @param  ?array<string>  $options
      * @param  ?string  $publicQuestion
-     * @param  ?VerificationParameterType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\VerificationParameterType  $type
      * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */

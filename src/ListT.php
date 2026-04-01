@@ -47,8 +47,8 @@ class ListT
     /**
      * Create a list
      *
-     * @param  Operations\CreateMartechListRequest  $request
-     * @return Operations\CreateMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMartechList(Operations\CreateMartechListRequest $request, ?Options $options = null): Operations\CreateMartechListResponse
@@ -114,8 +114,8 @@ class ListT
     /**
      * Retrieve a list
      *
-     * @param  Operations\GetMartechListRequest  $request
-     * @return Operations\GetMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMartechList(Operations\GetMartechListRequest $request, ?Options $options = null): Operations\GetMartechListResponse
@@ -176,8 +176,8 @@ class ListT
     /**
      * List all lists
      *
-     * @param  Operations\ListMartechListsRequest  $request
-     * @return Operations\ListMartechListsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechListsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMartechLists(Operations\ListMartechListsRequest $request, ?Options $options = null): Operations\ListMartechListsResponse
@@ -238,8 +238,8 @@ class ListT
     /**
      * Update a list
      *
-     * @param  Operations\PatchMartechListRequest  $request
-     * @return Operations\PatchMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMartechList(Operations\PatchMartechListRequest $request, ?Options $options = null): Operations\PatchMartechListResponse
@@ -305,8 +305,8 @@ class ListT
     /**
      * Remove a list
      *
-     * @param  Operations\RemoveMartechListRequest  $request
-     * @return Operations\RemoveMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMartechList(Operations\RemoveMartechListRequest $request, ?Options $options = null): Operations\RemoveMartechListResponse
@@ -361,8 +361,8 @@ class ListT
     /**
      * Update a list
      *
-     * @param  Operations\UpdateMartechListRequest  $request
-     * @return Operations\UpdateMartechListResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMartechList(Operations\UpdateMartechListRequest $request, ?Options $options = null): Operations\UpdateMartechListResponse

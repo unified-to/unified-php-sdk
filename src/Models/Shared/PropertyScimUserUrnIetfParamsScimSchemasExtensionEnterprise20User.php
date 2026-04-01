@@ -15,7 +15,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     /**
      * $additionalManagers
      *
-     * @var ?array<ScimManager> $additionalManagers
+     * @var ?array<\Unified\Unified_to\Models\Shared\ScimManager> $additionalManagers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('additionalManagers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ScimManager>|null')]
@@ -80,7 +80,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender|null')]
@@ -106,7 +106,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     /**
      * "id" attribute of another User.
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('manager')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager|null')]
@@ -130,7 +130,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?\DateTime $startDate = null;
 
     /**
-     * @param  ?array<ScimManager>  $additionalManagers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ScimManager>  $additionalManagers
      * @param  ?\DateTime  $birthday
      * @param  ?string  $costCenter
      * @param  ?string  $currency
@@ -138,10 +138,10 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
      * @param  ?string  $division
      * @param  ?string  $employeeNumber
      * @param  ?\DateTime  $endDate
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender  $gender
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender  $gender
      * @param  ?string  $level
      * @param  ?string  $location
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager  $manager
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager  $manager
      * @param  ?string  $organization
      * @param  ?\DateTime  $startDate
      * @phpstan-pure

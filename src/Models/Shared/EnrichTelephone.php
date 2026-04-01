@@ -20,7 +20,7 @@ class EnrichTelephone
 
     /**
      *
-     * @var ?EnrichTelephoneType $type
+     * @var ?\Unified\Unified_to\Models\Shared\EnrichTelephoneType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichTelephoneType|null')]
@@ -29,7 +29,7 @@ class EnrichTelephone
 
     /**
      * @param  string  $telephone
-     * @param  ?EnrichTelephoneType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\EnrichTelephoneType  $type
      * @phpstan-pure
      */
     public function __construct(string $telephone, ?EnrichTelephoneType $type = null)

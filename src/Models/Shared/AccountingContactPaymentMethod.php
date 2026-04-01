@@ -13,7 +13,7 @@ class AccountingContactPaymentMethod
 {
     /**
      *
-     * @var AccountingContactPaymentMethodType $type
+     * @var \Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType')]
@@ -44,7 +44,7 @@ class AccountingContactPaymentMethod
     public ?string $name = null;
 
     /**
-     * @param  AccountingContactPaymentMethodType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AccountingContactPaymentMethodType  $type
      * @param  ?bool  $default
      * @param  ?string  $id
      * @param  ?string  $name

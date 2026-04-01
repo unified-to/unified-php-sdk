@@ -35,7 +35,7 @@ class GetTicketingNoteResponse
     /**
      * Successful
      *
-     * @var ?Shared\TicketingNote $ticketingNote
+     * @var ?\Unified\Unified_to\Models\Shared\TicketingNote $ticketingNote
      */
     public ?Shared\TicketingNote $ticketingNote = null;
 
@@ -43,7 +43,7 @@ class GetTicketingNoteResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\TicketingNote  $ticketingNote
+     * @param  ?\Unified\Unified_to\Models\Shared\TicketingNote  $ticketingNote
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TicketingNote $ticketingNote = null)

@@ -13,7 +13,7 @@ class CrmLead
 {
     /**
      *
-     * @var ?PropertyCrmLeadAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress|null')]
@@ -63,7 +63,7 @@ class CrmLead
     /**
      * $emails
      *
-     * @var ?array<CrmEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>|null')]
@@ -115,7 +115,7 @@ class CrmLead
     /**
      * $metadata
      *
-     * @var ?array<CrmMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
@@ -159,7 +159,7 @@ class CrmLead
     /**
      * $telephones
      *
-     * @var ?array<CrmTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>|null')]
@@ -183,24 +183,24 @@ class CrmLead
     public ?string $userId = null;
 
     /**
-     * @param  ?PropertyCrmLeadAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress  $address
      * @param  ?string  $companyId
      * @param  ?string  $companyName
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
-     * @param  ?array<CrmEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
-     * @param  ?array<CrmMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
      * @param  ?string  $status
-     * @param  ?array<CrmTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

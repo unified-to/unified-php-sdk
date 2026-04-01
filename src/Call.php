@@ -47,8 +47,8 @@ class Call
     /**
      * Retrieve a call
      *
-     * @param  Operations\GetUcCallRequest  $request
-     * @return Operations\GetUcCallResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCallRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcCall(Operations\GetUcCallRequest $request, ?Options $options = null): Operations\GetUcCallResponse
@@ -109,8 +109,8 @@ class Call
     /**
      * List all calls
      *
-     * @param  Operations\ListUcCallsRequest  $request
-     * @return Operations\ListUcCallsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcCalls(Operations\ListUcCallsRequest $request, ?Options $options = null): Operations\ListUcCallsResponse

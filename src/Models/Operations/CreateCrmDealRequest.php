@@ -15,7 +15,7 @@ class CreateCrmDealRequest
     /**
      * A deal represents an opportunity with companies and/or contacts
      *
-     * @var Shared\CrmDeal $crmDeal
+     * @var \Unified\Unified_to\Models\Shared\CrmDeal $crmDeal
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmDeal $crmDeal;
@@ -31,7 +31,7 @@ class CreateCrmDealRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmDealQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmDealQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateCrmDealRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmDeal  $crmDeal
+     * @param  \Unified\Unified_to\Models\Shared\CrmDeal  $crmDeal
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmDealQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmDealQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

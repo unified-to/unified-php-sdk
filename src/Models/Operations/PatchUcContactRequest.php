@@ -15,7 +15,7 @@ class PatchUcContactRequest
     /**
      * A contact represents a person that optionally is associated with a call
      *
-     * @var Shared\UcContact $ucContact
+     * @var \Unified\Unified_to\Models\Shared\UcContact $ucContact
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcContact $ucContact;
@@ -39,7 +39,7 @@ class PatchUcContactRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchUcContactQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchUcContactQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchUcContactRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcContact  $ucContact
+     * @param  \Unified\Unified_to\Models\Shared\UcContact  $ucContact
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchUcContactQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchUcContactQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

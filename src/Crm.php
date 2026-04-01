@@ -47,8 +47,8 @@ class Crm
     /**
      * Create a company
      *
-     * @param  Operations\CreateCrmCompanyRequest  $request
-     * @return Operations\CreateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmCompany(Operations\CreateCrmCompanyRequest $request, ?Options $options = null): Operations\CreateCrmCompanyResponse
@@ -114,8 +114,8 @@ class Crm
     /**
      * Create a contact
      *
-     * @param  Operations\CreateCrmContactRequest  $request
-     * @return Operations\CreateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmContact(Operations\CreateCrmContactRequest $request, ?Options $options = null): Operations\CreateCrmContactResponse
@@ -181,8 +181,8 @@ class Crm
     /**
      * Create a deal
      *
-     * @param  Operations\CreateCrmDealRequest  $request
-     * @return Operations\CreateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmDeal(Operations\CreateCrmDealRequest $request, ?Options $options = null): Operations\CreateCrmDealResponse
@@ -248,8 +248,8 @@ class Crm
     /**
      * Create an event
      *
-     * @param  Operations\CreateCrmEventRequest  $request
-     * @return Operations\CreateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmEvent(Operations\CreateCrmEventRequest $request, ?Options $options = null): Operations\CreateCrmEventResponse
@@ -315,8 +315,8 @@ class Crm
     /**
      * Create a lead
      *
-     * @param  Operations\CreateCrmLeadRequest  $request
-     * @return Operations\CreateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmLead(Operations\CreateCrmLeadRequest $request, ?Options $options = null): Operations\CreateCrmLeadResponse
@@ -382,8 +382,8 @@ class Crm
     /**
      * Create a pipeline
      *
-     * @param  Operations\CreateCrmPipelineRequest  $request
-     * @return Operations\CreateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmPipeline(Operations\CreateCrmPipelineRequest $request, ?Options $options = null): Operations\CreateCrmPipelineResponse
@@ -449,8 +449,8 @@ class Crm
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetCrmCompanyRequest  $request
-     * @return Operations\GetCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmCompany(Operations\GetCrmCompanyRequest $request, ?Options $options = null): Operations\GetCrmCompanyResponse
@@ -511,8 +511,8 @@ class Crm
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetCrmContactRequest  $request
-     * @return Operations\GetCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmContact(Operations\GetCrmContactRequest $request, ?Options $options = null): Operations\GetCrmContactResponse
@@ -573,8 +573,8 @@ class Crm
     /**
      * Retrieve a deal
      *
-     * @param  Operations\GetCrmDealRequest  $request
-     * @return Operations\GetCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmDeal(Operations\GetCrmDealRequest $request, ?Options $options = null): Operations\GetCrmDealResponse
@@ -635,8 +635,8 @@ class Crm
     /**
      * Retrieve an event
      *
-     * @param  Operations\GetCrmEventRequest  $request
-     * @return Operations\GetCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmEvent(Operations\GetCrmEventRequest $request, ?Options $options = null): Operations\GetCrmEventResponse
@@ -697,8 +697,8 @@ class Crm
     /**
      * Retrieve a lead
      *
-     * @param  Operations\GetCrmLeadRequest  $request
-     * @return Operations\GetCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmLead(Operations\GetCrmLeadRequest $request, ?Options $options = null): Operations\GetCrmLeadResponse
@@ -759,8 +759,8 @@ class Crm
     /**
      * Retrieve a pipeline
      *
-     * @param  Operations\GetCrmPipelineRequest  $request
-     * @return Operations\GetCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmPipeline(Operations\GetCrmPipelineRequest $request, ?Options $options = null): Operations\GetCrmPipelineResponse
@@ -821,8 +821,8 @@ class Crm
     /**
      * List all companies
      *
-     * @param  Operations\ListCrmCompaniesRequest  $request
-     * @return Operations\ListCrmCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request, ?Options $options = null): Operations\ListCrmCompaniesResponse
@@ -883,8 +883,8 @@ class Crm
     /**
      * List all contacts
      *
-     * @param  Operations\ListCrmContactsRequest  $request
-     * @return Operations\ListCrmContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmContacts(Operations\ListCrmContactsRequest $request, ?Options $options = null): Operations\ListCrmContactsResponse
@@ -945,8 +945,8 @@ class Crm
     /**
      * List all deals
      *
-     * @param  Operations\ListCrmDealsRequest  $request
-     * @return Operations\ListCrmDealsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmDeals(Operations\ListCrmDealsRequest $request, ?Options $options = null): Operations\ListCrmDealsResponse
@@ -1007,8 +1007,8 @@ class Crm
     /**
      * List all events
      *
-     * @param  Operations\ListCrmEventsRequest  $request
-     * @return Operations\ListCrmEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmEvents(Operations\ListCrmEventsRequest $request, ?Options $options = null): Operations\ListCrmEventsResponse
@@ -1069,8 +1069,8 @@ class Crm
     /**
      * List all leads
      *
-     * @param  Operations\ListCrmLeadsRequest  $request
-     * @return Operations\ListCrmLeadsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmLeads(Operations\ListCrmLeadsRequest $request, ?Options $options = null): Operations\ListCrmLeadsResponse
@@ -1131,8 +1131,8 @@ class Crm
     /**
      * List all pipelines
      *
-     * @param  Operations\ListCrmPipelinesRequest  $request
-     * @return Operations\ListCrmPipelinesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmPipelines(Operations\ListCrmPipelinesRequest $request, ?Options $options = null): Operations\ListCrmPipelinesResponse
@@ -1193,8 +1193,8 @@ class Crm
     /**
      * Update a company
      *
-     * @param  Operations\PatchCrmCompanyRequest  $request
-     * @return Operations\PatchCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request, ?Options $options = null): Operations\PatchCrmCompanyResponse
@@ -1260,8 +1260,8 @@ class Crm
     /**
      * Update a contact
      *
-     * @param  Operations\PatchCrmContactRequest  $request
-     * @return Operations\PatchCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmContact(Operations\PatchCrmContactRequest $request, ?Options $options = null): Operations\PatchCrmContactResponse
@@ -1327,8 +1327,8 @@ class Crm
     /**
      * Update a deal
      *
-     * @param  Operations\PatchCrmDealRequest  $request
-     * @return Operations\PatchCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmDeal(Operations\PatchCrmDealRequest $request, ?Options $options = null): Operations\PatchCrmDealResponse
@@ -1394,8 +1394,8 @@ class Crm
     /**
      * Update an event
      *
-     * @param  Operations\PatchCrmEventRequest  $request
-     * @return Operations\PatchCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmEvent(Operations\PatchCrmEventRequest $request, ?Options $options = null): Operations\PatchCrmEventResponse
@@ -1461,8 +1461,8 @@ class Crm
     /**
      * Update a lead
      *
-     * @param  Operations\PatchCrmLeadRequest  $request
-     * @return Operations\PatchCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmLead(Operations\PatchCrmLeadRequest $request, ?Options $options = null): Operations\PatchCrmLeadResponse
@@ -1528,8 +1528,8 @@ class Crm
     /**
      * Update a pipeline
      *
-     * @param  Operations\PatchCrmPipelineRequest  $request
-     * @return Operations\PatchCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmPipeline(Operations\PatchCrmPipelineRequest $request, ?Options $options = null): Operations\PatchCrmPipelineResponse
@@ -1595,8 +1595,8 @@ class Crm
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveCrmCompanyRequest  $request
-     * @return Operations\RemoveCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request, ?Options $options = null): Operations\RemoveCrmCompanyResponse
@@ -1651,8 +1651,8 @@ class Crm
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveCrmContactRequest  $request
-     * @return Operations\RemoveCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmContact(Operations\RemoveCrmContactRequest $request, ?Options $options = null): Operations\RemoveCrmContactResponse
@@ -1707,8 +1707,8 @@ class Crm
     /**
      * Remove a deal
      *
-     * @param  Operations\RemoveCrmDealRequest  $request
-     * @return Operations\RemoveCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmDeal(Operations\RemoveCrmDealRequest $request, ?Options $options = null): Operations\RemoveCrmDealResponse
@@ -1763,8 +1763,8 @@ class Crm
     /**
      * Remove an event
      *
-     * @param  Operations\RemoveCrmEventRequest  $request
-     * @return Operations\RemoveCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmEvent(Operations\RemoveCrmEventRequest $request, ?Options $options = null): Operations\RemoveCrmEventResponse
@@ -1819,8 +1819,8 @@ class Crm
     /**
      * Remove a lead
      *
-     * @param  Operations\RemoveCrmLeadRequest  $request
-     * @return Operations\RemoveCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmLead(Operations\RemoveCrmLeadRequest $request, ?Options $options = null): Operations\RemoveCrmLeadResponse
@@ -1875,8 +1875,8 @@ class Crm
     /**
      * Remove a pipeline
      *
-     * @param  Operations\RemoveCrmPipelineRequest  $request
-     * @return Operations\RemoveCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmPipeline(Operations\RemoveCrmPipelineRequest $request, ?Options $options = null): Operations\RemoveCrmPipelineResponse
@@ -1931,8 +1931,8 @@ class Crm
     /**
      * Update a company
      *
-     * @param  Operations\UpdateCrmCompanyRequest  $request
-     * @return Operations\UpdateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request, ?Options $options = null): Operations\UpdateCrmCompanyResponse
@@ -1998,8 +1998,8 @@ class Crm
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateCrmContactRequest  $request
-     * @return Operations\UpdateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmContact(Operations\UpdateCrmContactRequest $request, ?Options $options = null): Operations\UpdateCrmContactResponse
@@ -2065,8 +2065,8 @@ class Crm
     /**
      * Update a deal
      *
-     * @param  Operations\UpdateCrmDealRequest  $request
-     * @return Operations\UpdateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmDeal(Operations\UpdateCrmDealRequest $request, ?Options $options = null): Operations\UpdateCrmDealResponse
@@ -2132,8 +2132,8 @@ class Crm
     /**
      * Update an event
      *
-     * @param  Operations\UpdateCrmEventRequest  $request
-     * @return Operations\UpdateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmEvent(Operations\UpdateCrmEventRequest $request, ?Options $options = null): Operations\UpdateCrmEventResponse
@@ -2199,8 +2199,8 @@ class Crm
     /**
      * Update a lead
      *
-     * @param  Operations\UpdateCrmLeadRequest  $request
-     * @return Operations\UpdateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmLead(Operations\UpdateCrmLeadRequest $request, ?Options $options = null): Operations\UpdateCrmLeadResponse
@@ -2266,8 +2266,8 @@ class Crm
     /**
      * Update a pipeline
      *
-     * @param  Operations\UpdateCrmPipelineRequest  $request
-     * @return Operations\UpdateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmPipeline(Operations\UpdateCrmPipelineRequest $request, ?Options $options = null): Operations\UpdateCrmPipelineResponse

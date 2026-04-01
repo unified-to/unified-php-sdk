@@ -47,8 +47,8 @@ class Collection
     /**
      * Create a collection
      *
-     * @param  Operations\CreateCommerceCollectionRequest  $request
-     * @return Operations\CreateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceCollection(Operations\CreateCommerceCollectionRequest $request, ?Options $options = null): Operations\CreateCommerceCollectionResponse
@@ -114,8 +114,8 @@ class Collection
     /**
      * Create a collection
      *
-     * @param  Operations\CreateLmsCollectionRequest  $request
-     * @return Operations\CreateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createLmsCollection(Operations\CreateLmsCollectionRequest $request, ?Options $options = null): Operations\CreateLmsCollectionResponse
@@ -181,8 +181,8 @@ class Collection
     /**
      * Retrieve a collection
      *
-     * @param  Operations\GetCommerceCollectionRequest  $request
-     * @return Operations\GetCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceCollection(Operations\GetCommerceCollectionRequest $request, ?Options $options = null): Operations\GetCommerceCollectionResponse
@@ -243,8 +243,8 @@ class Collection
     /**
      * Retrieve a collection
      *
-     * @param  Operations\GetLmsCollectionRequest  $request
-     * @return Operations\GetLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getLmsCollection(Operations\GetLmsCollectionRequest $request, ?Options $options = null): Operations\GetLmsCollectionResponse
@@ -305,8 +305,8 @@ class Collection
     /**
      * List all collections
      *
-     * @param  Operations\ListCommerceCollectionsRequest  $request
-     * @return Operations\ListCommerceCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceCollections(Operations\ListCommerceCollectionsRequest $request, ?Options $options = null): Operations\ListCommerceCollectionsResponse
@@ -367,8 +367,8 @@ class Collection
     /**
      * List all collections
      *
-     * @param  Operations\ListLmsCollectionsRequest  $request
-     * @return Operations\ListLmsCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsCollectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listLmsCollections(Operations\ListLmsCollectionsRequest $request, ?Options $options = null): Operations\ListLmsCollectionsResponse
@@ -429,8 +429,8 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  Operations\PatchCommerceCollectionRequest  $request
-     * @return Operations\PatchCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceCollection(Operations\PatchCommerceCollectionRequest $request, ?Options $options = null): Operations\PatchCommerceCollectionResponse
@@ -496,8 +496,8 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  Operations\PatchLmsCollectionRequest  $request
-     * @return Operations\PatchLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchLmsCollection(Operations\PatchLmsCollectionRequest $request, ?Options $options = null): Operations\PatchLmsCollectionResponse
@@ -563,8 +563,8 @@ class Collection
     /**
      * Remove a collection
      *
-     * @param  Operations\RemoveCommerceCollectionRequest  $request
-     * @return Operations\RemoveCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceCollection(Operations\RemoveCommerceCollectionRequest $request, ?Options $options = null): Operations\RemoveCommerceCollectionResponse
@@ -619,8 +619,8 @@ class Collection
     /**
      * Remove a collection
      *
-     * @param  Operations\RemoveLmsCollectionRequest  $request
-     * @return Operations\RemoveLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeLmsCollection(Operations\RemoveLmsCollectionRequest $request, ?Options $options = null): Operations\RemoveLmsCollectionResponse
@@ -675,8 +675,8 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  Operations\UpdateCommerceCollectionRequest  $request
-     * @return Operations\UpdateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceCollection(Operations\UpdateCommerceCollectionRequest $request, ?Options $options = null): Operations\UpdateCommerceCollectionResponse
@@ -742,8 +742,8 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  Operations\UpdateLmsCollectionRequest  $request
-     * @return Operations\UpdateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateLmsCollection(Operations\UpdateLmsCollectionRequest $request, ?Options $options = null): Operations\UpdateLmsCollectionResponse

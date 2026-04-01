@@ -14,7 +14,7 @@ class PatchRepoOrganizationRequest
 {
     /**
      *
-     * @var Shared\RepoOrganization $repoOrganization
+     * @var \Unified\Unified_to\Models\Shared\RepoOrganization $repoOrganization
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoOrganization $repoOrganization;
@@ -38,7 +38,7 @@ class PatchRepoOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchRepoOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchRepoOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchRepoOrganizationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoOrganization  $repoOrganization
+     * @param  \Unified\Unified_to\Models\Shared\RepoOrganization  $repoOrganization
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchRepoOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchRepoOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

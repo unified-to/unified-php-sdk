@@ -13,7 +13,7 @@ class PropertyAdsReportMetricsCampaignTargeting
 {
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingAudience $audience
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingAudience $audience
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('audience')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingAudience|null')]
@@ -23,7 +23,7 @@ class PropertyAdsReportMetricsCampaignTargeting
     /**
      * Brand safety (Meta: excluded_publisher_categories, etc.; Google
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('brand_safety')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingBrandSafety|null')]
@@ -32,7 +32,7 @@ class PropertyAdsReportMetricsCampaignTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingContent $content
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContent $content
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContent|null')]
@@ -42,7 +42,7 @@ class PropertyAdsReportMetricsCampaignTargeting
     /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDemographic $demographic
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('demographic')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDemographic|null')]
@@ -51,7 +51,7 @@ class PropertyAdsReportMetricsCampaignTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingDevice $device
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDevice $device
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('device')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDevice|null')]
@@ -60,7 +60,7 @@ class PropertyAdsReportMetricsCampaignTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingGeographic $geographic
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('geographic')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingGeographic|null')]
@@ -70,7 +70,7 @@ class PropertyAdsReportMetricsCampaignTargeting
     /**
      * Language targeting (Meta
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingLanguage $language
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingLanguage $language
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingLanguage|null')]
@@ -80,7 +80,7 @@ class PropertyAdsReportMetricsCampaignTargeting
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimization $optimization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('optimization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimization|null')]
@@ -89,7 +89,7 @@ class PropertyAdsReportMetricsCampaignTargeting
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingPlacement $placement
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('placement')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingPlacement|null')]
@@ -99,7 +99,7 @@ class PropertyAdsReportMetricsCampaignTargeting
     /**
      * $schedule
      *
-     * @var ?array<AdSchedule> $schedule
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdSchedule> $schedule
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('schedule')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdSchedule>|null')]
@@ -107,16 +107,16 @@ class PropertyAdsReportMetricsCampaignTargeting
     public ?array $schedule = null;
 
     /**
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingAudience  $audience
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingBrandSafety  $brandSafety
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingContent  $content
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingDemographic  $demographic
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingDevice  $device
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingGeographic  $geographic
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingLanguage  $language
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingOptimization  $optimization
-     * @param  ?PropertyAdsReportMetricsCampaignTargetingPlacement  $placement
-     * @param  ?array<AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingAudience  $audience
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingBrandSafety  $brandSafety
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContent  $content
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDemographic  $demographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDevice  $device
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingGeographic  $geographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingLanguage  $language
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimization  $optimization
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingPlacement  $placement
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
     public function __construct(?PropertyAdsReportMetricsCampaignTargetingAudience $audience = null, ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsCampaignTargetingContent $content = null, ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsCampaignTargetingDevice $device = null, ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsCampaignTargetingLanguage $language = null, ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement = null, ?array $schedule = null)

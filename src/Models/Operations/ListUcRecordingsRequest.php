@@ -46,7 +46,7 @@ class ListUcRecordingsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListUcRecordingsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListUcRecordingsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -124,7 +124,7 @@ class ListUcRecordingsRequest
      * @param  ?string  $callId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListUcRecordingsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListUcRecordingsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

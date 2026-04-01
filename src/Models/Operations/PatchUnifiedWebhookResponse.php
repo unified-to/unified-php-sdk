@@ -35,7 +35,7 @@ class PatchUnifiedWebhookResponse
     /**
      * Successful
      *
-     * @var ?Shared\Webhook $webhook
+     * @var ?\Unified\Unified_to\Models\Shared\Webhook $webhook
      */
     public ?Shared\Webhook $webhook = null;
 
@@ -43,7 +43,7 @@ class PatchUnifiedWebhookResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\Webhook  $webhook
+     * @param  ?\Unified\Unified_to\Models\Shared\Webhook  $webhook
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\Webhook $webhook = null)

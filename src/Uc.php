@@ -47,8 +47,8 @@ class Uc
     /**
      * Create a comment
      *
-     * @param  Operations\CreateUcCommentRequest  $request
-     * @return Operations\CreateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcComment(Operations\CreateUcCommentRequest $request, ?Options $options = null): Operations\CreateUcCommentResponse
@@ -114,8 +114,8 @@ class Uc
     /**
      * Create a contact
      *
-     * @param  Operations\CreateUcContactRequest  $request
-     * @return Operations\CreateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcContact(Operations\CreateUcContactRequest $request, ?Options $options = null): Operations\CreateUcContactResponse
@@ -181,8 +181,8 @@ class Uc
     /**
      * Create a recording
      *
-     * @param  Operations\CreateUcRecordingRequest  $request
-     * @return Operations\CreateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcRecording(Operations\CreateUcRecordingRequest $request, ?Options $options = null): Operations\CreateUcRecordingResponse
@@ -248,8 +248,8 @@ class Uc
     /**
      * Retrieve a call
      *
-     * @param  Operations\GetUcCallRequest  $request
-     * @return Operations\GetUcCallResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCallRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcCall(Operations\GetUcCallRequest $request, ?Options $options = null): Operations\GetUcCallResponse
@@ -310,8 +310,8 @@ class Uc
     /**
      * Retrieve a comment
      *
-     * @param  Operations\GetUcCommentRequest  $request
-     * @return Operations\GetUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcComment(Operations\GetUcCommentRequest $request, ?Options $options = null): Operations\GetUcCommentResponse
@@ -372,8 +372,8 @@ class Uc
     /**
      * Retrieve a contact
      *
-     * @param  Operations\GetUcContactRequest  $request
-     * @return Operations\GetUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcContact(Operations\GetUcContactRequest $request, ?Options $options = null): Operations\GetUcContactResponse
@@ -434,8 +434,8 @@ class Uc
     /**
      * Retrieve a recording
      *
-     * @param  Operations\GetUcRecordingRequest  $request
-     * @return Operations\GetUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcRecording(Operations\GetUcRecordingRequest $request, ?Options $options = null): Operations\GetUcRecordingResponse
@@ -496,8 +496,8 @@ class Uc
     /**
      * List all calls
      *
-     * @param  Operations\ListUcCallsRequest  $request
-     * @return Operations\ListUcCallsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcCalls(Operations\ListUcCallsRequest $request, ?Options $options = null): Operations\ListUcCallsResponse
@@ -558,8 +558,8 @@ class Uc
     /**
      * List all comments
      *
-     * @param  Operations\ListUcCommentsRequest  $request
-     * @return Operations\ListUcCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcComments(Operations\ListUcCommentsRequest $request, ?Options $options = null): Operations\ListUcCommentsResponse
@@ -620,8 +620,8 @@ class Uc
     /**
      * List all contacts
      *
-     * @param  Operations\ListUcContactsRequest  $request
-     * @return Operations\ListUcContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcContactsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcContacts(Operations\ListUcContactsRequest $request, ?Options $options = null): Operations\ListUcContactsResponse
@@ -682,8 +682,8 @@ class Uc
     /**
      * List all recordings
      *
-     * @param  Operations\ListUcRecordingsRequest  $request
-     * @return Operations\ListUcRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcRecordings(Operations\ListUcRecordingsRequest $request, ?Options $options = null): Operations\ListUcRecordingsResponse
@@ -744,8 +744,8 @@ class Uc
     /**
      * Update a comment
      *
-     * @param  Operations\PatchUcCommentRequest  $request
-     * @return Operations\PatchUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcComment(Operations\PatchUcCommentRequest $request, ?Options $options = null): Operations\PatchUcCommentResponse
@@ -811,8 +811,8 @@ class Uc
     /**
      * Update a contact
      *
-     * @param  Operations\PatchUcContactRequest  $request
-     * @return Operations\PatchUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcContact(Operations\PatchUcContactRequest $request, ?Options $options = null): Operations\PatchUcContactResponse
@@ -878,8 +878,8 @@ class Uc
     /**
      * Update a recording
      *
-     * @param  Operations\PatchUcRecordingRequest  $request
-     * @return Operations\PatchUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcRecording(Operations\PatchUcRecordingRequest $request, ?Options $options = null): Operations\PatchUcRecordingResponse
@@ -945,8 +945,8 @@ class Uc
     /**
      * Remove a comment
      *
-     * @param  Operations\RemoveUcCommentRequest  $request
-     * @return Operations\RemoveUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcComment(Operations\RemoveUcCommentRequest $request, ?Options $options = null): Operations\RemoveUcCommentResponse
@@ -1001,8 +1001,8 @@ class Uc
     /**
      * Remove a contact
      *
-     * @param  Operations\RemoveUcContactRequest  $request
-     * @return Operations\RemoveUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcContact(Operations\RemoveUcContactRequest $request, ?Options $options = null): Operations\RemoveUcContactResponse
@@ -1057,8 +1057,8 @@ class Uc
     /**
      * Remove a recording
      *
-     * @param  Operations\RemoveUcRecordingRequest  $request
-     * @return Operations\RemoveUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcRecording(Operations\RemoveUcRecordingRequest $request, ?Options $options = null): Operations\RemoveUcRecordingResponse
@@ -1113,8 +1113,8 @@ class Uc
     /**
      * Update a comment
      *
-     * @param  Operations\UpdateUcCommentRequest  $request
-     * @return Operations\UpdateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcComment(Operations\UpdateUcCommentRequest $request, ?Options $options = null): Operations\UpdateUcCommentResponse
@@ -1180,8 +1180,8 @@ class Uc
     /**
      * Update a contact
      *
-     * @param  Operations\UpdateUcContactRequest  $request
-     * @return Operations\UpdateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcContactRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcContact(Operations\UpdateUcContactRequest $request, ?Options $options = null): Operations\UpdateUcContactResponse
@@ -1247,8 +1247,8 @@ class Uc
     /**
      * Update a recording
      *
-     * @param  Operations\UpdateUcRecordingRequest  $request
-     * @return Operations\UpdateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcRecording(Operations\UpdateUcRecordingRequest $request, ?Options $options = null): Operations\UpdateUcRecordingResponse

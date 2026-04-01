@@ -91,7 +91,7 @@ class CrmDeal
     /**
      * $metadata
      *
-     * @var ?array<CrmMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
@@ -125,7 +125,7 @@ class CrmDeal
     /**
      * $pipelines
      *
-     * @var ?array<CrmReference> $pipelines
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmReference> $pipelines
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pipelines')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmReference>|null')]
@@ -177,7 +177,7 @@ class CrmDeal
     /**
      * $stages
      *
-     * @var ?array<CrmReference> $stages
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmReference> $stages
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('stages')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmReference>|null')]
@@ -228,17 +228,17 @@ class CrmDeal
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $lostReason
-     * @param  ?array<CrmMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $pipeline
      * @param  ?string  $pipelineId
-     * @param  ?array<CrmReference>  $pipelines
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmReference>  $pipelines
      * @param  ?float  $probability
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
      * @param  ?string  $stage
      * @param  ?string  $stageId
-     * @param  ?array<CrmReference>  $stages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmReference>  $stages
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId

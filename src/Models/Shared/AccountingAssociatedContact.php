@@ -14,7 +14,7 @@ class AccountingAssociatedContact
     /**
      * $emails
      *
-     * @var ?array<AccountingEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingEmail>|null')]
@@ -38,7 +38,7 @@ class AccountingAssociatedContact
     public ?string $name = null;
 
     /**
-     * @param  ?array<AccountingEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingEmail>  $emails
      * @param  ?string  $id
      * @param  ?string  $name
      * @phpstan-pure

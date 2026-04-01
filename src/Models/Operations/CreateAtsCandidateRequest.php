@@ -14,7 +14,7 @@ class CreateAtsCandidateRequest
 {
     /**
      *
-     * @var Shared\AtsCandidate $atsCandidate
+     * @var \Unified\Unified_to\Models\Shared\AtsCandidate $atsCandidate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsCandidate $atsCandidate;
@@ -30,7 +30,7 @@ class CreateAtsCandidateRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAtsCandidateQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAtsCandidateQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAtsCandidateRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsCandidate  $atsCandidate
+     * @param  \Unified\Unified_to\Models\Shared\AtsCandidate  $atsCandidate
      * @param  string  $connectionId
-     * @param  ?array<CreateAtsCandidateQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAtsCandidateQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

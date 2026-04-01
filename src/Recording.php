@@ -47,8 +47,8 @@ class Recording
     /**
      * Create a recording
      *
-     * @param  Operations\CreateUcRecordingRequest  $request
-     * @return Operations\CreateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcRecording(Operations\CreateUcRecordingRequest $request, ?Options $options = null): Operations\CreateUcRecordingResponse
@@ -114,8 +114,8 @@ class Recording
     /**
      * Retrieve a recording
      *
-     * @param  Operations\GetCalendarRecordingRequest  $request
-     * @return Operations\GetCalendarRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarRecording(Operations\GetCalendarRecordingRequest $request, ?Options $options = null): Operations\GetCalendarRecordingResponse
@@ -176,8 +176,8 @@ class Recording
     /**
      * Retrieve a recording
      *
-     * @param  Operations\GetUcRecordingRequest  $request
-     * @return Operations\GetUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcRecording(Operations\GetUcRecordingRequest $request, ?Options $options = null): Operations\GetUcRecordingResponse
@@ -238,8 +238,8 @@ class Recording
     /**
      * List all recordings
      *
-     * @param  Operations\ListCalendarRecordingsRequest  $request
-     * @return Operations\ListCalendarRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarRecordings(Operations\ListCalendarRecordingsRequest $request, ?Options $options = null): Operations\ListCalendarRecordingsResponse
@@ -300,8 +300,8 @@ class Recording
     /**
      * List all recordings
      *
-     * @param  Operations\ListUcRecordingsRequest  $request
-     * @return Operations\ListUcRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcRecordings(Operations\ListUcRecordingsRequest $request, ?Options $options = null): Operations\ListUcRecordingsResponse
@@ -362,8 +362,8 @@ class Recording
     /**
      * Update a recording
      *
-     * @param  Operations\PatchUcRecordingRequest  $request
-     * @return Operations\PatchUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcRecording(Operations\PatchUcRecordingRequest $request, ?Options $options = null): Operations\PatchUcRecordingResponse
@@ -429,8 +429,8 @@ class Recording
     /**
      * Remove a recording
      *
-     * @param  Operations\RemoveUcRecordingRequest  $request
-     * @return Operations\RemoveUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcRecording(Operations\RemoveUcRecordingRequest $request, ?Options $options = null): Operations\RemoveUcRecordingResponse
@@ -485,8 +485,8 @@ class Recording
     /**
      * Update a recording
      *
-     * @param  Operations\UpdateUcRecordingRequest  $request
-     * @return Operations\UpdateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcRecording(Operations\UpdateUcRecordingRequest $request, ?Options $options = null): Operations\UpdateUcRecordingResponse

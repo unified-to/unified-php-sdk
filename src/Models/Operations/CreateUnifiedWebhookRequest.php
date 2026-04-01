@@ -15,7 +15,7 @@ class CreateUnifiedWebhookRequest
     /**
      * A webhook is used to POST new/updated information to your server.
      *
-     * @var Shared\Webhook $webhook
+     * @var \Unified\Unified_to\Models\Shared\Webhook $webhook
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\Webhook $webhook;
@@ -29,7 +29,7 @@ class CreateUnifiedWebhookRequest
     public ?bool $includeAll = null;
 
     /**
-     * @param  Shared\Webhook  $webhook
+     * @param  \Unified\Unified_to\Models\Shared\Webhook  $webhook
      * @param  ?bool  $includeAll
      * @phpstan-pure
      */

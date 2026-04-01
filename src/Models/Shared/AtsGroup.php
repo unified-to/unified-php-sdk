@@ -29,7 +29,7 @@ class AtsGroup
 
     /**
      *
-     * @var ?AtsGroupType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AtsGroupType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsGroupType|null')]
@@ -39,7 +39,7 @@ class AtsGroup
     /**
      * @param  ?string  $id
      * @param  ?string  $name
-     * @param  ?AtsGroupType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsGroupType  $type
      * @phpstan-pure
      */
     public function __construct(?string $id = null, ?string $name = null, ?AtsGroupType $type = null)

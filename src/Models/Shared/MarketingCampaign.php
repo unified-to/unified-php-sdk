@@ -97,7 +97,7 @@ class MarketingCampaign
 
     /**
      *
-     * @var ?MarketingCampaignStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\MarketingCampaignStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingCampaignStatus|null')]
@@ -139,7 +139,7 @@ class MarketingCampaign
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $replyToEmail
      * @param  ?\DateTime  $sendAt
-     * @param  ?MarketingCampaignStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\MarketingCampaignStatus  $status
      * @param  ?string  $subjectLine
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt

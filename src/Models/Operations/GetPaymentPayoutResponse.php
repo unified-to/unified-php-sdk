@@ -35,7 +35,7 @@ class GetPaymentPayoutResponse
     /**
      * Successful
      *
-     * @var ?Shared\PaymentPayout $paymentPayout
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentPayout $paymentPayout
      */
     public ?Shared\PaymentPayout $paymentPayout = null;
 
@@ -43,7 +43,7 @@ class GetPaymentPayoutResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\PaymentPayout  $paymentPayout
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentPayout  $paymentPayout
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\PaymentPayout $paymentPayout = null)

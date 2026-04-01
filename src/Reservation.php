@@ -47,8 +47,8 @@ class Reservation
     /**
      * Create a reservation
      *
-     * @param  Operations\CreateCommerceReservationRequest  $request
-     * @return Operations\CreateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCommerceReservation(Operations\CreateCommerceReservationRequest $request, ?Options $options = null): Operations\CreateCommerceReservationResponse
@@ -114,8 +114,8 @@ class Reservation
     /**
      * Retrieve a reservation
      *
-     * @param  Operations\GetCommerceReservationRequest  $request
-     * @return Operations\GetCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCommerceReservation(Operations\GetCommerceReservationRequest $request, ?Options $options = null): Operations\GetCommerceReservationResponse
@@ -176,8 +176,8 @@ class Reservation
     /**
      * List all reservations
      *
-     * @param  Operations\ListCommerceReservationsRequest  $request
-     * @return Operations\ListCommerceReservationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceReservations(Operations\ListCommerceReservationsRequest $request, ?Options $options = null): Operations\ListCommerceReservationsResponse
@@ -238,8 +238,8 @@ class Reservation
     /**
      * Update a reservation
      *
-     * @param  Operations\PatchCommerceReservationRequest  $request
-     * @return Operations\PatchCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCommerceReservation(Operations\PatchCommerceReservationRequest $request, ?Options $options = null): Operations\PatchCommerceReservationResponse
@@ -305,8 +305,8 @@ class Reservation
     /**
      * Remove a reservation
      *
-     * @param  Operations\RemoveCommerceReservationRequest  $request
-     * @return Operations\RemoveCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCommerceReservation(Operations\RemoveCommerceReservationRequest $request, ?Options $options = null): Operations\RemoveCommerceReservationResponse
@@ -361,8 +361,8 @@ class Reservation
     /**
      * Update a reservation
      *
-     * @param  Operations\UpdateCommerceReservationRequest  $request
-     * @return Operations\UpdateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCommerceReservation(Operations\UpdateCommerceReservationRequest $request, ?Options $options = null): Operations\UpdateCommerceReservationResponse

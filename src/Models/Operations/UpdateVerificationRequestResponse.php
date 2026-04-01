@@ -35,7 +35,7 @@ class UpdateVerificationRequestResponse
     /**
      * Successful
      *
-     * @var ?Shared\VerificationRequest $verificationRequest
+     * @var ?\Unified\Unified_to\Models\Shared\VerificationRequest $verificationRequest
      */
     public ?Shared\VerificationRequest $verificationRequest = null;
 
@@ -43,7 +43,7 @@ class UpdateVerificationRequestResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\VerificationRequest  $verificationRequest
+     * @param  ?\Unified\Unified_to\Models\Shared\VerificationRequest  $verificationRequest
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\VerificationRequest $verificationRequest = null)

@@ -35,7 +35,7 @@ class CreateShippingRateResponse
     /**
      * Successful
      *
-     * @var ?Shared\ShippingRate $shippingRate
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingRate $shippingRate
      */
     public ?Shared\ShippingRate $shippingRate = null;
 
@@ -43,7 +43,7 @@ class CreateShippingRateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ShippingRate  $shippingRate
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingRate  $shippingRate
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ShippingRate $shippingRate = null)

@@ -35,7 +35,7 @@ class ListCalendarBusiesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\CalendarBusy> $calendarBusies
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarBusy> $calendarBusies
      */
     public ?array $calendarBusies = null;
 
@@ -43,7 +43,7 @@ class ListCalendarBusiesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\CalendarBusy>  $calendarBusies
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarBusy>  $calendarBusies
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $calendarBusies = null)

@@ -35,7 +35,7 @@ class GetKmsPageResponse
     /**
      * Successful
      *
-     * @var ?Shared\KmsPage $kmsPage
+     * @var ?\Unified\Unified_to\Models\Shared\KmsPage $kmsPage
      */
     public ?Shared\KmsPage $kmsPage = null;
 
@@ -43,7 +43,7 @@ class GetKmsPageResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\KmsPage  $kmsPage
+     * @param  ?\Unified\Unified_to\Models\Shared\KmsPage  $kmsPage
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\KmsPage $kmsPage = null)

@@ -47,8 +47,8 @@ class Assessment
     /**
      * Create an assessment package
      *
-     * @param  Operations\CreateAssessmentPackageRequest  $request
-     * @return Operations\CreateAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAssessmentPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAssessmentPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAssessmentPackage(Operations\CreateAssessmentPackageRequest $request, ?Options $options = null): Operations\CreateAssessmentPackageResponse
@@ -111,8 +111,8 @@ class Assessment
     /**
      * Get an assessment package
      *
-     * @param  Operations\GetAssessmentPackageRequest  $request
-     * @return Operations\GetAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAssessmentPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAssessmentPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAssessmentPackage(Operations\GetAssessmentPackageRequest $request, ?Options $options = null): Operations\GetAssessmentPackageResponse
@@ -170,8 +170,8 @@ class Assessment
     /**
      * List assessment packages
      *
-     * @param  Operations\ListAssessmentPackagesRequest  $request
-     * @return Operations\ListAssessmentPackagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAssessmentPackagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAssessmentPackagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAssessmentPackages(Operations\ListAssessmentPackagesRequest $request, ?Options $options = null): Operations\ListAssessmentPackagesResponse
@@ -232,8 +232,8 @@ class Assessment
     /**
      * Update an order
      *
-     * @param  Operations\PatchAssessmentOrderRequest  $request
-     * @return Operations\PatchAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAssessmentOrder(Operations\PatchAssessmentOrderRequest $request, ?Options $options = null): Operations\PatchAssessmentOrderResponse
@@ -299,8 +299,8 @@ class Assessment
     /**
      * Update an assessment package
      *
-     * @param  Operations\PatchAssessmentPackageRequest  $request
-     * @return Operations\PatchAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAssessmentPackage(Operations\PatchAssessmentPackageRequest $request, ?Options $options = null): Operations\PatchAssessmentPackageResponse
@@ -363,8 +363,8 @@ class Assessment
     /**
      * Delete an assessment package
      *
-     * @param  Operations\RemoveAssessmentPackageRequest  $request
-     * @return Operations\RemoveAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAssessmentPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAssessmentPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAssessmentPackage(Operations\RemoveAssessmentPackageRequest $request, ?Options $options = null): Operations\RemoveAssessmentPackageResponse
@@ -419,8 +419,8 @@ class Assessment
     /**
      * Update an order
      *
-     * @param  Operations\UpdateAssessmentOrderRequest  $request
-     * @return Operations\UpdateAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAssessmentOrder(Operations\UpdateAssessmentOrderRequest $request, ?Options $options = null): Operations\UpdateAssessmentOrderResponse
@@ -486,8 +486,8 @@ class Assessment
     /**
      * Update an assessment package
      *
-     * @param  Operations\UpdateAssessmentPackageRequest  $request
-     * @return Operations\UpdateAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAssessmentPackage(Operations\UpdateAssessmentPackageRequest $request, ?Options $options = null): Operations\UpdateAssessmentPackageResponse

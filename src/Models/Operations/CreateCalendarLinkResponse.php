@@ -35,7 +35,7 @@ class CreateCalendarLinkResponse
     /**
      * Successful
      *
-     * @var ?Shared\CalendarLink $calendarLink
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarLink $calendarLink
      */
     public ?Shared\CalendarLink $calendarLink = null;
 
@@ -43,7 +43,7 @@ class CreateCalendarLinkResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CalendarLink  $calendarLink
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarLink  $calendarLink
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CalendarLink $calendarLink = null)

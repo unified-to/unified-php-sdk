@@ -38,7 +38,7 @@ class ListCalendarRecordingsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCalendarRecordingsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCalendarRecordingsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -107,7 +107,7 @@ class ListCalendarRecordingsRequest
      * @param  string  $connectionId
      * @param  ?string  $endLt
      * @param  ?string  $eventId
-     * @param  ?array<ListCalendarRecordingsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarRecordingsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

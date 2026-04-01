@@ -47,8 +47,8 @@ class Genai
     /**
      * Create an embedding
      *
-     * @param  Operations\CreateGenaiEmbeddingRequest  $request
-     * @return Operations\CreateGenaiEmbeddingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createGenaiEmbedding(Operations\CreateGenaiEmbeddingRequest $request, ?Options $options = null): Operations\CreateGenaiEmbeddingResponse
@@ -114,8 +114,8 @@ class Genai
     /**
      * Create a prompt
      *
-     * @param  Operations\CreateGenaiPromptRequest  $request
-     * @return Operations\CreateGenaiPromptResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPromptRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiPromptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createGenaiPrompt(Operations\CreateGenaiPromptRequest $request, ?Options $options = null): Operations\CreateGenaiPromptResponse
@@ -181,8 +181,8 @@ class Genai
     /**
      * Retrieve a model
      *
-     * @param  Operations\GetGenaiModelRequest  $request
-     * @return Operations\GetGenaiModelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetGenaiModelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetGenaiModelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getGenaiModel(Operations\GetGenaiModelRequest $request, ?Options $options = null): Operations\GetGenaiModelResponse
@@ -243,8 +243,8 @@ class Genai
     /**
      * List all models
      *
-     * @param  Operations\ListGenaiModelsRequest  $request
-     * @return Operations\ListGenaiModelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListGenaiModelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListGenaiModelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listGenaiModels(Operations\ListGenaiModelsRequest $request, ?Options $options = null): Operations\ListGenaiModelsResponse

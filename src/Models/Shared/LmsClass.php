@@ -72,7 +72,7 @@ class LmsClass
     /**
      * $media
      *
-     * @var ?array<LmsMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMedia>|null')]
@@ -115,7 +115,7 @@ class LmsClass
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
      * @param  ?array<string>  $languages
-     * @param  ?array<LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $studentIds
      * @param  ?\DateTime  $updatedAt

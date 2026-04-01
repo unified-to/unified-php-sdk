@@ -35,7 +35,7 @@ class ListRepoBranchesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\RepoBranch> $repoBranches
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoBranch> $repoBranches
      */
     public ?array $repoBranches = null;
 
@@ -43,7 +43,7 @@ class ListRepoBranchesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\RepoBranch>  $repoBranches
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoBranch>  $repoBranches
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $repoBranches = null)

@@ -30,7 +30,7 @@ class ListHrisBankaccountsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisBankaccountsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisBankaccountsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -98,7 +98,7 @@ class ListHrisBankaccountsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $companyId
-     * @param  ?array<ListHrisBankaccountsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisBankaccountsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -30,7 +30,7 @@ class GetGenaiModelRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetGenaiModelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetGenaiModelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetGenaiModelRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetGenaiModelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetGenaiModelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

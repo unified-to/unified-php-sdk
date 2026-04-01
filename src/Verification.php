@@ -47,8 +47,8 @@ class Verification
     /**
      * Create a request
      *
-     * @param  Operations\CreateVerificationRequestRequest  $request
-     * @return Operations\CreateVerificationRequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createVerificationRequest(Operations\CreateVerificationRequestRequest $request, ?Options $options = null): Operations\CreateVerificationRequestResponse
@@ -114,8 +114,8 @@ class Verification
     /**
      * Retrieve a package
      *
-     * @param  Operations\GetVerificationPackageRequest  $request
-     * @return Operations\GetVerificationPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetVerificationPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetVerificationPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getVerificationPackage(Operations\GetVerificationPackageRequest $request, ?Options $options = null): Operations\GetVerificationPackageResponse
@@ -176,8 +176,8 @@ class Verification
     /**
      * Retrieve a request
      *
-     * @param  Operations\GetVerificationRequestRequest  $request
-     * @return Operations\GetVerificationRequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getVerificationRequest(Operations\GetVerificationRequestRequest $request, ?Options $options = null): Operations\GetVerificationRequestResponse
@@ -238,8 +238,8 @@ class Verification
     /**
      * List all packages
      *
-     * @param  Operations\ListVerificationPackagesRequest  $request
-     * @return Operations\ListVerificationPackagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListVerificationPackagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListVerificationPackagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listVerificationPackages(Operations\ListVerificationPackagesRequest $request, ?Options $options = null): Operations\ListVerificationPackagesResponse
@@ -300,8 +300,8 @@ class Verification
     /**
      * List all requests
      *
-     * @param  Operations\ListVerificationRequestsRequest  $request
-     * @return Operations\ListVerificationRequestsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListVerificationRequestsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListVerificationRequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listVerificationRequests(Operations\ListVerificationRequestsRequest $request, ?Options $options = null): Operations\ListVerificationRequestsResponse
@@ -362,8 +362,8 @@ class Verification
     /**
      * Update a request
      *
-     * @param  Operations\PatchVerificationRequestRequest  $request
-     * @return Operations\PatchVerificationRequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchVerificationRequest(Operations\PatchVerificationRequestRequest $request, ?Options $options = null): Operations\PatchVerificationRequestResponse
@@ -429,8 +429,8 @@ class Verification
     /**
      * Remove a request
      *
-     * @param  Operations\RemoveVerificationRequestRequest  $request
-     * @return Operations\RemoveVerificationRequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeVerificationRequest(Operations\RemoveVerificationRequestRequest $request, ?Options $options = null): Operations\RemoveVerificationRequestResponse
@@ -485,8 +485,8 @@ class Verification
     /**
      * Update a request
      *
-     * @param  Operations\UpdateVerificationRequestRequest  $request
-     * @return Operations\UpdateVerificationRequestResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateVerificationRequest(Operations\UpdateVerificationRequestRequest $request, ?Options $options = null): Operations\UpdateVerificationRequestResponse

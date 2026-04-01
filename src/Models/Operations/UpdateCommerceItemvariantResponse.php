@@ -35,7 +35,7 @@ class UpdateCommerceItemvariantResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceItemvariant $commerceItemvariant
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceItemvariant $commerceItemvariant
      */
     public ?Shared\CommerceItemvariant $commerceItemvariant = null;
 
@@ -43,7 +43,7 @@ class UpdateCommerceItemvariantResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceItemvariant  $commerceItemvariant
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceItemvariant  $commerceItemvariant
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceItemvariant $commerceItemvariant = null)

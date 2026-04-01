@@ -30,7 +30,7 @@ class GetUcCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetUcCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetUcCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetUcCommentRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetUcCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetUcCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

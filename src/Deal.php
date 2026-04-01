@@ -47,8 +47,8 @@ class Deal
     /**
      * Create a deal
      *
-     * @param  Operations\CreateCrmDealRequest  $request
-     * @return Operations\CreateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCrmDeal(Operations\CreateCrmDealRequest $request, ?Options $options = null): Operations\CreateCrmDealResponse
@@ -114,8 +114,8 @@ class Deal
     /**
      * Retrieve a deal
      *
-     * @param  Operations\GetCrmDealRequest  $request
-     * @return Operations\GetCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCrmDeal(Operations\GetCrmDealRequest $request, ?Options $options = null): Operations\GetCrmDealResponse
@@ -176,8 +176,8 @@ class Deal
     /**
      * List all deals
      *
-     * @param  Operations\ListCrmDealsRequest  $request
-     * @return Operations\ListCrmDealsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCrmDeals(Operations\ListCrmDealsRequest $request, ?Options $options = null): Operations\ListCrmDealsResponse
@@ -238,8 +238,8 @@ class Deal
     /**
      * Update a deal
      *
-     * @param  Operations\PatchCrmDealRequest  $request
-     * @return Operations\PatchCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCrmDeal(Operations\PatchCrmDealRequest $request, ?Options $options = null): Operations\PatchCrmDealResponse
@@ -305,8 +305,8 @@ class Deal
     /**
      * Remove a deal
      *
-     * @param  Operations\RemoveCrmDealRequest  $request
-     * @return Operations\RemoveCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCrmDeal(Operations\RemoveCrmDealRequest $request, ?Options $options = null): Operations\RemoveCrmDealResponse
@@ -361,8 +361,8 @@ class Deal
     /**
      * Update a deal
      *
-     * @param  Operations\UpdateCrmDealRequest  $request
-     * @return Operations\UpdateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCrmDeal(Operations\UpdateCrmDealRequest $request, ?Options $options = null): Operations\UpdateCrmDealResponse

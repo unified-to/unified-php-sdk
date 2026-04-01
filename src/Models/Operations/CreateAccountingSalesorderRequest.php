@@ -14,7 +14,7 @@ class CreateAccountingSalesorderRequest
 {
     /**
      *
-     * @var Shared\AccountingSalesorder $accountingSalesorder
+     * @var \Unified\Unified_to\Models\Shared\AccountingSalesorder $accountingSalesorder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingSalesorder $accountingSalesorder;
@@ -30,7 +30,7 @@ class CreateAccountingSalesorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAccountingSalesorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAccountingSalesorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAccountingSalesorderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingSalesorder  $accountingSalesorder
+     * @param  \Unified\Unified_to\Models\Shared\AccountingSalesorder  $accountingSalesorder
      * @param  string  $connectionId
-     * @param  ?array<CreateAccountingSalesorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAccountingSalesorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

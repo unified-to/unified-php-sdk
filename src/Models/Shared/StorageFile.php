@@ -86,7 +86,7 @@ class StorageFile
     /**
      * $permissions
      *
-     * @var ?array<StoragePermission> $permissions
+     * @var ?array<\Unified\Unified_to\Models\Shared\StoragePermission> $permissions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('permissions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StoragePermission>|null')]
@@ -113,7 +113,7 @@ class StorageFile
 
     /**
      *
-     * @var ?StorageFileType $type
+     * @var ?\Unified\Unified_to\Models\Shared\StorageFileType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\StorageFileType|null')]
@@ -162,10 +162,10 @@ class StorageFile
      * @param  ?string  $mimeType
      * @param  ?string  $name
      * @param  ?string  $parentId
-     * @param  ?array<StoragePermission>  $permissions
+     * @param  ?array<\Unified\Unified_to\Models\Shared\StoragePermission>  $permissions
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $size
-     * @param  ?StorageFileType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\StorageFileType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $version

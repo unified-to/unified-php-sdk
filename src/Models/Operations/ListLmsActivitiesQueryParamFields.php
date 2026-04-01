@@ -18,6 +18,7 @@ enum ListLmsActivitiesQueryParamFields: string
     case CourseId = 'course_id';
     case StudentId = 'student_id';
     case DurationMinutes = 'duration_minutes';
+    case AssignedGrade = 'assigned_grade';
     case IsCompleted = 'is_completed';
     case ProgressPercentage = 'progress_percentage';
     case StartedAt = 'started_at';

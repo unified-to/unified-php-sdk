@@ -14,7 +14,7 @@ class CreateCommerceSaleschannelRequest
 {
     /**
      *
-     * @var Shared\CommerceSaleschannel $commerceSaleschannel
+     * @var \Unified\Unified_to\Models\Shared\CommerceSaleschannel $commerceSaleschannel
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceSaleschannel $commerceSaleschannel;
@@ -30,7 +30,7 @@ class CreateCommerceSaleschannelRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCommerceSaleschannelQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateCommerceSaleschannelRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceSaleschannel  $commerceSaleschannel
+     * @param  \Unified\Unified_to\Models\Shared\CommerceSaleschannel  $commerceSaleschannel
      * @param  string  $connectionId
-     * @param  ?array<CreateCommerceSaleschannelQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

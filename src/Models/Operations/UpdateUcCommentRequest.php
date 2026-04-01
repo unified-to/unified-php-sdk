@@ -14,7 +14,7 @@ class UpdateUcCommentRequest
 {
     /**
      *
-     * @var Shared\UcComment $ucComment
+     * @var \Unified\Unified_to\Models\Shared\UcComment $ucComment
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\UcComment $ucComment;
@@ -38,7 +38,7 @@ class UpdateUcCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateUcCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateUcCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateUcCommentRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\UcComment  $ucComment
+     * @param  \Unified\Unified_to\Models\Shared\UcComment  $ucComment
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateUcCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateUcCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

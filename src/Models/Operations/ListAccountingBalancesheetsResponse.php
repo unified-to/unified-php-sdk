@@ -35,7 +35,7 @@ class ListAccountingBalancesheetsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingBalancesheet> $accountingBalancesheets
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheet> $accountingBalancesheets
      */
     public ?array $accountingBalancesheets = null;
 
@@ -43,7 +43,7 @@ class ListAccountingBalancesheetsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingBalancesheet>  $accountingBalancesheets
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheet>  $accountingBalancesheets
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingBalancesheets = null)

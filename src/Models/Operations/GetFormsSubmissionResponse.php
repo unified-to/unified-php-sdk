@@ -35,7 +35,7 @@ class GetFormsSubmissionResponse
     /**
      * Successful
      *
-     * @var ?Shared\FormsSubmission $formsSubmission
+     * @var ?\Unified\Unified_to\Models\Shared\FormsSubmission $formsSubmission
      */
     public ?Shared\FormsSubmission $formsSubmission = null;
 
@@ -43,7 +43,7 @@ class GetFormsSubmissionResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\FormsSubmission  $formsSubmission
+     * @param  ?\Unified\Unified_to\Models\Shared\FormsSubmission  $formsSubmission
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\FormsSubmission $formsSubmission = null)

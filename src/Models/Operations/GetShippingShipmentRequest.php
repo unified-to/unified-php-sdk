@@ -30,7 +30,7 @@ class GetShippingShipmentRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetShippingShipmentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetShippingShipmentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetShippingShipmentRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetShippingShipmentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetShippingShipmentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

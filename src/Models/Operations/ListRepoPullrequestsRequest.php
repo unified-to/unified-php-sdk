@@ -22,7 +22,7 @@ class ListRepoPullrequestsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListRepoPullrequestsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListRepoPullrequestsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListRepoPullrequestsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListRepoPullrequestsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListRepoPullrequestsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

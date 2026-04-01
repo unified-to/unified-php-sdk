@@ -14,7 +14,7 @@ class CrmContact
 {
     /**
      *
-     * @var ?PropertyCrmContactAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress|null')]
@@ -68,7 +68,7 @@ class CrmContact
     /**
      * An array of email addresses for this contact
      *
-     * @var ?array<CrmEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmEmail>|null')]
@@ -120,7 +120,7 @@ class CrmContact
     /**
      * $metadata
      *
-     * @var ?array<CrmMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
@@ -148,7 +148,7 @@ class CrmContact
     /**
      * An array of telephones for this contact
      *
-     * @var ?array<CrmTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmTelephone>|null')]
@@ -180,22 +180,22 @@ class CrmContact
     public ?string $userId = null;
 
     /**
-     * @param  ?PropertyCrmContactAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress  $address
      * @param  ?string  $company
      * @param  ?array<string>  $companyIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $dealIds
      * @param  ?string  $department
-     * @param  ?array<CrmEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
-     * @param  ?array<CrmMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<CrmTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId

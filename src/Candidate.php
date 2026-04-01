@@ -47,8 +47,8 @@ class Candidate
     /**
      * Create a candidate
      *
-     * @param  Operations\CreateAtsCandidateRequest  $request
-     * @return Operations\CreateAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAtsCandidate(Operations\CreateAtsCandidateRequest $request, ?Options $options = null): Operations\CreateAtsCandidateResponse
@@ -114,8 +114,8 @@ class Candidate
     /**
      * Retrieve a candidate
      *
-     * @param  Operations\GetAtsCandidateRequest  $request
-     * @return Operations\GetAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAtsCandidate(Operations\GetAtsCandidateRequest $request, ?Options $options = null): Operations\GetAtsCandidateResponse
@@ -176,8 +176,8 @@ class Candidate
     /**
      * List all candidates
      *
-     * @param  Operations\ListAtsCandidatesRequest  $request
-     * @return Operations\ListAtsCandidatesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAtsCandidates(Operations\ListAtsCandidatesRequest $request, ?Options $options = null): Operations\ListAtsCandidatesResponse
@@ -238,8 +238,8 @@ class Candidate
     /**
      * Update a candidate
      *
-     * @param  Operations\PatchAtsCandidateRequest  $request
-     * @return Operations\PatchAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAtsCandidate(Operations\PatchAtsCandidateRequest $request, ?Options $options = null): Operations\PatchAtsCandidateResponse
@@ -305,8 +305,8 @@ class Candidate
     /**
      * Remove a candidate
      *
-     * @param  Operations\RemoveAtsCandidateRequest  $request
-     * @return Operations\RemoveAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAtsCandidate(Operations\RemoveAtsCandidateRequest $request, ?Options $options = null): Operations\RemoveAtsCandidateResponse
@@ -361,8 +361,8 @@ class Candidate
     /**
      * Update a candidate
      *
-     * @param  Operations\UpdateAtsCandidateRequest  $request
-     * @return Operations\UpdateAtsCandidateResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAtsCandidate(Operations\UpdateAtsCandidateRequest $request, ?Options $options = null): Operations\UpdateAtsCandidateResponse

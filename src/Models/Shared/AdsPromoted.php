@@ -21,7 +21,7 @@ class AdsPromoted
 
     /**
      *
-     * @var AdsPromotedType $type
+     * @var \Unified\Unified_to\Models\Shared\AdsPromotedType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsPromotedType')]
@@ -37,7 +37,7 @@ class AdsPromoted
 
     /**
      * @param  string  $id
-     * @param  AdsPromotedType  $type
+     * @param  \Unified\Unified_to\Models\Shared\AdsPromotedType  $type
      * @param  ?string  $name
      * @phpstan-pure
      */

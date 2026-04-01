@@ -72,7 +72,7 @@ class PropertyAccountingReportTrialBalance
     /**
      * $subItems
      *
-     * @var ?array<AccountingTrialbalanceSubItem> $subItems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTrialbalanceSubItem> $subItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTrialbalanceSubItem>|null')]
@@ -111,7 +111,7 @@ class PropertyAccountingReportTrialBalance
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
-     * @param  ?array<AccountingTrialbalanceSubItem>  $subItems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTrialbalanceSubItem>  $subItems
      * @param  ?float  $totalCreditAmount
      * @param  ?float  $totalDebitAmount
      * @param  ?\DateTime  $updatedAt

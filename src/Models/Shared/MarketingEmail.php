@@ -20,7 +20,7 @@ class MarketingEmail
 
     /**
      *
-     * @var ?MarketingEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\MarketingEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MarketingEmailType|null')]
@@ -29,7 +29,7 @@ class MarketingEmail
 
     /**
      * @param  string  $email
-     * @param  ?MarketingEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\MarketingEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?MarketingEmailType $type = null)

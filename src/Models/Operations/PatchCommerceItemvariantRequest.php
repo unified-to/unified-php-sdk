@@ -14,7 +14,7 @@ class PatchCommerceItemvariantRequest
 {
     /**
      *
-     * @var Shared\CommerceItemvariant $commerceItemvariant
+     * @var \Unified\Unified_to\Models\Shared\CommerceItemvariant $commerceItemvariant
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceItemvariant $commerceItemvariant;
@@ -38,7 +38,7 @@ class PatchCommerceItemvariantRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCommerceItemvariantQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCommerceItemvariantQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCommerceItemvariantRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceItemvariant  $commerceItemvariant
+     * @param  \Unified\Unified_to\Models\Shared\CommerceItemvariant  $commerceItemvariant
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCommerceItemvariantQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCommerceItemvariantQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

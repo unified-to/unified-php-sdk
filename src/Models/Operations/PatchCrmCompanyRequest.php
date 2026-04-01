@@ -15,7 +15,7 @@ class PatchCrmCompanyRequest
     /**
      * A company represents an organization that optionally is associated with a deal and/or contacts
      *
-     * @var Shared\CrmCompany $crmCompany
+     * @var \Unified\Unified_to\Models\Shared\CrmCompany $crmCompany
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmCompany $crmCompany;
@@ -39,7 +39,7 @@ class PatchCrmCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCrmCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCrmCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -53,10 +53,10 @@ class PatchCrmCompanyRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmCompany  $crmCompany
+     * @param  \Unified\Unified_to\Models\Shared\CrmCompany  $crmCompany
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCrmCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCrmCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

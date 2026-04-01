@@ -70,7 +70,7 @@ class CommerceCollection
     /**
      * $itemMetadata
      *
-     * @var ?array<CommerceMetadata> $itemMetadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $itemMetadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('item_metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -80,7 +80,7 @@ class CommerceCollection
     /**
      * $media
      *
-     * @var ?array<CommerceItemMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
@@ -90,7 +90,7 @@ class CommerceCollection
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -143,7 +143,7 @@ class CommerceCollection
 
     /**
      *
-     * @var ?CommerceCollectionType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceCollectionType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceCollectionType|null')]
@@ -166,15 +166,15 @@ class CommerceCollection
      * @param  ?bool  $isActive
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
-     * @param  ?array<CommerceMetadata>  $itemMetadata
-     * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $itemMetadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
-     * @param  ?CommerceCollectionType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceCollectionType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

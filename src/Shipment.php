@@ -47,8 +47,8 @@ class Shipment
     /**
      * Create a shipment
      *
-     * @param  Operations\CreateShippingShipmentRequest  $request
-     * @return Operations\CreateShippingShipmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createShippingShipment(Operations\CreateShippingShipmentRequest $request, ?Options $options = null): Operations\CreateShippingShipmentResponse
@@ -114,8 +114,8 @@ class Shipment
     /**
      * Retrieve a shipment
      *
-     * @param  Operations\GetShippingShipmentRequest  $request
-     * @return Operations\GetShippingShipmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getShippingShipment(Operations\GetShippingShipmentRequest $request, ?Options $options = null): Operations\GetShippingShipmentResponse
@@ -176,8 +176,8 @@ class Shipment
     /**
      * List all shipments
      *
-     * @param  Operations\ListShippingShipmentsRequest  $request
-     * @return Operations\ListShippingShipmentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingShipmentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingShipmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listShippingShipments(Operations\ListShippingShipmentsRequest $request, ?Options $options = null): Operations\ListShippingShipmentsResponse
@@ -238,8 +238,8 @@ class Shipment
     /**
      * Update a shipment
      *
-     * @param  Operations\PatchShippingShipmentRequest  $request
-     * @return Operations\PatchShippingShipmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchShippingShipment(Operations\PatchShippingShipmentRequest $request, ?Options $options = null): Operations\PatchShippingShipmentResponse
@@ -305,8 +305,8 @@ class Shipment
     /**
      * Remove a shipment
      *
-     * @param  Operations\RemoveShippingShipmentRequest  $request
-     * @return Operations\RemoveShippingShipmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeShippingShipment(Operations\RemoveShippingShipmentRequest $request, ?Options $options = null): Operations\RemoveShippingShipmentResponse
@@ -361,8 +361,8 @@ class Shipment
     /**
      * Update a shipment
      *
-     * @param  Operations\UpdateShippingShipmentRequest  $request
-     * @return Operations\UpdateShippingShipmentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateShippingShipment(Operations\UpdateShippingShipmentRequest $request, ?Options $options = null): Operations\UpdateShippingShipmentResponse

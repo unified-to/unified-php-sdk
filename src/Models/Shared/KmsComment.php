@@ -20,7 +20,7 @@ class KmsComment
 
     /**
      *
-     * @var ?ContentType $contentType
+     * @var ?\Unified\Unified_to\Models\Shared\ContentType $contentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ContentType|null')]
@@ -71,7 +71,7 @@ class KmsComment
 
     /**
      *
-     * @var ?KmsCommentType $type
+     * @var ?\Unified\Unified_to\Models\Shared\KmsCommentType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\KmsCommentType|null')]
@@ -96,13 +96,13 @@ class KmsComment
 
     /**
      * @param  string  $content
-     * @param  ?ContentType  $contentType
+     * @param  ?\Unified\Unified_to\Models\Shared\ContentType  $contentType
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?string  $pageId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?KmsCommentType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\KmsCommentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure

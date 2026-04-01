@@ -35,7 +35,7 @@ class PatchPaymentSubscriptionResponse
     /**
      * Successful
      *
-     * @var ?Shared\PaymentSubscription $paymentSubscription
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentSubscription $paymentSubscription
      */
     public ?Shared\PaymentSubscription $paymentSubscription = null;
 
@@ -43,7 +43,7 @@ class PatchPaymentSubscriptionResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\PaymentSubscription  $paymentSubscription
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentSubscription  $paymentSubscription
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\PaymentSubscription $paymentSubscription = null)

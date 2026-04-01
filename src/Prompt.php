@@ -47,8 +47,8 @@ class Prompt
     /**
      * Create a prompt
      *
-     * @param  Operations\CreateGenaiPromptRequest  $request
-     * @return Operations\CreateGenaiPromptResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPromptRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiPromptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createGenaiPrompt(Operations\CreateGenaiPromptRequest $request, ?Options $options = null): Operations\CreateGenaiPromptResponse

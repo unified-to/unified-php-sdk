@@ -30,7 +30,7 @@ class ListCommerceAvailabilitiesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCommerceAvailabilitiesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -130,7 +130,7 @@ class ListCommerceAvailabilitiesRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLt
-     * @param  ?array<ListCommerceAvailabilitiesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesQueryParamFields>  $fields
      * @param  ?string  $itemId
      * @param  ?float  $limit
      * @param  ?string  $locationId

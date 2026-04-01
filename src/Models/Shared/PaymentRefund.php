@@ -77,7 +77,7 @@ class PaymentRefund
 
     /**
      *
-     * @var ?PaymentRefundStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentRefundStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus|null')]
@@ -101,7 +101,7 @@ class PaymentRefund
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
-     * @param  ?PaymentRefundStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentRefundStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

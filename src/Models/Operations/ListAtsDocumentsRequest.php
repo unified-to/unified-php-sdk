@@ -38,7 +38,7 @@ class ListAtsDocumentsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAtsDocumentsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsDocumentsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListAtsDocumentsRequest
      * @param  string  $connectionId
      * @param  ?string  $applicationId
      * @param  ?string  $candidateId
-     * @param  ?array<ListAtsDocumentsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsDocumentsQueryParamFields>  $fields
      * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset

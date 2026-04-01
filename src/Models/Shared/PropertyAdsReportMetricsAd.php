@@ -21,7 +21,7 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsAdAdType $adType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdAdType $adType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ad_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdAdType|null')]
@@ -153,7 +153,7 @@ class PropertyAdsReportMetricsAd
     /**
      * $promoted
      *
-     * @var ?array<AdsPromoted> $promoted
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('promoted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsPromoted>|null')]
@@ -172,7 +172,7 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsAdStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdStatus|null')]
@@ -189,7 +189,7 @@ class PropertyAdsReportMetricsAd
 
     /**
      * @param  ?string  $adCopy
-     * @param  ?PropertyAdsReportMetricsAdAdType  $adType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdAdType  $adType
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creativeAssetUrl
@@ -205,9 +205,9 @@ class PropertyAdsReportMetricsAd
      * @param  ?string  $organizationId
      * @param  ?string  $path1
      * @param  ?string  $path2
-     * @param  ?array<AdsPromoted>  $promoted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
-     * @param  ?PropertyAdsReportMetricsAdStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

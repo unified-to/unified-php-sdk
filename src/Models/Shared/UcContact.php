@@ -31,7 +31,7 @@ class UcContact
     /**
      * An array of email addresses for this contact
      *
-     * @var ?array<UcEmail> $emails
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcEmail> $emails
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('emails')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcEmail>|null')]
@@ -83,7 +83,7 @@ class UcContact
     /**
      * An array of telephones for this contact
      *
-     * @var ?array<UcTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcTelephone>|null')]
@@ -109,13 +109,13 @@ class UcContact
     /**
      * @param  ?string  $company
      * @param  ?\DateTime  $createdAt
-     * @param  ?array<UcEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcEmail>  $emails
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $lastName
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<UcTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcTelephone>  $telephones
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

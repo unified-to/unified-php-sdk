@@ -47,8 +47,8 @@ class Note
     /**
      * Create a note
      *
-     * @param  Operations\CreateTicketingNoteRequest  $request
-     * @return Operations\CreateTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingNote(Operations\CreateTicketingNoteRequest $request, ?Options $options = null): Operations\CreateTicketingNoteResponse
@@ -114,8 +114,8 @@ class Note
     /**
      * Retrieve a note
      *
-     * @param  Operations\GetTicketingNoteRequest  $request
-     * @return Operations\GetTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingNote(Operations\GetTicketingNoteRequest $request, ?Options $options = null): Operations\GetTicketingNoteResponse
@@ -176,8 +176,8 @@ class Note
     /**
      * List all notes
      *
-     * @param  Operations\ListTicketingNotesRequest  $request
-     * @return Operations\ListTicketingNotesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingNotes(Operations\ListTicketingNotesRequest $request, ?Options $options = null): Operations\ListTicketingNotesResponse
@@ -238,8 +238,8 @@ class Note
     /**
      * Update a note
      *
-     * @param  Operations\PatchTicketingNoteRequest  $request
-     * @return Operations\PatchTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingNote(Operations\PatchTicketingNoteRequest $request, ?Options $options = null): Operations\PatchTicketingNoteResponse
@@ -305,8 +305,8 @@ class Note
     /**
      * Remove a note
      *
-     * @param  Operations\RemoveTicketingNoteRequest  $request
-     * @return Operations\RemoveTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingNote(Operations\RemoveTicketingNoteRequest $request, ?Options $options = null): Operations\RemoveTicketingNoteResponse
@@ -361,8 +361,8 @@ class Note
     /**
      * Update a note
      *
-     * @param  Operations\UpdateTicketingNoteRequest  $request
-     * @return Operations\UpdateTicketingNoteResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingNote(Operations\UpdateTicketingNoteRequest $request, ?Options $options = null): Operations\UpdateTicketingNoteResponse

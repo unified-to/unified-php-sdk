@@ -35,7 +35,7 @@ class GetUnifiedIssueResponse
     /**
      * Successful
      *
-     * @var ?Shared\Issue $issue
+     * @var ?\Unified\Unified_to\Models\Shared\Issue $issue
      */
     public ?Shared\Issue $issue = null;
 
@@ -43,7 +43,7 @@ class GetUnifiedIssueResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\Issue  $issue
+     * @param  ?\Unified\Unified_to\Models\Shared\Issue  $issue
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\Issue $issue = null)

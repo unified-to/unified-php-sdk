@@ -14,7 +14,7 @@ class CreateTicketingCategoryRequest
 {
     /**
      *
-     * @var Shared\TicketingCategory $ticketingCategory
+     * @var \Unified\Unified_to\Models\Shared\TicketingCategory $ticketingCategory
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TicketingCategory $ticketingCategory;
@@ -30,7 +30,7 @@ class CreateTicketingCategoryRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateTicketingCategoryQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateTicketingCategoryQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateTicketingCategoryRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TicketingCategory  $ticketingCategory
+     * @param  \Unified\Unified_to\Models\Shared\TicketingCategory  $ticketingCategory
      * @param  string  $connectionId
-     * @param  ?array<CreateTicketingCategoryQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateTicketingCategoryQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

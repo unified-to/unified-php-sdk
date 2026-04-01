@@ -30,7 +30,7 @@ class ListAccountingReportsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingReportsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingReportsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -105,7 +105,7 @@ class ListAccountingReportsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $endLt
-     * @param  ?array<ListAccountingReportsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingReportsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

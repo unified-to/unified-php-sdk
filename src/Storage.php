@@ -47,8 +47,8 @@ class Storage
     /**
      * Create a file
      *
-     * @param  Operations\CreateStorageFileRequest  $request
-     * @return Operations\CreateStorageFileResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createStorageFile(Operations\CreateStorageFileRequest $request, ?Options $options = null): Operations\CreateStorageFileResponse
@@ -114,8 +114,8 @@ class Storage
     /**
      * Retrieve a file
      *
-     * @param  Operations\GetStorageFileRequest  $request
-     * @return Operations\GetStorageFileResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getStorageFile(Operations\GetStorageFileRequest $request, ?Options $options = null): Operations\GetStorageFileResponse
@@ -176,8 +176,8 @@ class Storage
     /**
      * List all files
      *
-     * @param  Operations\ListStorageFilesRequest  $request
-     * @return Operations\ListStorageFilesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListStorageFilesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListStorageFilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listStorageFiles(Operations\ListStorageFilesRequest $request, ?Options $options = null): Operations\ListStorageFilesResponse
@@ -238,8 +238,8 @@ class Storage
     /**
      * Update a file
      *
-     * @param  Operations\PatchStorageFileRequest  $request
-     * @return Operations\PatchStorageFileResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchStorageFile(Operations\PatchStorageFileRequest $request, ?Options $options = null): Operations\PatchStorageFileResponse
@@ -305,8 +305,8 @@ class Storage
     /**
      * Remove a file
      *
-     * @param  Operations\RemoveStorageFileRequest  $request
-     * @return Operations\RemoveStorageFileResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeStorageFile(Operations\RemoveStorageFileRequest $request, ?Options $options = null): Operations\RemoveStorageFileResponse
@@ -361,8 +361,8 @@ class Storage
     /**
      * Update a file
      *
-     * @param  Operations\UpdateStorageFileRequest  $request
-     * @return Operations\UpdateStorageFileResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateStorageFile(Operations\UpdateStorageFileRequest $request, ?Options $options = null): Operations\UpdateStorageFileResponse

@@ -14,7 +14,7 @@ class PatchCommerceLocationRequest
 {
     /**
      *
-     * @var Shared\CommerceLocation $commerceLocation
+     * @var \Unified\Unified_to\Models\Shared\CommerceLocation $commerceLocation
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CommerceLocation $commerceLocation;
@@ -38,7 +38,7 @@ class PatchCommerceLocationRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchCommerceLocationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchCommerceLocationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchCommerceLocationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CommerceLocation  $commerceLocation
+     * @param  \Unified\Unified_to\Models\Shared\CommerceLocation  $commerceLocation
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchCommerceLocationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchCommerceLocationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

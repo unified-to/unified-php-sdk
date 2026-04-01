@@ -20,9 +20,17 @@ class ListAccountingJournalsRequest
     public string $connectionId;
 
     /**
+     * The account ID to filter by (reference to AccountingAccount)
+     *
+     * @var ?string $accountId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=account_id')]
+    public ?string $accountId = null;
+
+    /**
      * Fields to return
      *
-     * @var ?array<ListAccountingJournalsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingJournalsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +97,8 @@ class ListAccountingJournalsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAccountingJournalsQueryParamFields>  $fields
+     * @param  ?string  $accountId
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingJournalsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -100,9 +109,10 @@ class ListAccountingJournalsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $accountId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->accountId = $accountId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;

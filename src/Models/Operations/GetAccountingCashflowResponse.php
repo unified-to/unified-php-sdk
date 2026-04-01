@@ -35,7 +35,7 @@ class GetAccountingCashflowResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingCashflow $accountingCashflow
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCashflow $accountingCashflow
      */
     public ?Shared\AccountingCashflow $accountingCashflow = null;
 
@@ -43,7 +43,7 @@ class GetAccountingCashflowResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingCashflow  $accountingCashflow
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCashflow  $accountingCashflow
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingCashflow $accountingCashflow = null)

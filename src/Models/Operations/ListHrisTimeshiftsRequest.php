@@ -38,7 +38,7 @@ class ListHrisTimeshiftsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisTimeshiftsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeshiftsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -123,7 +123,7 @@ class ListHrisTimeshiftsRequest
      * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?string  $endLt
-     * @param  ?array<ListHrisTimeshiftsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeshiftsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?string  $locationId
      * @param  ?float  $offset

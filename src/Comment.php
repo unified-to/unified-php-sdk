@@ -47,8 +47,8 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  Operations\CreateKmsCommentRequest  $request
-     * @return Operations\CreateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createKmsComment(Operations\CreateKmsCommentRequest $request, ?Options $options = null): Operations\CreateKmsCommentResponse
@@ -114,8 +114,8 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  Operations\CreateTaskCommentRequest  $request
-     * @return Operations\CreateTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTaskComment(Operations\CreateTaskCommentRequest $request, ?Options $options = null): Operations\CreateTaskCommentResponse
@@ -181,8 +181,8 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  Operations\CreateUcCommentRequest  $request
-     * @return Operations\CreateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createUcComment(Operations\CreateUcCommentRequest $request, ?Options $options = null): Operations\CreateUcCommentResponse
@@ -248,8 +248,8 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  Operations\GetKmsCommentRequest  $request
-     * @return Operations\GetKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getKmsComment(Operations\GetKmsCommentRequest $request, ?Options $options = null): Operations\GetKmsCommentResponse
@@ -310,8 +310,8 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  Operations\GetTaskCommentRequest  $request
-     * @return Operations\GetTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTaskComment(Operations\GetTaskCommentRequest $request, ?Options $options = null): Operations\GetTaskCommentResponse
@@ -372,8 +372,8 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  Operations\GetUcCommentRequest  $request
-     * @return Operations\GetUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getUcComment(Operations\GetUcCommentRequest $request, ?Options $options = null): Operations\GetUcCommentResponse
@@ -434,8 +434,8 @@ class Comment
     /**
      * List all comments
      *
-     * @param  Operations\ListKmsCommentsRequest  $request
-     * @return Operations\ListKmsCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listKmsComments(Operations\ListKmsCommentsRequest $request, ?Options $options = null): Operations\ListKmsCommentsResponse
@@ -496,8 +496,8 @@ class Comment
     /**
      * List all comments
      *
-     * @param  Operations\ListTaskCommentsRequest  $request
-     * @return Operations\ListTaskCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTaskComments(Operations\ListTaskCommentsRequest $request, ?Options $options = null): Operations\ListTaskCommentsResponse
@@ -558,8 +558,8 @@ class Comment
     /**
      * List all comments
      *
-     * @param  Operations\ListUcCommentsRequest  $request
-     * @return Operations\ListUcCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listUcComments(Operations\ListUcCommentsRequest $request, ?Options $options = null): Operations\ListUcCommentsResponse
@@ -620,8 +620,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\PatchKmsCommentRequest  $request
-     * @return Operations\PatchKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchKmsComment(Operations\PatchKmsCommentRequest $request, ?Options $options = null): Operations\PatchKmsCommentResponse
@@ -687,8 +687,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\PatchTaskCommentRequest  $request
-     * @return Operations\PatchTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTaskComment(Operations\PatchTaskCommentRequest $request, ?Options $options = null): Operations\PatchTaskCommentResponse
@@ -754,8 +754,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\PatchUcCommentRequest  $request
-     * @return Operations\PatchUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchUcComment(Operations\PatchUcCommentRequest $request, ?Options $options = null): Operations\PatchUcCommentResponse
@@ -821,8 +821,8 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  Operations\RemoveKmsCommentRequest  $request
-     * @return Operations\RemoveKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeKmsComment(Operations\RemoveKmsCommentRequest $request, ?Options $options = null): Operations\RemoveKmsCommentResponse
@@ -877,8 +877,8 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  Operations\RemoveTaskCommentRequest  $request
-     * @return Operations\RemoveTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTaskComment(Operations\RemoveTaskCommentRequest $request, ?Options $options = null): Operations\RemoveTaskCommentResponse
@@ -933,8 +933,8 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  Operations\RemoveUcCommentRequest  $request
-     * @return Operations\RemoveUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeUcComment(Operations\RemoveUcCommentRequest $request, ?Options $options = null): Operations\RemoveUcCommentResponse
@@ -989,8 +989,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\UpdateKmsCommentRequest  $request
-     * @return Operations\UpdateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateKmsComment(Operations\UpdateKmsCommentRequest $request, ?Options $options = null): Operations\UpdateKmsCommentResponse
@@ -1056,8 +1056,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\UpdateTaskCommentRequest  $request
-     * @return Operations\UpdateTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTaskComment(Operations\UpdateTaskCommentRequest $request, ?Options $options = null): Operations\UpdateTaskCommentResponse
@@ -1123,8 +1123,8 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  Operations\UpdateUcCommentRequest  $request
-     * @return Operations\UpdateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateUcComment(Operations\UpdateUcCommentRequest $request, ?Options $options = null): Operations\UpdateUcCommentResponse

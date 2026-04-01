@@ -47,8 +47,8 @@ class Employee
     /**
      * Create an employee
      *
-     * @param  Operations\CreateHrisEmployeeRequest  $request
-     * @return Operations\CreateHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisEmployee(Operations\CreateHrisEmployeeRequest $request, ?Options $options = null): Operations\CreateHrisEmployeeResponse
@@ -114,8 +114,8 @@ class Employee
     /**
      * Retrieve an employee
      *
-     * @param  Operations\GetHrisEmployeeRequest  $request
-     * @return Operations\GetHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisEmployee(Operations\GetHrisEmployeeRequest $request, ?Options $options = null): Operations\GetHrisEmployeeResponse
@@ -176,8 +176,8 @@ class Employee
     /**
      * List all employees
      *
-     * @param  Operations\ListHrisEmployeesRequest  $request
-     * @return Operations\ListHrisEmployeesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisEmployees(Operations\ListHrisEmployeesRequest $request, ?Options $options = null): Operations\ListHrisEmployeesResponse
@@ -238,8 +238,8 @@ class Employee
     /**
      * Update an employee
      *
-     * @param  Operations\PatchHrisEmployeeRequest  $request
-     * @return Operations\PatchHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisEmployee(Operations\PatchHrisEmployeeRequest $request, ?Options $options = null): Operations\PatchHrisEmployeeResponse
@@ -305,8 +305,8 @@ class Employee
     /**
      * Remove an employee
      *
-     * @param  Operations\RemoveHrisEmployeeRequest  $request
-     * @return Operations\RemoveHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisEmployee(Operations\RemoveHrisEmployeeRequest $request, ?Options $options = null): Operations\RemoveHrisEmployeeResponse
@@ -361,8 +361,8 @@ class Employee
     /**
      * Update an employee
      *
-     * @param  Operations\UpdateHrisEmployeeRequest  $request
-     * @return Operations\UpdateHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisEmployee(Operations\UpdateHrisEmployeeRequest $request, ?Options $options = null): Operations\UpdateHrisEmployeeResponse

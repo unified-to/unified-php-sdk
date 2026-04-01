@@ -22,7 +22,7 @@ class ListAdsCampaignsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAdsCampaignsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAdsCampaignsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListAdsCampaignsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAdsCampaignsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsCampaignsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

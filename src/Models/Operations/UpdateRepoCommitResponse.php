@@ -35,7 +35,7 @@ class UpdateRepoCommitResponse
     /**
      * Successful
      *
-     * @var ?Shared\RepoCommit $repoCommit
+     * @var ?\Unified\Unified_to\Models\Shared\RepoCommit $repoCommit
      */
     public ?Shared\RepoCommit $repoCommit = null;
 
@@ -43,7 +43,7 @@ class UpdateRepoCommitResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\RepoCommit  $repoCommit
+     * @param  ?\Unified\Unified_to\Models\Shared\RepoCommit  $repoCommit
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\RepoCommit $repoCommit = null)

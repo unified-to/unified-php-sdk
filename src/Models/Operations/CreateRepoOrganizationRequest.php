@@ -14,7 +14,7 @@ class CreateRepoOrganizationRequest
 {
     /**
      *
-     * @var Shared\RepoOrganization $repoOrganization
+     * @var \Unified\Unified_to\Models\Shared\RepoOrganization $repoOrganization
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoOrganization $repoOrganization;
@@ -30,7 +30,7 @@ class CreateRepoOrganizationRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateRepoOrganizationQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateRepoOrganizationQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateRepoOrganizationRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoOrganization  $repoOrganization
+     * @param  \Unified\Unified_to\Models\Shared\RepoOrganization  $repoOrganization
      * @param  string  $connectionId
-     * @param  ?array<CreateRepoOrganizationQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateRepoOrganizationQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -22,7 +22,7 @@ class ListAccountingAccountsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingAccountsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingAccountsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -80,6 +80,14 @@ class ListAccountingAccountsRequest
     public ?string $sort = null;
 
     /**
+     * The type to filter by
+     *
+     * @var ?string $type
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
+    public ?string $type = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -89,7 +97,7 @@ class ListAccountingAccountsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListAccountingAccountsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingAccountsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -97,10 +105,11 @@ class ListAccountingAccountsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
@@ -111,6 +120,7 @@ class ListAccountingAccountsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->type = $type;
         $this->updatedGte = $updatedGte;
     }
 }

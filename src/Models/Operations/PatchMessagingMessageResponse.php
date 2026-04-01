@@ -35,7 +35,7 @@ class PatchMessagingMessageResponse
     /**
      * Successful
      *
-     * @var ?Shared\MessagingMessage $messagingMessage
+     * @var ?\Unified\Unified_to\Models\Shared\MessagingMessage $messagingMessage
      */
     public ?Shared\MessagingMessage $messagingMessage = null;
 
@@ -43,7 +43,7 @@ class PatchMessagingMessageResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\MessagingMessage  $messagingMessage
+     * @param  ?\Unified\Unified_to\Models\Shared\MessagingMessage  $messagingMessage
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MessagingMessage $messagingMessage = null)

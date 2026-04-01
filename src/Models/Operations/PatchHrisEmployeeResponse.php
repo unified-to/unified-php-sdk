@@ -35,7 +35,7 @@ class PatchHrisEmployeeResponse
     /**
      * Successful
      *
-     * @var ?Shared\HrisEmployee $hrisEmployee
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmployee $hrisEmployee
      */
     public ?Shared\HrisEmployee $hrisEmployee = null;
 
@@ -43,7 +43,7 @@ class PatchHrisEmployeeResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\HrisEmployee  $hrisEmployee
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployee  $hrisEmployee
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\HrisEmployee $hrisEmployee = null)

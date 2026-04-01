@@ -15,7 +15,7 @@ class CreateAccountingAccountRequest
     /**
      * Chart of accounts
      *
-     * @var Shared\AccountingAccount $accountingAccount
+     * @var \Unified\Unified_to\Models\Shared\AccountingAccount $accountingAccount
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingAccount $accountingAccount;
@@ -31,7 +31,7 @@ class CreateAccountingAccountRequest
     /**
      * Fields to return
      *
-     * @var ?array<Fields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\Fields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateAccountingAccountRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingAccount  $accountingAccount
+     * @param  \Unified\Unified_to\Models\Shared\AccountingAccount  $accountingAccount
      * @param  string  $connectionId
-     * @param  ?array<Fields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\Fields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

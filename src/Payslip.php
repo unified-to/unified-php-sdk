@@ -47,8 +47,8 @@ class Payslip
     /**
      * Retrieve a payslip
      *
-     * @param  Operations\GetHrisPayslipRequest  $request
-     * @return Operations\GetHrisPayslipResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisPayslip(Operations\GetHrisPayslipRequest $request, ?Options $options = null): Operations\GetHrisPayslipResponse
@@ -109,8 +109,8 @@ class Payslip
     /**
      * List all payslips
      *
-     * @param  Operations\ListHrisPayslipsRequest  $request
-     * @return Operations\ListHrisPayslipsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisPayslips(Operations\ListHrisPayslipsRequest $request, ?Options $options = null): Operations\ListHrisPayslipsResponse

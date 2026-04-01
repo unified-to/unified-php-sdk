@@ -15,7 +15,7 @@ class CreateCrmCompanyRequest
     /**
      * A company represents an organization that optionally is associated with a deal and/or contacts
      *
-     * @var Shared\CrmCompany $crmCompany
+     * @var \Unified\Unified_to\Models\Shared\CrmCompany $crmCompany
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CrmCompany $crmCompany;
@@ -31,7 +31,7 @@ class CreateCrmCompanyRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateCrmCompanyQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateCrmCompanyQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -45,9 +45,9 @@ class CreateCrmCompanyRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CrmCompany  $crmCompany
+     * @param  \Unified\Unified_to\Models\Shared\CrmCompany  $crmCompany
      * @param  string  $connectionId
-     * @param  ?array<CreateCrmCompanyQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateCrmCompanyQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

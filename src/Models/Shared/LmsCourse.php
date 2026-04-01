@@ -29,6 +29,16 @@ class LmsCourse
     public ?array $categories = null;
 
     /**
+     * $contentIds
+     *
+     * @var ?array<string> $contentIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $contentIds = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -51,6 +61,14 @@ class LmsCourse
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
+
+    /**
+     *
+     * @var ?float $durationMinutes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('duration_minutes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $durationMinutes = null;
 
     /**
      *
@@ -99,7 +117,7 @@ class LmsCourse
     /**
      * $media
      *
-     * @var ?array<LmsMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMedia>|null')]
@@ -115,6 +133,14 @@ class LmsCourse
     public ?float $priceAmount = null;
 
     /**
+     *
+     * @var ?string $providerName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('provider_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $providerName = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -123,6 +149,16 @@ class LmsCourse
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $raw = null;
+
+    /**
+     * $skills
+     *
+     * @var ?array<string> $skills
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('skills')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $skills = null;
 
     /**
      * $studentIds
@@ -145,28 +181,34 @@ class LmsCourse
     /**
      * @param  string  $name
      * @param  ?array<string>  $categories
+     * @param  ?array<string>  $contentIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
+     * @param  ?float  $durationMinutes
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<string>  $languages
-     * @param  ?array<LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?float  $priceAmount
+     * @param  ?string  $providerName
      * @param  ?array<string, mixed>  $raw
+     * @param  ?array<string>  $skills
      * @param  ?array<string>  $studentIds
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?float $priceAmount = null, ?array $raw = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?float $priceAmount = null, ?string $providerName = null, ?array $raw = null, ?array $skills = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->categories = $categories;
+        $this->contentIds = $contentIds;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
+        $this->durationMinutes = $durationMinutes;
         $this->id = $id;
         $this->instructorIds = $instructorIds;
         $this->isActive = $isActive;
@@ -174,7 +216,9 @@ class LmsCourse
         $this->languages = $languages;
         $this->media = $media;
         $this->priceAmount = $priceAmount;
+        $this->providerName = $providerName;
         $this->raw = $raw;
+        $this->skills = $skills;
         $this->studentIds = $studentIds;
         $this->updatedAt = $updatedAt;
     }

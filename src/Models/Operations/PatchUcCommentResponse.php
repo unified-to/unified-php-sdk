@@ -35,7 +35,7 @@ class PatchUcCommentResponse
     /**
      * Successful
      *
-     * @var ?Shared\UcComment $ucComment
+     * @var ?\Unified\Unified_to\Models\Shared\UcComment $ucComment
      */
     public ?Shared\UcComment $ucComment = null;
 
@@ -43,7 +43,7 @@ class PatchUcCommentResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\UcComment  $ucComment
+     * @param  ?\Unified\Unified_to\Models\Shared\UcComment  $ucComment
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\UcComment $ucComment = null)

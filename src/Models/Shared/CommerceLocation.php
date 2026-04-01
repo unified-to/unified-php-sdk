@@ -20,7 +20,7 @@ class CommerceLocation
 
     /**
      *
-     * @var ?PropertyCommerceLocationAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyCommerceLocationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyCommerceLocationAddress|null')]
@@ -103,7 +103,7 @@ class CommerceLocation
 
     /**
      *
-     * @var ?LocationType $locationType
+     * @var ?\Unified\Unified_to\Models\Shared\LocationType $locationType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('location_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\LocationType|null')]
@@ -121,7 +121,7 @@ class CommerceLocation
     /**
      * $media
      *
-     * @var ?array<CommerceItemMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
@@ -173,7 +173,7 @@ class CommerceLocation
     /**
      * $telephones
      *
-     * @var ?array<CommerceTelephone> $telephones
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceTelephone> $telephones
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('telephones')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceTelephone>|null')]
@@ -198,7 +198,7 @@ class CommerceLocation
 
     /**
      * @param  string  $name
-     * @param  ?PropertyCommerceLocationAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyCommerceLocationAddress  $address
      * @param  ?array<string>  $categories
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -208,15 +208,15 @@ class CommerceLocation
      * @param  ?bool  $isActive
      * @param  ?string  $languageLocale
      * @param  ?float  $latitude
-     * @param  ?LocationType  $locationType
+     * @param  ?\Unified\Unified_to\Models\Shared\LocationType  $locationType
      * @param  ?float  $longitude
-     * @param  ?array<CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
      * @param  ?string  $parentId
      * @param  ?string  $priceLevel
      * @param  ?float  $rating
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $reviewCount
-     * @param  ?array<CommerceTelephone>  $telephones
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure

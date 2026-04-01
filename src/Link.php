@@ -47,8 +47,8 @@ class Link
     /**
      * Create a link
      *
-     * @param  Operations\CreateCalendarLinkRequest  $request
-     * @return Operations\CreateCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createCalendarLink(Operations\CreateCalendarLinkRequest $request, ?Options $options = null): Operations\CreateCalendarLinkResponse
@@ -114,8 +114,8 @@ class Link
     /**
      * Create a link
      *
-     * @param  Operations\CreatePaymentLinkRequest  $request
-     * @return Operations\CreatePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createPaymentLink(Operations\CreatePaymentLinkRequest $request, ?Options $options = null): Operations\CreatePaymentLinkResponse
@@ -181,8 +181,8 @@ class Link
     /**
      * Retrieve a link
      *
-     * @param  Operations\GetCalendarLinkRequest  $request
-     * @return Operations\GetCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getCalendarLink(Operations\GetCalendarLinkRequest $request, ?Options $options = null): Operations\GetCalendarLinkResponse
@@ -243,8 +243,8 @@ class Link
     /**
      * Retrieve a link
      *
-     * @param  Operations\GetPaymentLinkRequest  $request
-     * @return Operations\GetPaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getPaymentLink(Operations\GetPaymentLinkRequest $request, ?Options $options = null): Operations\GetPaymentLinkResponse
@@ -305,8 +305,8 @@ class Link
     /**
      * List all links
      *
-     * @param  Operations\ListCalendarLinksRequest  $request
-     * @return Operations\ListCalendarLinksResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarLinksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCalendarLinks(Operations\ListCalendarLinksRequest $request, ?Options $options = null): Operations\ListCalendarLinksResponse
@@ -367,8 +367,8 @@ class Link
     /**
      * List all links
      *
-     * @param  Operations\ListPaymentLinksRequest  $request
-     * @return Operations\ListPaymentLinksResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listPaymentLinks(Operations\ListPaymentLinksRequest $request, ?Options $options = null): Operations\ListPaymentLinksResponse
@@ -429,8 +429,8 @@ class Link
     /**
      * Update a link
      *
-     * @param  Operations\PatchCalendarLinkRequest  $request
-     * @return Operations\PatchCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchCalendarLink(Operations\PatchCalendarLinkRequest $request, ?Options $options = null): Operations\PatchCalendarLinkResponse
@@ -496,8 +496,8 @@ class Link
     /**
      * Update a link
      *
-     * @param  Operations\PatchPaymentLinkRequest  $request
-     * @return Operations\PatchPaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchPaymentLink(Operations\PatchPaymentLinkRequest $request, ?Options $options = null): Operations\PatchPaymentLinkResponse
@@ -563,8 +563,8 @@ class Link
     /**
      * Remove a link
      *
-     * @param  Operations\RemoveCalendarLinkRequest  $request
-     * @return Operations\RemoveCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeCalendarLink(Operations\RemoveCalendarLinkRequest $request, ?Options $options = null): Operations\RemoveCalendarLinkResponse
@@ -619,8 +619,8 @@ class Link
     /**
      * Remove a link
      *
-     * @param  Operations\RemovePaymentLinkRequest  $request
-     * @return Operations\RemovePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removePaymentLink(Operations\RemovePaymentLinkRequest $request, ?Options $options = null): Operations\RemovePaymentLinkResponse
@@ -675,8 +675,8 @@ class Link
     /**
      * Update a link
      *
-     * @param  Operations\UpdateCalendarLinkRequest  $request
-     * @return Operations\UpdateCalendarLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateCalendarLink(Operations\UpdateCalendarLinkRequest $request, ?Options $options = null): Operations\UpdateCalendarLinkResponse
@@ -742,8 +742,8 @@ class Link
     /**
      * Update a link
      *
-     * @param  Operations\UpdatePaymentLinkRequest  $request
-     * @return Operations\UpdatePaymentLinkResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updatePaymentLink(Operations\UpdatePaymentLinkRequest $request, ?Options $options = null): Operations\UpdatePaymentLinkResponse

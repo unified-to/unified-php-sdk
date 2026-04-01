@@ -47,8 +47,8 @@ class Category
     /**
      * Create a category
      *
-     * @param  Operations\CreateAccountingCategoryRequest  $request
-     * @return Operations\CreateAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createAccountingCategory(Operations\CreateAccountingCategoryRequest $request, ?Options $options = null): Operations\CreateAccountingCategoryResponse
@@ -114,8 +114,8 @@ class Category
     /**
      * Create a category
      *
-     * @param  Operations\CreateTicketingCategoryRequest  $request
-     * @return Operations\CreateTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createTicketingCategory(Operations\CreateTicketingCategoryRequest $request, ?Options $options = null): Operations\CreateTicketingCategoryResponse
@@ -181,8 +181,8 @@ class Category
     /**
      * Retrieve a category
      *
-     * @param  Operations\GetAccountingCategoryRequest  $request
-     * @return Operations\GetAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getAccountingCategory(Operations\GetAccountingCategoryRequest $request, ?Options $options = null): Operations\GetAccountingCategoryResponse
@@ -243,8 +243,8 @@ class Category
     /**
      * Retrieve a category
      *
-     * @param  Operations\GetTicketingCategoryRequest  $request
-     * @return Operations\GetTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getTicketingCategory(Operations\GetTicketingCategoryRequest $request, ?Options $options = null): Operations\GetTicketingCategoryResponse
@@ -305,8 +305,8 @@ class Category
     /**
      * List all categories
      *
-     * @param  Operations\ListAccountingCategoriesRequest  $request
-     * @return Operations\ListAccountingCategoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listAccountingCategories(Operations\ListAccountingCategoriesRequest $request, ?Options $options = null): Operations\ListAccountingCategoriesResponse
@@ -367,8 +367,8 @@ class Category
     /**
      * List all categories
      *
-     * @param  Operations\ListTicketingCategoriesRequest  $request
-     * @return Operations\ListTicketingCategoriesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listTicketingCategories(Operations\ListTicketingCategoriesRequest $request, ?Options $options = null): Operations\ListTicketingCategoriesResponse
@@ -429,8 +429,8 @@ class Category
     /**
      * Update a category
      *
-     * @param  Operations\PatchAccountingCategoryRequest  $request
-     * @return Operations\PatchAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchAccountingCategory(Operations\PatchAccountingCategoryRequest $request, ?Options $options = null): Operations\PatchAccountingCategoryResponse
@@ -496,8 +496,8 @@ class Category
     /**
      * Update a category
      *
-     * @param  Operations\PatchTicketingCategoryRequest  $request
-     * @return Operations\PatchTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchTicketingCategory(Operations\PatchTicketingCategoryRequest $request, ?Options $options = null): Operations\PatchTicketingCategoryResponse
@@ -563,8 +563,8 @@ class Category
     /**
      * Remove a category
      *
-     * @param  Operations\RemoveAccountingCategoryRequest  $request
-     * @return Operations\RemoveAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeAccountingCategory(Operations\RemoveAccountingCategoryRequest $request, ?Options $options = null): Operations\RemoveAccountingCategoryResponse
@@ -619,8 +619,8 @@ class Category
     /**
      * Remove a category
      *
-     * @param  Operations\RemoveTicketingCategoryRequest  $request
-     * @return Operations\RemoveTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeTicketingCategory(Operations\RemoveTicketingCategoryRequest $request, ?Options $options = null): Operations\RemoveTicketingCategoryResponse
@@ -675,8 +675,8 @@ class Category
     /**
      * Update a category
      *
-     * @param  Operations\UpdateAccountingCategoryRequest  $request
-     * @return Operations\UpdateAccountingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateAccountingCategory(Operations\UpdateAccountingCategoryRequest $request, ?Options $options = null): Operations\UpdateAccountingCategoryResponse
@@ -742,8 +742,8 @@ class Category
     /**
      * Update a category
      *
-     * @param  Operations\UpdateTicketingCategoryRequest  $request
-     * @return Operations\UpdateTicketingCategoryResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateTicketingCategory(Operations\UpdateTicketingCategoryRequest $request, ?Options $options = null): Operations\UpdateTicketingCategoryResponse

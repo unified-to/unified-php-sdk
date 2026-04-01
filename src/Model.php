@@ -47,8 +47,8 @@ class Model
     /**
      * Retrieve a model
      *
-     * @param  Operations\GetGenaiModelRequest  $request
-     * @return Operations\GetGenaiModelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetGenaiModelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetGenaiModelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getGenaiModel(Operations\GetGenaiModelRequest $request, ?Options $options = null): Operations\GetGenaiModelResponse
@@ -109,8 +109,8 @@ class Model
     /**
      * List all models
      *
-     * @param  Operations\ListGenaiModelsRequest  $request
-     * @return Operations\ListGenaiModelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListGenaiModelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListGenaiModelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listGenaiModels(Operations\ListGenaiModelsRequest $request, ?Options $options = null): Operations\ListGenaiModelsResponse

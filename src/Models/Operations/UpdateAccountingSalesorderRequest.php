@@ -14,7 +14,7 @@ class UpdateAccountingSalesorderRequest
 {
     /**
      *
-     * @var Shared\AccountingSalesorder $accountingSalesorder
+     * @var \Unified\Unified_to\Models\Shared\AccountingSalesorder $accountingSalesorder
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AccountingSalesorder $accountingSalesorder;
@@ -38,7 +38,7 @@ class UpdateAccountingSalesorderRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAccountingSalesorderQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAccountingSalesorderRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AccountingSalesorder  $accountingSalesorder
+     * @param  \Unified\Unified_to\Models\Shared\AccountingSalesorder  $accountingSalesorder
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAccountingSalesorderQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

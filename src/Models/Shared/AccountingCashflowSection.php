@@ -14,7 +14,7 @@ class AccountingCashflowSection
     /**
      * $items
      *
-     * @var ?array<AccountingCashflowItem> $items
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem>|null')]
@@ -38,7 +38,7 @@ class AccountingCashflowSection
     public ?float $totalAmount = null;
 
     /**
-     * @param  ?array<AccountingCashflowItem>  $items
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowItem>  $items
      * @param  ?string  $sectionName
      * @param  ?float  $totalAmount
      * @phpstan-pure

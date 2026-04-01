@@ -5,6 +5,7 @@
 
 | Field                                                         | Type                                                          | Required                                                      | Description                                                   |
 | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `assignedGrade`                                               | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
 | `completedAt`                                                 | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
 | `contentId`                                                   | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
 | `courseId`                                                    | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |

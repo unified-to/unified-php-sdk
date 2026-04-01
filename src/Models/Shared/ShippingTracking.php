@@ -62,7 +62,7 @@ class ShippingTracking
     /**
      * Array of tracking events
      *
-     * @var ?array<ShippingTrackingEvent> $events
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingTrackingEvent> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingTrackingEvent>|null')]
@@ -97,7 +97,7 @@ class ShippingTracking
 
     /**
      *
-     * @var ?ShippingTrackingStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\ShippingTrackingStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ShippingTrackingStatus|null')]
@@ -135,11 +135,11 @@ class ShippingTracking
      * @param  ?string  $carrierStatusDescription
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $estimatedDelivery
-     * @param  ?array<ShippingTrackingEvent>  $events
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingTrackingEvent>  $events
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $shipmentId
-     * @param  ?ShippingTrackingStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\ShippingTrackingStatus  $status
      * @param  ?string  $statusDescription
      * @param  ?string  $trackingNumber
      * @param  ?\DateTime  $updatedAt

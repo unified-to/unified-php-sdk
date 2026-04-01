@@ -47,8 +47,8 @@ class Tracking
     /**
      * Retrieve a tracking
      *
-     * @param  Operations\GetShippingTrackingRequest  $request
-     * @return Operations\GetShippingTrackingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingTrackingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingTrackingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getShippingTracking(Operations\GetShippingTrackingRequest $request, ?Options $options = null): Operations\GetShippingTrackingResponse

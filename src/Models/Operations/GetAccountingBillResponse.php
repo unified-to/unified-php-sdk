@@ -35,7 +35,7 @@ class GetAccountingBillResponse
     /**
      * Successful
      *
-     * @var ?Shared\AccountingBill $accountingBill
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingBill $accountingBill
      */
     public ?Shared\AccountingBill $accountingBill = null;
 
@@ -43,7 +43,7 @@ class GetAccountingBillResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\AccountingBill  $accountingBill
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingBill  $accountingBill
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\AccountingBill $accountingBill = null)

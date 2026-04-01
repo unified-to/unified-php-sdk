@@ -120,7 +120,7 @@ class AccountingAccount
 
     /**
      *
-     * @var ?Status $status
+     * @var ?\Unified\Unified_to\Models\Shared\Status $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status|null')]
@@ -146,7 +146,7 @@ class AccountingAccount
     /**
      * $taxonomy
      *
-     * @var ?array<AccountingAccountTaxonomy> $taxonomy
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomy> $taxonomy
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('taxonomy')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomy>|null')]
@@ -155,7 +155,7 @@ class AccountingAccount
 
     /**
      *
-     * @var ?Type $type
+     * @var ?\Unified\Unified_to\Models\Shared\Type $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Type|null')]
@@ -184,11 +184,11 @@ class AccountingAccount
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $section
-     * @param  ?Status  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\Status  $status
      * @param  ?string  $subgroup
      * @param  ?string  $subsection
-     * @param  ?array<AccountingAccountTaxonomy>  $taxonomy
-     * @param  ?Type  $type
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomy>  $taxonomy
+     * @param  ?\Unified\Unified_to\Models\Shared\Type  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

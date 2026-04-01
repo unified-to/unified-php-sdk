@@ -47,8 +47,8 @@ class Hris
     /**
      * Create a bankaccount
      *
-     * @param  Operations\CreateHrisBankaccountRequest  $request
-     * @return Operations\CreateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisBankaccount(Operations\CreateHrisBankaccountRequest $request, ?Options $options = null): Operations\CreateHrisBankaccountResponse
@@ -114,8 +114,8 @@ class Hris
     /**
      * Create a benefit
      *
-     * @param  Operations\CreateHrisBenefitRequest  $request
-     * @return Operations\CreateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisBenefit(Operations\CreateHrisBenefitRequest $request, ?Options $options = null): Operations\CreateHrisBenefitResponse
@@ -181,8 +181,8 @@ class Hris
     /**
      * Create a company
      *
-     * @param  Operations\CreateHrisCompanyRequest  $request
-     * @return Operations\CreateHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisCompany(Operations\CreateHrisCompanyRequest $request, ?Options $options = null): Operations\CreateHrisCompanyResponse
@@ -248,8 +248,8 @@ class Hris
     /**
      * Create a deduction
      *
-     * @param  Operations\CreateHrisDeductionRequest  $request
-     * @return Operations\CreateHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisDeduction(Operations\CreateHrisDeductionRequest $request, ?Options $options = null): Operations\CreateHrisDeductionResponse
@@ -315,8 +315,8 @@ class Hris
     /**
      * Create a device
      *
-     * @param  Operations\CreateHrisDeviceRequest  $request
-     * @return Operations\CreateHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisDevice(Operations\CreateHrisDeviceRequest $request, ?Options $options = null): Operations\CreateHrisDeviceResponse
@@ -382,8 +382,8 @@ class Hris
     /**
      * Create an employee
      *
-     * @param  Operations\CreateHrisEmployeeRequest  $request
-     * @return Operations\CreateHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisEmployee(Operations\CreateHrisEmployeeRequest $request, ?Options $options = null): Operations\CreateHrisEmployeeResponse
@@ -449,8 +449,8 @@ class Hris
     /**
      * Create a group
      *
-     * @param  Operations\CreateHrisGroupRequest  $request
-     * @return Operations\CreateHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisGroup(Operations\CreateHrisGroupRequest $request, ?Options $options = null): Operations\CreateHrisGroupResponse
@@ -516,8 +516,8 @@ class Hris
     /**
      * Create a location
      *
-     * @param  Operations\CreateHrisLocationRequest  $request
-     * @return Operations\CreateHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisLocation(Operations\CreateHrisLocationRequest $request, ?Options $options = null): Operations\CreateHrisLocationResponse
@@ -583,8 +583,8 @@ class Hris
     /**
      * Create a timeoff
      *
-     * @param  Operations\CreateHrisTimeoffRequest  $request
-     * @return Operations\CreateHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisTimeoff(Operations\CreateHrisTimeoffRequest $request, ?Options $options = null): Operations\CreateHrisTimeoffResponse
@@ -650,8 +650,8 @@ class Hris
     /**
      * Create a timeshift
      *
-     * @param  Operations\CreateHrisTimeshiftRequest  $request
-     * @return Operations\CreateHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createHrisTimeshift(Operations\CreateHrisTimeshiftRequest $request, ?Options $options = null): Operations\CreateHrisTimeshiftResponse
@@ -717,8 +717,8 @@ class Hris
     /**
      * Retrieve a bankaccount
      *
-     * @param  Operations\GetHrisBankaccountRequest  $request
-     * @return Operations\GetHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisBankaccount(Operations\GetHrisBankaccountRequest $request, ?Options $options = null): Operations\GetHrisBankaccountResponse
@@ -779,8 +779,8 @@ class Hris
     /**
      * Retrieve a benefit
      *
-     * @param  Operations\GetHrisBenefitRequest  $request
-     * @return Operations\GetHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisBenefit(Operations\GetHrisBenefitRequest $request, ?Options $options = null): Operations\GetHrisBenefitResponse
@@ -841,8 +841,8 @@ class Hris
     /**
      * Retrieve a company
      *
-     * @param  Operations\GetHrisCompanyRequest  $request
-     * @return Operations\GetHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisCompany(Operations\GetHrisCompanyRequest $request, ?Options $options = null): Operations\GetHrisCompanyResponse
@@ -903,8 +903,8 @@ class Hris
     /**
      * Retrieve a deduction
      *
-     * @param  Operations\GetHrisDeductionRequest  $request
-     * @return Operations\GetHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisDeduction(Operations\GetHrisDeductionRequest $request, ?Options $options = null): Operations\GetHrisDeductionResponse
@@ -965,8 +965,8 @@ class Hris
     /**
      * Retrieve a device
      *
-     * @param  Operations\GetHrisDeviceRequest  $request
-     * @return Operations\GetHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisDevice(Operations\GetHrisDeviceRequest $request, ?Options $options = null): Operations\GetHrisDeviceResponse
@@ -1027,8 +1027,8 @@ class Hris
     /**
      * Retrieve an employee
      *
-     * @param  Operations\GetHrisEmployeeRequest  $request
-     * @return Operations\GetHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisEmployee(Operations\GetHrisEmployeeRequest $request, ?Options $options = null): Operations\GetHrisEmployeeResponse
@@ -1089,8 +1089,8 @@ class Hris
     /**
      * Retrieve a group
      *
-     * @param  Operations\GetHrisGroupRequest  $request
-     * @return Operations\GetHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisGroup(Operations\GetHrisGroupRequest $request, ?Options $options = null): Operations\GetHrisGroupResponse
@@ -1151,8 +1151,8 @@ class Hris
     /**
      * Retrieve a location
      *
-     * @param  Operations\GetHrisLocationRequest  $request
-     * @return Operations\GetHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisLocation(Operations\GetHrisLocationRequest $request, ?Options $options = null): Operations\GetHrisLocationResponse
@@ -1213,8 +1213,8 @@ class Hris
     /**
      * Retrieve a payslip
      *
-     * @param  Operations\GetHrisPayslipRequest  $request
-     * @return Operations\GetHrisPayslipResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisPayslip(Operations\GetHrisPayslipRequest $request, ?Options $options = null): Operations\GetHrisPayslipResponse
@@ -1275,8 +1275,8 @@ class Hris
     /**
      * Retrieve a timeoff
      *
-     * @param  Operations\GetHrisTimeoffRequest  $request
-     * @return Operations\GetHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisTimeoff(Operations\GetHrisTimeoffRequest $request, ?Options $options = null): Operations\GetHrisTimeoffResponse
@@ -1337,8 +1337,8 @@ class Hris
     /**
      * Retrieve a timeshift
      *
-     * @param  Operations\GetHrisTimeshiftRequest  $request
-     * @return Operations\GetHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getHrisTimeshift(Operations\GetHrisTimeshiftRequest $request, ?Options $options = null): Operations\GetHrisTimeshiftResponse
@@ -1399,8 +1399,8 @@ class Hris
     /**
      * List all bankaccounts
      *
-     * @param  Operations\ListHrisBankaccountsRequest  $request
-     * @return Operations\ListHrisBankaccountsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccountsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisBankaccounts(Operations\ListHrisBankaccountsRequest $request, ?Options $options = null): Operations\ListHrisBankaccountsResponse
@@ -1461,8 +1461,8 @@ class Hris
     /**
      * List all benefits
      *
-     * @param  Operations\ListHrisBenefitsRequest  $request
-     * @return Operations\ListHrisBenefitsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBenefitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisBenefits(Operations\ListHrisBenefitsRequest $request, ?Options $options = null): Operations\ListHrisBenefitsResponse
@@ -1523,8 +1523,8 @@ class Hris
     /**
      * List all companies
      *
-     * @param  Operations\ListHrisCompaniesRequest  $request
-     * @return Operations\ListHrisCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisCompanies(Operations\ListHrisCompaniesRequest $request, ?Options $options = null): Operations\ListHrisCompaniesResponse
@@ -1585,8 +1585,8 @@ class Hris
     /**
      * List all deductions
      *
-     * @param  Operations\ListHrisDeductionsRequest  $request
-     * @return Operations\ListHrisDeductionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDeductionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisDeductions(Operations\ListHrisDeductionsRequest $request, ?Options $options = null): Operations\ListHrisDeductionsResponse
@@ -1647,8 +1647,8 @@ class Hris
     /**
      * List all devices
      *
-     * @param  Operations\ListHrisDevicesRequest  $request
-     * @return Operations\ListHrisDevicesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDevicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDevicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisDevices(Operations\ListHrisDevicesRequest $request, ?Options $options = null): Operations\ListHrisDevicesResponse
@@ -1709,8 +1709,8 @@ class Hris
     /**
      * List all employees
      *
-     * @param  Operations\ListHrisEmployeesRequest  $request
-     * @return Operations\ListHrisEmployeesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisEmployees(Operations\ListHrisEmployeesRequest $request, ?Options $options = null): Operations\ListHrisEmployeesResponse
@@ -1771,8 +1771,8 @@ class Hris
     /**
      * List all groups
      *
-     * @param  Operations\ListHrisGroupsRequest  $request
-     * @return Operations\ListHrisGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisGroups(Operations\ListHrisGroupsRequest $request, ?Options $options = null): Operations\ListHrisGroupsResponse
@@ -1833,8 +1833,8 @@ class Hris
     /**
      * List all locations
      *
-     * @param  Operations\ListHrisLocationsRequest  $request
-     * @return Operations\ListHrisLocationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisLocations(Operations\ListHrisLocationsRequest $request, ?Options $options = null): Operations\ListHrisLocationsResponse
@@ -1895,8 +1895,8 @@ class Hris
     /**
      * List all payslips
      *
-     * @param  Operations\ListHrisPayslipsRequest  $request
-     * @return Operations\ListHrisPayslipsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisPayslips(Operations\ListHrisPayslipsRequest $request, ?Options $options = null): Operations\ListHrisPayslipsResponse
@@ -1957,8 +1957,8 @@ class Hris
     /**
      * List all timeoffs
      *
-     * @param  Operations\ListHrisTimeoffsRequest  $request
-     * @return Operations\ListHrisTimeoffsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisTimeoffs(Operations\ListHrisTimeoffsRequest $request, ?Options $options = null): Operations\ListHrisTimeoffsResponse
@@ -2019,8 +2019,8 @@ class Hris
     /**
      * List all timeshifts
      *
-     * @param  Operations\ListHrisTimeshiftsRequest  $request
-     * @return Operations\ListHrisTimeshiftsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listHrisTimeshifts(Operations\ListHrisTimeshiftsRequest $request, ?Options $options = null): Operations\ListHrisTimeshiftsResponse
@@ -2081,8 +2081,8 @@ class Hris
     /**
      * Update a bankaccount
      *
-     * @param  Operations\PatchHrisBankaccountRequest  $request
-     * @return Operations\PatchHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisBankaccount(Operations\PatchHrisBankaccountRequest $request, ?Options $options = null): Operations\PatchHrisBankaccountResponse
@@ -2148,8 +2148,8 @@ class Hris
     /**
      * Update a benefit
      *
-     * @param  Operations\PatchHrisBenefitRequest  $request
-     * @return Operations\PatchHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisBenefit(Operations\PatchHrisBenefitRequest $request, ?Options $options = null): Operations\PatchHrisBenefitResponse
@@ -2215,8 +2215,8 @@ class Hris
     /**
      * Update a company
      *
-     * @param  Operations\PatchHrisCompanyRequest  $request
-     * @return Operations\PatchHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisCompany(Operations\PatchHrisCompanyRequest $request, ?Options $options = null): Operations\PatchHrisCompanyResponse
@@ -2282,8 +2282,8 @@ class Hris
     /**
      * Update a deduction
      *
-     * @param  Operations\PatchHrisDeductionRequest  $request
-     * @return Operations\PatchHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisDeduction(Operations\PatchHrisDeductionRequest $request, ?Options $options = null): Operations\PatchHrisDeductionResponse
@@ -2349,8 +2349,8 @@ class Hris
     /**
      * Update a device
      *
-     * @param  Operations\PatchHrisDeviceRequest  $request
-     * @return Operations\PatchHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisDevice(Operations\PatchHrisDeviceRequest $request, ?Options $options = null): Operations\PatchHrisDeviceResponse
@@ -2416,8 +2416,8 @@ class Hris
     /**
      * Update an employee
      *
-     * @param  Operations\PatchHrisEmployeeRequest  $request
-     * @return Operations\PatchHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisEmployee(Operations\PatchHrisEmployeeRequest $request, ?Options $options = null): Operations\PatchHrisEmployeeResponse
@@ -2483,8 +2483,8 @@ class Hris
     /**
      * Update a group
      *
-     * @param  Operations\PatchHrisGroupRequest  $request
-     * @return Operations\PatchHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisGroup(Operations\PatchHrisGroupRequest $request, ?Options $options = null): Operations\PatchHrisGroupResponse
@@ -2550,8 +2550,8 @@ class Hris
     /**
      * Update a location
      *
-     * @param  Operations\PatchHrisLocationRequest  $request
-     * @return Operations\PatchHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisLocation(Operations\PatchHrisLocationRequest $request, ?Options $options = null): Operations\PatchHrisLocationResponse
@@ -2617,8 +2617,8 @@ class Hris
     /**
      * Update a timeoff
      *
-     * @param  Operations\PatchHrisTimeoffRequest  $request
-     * @return Operations\PatchHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisTimeoff(Operations\PatchHrisTimeoffRequest $request, ?Options $options = null): Operations\PatchHrisTimeoffResponse
@@ -2684,8 +2684,8 @@ class Hris
     /**
      * Update a timeshift
      *
-     * @param  Operations\PatchHrisTimeshiftRequest  $request
-     * @return Operations\PatchHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchHrisTimeshift(Operations\PatchHrisTimeshiftRequest $request, ?Options $options = null): Operations\PatchHrisTimeshiftResponse
@@ -2751,8 +2751,8 @@ class Hris
     /**
      * Remove a bankaccount
      *
-     * @param  Operations\RemoveHrisBankaccountRequest  $request
-     * @return Operations\RemoveHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisBankaccount(Operations\RemoveHrisBankaccountRequest $request, ?Options $options = null): Operations\RemoveHrisBankaccountResponse
@@ -2807,8 +2807,8 @@ class Hris
     /**
      * Remove a benefit
      *
-     * @param  Operations\RemoveHrisBenefitRequest  $request
-     * @return Operations\RemoveHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisBenefit(Operations\RemoveHrisBenefitRequest $request, ?Options $options = null): Operations\RemoveHrisBenefitResponse
@@ -2863,8 +2863,8 @@ class Hris
     /**
      * Remove a company
      *
-     * @param  Operations\RemoveHrisCompanyRequest  $request
-     * @return Operations\RemoveHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisCompany(Operations\RemoveHrisCompanyRequest $request, ?Options $options = null): Operations\RemoveHrisCompanyResponse
@@ -2919,8 +2919,8 @@ class Hris
     /**
      * Remove a deduction
      *
-     * @param  Operations\RemoveHrisDeductionRequest  $request
-     * @return Operations\RemoveHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisDeduction(Operations\RemoveHrisDeductionRequest $request, ?Options $options = null): Operations\RemoveHrisDeductionResponse
@@ -2975,8 +2975,8 @@ class Hris
     /**
      * Remove a device
      *
-     * @param  Operations\RemoveHrisDeviceRequest  $request
-     * @return Operations\RemoveHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisDevice(Operations\RemoveHrisDeviceRequest $request, ?Options $options = null): Operations\RemoveHrisDeviceResponse
@@ -3031,8 +3031,8 @@ class Hris
     /**
      * Remove an employee
      *
-     * @param  Operations\RemoveHrisEmployeeRequest  $request
-     * @return Operations\RemoveHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisEmployee(Operations\RemoveHrisEmployeeRequest $request, ?Options $options = null): Operations\RemoveHrisEmployeeResponse
@@ -3087,8 +3087,8 @@ class Hris
     /**
      * Remove a group
      *
-     * @param  Operations\RemoveHrisGroupRequest  $request
-     * @return Operations\RemoveHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisGroup(Operations\RemoveHrisGroupRequest $request, ?Options $options = null): Operations\RemoveHrisGroupResponse
@@ -3143,8 +3143,8 @@ class Hris
     /**
      * Remove a location
      *
-     * @param  Operations\RemoveHrisLocationRequest  $request
-     * @return Operations\RemoveHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisLocation(Operations\RemoveHrisLocationRequest $request, ?Options $options = null): Operations\RemoveHrisLocationResponse
@@ -3199,8 +3199,8 @@ class Hris
     /**
      * Remove a timeoff
      *
-     * @param  Operations\RemoveHrisTimeoffRequest  $request
-     * @return Operations\RemoveHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisTimeoff(Operations\RemoveHrisTimeoffRequest $request, ?Options $options = null): Operations\RemoveHrisTimeoffResponse
@@ -3255,8 +3255,8 @@ class Hris
     /**
      * Remove a timeshift
      *
-     * @param  Operations\RemoveHrisTimeshiftRequest  $request
-     * @return Operations\RemoveHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeHrisTimeshift(Operations\RemoveHrisTimeshiftRequest $request, ?Options $options = null): Operations\RemoveHrisTimeshiftResponse
@@ -3311,8 +3311,8 @@ class Hris
     /**
      * Update a bankaccount
      *
-     * @param  Operations\UpdateHrisBankaccountRequest  $request
-     * @return Operations\UpdateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisBankaccount(Operations\UpdateHrisBankaccountRequest $request, ?Options $options = null): Operations\UpdateHrisBankaccountResponse
@@ -3378,8 +3378,8 @@ class Hris
     /**
      * Update a benefit
      *
-     * @param  Operations\UpdateHrisBenefitRequest  $request
-     * @return Operations\UpdateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisBenefit(Operations\UpdateHrisBenefitRequest $request, ?Options $options = null): Operations\UpdateHrisBenefitResponse
@@ -3445,8 +3445,8 @@ class Hris
     /**
      * Update a company
      *
-     * @param  Operations\UpdateHrisCompanyRequest  $request
-     * @return Operations\UpdateHrisCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisCompany(Operations\UpdateHrisCompanyRequest $request, ?Options $options = null): Operations\UpdateHrisCompanyResponse
@@ -3512,8 +3512,8 @@ class Hris
     /**
      * Update a deduction
      *
-     * @param  Operations\UpdateHrisDeductionRequest  $request
-     * @return Operations\UpdateHrisDeductionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisDeduction(Operations\UpdateHrisDeductionRequest $request, ?Options $options = null): Operations\UpdateHrisDeductionResponse
@@ -3579,8 +3579,8 @@ class Hris
     /**
      * Update a device
      *
-     * @param  Operations\UpdateHrisDeviceRequest  $request
-     * @return Operations\UpdateHrisDeviceResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisDevice(Operations\UpdateHrisDeviceRequest $request, ?Options $options = null): Operations\UpdateHrisDeviceResponse
@@ -3646,8 +3646,8 @@ class Hris
     /**
      * Update an employee
      *
-     * @param  Operations\UpdateHrisEmployeeRequest  $request
-     * @return Operations\UpdateHrisEmployeeResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisEmployee(Operations\UpdateHrisEmployeeRequest $request, ?Options $options = null): Operations\UpdateHrisEmployeeResponse
@@ -3713,8 +3713,8 @@ class Hris
     /**
      * Update a group
      *
-     * @param  Operations\UpdateHrisGroupRequest  $request
-     * @return Operations\UpdateHrisGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisGroup(Operations\UpdateHrisGroupRequest $request, ?Options $options = null): Operations\UpdateHrisGroupResponse
@@ -3780,8 +3780,8 @@ class Hris
     /**
      * Update a location
      *
-     * @param  Operations\UpdateHrisLocationRequest  $request
-     * @return Operations\UpdateHrisLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisLocation(Operations\UpdateHrisLocationRequest $request, ?Options $options = null): Operations\UpdateHrisLocationResponse
@@ -3847,8 +3847,8 @@ class Hris
     /**
      * Update a timeoff
      *
-     * @param  Operations\UpdateHrisTimeoffRequest  $request
-     * @return Operations\UpdateHrisTimeoffResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisTimeoff(Operations\UpdateHrisTimeoffRequest $request, ?Options $options = null): Operations\UpdateHrisTimeoffResponse
@@ -3914,8 +3914,8 @@ class Hris
     /**
      * Update a timeshift
      *
-     * @param  Operations\UpdateHrisTimeshiftRequest  $request
-     * @return Operations\UpdateHrisTimeshiftResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateHrisTimeshift(Operations\UpdateHrisTimeshiftRequest $request, ?Options $options = null): Operations\UpdateHrisTimeshiftResponse

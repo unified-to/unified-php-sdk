@@ -14,7 +14,7 @@ class PropertyIntegrationSupportWebhookEvents
     /**
      * $created
      *
-     * @var ?array<PropertyIntegrationSupportWebhookEventsCreated> $created
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsCreated> $created
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsCreated>|null')]
@@ -24,7 +24,7 @@ class PropertyIntegrationSupportWebhookEvents
     /**
      * $deleted
      *
-     * @var ?array<PropertyIntegrationSupportWebhookEventsDeleted> $deleted
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsDeleted> $deleted
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('deleted')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsDeleted>|null')]
@@ -34,7 +34,7 @@ class PropertyIntegrationSupportWebhookEvents
     /**
      * $updated
      *
-     * @var ?array<PropertyIntegrationSupportWebhookEventsUpdated> $updated
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsUpdated> $updated
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsUpdated>|null')]
@@ -42,9 +42,9 @@ class PropertyIntegrationSupportWebhookEvents
     public ?array $updated = null;
 
     /**
-     * @param  ?array<PropertyIntegrationSupportWebhookEventsCreated>  $created
-     * @param  ?array<PropertyIntegrationSupportWebhookEventsDeleted>  $deleted
-     * @param  ?array<PropertyIntegrationSupportWebhookEventsUpdated>  $updated
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsCreated>  $created
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsDeleted>  $deleted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEventsUpdated>  $updated
      * @phpstan-pure
      */
     public function __construct(?array $created = null, ?array $deleted = null, ?array $updated = null)

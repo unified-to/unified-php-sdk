@@ -30,7 +30,7 @@ class GetTicketingCustomerRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetTicketingCustomerQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetTicketingCustomerQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetTicketingCustomerRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetTicketingCustomerQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetTicketingCustomerQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

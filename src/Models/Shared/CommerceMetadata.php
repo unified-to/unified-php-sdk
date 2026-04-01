@@ -21,7 +21,7 @@ class CommerceMetadata
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<CommerceMetadata1|string|float|bool>|null $extraData
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadata1|string|float|bool>|null $extraData
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('extra_data')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadata1|string|float|bool>|null')]
@@ -30,7 +30,7 @@ class CommerceMetadata
 
     /**
      *
-     * @var ?CommerceMetadataFormat $format
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceMetadataFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceMetadataFormat|null')]
@@ -71,7 +71,7 @@ class CommerceMetadata
 
     /**
      *
-     * @var array<string, mixed>|string|float|bool|array<CommerceMetadataSchemas1|string|float|bool>|null $value
+     * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadataSchemas1|string|float|bool>|null $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadataSchemas1|string|float|bool>|null')]
@@ -80,13 +80,13 @@ class CommerceMetadata
 
     /**
      * @param  ?string  $description
-     * @param  array<string, mixed>|string|float|bool|array<CommerceMetadata1|string|float|bool>|null  $extraData
-     * @param  ?CommerceMetadataFormat  $format
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadata1|string|float|bool>|null  $extraData
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?bool  $isRequired
      * @param  ?string  $namespace
      * @param  ?string  $slug
-     * @param  array<string, mixed>|string|float|bool|array<CommerceMetadataSchemas1|string|float|bool>|null  $value
+     * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CommerceMetadataSchemas1|string|float|bool>|null  $value
      * @phpstan-pure
      */
     public function __construct(?string $description = null, array|string|float|bool|null $extraData = null, ?CommerceMetadataFormat $format = null, ?string $id = null, ?bool $isRequired = null, ?string $namespace = null, ?string $slug = null, array|string|float|bool|null $value = null)

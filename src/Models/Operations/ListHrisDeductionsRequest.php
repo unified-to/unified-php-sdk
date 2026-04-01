@@ -38,7 +38,7 @@ class ListHrisDeductionsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListHrisDeductionsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisDeductionsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -115,7 +115,7 @@ class ListHrisDeductionsRequest
      * @param  string  $connectionId
      * @param  ?string  $benefitId
      * @param  ?string  $companyId
-     * @param  ?array<ListHrisDeductionsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisDeductionsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

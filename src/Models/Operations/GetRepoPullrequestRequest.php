@@ -30,7 +30,7 @@ class GetRepoPullrequestRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetRepoPullrequestQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetRepoPullrequestQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetRepoPullrequestRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetRepoPullrequestQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetRepoPullrequestQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

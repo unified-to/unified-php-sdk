@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Shared\CrmMetadataSchemas1
+* @var \Unified\Unified_to\Models\Shared\CrmMetadataSchemas1
 */
 Shared\CrmMetadataSchemas1 $value = /* values here */
 ```

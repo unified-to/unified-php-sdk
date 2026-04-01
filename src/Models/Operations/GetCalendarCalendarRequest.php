@@ -30,7 +30,7 @@ class GetCalendarCalendarRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetCalendarCalendarQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetCalendarCalendarQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetCalendarCalendarRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetCalendarCalendarQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetCalendarCalendarQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

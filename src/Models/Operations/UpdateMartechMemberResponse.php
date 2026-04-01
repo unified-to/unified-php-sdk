@@ -35,7 +35,7 @@ class UpdateMartechMemberResponse
     /**
      * Successful
      *
-     * @var ?Shared\MarketingMember $marketingMember
+     * @var ?\Unified\Unified_to\Models\Shared\MarketingMember $marketingMember
      */
     public ?Shared\MarketingMember $marketingMember = null;
 
@@ -43,7 +43,7 @@ class UpdateMartechMemberResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\MarketingMember  $marketingMember
+     * @param  ?\Unified\Unified_to\Models\Shared\MarketingMember  $marketingMember
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\MarketingMember $marketingMember = null)

@@ -30,7 +30,7 @@ class GetMartechMemberRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetMartechMemberQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetMartechMemberQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetMartechMemberRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetMartechMemberQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetMartechMemberQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

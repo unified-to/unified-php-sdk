@@ -13,6 +13,14 @@ class LmsActivity
 {
     /**
      *
+     * @var ?string $assignedGrade
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('assigned_grade')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $assignedGrade = null;
+
+    /**
+     *
      * @var ?\DateTime $completedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('completed_at')]
@@ -110,6 +118,7 @@ class LmsActivity
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?string  $assignedGrade
      * @param  ?\DateTime  $completedAt
      * @param  ?string  $contentId
      * @param  ?string  $courseId
@@ -124,8 +133,9 @@ class LmsActivity
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $completedAt = null, ?string $contentId = null, ?string $courseId = null, ?\DateTime $createdAt = null, ?float $durationMinutes = null, ?string $id = null, ?bool $isCompleted = null, ?float $progressPercentage = null, ?array $raw = null, ?\DateTime $startedAt = null, ?string $studentId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $assignedGrade = null, ?\DateTime $completedAt = null, ?string $contentId = null, ?string $courseId = null, ?\DateTime $createdAt = null, ?float $durationMinutes = null, ?string $id = null, ?bool $isCompleted = null, ?float $progressPercentage = null, ?array $raw = null, ?\DateTime $startedAt = null, ?string $studentId = null, ?\DateTime $updatedAt = null)
     {
+        $this->assignedGrade = $assignedGrade;
         $this->completedAt = $completedAt;
         $this->contentId = $contentId;
         $this->courseId = $courseId;

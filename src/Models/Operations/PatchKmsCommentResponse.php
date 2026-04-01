@@ -35,7 +35,7 @@ class PatchKmsCommentResponse
     /**
      * Successful
      *
-     * @var ?Shared\KmsComment $kmsComment
+     * @var ?\Unified\Unified_to\Models\Shared\KmsComment $kmsComment
      */
     public ?Shared\KmsComment $kmsComment = null;
 
@@ -43,7 +43,7 @@ class PatchKmsCommentResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\KmsComment  $kmsComment
+     * @param  ?\Unified\Unified_to\Models\Shared\KmsComment  $kmsComment
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\KmsComment $kmsComment = null)

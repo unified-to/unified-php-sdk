@@ -54,7 +54,7 @@ class UcRecordingMedia
     /**
      * $transcripts
      *
-     * @var ?array<UcRecordingTranscript> $transcripts
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcRecordingTranscript> $transcripts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transcripts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcRecordingTranscript>|null')]
@@ -67,7 +67,7 @@ class UcRecordingMedia
      * @param  ?string  $recordingDownloadUrl
      * @param  ?\DateTime  $startAt
      * @param  ?string  $transcriptDownloadUrl
-     * @param  ?array<UcRecordingTranscript>  $transcripts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcRecordingTranscript>  $transcripts
      * @phpstan-pure
      */
     public function __construct(?\DateTime $endAt = null, ?string $language = null, ?string $recordingDownloadUrl = null, ?\DateTime $startAt = null, ?string $transcriptDownloadUrl = null, ?array $transcripts = null)

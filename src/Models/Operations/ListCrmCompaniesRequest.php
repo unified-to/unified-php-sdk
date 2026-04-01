@@ -38,7 +38,7 @@ class ListCrmCompaniesRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListCrmCompaniesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmCompaniesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -107,7 +107,7 @@ class ListCrmCompaniesRequest
      * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?string  $dealId
-     * @param  ?array<ListCrmCompaniesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmCompaniesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -45,7 +45,7 @@ class AtsJobOpening
 
     /**
      *
-     * @var ?AtsJobOpeningStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AtsJobOpeningStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AtsJobOpeningStatus|null')]
@@ -57,7 +57,7 @@ class AtsJobOpening
      * @param  ?string  $closeReason
      * @param  ?\DateTime  $closedAt
      * @param  ?\DateTime  $openedAt
-     * @param  ?AtsJobOpeningStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AtsJobOpeningStatus  $status
      * @phpstan-pure
      */
     public function __construct(?string $applicationId = null, ?string $closeReason = null, ?\DateTime $closedAt = null, ?\DateTime $openedAt = null, ?AtsJobOpeningStatus $status = null)

@@ -22,7 +22,7 @@ class HrisBenefit
 
     /**
      *
-     * @var ?CoverageLevel $coverageLevel
+     * @var ?\Unified\Unified_to\Models\Shared\CoverageLevel $coverageLevel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('coverage_level')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CoverageLevel|null')]
@@ -71,7 +71,7 @@ class HrisBenefit
 
     /**
      *
-     * @var ?EmployerContributionType $employerContributionType
+     * @var ?\Unified\Unified_to\Models\Shared\EmployerContributionType $employerContributionType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('employer_contribution_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmployerContributionType|null')]
@@ -80,7 +80,7 @@ class HrisBenefit
 
     /**
      *
-     * @var ?HrisBenefitFrequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\HrisBenefitFrequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisBenefitFrequency|null')]
@@ -123,7 +123,7 @@ class HrisBenefit
 
     /**
      *
-     * @var ?Tax $tax
+     * @var ?\Unified\Unified_to\Models\Shared\Tax $tax
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Tax|null')]
@@ -132,7 +132,7 @@ class HrisBenefit
 
     /**
      *
-     * @var ?HrisBenefitType $type
+     * @var ?\Unified\Unified_to\Models\Shared\HrisBenefitType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisBenefitType|null')]
@@ -149,20 +149,20 @@ class HrisBenefit
 
     /**
      * @param  ?string  $companyId
-     * @param  ?CoverageLevel  $coverageLevel
+     * @param  ?\Unified\Unified_to\Models\Shared\CoverageLevel  $coverageLevel
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?float  $employerContributionAmount
      * @param  ?float  $employerContributionMaxAmount
-     * @param  ?EmployerContributionType  $employerContributionType
-     * @param  ?HrisBenefitFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\EmployerContributionType  $employerContributionType
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefitFrequency  $frequency
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?Tax  $tax
-     * @param  ?HrisBenefitType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\Tax  $tax
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefitType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */

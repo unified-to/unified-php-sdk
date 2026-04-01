@@ -35,7 +35,7 @@ class ListTaskTasksResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\TaskTask> $taskTasks
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskTask> $taskTasks
      */
     public ?array $taskTasks = null;
 
@@ -43,7 +43,7 @@ class ListTaskTasksResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\TaskTask>  $taskTasks
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskTask>  $taskTasks
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $taskTasks = null)

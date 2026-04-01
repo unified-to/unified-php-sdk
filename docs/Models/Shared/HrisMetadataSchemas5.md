@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Shared\HrisMetadataSchemas1
+* @var \Unified\Unified_to\Models\Shared\HrisMetadataSchemas1
 */
 Shared\HrisMetadataSchemas1 $value = /* values here */
 ```

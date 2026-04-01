@@ -37,7 +37,7 @@ class PropertyAdsReportMetricsGroupFrequencyCap
 
     /**
      *
-     * @var ?PropertyAdsReportMetricsGroupFrequencyCapTimeUnit $timeUnit
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCapTimeUnit $timeUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('time_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCapTimeUnit|null')]
@@ -56,7 +56,7 @@ class PropertyAdsReportMetricsGroupFrequencyCap
      * @param  ?bool  $isUnlimited
      * @param  ?float  $maxImpressions
      * @param  ?float  $maxViews
-     * @param  ?PropertyAdsReportMetricsGroupFrequencyCapTimeUnit  $timeUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCapTimeUnit  $timeUnit
      * @param  ?float  $timeUnitCount
      * @phpstan-pure
      */

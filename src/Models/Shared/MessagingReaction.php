@@ -13,7 +13,7 @@ class MessagingReaction
 {
     /**
      *
-     * @var PropertyMessagingReactionMember $member
+     * @var \Unified\Unified_to\Models\Shared\PropertyMessagingReactionMember $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyMessagingReactionMember')]
@@ -27,7 +27,7 @@ class MessagingReaction
     public string $reaction;
 
     /**
-     * @param  PropertyMessagingReactionMember  $member
+     * @param  \Unified\Unified_to\Models\Shared\PropertyMessagingReactionMember  $member
      * @param  string  $reaction
      * @phpstan-pure
      */

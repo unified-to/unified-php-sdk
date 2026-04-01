@@ -14,7 +14,7 @@ class UpdateAdsCampaignRequest
 {
     /**
      *
-     * @var Shared\AdsCampaign $adsCampaign
+     * @var \Unified\Unified_to\Models\Shared\AdsCampaign $adsCampaign
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsCampaign $adsCampaign;
@@ -38,7 +38,7 @@ class UpdateAdsCampaignRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAdsCampaignQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAdsCampaignQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAdsCampaignRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsCampaign  $adsCampaign
+     * @param  \Unified\Unified_to\Models\Shared\AdsCampaign  $adsCampaign
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAdsCampaignQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAdsCampaignQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

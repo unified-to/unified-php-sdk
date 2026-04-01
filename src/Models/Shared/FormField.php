@@ -20,7 +20,7 @@ class FormField
 
     /**
      *
-     * @var FormFieldType $type
+     * @var \Unified\Unified_to\Models\Shared\FormFieldType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FormFieldType')]
@@ -142,7 +142,7 @@ class FormField
 
     /**
      * @param  string  $name
-     * @param  FormFieldType  $type
+     * @param  \Unified\Unified_to\Models\Shared\FormFieldType  $type
      * @param  ?array<string>  $choices
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $defaultValue

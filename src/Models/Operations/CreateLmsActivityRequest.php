@@ -14,7 +14,7 @@ class CreateLmsActivityRequest
 {
     /**
      *
-     * @var Shared\LmsActivity $lmsActivity
+     * @var \Unified\Unified_to\Models\Shared\LmsActivity $lmsActivity
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\LmsActivity $lmsActivity;
@@ -30,7 +30,7 @@ class CreateLmsActivityRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateLmsActivityQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateLmsActivityQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateLmsActivityRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\LmsActivity  $lmsActivity
+     * @param  \Unified\Unified_to\Models\Shared\LmsActivity  $lmsActivity
      * @param  string  $connectionId
-     * @param  ?array<CreateLmsActivityQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateLmsActivityQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

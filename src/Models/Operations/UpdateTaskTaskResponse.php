@@ -35,7 +35,7 @@ class UpdateTaskTaskResponse
     /**
      * Successful
      *
-     * @var ?Shared\TaskTask $taskTask
+     * @var ?\Unified\Unified_to\Models\Shared\TaskTask $taskTask
      */
     public ?Shared\TaskTask $taskTask = null;
 
@@ -43,7 +43,7 @@ class UpdateTaskTaskResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\TaskTask  $taskTask
+     * @param  ?\Unified\Unified_to\Models\Shared\TaskTask  $taskTask
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\TaskTask $taskTask = null)

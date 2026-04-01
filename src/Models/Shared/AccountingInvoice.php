@@ -14,7 +14,7 @@ class AccountingInvoice
     /**
      * $attachments
      *
-     * @var ?array<AccountingAttachment> $attachments
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAttachment>|null')]
@@ -96,7 +96,7 @@ class AccountingInvoice
     /**
      * $lineitems
      *
-     * @var ?array<AccountingLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
@@ -137,7 +137,7 @@ class AccountingInvoice
 
     /**
      *
-     * @var ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_collection_method')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentCollectionMethod|null')]
@@ -204,7 +204,7 @@ class AccountingInvoice
 
     /**
      *
-     * @var ?AccountingInvoiceStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus|null')]
@@ -229,7 +229,7 @@ class AccountingInvoice
 
     /**
      *
-     * @var ?AccountingInvoiceType $type
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingInvoiceType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceType|null')]
@@ -253,7 +253,7 @@ class AccountingInvoice
     public ?string $url = null;
 
     /**
-     * @param  ?array<AccountingAttachment>  $attachments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?float  $balanceAmount
      * @param  ?\DateTime  $cancelledAt
      * @param  ?string  $contactId
@@ -263,12 +263,12 @@ class AccountingInvoice
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
      * @param  ?string  $invoiceNumber
-     * @param  ?array<AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $notes
      * @param  ?string  $organizationId
      * @param  ?float  $paidAmount
      * @param  ?\DateTime  $paidAt
-     * @param  ?AccountingInvoicePaymentCollectionMethod  $paymentCollectionMethod
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentCollectionMethod  $paymentCollectionMethod
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
@@ -276,10 +276,10 @@ class AccountingInvoice
      * @param  ?string  $refundReason
      * @param  ?\DateTime  $refundedAt
      * @param  ?bool  $send
-     * @param  ?AccountingInvoiceStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus  $status
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
-     * @param  ?AccountingInvoiceType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoiceType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      * @phpstan-pure

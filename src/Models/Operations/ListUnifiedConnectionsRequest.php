@@ -14,7 +14,7 @@ class ListUnifiedConnectionsRequest
     /**
      * Filter the results on these categories
      *
-     * @var ?array<Categories> $categories
+     * @var ?array<\Unified\Unified_to\Models\Operations\Categories> $categories
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=categories')]
     public ?array $categories = null;
@@ -71,7 +71,7 @@ class ListUnifiedConnectionsRequest
     public ?string $updatedGte = null;
 
     /**
-     * @param  ?array<Categories>  $categories
+     * @param  ?array<\Unified\Unified_to\Models\Operations\Categories>  $categories
      * @param  ?string  $env
      * @param  ?string  $externalXref
      * @param  ?float  $limit

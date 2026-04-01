@@ -35,7 +35,7 @@ class ListHrisTimeoffsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\HrisTimeoff> $hrisTimeoffs
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisTimeoff> $hrisTimeoffs
      */
     public ?array $hrisTimeoffs = null;
 
@@ -43,7 +43,7 @@ class ListHrisTimeoffsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\HrisTimeoff>  $hrisTimeoffs
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTimeoff>  $hrisTimeoffs
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $hrisTimeoffs = null)

@@ -22,7 +22,7 @@ class ListFormsSubmissionsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListFormsSubmissionsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListFormsSubmissionsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -89,7 +89,7 @@ class ListFormsSubmissionsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<ListFormsSubmissionsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListFormsSubmissionsQueryParamFields>  $fields
      * @param  ?string  $formId
      * @param  ?float  $limit
      * @param  ?float  $offset

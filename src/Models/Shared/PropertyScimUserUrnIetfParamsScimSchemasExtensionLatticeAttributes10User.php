@@ -61,7 +61,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
 
     /**
      *
-     * @var ?Ethnicity $ethnicity
+     * @var ?\Unified\Unified_to\Models\Shared\Ethnicity $ethnicity
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ethnicity')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Ethnicity|null')]
@@ -70,7 +70,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
 
     /**
      *
-     * @var ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender|null')]
@@ -79,7 +79,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
 
     /**
      *
-     * @var ?SexualOrientation $sexualOrientation
+     * @var ?\Unified\Unified_to\Models\Shared\SexualOrientation $sexualOrientation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sexualOrientation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SexualOrientation|null')]
@@ -101,9 +101,9 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
      * @param  ?string  $salaryInformation
      * @param  ?string  $subDepartments
      * @param  ?\DateTime  $birthDate
-     * @param  ?Ethnicity  $ethnicity
-     * @param  ?PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender  $gender
-     * @param  ?SexualOrientation  $sexualOrientation
+     * @param  ?\Unified\Unified_to\Models\Shared\Ethnicity  $ethnicity
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender  $gender
+     * @param  ?\Unified\Unified_to\Models\Shared\SexualOrientation  $sexualOrientation
      * @param  ?\DateTime  $startDate
      * @phpstan-pure
      */

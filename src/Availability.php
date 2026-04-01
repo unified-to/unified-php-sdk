@@ -47,8 +47,8 @@ class Availability
     /**
      * List all availabilities
      *
-     * @param  Operations\ListCommerceAvailabilitiesRequest  $request
-     * @return Operations\ListCommerceAvailabilitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listCommerceAvailabilities(Operations\ListCommerceAvailabilitiesRequest $request, ?Options $options = null): Operations\ListCommerceAvailabilitiesResponse

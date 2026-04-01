@@ -14,7 +14,7 @@ class PatchRepoBranchRequest
 {
     /**
      *
-     * @var Shared\RepoBranch $repoBranch
+     * @var \Unified\Unified_to\Models\Shared\RepoBranch $repoBranch
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\RepoBranch $repoBranch;
@@ -38,7 +38,7 @@ class PatchRepoBranchRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchRepoBranchQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchRepoBranchQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchRepoBranchRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\RepoBranch  $repoBranch
+     * @param  \Unified\Unified_to\Models\Shared\RepoBranch  $repoBranch
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchRepoBranchQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchRepoBranchQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

@@ -112,17 +112,17 @@ class LmsContent
     /**
      * $localizations
      *
-     * @var ?array<LmsContentShapeLocalization> $localizations
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsContentLocalization> $localizations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('localizations')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsContentShapeLocalization>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsContentLocalization>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $localizations = null;
 
     /**
      * $media
      *
-     * @var ?array<LmsMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMedia>|null')]
@@ -201,8 +201,8 @@ class LmsContent
      * @param  ?array<string>  $instructorIds
      * @param  ?bool  $isActive
      * @param  ?array<string>  $languages
-     * @param  ?array<LmsContentShapeLocalization>  $localizations
-     * @param  ?array<LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsContentLocalization>  $localizations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?string  $name
      * @param  ?string  $providerName
      * @param  ?array<string, mixed>  $raw

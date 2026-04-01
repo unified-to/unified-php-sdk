@@ -46,7 +46,7 @@ class ListAccountingCashflowsRequest
     /**
      * Fields to return
      *
-     * @var ?array<ListAccountingCashflowsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListAccountingCashflowsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -116,7 +116,7 @@ class ListAccountingCashflowsRequest
      * @param  ?string  $categoryId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
-     * @param  ?array<ListAccountingCashflowsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingCashflowsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

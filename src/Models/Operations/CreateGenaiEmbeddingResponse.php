@@ -35,7 +35,7 @@ class CreateGenaiEmbeddingResponse
     /**
      * Successful
      *
-     * @var ?Shared\GenaiEmbedding $genaiEmbedding
+     * @var ?\Unified\Unified_to\Models\Shared\GenaiEmbedding $genaiEmbedding
      */
     public ?Shared\GenaiEmbedding $genaiEmbedding = null;
 
@@ -43,7 +43,7 @@ class CreateGenaiEmbeddingResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\GenaiEmbedding  $genaiEmbedding
+     * @param  ?\Unified\Unified_to\Models\Shared\GenaiEmbedding  $genaiEmbedding
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\GenaiEmbedding $genaiEmbedding = null)

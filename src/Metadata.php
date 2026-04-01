@@ -47,8 +47,8 @@ class Metadata
     /**
      * Create a metadata
      *
-     * @param  Operations\CreateMetadataMetadataRequest  $request
-     * @return Operations\CreateMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMetadataMetadataRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createMetadataMetadata(Operations\CreateMetadataMetadataRequest $request, ?Options $options = null): Operations\CreateMetadataMetadataResponse
@@ -114,8 +114,8 @@ class Metadata
     /**
      * Retrieve a metadata
      *
-     * @param  Operations\GetMetadataMetadataRequest  $request
-     * @return Operations\GetMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMetadataMetadataRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMetadataMetadata(Operations\GetMetadataMetadataRequest $request, ?Options $options = null): Operations\GetMetadataMetadataResponse
@@ -176,8 +176,8 @@ class Metadata
     /**
      * List all metadatas
      *
-     * @param  Operations\ListMetadataMetadatasRequest  $request
-     * @return Operations\ListMetadataMetadatasResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMetadataMetadatasRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMetadataMetadatasResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMetadataMetadatas(Operations\ListMetadataMetadatasRequest $request, ?Options $options = null): Operations\ListMetadataMetadatasResponse
@@ -238,8 +238,8 @@ class Metadata
     /**
      * Update a metadata
      *
-     * @param  Operations\PatchMetadataMetadataRequest  $request
-     * @return Operations\PatchMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMetadataMetadataRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchMetadataMetadata(Operations\PatchMetadataMetadataRequest $request, ?Options $options = null): Operations\PatchMetadataMetadataResponse
@@ -305,8 +305,8 @@ class Metadata
     /**
      * Remove a metadata
      *
-     * @param  Operations\RemoveMetadataMetadataRequest  $request
-     * @return Operations\RemoveMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeMetadataMetadata(Operations\RemoveMetadataMetadataRequest $request, ?Options $options = null): Operations\RemoveMetadataMetadataResponse
@@ -361,8 +361,8 @@ class Metadata
     /**
      * Update a metadata
      *
-     * @param  Operations\UpdateMetadataMetadataRequest  $request
-     * @return Operations\UpdateMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateMetadataMetadata(Operations\UpdateMetadataMetadataRequest $request, ?Options $options = null): Operations\UpdateMetadataMetadataResponse

@@ -35,7 +35,7 @@ class ListKmsPagesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\KmsPage> $kmsPages
+     * @var ?array<\Unified\Unified_to\Models\Shared\KmsPage> $kmsPages
      */
     public ?array $kmsPages = null;
 
@@ -43,7 +43,7 @@ class ListKmsPagesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\KmsPage>  $kmsPages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\KmsPage>  $kmsPages
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $kmsPages = null)

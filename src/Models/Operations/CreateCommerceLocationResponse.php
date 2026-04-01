@@ -35,7 +35,7 @@ class CreateCommerceLocationResponse
     /**
      * Successful
      *
-     * @var ?Shared\CommerceLocation $commerceLocation
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceLocation $commerceLocation
      */
     public ?Shared\CommerceLocation $commerceLocation = null;
 
@@ -43,7 +43,7 @@ class CreateCommerceLocationResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\CommerceLocation  $commerceLocation
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceLocation  $commerceLocation
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\CommerceLocation $commerceLocation = null)

@@ -47,8 +47,8 @@ class Label
     /**
      * Create a label
      *
-     * @param  Operations\CreateShippingLabelRequest  $request
-     * @return Operations\CreateShippingLabelResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function createShippingLabel(Operations\CreateShippingLabelRequest $request, ?Options $options = null): Operations\CreateShippingLabelResponse
@@ -114,8 +114,8 @@ class Label
     /**
      * Retrieve a label
      *
-     * @param  Operations\GetShippingLabelRequest  $request
-     * @return Operations\GetShippingLabelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getShippingLabel(Operations\GetShippingLabelRequest $request, ?Options $options = null): Operations\GetShippingLabelResponse
@@ -176,8 +176,8 @@ class Label
     /**
      * List all labels
      *
-     * @param  Operations\ListShippingLabelsRequest  $request
-     * @return Operations\ListShippingLabelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingLabelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingLabelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listShippingLabels(Operations\ListShippingLabelsRequest $request, ?Options $options = null): Operations\ListShippingLabelsResponse
@@ -238,8 +238,8 @@ class Label
     /**
      * Update a label
      *
-     * @param  Operations\PatchShippingLabelRequest  $request
-     * @return Operations\PatchShippingLabelResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function patchShippingLabel(Operations\PatchShippingLabelRequest $request, ?Options $options = null): Operations\PatchShippingLabelResponse
@@ -305,8 +305,8 @@ class Label
     /**
      * Remove a label
      *
-     * @param  Operations\RemoveShippingLabelRequest  $request
-     * @return Operations\RemoveShippingLabelResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function removeShippingLabel(Operations\RemoveShippingLabelRequest $request, ?Options $options = null): Operations\RemoveShippingLabelResponse
@@ -361,8 +361,8 @@ class Label
     /**
      * Update a label
      *
-     * @param  Operations\UpdateShippingLabelRequest  $request
-     * @return Operations\UpdateShippingLabelResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function updateShippingLabel(Operations\UpdateShippingLabelRequest $request, ?Options $options = null): Operations\UpdateShippingLabelResponse

@@ -14,7 +14,7 @@ class CreateAdsAdRequest
 {
     /**
      *
-     * @var Shared\AdsAd $adsAd
+     * @var \Unified\Unified_to\Models\Shared\AdsAd $adsAd
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsAd $adsAd;
@@ -30,7 +30,7 @@ class CreateAdsAdRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateAdsAdQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateAdsAdQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateAdsAdRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsAd  $adsAd
+     * @param  \Unified\Unified_to\Models\Shared\AdsAd  $adsAd
      * @param  string  $connectionId
-     * @param  ?array<CreateAdsAdQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateAdsAdQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

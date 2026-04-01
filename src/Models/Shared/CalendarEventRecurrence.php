@@ -39,7 +39,7 @@ class CalendarEventRecurrence
 
     /**
      *
-     * @var ?CalendarEventRecurrenceFrequency $frequency
+     * @var ?\Unified\Unified_to\Models\Shared\CalendarEventRecurrenceFrequency $frequency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('frequency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CalendarEventRecurrenceFrequency|null')]
@@ -67,7 +67,7 @@ class CalendarEventRecurrence
     /**
      * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
      *
-     * @var ?array<PropertyCalendarEventRecurrenceOnDays> $onDays
+     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyCalendarEventRecurrenceOnDays> $onDays
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('on_days')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyCalendarEventRecurrenceOnDays>|null')]
@@ -124,7 +124,7 @@ class CalendarEventRecurrence
 
     /**
      *
-     * @var ?WeekStart $weekStart
+     * @var ?\Unified\Unified_to\Models\Shared\WeekStart $weekStart
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('week_start')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WeekStart|null')]
@@ -135,16 +135,16 @@ class CalendarEventRecurrence
      * @param  ?float  $count
      * @param  ?\DateTime  $endAt
      * @param  ?array<string>  $excludedDates
-     * @param  ?CalendarEventRecurrenceFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\CalendarEventRecurrenceFrequency  $frequency
      * @param  ?array<string>  $includedDates
      * @param  ?float  $interval
-     * @param  ?array<PropertyCalendarEventRecurrenceOnDays>  $onDays
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyCalendarEventRecurrenceOnDays>  $onDays
      * @param  ?array<float>  $onMonthDays
      * @param  ?array<float>  $onMonths
      * @param  ?array<float>  $onWeeks
      * @param  ?array<float>  $onYearDays
      * @param  ?string  $timezone
-     * @param  ?WeekStart  $weekStart
+     * @param  ?\Unified\Unified_to\Models\Shared\WeekStart  $weekStart
      * @phpstan-pure
      */
     public function __construct(?float $count = null, ?\DateTime $endAt = null, ?array $excludedDates = null, ?CalendarEventRecurrenceFrequency $frequency = null, ?array $includedDates = null, ?float $interval = null, ?array $onDays = null, ?array $onMonthDays = null, ?array $onMonths = null, ?array $onWeeks = null, ?array $onYearDays = null, ?string $timezone = null, ?WeekStart $weekStart = null)

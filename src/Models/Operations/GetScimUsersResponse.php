@@ -35,7 +35,7 @@ class GetScimUsersResponse
     /**
      * Successful
      *
-     * @var ?Shared\ScimUser $scimUser
+     * @var ?\Unified\Unified_to\Models\Shared\ScimUser $scimUser
      */
     public ?Shared\ScimUser $scimUser = null;
 
@@ -43,7 +43,7 @@ class GetScimUsersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\ScimUser  $scimUser
+     * @param  ?\Unified\Unified_to\Models\Shared\ScimUser  $scimUser
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\ScimUser $scimUser = null)

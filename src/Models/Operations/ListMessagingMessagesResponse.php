@@ -35,7 +35,7 @@ class ListMessagingMessagesResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\MessagingMessage> $messagingMessages
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMessage> $messagingMessages
      */
     public ?array $messagingMessages = null;
 
@@ -43,7 +43,7 @@ class ListMessagingMessagesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\MessagingMessage>  $messagingMessages
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMessage>  $messagingMessages
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $messagingMessages = null)

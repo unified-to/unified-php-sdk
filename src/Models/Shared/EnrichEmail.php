@@ -28,7 +28,7 @@ class EnrichEmail
 
     /**
      *
-     * @var ?EnrichEmailType $type
+     * @var ?\Unified\Unified_to\Models\Shared\EnrichEmailType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichEmailType|null')]
@@ -38,7 +38,7 @@ class EnrichEmail
     /**
      * @param  string  $email
      * @param  ?bool  $isVerified
-     * @param  ?EnrichEmailType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\EnrichEmailType  $type
      * @phpstan-pure
      */
     public function __construct(string $email, ?bool $isVerified = null, ?EnrichEmailType $type = null)

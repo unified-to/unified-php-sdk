@@ -14,7 +14,7 @@ class CreateTaskProjectRequest
 {
     /**
      *
-     * @var Shared\TaskProject $taskProject
+     * @var \Unified\Unified_to\Models\Shared\TaskProject $taskProject
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\TaskProject $taskProject;
@@ -30,7 +30,7 @@ class CreateTaskProjectRequest
     /**
      * Fields to return
      *
-     * @var ?array<CreateTaskProjectQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\CreateTaskProjectQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -44,9 +44,9 @@ class CreateTaskProjectRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\TaskProject  $taskProject
+     * @param  \Unified\Unified_to\Models\Shared\TaskProject  $taskProject
      * @param  string  $connectionId
-     * @param  ?array<CreateTaskProjectQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\CreateTaskProjectQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

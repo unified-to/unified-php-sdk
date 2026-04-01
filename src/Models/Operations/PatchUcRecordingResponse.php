@@ -35,7 +35,7 @@ class PatchUcRecordingResponse
     /**
      * Successful
      *
-     * @var ?Shared\UcRecording $ucRecording
+     * @var ?\Unified\Unified_to\Models\Shared\UcRecording $ucRecording
      */
     public ?Shared\UcRecording $ucRecording = null;
 
@@ -43,7 +43,7 @@ class PatchUcRecordingResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Shared\UcRecording  $ucRecording
+     * @param  ?\Unified\Unified_to\Models\Shared\UcRecording  $ucRecording
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Shared\UcRecording $ucRecording = null)

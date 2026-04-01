@@ -20,7 +20,7 @@ class AtsCompany
 
     /**
      *
-     * @var ?PropertyAtsCompanyAddress $address
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress|null')]
@@ -46,7 +46,7 @@ class AtsCompany
     /**
      * $metadata
      *
-     * @var ?array<AtsMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
@@ -107,10 +107,10 @@ class AtsCompany
 
     /**
      * @param  string  $name
-     * @param  ?PropertyAtsCompanyAddress  $address
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
-     * @param  ?array<AtsMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?string  $phone
      * @param  ?array<string, mixed>  $raw

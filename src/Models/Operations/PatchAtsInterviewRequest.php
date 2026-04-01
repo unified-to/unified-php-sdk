@@ -14,7 +14,7 @@ class PatchAtsInterviewRequest
 {
     /**
      *
-     * @var Shared\AtsInterview $atsInterview
+     * @var \Unified\Unified_to\Models\Shared\AtsInterview $atsInterview
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AtsInterview $atsInterview;
@@ -38,7 +38,7 @@ class PatchAtsInterviewRequest
     /**
      * Fields to return
      *
-     * @var ?array<PatchAtsInterviewQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\PatchAtsInterviewQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class PatchAtsInterviewRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AtsInterview  $atsInterview
+     * @param  \Unified\Unified_to\Models\Shared\AtsInterview  $atsInterview
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<PatchAtsInterviewQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\PatchAtsInterviewQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

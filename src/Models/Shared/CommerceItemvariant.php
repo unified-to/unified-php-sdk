@@ -86,7 +86,7 @@ class CommerceItemvariant
     /**
      * references CommerceItem
      *
-     * @var ?array<CommerceReference> $items
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReference> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceReference>|null')]
@@ -104,7 +104,7 @@ class CommerceItemvariant
     /**
      * $media
      *
-     * @var ?array<CommerceItemMedia> $media
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia> $media
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('media')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>|null')]
@@ -114,7 +114,7 @@ class CommerceItemvariant
     /**
      * $metadata
      *
-     * @var ?array<CommerceMetadata> $metadata
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
@@ -132,7 +132,7 @@ class CommerceItemvariant
     /**
      * $options
      *
-     * @var ?array<CommerceItemOption> $options
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemOption> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemOption>|null')]
@@ -142,7 +142,7 @@ class CommerceItemvariant
     /**
      * $prices
      *
-     * @var ?array<CommerceItemPrice> $prices
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemPrice> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>|null')]
@@ -185,7 +185,7 @@ class CommerceItemvariant
 
     /**
      *
-     * @var ?SizeUnit $sizeUnit
+     * @var ?\Unified\Unified_to\Models\Shared\SizeUnit $sizeUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('size_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SizeUnit|null')]
@@ -236,7 +236,7 @@ class CommerceItemvariant
 
     /**
      *
-     * @var ?CommerceItemvariantWeightUnit $weightUnit
+     * @var ?\Unified\Unified_to\Models\Shared\CommerceItemvariantWeightUnit $weightUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('weight_unit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CommerceItemvariantWeightUnit|null')]
@@ -261,24 +261,24 @@ class CommerceItemvariant
      * @param  ?bool  $isActive
      * @param  ?bool  $isFeatured
      * @param  ?bool  $isVisible
-     * @param  ?array<CommerceReference>  $items
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReference>  $items
      * @param  ?float  $length
-     * @param  ?array<CommerceItemMedia>  $media
-     * @param  ?array<CommerceMetadata>  $metadata
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?array<CommerceItemOption>  $options
-     * @param  ?array<CommerceItemPrice>  $prices
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemOption>  $options
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemPrice>  $prices
      * @param  ?string  $publicDescription
      * @param  ?string  $publicName
      * @param  ?array<string, mixed>  $raw
      * @param  ?bool  $requiresShipping
-     * @param  ?SizeUnit  $sizeUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\SizeUnit  $sizeUnit
      * @param  ?string  $sku
      * @param  ?array<string>  $tags
      * @param  ?float  $totalStock
      * @param  ?\DateTime  $updatedAt
      * @param  ?float  $weight
-     * @param  ?CommerceItemvariantWeightUnit  $weightUnit
+     * @param  ?\Unified\Unified_to\Models\Shared\CommerceItemvariantWeightUnit  $weightUnit
      * @param  ?float  $width
      * @phpstan-pure
      */

@@ -47,8 +47,8 @@ class Channel
     /**
      * Retrieve a channel
      *
-     * @param  Operations\GetMessagingChannelRequest  $request
-     * @return Operations\GetMessagingChannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMessagingChannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function getMessagingChannel(Operations\GetMessagingChannelRequest $request, ?Options $options = null): Operations\GetMessagingChannelResponse
@@ -109,8 +109,8 @@ class Channel
     /**
      * List all channels
      *
-     * @param  Operations\ListMessagingChannelsRequest  $request
-     * @return Operations\ListMessagingChannelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
     public function listMessagingChannels(Operations\ListMessagingChannelsRequest $request, ?Options $options = null): Operations\ListMessagingChannelsResponse

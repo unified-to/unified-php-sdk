@@ -14,7 +14,7 @@ class UpdateAdsCreativeRequest
 {
     /**
      *
-     * @var Shared\AdsCreative $adsCreative
+     * @var \Unified\Unified_to\Models\Shared\AdsCreative $adsCreative
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\AdsCreative $adsCreative;
@@ -38,7 +38,7 @@ class UpdateAdsCreativeRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateAdsCreativeQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateAdsCreativeQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateAdsCreativeRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\AdsCreative  $adsCreative
+     * @param  \Unified\Unified_to\Models\Shared\AdsCreative  $adsCreative
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateAdsCreativeQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateAdsCreativeQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

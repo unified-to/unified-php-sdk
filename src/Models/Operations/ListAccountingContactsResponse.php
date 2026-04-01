@@ -35,7 +35,7 @@ class ListAccountingContactsResponse
     /**
      * Successful
      *
-     * @var ?array<Shared\AccountingContact> $accountingContacts
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingContact> $accountingContacts
      */
     public ?array $accountingContacts = null;
 
@@ -43,7 +43,7 @@ class ListAccountingContactsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Shared\AccountingContact>  $accountingContacts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingContact>  $accountingContacts
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $accountingContacts = null)

@@ -24,7 +24,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * @deprecated – use cost_of_goods_sold_sections instead
      *
-     * @var ?array<AccountingProfitlossCategory> $costOfGoodsSold
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $costOfGoodsSold
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
@@ -34,7 +34,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * $costOfGoodsSoldSections
      *
-     * @var ?array<AccountingProfitlossSection> $costOfGoodsSoldSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection> $costOfGoodsSoldSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
@@ -76,7 +76,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * @deprecated – use expenses_sections instead
      *
-     * @var ?array<AccountingProfitlossCategory> $expenses
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $expenses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('expenses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
@@ -86,7 +86,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * $expensesSections
      *
-     * @var ?array<AccountingProfitlossSection> $expensesSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection> $expensesSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('expenses_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
@@ -120,7 +120,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * @deprecated – use income_sections instead
      *
-     * @var ?array<AccountingProfitlossCategory> $income
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $income
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('income')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
@@ -130,7 +130,7 @@ class PropertyAccountingReportProfitAndLoss
     /**
      * $incomeSections
      *
-     * @var ?array<AccountingProfitlossSection> $incomeSections
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection> $incomeSections
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('income_sections')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>|null')]
@@ -197,19 +197,19 @@ class PropertyAccountingReportProfitAndLoss
 
     /**
      * @param  ?array<string>  $categoryIds
-     * @param  ?array<AccountingProfitlossCategory>  $costOfGoodsSold
-     * @param  ?array<AccountingProfitlossSection>  $costOfGoodsSoldSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $costOfGoodsSold
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $costOfGoodsSoldSections
      * @param  ?float  $costOfGoodsSoldTotalAmount
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?array<AccountingProfitlossCategory>  $expenses
-     * @param  ?array<AccountingProfitlossSection>  $expensesSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $expenses
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $expensesSections
      * @param  ?float  $expensesTotalAmount
      * @param  ?float  $grossProfitAmount
      * @param  ?string  $id
-     * @param  ?array<AccountingProfitlossCategory>  $income
-     * @param  ?array<AccountingProfitlossSection>  $incomeSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $income
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $incomeSections
      * @param  ?float  $incomeTotalAmount
      * @param  ?string  $name
      * @param  ?float  $netIncomeAmount

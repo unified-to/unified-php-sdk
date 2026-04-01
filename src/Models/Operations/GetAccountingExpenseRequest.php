@@ -30,7 +30,7 @@ class GetAccountingExpenseRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetAccountingExpenseQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetAccountingExpenseQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetAccountingExpenseRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetAccountingExpenseQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetAccountingExpenseQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

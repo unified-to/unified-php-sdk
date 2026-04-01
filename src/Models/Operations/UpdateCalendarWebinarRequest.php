@@ -14,7 +14,7 @@ class UpdateCalendarWebinarRequest
 {
     /**
      *
-     * @var Shared\CalendarWebinar $calendarWebinar
+     * @var \Unified\Unified_to\Models\Shared\CalendarWebinar $calendarWebinar
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Shared\CalendarWebinar $calendarWebinar;
@@ -38,7 +38,7 @@ class UpdateCalendarWebinarRequest
     /**
      * Fields to return
      *
-     * @var ?array<UpdateCalendarWebinarQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\UpdateCalendarWebinarQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -52,10 +52,10 @@ class UpdateCalendarWebinarRequest
     public ?string $raw = null;
 
     /**
-     * @param  Shared\CalendarWebinar  $calendarWebinar
+     * @param  \Unified\Unified_to\Models\Shared\CalendarWebinar  $calendarWebinar
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<UpdateCalendarWebinarQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\UpdateCalendarWebinarQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */

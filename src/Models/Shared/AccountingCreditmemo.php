@@ -14,7 +14,7 @@ class AccountingCreditmemo
     /**
      * $attachments
      *
-     * @var ?array<AccountingAttachment> $attachments
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAttachment>|null')]
@@ -96,7 +96,7 @@ class AccountingCreditmemo
     /**
      * $lineitems
      *
-     * @var ?array<AccountingLineitem> $lineitems
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingLineitem>|null')]
@@ -129,7 +129,7 @@ class AccountingCreditmemo
 
     /**
      *
-     * @var ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_collection_method')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingCreditmemoPaymentCollectionMethod|null')]
@@ -188,7 +188,7 @@ class AccountingCreditmemo
 
     /**
      *
-     * @var ?AccountingCreditmemoStatus $status
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCreditmemoStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingCreditmemoStatus|null')]
@@ -228,7 +228,7 @@ class AccountingCreditmemo
     public ?string $url = null;
 
     /**
-     * @param  ?array<AccountingAttachment>  $attachments
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?float  $balanceAmount
      * @param  ?\DateTime  $cancelledAt
      * @param  ?string  $contactId
@@ -238,18 +238,18 @@ class AccountingCreditmemo
      * @param  ?float  $discountAmount
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
-     * @param  ?array<AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $notes
      * @param  ?float  $paidAmount
      * @param  ?\DateTime  $paidAt
-     * @param  ?AccountingCreditmemoPaymentCollectionMethod  $paymentCollectionMethod
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCreditmemoPaymentCollectionMethod  $paymentCollectionMethod
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $refundAmount
      * @param  ?string  $refundReason
      * @param  ?\DateTime  $refundedAt
      * @param  ?bool  $send
-     * @param  ?AccountingCreditmemoStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCreditmemoStatus  $status
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt

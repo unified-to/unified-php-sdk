@@ -30,7 +30,7 @@ class GetTaskCommentRequest
     /**
      * Fields to return
      *
-     * @var ?array<GetTaskCommentQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetTaskCommentQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -46,7 +46,7 @@ class GetTaskCommentRequest
     /**
      * @param  string  $connectionId
      * @param  string  $id
-     * @param  ?array<GetTaskCommentQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetTaskCommentQueryParamFields>  $fields
      * @param  ?string  $raw
      * @phpstan-pure
      */
