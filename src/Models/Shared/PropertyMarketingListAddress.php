@@ -68,6 +68,14 @@ class PropertyMarketingListAddress
     public ?string $region = null;
 
     /**
+     *
+     * @var ?string $regionCode
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('region_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $regionCode = null;
+
+    /**
      * @param  ?string  $address1
      * @param  ?string  $address2
      * @param  ?string  $city
@@ -75,9 +83,10 @@ class PropertyMarketingListAddress
      * @param  ?string  $countryCode
      * @param  ?string  $postalCode
      * @param  ?string  $region
+     * @param  ?string  $regionCode
      * @phpstan-pure
      */
-    public function __construct(?string $address1 = null, ?string $address2 = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?string $postalCode = null, ?string $region = null)
+    public function __construct(?string $address1 = null, ?string $address2 = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?string $postalCode = null, ?string $region = null, ?string $regionCode = null)
     {
         $this->address1 = $address1;
         $this->address2 = $address2;
@@ -86,5 +95,6 @@ class PropertyMarketingListAddress
         $this->countryCode = $countryCode;
         $this->postalCode = $postalCode;
         $this->region = $region;
+        $this->regionCode = $regionCode;
     }
 }
