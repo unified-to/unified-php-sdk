@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 293e8f940db1edc64ea3bee29612e534
+  docChecksum: 5aadf962c09ceec8ee8c741b10920bd7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.0
-  generationVersion: 2.879.1
-  releaseVersion: 1.6.52
-  configChecksum: 5d6d768b8b736ed10371a28a1e0e5ddf
+  speakeasyVersion: 1.761.1
+  generationVersion: 2.879.6
+  releaseVersion: 1.6.53
+  configChecksum: 8bbabc11a6df163468822718f48257cb
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 7bc025d9-f7c8-4aab-9487-9670ceed4b46
-  pristine_commit_hash: 6cbe60e63f5068a68f010a175880664a1f46d791
-  pristine_tree_hash: 130ef28d0ac0cd07d89f72b4fb8046e2ee57eb02
+  generation_id: 53aa8c14-41d7-48e5-8f0d-8c887402f29c
+  pristine_commit_hash: 344478ade65d2374b6e2cc96bb0391fa52dca1bf
+  pristine_tree_hash: 71706c636d15ed855c116c6924b8ba6e8a8b097e
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -2597,8 +2597,8 @@ trackedFiles:
     pristine_git_object: f4cab9f45da652edd759d8b833dd44f4687e770c
   docs/Models/Operations/GetUnifiedIntegrationAuthRequest.md:
     id: b3652b3e98fe
-    last_write_checksum: sha1:e16c0269ebc9240395f44787b12f597bd32fc863
-    pristine_git_object: f8c4b2aee66b572ddb034104047f576d547f5bad
+    last_write_checksum: sha1:556fc031c4bfbabf7e3fd5d2ce567b21c081acb8
+    pristine_git_object: 082aa00824efa73f808eb9d71d019ec1b2a91071
   docs/Models/Operations/GetUnifiedIntegrationAuthResponse.md:
     id: 9a9c3a074bf7
     last_write_checksum: sha1:cf026adef6ce9a46fe0afdbd89ce49e510aea687
@@ -3449,8 +3449,8 @@ trackedFiles:
     pristine_git_object: c6558ab13e8007f36f114dc60a512bca43034627
   docs/Models/Operations/ListHrisDeductionsRequest.md:
     id: 20f8bb6d0dac
-    last_write_checksum: sha1:e90fc58dd9678b62ba34dadd2d839f07741d507f
-    pristine_git_object: 0b1062b612e1b00bf4ccc4c10e313971bd20276d
+    last_write_checksum: sha1:3283d60e9ff8a3d0552f319d03218e4e58a5484e
+    pristine_git_object: 191a248d8b51d7356ad62a8efdcb12b337df7c24
   docs/Models/Operations/ListHrisDeductionsResponse.md:
     id: fb1f841793a3
     last_write_checksum: sha1:aaa28e5f6c7d6be420b8927be35b2fc4fff5b675
@@ -14293,8 +14293,8 @@ trackedFiles:
     pristine_git_object: 1565203c840a1a189e359bc818ab9f3b6d8ee439
   src/Models/Operations/GetUnifiedIntegrationAuthRequest.php:
     id: ae3f233a7a2c
-    last_write_checksum: sha1:83213a714e125b69dd5a8b2f6b7359309b8855d0
-    pristine_git_object: 21ae88267991c82a2a30a215fb9c4eead41e685a
+    last_write_checksum: sha1:a964414a6db647aacecd94b63e5d4261b7cafbba
+    pristine_git_object: 1bfc4661f4928823d3c6c98244823426ec77a559
   src/Models/Operations/GetUnifiedIntegrationAuthResponse.php:
     id: b00ae2e325ab
     last_write_checksum: sha1:5f2704879bef94059307816e768e0a5a6c51af60
@@ -15145,8 +15145,8 @@ trackedFiles:
     pristine_git_object: 37d262911b6be64b7d5ed6f9ae42b7b5b288c387
   src/Models/Operations/ListHrisDeductionsRequest.php:
     id: 68055e57563a
-    last_write_checksum: sha1:86ba103bdaf6dad36e02a42a29a6069616570293
-    pristine_git_object: a2b553b6e5c6756beb72e2e5a85fbf02b25527ec
+    last_write_checksum: sha1:07ae9e5dd2233cbe03cd1e3c38fd1ea9853a8100
+    pristine_git_object: 0e456a0872a5c87c03f7f4373093d1b9a4fac23f
   src/Models/Operations/ListHrisDeductionsResponse.php:
     id: ea1e5b096cf9
     last_write_checksum: sha1:4e9be4b8468a94c7110e9b801a8ce2af9abc2bb2
@@ -22457,8 +22457,8 @@ trackedFiles:
     pristine_git_object: 4a7b23521d44cd42b17b4a761403f2e6276acb67
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:3664ad716188e487deedcf4f23185e005a8a914d
-    pristine_git_object: 022393dffa8bd824f37f1e38ece0840c51421f6d
+    last_write_checksum: sha1:6a94c312356612209106dbb6d4108a081f867b3a
+    pristine_git_object: 106ed5a20bb4d6e6e417ca82cd70a1f47fde9812
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:7f8ce2de6ee9241792ab43b64f8f6511a5c9f2c3
@@ -28755,7 +28755,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->martech->createMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n* `unified-to->martech->getMartechList()`:  `response.address->regionCode` **Added**\n* `unified-to->martech->listMartechLists()`:  `response.[]->address->regionCode` **Added**\n* `unified-to->martech->patchMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n* `unified-to->martech->updateMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n* `unified-to->list->createMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n* `unified-to->list->getMartechList()`:  `response.address->regionCode` **Added**\n* `unified-to->list->listMartechLists()`:  `response.[]->address->regionCode` **Added**\n* `unified-to->list->patchMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n* `unified-to->list->updateMartechList()`: \n  *  `request->marketingList->address->regionCode` **Added**\n  *  `response.address->regionCode` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->hris->listHrisDeductions()`:  `request` **Changed**
+  * `unified-to->deduction->listHrisDeductions()`:  `request` **Changed**
 generatedFiles:
   - .gitattributes
   - USAGE.md

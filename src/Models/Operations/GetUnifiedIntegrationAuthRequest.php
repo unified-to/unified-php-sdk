@@ -82,6 +82,7 @@ class GetUnifiedIntegrationAuthRequest
     public ?string $state = null;
 
     /**
+     * Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
      *
      * @var ?string $subdomain
      */
