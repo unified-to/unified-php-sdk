@@ -18,6 +18,7 @@ enum UpdateAtsJobQueryParamFields: string
     case Description = 'description';
     case RecruiterIds = 'recruiter_ids';
     case HiringManagerIds = 'hiring_manager_ids';
+    case HiringManagers = 'hiring_managers';
     case Status = 'status';
     case ClosedAt = 'closed_at';
     case Addresses = 'addresses';
