@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 185e3f9bf567bcfb80297100b1c48628
+  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
   docVersion: "1.0"
   speakeasyVersion: 1.761.1
   generationVersion: 2.879.6
-  releaseVersion: 1.6.54
-  configChecksum: 6d16fcd1f11356ff595a71d88b63308e
+  releaseVersion: 1.6.55
+  configChecksum: f415a9d6d6a8d7c47cdbb2595e75f35b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: ace9713f-a806-411f-aae6-13535e506899
-  pristine_commit_hash: f89d32be1216b5f8f899bccc169f031a27356bae
-  pristine_tree_hash: ada91c53085c53fc28c386712270f9302a33a47b
+  generation_id: 68492215-f55f-4040-9f87-5040458cd17f
+  pristine_commit_hash: d0b9245e41b7d0eaff9f38e2c05a0c6887fca0d0
+  pristine_tree_hash: e9793b329e88b7588876d1370c4e688f6bde915b
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -10769,8 +10769,8 @@ trackedFiles:
     pristine_git_object: 5e3c64653b2422bc150510e0455acf116b1c052b
   docs/Models/Shared/Webhook.md:
     id: 79518733ecf7
-    last_write_checksum: sha1:cf2745074fecb3cdcc47d6caf87da89e22bc22be
-    pristine_git_object: 9c405874413c90563a4b4acd300594b54644d84f
+    last_write_checksum: sha1:f7741b3e49f005f0da5eb68b9add40520a83c705
+    pristine_git_object: 0648ce9b962cbcbcff14e01288640367aa86933b
   docs/Models/Shared/WebhookType.md:
     id: 77c9d7a4ba4b
     last_write_checksum: sha1:3ec6aba4ed6b3a2f177140723a5c587f8fde14bc
@@ -22341,8 +22341,8 @@ trackedFiles:
     pristine_git_object: 5d55ce61d650a0c8e34b3e05872dd46835b350ee
   src/Models/Shared/Webhook.php:
     id: 9d530ff54117
-    last_write_checksum: sha1:e755cdb82f65373fb04a08f81ea1eeba86a8b7ca
-    pristine_git_object: aa3ea306cd633108f61e15a7463b37251fd265dd
+    last_write_checksum: sha1:5abdd35d2c962025ff886074001e299203dee307
+    pristine_git_object: ad2c03c25ade9889bc4185722c231150e0c5c348
   src/Models/Shared/WebhookType.php:
     id: f2ca0886dbdf
     last_write_checksum: sha1:52b90cb9954720a5fe43749df357c22663fc5c20
@@ -22465,8 +22465,8 @@ trackedFiles:
     pristine_git_object: 4a7b23521d44cd42b17b4a761403f2e6276acb67
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:71e129c12fac4781721cffd951961e6060332333
-    pristine_git_object: 8dbd854722ee31fe1dfbc5fb42ba428bf13637e3
+    last_write_checksum: sha1:33d0012fad5d29bcaa69bfe7c574d3e28f502040
+    pristine_git_object: 761d20956f59586a37afde1ade4a86e774977752
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:7f8ce2de6ee9241792ab43b64f8f6511a5c9f2c3
@@ -28763,7 +28763,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->ats->getAtsJob()`: \n  *  `request->fields` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->ats->listAtsJobs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->hiringManagers` **Added**\n* `unified-to->ats->patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->ats->updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->job->createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->job->getAtsJob()`: \n  *  `request->fields` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->job->listAtsJobs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->hiringManagers` **Added**\n* `unified-to->job->patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to->job->updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->unified->getUnifiedWebhook()`:  `response.isBeta` **Added**\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->isBeta` **Added**\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.isBeta` **Added**\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->isBeta` **Added**\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
