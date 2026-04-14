@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
+  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
   docVersion: "1.0"
-  speakeasyVersion: 1.761.1
-  generationVersion: 2.879.6
-  releaseVersion: 1.6.55
-  configChecksum: f415a9d6d6a8d7c47cdbb2595e75f35b
+  speakeasyVersion: 1.761.4
+  generationVersion: 2.879.13
+  releaseVersion: 1.6.56
+  configChecksum: 52620c00ac2c91f843f5f2df2e3fabf7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 68492215-f55f-4040-9f87-5040458cd17f
-  pristine_commit_hash: d0b9245e41b7d0eaff9f38e2c05a0c6887fca0d0
-  pristine_tree_hash: e9793b329e88b7588876d1370c4e688f6bde915b
+  generation_id: 484296d7-cdd7-41b0-97c4-801e27aa0dbd
+  pristine_commit_hash: e2ebfba77046a2a66a8de79a840fef28e8d468d7
+  pristine_tree_hash: 2ec1ea491cdbeb4db5ab7b59ee5320cdcd12a4d5
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -8589,8 +8589,8 @@ trackedFiles:
     pristine_git_object: 7145d16e2528dd6d849a05278c9dd8ca0507eaed
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:e6861fddece137ae375b95bae5abb34c5c451c7f
-    pristine_git_object: e48d03ad898e7e430b0f5909b47dfd6d97608f05
+    last_write_checksum: sha1:e378e9786e8a3591f8e0d226989bfc286546ad4c
+    pristine_git_object: cdcc5f34fb6cb754559ca7b5392f4f4f30af8794
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -9143,6 +9143,10 @@ trackedFiles:
     id: c57cc84eb8e4
     last_write_checksum: sha1:cfd0d35e1c34440fad6372e46c7f238acd5151a2
     pristine_git_object: f8d0c542e58f4bbc1b69a48ce9d73ee57c55c2a2
+  docs/Models/Shared/NativeWebhookListId.md:
+    id: f92c0541c236
+    last_write_checksum: sha1:63def502f59b8a7710d3e84b458c0fffea03c9e4
+    pristine_git_object: 1932d9481874d9ff7f0f96a3f823ab7d91c58536
   docs/Models/Shared/NativeWebhookMemberId.md:
     id: 94db09a84584
     last_write_checksum: sha1:f7049fe8dcc585501c050713d443e888cbcdd9ca
@@ -20209,8 +20213,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:1f5a76e7fd0c9d7b578c3f8ac8e351fccd64c74b
-    pristine_git_object: c5f6a3a22c53088766ef053535cfc76b5ce530a1
+    last_write_checksum: sha1:d262b9eb20b7b47aaec325c61da62b9c9353c66a
+    pristine_git_object: bd0adaf91edda4660798eacbfc020dbb0c28071f
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -20747,6 +20751,10 @@ trackedFiles:
     id: aa0fc8d847ef
     last_write_checksum: sha1:2444065d182db21cd423c47a414c45af33b0193a
     pristine_git_object: 31ff2539e1e2aabe4abf0749289f25b20fd0919e
+  src/Models/Shared/NativeWebhookListId.php:
+    id: 7ba2b6f2c02f
+    last_write_checksum: sha1:3401a5fa6b31b4ff12f53f5e23e7a34c3f6baa6c
+    pristine_git_object: c474d19958db065ae783d01034e49e0ebf3b0a9f
   src/Models/Shared/NativeWebhookMemberId.php:
     id: 4fa643da2064
     last_write_checksum: sha1:f3d2355733da55cab13cf53e7e7ddb13b5f954ce
@@ -22465,8 +22473,8 @@ trackedFiles:
     pristine_git_object: 4a7b23521d44cd42b17b4a761403f2e6276acb67
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:33d0012fad5d29bcaa69bfe7c574d3e28f502040
-    pristine_git_object: 761d20956f59586a37afde1ade4a86e774977752
+    last_write_checksum: sha1:ae468164c29f4159993e7a37403d9ba9ed23ea7f
+    pristine_git_object: 83b1105041312ad853188d5d2b6b5b1c0cb1ddc5
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:7f8ce2de6ee9241792ab43b64f8f6511a5c9f2c3
@@ -28763,7 +28771,12 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->unified->getUnifiedWebhook()`:  `response.isBeta` **Added**\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->isBeta` **Added**\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.isBeta` **Added**\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->isBeta` **Added**\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->isBeta` **Added**\n  *  `response.isBeta` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
 generatedFiles:
   - .gitattributes
   - USAGE.md
