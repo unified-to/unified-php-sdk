@@ -28,13 +28,23 @@ class AtsApplicationAnswer
     public string $questionId;
 
     /**
+     *
+     * @var ?string $question
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('question')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $question = null;
+
+    /**
      * @param  array<string>  $answers
      * @param  string  $questionId
+     * @param  ?string  $question
      * @phpstan-pure
      */
-    public function __construct(array $answers, string $questionId)
+    public function __construct(array $answers, string $questionId, ?string $question = null)
     {
         $this->answers = $answers;
         $this->questionId = $questionId;
+        $this->question = $question;
     }
 }

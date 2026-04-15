@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
+  docChecksum: 97059ed622bfecd9741a74a3557254e7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.4
+  speakeasyVersion: 1.761.5
   generationVersion: 2.879.13
-  releaseVersion: 1.6.56
-  configChecksum: 52620c00ac2c91f843f5f2df2e3fabf7
+  releaseVersion: 1.6.57
+  configChecksum: bf7f8ee089025b81e4b598c88165e9ae
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 484296d7-cdd7-41b0-97c4-801e27aa0dbd
-  pristine_commit_hash: e2ebfba77046a2a66a8de79a840fef28e8d468d7
-  pristine_tree_hash: 2ec1ea491cdbeb4db5ab7b59ee5320cdcd12a4d5
+  generation_id: a81a04a0-94cb-4796-984a-5aa4757bd6b8
+  pristine_commit_hash: b6d9ed47114cb70517240cd697cb7d98cc32f3a5
+  pristine_tree_hash: bf27834081e8ed82d45f4a49c93b306b4799b6f6
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -7777,8 +7777,8 @@ trackedFiles:
     pristine_git_object: 3e31100fe96514c7e826c3a7258d251540fc8697
   docs/Models/Shared/AtsApplicationAnswer.md:
     id: 03e56bd3c766
-    last_write_checksum: sha1:7002767adfbc89dace1a1936a47c336f2f5d5de8
-    pristine_git_object: 3a53cbac3a9df8d75ff78e6b4f9fc5e718482d71
+    last_write_checksum: sha1:ec1926081a12052a7b0276343dee3b1f6811939a
+    pristine_git_object: e78a1bd78f620a76092a97aacd35e6a9aa5aff0b
   docs/Models/Shared/AtsApplicationStatus.md:
     id: ba55cdf7f3e6
     last_write_checksum: sha1:9918361565a57d50e4a6c15d16f658a0166aebcc
@@ -19477,8 +19477,8 @@ trackedFiles:
     pristine_git_object: a230a39cb8ab24eb8da8e069571bf4e5cb63cca8
   src/Models/Shared/AtsApplicationAnswer.php:
     id: 290eea4a4e14
-    last_write_checksum: sha1:24a0959ea56f3c4906c1e5cc04e4582e58a25e18
-    pristine_git_object: 4c77a22cacce463b412f9bc9f881cf182d3ac4e5
+    last_write_checksum: sha1:4f84d1ace7b650c51dc87488ad01f2b79e13abf2
+    pristine_git_object: 2dae5332502651fe2661efe3d5508f3535bf6ee4
   src/Models/Shared/AtsApplicationStatus.php:
     id: 2eba0878d17e
     last_write_checksum: sha1:d02c1227b26580b5ea4f286453bc3fa43a14e692
@@ -22473,8 +22473,8 @@ trackedFiles:
     pristine_git_object: 4a7b23521d44cd42b17b4a761403f2e6276acb67
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:ae468164c29f4159993e7a37403d9ba9ed23ea7f
-    pristine_git_object: 83b1105041312ad853188d5d2b6b5b1c0cb1ddc5
+    last_write_checksum: sha1:f67c708834bbfd1a7d7bd9697b58fe38367629b1
+    pristine_git_object: 591608108bff444fddf9d494546b67d4fb47684e
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:7f8ce2de6ee9241792ab43b64f8f6511a5c9f2c3
@@ -28771,12 +28771,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Php SDK Changes:
-  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
-  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
-  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
-  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->nativeWebhookListId` **Added**
+releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->createAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n* `unified-to->ats->getAtsApplication()`:  `response.answers[]->question` **Added**\n* `unified-to->ats->listAtsApplications()`:  `response.[]->answers[]->question` **Added**\n* `unified-to->ats->patchAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n* `unified-to->ats->updateAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n* `unified-to->application->createAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n* `unified-to->application->getAtsApplication()`:  `response.answers[]->question` **Added**\n* `unified-to->application->listAtsApplications()`:  `response.[]->answers[]->question` **Added**\n* `unified-to->application->patchAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n* `unified-to->application->updateAtsApplication()`: \n  *  `request->atsApplication->answers[]->question` **Added**\n  *  `response.answers[]->question` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
