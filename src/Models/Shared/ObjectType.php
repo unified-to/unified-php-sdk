@@ -140,4 +140,7 @@ enum ObjectType: string
     case ShippingShipment = 'shipping_shipment';
     case ShippingLabel = 'shipping_label';
     case ShippingTracking = 'shipping_tracking';
+    case SigningDocument = 'signing_document';
+    case SigningSignatory = 'signing_signatory';
+    case SigningTemplate = 'signing_template';
 }

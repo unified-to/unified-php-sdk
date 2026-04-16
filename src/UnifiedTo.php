@@ -254,6 +254,12 @@ class UnifiedTo
 
     public Tracking $tracking;
 
+    public Signing $signing;
+
+    public Signatory $signatory;
+
+    public Template $template;
+
     public Storage $storage;
 
     public File $file;
@@ -427,6 +433,9 @@ class UnifiedTo
         $this->rate = new Rate($this->sdkConfiguration);
         $this->shipment = new Shipment($this->sdkConfiguration);
         $this->tracking = new Tracking($this->sdkConfiguration);
+        $this->signing = new Signing($this->sdkConfiguration);
+        $this->signatory = new Signatory($this->sdkConfiguration);
+        $this->template = new Template($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);

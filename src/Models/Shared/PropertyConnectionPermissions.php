@@ -248,4 +248,9 @@ enum PropertyConnectionPermissions: string
     case ShippingTrackingRead = 'shipping_tracking_read';
     case ShippingRateRead = 'shipping_rate_read';
     case ShippingCarrierRead = 'shipping_carrier_read';
+    case SigningDocumentRead = 'signing_document_read';
+    case SigningDocumentWrite = 'signing_document_write';
+    case SigningSignatoryRead = 'signing_signatory_read';
+    case SigningSignatoryWrite = 'signing_signatory_write';
+    case SigningTemplateRead = 'signing_template_read';
 }

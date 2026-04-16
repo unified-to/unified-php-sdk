@@ -767,11 +767,17 @@ if ($response->accountingAccount !== null) {
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [createSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [getSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [listSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [patchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [patchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [removeSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
+* [updateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
 
@@ -1553,6 +1559,32 @@ if ($response->accountingAccount !== null) {
 * [updateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [updateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
+### [Signatory](docs/sdks/signatory/README.md)
+
+* [createSigningSignatory](docs/sdks/signatory/README.md#createsigningsignatory) - Create a signatory
+* [getSigningSignatory](docs/sdks/signatory/README.md#getsigningsignatory) - Retrieve a signatory
+* [listSigningSignatories](docs/sdks/signatory/README.md#listsigningsignatories) - List all signatories
+* [patchSigningSignatory](docs/sdks/signatory/README.md#patchsigningsignatory) - Update a signatory
+* [removeSigningSignatory](docs/sdks/signatory/README.md#removesigningsignatory) - Remove a signatory
+* [updateSigningSignatory](docs/sdks/signatory/README.md#updatesigningsignatory) - Update a signatory
+
+### [Signing](docs/sdks/signing/README.md)
+
+* [createSigningDocument](docs/sdks/signing/README.md#createsigningdocument) - Create a document
+* [createSigningSignatory](docs/sdks/signing/README.md#createsigningsignatory) - Create a signatory
+* [getSigningDocument](docs/sdks/signing/README.md#getsigningdocument) - Retrieve a document
+* [getSigningSignatory](docs/sdks/signing/README.md#getsigningsignatory) - Retrieve a signatory
+* [getSigningTemplate](docs/sdks/signing/README.md#getsigningtemplate) - Retrieve a template
+* [listSigningDocuments](docs/sdks/signing/README.md#listsigningdocuments) - List all documents
+* [listSigningSignatories](docs/sdks/signing/README.md#listsigningsignatories) - List all signatories
+* [listSigningTemplates](docs/sdks/signing/README.md#listsigningtemplates) - List all templates
+* [patchSigningDocument](docs/sdks/signing/README.md#patchsigningdocument) - Update a document
+* [patchSigningSignatory](docs/sdks/signing/README.md#patchsigningsignatory) - Update a signatory
+* [removeSigningDocument](docs/sdks/signing/README.md#removesigningdocument) - Remove a document
+* [removeSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
+* [updateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
+* [updateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
 ### [Space](docs/sdks/space/README.md)
 
 * [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
@@ -1629,6 +1661,11 @@ if ($response->accountingAccount !== null) {
 * [patchAccountingTaxrate](docs/sdks/taxrate/README.md#patchaccountingtaxrate) - Update a taxrate
 * [removeAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [updateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
+
+### [Template](docs/sdks/template/README.md)
+
+* [getSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
+* [listSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
 
 ### [Ticket](docs/sdks/ticket/README.md)
 
