@@ -23,6 +23,5 @@ enum GetSigningDocumentQueryParamFields: string
     case TemplateId = 'template_id';
     case DownloadUrl = 'download_url';
     case CreatorId = 'creator_id';
-    case Metadata = 'metadata';
     case Raw = 'raw';
 }

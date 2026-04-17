@@ -13,4 +13,5 @@ enum Role: string
 {
     case System = 'SYSTEM';
     case User = 'USER';
+    case Assistant = 'ASSISTANT';
 }

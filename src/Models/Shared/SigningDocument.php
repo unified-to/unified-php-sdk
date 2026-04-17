@@ -68,16 +68,6 @@ class SigningDocument
     public ?string $id = null;
 
     /**
-     * Custom key-value pairs
-     *
-     * @var ?array<string, string> $metadata
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $metadata = null;
-
-    /**
      *
      * @var ?string $name
      */
@@ -136,7 +126,6 @@ class SigningDocument
      * @param  ?string  $downloadUrl
      * @param  ?\DateTime  $expiresAt
      * @param  ?string  $id
-     * @param  ?array<string, string>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $sentAt
@@ -145,7 +134,7 @@ class SigningDocument
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorId = null, ?string $description = null, ?string $downloadUrl = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $sentAt = null, ?SigningDocumentStatus $status = null, ?string $templateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorId = null, ?string $description = null, ?string $downloadUrl = null, ?\DateTime $expiresAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $sentAt = null, ?SigningDocumentStatus $status = null, ?string $templateId = null, ?\DateTime $updatedAt = null)
     {
         $this->completedAt = $completedAt;
         $this->createdAt = $createdAt;
@@ -154,7 +143,6 @@ class SigningDocument
         $this->downloadUrl = $downloadUrl;
         $this->expiresAt = $expiresAt;
         $this->id = $id;
-        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->sentAt = $sentAt;

@@ -13,13 +13,6 @@ class LmsMedia
 {
     /**
      *
-     * @var string $url
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
-    public string $url;
-
-    /**
-     *
      * @var ?string $content
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
@@ -33,6 +26,16 @@ class LmsMedia
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
+
+    /**
+     * $languages
+     *
+     * @var ?array<string> $languages
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('languages')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $languages = null;
 
     /**
      *
@@ -60,21 +63,31 @@ class LmsMedia
     public ?LmsMediaType $type = null;
 
     /**
-     * @param  string  $url
+     *
+     * @var ?string $url
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $url = null;
+
+    /**
      * @param  ?string  $content
      * @param  ?string  $description
+     * @param  ?array<string>  $languages
      * @param  ?string  $name
      * @param  ?string  $thumbnailUrl
      * @param  ?\Unified\Unified_to\Models\Shared\LmsMediaType  $type
+     * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(string $url, ?string $content = null, ?string $description = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null)
+    public function __construct(?string $content = null, ?string $description = null, ?array $languages = null, ?string $name = null, ?string $thumbnailUrl = null, ?LmsMediaType $type = null, ?string $url = null)
     {
-        $this->url = $url;
         $this->content = $content;
         $this->description = $description;
+        $this->languages = $languages;
         $this->name = $name;
         $this->thumbnailUrl = $thumbnailUrl;
         $this->type = $type;
+        $this->url = $url;
     }
 }

@@ -79,7 +79,7 @@ class LmsCourse
     public ?string $id = null;
 
     /**
-     * $instructorIds
+     * @deprecated; use instructors
      *
      * @var ?array<string> $instructorIds
      */
@@ -87,6 +87,16 @@ class LmsCourse
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $instructorIds = null;
+
+    /**
+     * $instructors
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsInstructor> $instructors
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('instructors')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsInstructor>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $instructors = null;
 
     /**
      *
@@ -141,6 +151,14 @@ class LmsCourse
     public ?string $providerName = null;
 
     /**
+     *
+     * @var ?\DateTime $publishedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('published_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $publishedAt = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -161,7 +179,7 @@ class LmsCourse
     public ?array $skills = null;
 
     /**
-     * $studentIds
+     * @deprecated; use students
      *
      * @var ?array<string> $studentIds
      */
@@ -169,6 +187,24 @@ class LmsCourse
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $studentIds = null;
+
+    /**
+     * $students
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsStudent> $students
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('students')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsStudent>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $students = null;
+
+    /**
+     *
+     * @var ?float $timeEstimateMinutes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('time_estimate_minutes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $timeEstimateMinutes = null;
 
     /**
      *
@@ -188,19 +224,23 @@ class LmsCourse
      * @param  ?float  $durationMinutes
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsInstructor>  $instructors
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?float  $priceAmount
      * @param  ?string  $providerName
+     * @param  ?\DateTime  $publishedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $skills
      * @param  ?array<string>  $studentIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsStudent>  $students
+     * @param  ?float  $timeEstimateMinutes
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?float $priceAmount = null, ?string $providerName = null, ?array $raw = null, ?array $skills = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, ?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructorIds = null, ?array $instructors = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?float $priceAmount = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?array $skills = null, ?array $studentIds = null, ?array $students = null, ?float $timeEstimateMinutes = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->categories = $categories;
@@ -211,15 +251,19 @@ class LmsCourse
         $this->durationMinutes = $durationMinutes;
         $this->id = $id;
         $this->instructorIds = $instructorIds;
+        $this->instructors = $instructors;
         $this->isActive = $isActive;
         $this->isPrivate = $isPrivate;
         $this->languages = $languages;
         $this->media = $media;
         $this->priceAmount = $priceAmount;
         $this->providerName = $providerName;
+        $this->publishedAt = $publishedAt;
         $this->raw = $raw;
         $this->skills = $skills;
         $this->studentIds = $studentIds;
+        $this->students = $students;
+        $this->timeEstimateMinutes = $timeEstimateMinutes;
         $this->updatedAt = $updatedAt;
     }
 }
