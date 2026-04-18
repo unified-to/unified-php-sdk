@@ -28,6 +28,6 @@ enum ListAccountingAccountsQueryParamFields: string
     case Subgroup = 'subgroup';
     case ParentId = 'parent_id';
     case Taxonomy = 'taxonomy';
-    case Raw = 'raw';
     case OrganizationId = 'organization_id';
+    case Raw = 'raw';
 }

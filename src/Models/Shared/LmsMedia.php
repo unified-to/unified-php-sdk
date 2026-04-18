@@ -28,7 +28,7 @@ class LmsMedia
     public ?string $description = null;
 
     /**
-     * $languages
+     * ISO 2-digit language codes
      *
      * @var ?array<string> $languages
      */

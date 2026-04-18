@@ -18,5 +18,6 @@ enum UpdateAccountingTaxrateQueryParamFields: string
     case Description = 'description';
     case Rate = 'rate';
     case IsActive = 'is_active';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

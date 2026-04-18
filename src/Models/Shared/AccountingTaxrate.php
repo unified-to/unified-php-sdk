@@ -53,6 +53,14 @@ class AccountingTaxrate
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?float $rate
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('rate')]
@@ -83,18 +91,20 @@ class AccountingTaxrate
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
+     * @param  ?string  $organizationId
      * @param  ?float  $rate
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->name = $name;
+        $this->organizationId = $organizationId;
         $this->rate = $rate;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

@@ -81,6 +81,14 @@ class AccountingTransaction
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?string $paymentMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_method')]
@@ -170,6 +178,7 @@ class AccountingTransaction
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>  $lineitems
      * @param  ?string  $memo
+     * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?string  $paymentTerms
      * @param  ?array<string, mixed>  $raw
@@ -182,7 +191,7 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->contacts = $contacts;
@@ -192,6 +201,7 @@ class AccountingTransaction
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->memo = $memo;
+        $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->paymentTerms = $paymentTerms;
         $this->raw = $raw;
