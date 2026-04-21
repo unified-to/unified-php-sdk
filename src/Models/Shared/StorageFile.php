@@ -104,6 +104,16 @@ class StorageFile
     public ?array $raw = null;
 
     /**
+     * $references
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\StorageReference> $references
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('references')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StorageReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $references = null;
+
+    /**
      *
      * @var ?float $size
      */
@@ -164,6 +174,7 @@ class StorageFile
      * @param  ?string  $parentId
      * @param  ?array<\Unified\Unified_to\Models\Shared\StoragePermission>  $permissions
      * @param  ?array<string, mixed>  $raw
+     * @param  ?array<\Unified\Unified_to\Models\Shared\StorageReference>  $references
      * @param  ?float  $size
      * @param  ?\Unified\Unified_to\Models\Shared\StorageFileType  $type
      * @param  ?\DateTime  $updatedAt
@@ -172,7 +183,7 @@ class StorageFile
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?array $references = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->data = $data;
@@ -185,6 +196,7 @@ class StorageFile
         $this->parentId = $parentId;
         $this->permissions = $permissions;
         $this->raw = $raw;
+        $this->references = $references;
         $this->size = $size;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

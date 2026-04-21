@@ -27,5 +27,6 @@ enum PatchStorageFileQueryParamFields: string
     case Data = 'data';
     case Version = 'version';
     case WebUrl = 'web_url';
+    case References = 'references';
     case Raw = 'raw';
 }

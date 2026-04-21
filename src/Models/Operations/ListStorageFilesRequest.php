@@ -89,6 +89,14 @@ class ListStorageFilesRequest
     public ?string $raw = null;
 
     /**
+     * The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+     *
+     * @var ?string $reference
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=reference')]
+    public ?string $reference = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -122,12 +130,13 @@ class ListStorageFilesRequest
      * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
+     * @param  ?string  $reference
      * @param  ?string  $sort
      * @param  ?string  $type
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?bool $expand = null, ?array $fields = null, ?string $fulltext = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?bool $expand = null, ?array $fields = null, ?string $fulltext = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $reference = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->expand = $expand;
@@ -139,6 +148,7 @@ class ListStorageFilesRequest
         $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
+        $this->reference = $reference;
         $this->sort = $sort;
         $this->type = $type;
         $this->updatedGte = $updatedGte;
