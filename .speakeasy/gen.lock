@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 556f285080267fd6b3d58b8990f5704b
+  docChecksum: 2e65ff785fedef7765dc3a1ace699f58
   docVersion: "1.0"
   speakeasyVersion: 1.761.9
   generationVersion: 2.881.4
-  releaseVersion: 1.6.61
-  configChecksum: ca624d8221edefcb236ec184f4fc1943
+  releaseVersion: 1.6.62
+  configChecksum: 308580a79ef44388a9fbacccf382078c
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 7f61384c-322f-4950-adda-cd313573a011
-  pristine_commit_hash: d5b81e073951d6a55ba5e5b8482979a726377645
-  pristine_tree_hash: 95928869ae9bd45adbf5a883c06f35b486eb2c56
+  generation_id: c186e7a0-dc01-4443-8c5d-f93449722313
+  pristine_commit_hash: 505bcdc6e278d30be95f38b3fd98ee3d145c3485
+  pristine_tree_hash: 4ef291541edfd360c00d3f82ceb1ca7ef45279a2
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -685,8 +685,8 @@ trackedFiles:
     pristine_git_object: a9c5f9f47c7fb1f73415152a5946ad1e87684767
   docs/Models/Operations/CreateHrisEmployeeQueryParamFields.md:
     id: 4ec57965ebe9
-    last_write_checksum: sha1:4eb84c8b133f4772db016844694dc243d24944f6
-    pristine_git_object: 2c65b0495069f1c5f6f3f5b827c8ed8e9f555362
+    last_write_checksum: sha1:3c30a4d9de40c21ded86e332ab2fc28f8700d3a3
+    pristine_git_object: 6ae69a3559bbe5bf33278144f38f62a2c147b205
   docs/Models/Operations/CreateHrisEmployeeRequest.md:
     id: 55a48859be25
     last_write_checksum: sha1:b60e4b2f8bf345c7bf7ca72ba98f73d65bac32ae
@@ -2001,8 +2001,8 @@ trackedFiles:
     pristine_git_object: af06a823882c1cc5549b215c82bddd03ff4aa83a
   docs/Models/Operations/GetHrisEmployeeQueryParamFields.md:
     id: f932b55ab189
-    last_write_checksum: sha1:5525c134c786c5f2f250041628f3a441274a0094
-    pristine_git_object: 01bdb8fce327f2b01539883d2dcb53c0091284d4
+    last_write_checksum: sha1:f370c55600b2df1621eca0d9ab09441f89208bc8
+    pristine_git_object: 52f896e07e54d4059d2061ed8873c607d22b596e
   docs/Models/Operations/GetHrisEmployeeRequest.md:
     id: 00353be67819
     last_write_checksum: sha1:26a64dc541535185ef79834d9b95e529273f58bd
@@ -2813,8 +2813,8 @@ trackedFiles:
     pristine_git_object: 14125f029ec1433ae0aa3291050909b82f79bde9
   docs/Models/Operations/ListAccountingInvoicesRequest.md:
     id: cb502b9b27d7
-    last_write_checksum: sha1:f4103302c9e54822f959831e4cef66f714b556fd
-    pristine_git_object: 109c833c16c2c893bd9d60daffb35c1c59e64b57
+    last_write_checksum: sha1:55ccbb7c8e05969e3062f98c9c2bfdea52ca7105
+    pristine_git_object: fb5b603f2046f3486678dc6ae0bf2d7bf8236234
   docs/Models/Operations/ListAccountingInvoicesResponse.md:
     id: a5b9e454720f
     last_write_checksum: sha1:f5782abf225fd71a6c66fc1ef7015ad06215d74d
@@ -3529,8 +3529,8 @@ trackedFiles:
     pristine_git_object: ee7bb8061d7871d939c16191bc339e9b66f72311
   docs/Models/Operations/ListHrisEmployeesQueryParamFields.md:
     id: b5690dca6626
-    last_write_checksum: sha1:cf60ad93beaaa65ced8b19dc2110dd23917093a4
-    pristine_git_object: 3f20e90db2a58fc497b6ec7485b2efdf215547c8
+    last_write_checksum: sha1:c588d57d11bcddaaf3212892ca4ee19f71bdea1c
+    pristine_git_object: 897f4bb4f4ddc447106f16a9913e909ea8d588f9
   docs/Models/Operations/ListHrisEmployeesRequest.md:
     id: 52b36b27a643
     last_write_checksum: sha1:f881aadefa767df6808385b87f37e33d72c7b1b8
@@ -4889,8 +4889,8 @@ trackedFiles:
     pristine_git_object: 51a01f5172685a9e9871173ddcc85e205e84ecd2
   docs/Models/Operations/PatchHrisEmployeeQueryParamFields.md:
     id: b8d8e0c90d6b
-    last_write_checksum: sha1:21e47252650f38f43e885d6c3edf99c52dec0072
-    pristine_git_object: df44a3952a8e75faba984e3c1595e7f2e02d4a59
+    last_write_checksum: sha1:9134462ba66c9d254192b55269d99dc83de0e52b
+    pristine_git_object: 0a34233976760bcb2b050d40b75501d641400b3c
   docs/Models/Operations/PatchHrisEmployeeRequest.md:
     id: cf06c623d10b
     last_write_checksum: sha1:4201e42c93973625eb705548141d1cb989841db5
@@ -6941,8 +6941,8 @@ trackedFiles:
     pristine_git_object: 87679569af0b2e3c276af3ef59fd03f77f927a08
   docs/Models/Operations/UpdateHrisEmployeeQueryParamFields.md:
     id: c7443e9efe32
-    last_write_checksum: sha1:508e10902fd977ff7b00cc83b9644ba31ad10a4d
-    pristine_git_object: 07c9f15be153270b3e57dad8a17e3de970f17c1f
+    last_write_checksum: sha1:498844769663d1bd457486ebd4563b201a43e5a8
+    pristine_git_object: 4d186263275fcd47f21ee13655ef64f8f1bcc0c1
   docs/Models/Operations/UpdateHrisEmployeeRequest.md:
     id: f79b361587e0
     last_write_checksum: sha1:fd0f0177b3c38dc2fa7abac01c176d030321d683
@@ -8617,8 +8617,8 @@ trackedFiles:
     pristine_git_object: e1aabdd5666ff4d3f8894862124598352ddc41f2
   docs/Models/Shared/HrisEmployee.md:
     id: 236c8b178d58
-    last_write_checksum: sha1:6cfdbc86d207aef57dcd7f2b38cea89ef6142a53
-    pristine_git_object: cd555fec30388827bfe414b1e7de0e04df1791e1
+    last_write_checksum: sha1:3c6cef08a0eeccf5f7aaf3acca9484e1bdcff1a3
+    pristine_git_object: 5b7d10729b17fc373965086ed2ca759b5fb5bd29
   docs/Models/Shared/HrisEmployeeEmploymentType.md:
     id: d7695000bf64
     last_write_checksum: sha1:251ec412dae12fdb02e8e527d4f23cf05bf16123
@@ -8701,8 +8701,8 @@ trackedFiles:
     pristine_git_object: 7c191c14b25ae14df483b040b01ced533d26f469
   docs/Models/Shared/HrisTimeoff.md:
     id: f745aefea980
-    last_write_checksum: sha1:e6d43e902c281d0debba1d965e63ebfadf566793
-    pristine_git_object: 3a86232223a49c879e60374f41bd8db6a29694a6
+    last_write_checksum: sha1:cbf3b5ffb20d05293f57940f55f477b48077d920
+    pristine_git_object: fb9aacf00b97402bc76f20f7c89e97f97af8ac8b
   docs/Models/Shared/HrisTimeoffStatus.md:
     id: 0a228add8c1b
     last_write_checksum: sha1:e7c0dd1bfceb21cc9dc0d663aaca44fae4831d17
@@ -11225,8 +11225,8 @@ trackedFiles:
     pristine_git_object: 103a698ab067a119bccc13f1f17cfccad91a1715
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:91c243a0ffcc540b00dc15eb9eef40df4d65fca5
-    pristine_git_object: 8c56066d73b559a2468a571faa5a9d930882e70b
+    last_write_checksum: sha1:5cbe1201be8ae746f80b4b1297e6e20be549ad1d
+    pristine_git_object: e2ef9b793333b903962f4711faced52c4a2f8adb
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:5e9d559c24e8fcf505e2b7e3b99d1b7f62825931
@@ -11509,8 +11509,8 @@ trackedFiles:
     pristine_git_object: 6e0e7ddef52910b2ca37c8de0224b9c1d0e888ff
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:0db34d1cbd5fa4c00a5d46cf498a76ef54e9d3ba
-    pristine_git_object: a2b306f16aea068967cb9bf1b8db24f342fefc74
+    last_write_checksum: sha1:633fdf5407949754b64660518b83b88de1273032
+    pristine_git_object: 46f7c2a559eb81374c1d5aee40a69ca63e4a6add
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
     last_write_checksum: sha1:74b30d07a8c7f08770b9faeee4b869e6831646dd
@@ -12609,8 +12609,8 @@ trackedFiles:
     pristine_git_object: 89710bb865a63acf057a651a985adc115abe864c
   src/Models/Operations/CreateHrisEmployeeQueryParamFields.php:
     id: 09be75b44180
-    last_write_checksum: sha1:5a6a0f37dc71e0d447391c026b6f0c62f563626a
-    pristine_git_object: f654a25f01103ee4bd2b6ebfb7b2dc3e7ebfc7d9
+    last_write_checksum: sha1:3864ab810261cdc2ead664b6dbef0e19c6b2a919
+    pristine_git_object: 2e8d4eb7e8fc7a43dc84fb4c6cae7609435945d7
   src/Models/Operations/CreateHrisEmployeeRequest.php:
     id: 67dddcb22fd4
     last_write_checksum: sha1:8d7848885f97eea61749750ee32a731cbf8257cb
@@ -13925,8 +13925,8 @@ trackedFiles:
     pristine_git_object: 50863454b798f5129c242734f7617e9989bd0fb5
   src/Models/Operations/GetHrisEmployeeQueryParamFields.php:
     id: 92eacd955171
-    last_write_checksum: sha1:91057c1cfab06e9911c55bf27f56237b1a4d0182
-    pristine_git_object: ce1695252e4fbe3e20a22bc28005966c38e7b4a6
+    last_write_checksum: sha1:c1cb466409f059d3414ebe8836269b05d87ef495
+    pristine_git_object: 5105b8edc2d5c0d2f49e0f4a3de1389cd9c8cbfd
   src/Models/Operations/GetHrisEmployeeRequest.php:
     id: 6834f729d4a3
     last_write_checksum: sha1:dac940c0c356773ba9e616ae6fe8653b549d140e
@@ -14737,8 +14737,8 @@ trackedFiles:
     pristine_git_object: 74e6efb7aa9002480cde196e26cfa38c9510ee1b
   src/Models/Operations/ListAccountingInvoicesRequest.php:
     id: fd95d4c4471a
-    last_write_checksum: sha1:bba394acc60c9bc9577b674ca1e11a2ffb69982e
-    pristine_git_object: 56709f40fbfa9f20ee74d0242777fb05cc19d0f7
+    last_write_checksum: sha1:536127976af2cbdedfd7f37abf00e7a79a36631f
+    pristine_git_object: c3fe872eb84cf96e80e0013e9b00f75093a9ac0f
   src/Models/Operations/ListAccountingInvoicesResponse.php:
     id: 3ee35e6e90c3
     last_write_checksum: sha1:a153d7e12d764c442b8f8db4cbcf7439874a6385
@@ -15453,8 +15453,8 @@ trackedFiles:
     pristine_git_object: 87513885a44c1bce43d0aec77f6a1a31e94b3bbe
   src/Models/Operations/ListHrisEmployeesQueryParamFields.php:
     id: 8292e0c35e05
-    last_write_checksum: sha1:9e8a4ca5bcb28e2c6c6bb95de7b11bfccd4b8f8d
-    pristine_git_object: 3a8dba76b31fb5e2772905365eb61a7503b8bad6
+    last_write_checksum: sha1:ffbdc843e1804d16f4551bf7f7a8513354e73345
+    pristine_git_object: c23eb5994b7965eba8ffe965cc4df4d34c9f6ec2
   src/Models/Operations/ListHrisEmployeesRequest.php:
     id: 2b719ed598ae
     last_write_checksum: sha1:31fd9dfdfa8296b3a63cb1b0b1a73c2a9ea73463
@@ -16813,8 +16813,8 @@ trackedFiles:
     pristine_git_object: ec90ece4c65475442e7adf29aabfdfa62f3bad9d
   src/Models/Operations/PatchHrisEmployeeQueryParamFields.php:
     id: 54e3a4d3f9f8
-    last_write_checksum: sha1:529b325895a786243189178f3a38035fb1408f67
-    pristine_git_object: a0d1e0f039bd40ec90284fb993be6925904f4fe6
+    last_write_checksum: sha1:ef82f46da8f92d7af241e6aa13cf8acf6f824ccf
+    pristine_git_object: bd87b11a3ce43abdbbf01595518086500cc937ee
   src/Models/Operations/PatchHrisEmployeeRequest.php:
     id: 0f0273226973
     last_write_checksum: sha1:2be8fc6bae53035171f94510e94c375fd743e080
@@ -18865,8 +18865,8 @@ trackedFiles:
     pristine_git_object: 24282f7697636a636bb51ca7f5cb350beca2b45d
   src/Models/Operations/UpdateHrisEmployeeQueryParamFields.php:
     id: af368f4ca796
-    last_write_checksum: sha1:226d7fc2e7c1f4fb3f179f374fe958f4aae1f283
-    pristine_git_object: f7bcc097e8205039c4f8916ebaa7533172c2c65c
+    last_write_checksum: sha1:9d7ef44409c97c243699d42f6004dd9f16a8a4a2
+    pristine_git_object: 6987cecd448b818ef4c4d5debc1d8264f7c25b84
   src/Models/Operations/UpdateHrisEmployeeRequest.php:
     id: f989c0846d6e
     last_write_checksum: sha1:7e20babd0945f02d46b87349c5a2cf1c1fe089f7
@@ -20493,8 +20493,8 @@ trackedFiles:
     pristine_git_object: 2a0092cf0202e854c3aec015f2bdde8b2250721a
   src/Models/Shared/HrisEmployee.php:
     id: b3199ab6fa52
-    last_write_checksum: sha1:9effdf2e12392f7d31f292b9475d1d088aa59f08
-    pristine_git_object: c936bb8fd56fff5e13abae7fceade01ade334640
+    last_write_checksum: sha1:5540c9e216ac4aa4c3a5baba7d293960b0bccda1
+    pristine_git_object: d7322c90129cc5b5b1beefc91b23086ef6de8056
   src/Models/Shared/HrisEmployeeEmploymentType.php:
     id: c1ab2d1e4a80
     last_write_checksum: sha1:e02f5b6649546d5f3d74231b06bbcb089af81c47
@@ -20561,8 +20561,8 @@ trackedFiles:
     pristine_git_object: a7b0292af4cfa8127f3a19a1375b2f8fae258cba
   src/Models/Shared/HrisTimeoff.php:
     id: bee96ea48707
-    last_write_checksum: sha1:501eb7c26aca0678e92a78a4a869e5d8962fa9a0
-    pristine_git_object: c13c675f504810ea8dc3ffbfe59d70c7524cea66
+    last_write_checksum: sha1:db9ceca3df6cdd630392fb004361c042e30b7f72
+    pristine_git_object: a38cdfe1fae247221e5e4a9bb21b7ae5dff9b905
   src/Models/Shared/HrisTimeoffStatus.php:
     id: eccecde71702
     last_write_checksum: sha1:7fb361e7ea5b782a1591414a02574f4bad0a1edd
@@ -22901,8 +22901,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:48eadfb2b5a18aae566dde9367e5fcb86b5ca5da
-    pristine_git_object: 5cc293cc365553edda4d8a6715b57b623f5396f2
+    last_write_checksum: sha1:fbed778fae49239a345444ec8e88202c8879eda9
+    pristine_git_object: 12e28cd149092493b6601fabe39190363dbb2a02
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -25234,7 +25234,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -29177,10 +29177,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -29188,10 +29188,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -29205,10 +29205,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:
@@ -29338,7 +29338,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->patchAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->updateAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->createAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->patchAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->updateAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n* `unified-to->storage->createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->storage->getStorageFile()`: \n  *  `request->fields` **Changed**\n  *  `response.references` **Added**\n* `unified-to->storage->listStorageFiles()`: \n  *  `request` **Changed**\n  *  `response.[]->references` **Added**\n* `unified-to->storage->patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->storage->updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->file->createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->file->getStorageFile()`: \n  *  `request->fields` **Changed**\n  *  `response.references` **Added**\n* `unified-to->file->listStorageFiles()`: \n  *  `request` **Changed**\n  *  `response.[]->references` **Added**\n* `unified-to->file->patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->file->updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->employee->getHrisEmployee()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->listHrisEmployees()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->listAccountingInvoices()`:  `request` **Changed**\n* `unified-to->hris->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->employee->listHrisEmployees()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->getHrisEmployee()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->invoice->listAccountingInvoices()`:  `request` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

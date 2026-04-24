@@ -332,6 +332,22 @@ class HrisEmployee
 
     /**
      *
+     * @var ?float $timeoffDaysTotal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timeoff_days_total')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $timeoffDaysTotal = null;
+
+    /**
+     *
+     * @var ?float $timeoffDaysUsed
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('timeoff_days_used')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $timeoffDaysUsed = null;
+
+    /**
+     *
      * @var ?string $timezone
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
@@ -392,12 +408,14 @@ class HrisEmployee
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisTelephone>  $telephones
      * @param  ?\DateTime  $terminatedAt
      * @param  ?string  $terminationReason
+     * @param  ?float  $timeoffDaysTotal
+     * @param  ?float  $timeoffDaysUsed
      * @param  ?string  $timezone
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -436,6 +454,8 @@ class HrisEmployee
         $this->telephones = $telephones;
         $this->terminatedAt = $terminatedAt;
         $this->terminationReason = $terminationReason;
+        $this->timeoffDaysTotal = $timeoffDaysTotal;
+        $this->timeoffDaysUsed = $timeoffDaysUsed;
         $this->timezone = $timezone;
         $this->title = $title;
         $this->updatedAt = $updatedAt;

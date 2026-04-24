@@ -50,5 +50,7 @@ enum UpdateHrisEmployeeQueryParamFields: string
     case StorageQuotaAvailable = 'storage_quota_available';
     case Relationships = 'relationships';
     case HasMfa = 'has_mfa';
+    case TimeoffDaysTotal = 'timeoff_days_total';
+    case TimeoffDaysUsed = 'timeoff_days_used';
     case Raw = 'raw';
 }

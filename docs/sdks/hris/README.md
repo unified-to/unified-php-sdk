@@ -500,6 +500,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -508,7 +509,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisTimeoffRequest(
-    hrisTimeoff: new Shared\HrisTimeoff(),
+    hrisTimeoff: new Shared\HrisTimeoff(
+        startAt: Utils\Utils::parseDateTime('2024-09-03T22:31:51.863Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -2146,6 +2149,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2154,7 +2158,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisTimeoffRequest(
-    hrisTimeoff: new Shared\HrisTimeoff(),
+    hrisTimeoff: new Shared\HrisTimeoff(
+        startAt: Utils\Utils::parseDateTime('2024-01-26T05:49:44.056Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3193,6 +3199,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3201,7 +3208,9 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisTimeoffRequest(
-    hrisTimeoff: new Shared\HrisTimeoff(),
+    hrisTimeoff: new Shared\HrisTimeoff(
+        startAt: Utils\Utils::parseDateTime('2026-02-26T01:59:20.061Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
