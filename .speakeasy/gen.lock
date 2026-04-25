@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 2e65ff785fedef7765dc3a1ace699f58
+  docChecksum: a690f95a42bb9813e1ec1b14dce3b416
   docVersion: "1.0"
   speakeasyVersion: 1.761.9
   generationVersion: 2.881.4
-  releaseVersion: 1.6.62
-  configChecksum: 308580a79ef44388a9fbacccf382078c
+  releaseVersion: 1.6.63
+  configChecksum: 0d4ad17c8577d14c2b6d8fc7ffbeca01
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: c186e7a0-dc01-4443-8c5d-f93449722313
-  pristine_commit_hash: 505bcdc6e278d30be95f38b3fd98ee3d145c3485
-  pristine_tree_hash: 4ef291541edfd360c00d3f82ceb1ca7ef45279a2
+  generation_id: cc67c0b0-aad3-4ba4-bb6a-d6cb7cedabbe
+  pristine_commit_hash: 7b90c8379f1400e7b0519e6a58e48ab1e6f53a75
+  pristine_tree_hash: 4b7c6bba64f9cc10304c705ac080c6840c9de6b4
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -7849,8 +7849,8 @@ trackedFiles:
     pristine_git_object: 87f15136f0dae7a4e7332ee96f79feb068b6b2bf
   docs/Models/Shared/AdsTargetType.md:
     id: 0e7596313cda
-    last_write_checksum: sha1:107f2f5b8863830452fa4a62ec65ecbbbb081b4d
-    pristine_git_object: 9e1973caf58335ce92a8ff262099f4826c993690
+    last_write_checksum: sha1:be0d6be6ac02274c7f0f5fbb3a97a13b3ae8b5da
+    pristine_git_object: c7b89f79edc25f2f964ccfc7ecfa83f74c2a1929
   docs/Models/Shared/AdvertisingChannelType.md:
     id: e3474d66541e
     last_write_checksum: sha1:acf574f2d7657426ddc3b04633407ffaa8aff842
@@ -19773,8 +19773,8 @@ trackedFiles:
     pristine_git_object: 13285791975dd91a08501f02218a1e0f6587546c
   src/Models/Shared/AdsTargetType.php:
     id: 542d9d37501f
-    last_write_checksum: sha1:6c4d33a74baaa4e29b5ed77c4644a32653c27c09
-    pristine_git_object: b7977f779d201973ad07c070f70bd659a58fbf62
+    last_write_checksum: sha1:1f14ce49bf2ceccb2086a82b62bc7c559edb03f9
+    pristine_git_object: e5246563dfb5291bf18fbf7c9eaa470607fd3746
   src/Models/Shared/AdvertisingChannelType.php:
     id: c677b7a85d44
     last_write_checksum: sha1:5ea4d4d603d640ba97fc619addf402ef120edf35
@@ -22901,8 +22901,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:fbed778fae49239a345444ec8e88202c8879eda9
-    pristine_git_object: 12e28cd149092493b6601fabe39190363dbb2a02
+    last_write_checksum: sha1:b4387990a17925254f8189c746a9ac38f26e87db
+    pristine_git_object: 0feb4162b8171f1394bc666109d57e313981fd7e
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -29338,7 +29338,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->employee->getHrisEmployee()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->listHrisEmployees()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->listAccountingInvoices()`:  `request` **Changed**\n* `unified-to->hris->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->employee->createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->employee->listHrisEmployees()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->employee->patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->employee->updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->getHrisEmployee()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->hris->createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->invoice->listAccountingInvoices()`:  `request` **Changed**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->ads->listAdsTargets()`:  `response.[]->type` **Changed** (Breaking ⚠️)
+  * `unified-to->target->listAdsTargets()`:  `response.[]->type` **Changed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - USAGE.md
