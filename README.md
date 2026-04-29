@@ -238,6 +238,8 @@ if ($response->accountingAccount !== null) {
 * [getAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
 * [getAdsInsertionorder](docs/sdks/ads/README.md#getadsinsertionorder) - Retrieve an insertionorder
 * [getAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
+* [getAdsPromoted](docs/sdks/ads/README.md#getadspromoted) - Retrieve a promoted
+* [getAdsTarget](docs/sdks/ads/README.md#getadstarget) - Retrieve a target
 * [listAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
 * [listAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
 * [listAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
@@ -1369,6 +1371,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
+* [getAdsPromoted](docs/sdks/promoted/README.md#getadspromoted) - Retrieve a promoted
 * [listAdsPromoteds](docs/sdks/promoted/README.md#listadspromoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
@@ -1628,6 +1631,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Target](docs/sdks/target/README.md)
 
+* [getAdsTarget](docs/sdks/target/README.md#getadstarget) - Retrieve a target
 * [listAdsTargets](docs/sdks/target/README.md#listadstargets) - List all targets
 
 ### [Task](docs/sdks/task/README.md)

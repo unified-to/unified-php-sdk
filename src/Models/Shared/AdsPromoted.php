@@ -36,15 +36,27 @@ class AdsPromoted
     public ?string $name = null;
 
     /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
      * @param  string  $id
      * @param  \Unified\Unified_to\Models\Shared\AdsPromotedType  $type
      * @param  ?string  $name
+     * @param  ?array<string, mixed>  $raw
      * @phpstan-pure
      */
-    public function __construct(string $id, AdsPromotedType $type, ?string $name = null)
+    public function __construct(string $id, AdsPromotedType $type, ?string $name = null, ?array $raw = null)
     {
         $this->id = $id;
         $this->type = $type;
         $this->name = $name;
+        $this->raw = $raw;
     }
 }

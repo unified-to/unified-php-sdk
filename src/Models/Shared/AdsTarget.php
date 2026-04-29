@@ -21,10 +21,11 @@ class AdsTarget
 
     /**
      *
-     * @var string $value
+     * @var ?bool $isActive
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    public string $value;
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isActive = null;
 
     /**
      *
@@ -33,6 +34,14 @@ class AdsTarget
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      * $raw
@@ -55,17 +64,19 @@ class AdsTarget
 
     /**
      * @param  string  $id
-     * @param  string  $value
+     * @param  ?bool  $isActive
      * @param  ?string  $name
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\AdsTargetType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, string $value, ?string $name = null, ?array $raw = null, ?AdsTargetType $type = null)
+    public function __construct(string $id, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsTargetType $type = null)
     {
         $this->id = $id;
-        $this->value = $value;
+        $this->isActive = $isActive;
         $this->name = $name;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->type = $type;
     }

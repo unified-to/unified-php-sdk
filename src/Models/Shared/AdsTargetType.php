@@ -11,16 +11,19 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum AdsTargetType: string
 {
-    case Interests = 'INTERESTS';
-    case Behaviors = 'BEHAVIORS';
-    case Locales = 'LOCALES';
-    case Countries = 'COUNTRIES';
-    case Regions = 'REGIONS';
-    case Cities = 'CITIES';
-    case Zips = 'ZIPS';
-    case UsDmas = 'US_DMAS';
-    case Topics = 'TOPICS';
-    case UserLists = 'USER_LISTS';
-    case AgeRanges = 'AGE_RANGES';
-    case Genders = 'GENDERS';
+    case Interest = 'INTEREST';
+    case Behavior = 'BEHAVIOR';
+    case Locale = 'LOCALE';
+    case Country = 'COUNTRY';
+    case Region = 'REGION';
+    case City = 'CITY';
+    case Zip = 'ZIP';
+    case UsDma = 'US_DMA';
+    case Topic = 'TOPIC';
+    case UserList = 'USER_LIST';
+    case AgeRange = 'AGE_RANGE';
+    case Gender = 'GENDER';
+    case Carrier = 'CARRIER';
+    case DeviceModel = 'DEVICE_MODEL';
+    case OsVersion = 'OS_VERSION';
 }

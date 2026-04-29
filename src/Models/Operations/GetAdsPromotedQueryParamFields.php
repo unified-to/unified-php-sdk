@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-enum ListAdsPromotedsQueryParamFields: string
+enum GetAdsPromotedQueryParamFields: string
 {
     case Id = 'id';
     case Name = 'name';

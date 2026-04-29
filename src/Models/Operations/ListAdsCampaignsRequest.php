@@ -20,6 +20,14 @@ class ListAdsCampaignsRequest
     public string $connectionId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<\Unified\Unified_to\Models\Operations\ListAdsCampaignsQueryParamFields> $fields
@@ -80,6 +88,14 @@ class ListAdsCampaignsRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -89,6 +105,7 @@ class ListAdsCampaignsRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsCampaignsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -97,12 +114,14 @@ class ListAdsCampaignsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
@@ -111,6 +130,7 @@ class ListAdsCampaignsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;
     }
 }

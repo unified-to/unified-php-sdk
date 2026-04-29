@@ -9,10 +9,12 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-enum ListAdsPromotedsQueryParamFields: string
+enum GetAdsTargetQueryParamFields: string
 {
     case Id = 'id';
     case Name = 'name';
     case Type = 'type';
+    case IsActive = 'is_active';
+    case ParentId = 'parent_id';
     case Raw = 'raw';
 }

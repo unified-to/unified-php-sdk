@@ -13,7 +13,8 @@ enum ListAdsTargetsQueryParamFields: string
 {
     case Id = 'id';
     case Name = 'name';
-    case Value = 'value';
     case Type = 'type';
+    case IsActive = 'is_active';
+    case ParentId = 'parent_id';
     case Raw = 'raw';
 }
