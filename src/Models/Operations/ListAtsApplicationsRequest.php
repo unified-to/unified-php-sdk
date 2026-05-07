@@ -96,6 +96,14 @@ class ListAtsApplicationsRequest
     public ?string $sort = null;
 
     /**
+     * The status to filter by
+     *
+     * @var ?string $status
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=status')]
+    public ?string $status = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -115,10 +123,11 @@ class ListAtsApplicationsRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $status
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $candidateId = null, ?string $companyId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $candidateId = null, ?string $companyId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->candidateId = $candidateId;
@@ -131,6 +140,7 @@ class ListAtsApplicationsRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->status = $status;
         $this->updatedGte = $updatedGte;
     }
 }

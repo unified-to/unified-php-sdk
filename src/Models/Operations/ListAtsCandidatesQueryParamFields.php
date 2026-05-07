@@ -35,6 +35,7 @@ enum ListAtsCandidatesQueryParamFields: string
     case Experiences = 'experiences';
     case Education = 'education';
     case Skills = 'skills';
+    case JobIds = 'job_ids';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

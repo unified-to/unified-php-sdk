@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 4f04f49fd35700b0721981b97c1208ae
+  docChecksum: 711c26f00585a8f5fdc28cc88a86d795
   docVersion: "1.0"
-  speakeasyVersion: 1.761.9
-  generationVersion: 2.881.4
-  releaseVersion: 1.6.64
-  configChecksum: 551d5e408bdaada0b7ee40589fb48182
+  speakeasyVersion: 1.762.0
+  generationVersion: 2.882.0
+  releaseVersion: 1.6.65
+  configChecksum: 0479c483028deabb86a1a90cd4240d78
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 24eb2dae-864b-4c58-a175-6c2e65a98aeb
-  pristine_commit_hash: a60543eabb8fa27544ea63e190290c34204f8321
-  pristine_tree_hash: c7f83600305260b3435b32b12d31ad7ead4b3807
+  generation_id: 76566d08-296e-4c8c-9514-eb25949b8c4f
+  pristine_commit_hash: 9407cb8243e83a38d8e48d6d0e00efd003e76a52
+  pristine_tree_hash: 2f3ee2490bc4748432c6b41916fb10e6b684036b
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -301,8 +301,8 @@ trackedFiles:
     pristine_git_object: d1540d7385d2adce90c3e8c3eb304ccca49df64a
   docs/Models/Operations/CreateAtsCandidateQueryParamFields.md:
     id: 595bfde2d527
-    last_write_checksum: sha1:bb74058ccc248289b0d8e8da839121abf2cec363
-    pristine_git_object: 6e0bd87cd0a7082b0eb68f507a3d5c16cb930f15
+    last_write_checksum: sha1:0c419e8b30c6c158fe3b2288742b4613ca88dd20
+    pristine_git_object: 9f0ff5df966f4510edcbce40a1839b82b070b45c
   docs/Models/Operations/CreateAtsCandidateRequest.md:
     id: d5d9cefff787
     last_write_checksum: sha1:d5519b37eb459cc7a83c5919ac75fcee7320516e
@@ -1629,8 +1629,8 @@ trackedFiles:
     pristine_git_object: 9adf887fe91531f5dc2a5366f06dcd2672698d26
   docs/Models/Operations/GetAtsCandidateQueryParamFields.md:
     id: c29af60b7486
-    last_write_checksum: sha1:ad05e44bf8168529d00cd376580e13d6b7545ed6
-    pristine_git_object: 94ffc920b19e455442673337afd4a1fd70d04e7e
+    last_write_checksum: sha1:f0b1b329f9bf708826fbc5cf69b3d4e93c16508d
+    pristine_git_object: b1dedffe8b2a610a1b1a7f4d48af9a13073209eb
   docs/Models/Operations/GetAtsCandidateRequest.md:
     id: c326472d96a0
     last_write_checksum: sha1:5e1366015cbd2321e8d56c01246da68348564ac8
@@ -3097,8 +3097,8 @@ trackedFiles:
     pristine_git_object: 0aeae7a46612bb1c3b5fd74667d0d3fc818d6c82
   docs/Models/Operations/ListAtsApplicationsRequest.md:
     id: aebf5db577b7
-    last_write_checksum: sha1:309cf25d30fa9bb5bec00a03c7575a89b7a75237
-    pristine_git_object: 43b806a147aa0587a34eb38fece1d591bfbf05d4
+    last_write_checksum: sha1:276e21b48e1692b711ac7dc4fa0ee5b678b2f80c
+    pristine_git_object: 8b8cbe710022352f03abd54c5eb461b2d092fa6a
   docs/Models/Operations/ListAtsApplicationsResponse.md:
     id: be019c10558d
     last_write_checksum: sha1:aba75a2b4f54087da3eb38254194ca63f64d11fd
@@ -3117,8 +3117,8 @@ trackedFiles:
     pristine_git_object: 2ac8f2d01b3751a2e24a1d486c3d12d2be2622e0
   docs/Models/Operations/ListAtsCandidatesQueryParamFields.md:
     id: bfe6bd2503cf
-    last_write_checksum: sha1:f654c9fed1a7c1c43ac6d1b52aa772b20e8b00cc
-    pristine_git_object: 22c3284ac46d09d541e8f7031c0d0b790e432af1
+    last_write_checksum: sha1:78f1eff95fbf28ea99c7f6c12839e7e5e4c1d198
+    pristine_git_object: efe7bada358dec604b03fc8947dca4a84c506cf2
   docs/Models/Operations/ListAtsCandidatesRequest.md:
     id: 56c7ac07f7eb
     last_write_checksum: sha1:4b3aa55d47dd01099e9d9992e939eb757d6c4fde
@@ -4553,8 +4553,8 @@ trackedFiles:
     pristine_git_object: 18cf8b5e77e34b1882b1332dc2e367aaacabaa36
   docs/Models/Operations/PatchAtsCandidateQueryParamFields.md:
     id: 259f9c1cc727
-    last_write_checksum: sha1:5245f1b2cb407d5498abe694c39bfd380f1dd2c9
-    pristine_git_object: 3460ab6b7423c7c977909a5044d56d8181a88203
+    last_write_checksum: sha1:e18be4a68bac0dfae57b8b375ea9c6cab240474e
+    pristine_git_object: d928bea971fa32cc9e48f093a9003e1b9a87784d
   docs/Models/Operations/PatchAtsCandidateRequest.md:
     id: c9d70e19ed75
     last_write_checksum: sha1:c9d6778459c38bd5cf26de5e3ad0c7e7eb2e4af0
@@ -6605,8 +6605,8 @@ trackedFiles:
     pristine_git_object: e90885a8e751d676a7ef6c2d50ff4dbae08c03a4
   docs/Models/Operations/UpdateAtsCandidateQueryParamFields.md:
     id: 1996b1004043
-    last_write_checksum: sha1:bf748448dca99fad27af6bb1f8767d1837b31195
-    pristine_git_object: 8cd3fb4e8447cc6489529e1fd00083ac930f80b7
+    last_write_checksum: sha1:139bd759fb9f619f63934f0448f29e818e8cfaa5
+    pristine_git_object: 96cb6c36f42021ed9c04b23d030048237e75f90c
   docs/Models/Operations/UpdateAtsCandidateRequest.md:
     id: 871a711c4220
     last_write_checksum: sha1:3d0b7f2341014f188629d2e56ef21af7290da52d
@@ -7969,8 +7969,8 @@ trackedFiles:
     pristine_git_object: 77deb7a29e58b1331f9c125f095371df4be4b4f4
   docs/Models/Shared/AtsCandidate.md:
     id: 85a1baf77fe4
-    last_write_checksum: sha1:ed82cba14deb0e309b2483400a085f1dd06425d9
-    pristine_git_object: 6d81daea80dc8db0c9f89b08890af9d0156e999d
+    last_write_checksum: sha1:5f38ca7fec133e8e9fedbbda5c1be2d06c8d1da5
+    pristine_git_object: f425d496796ee5820f494828db44e6755f396e3d
   docs/Models/Shared/AtsCandidateEducation.md:
     id: e89d177dfed3
     last_write_checksum: sha1:f22e6e5607b1e93cca080dacd1ee75aa1421b0a7
@@ -12249,8 +12249,8 @@ trackedFiles:
     pristine_git_object: 01068ba4051d4c48058806cef283e6ad6c41a4bd
   src/Models/Operations/CreateAtsCandidateQueryParamFields.php:
     id: 28f6fa3738af
-    last_write_checksum: sha1:54f317205a2648d1d6415e102cc0297b38ab00fe
-    pristine_git_object: 872f596130250f1fdc8b91c060349fe1ede9399f
+    last_write_checksum: sha1:4415342c31575597529ce58e8af9ab27de5a1c9a
+    pristine_git_object: 19e3f686e1c1af2ae9ebc198259963273f788d8b
   src/Models/Operations/CreateAtsCandidateRequest.php:
     id: 3bcabfb53c37
     last_write_checksum: sha1:4c172c5865e6dbd080e4af6143f6eaacb2947a97
@@ -13577,8 +13577,8 @@ trackedFiles:
     pristine_git_object: 03dd408b1b811c9d3e8879ac8293195199536071
   src/Models/Operations/GetAtsCandidateQueryParamFields.php:
     id: c196efb4f640
-    last_write_checksum: sha1:c3aaccbc55d4d326e1d2d9dd1788cb548bbf7bc8
-    pristine_git_object: 77239a291bab9454d8d8480518e1265084aeb039
+    last_write_checksum: sha1:a6d1b9a6f8adb47b79ab64d1ba74bbeeb5ef4c8c
+    pristine_git_object: cbcdc9bb5216e79f820aa397fea7bef15c5cdd02
   src/Models/Operations/GetAtsCandidateRequest.php:
     id: d8ee3105267a
     last_write_checksum: sha1:4a66461e3f5e4131177bdc6faed1bce62aec5560
@@ -15045,8 +15045,8 @@ trackedFiles:
     pristine_git_object: e190c2d7591a59187b3a880b32401491a6310521
   src/Models/Operations/ListAtsApplicationsRequest.php:
     id: f6e1a853710e
-    last_write_checksum: sha1:af8b28eae73090408258ca543b0a68824337149a
-    pristine_git_object: 00a3674f0d0d56b60cabbbe85758ba76bdc10200
+    last_write_checksum: sha1:f564b3109eb8f40f7bebe7a6364e149a9b6c5917
+    pristine_git_object: de819dc547a5cd616074b5949bab30b5295dfc70
   src/Models/Operations/ListAtsApplicationsResponse.php:
     id: 0633e90f4e62
     last_write_checksum: sha1:fbd577d6bd141d1f2cb63c005704787582f4fe3e
@@ -15065,8 +15065,8 @@ trackedFiles:
     pristine_git_object: ee529f57d4987768bc60c23da23c46a59f937c0c
   src/Models/Operations/ListAtsCandidatesQueryParamFields.php:
     id: aa9e32e3c3f3
-    last_write_checksum: sha1:ba2d6b08cd9676ee686e2bf3b2aa0fc6660bf965
-    pristine_git_object: 712f1a1d34a3250b69cc5aead96d48dc9c5eaad3
+    last_write_checksum: sha1:c6376dfc5f0d825db16325e5b84bb4c9e0bfbe3d
+    pristine_git_object: 6e83c3652277e29e3a4b4134970f1ad4ccdb8528
   src/Models/Operations/ListAtsCandidatesRequest.php:
     id: 3512140af079
     last_write_checksum: sha1:ce98f185b8e39eca8c12d41f7671046428c690c3
@@ -16501,8 +16501,8 @@ trackedFiles:
     pristine_git_object: d03fdab4034e4ba00f4a3c664891191dc66eeca6
   src/Models/Operations/PatchAtsCandidateQueryParamFields.php:
     id: 929974488b9b
-    last_write_checksum: sha1:9fce205a4c0a1fa508eefa474467b9c49642422b
-    pristine_git_object: 2af843bf02ebe8451fa5d000439a26a6b87b2362
+    last_write_checksum: sha1:f606fc41e76a835ccd525985736a6e93a8bb37fa
+    pristine_git_object: 198eecf976e431e49515fa60b766c2278838de7c
   src/Models/Operations/PatchAtsCandidateRequest.php:
     id: 045ba9dfc90f
     last_write_checksum: sha1:f6996765fb5776327dd701057681499ee836df41
@@ -18553,8 +18553,8 @@ trackedFiles:
     pristine_git_object: eaa39b55632e90200699321566ca1a026f28e8e6
   src/Models/Operations/UpdateAtsCandidateQueryParamFields.php:
     id: 2798e120890e
-    last_write_checksum: sha1:fb153e5f2414f25a44871decdd4d0a6aff9f9798
-    pristine_git_object: 1ebd809077ab0f369a2cc9b2f4123d50c48574ed
+    last_write_checksum: sha1:13bb23f3e6685a88b4d04a2723ca6c456c067ce8
+    pristine_git_object: baa2a9ed74f8872edec6862010bcd3e8b00ff18f
   src/Models/Operations/UpdateAtsCandidateRequest.php:
     id: 4358a2e3ebaa
     last_write_checksum: sha1:69be5ea29e98ceaa90684e2d03337481ce91ece0
@@ -19913,8 +19913,8 @@ trackedFiles:
     pristine_git_object: 85d3f6199247542b389a463d3d08ba03ba16bd00
   src/Models/Shared/AtsCandidate.php:
     id: 8a49d24585a1
-    last_write_checksum: sha1:a371ff6b5cd716958de0553fbde0f3dae99d9647
-    pristine_git_object: d41cda7e5cca546a89cd0d3bc2d00e7da7865eba
+    last_write_checksum: sha1:c6e3dfd06f30670bc30fad4f488f2adf9267518d
+    pristine_git_object: ca327ebebc48abc0c1de68be651d1db8a3c188b1
   src/Models/Shared/AtsCandidateEducation.php:
     id: a810ef4a46c0
     last_write_checksum: sha1:f64c506f5d99010e5bd80de818eba7d661954547
@@ -22949,8 +22949,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:02c9929247b2f5bdf242325b1fba8105c2b3c7d9
-    pristine_git_object: b90ef5828c4430691652b0a87abe05eb5d926aa2
+    last_write_checksum: sha1:2a41ca8f635cdcbbe73593bb2591eb16b1aa63b8
+    pristine_git_object: 6f1557734011d4c1b2efc242ce24ca8438684ea3
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -29404,7 +29404,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->ads->listAdsTargets()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->target->listAdsTargets()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->ad->promoted[]->raw` **Added**\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->ad->promoted[]->raw` **Added**\n* `unified-to->ads->createAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->createAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->createAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->getAdsAd()`:  `response.promoted[]->raw` **Added**\n* `unified-to->ads->getAdsCreative()`:  `response.promoted[]->raw` **Added**\n* `unified-to->ads->getAdsGroup()`:  `response.promoted[]->raw` **Added**\n* `unified-to->ads->listAdsAds()`:  `response.[]->promoted[]->raw` **Added**\n* `unified-to->ads->listAdsCampaigns()`:  `request` **Changed**\n* `unified-to->ads->listAdsCreatives()`:  `response.[]->promoted[]->raw` **Added**\n* `unified-to->ads->listAdsGroups()`: \n  *  `request` **Changed**\n  *  `response.[]->promoted[]->raw` **Added**\n* `unified-to->ads->listAdsPromoteds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->raw` **Added**\n* `unified-to->ads->updateAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->promoted->getAdsPromoted()`: **Added**\n* `unified-to->ads->patchAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->patchAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->target->getAdsTarget()`: **Added**\n* `unified-to->ads->getAdsPromoted()`: **Added**\n* `unified-to->ad->patchAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ad->createAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ad->getAdsAd()`:  `response.promoted[]->raw` **Added**\n* `unified-to->ad->listAdsAds()`:  `response.[]->promoted[]->raw` **Added**\n* `unified-to->ads->updateAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->ad->updateAdsAd()`: \n  *  `request->adsAd->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->campaign->listAdsCampaigns()`:  `request` **Changed**\n* `unified-to->creative->createAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->creative->getAdsCreative()`:  `response.promoted[]->raw` **Added**\n* `unified-to->creative->listAdsCreatives()`:  `response.[]->promoted[]->raw` **Added**\n* `unified-to->creative->patchAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->creative->updateAdsCreative()`: \n  *  `request->adsCreative->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->group->createAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->group->getAdsGroup()`:  `response.promoted[]->raw` **Added**\n* `unified-to->group->listAdsGroups()`: \n  *  `request` **Changed**\n  *  `response.[]->promoted[]->raw` **Added**\n* `unified-to->group->patchAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->group->updateAdsGroup()`: \n  *  `request->adsGroup->promoted[]->raw` **Added**\n  *  `response.promoted[]->raw` **Added**\n* `unified-to->promoted->listAdsPromoteds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->raw` **Added**\n* `unified-to->ads->getAdsTarget()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->getAtsCandidate()`: \n  *  `request->fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->listAtsApplications()`: \n  *  `request->status` **Added**\n* `unified-to->ats->listAtsCandidates()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->jobIds` **Added**\n* `unified-to->ats->patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->application->listAtsApplications()`: \n  *  `request->status` **Added**\n* `unified-to->candidate->createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->getAtsCandidate()`: \n  *  `request->fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->listAtsCandidates()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->jobIds` **Added**\n* `unified-to->candidate->patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
