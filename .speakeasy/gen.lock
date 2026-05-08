@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 711c26f00585a8f5fdc28cc88a86d795
+  docChecksum: b92ae9b53e2fd3c68f3300b3a8bec89d
   docVersion: "1.0"
   speakeasyVersion: 1.762.0
   generationVersion: 2.882.0
-  releaseVersion: 1.6.65
-  configChecksum: 0479c483028deabb86a1a90cd4240d78
+  releaseVersion: 1.6.66
+  configChecksum: 704a251b8bd25c5c02801aa8858b7110
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 76566d08-296e-4c8c-9514-eb25949b8c4f
-  pristine_commit_hash: 9407cb8243e83a38d8e48d6d0e00efd003e76a52
-  pristine_tree_hash: 2f3ee2490bc4748432c6b41916fb10e6b684036b
+  generation_id: 5d25d3a8-1cc5-4c82-bd1b-71acc47aac2c
+  pristine_commit_hash: 2c563b1aab6b3b133ebde4c154987c3b3bc125be
+  pristine_tree_hash: 08700d842d33e0026aa7be27641a1c6906ee46ba
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -721,8 +721,8 @@ trackedFiles:
     pristine_git_object: 0ffabeb4f1e56a07980fc33105c75026ee24da7f
   docs/Models/Operations/CreateHrisTimeoffQueryParamFields.md:
     id: fe5ce84c8dad
-    last_write_checksum: sha1:62dd4100e662323c3fb64a689b4086bab3eb4bbe
-    pristine_git_object: 82f855c2d38c530c5809f6560b7b0ab387cfba41
+    last_write_checksum: sha1:4fd4339d0970839ae8cae8c98fc729d42b42c31e
+    pristine_git_object: f0ad9c9158a1d3ec419ed3ba9f87f24c24d18d1e
   docs/Models/Operations/CreateHrisTimeoffRequest.md:
     id: 6c35d301eee5
     last_write_checksum: sha1:0337722e814757b02297b24e058d855af10804eb
@@ -2073,8 +2073,8 @@ trackedFiles:
     pristine_git_object: 1b790c6a73525a02aed305c4bee05d0e3696ff53
   docs/Models/Operations/GetHrisTimeoffQueryParamFields.md:
     id: 852bda06ed7b
-    last_write_checksum: sha1:f6090fd299e195c1af53b7c6515d1112fd0948f8
-    pristine_git_object: 9931ad2ed36e117e02755e58978ec530989ae987
+    last_write_checksum: sha1:771a09565a42c5f081a3a1cf8b33f1bad2c16b53
+    pristine_git_object: 7d75318f55808f62f33f64b3e893d61063bafde7
   docs/Models/Operations/GetHrisTimeoffRequest.md:
     id: 4f89786e0c46
     last_write_checksum: sha1:d772f9bdee26d35bc6d87acd613f51670290d23f
@@ -3601,8 +3601,8 @@ trackedFiles:
     pristine_git_object: f4bd8a3188e587a31fa747f2f432a18f1ff68fe5
   docs/Models/Operations/ListHrisTimeoffsQueryParamFields.md:
     id: 99a1de3fa0b8
-    last_write_checksum: sha1:81d587a0ced64f9d43c0c901400b6aad43300394
-    pristine_git_object: 9f000b7d4b9c3ecf400dcb5cfce0761bbea23a5d
+    last_write_checksum: sha1:3c79f13c8a20f7cee3fc275ddc74ccbc5bd4aff1
+    pristine_git_object: 1621031bba20256d42f7387f3b517066a10ade1a
   docs/Models/Operations/ListHrisTimeoffsRequest.md:
     id: 24020e46909c
     last_write_checksum: sha1:060a36afe3f4090047b2e1113e47f963483b65f1
@@ -4949,8 +4949,8 @@ trackedFiles:
     pristine_git_object: ccfbd09a6c63c47a15dfc2cfe7e2724c90bd3b12
   docs/Models/Operations/PatchHrisTimeoffQueryParamFields.md:
     id: e2a3ec1e6e27
-    last_write_checksum: sha1:e4686981f1e68fdeb94d1d128b0c8bc01209c543
-    pristine_git_object: 6a9d394d2efa3e0ee063d49024248df4ba28441e
+    last_write_checksum: sha1:52bb7c2b5433b56c8156f8e77cffb87a68535b4f
+    pristine_git_object: 7f8726aed90ff15cfc0c321078f6fd46a558afab
   docs/Models/Operations/PatchHrisTimeoffRequest.md:
     id: 3c313d5cf9c8
     last_write_checksum: sha1:960f78e8dba3e67d159daf58a8812746b4f56afb
@@ -7001,8 +7001,8 @@ trackedFiles:
     pristine_git_object: ab40f8fa2ec07fac9738446f8f6d1f8272956009
   docs/Models/Operations/UpdateHrisTimeoffQueryParamFields.md:
     id: ea3088cd4c77
-    last_write_checksum: sha1:1cc69ed7b18ce87efa15fcc4e27dd7ccd309f086
-    pristine_git_object: 1e148c7823950d60e22493a5481bab337fe7c065
+    last_write_checksum: sha1:df75caf0b78f5fafe9868ee957e402470104c6ac
+    pristine_git_object: 6e189a045fdfd720403e96f70f652d4805f5ae96
   docs/Models/Operations/UpdateHrisTimeoffRequest.md:
     id: 242d7714af18
     last_write_checksum: sha1:3335141bbeff0b09cdf6b35813b3d5486a60a4ee
@@ -8725,12 +8725,16 @@ trackedFiles:
     pristine_git_object: 7c191c14b25ae14df483b040b01ced533d26f469
   docs/Models/Shared/HrisTimeoff.md:
     id: f745aefea980
-    last_write_checksum: sha1:cbf3b5ffb20d05293f57940f55f477b48077d920
-    pristine_git_object: fb9aacf00b97402bc76f20f7c89e97f97af8ac8b
+    last_write_checksum: sha1:00ac50decab86f0cda2d6731265e44786f88798e
+    pristine_git_object: e2c8e3c05eebfb9711599674a8bc7ae7d12edc2b
   docs/Models/Shared/HrisTimeoffStatus.md:
     id: 0a228add8c1b
     last_write_checksum: sha1:e7c0dd1bfceb21cc9dc0d663aaca44fae4831d17
     pristine_git_object: 751835081010e1ab184accfdbd370790a9a1e981
+  docs/Models/Shared/HrisTimeoffType.md:
+    id: 77dc098288b1
+    last_write_checksum: sha1:23faf65df6a7b5d31891efbd6be4ee0e67e88a91
+    pristine_git_object: 6ddb7e3c86d620aa12a64c2f227ad3547519ce5a
   docs/Models/Shared/HrisTimeshift.md:
     id: a17cfc8c3cd3
     last_write_checksum: sha1:dc0c40d9194121b99e982161a80f4eda47cb8c46
@@ -12669,8 +12673,8 @@ trackedFiles:
     pristine_git_object: 654de7b34e79a7ccf697ef4f042db2b0b652d64a
   src/Models/Operations/CreateHrisTimeoffQueryParamFields.php:
     id: f7101cfba7a1
-    last_write_checksum: sha1:919d588533abfd7d9b3b03d96eaad57b650457d0
-    pristine_git_object: 59f8a56322b5365e7e38bae6d434f23f500be1c2
+    last_write_checksum: sha1:b6e6c255f513c401e20ac6a73c6baf15b6294fab
+    pristine_git_object: 0f6650d0e9d48fae4d1e2fa59b1d09b64596f3d1
   src/Models/Operations/CreateHrisTimeoffRequest.php:
     id: e7f9cfd0996d
     last_write_checksum: sha1:a6f3911504474f94ddb44199b654aba133cf4333
@@ -14021,8 +14025,8 @@ trackedFiles:
     pristine_git_object: 29d7133684b3fc7be7291a086681c035ac83852e
   src/Models/Operations/GetHrisTimeoffQueryParamFields.php:
     id: 9076cbadf040
-    last_write_checksum: sha1:1c586273f17d9bcfebd1e4b7b076a5e06bd22c5a
-    pristine_git_object: efd4e817cae9208a1f1b1990756737f191c0bd93
+    last_write_checksum: sha1:6b7d20a89335c59eeb84374d11a2afe50c6a3791
+    pristine_git_object: a33610fee8a1b016d79f217547efbc93eb223610
   src/Models/Operations/GetHrisTimeoffRequest.php:
     id: 134ba4c3baca
     last_write_checksum: sha1:ef653c628ca34644bc9ea2daf34a870e43baa32f
@@ -15549,8 +15553,8 @@ trackedFiles:
     pristine_git_object: 28c6a5c50c2d9673471ae9c16a9d8a43db4c0480
   src/Models/Operations/ListHrisTimeoffsQueryParamFields.php:
     id: 16e888f50eb2
-    last_write_checksum: sha1:bf3367201da95c80ce3d8df94d6e095b079772ae
-    pristine_git_object: fc2973af7af59bdcab19937084973194eec485da
+    last_write_checksum: sha1:a7e6aba23316f3960b32fa32f493e5f935fe660c
+    pristine_git_object: a4e1f065f9ab23a16bbb000dbe7daa18a29db521
   src/Models/Operations/ListHrisTimeoffsRequest.php:
     id: 54f28812df57
     last_write_checksum: sha1:d1767525742976426510f37b07c55e008b466919
@@ -16897,8 +16901,8 @@ trackedFiles:
     pristine_git_object: c9d008bb1719ad5a6b7a18431628522373661259
   src/Models/Operations/PatchHrisTimeoffQueryParamFields.php:
     id: 5ef1d904f21b
-    last_write_checksum: sha1:194de8c3d2afb55766e0eb0f3e9eee03f467db2e
-    pristine_git_object: 7b29fb46359857188e4e4aaa35ff6292b78b0775
+    last_write_checksum: sha1:2517b76b29297fb6a50802a945db2b865a98691d
+    pristine_git_object: 73d0c5186b849690023f5444613b86c7714339ad
   src/Models/Operations/PatchHrisTimeoffRequest.php:
     id: a773f38fb62e
     last_write_checksum: sha1:9fbb171ddea3d8b5939b4d012309811c6bd733e7
@@ -18949,8 +18953,8 @@ trackedFiles:
     pristine_git_object: 1fdf19f1153421869a3433c8663f3ebea48c45cd
   src/Models/Operations/UpdateHrisTimeoffQueryParamFields.php:
     id: 1575769a5708
-    last_write_checksum: sha1:430d258658c45a6168c976ddbe76b007846f1da6
-    pristine_git_object: e6cd98ddef4c0b09b59966b56ae3c9a59740090d
+    last_write_checksum: sha1:d3692211b499a2aa4fdc3cbba8d5bfce3a3a5229
+    pristine_git_object: 82d015c181493f65ab5efd05d2660655e2e3e967
   src/Models/Operations/UpdateHrisTimeoffRequest.php:
     id: a337cda03649
     last_write_checksum: sha1:3e0da369b188240873a1234f40cbc11f2846dbbf
@@ -20609,12 +20613,16 @@ trackedFiles:
     pristine_git_object: a7b0292af4cfa8127f3a19a1375b2f8fae258cba
   src/Models/Shared/HrisTimeoff.php:
     id: bee96ea48707
-    last_write_checksum: sha1:db9ceca3df6cdd630392fb004361c042e30b7f72
-    pristine_git_object: a38cdfe1fae247221e5e4a9bb21b7ae5dff9b905
+    last_write_checksum: sha1:ac291842abeb4d358fdc49be16bc2f72727df72d
+    pristine_git_object: 1b766a8fdd431184758d2fd4ab8e65f48d71ef03
   src/Models/Shared/HrisTimeoffStatus.php:
     id: eccecde71702
     last_write_checksum: sha1:7fb361e7ea5b782a1591414a02574f4bad0a1edd
     pristine_git_object: 3865e56df363458f27da997900384c9c4d38d103
+  src/Models/Shared/HrisTimeoffType.php:
+    id: 6ef5510f6d5e
+    last_write_checksum: sha1:5dc82d19fa424df445e7dccfe2a64851547ad3fd
+    pristine_git_object: ba32f22340a16f2f2c96abc55e0f785904affba3
   src/Models/Shared/HrisTimeshift.php:
     id: 8dcdd6a18e90
     last_write_checksum: sha1:5ee5907dd55336a965d8c572029f415c6557d51b
@@ -22949,8 +22957,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:2a41ca8f635cdcbbe73593bb2591eb16b1aa63b8
-    pristine_git_object: 6f1557734011d4c1b2efc242ce24ca8438684ea3
+    last_write_checksum: sha1:cb5e30c0ca49fa382b0c98bbad1b0c792973a724
+    pristine_git_object: 3672034858c814afeefe1ef995f6daa0190b6733
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -29404,7 +29412,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->getAtsCandidate()`: \n  *  `request->fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->listAtsApplications()`: \n  *  `request->status` **Added**\n* `unified-to->ats->listAtsCandidates()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->jobIds` **Added**\n* `unified-to->ats->patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->ats->updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->application->listAtsApplications()`: \n  *  `request->status` **Added**\n* `unified-to->candidate->createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->getAtsCandidate()`: \n  *  `request->fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->listAtsCandidates()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->jobIds` **Added**\n* `unified-to->candidate->patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to->candidate->updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -111,6 +111,15 @@ class HrisTimeoff
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\HrisTimeoffType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisTimeoffType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?HrisTimeoffType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -138,11 +147,12 @@ class HrisTimeoff
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reason
      * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoffStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?HrisTimeoffStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->startAt = $startAt;
         $this->approvedAt = $approvedAt;
@@ -156,6 +166,7 @@ class HrisTimeoff
         $this->raw = $raw;
         $this->reason = $reason;
         $this->status = $status;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

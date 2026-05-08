@@ -23,6 +23,7 @@ enum ListHrisTimeoffsQueryParamFields: string
     case ApproverUserId = 'approver_user_id';
     case ApprovedAt = 'approved_at';
     case Comments = 'comments';
-    case Raw = 'raw';
     case Reason = 'reason';
+    case Type = 'type';
+    case Raw = 'raw';
 }
