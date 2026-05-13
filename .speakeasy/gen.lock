@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: b92ae9b53e2fd3c68f3300b3a8bec89d
+  docChecksum: 1a8d1590728cad21bdabd6d8e81d61e1
   docVersion: "1.0"
   speakeasyVersion: 1.762.0
   generationVersion: 2.882.0
-  releaseVersion: 1.6.66
-  configChecksum: 704a251b8bd25c5c02801aa8858b7110
+  releaseVersion: 1.6.67
+  configChecksum: ab5b885cd6bcd6e1e3f3d5674f5d66d0
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 5d25d3a8-1cc5-4c82-bd1b-71acc47aac2c
-  pristine_commit_hash: 2c563b1aab6b3b133ebde4c154987c3b3bc125be
-  pristine_tree_hash: 08700d842d33e0026aa7be27641a1c6906ee46ba
+  generation_id: 6839a0c0-072d-4a2f-923e-4dbebcaa6a3f
+  pristine_commit_hash: 54bb472ed0a25a9fb4258efb99573502f5636acf
+  pristine_tree_hash: 3209b6659b95bde351d17a2c8b5bf2fa49a1e3d0
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -3145,8 +3145,8 @@ trackedFiles:
     pristine_git_object: 1c2044a98201f0421187d993adce81dbf9bd8821
   docs/Models/Operations/ListAtsDocumentsRequest.md:
     id: 56b35616b15a
-    last_write_checksum: sha1:c5847fd736179bb79f92d0ed97beff2a8472380e
-    pristine_git_object: 896afb5152a2061a41ddcfdd0fd49bfaec8608f0
+    last_write_checksum: sha1:7703a497dc899630247a88831f2d5fc6eb56d374
+    pristine_git_object: 11fccdc18f91f977c7dc8b3e8d732d2cbf59392f
   docs/Models/Operations/ListAtsDocumentsResponse.md:
     id: e549d1fd6c9b
     last_write_checksum: sha1:b79d9dabcaa1319abb6589642d586f5c9b56e954
@@ -15097,8 +15097,8 @@ trackedFiles:
     pristine_git_object: d390b59ebead2d8abd725459e87180053a2120b2
   src/Models/Operations/ListAtsDocumentsRequest.php:
     id: 019785e5763b
-    last_write_checksum: sha1:2c8008f3ad07f69c258f5ac8bdcf7d59a4b4b6f3
-    pristine_git_object: a550aae2f96489a8c0f164c9fb2743aba3021a62
+    last_write_checksum: sha1:3e9a1da196aa545a772a0c4ed3f762bd561f950d
+    pristine_git_object: cfe8c7cae814024289e6ad04c09576e5315f5ecc
   src/Models/Operations/ListAtsDocumentsResponse.php:
     id: 4c858c5643b6
     last_write_checksum: sha1:d8eed8fc79179c169341612e28b5bec8437b40b5
@@ -22957,8 +22957,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:cb5e30c0ca49fa382b0c98bbad1b0c792973a724
-    pristine_git_object: 3672034858c814afeefe1ef995f6daa0190b6733
+    last_write_checksum: sha1:c66e838fd07cff7383c2a4e8bdad8db9a34f1a56
+    pristine_git_object: 97f3b671c5191e96e5d6be1ef0ee1ed1ad8f50e1
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -29412,7 +29412,6 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->type` **Added**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
