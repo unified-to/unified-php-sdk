@@ -29,5 +29,6 @@ enum GetAtsActivityQueryParamFields: string
     case Cc = 'cc';
     case Bcc = 'bcc';
     case SubType = 'sub_type';
+    case CompanyId = 'company_id';
     case Raw = 'raw';
 }

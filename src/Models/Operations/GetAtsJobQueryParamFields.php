@@ -37,5 +37,6 @@ enum GetAtsJobQueryParamFields: string
     case MinimumDegree = 'minimum_degree';
     case Skills = 'skills';
     case Metadata = 'metadata';
+    case UserId = 'user_id';
     case Raw = 'raw';
 }

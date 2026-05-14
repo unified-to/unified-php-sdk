@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListKmsPagesRequest
+class ListShippingTrackingsRequest
 {
     /**
      * ID of the connection
@@ -22,7 +22,7 @@ class ListKmsPagesRequest
     /**
      * Fields to return
      *
-     * @var ?array<\Unified\Unified_to\Models\Operations\ListKmsPagesQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListShippingTrackingsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -49,14 +49,6 @@ class ListKmsPagesRequest
     public ?string $order = null;
 
     /**
-     * The parent ID to filter by
-     *
-     * @var ?string $parentId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
-    public ?string $parentId = null;
-
-    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -80,14 +72,6 @@ class ListKmsPagesRequest
     public ?string $sort = null;
 
     /**
-     * The space ID to filter by (reference to KmsSpace)
-     *
-     * @var ?string $spaceId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=space_id')]
-    public ?string $spaceId = null;
-
-    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -96,41 +80,27 @@ class ListKmsPagesRequest
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     *
-     * @var ?string $userId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
-    public ?string $userId = null;
-
-    /**
      * @param  string  $connectionId
-     * @param  ?array<\Unified\Unified_to\Models\Operations\ListKmsPagesQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListShippingTrackingsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
-     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?string  $spaceId
      * @param  ?string  $updatedGte
-     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $spaceId = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
-        $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
-        $this->spaceId = $spaceId;
         $this->updatedGte = $updatedGte;
-        $this->userId = $userId;
     }
 }

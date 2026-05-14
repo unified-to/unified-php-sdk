@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 1a8d1590728cad21bdabd6d8e81d61e1
+  docChecksum: d0c51f91b1e66262f9489b66ca8d3b1f
   docVersion: "1.0"
-  speakeasyVersion: 1.762.0
-  generationVersion: 2.882.0
-  releaseVersion: 1.6.67
-  configChecksum: ab5b885cd6bcd6e1e3f3d5674f5d66d0
+  speakeasyVersion: 1.763.0
+  generationVersion: 2.884.0
+  releaseVersion: 1.6.68
+  configChecksum: 16dfb8e12301bda83ca15ef2e548461a
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 6839a0c0-072d-4a2f-923e-4dbebcaa6a3f
-  pristine_commit_hash: 54bb472ed0a25a9fb4258efb99573502f5636acf
-  pristine_tree_hash: 3209b6659b95bde351d17a2c8b5bf2fa49a1e3d0
+  generation_id: 07b6a5ad-f0d4-4e4d-a9bf-acfd279fb37c
+  pristine_commit_hash: 404a3b784b189612ed1981ad57d5196815140485
+  pristine_tree_hash: 48a535adcd899d75ec2369fc28b92f8842fb267a
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -277,8 +277,8 @@ trackedFiles:
     pristine_git_object: ac20365616ede1069bd3fa26e7f9be77ca781e0a
   docs/Models/Operations/CreateAtsActivityQueryParamFields.md:
     id: 2a9a7f7f5a32
-    last_write_checksum: sha1:e92f36def45c30b65761dc2fdb1123dd47947ea0
-    pristine_git_object: 778d8bc566c736b0bb041b0571ac4ee91729e9aa
+    last_write_checksum: sha1:31857a6e7ff2f8694a83d9dfe5dd54f7567df1c0
+    pristine_git_object: bd026b2622ab7d84abb6b79a1fd892d89c6d2ca2
   docs/Models/Operations/CreateAtsActivityRequest.md:
     id: 8b1106817d2a
     last_write_checksum: sha1:29395011dc9a9cc05022731e3fe31e0157cabf6b
@@ -349,8 +349,8 @@ trackedFiles:
     pristine_git_object: 254afe6fc1aa062258bad64927512a6b2614aa10
   docs/Models/Operations/CreateAtsJobQueryParamFields.md:
     id: e963cec6566e
-    last_write_checksum: sha1:dea0da537d595b0349df62fd3fe0709522787cd2
-    pristine_git_object: ee8014b7cbeafd36c96e7ce36de69585fd79f5c7
+    last_write_checksum: sha1:9978157fc9515f3d53a4afb24fdef6212c14a91b
+    pristine_git_object: 9f7b7f11578af547c5a29f0f57b9bda45a7c6bad
   docs/Models/Operations/CreateAtsJobRequest.md:
     id: 5a48edd26833
     last_write_checksum: sha1:f56997229c65fae0563793435742379363d400ba
@@ -1605,8 +1605,8 @@ trackedFiles:
     pristine_git_object: f404eb782139260acd14dd7baf91c9f7295e6ca9
   docs/Models/Operations/GetAtsActivityQueryParamFields.md:
     id: 26142b8ac0a8
-    last_write_checksum: sha1:827a5657caece4813a73722b7cd38f233a619a55
-    pristine_git_object: c400ab074e258b28fecac0fbb6439598dbbb4f40
+    last_write_checksum: sha1:88c0b9e520b04c1ec893e79b2bf76a87b9a876ec
+    pristine_git_object: 796e9bbea56d558a468add2f634db703fbef5ad9
   docs/Models/Operations/GetAtsActivityRequest.md:
     id: cd234d565bee
     last_write_checksum: sha1:f682dab9d78b2acc9216476e3f0e7a07df5663d1
@@ -1677,8 +1677,8 @@ trackedFiles:
     pristine_git_object: f9bb526556be70e1d1c5b10bfa0821c557ca81de
   docs/Models/Operations/GetAtsJobQueryParamFields.md:
     id: fafe9fec9490
-    last_write_checksum: sha1:f21f67b8265ddd4df45a4588bb7d7129d0d1ad49
-    pristine_git_object: 15a94889dcb681caf57e9bff6c7d46b8d62f9588
+    last_write_checksum: sha1:f316815cf914363030fde26253d8972ba55d8132
+    pristine_git_object: 22d773f83436c8fc535638b1c863c3bf1f96cb9c
   docs/Models/Operations/GetAtsJobRequest.md:
     id: 5d8738e9e62b
     last_write_checksum: sha1:6ca4e45c34ea557b7be8d970bbc1aa56998a6557
@@ -3081,8 +3081,8 @@ trackedFiles:
     pristine_git_object: 55510a6396a6e3d8f0663d5df55f68d09d421ab9
   docs/Models/Operations/ListAtsActivitiesQueryParamFields.md:
     id: ffe0924f3755
-    last_write_checksum: sha1:56a9017182812aa6f8d6c8118971c37db44af06c
-    pristine_git_object: 8ecdd8102449a5d3fbe154955736f1ee0584b60c
+    last_write_checksum: sha1:56cd0c349ba7a63e72fffd578cc7d0282d81ca54
+    pristine_git_object: c4da71e6291f2cb973fc9ac16cb6ef653b9a74cd
   docs/Models/Operations/ListAtsActivitiesRequest.md:
     id: 188507ab5db6
     last_write_checksum: sha1:02a3f251b3131460e65163744340ae82df70ead8
@@ -3165,8 +3165,8 @@ trackedFiles:
     pristine_git_object: e066e257d7456f26b17f770304da02c5f7289c3f
   docs/Models/Operations/ListAtsJobsQueryParamFields.md:
     id: 6cd15f68c3ea
-    last_write_checksum: sha1:3a76d7be31607af28c8e23fa3c93c4fffcc722df
-    pristine_git_object: 9a415de7ca5a4aea2c6ade90debffad4e79e91d5
+    last_write_checksum: sha1:3806ffa262818ce7fc8cc53b843c66efb75e200d
+    pristine_git_object: 7ec1d708a8668ae8db69fdd8e91d6c4000685739
   docs/Models/Operations/ListAtsJobsRequest.md:
     id: 801f68af9a79
     last_write_checksum: sha1:b68c930165372f9e540fc0c9c619da26d9c774d5
@@ -3641,8 +3641,8 @@ trackedFiles:
     pristine_git_object: 8bcfe2ba1775916632240d26cd848caca69e78f8
   docs/Models/Operations/ListKmsPagesRequest.md:
     id: bff9dd356d54
-    last_write_checksum: sha1:8c11381c6d372f48f6fc7e675804241b8c15af54
-    pristine_git_object: f7f755c9988c609329402e3eddd45eac5f1e48df
+    last_write_checksum: sha1:b7d9a841befc7a98138651daab0c7d9ed486b0d7
+    pristine_git_object: aec5154c05592fb3fc08f15cb91a911112e6bc16
   docs/Models/Operations/ListKmsPagesResponse.md:
     id: 18492f5fcdc6
     last_write_checksum: sha1:c4ed907835b2d79e833570636c87430f5a4bb251
@@ -4007,6 +4007,18 @@ trackedFiles:
     id: dc2cebe76c6a
     last_write_checksum: sha1:8310517ae8d91e1a68e5f251a5febc08de37f328
     pristine_git_object: 8159acb2358f12d9a799427ffe6d1af0c620ac70
+  docs/Models/Operations/ListShippingTrackingsQueryParamFields.md:
+    id: dfd0e4eef710
+    last_write_checksum: sha1:a79505e1f5316e880ec263da4fe3915215fde8d0
+    pristine_git_object: d16c72b365aa111f38b566417922183a37e3e527
+  docs/Models/Operations/ListShippingTrackingsRequest.md:
+    id: f4e92c89a55c
+    last_write_checksum: sha1:10d1574c5d9662a201404990f74fd37c067acf69
+    pristine_git_object: e5b190dfa207a2cfa9319cbc20bdfd3bba922c5f
+  docs/Models/Operations/ListShippingTrackingsResponse.md:
+    id: 0cb4f4f58dac
+    last_write_checksum: sha1:200f72cf020fc77ffb60a4009483d22d5529f7fc
+    pristine_git_object: d3c55f252491ceee31fee3f076f77a66ec30ddae
   docs/Models/Operations/ListSigningDocumentsQueryParamFields.md:
     id: f89a9c45830e
     last_write_checksum: sha1:7e22c2f5a299a8f0ddbb4254417689ae001355b3
@@ -4529,8 +4541,8 @@ trackedFiles:
     pristine_git_object: 89b49967c0d8b3ce2d32ae094703aac265bf5279
   docs/Models/Operations/PatchAtsActivityQueryParamFields.md:
     id: 139caf3f895a
-    last_write_checksum: sha1:b1f931612196e7965eb0fe4e5b98cbb01f4c445b
-    pristine_git_object: ed7d3c54cec7a6363f20b40fcdf1398c5a478923
+    last_write_checksum: sha1:3054b9272530fe854175f653dfdc28ae15ab2b17
+    pristine_git_object: bf04497f639f591e3b798225cd5b0f21aa15926b
   docs/Models/Operations/PatchAtsActivityRequest.md:
     id: 8f5f661d8537
     last_write_checksum: sha1:d0a0eb74a306501f038bdb74bc11ed3aef226106
@@ -4601,8 +4613,8 @@ trackedFiles:
     pristine_git_object: a5e9065196ab05886c7c7ff51cdd44f0dbc63b68
   docs/Models/Operations/PatchAtsJobQueryParamFields.md:
     id: ece53f9b8950
-    last_write_checksum: sha1:80524833c3253157f889113619645da214900174
-    pristine_git_object: b61e772c1af826b058d7eda53efca95a1722ea7c
+    last_write_checksum: sha1:56a6c9c1d8321c8be4b1b4fd1bd6d93b4e862e7c
+    pristine_git_object: 34e40c5976aa8850fd4870be54c6ca0b837d9377
   docs/Models/Operations/PatchAtsJobRequest.md:
     id: b72676d16617
     last_write_checksum: sha1:98046f86a797ed13e2d38fd053a5d584b145598f
@@ -6581,8 +6593,8 @@ trackedFiles:
     pristine_git_object: 7b979381c3bcf4f1a6cb5b1c00754201c3534bc8
   docs/Models/Operations/UpdateAtsActivityQueryParamFields.md:
     id: 19d3a57a24b3
-    last_write_checksum: sha1:02ebbc639860ff3cd39d6ddf4e5ba9fce0c55b0a
-    pristine_git_object: 7751505511006fb112efd8672199ea84ed0dda9d
+    last_write_checksum: sha1:3f69c716a459dce7b6fe643b0f553016143a7146
+    pristine_git_object: e0c65692d68adc0cbb6dda6e7c2e1dc6e866703a
   docs/Models/Operations/UpdateAtsActivityRequest.md:
     id: 6e6ce06ac526
     last_write_checksum: sha1:588946565e45078bb0a445b7db1a374210874146
@@ -6653,8 +6665,8 @@ trackedFiles:
     pristine_git_object: ffe225329ca2d245e7164b0337d92f9a9640f2a6
   docs/Models/Operations/UpdateAtsJobQueryParamFields.md:
     id: d3600d6d1ed8
-    last_write_checksum: sha1:4824bc706efc8edb446e87205fbd5e56d6e29f16
-    pristine_git_object: 4bea67173e9f2eb0e4eb7fc346a50b36dc35b90d
+    last_write_checksum: sha1:defef008387594156337310ecea42a6cacb125d2
+    pristine_git_object: 2f26fbae9000b1953ad278246f561281af304b53
   docs/Models/Operations/UpdateAtsJobRequest.md:
     id: 9e128595d9e7
     last_write_checksum: sha1:6ccaf6d3fd090d67490e28e6df30febaeb89f0e9
@@ -7945,8 +7957,8 @@ trackedFiles:
     pristine_git_object: a8e0017a8a8d700de8b2c1faaaa9703b4bcac998
   docs/Models/Shared/AtsActivity.md:
     id: da8299995b10
-    last_write_checksum: sha1:c34030a7a1a955e6b32c98f75699080592f3a615
-    pristine_git_object: ea94e8e8867ba0de3f10b96da5c8db7c491c017f
+    last_write_checksum: sha1:78c3e4130d5628586092a8c57c470542eca85090
+    pristine_git_object: 55b96b733dbab5726d15d0054331b784279ef9f4
   docs/Models/Shared/AtsActivityType.md:
     id: da0ee14eb04e
     last_write_checksum: sha1:03c79455ad0a705cee5656e540c6d15df8f73da8
@@ -8025,8 +8037,8 @@ trackedFiles:
     pristine_git_object: a3fbd20e2182232d483d7294411db68cf02e15f7
   docs/Models/Shared/AtsJob.md:
     id: 141d98d89ba4
-    last_write_checksum: sha1:918e4802adf6ea913d3a48bcf0eee66640efc46f
-    pristine_git_object: aed30baeb08e57e0d0560e95d4c27b5fe7091b2c
+    last_write_checksum: sha1:7ba62f789fa48e8fb99d0388ee96cace13824804
+    pristine_git_object: f2bb5fbafaa045c4f05e2d2ce19b1a3acab2822c
   docs/Models/Shared/AtsJobOpening.md:
     id: 8070be131d03
     last_write_checksum: sha1:626c106920f76d7ea7fb44698e422b96ef25b059
@@ -8725,8 +8737,8 @@ trackedFiles:
     pristine_git_object: 7c191c14b25ae14df483b040b01ced533d26f469
   docs/Models/Shared/HrisTimeoff.md:
     id: f745aefea980
-    last_write_checksum: sha1:00ac50decab86f0cda2d6731265e44786f88798e
-    pristine_git_object: e2c8e3c05eebfb9711599674a8bc7ae7d12edc2b
+    last_write_checksum: sha1:f63bba4be4c2bc2e25fa424339f8ca6c306b2aa3
+    pristine_git_object: e8f82a5f655fe66b82d935c4daf2e64da7dce7d2
   docs/Models/Shared/HrisTimeoffStatus.md:
     id: 0a228add8c1b
     last_write_checksum: sha1:e7c0dd1bfceb21cc9dc0d663aaca44fae4831d17
@@ -8777,8 +8789,8 @@ trackedFiles:
     pristine_git_object: 7145d16e2528dd6d849a05278c9dd8ca0507eaed
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:82575eebefeeed8b2e62fae446a4656ba4833d4d
-    pristine_git_object: 30babcdc0ecc216e0a3539d3f3f074cd26f936ea
+    last_write_checksum: sha1:e1f40bf316359f08cd9dc351f53317ac31d4a837
+    pristine_git_object: d3057855e65c0e18374aa41d41bdd19c50c67a1c
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -10779,6 +10791,10 @@ trackedFiles:
     id: bfc0b014adae
     last_write_checksum: sha1:1d16e5a64ef4a960d1a14ba43eeeb2a079359a6c
     pristine_git_object: 717dc782d387cddeb746944a99398ea07613efa3
+  docs/Models/Shared/VirtualWebhookAccountId.md:
+    id: b28782b36a24
+    last_write_checksum: sha1:2f2653eb2451f6049d79a0510ecdcc3f26f86407
+    pristine_git_object: d83599d292f99ef2abc390d46fb3d2a34d820a6a
   docs/Models/Shared/VirtualWebhookAdId.md:
     id: e5160520f945
     last_write_checksum: sha1:a7305d76f9214187d59ceeac892d053d0fe2d2d9
@@ -11253,8 +11269,8 @@ trackedFiles:
     pristine_git_object: 103a698ab067a119bccc13f1f17cfccad91a1715
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:5cbe1201be8ae746f80b4b1297e6e20be549ad1d
-    pristine_git_object: e2ef9b793333b903962f4711faced52c4a2f8adb
+    last_write_checksum: sha1:91c243a0ffcc540b00dc15eb9eef40df4d65fca5
+    pristine_git_object: 8c56066d73b559a2468a571faa5a9d930882e70b
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:5e9d559c24e8fcf505e2b7e3b99d1b7f62825931
@@ -11481,8 +11497,8 @@ trackedFiles:
     pristine_git_object: eb49a99c7f78599eb5446dc28185db05c9448a45
   docs/sdks/shipping/README.md:
     id: 0417d63f28fb
-    last_write_checksum: sha1:3e07b49f9a84b261774612f8f47ebe6d58a3fc6f
-    pristine_git_object: 8be552bc4234eb41c2ccf7551529bcabf5b1824c
+    last_write_checksum: sha1:758f4fe59623860a5b7d105f712848a45ff3a319
+    pristine_git_object: d5f071a222ecc609ee74da36acdb2c9bd31767a6
   docs/sdks/signatory/README.md:
     id: ec8c483893f0
     last_write_checksum: sha1:81a9b56e2e890e8b8679844c381814d3c60b521e
@@ -11537,16 +11553,16 @@ trackedFiles:
     pristine_git_object: 6e0e7ddef52910b2ca37c8de0224b9c1d0e888ff
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:633fdf5407949754b64660518b83b88de1273032
-    pristine_git_object: 46f7c2a559eb81374c1d5aee40a69ca63e4a6add
+    last_write_checksum: sha1:0db34d1cbd5fa4c00a5d46cf498a76ef54e9d3ba
+    pristine_git_object: a2b306f16aea068967cb9bf1b8db24f342fefc74
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
     last_write_checksum: sha1:74b30d07a8c7f08770b9faeee4b869e6831646dd
     pristine_git_object: 81fc04ed35a56228d804b6561ad31d8b7249f8c7
   docs/sdks/tracking/README.md:
     id: dea00ca28a69
-    last_write_checksum: sha1:fac22d98435f3db24e5b0edd0d2a5eb7ba7c6f97
-    pristine_git_object: bcdc4080e075d29d4d794ca6bfc6efb354170e6a
+    last_write_checksum: sha1:9ceea684e340f7a6d0a317d4423d86c37c3d0262
+    pristine_git_object: 0dc5ed71abf07332d8f4ac6232ac385704336817
   docs/sdks/transaction/README.md:
     id: aabe9a10cc76
     last_write_checksum: sha1:d25259cf67ca57ef719d258f384719e8c8e88146
@@ -12229,8 +12245,8 @@ trackedFiles:
     pristine_git_object: bc53840d4f3e95d1749091d33a261fdf2146da92
   src/Models/Operations/CreateAtsActivityQueryParamFields.php:
     id: 26d79f79ab30
-    last_write_checksum: sha1:2bd22d31dd078fa3e2508c5685e60baf66972a6b
-    pristine_git_object: 465c531e1546186d4fe09d3af2096a055b78998d
+    last_write_checksum: sha1:59a41c2804e717d4989f141587840418929e30b3
+    pristine_git_object: b89df2bf1a4e357cece6d95439e7f3450b1056d8
   src/Models/Operations/CreateAtsActivityRequest.php:
     id: 39fed548e8e8
     last_write_checksum: sha1:7995dd4dbd8eacd88f87f90c97f946fe57bdba9a
@@ -12301,8 +12317,8 @@ trackedFiles:
     pristine_git_object: eda0160f0685ad449e16676d862a4cef30e4e11b
   src/Models/Operations/CreateAtsJobQueryParamFields.php:
     id: ff5b33f8ddc3
-    last_write_checksum: sha1:fdedae78f9764b08d375d6eddb34cd0e3aaf45ba
-    pristine_git_object: 6a6fba9df5b31b5e2b8557c1964aa6b99a941519
+    last_write_checksum: sha1:b84be6553d347e838a199289ef6dd1f65e89b534
+    pristine_git_object: bd684c5318b66dc5d1bda104d3c87d01761db1c4
   src/Models/Operations/CreateAtsJobRequest.php:
     id: 202c3359d4f4
     last_write_checksum: sha1:875a4a9a667cb8ab943262366e41ab7c728c8b2c
@@ -13557,8 +13573,8 @@ trackedFiles:
     pristine_git_object: ecddd0d3f6becb3d36a506c0ebd287db38b76517
   src/Models/Operations/GetAtsActivityQueryParamFields.php:
     id: 5242f06f1fb6
-    last_write_checksum: sha1:defa7dd965131afe99d4c11bdf9693c8f6a2abae
-    pristine_git_object: 0510abd8bdb01c019dd0c0f9cf8109ff6599c821
+    last_write_checksum: sha1:2728fca36614467f5fe84110e5a320c965b377c9
+    pristine_git_object: 03bc521b9550360d0685c9baf83b71670d0dbab4
   src/Models/Operations/GetAtsActivityRequest.php:
     id: 5bf69632872e
     last_write_checksum: sha1:faf5acacceac15bc08461dbb8168873149129a02
@@ -13629,8 +13645,8 @@ trackedFiles:
     pristine_git_object: 87eba73f15999f31b484699c6e575829b492f1d9
   src/Models/Operations/GetAtsJobQueryParamFields.php:
     id: 91850782f295
-    last_write_checksum: sha1:78a66da4f1bf83e67185471e63482e6f3d7f84b9
-    pristine_git_object: 0f27e2f269d8ed69fe55dd861d2ee1b85cfd4779
+    last_write_checksum: sha1:f35ed9cf2a32d27f26b3c02fcb9c00038b2e4c4f
+    pristine_git_object: 1366e73d8c29f9abb4d8e610c5b5f9e8e9216113
   src/Models/Operations/GetAtsJobRequest.php:
     id: bd6fa2b3582c
     last_write_checksum: sha1:246e7ab21e7ab6ee2f0b1937ea69bfe0caf657ae
@@ -15033,8 +15049,8 @@ trackedFiles:
     pristine_git_object: 3d4efd0e01404fff0497bd96d2babad527398e65
   src/Models/Operations/ListAtsActivitiesQueryParamFields.php:
     id: d1cc1391d693
-    last_write_checksum: sha1:0aed6f988d608736a6002d7400a356dcfdf834c6
-    pristine_git_object: d1b43348bd583fb2642db8b32060e529641c3ff4
+    last_write_checksum: sha1:fa1f316a0d9732957f4d440ce03c10b64567e605
+    pristine_git_object: e7914f5a2271c73117399cf08795529c69536594
   src/Models/Operations/ListAtsActivitiesRequest.php:
     id: 4566b87e8304
     last_write_checksum: sha1:fd912b264a4ae860f97d92086a2995e231da1856
@@ -15117,8 +15133,8 @@ trackedFiles:
     pristine_git_object: 561e857d6b5c0606a88fe57ade3e00434bd6366c
   src/Models/Operations/ListAtsJobsQueryParamFields.php:
     id: 28a9778c6df2
-    last_write_checksum: sha1:5ba9de176746651e7aaa299e889d5786d381a391
-    pristine_git_object: 5feeff4861a3cb190ce8c3e35eb2ead007859944
+    last_write_checksum: sha1:87bb4bf19114a71351327e10e259015126620272
+    pristine_git_object: 78ab5a25d27acc3566840ac72b041c88117a1981
   src/Models/Operations/ListAtsJobsRequest.php:
     id: 76d86f49bbcb
     last_write_checksum: sha1:ae89d203a7d621de578be48d4f901e4358d8674d
@@ -15593,8 +15609,8 @@ trackedFiles:
     pristine_git_object: 0a984ef96e5f01043a82115f55446cbbe557c8ff
   src/Models/Operations/ListKmsPagesRequest.php:
     id: 1bcd33709671
-    last_write_checksum: sha1:8678dc97e7db96621626dcb44eb9da27c498a646
-    pristine_git_object: 064b29061fa020ac1313ccb4f7c7d30f8362a21a
+    last_write_checksum: sha1:79515e0ee57d65f2c5ee055510d94a35e5715c87
+    pristine_git_object: c69070de95c781fd4a556baff55435664676db1d
   src/Models/Operations/ListKmsPagesResponse.php:
     id: bb889b45e0d3
     last_write_checksum: sha1:fd2d8c33bd24f3d1e933c9bcba937b1708db6d2f
@@ -15959,6 +15975,18 @@ trackedFiles:
     id: b8d62fb31390
     last_write_checksum: sha1:e49d676f1952ff94c8f5b2d1871a8641fe8926cb
     pristine_git_object: 34c6c5a2aecec4317c8984a887a71af037111f7a
+  src/Models/Operations/ListShippingTrackingsQueryParamFields.php:
+    id: 155b9f109b93
+    last_write_checksum: sha1:596fd12f5d45374c5625984a933a50d2a015922d
+    pristine_git_object: d64bb6ef1ba44677f7d55b07ad415c45c5bcaee4
+  src/Models/Operations/ListShippingTrackingsRequest.php:
+    id: 66c041526960
+    last_write_checksum: sha1:3ad09e53c79624c3e508c807c7021d6ccaa381de
+    pristine_git_object: b8f7602d513ccbdb0e6c4a8de4df0359fedc50ac
+  src/Models/Operations/ListShippingTrackingsResponse.php:
+    id: d484ea200fad
+    last_write_checksum: sha1:a88407bc69d28455403d7fcba00fde7b0225bbf7
+    pristine_git_object: 93d0d8f152bbba32e4086214922c6aab65078987
   src/Models/Operations/ListSigningDocumentsQueryParamFields.php:
     id: dac774b2a23d
     last_write_checksum: sha1:6a35075a11d96aaef850c3510791fbfb3ec70e3d
@@ -16481,8 +16509,8 @@ trackedFiles:
     pristine_git_object: 9f72967602759eb7863e0b61322b4132dda2c9db
   src/Models/Operations/PatchAtsActivityQueryParamFields.php:
     id: 550be59cbd3c
-    last_write_checksum: sha1:43de5a90d78eadd5fe67c0698eb0810380fc81d9
-    pristine_git_object: c61174c585b51a026f831b5bc91b64e141f26deb
+    last_write_checksum: sha1:c384934e6ec5fa1043e2439c0ab9754fe979955d
+    pristine_git_object: c5422bd4d691d950d0d894366bced405283305dd
   src/Models/Operations/PatchAtsActivityRequest.php:
     id: 13b9a72bea4f
     last_write_checksum: sha1:ff982101fe8bb321e9a3dd66e6336447d954b8af
@@ -16553,8 +16581,8 @@ trackedFiles:
     pristine_git_object: 30b9b1bb8bf7261a81fde85d18738bb8faabc312
   src/Models/Operations/PatchAtsJobQueryParamFields.php:
     id: 994bab441b3e
-    last_write_checksum: sha1:e9ec58dffbea360353912090ebc2ffe3c09c7a4e
-    pristine_git_object: cbcaf712b13f68efab254bcb5e8d7a9c877a338d
+    last_write_checksum: sha1:a20748966165a89be3315b8f5d6a0ad628efa337
+    pristine_git_object: 48c6b2f865002233e7ce4eb3ecc750e078fa8615
   src/Models/Operations/PatchAtsJobRequest.php:
     id: db1d7afa5c41
     last_write_checksum: sha1:ae00b92ebc47bc044a611f4042cce74ea307eb87
@@ -18533,8 +18561,8 @@ trackedFiles:
     pristine_git_object: b6b0d261b6d172f4cfbda2030cece6e73d7a87af
   src/Models/Operations/UpdateAtsActivityQueryParamFields.php:
     id: f239e145860f
-    last_write_checksum: sha1:ca0691c83a66612e2f01558b1a3082ee524c98a3
-    pristine_git_object: a2ca41faec77192201daee156baf2f18e5b7718c
+    last_write_checksum: sha1:66d638f2490040b16b78a81c9aa9b1598263234a
+    pristine_git_object: f14824d1cbb345f07e1168612a6aa09a19817910
   src/Models/Operations/UpdateAtsActivityRequest.php:
     id: b7b09e0a313a
     last_write_checksum: sha1:3c10237484f726d54258ebee293c7c4134fdde5e
@@ -18605,8 +18633,8 @@ trackedFiles:
     pristine_git_object: 420a92f3a1bd2abbd82f6ef16bbac800f82db485
   src/Models/Operations/UpdateAtsJobQueryParamFields.php:
     id: 90b80faec378
-    last_write_checksum: sha1:eaf674207a83a22668d3519b462f9cfa31b4744f
-    pristine_git_object: e8bb61be0b9260e0a18e19dd4cd7ac78e018f06e
+    last_write_checksum: sha1:62b3cfd4046e5fbe520fdea310da637581247893
+    pristine_git_object: 35b44258f5d7e6651b60e8fe037091109ed469b5
   src/Models/Operations/UpdateAtsJobRequest.php:
     id: 0952e8502dd2
     last_write_checksum: sha1:297fdf645ace6347db796b0420308ff73d17121b
@@ -19893,8 +19921,8 @@ trackedFiles:
     pristine_git_object: fab600c6bef88dfce64624f39ba666f2e1e9abf9
   src/Models/Shared/AtsActivity.php:
     id: 573d0215872c
-    last_write_checksum: sha1:74d4e2e7f08e065fec6542fa4b2b6e402ebdfbac
-    pristine_git_object: 8e896724050293d826ba6019950db7e4ab442845
+    last_write_checksum: sha1:1db2ed5160a83e600f6f1b1698043c6cf8df9faf
+    pristine_git_object: 55f9e52f0310ca5ec97e7e2c5c3ffa387bf8e796
   src/Models/Shared/AtsActivityType.php:
     id: be500043b030
     last_write_checksum: sha1:7e4d46037f2f331a24ef76fff74f9daee0917faa
@@ -19973,8 +20001,8 @@ trackedFiles:
     pristine_git_object: 8bad47075897aa991382b33f91e11a3426bafece
   src/Models/Shared/AtsJob.php:
     id: df3c8f598011
-    last_write_checksum: sha1:7b2bff9d3082a66988694075494a3cee385ecdd3
-    pristine_git_object: fd8d60aaf41d18ad0189c302b01c0aee3dd4c0ca
+    last_write_checksum: sha1:9fdb42594bae6ae56ba806794f0ad48601ecf9ca
+    pristine_git_object: cf83eea7ec78c296035d4ba4b8c31cd5d88e2a06
   src/Models/Shared/AtsJobOpening.php:
     id: 3b178d7554d8
     last_write_checksum: sha1:340552fdc0c1b55163dfb787cd392387f5e61aeb
@@ -20613,8 +20641,8 @@ trackedFiles:
     pristine_git_object: a7b0292af4cfa8127f3a19a1375b2f8fae258cba
   src/Models/Shared/HrisTimeoff.php:
     id: bee96ea48707
-    last_write_checksum: sha1:ac291842abeb4d358fdc49be16bc2f72727df72d
-    pristine_git_object: 1b766a8fdd431184758d2fd4ab8e65f48d71ef03
+    last_write_checksum: sha1:d870f74bd388d9800b5d82cfe650d06e699d62d8
+    pristine_git_object: 8fcac06b8f120eed5669341837383f0119a7dabd
   src/Models/Shared/HrisTimeoffStatus.php:
     id: eccecde71702
     last_write_checksum: sha1:7fb361e7ea5b782a1591414a02574f4bad0a1edd
@@ -20649,8 +20677,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:98e110a0ed9d056d0d436010da661f4cc2114b84
-    pristine_git_object: 4d504411715bb7c97c08feb70269026ffa89a31e
+    last_write_checksum: sha1:fbd2db72ae426321ea72294bf5a1de0ada98bc12
+    pristine_git_object: a6bf85a8fcad9034d486df2b945c381c5c87a8cc
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -22603,6 +22631,10 @@ trackedFiles:
     id: 56d749b9e240
     last_write_checksum: sha1:a89c78a0c042bc63f1a7911dde812e4799789b71
     pristine_git_object: 783f9f05932095be108fa1d3ca11a6e99d52dd42
+  src/Models/Shared/VirtualWebhookAccountId.php:
+    id: 784adeddb227
+    last_write_checksum: sha1:438d7d4d1b9ebe48c9dd18089523415031b12a8d
+    pristine_git_object: ed7c6516ef7d7940116a932d70be6b873a3212e2
   src/Models/Shared/VirtualWebhookAdId.php:
     id: fe9760551cb0
     last_write_checksum: sha1:ea636b9570cb09c4aca0922b95885468d239abdc
@@ -22957,8 +22989,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c66e838fd07cff7383c2a4e8bdad8db9a34f1a56
-    pristine_git_object: 97f3b671c5191e96e5d6be1ef0ee1ed1ad8f50e1
+    last_write_checksum: sha1:c50bcd996cca3f355abac8a9b28f40b2c103463e
+    pristine_git_object: eed2daae4c765037787527cc380d25332919aef4
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -22981,8 +23013,8 @@ trackedFiles:
     pristine_git_object: b40f9fed95c44c8da76807802fccbc1368815742
   src/Shipping.php:
     id: a524314bbcc7
-    last_write_checksum: sha1:410bb2d7a1096ab932ff8ebe389353839a56228e
-    pristine_git_object: ffb912f5049ce962237dd2c617b955f705877994
+    last_write_checksum: sha1:b78a308bf94a28a985a96df9ddaa353665b52d26
+    pristine_git_object: 8ebf999441d7df24e257761bc803f95fc2069ef9
   src/Signatory.php:
     id: 467e43eed71d
     last_write_checksum: sha1:b76da3fa08bc1e6d791cd4d3de241ff95ed8d45d
@@ -23045,8 +23077,8 @@ trackedFiles:
     pristine_git_object: 0e7b5a5a475fa1abd08ec380123a5926bfcb8898
   src/Tracking.php:
     id: 03aa936a61f6
-    last_write_checksum: sha1:6505f27cf7ffd9a3cb064ab27b75bc8b37050369
-    pristine_git_object: 4649b4b8037e474199664d70e88819d153e144bd
+    last_write_checksum: sha1:d2c81bc051f7d543295f7d340242c575cac0bb30
+    pristine_git_object: 8dbe25e7f9807780ce32d4d6c553948223d5ae12
   src/Transaction.php:
     id: fcc0c127e296
     last_write_checksum: sha1:6ae4714ae58607356bb99f7ea1624a3eabcd3a01
@@ -25290,7 +25322,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
+          application/json: {}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -29233,10 +29265,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
+          application/json: {}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -29244,10 +29276,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
+          application/json: {}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -29261,10 +29293,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
+          application/json: {}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:
@@ -29412,6 +29444,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Php SDK Changes:\n* `unified-to->shipping->listShippingTrackings()`: **Added**\n* `unified-to->tracking->listShippingTrackings()`: **Added**\n* `unified-to->ats->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->ats->createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->ats->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->ats->getAtsJob()`: \n  *  `request->fields` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->ats->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->companyId` **Added**\n* `unified-to->ats->listAtsJobs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->userId` **Added**\n* `unified-to->ats->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->ats->patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->ats->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->ats->updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->activity->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->activity->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->activity->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->companyId` **Added**\n* `unified-to->activity->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->activity->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to->job->createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->job->getAtsJob()`: \n  *  `request->fields` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->job->listAtsJobs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->userId` **Added**\n* `unified-to->job->patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->job->updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->hris->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to->kms->listKmsPages()`: \n  *  `request->userId` **Added**\n* `unified-to->page->listKmsPages()`: \n  *  `request->userId` **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->virtualWebhookAccountId` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->virtualWebhookAccountId` **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->virtualWebhookAccountId` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->virtualWebhookAccountId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

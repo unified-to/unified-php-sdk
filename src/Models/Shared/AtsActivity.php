@@ -49,6 +49,14 @@ class AtsActivity
 
     /**
      *
+     * @var ?string $companyId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('company_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $companyId = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -182,6 +190,7 @@ class AtsActivity
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $bcc
      * @param  ?string  $candidateId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsEmail>  $cc
+     * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?array<string>  $documentIds
@@ -199,12 +208,13 @@ class AtsActivity
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;
         $this->candidateId = $candidateId;
         $this->cc = $cc;
+        $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->documentIds = $documentIds;

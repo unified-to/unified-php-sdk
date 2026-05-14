@@ -1555,6 +1555,7 @@ if ($response->accountingAccount !== null) {
 * [listShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
 * [listShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
 * [listShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
+* [listShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
 * [patchShippingLabel](docs/sdks/shipping/README.md#patchshippinglabel) - Update a label
 * [patchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
@@ -1728,6 +1729,7 @@ if ($response->accountingAccount !== null) {
 ### [Tracking](docs/sdks/tracking/README.md)
 
 * [getShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
+* [listShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 
