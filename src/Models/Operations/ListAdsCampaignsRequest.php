@@ -96,6 +96,14 @@ class ListAdsCampaignsRequest
     public ?string $startGte = null;
 
     /**
+     * The status to filter by
+     *
+     * @var ?string $status
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=status')]
+    public ?string $status = null;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedGte
@@ -115,10 +123,11 @@ class ListAdsCampaignsRequest
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $startGte
+     * @param  ?string  $status
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->endLt = $endLt;
@@ -131,6 +140,7 @@ class ListAdsCampaignsRequest
         $this->raw = $raw;
         $this->sort = $sort;
         $this->startGte = $startGte;
+        $this->status = $status;
         $this->updatedGte = $updatedGte;
     }
 }

@@ -14,48 +14,48 @@ class PropertyAdsReportMetricsCampaignTargetingDevice
     /**
      * $carriers
      *
-     * @var ?array<string> $carriers
+     * @var ?array<\Unified\Unified_to\Models\Shared\DeviceTarget> $carriers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('carriers')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DeviceTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $carriers = null;
 
     /**
      * $types
      *
-     * @var ?array<string> $types
+     * @var ?array<\Unified\Unified_to\Models\Shared\DeviceTarget> $types
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('types')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DeviceTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $types = null;
 
     /**
      * $userDevice
      *
-     * @var ?array<string> $userDevice
+     * @var ?array<\Unified\Unified_to\Models\Shared\DeviceTarget> $userDevice
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user_device')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DeviceTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $userDevice = null;
 
     /**
      * $userOs
      *
-     * @var ?array<string> $userOs
+     * @var ?array<\Unified\Unified_to\Models\Shared\DeviceTarget> $userOs
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('user_os')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DeviceTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $userOs = null;
 
     /**
-     * @param  ?array<string>  $carriers
-     * @param  ?array<string>  $types
-     * @param  ?array<string>  $userDevice
-     * @param  ?array<string>  $userOs
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DeviceTarget>  $carriers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DeviceTarget>  $types
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DeviceTarget>  $userDevice
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DeviceTarget>  $userOs
      * @phpstan-pure
      */
     public function __construct(?array $carriers = null, ?array $types = null, ?array $userDevice = null, ?array $userOs = null)

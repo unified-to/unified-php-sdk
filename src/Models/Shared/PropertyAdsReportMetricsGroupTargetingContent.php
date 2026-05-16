@@ -24,10 +24,10 @@ class PropertyAdsReportMetricsGroupTargetingContent
     /**
      * $excludedTopics
      *
-     * @var ?array<string> $excludedTopics
+     * @var ?array<\Unified\Unified_to\Models\Shared\TopicTarget> $excludedTopics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_topics')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TopicTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $excludedTopics = null;
 
@@ -54,10 +54,10 @@ class PropertyAdsReportMetricsGroupTargetingContent
     /**
      * $topics
      *
-     * @var ?array<string> $topics
+     * @var ?array<\Unified\Unified_to\Models\Shared\TopicTarget> $topics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('topics')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TopicTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $topics = null;
 
@@ -82,10 +82,10 @@ class PropertyAdsReportMetricsGroupTargetingContent
 
     /**
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdsKeyword>  $excludedKeywords
-     * @param  ?array<string>  $excludedTopics
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TopicTarget>  $excludedTopics
      * @param  ?array<string>  $excludedUrls
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdsKeyword>  $keywords
-     * @param  ?array<string>  $topics
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TopicTarget>  $topics
      * @param  ?array<string>  $urls
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContentVideo  $video
      * @phpstan-pure

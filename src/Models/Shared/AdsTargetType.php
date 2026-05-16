@@ -21,8 +21,6 @@ enum AdsTargetType: string
     case UsDma = 'US_DMA';
     case Topic = 'TOPIC';
     case UserList = 'USER_LIST';
-    case AgeRange = 'AGE_RANGE';
-    case Gender = 'GENDER';
     case Carrier = 'CARRIER';
     case DeviceModel = 'DEVICE_MODEL';
     case OsVersion = 'OS_VERSION';

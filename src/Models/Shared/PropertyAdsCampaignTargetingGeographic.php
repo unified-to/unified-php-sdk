@@ -24,10 +24,10 @@ class PropertyAdsCampaignTargetingGeographic
     /**
      * $countries
      *
-     * @var ?array<string> $countries
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $countries
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('countries')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $countries = null;
 
@@ -44,20 +44,20 @@ class PropertyAdsCampaignTargetingGeographic
     /**
      * $excludedCountries
      *
-     * @var ?array<string> $excludedCountries
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $excludedCountries
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_countries')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $excludedCountries = null;
 
     /**
      * $excludedPostalCodes
      *
-     * @var ?array<string> $excludedPostalCodes
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $excludedPostalCodes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_postal_codes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $excludedPostalCodes = null;
 
@@ -74,10 +74,10 @@ class PropertyAdsCampaignTargetingGeographic
     /**
      * $excludedUsDmas
      *
-     * @var ?array<string> $excludedUsDmas
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $excludedUsDmas
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('excluded_us_dmas')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $excludedUsDmas = null;
 
@@ -94,10 +94,10 @@ class PropertyAdsCampaignTargetingGeographic
     /**
      * $postalCodes
      *
-     * @var ?array<string> $postalCodes
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $postalCodes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('postal_codes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $postalCodes = null;
 
@@ -123,26 +123,26 @@ class PropertyAdsCampaignTargetingGeographic
     /**
      * $usDmas
      *
-     * @var ?array<string> $usDmas
+     * @var ?array<\Unified\Unified_to\Models\Shared\GeoTarget> $usDmas
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('us_dmas')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GeoTarget>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $usDmas = null;
 
     /**
      * @param  ?array<\Unified\Unified_to\Models\Shared\CityTarget>  $cities
-     * @param  ?array<string>  $countries
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $countries
      * @param  ?array<\Unified\Unified_to\Models\Shared\CityTarget>  $excludedCities
-     * @param  ?array<string>  $excludedCountries
-     * @param  ?array<string>  $excludedPostalCodes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $excludedCountries
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $excludedPostalCodes
      * @param  ?array<\Unified\Unified_to\Models\Shared\RegionTarget>  $excludedRegions
-     * @param  ?array<string>  $excludedUsDmas
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $excludedUsDmas
      * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingGeographicLocationTypes>  $locationTypes
-     * @param  ?array<string>  $postalCodes
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $postalCodes
      * @param  ?\Unified\Unified_to\Models\Shared\PresenceType  $presenceType
      * @param  ?array<\Unified\Unified_to\Models\Shared\RegionTarget>  $regions
-     * @param  ?array<string>  $usDmas
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GeoTarget>  $usDmas
      * @phpstan-pure
      */
     public function __construct(?array $cities = null, ?array $countries = null, ?array $excludedCities = null, ?array $excludedCountries = null, ?array $excludedPostalCodes = null, ?array $excludedRegions = null, ?array $excludedUsDmas = null, ?array $locationTypes = null, ?array $postalCodes = null, ?PresenceType $presenceType = null, ?array $regions = null, ?array $usDmas = null)
