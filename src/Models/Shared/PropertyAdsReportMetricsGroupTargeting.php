@@ -68,14 +68,14 @@ class PropertyAdsReportMetricsGroupTargeting
     public ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null;
 
     /**
-     * Language targeting (Meta
+     * $language
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage $language
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $language
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyAdsReportMetricsGroupTargetingLanguage $language = null;
+    public ?array $language = null;
 
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
@@ -113,13 +113,13 @@ class PropertyAdsReportMetricsGroupTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic  $demographic
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice  $device
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic  $geographic
-     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingLanguage  $language
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $language
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingLanguage $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?array $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;

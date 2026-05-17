@@ -68,14 +68,14 @@ class PropertyAdsCampaignTargeting
     public ?PropertyAdsCampaignTargetingGeographic $geographic = null;
 
     /**
-     * Language targeting (Meta
+     * $language
      *
-     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingLanguage $language
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $language
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingLanguage|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PropertyAdsCampaignTargetingLanguage $language = null;
+    public ?array $language = null;
 
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
@@ -113,13 +113,13 @@ class PropertyAdsCampaignTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingDemographic  $demographic
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingDevice  $device
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingGeographic  $geographic
-     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingLanguage  $language
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $language
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsCampaignTargetingAudience $audience = null, ?PropertyAdsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsCampaignTargetingContent $content = null, ?PropertyAdsCampaignTargetingDemographic $demographic = null, ?PropertyAdsCampaignTargetingDevice $device = null, ?PropertyAdsCampaignTargetingGeographic $geographic = null, ?PropertyAdsCampaignTargetingLanguage $language = null, ?PropertyAdsCampaignTargetingOptimization $optimization = null, ?PropertyAdsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsCampaignTargetingAudience $audience = null, ?PropertyAdsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsCampaignTargetingContent $content = null, ?PropertyAdsCampaignTargetingDemographic $demographic = null, ?PropertyAdsCampaignTargetingDevice $device = null, ?PropertyAdsCampaignTargetingGeographic $geographic = null, ?array $language = null, ?PropertyAdsCampaignTargetingOptimization $optimization = null, ?PropertyAdsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;

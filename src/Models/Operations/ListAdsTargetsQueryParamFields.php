@@ -16,5 +16,7 @@ enum ListAdsTargetsQueryParamFields: string
     case Type = 'type';
     case IsActive = 'is_active';
     case ParentId = 'parent_id';
+    case AudienceCountMin = 'audience_count_min';
+    case AudienceCountMax = 'audience_count_max';
     case Raw = 'raw';
 }

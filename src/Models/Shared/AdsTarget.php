@@ -21,6 +21,22 @@ class AdsTarget
 
     /**
      *
+     * @var ?float $audienceCountMax
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('audience_count_max')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $audienceCountMax = null;
+
+    /**
+     *
+     * @var ?float $audienceCountMin
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('audience_count_min')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $audienceCountMin = null;
+
+    /**
+     *
      * @var ?bool $isActive
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
@@ -64,6 +80,8 @@ class AdsTarget
 
     /**
      * @param  string  $id
+     * @param  ?float  $audienceCountMax
+     * @param  ?float  $audienceCountMin
      * @param  ?bool  $isActive
      * @param  ?string  $name
      * @param  ?string  $parentId
@@ -71,9 +89,11 @@ class AdsTarget
      * @param  ?\Unified\Unified_to\Models\Shared\AdsTargetType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsTargetType $type = null)
+    public function __construct(string $id, ?float $audienceCountMax = null, ?float $audienceCountMin = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsTargetType $type = null)
     {
         $this->id = $id;
+        $this->audienceCountMax = $audienceCountMax;
+        $this->audienceCountMin = $audienceCountMin;
         $this->isActive = $isActive;
         $this->name = $name;
         $this->parentId = $parentId;

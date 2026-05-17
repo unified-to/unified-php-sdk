@@ -9,15 +9,15 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** AudienceSegment - Audience targeting (Meta: custom_audiences, lookalike_audiences, flexible_spec) */
-class AudienceSegment
+class TargetRef
 {
     /**
      *
-     * @var string $id
+     * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    public string $id;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
 
     /**
      *
@@ -28,11 +28,11 @@ class AudienceSegment
     public ?string $name = null;
 
     /**
-     * @param  string  $id
+     * @param  ?string  $id
      * @param  ?string  $name
      * @phpstan-pure
      */
-    public function __construct(string $id, ?string $name = null)
+    public function __construct(?string $id = null, ?string $name = null)
     {
         $this->id = $id;
         $this->name = $name;

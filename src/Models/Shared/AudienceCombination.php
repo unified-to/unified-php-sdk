@@ -14,55 +14,55 @@ class AudienceCombination
     /**
      * $behaviors
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $behaviors
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $behaviors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('behaviors')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $behaviors = null;
 
     /**
-     * $demographics
-     *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $demographics
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('demographics')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $demographics = null;
-
-    /**
      * $interests
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $interests
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $interests
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('interests')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $interests = null;
 
     /**
      * $lifeEvents
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AudienceSegment> $lifeEvents
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $lifeEvents
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('life_events')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AudienceSegment>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $lifeEvents = null;
 
     /**
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $behaviors
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $demographics
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $interests
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AudienceSegment>  $lifeEvents
+     * $references
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\TargetRef> $references
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('references')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TargetRef>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $references = null;
+
+    /**
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $behaviors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $interests
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $lifeEvents
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $references
      * @phpstan-pure
      */
-    public function __construct(?array $behaviors = null, ?array $demographics = null, ?array $interests = null, ?array $lifeEvents = null)
+    public function __construct(?array $behaviors = null, ?array $interests = null, ?array $lifeEvents = null, ?array $references = null)
     {
         $this->behaviors = $behaviors;
-        $this->demographics = $demographics;
         $this->interests = $interests;
         $this->lifeEvents = $lifeEvents;
+        $this->references = $references;
     }
 }
