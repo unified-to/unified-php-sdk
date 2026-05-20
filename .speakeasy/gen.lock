@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 98553c5a9c26bbe1e089cc9d09e3a8f2
+  docChecksum: 389d12ddd497f44c9fc1e4755d3d9af5
   docVersion: "1.0"
-  speakeasyVersion: 1.763.1
+  speakeasyVersion: 1.763.2
   generationVersion: 2.884.4
-  releaseVersion: 1.6.70
-  configChecksum: 39bdea3bb8261f1bc6b52374a5c5a23e
+  releaseVersion: 1.6.71
+  configChecksum: 295dfd02d669b8ded15de1f03fc7882b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 8edcc41c-89e4-4d75-ac21-77e43a18ef73
-  pristine_commit_hash: bc25db3810ca11fa5eccc9dec4c733e7dbb62caa
-  pristine_tree_hash: 5b89be55d3b702c0d883300194d7ab880d0fd686
+  generation_id: f9b026c3-2292-4e6a-9165-2d70dfeba55f
+  pristine_commit_hash: 5453b5cbc228f486604cfcd3f07491791ff2ca5a
+  pristine_tree_hash: 3be07756a2def0ead0049b8f971b142a8d351559
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -8733,8 +8733,8 @@ trackedFiles:
     pristine_git_object: 7c191c14b25ae14df483b040b01ced533d26f469
   docs/Models/Shared/HrisTimeoff.md:
     id: f745aefea980
-    last_write_checksum: sha1:f63bba4be4c2bc2e25fa424339f8ca6c306b2aa3
-    pristine_git_object: e8f82a5f655fe66b82d935c4daf2e64da7dce7d2
+    last_write_checksum: sha1:00ac50decab86f0cda2d6731265e44786f88798e
+    pristine_git_object: e2c8e3c05eebfb9711599674a8bc7ae7d12edc2b
   docs/Models/Shared/HrisTimeoffStatus.md:
     id: 0a228add8c1b
     last_write_checksum: sha1:e7c0dd1bfceb21cc9dc0d663aaca44fae4831d17
@@ -8745,8 +8745,8 @@ trackedFiles:
     pristine_git_object: 6ddb7e3c86d620aa12a64c2f227ad3547519ce5a
   docs/Models/Shared/HrisTimeshift.md:
     id: a17cfc8c3cd3
-    last_write_checksum: sha1:dc0c40d9194121b99e982161a80f4eda47cb8c46
-    pristine_git_object: 63464419290f9593e544e8dfa0c097b9d7594036
+    last_write_checksum: sha1:22c49f47c09baf05c346c6461af41655a64fa73d
+    pristine_git_object: 2bb739dd47bec23f8a583e596139e61837e76183
   docs/Models/Shared/Integration.md:
     id: c53b5743c635
     last_write_checksum: sha1:724a9a3fe5e89c5d5d11def74ec0d64730082658
@@ -11249,8 +11249,8 @@ trackedFiles:
     pristine_git_object: 103a698ab067a119bccc13f1f17cfccad91a1715
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:91c243a0ffcc540b00dc15eb9eef40df4d65fca5
-    pristine_git_object: 8c56066d73b559a2468a571faa5a9d930882e70b
+    last_write_checksum: sha1:1d0fe9dab9bb8a9694c836d03c19383c9550628c
+    pristine_git_object: 97fcd4b211c59416d02fb33887feee0ee9f625fa
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:5e9d559c24e8fcf505e2b7e3b99d1b7f62825931
@@ -11533,12 +11533,12 @@ trackedFiles:
     pristine_git_object: 6e0e7ddef52910b2ca37c8de0224b9c1d0e888ff
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:0db34d1cbd5fa4c00a5d46cf498a76ef54e9d3ba
-    pristine_git_object: a2b306f16aea068967cb9bf1b8db24f342fefc74
+    last_write_checksum: sha1:633fdf5407949754b64660518b83b88de1273032
+    pristine_git_object: 46f7c2a559eb81374c1d5aee40a69ca63e4a6add
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
-    last_write_checksum: sha1:74b30d07a8c7f08770b9faeee4b869e6831646dd
-    pristine_git_object: 81fc04ed35a56228d804b6561ad31d8b7249f8c7
+    last_write_checksum: sha1:49cdbf2f437a4e94713d179e44170ed8c73500cb
+    pristine_git_object: d4cb4adf4998cc95eaa98fcc3bfb97dfc7284099
   docs/sdks/tracking/README.md:
     id: dea00ca28a69
     last_write_checksum: sha1:9ceea684e340f7a6d0a317d4423d86c37c3d0262
@@ -20617,8 +20617,8 @@ trackedFiles:
     pristine_git_object: a7b0292af4cfa8127f3a19a1375b2f8fae258cba
   src/Models/Shared/HrisTimeoff.php:
     id: bee96ea48707
-    last_write_checksum: sha1:d870f74bd388d9800b5d82cfe650d06e699d62d8
-    pristine_git_object: 8fcac06b8f120eed5669341837383f0119a7dabd
+    last_write_checksum: sha1:ac291842abeb4d358fdc49be16bc2f72727df72d
+    pristine_git_object: 1b766a8fdd431184758d2fd4ab8e65f48d71ef03
   src/Models/Shared/HrisTimeoffStatus.php:
     id: eccecde71702
     last_write_checksum: sha1:7fb361e7ea5b782a1591414a02574f4bad0a1edd
@@ -20629,8 +20629,8 @@ trackedFiles:
     pristine_git_object: ba32f22340a16f2f2c96abc55e0f785904affba3
   src/Models/Shared/HrisTimeshift.php:
     id: 8dcdd6a18e90
-    last_write_checksum: sha1:5ee5907dd55336a965d8c572029f415c6557d51b
-    pristine_git_object: fa032fd0f918cac0a1fe27571899a78b49f91ec5
+    last_write_checksum: sha1:0908c115637217bf18622611b30cde5a462b6cdf
+    pristine_git_object: 97b3ecad63f5ef89f664de4a192652e188a0c8c5
   src/Models/Shared/Integration.php:
     id: 015e0b5d30fd
     last_write_checksum: sha1:23d09c614ebde8f22ea1766c883e1d5137834a4e
@@ -22949,8 +22949,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:030ca2ae8a493b62bfc8e42a4ec3129899f444f2
-    pristine_git_object: 214e244342e2f56ccbd858125ff674bf0db084cd
+    last_write_checksum: sha1:00d528dae12a19f98cc818d3495176aee96a3a2d
+    pristine_git_object: 8ef2edf8dbd8010cd4b3955895694b7d3a3b3461
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -25282,7 +25282,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -27207,10 +27207,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2025-10-18T00:03:45.822Z", "start_at": "2024-06-03T05:33:48.715Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2025-04-02T06:29:45.209Z", "start_at": "2025-05-03T19:13:33.398Z"}
+          application/json: {"employee_user_id": "<id>"}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -27219,7 +27219,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-02T20:47:43.029Z", "start_at": "2023-11-12T09:20:44.392Z"}
+          application/json: {"employee_user_id": "<id>"}
   listHrisTimeshifts:
     speakeasy-default-list-hris-timeshifts:
       parameters:
@@ -27235,10 +27235,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2023-11-17T18:53:02.172Z", "start_at": "2023-01-19T02:48:41.002Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2023-05-16T07:27:26.608Z", "start_at": "2024-07-25T03:16:34.281Z"}
+          application/json: {"employee_user_id": "<id>"}
   removeHrisTimeshift:
     speakeasy-default-remove-hris-timeshift:
       parameters:
@@ -27252,10 +27252,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2025-03-03T22:04:09.340Z", "start_at": "2024-05-30T21:19:58.772Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-09T22:44:06.400Z", "start_at": "2023-11-14T18:28:16.870Z"}
+          application/json: {"employee_user_id": "<id>"}
   createAtsCompany:
     speakeasy-default-create-ats-company:
       parameters:
@@ -29225,10 +29225,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -29236,10 +29236,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -29253,10 +29253,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:
@@ -29404,7 +29404,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->group->patchAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsCampaign()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsGroup()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->group->updateAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCampaigns()`:  `response.[]->targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsGroups()`:  `response.[]->targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->getAdsCampaign()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->listAdsCampaigns()`:  `response.[]->targeting` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request->adsCampaign->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->group->createAdsGroup()`: \n  *  `request->adsGroup->targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->group->getAdsGroup()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to->group->listAdsGroups()`:  `response.[]->targeting` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsTargets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ads->getAdsTarget()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->target->getAdsTarget()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->target->listAdsTargets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to->hris->listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to->hris->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->hris->updateHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->getHrisTimeshift()`:  `response` **Changed**\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->startAt` **Changed**\n* `unified-to->hris->patchHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to->hris->createHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to->timeshift->createHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to->timeshift->getHrisTimeshift()`:  `response` **Changed**\n* `unified-to->timeshift->listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to->timeshift->patchHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to->timeshift->updateHrisTimeshift()`: \n  *  `request->hrisTimeshift` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -20,20 +20,6 @@ class HrisTimeshift
 
     /**
      *
-     * @var \DateTime $endAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
-    public \DateTime $endAt;
-
-    /**
-     *
-     * @var \DateTime $startAt
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
-    public \DateTime $startAt;
-
-    /**
-     *
      * @var ?\DateTime $approvedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('approved_at')]
@@ -73,6 +59,14 @@ class HrisTimeshift
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
 
     /**
      *
@@ -126,6 +120,14 @@ class HrisTimeshift
 
     /**
      *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -134,38 +136,38 @@ class HrisTimeshift
 
     /**
      * @param  string  $employeeUserId
-     * @param  \DateTime  $endAt
-     * @param  \DateTime  $startAt
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $companyId
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisCompensation>  $compensation
      * @param  ?\DateTime  $createdAt
+     * @param  ?\DateTime  $endAt
      * @param  ?string  $groupId
      * @param  ?float  $hours
      * @param  ?string  $id
      * @param  ?bool  $isApproved
      * @param  ?string  $locationId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $employeeUserId, \DateTime $endAt, \DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?bool $isApproved = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $employeeUserId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?bool $isApproved = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->employeeUserId = $employeeUserId;
-        $this->endAt = $endAt;
-        $this->startAt = $startAt;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
         $this->companyId = $companyId;
         $this->compensation = $compensation;
         $this->createdAt = $createdAt;
+        $this->endAt = $endAt;
         $this->groupId = $groupId;
         $this->hours = $hours;
         $this->id = $id;
         $this->isApproved = $isApproved;
         $this->locationId = $locationId;
         $this->raw = $raw;
+        $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;
     }
 }
