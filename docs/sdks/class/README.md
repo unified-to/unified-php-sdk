@@ -34,10 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(
-        courseId: '<id>',
-        name: '<value>',
-    ),
+    lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
 );
 
@@ -190,10 +187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsClassRequest(
-    lmsClass: new Shared\LmsClass(
-        courseId: '<id>',
-        name: '<value>',
-    ),
+    lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -297,10 +291,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(
-        courseId: '<id>',
-        name: '<value>',
-    ),
+    lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
     id: '<id>',
 );

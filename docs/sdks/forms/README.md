@@ -36,9 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateFormsFormRequest(
-    formsForm: new Shared\FormsForm(
-        name: '<value>',
-    ),
+    formsForm: new Shared\FormsForm(),
     connectionId: '<id>',
 );
 
@@ -292,9 +290,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchFormsFormRequest(
-    formsForm: new Shared\FormsForm(
-        name: '<value>',
-    ),
+    formsForm: new Shared\FormsForm(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -398,9 +394,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateFormsFormRequest(
-    formsForm: new Shared\FormsForm(
-        name: '<value>',
-    ),
+    formsForm: new Shared\FormsForm(),
     connectionId: '<id>',
     id: '<id>',
 );

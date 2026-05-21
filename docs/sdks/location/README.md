@@ -40,9 +40,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
 );
 
@@ -348,9 +346,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -558,9 +554,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );

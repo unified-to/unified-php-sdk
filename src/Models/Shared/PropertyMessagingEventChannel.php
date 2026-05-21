@@ -13,13 +13,6 @@ class PropertyMessagingEventChannel
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -78,6 +71,14 @@ class PropertyMessagingEventChannel
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
@@ -111,7 +112,6 @@ class PropertyMessagingEventChannel
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?bool  $hasSubchannels
@@ -119,15 +119,15 @@ class PropertyMessagingEventChannel
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $members
+     * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
-        $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->hasSubchannels = $hasSubchannels;
@@ -135,6 +135,7 @@ class PropertyMessagingEventChannel
         $this->isActive = $isActive;
         $this->isPrivate = $isPrivate;
         $this->members = $members;
+        $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

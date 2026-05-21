@@ -13,18 +13,19 @@ class UcComment
 {
     /**
      *
-     * @var string $content
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
-    public string $content;
-
-    /**
-     *
      * @var ?string $callId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('call_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $callId = null;
+
+    /**
+     *
+     * @var ?string $content
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $content = null;
 
     /**
      *
@@ -69,8 +70,8 @@ class UcComment
     public ?string $userId = null;
 
     /**
-     * @param  string  $content
      * @param  ?string  $callId
+     * @param  ?string  $content
      * @param  ?string  $createdAt
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
@@ -78,10 +79,10 @@ class UcComment
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $content, ?string $callId = null, ?string $createdAt = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $callId = null, ?string $content = null, ?string $createdAt = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
     {
-        $this->content = $content;
         $this->callId = $callId;
+        $this->content = $content;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->raw = $raw;

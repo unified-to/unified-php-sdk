@@ -13,13 +13,6 @@ class CalendarCalendar
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -51,6 +44,14 @@ class CalendarCalendar
     public ?bool $isPrimary = null;
 
     /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -77,23 +78,23 @@ class CalendarCalendar
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isPrimary
+     * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrimary = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
-        $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isPrimary = $isPrimary;
+        $this->name = $name;
         $this->raw = $raw;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;

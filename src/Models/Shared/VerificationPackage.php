@@ -13,13 +13,6 @@ class VerificationPackage
 {
     /**
      *
-     * @var string $id
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    public string $id;
-
-    /**
-     *
      * @var string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -103,6 +96,14 @@ class VerificationPackage
 
     /**
      *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
+     *
      * @var ?string $infoUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('info_url')]
@@ -174,7 +175,6 @@ class VerificationPackage
     public ?array $validRegions = null;
 
     /**
-     * @param  string  $id
      * @param  string  $name
      * @param  \Unified\Unified_to\Models\Shared\VerificationPackageType  $type
      * @param  ?array<string>  $aliases
@@ -185,6 +185,7 @@ class VerificationPackage
      * @param  ?string  $description
      * @param  ?bool  $hasRedirectUrl
      * @param  ?bool  $hasTargetUrl
+     * @param  ?string  $id
      * @param  ?string  $infoUrl
      * @param  ?float  $maxScore
      * @param  ?bool  $needsIpAddress
@@ -195,9 +196,8 @@ class VerificationPackage
      * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $infoUrl = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?array $validRegions = null)
+    public function __construct(string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?array $validRegions = null)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->type = $type;
         $this->aliases = $aliases;
@@ -208,6 +208,7 @@ class VerificationPackage
         $this->description = $description;
         $this->hasRedirectUrl = $hasRedirectUrl;
         $this->hasTargetUrl = $hasTargetUrl;
+        $this->id = $id;
         $this->infoUrl = $infoUrl;
         $this->maxScore = $maxScore;
         $this->needsIpAddress = $needsIpAddress;

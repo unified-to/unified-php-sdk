@@ -13,13 +13,6 @@ class KmsSpace
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -49,6 +42,14 @@ class KmsSpace
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      *
@@ -93,11 +94,11 @@ class KmsSpace
     public ?string $userId = null;
 
     /**
-     * @param  string  $name
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?string  $parentPageId
      * @param  ?array<string, mixed>  $raw
@@ -105,13 +106,13 @@ class KmsSpace
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->name = $name;
         $this->parentId = $parentId;
         $this->parentPageId = $parentPageId;
         $this->raw = $raw;

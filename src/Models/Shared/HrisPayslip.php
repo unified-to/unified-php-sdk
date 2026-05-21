@@ -12,15 +12,6 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisPayslip
 {
     /**
-     * $raw
-     *
-     * @var array<string, mixed> $raw
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>')]
-    public array $raw;
-
-    /**
      *
      * @var ?string $companyId
      */
@@ -114,6 +105,16 @@ class HrisPayslip
     public ?PaymentType $paymentType = null;
 
     /**
+     * $raw
+     *
+     * @var ?array<string, mixed> $raw
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $raw = null;
+
+    /**
      *
      * @var ?\DateTime $startAt
      */
@@ -138,7 +139,6 @@ class HrisPayslip
     public ?string $userId = null;
 
     /**
-     * @param  array<string, mixed>  $raw
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -150,14 +150,14 @@ class HrisPayslip
      * @param  ?float  $netAmount
      * @param  ?\DateTime  $paidAt
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentType  $paymentType
+     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(array $raw, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
-        $this->raw = $raw;
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
@@ -169,6 +169,7 @@ class HrisPayslip
         $this->netAmount = $netAmount;
         $this->paidAt = $paidAt;
         $this->paymentType = $paymentType;
+        $this->raw = $raw;
         $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;

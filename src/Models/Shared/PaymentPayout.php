@@ -13,13 +13,6 @@ class PaymentPayout
 {
     /**
      *
-     * @var float $totalAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
-    public float $totalAmount;
-
-    /**
-     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -71,6 +64,14 @@ class PaymentPayout
 
     /**
      *
+     * @var ?float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalAmount = null;
+
+    /**
+     *
      * @var ?string $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -78,25 +79,25 @@ class PaymentPayout
     public ?string $updatedAt = null;
 
     /**
-     * @param  float  $totalAmount
      * @param  ?string  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentPayoutStatus  $status
+     * @param  ?float  $totalAmount
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(float $totalAmount, ?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?string $updatedAt = null)
+    public function __construct(?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?float $totalAmount = null, ?string $updatedAt = null)
     {
-        $this->totalAmount = $totalAmount;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
         $this->notes = $notes;
         $this->raw = $raw;
         $this->status = $status;
+        $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }
 }

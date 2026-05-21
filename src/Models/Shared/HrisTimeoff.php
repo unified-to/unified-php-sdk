@@ -13,10 +13,10 @@ class HrisTimeoff
 {
     /**
      *
-     * @var \DateTime $startAt
+     * @var string $userId
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
-    public \DateTime $startAt;
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
+    public string $userId;
 
     /**
      *
@@ -102,6 +102,14 @@ class HrisTimeoff
 
     /**
      *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\HrisTimeoffStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
@@ -127,15 +135,7 @@ class HrisTimeoff
     public ?\DateTime $updatedAt = null;
 
     /**
-     *
-     * @var ?string $userId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('user_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $userId = null;
-
-    /**
-     * @param  \DateTime  $startAt
+     * @param  string  $userId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
      * @param  ?string  $comments
@@ -146,15 +146,15 @@ class HrisTimeoff
      * @param  ?bool  $isPaid
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reason
+     * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoffStatus  $status
      * @param  ?\Unified\Unified_to\Models\Shared\HrisTimeoffType  $type
      * @param  ?\DateTime  $updatedAt
-     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(\DateTime $startAt, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
-        $this->startAt = $startAt;
+        $this->userId = $userId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
         $this->comments = $comments;
@@ -165,9 +165,9 @@ class HrisTimeoff
         $this->isPaid = $isPaid;
         $this->raw = $raw;
         $this->reason = $reason;
+        $this->startAt = $startAt;
         $this->status = $status;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
-        $this->userId = $userId;
     }
 }

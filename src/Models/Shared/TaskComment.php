@@ -13,13 +13,6 @@ class TaskComment
 {
     /**
      *
-     * @var string $text
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('text')]
-    public string $text;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -54,6 +47,14 @@ class TaskComment
 
     /**
      *
+     * @var ?string $text
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('text')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $text = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -77,23 +78,23 @@ class TaskComment
     public ?string $userName = null;
 
     /**
-     * @param  string  $text
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taskId
+     * @param  ?string  $text
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $userName
      * @phpstan-pure
      */
-    public function __construct(string $text, ?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?string $taskId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?string $taskId = null, ?string $text = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
     {
-        $this->text = $text;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->raw = $raw;
         $this->taskId = $taskId;
+        $this->text = $text;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
         $this->userName = $userName;

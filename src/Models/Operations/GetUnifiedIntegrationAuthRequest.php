@@ -66,6 +66,14 @@ class GetUnifiedIntegrationAuthRequest
     public ?bool $redirect = null;
 
     /**
+     * Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true.
+     *
+     * @var ?string $region
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=region')]
+    public ?string $region = null;
+
+    /**
      * $scopes
      *
      * @var ?array<string> $scopes
@@ -105,13 +113,14 @@ class GetUnifiedIntegrationAuthRequest
      * @param  ?string  $failureRedirect
      * @param  ?string  $lang
      * @param  ?bool  $redirect
+     * @param  ?string  $region
      * @param  ?array<string>  $scopes
      * @param  ?string  $state
      * @param  ?string  $subdomain
      * @param  ?string  $successRedirect
      * @phpstan-pure
      */
-    public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
+    public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?string $region = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
     {
         $this->integrationType = $integrationType;
         $this->workspaceId = $workspaceId;
@@ -120,6 +129,7 @@ class GetUnifiedIntegrationAuthRequest
         $this->failureRedirect = $failureRedirect;
         $this->lang = $lang;
         $this->redirect = $redirect;
+        $this->region = $region;
         $this->scopes = $scopes;
         $this->state = $state;
         $this->subdomain = $subdomain;

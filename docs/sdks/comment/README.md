@@ -46,9 +46,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
 );
 
@@ -100,9 +98,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(
-        text: '<value>',
-    ),
+    taskComment: new Shared\TaskComment(),
     connectionId: '<id>',
 );
 
@@ -154,9 +150,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
 );
 
@@ -511,9 +505,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -566,9 +558,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskCommentRequest(
-    taskComment: new Shared\TaskComment(
-        text: '<value>',
-    ),
+    taskComment: new Shared\TaskComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -621,9 +611,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -829,9 +817,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -884,9 +870,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(
-        text: '<value>',
-    ),
+    taskComment: new Shared\TaskComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -939,9 +923,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );

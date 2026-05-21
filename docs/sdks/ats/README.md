@@ -233,9 +233,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(
-        name: '<value>',
-    ),
+    atsCompany: new Shared\AtsCompany(),
     connectionId: '<id>',
 );
 
@@ -1512,9 +1510,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(
-        name: '<value>',
-    ),
+    atsCompany: new Shared\AtsCompany(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2346,9 +2342,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(
-        name: '<value>',
-    ),
+    atsCompany: new Shared\AtsCompany(),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -34,9 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
 );
 
@@ -189,9 +187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -295,9 +291,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );

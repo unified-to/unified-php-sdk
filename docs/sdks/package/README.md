@@ -37,8 +37,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        id: '<id>',
-        name: '<value>',
         type: Shared\AssessmentPackageType::ReferenceCheck,
     ),
     connectionId: '<id>',
@@ -295,8 +293,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        id: '<id>',
-        name: '<value>',
         type: Shared\AssessmentPackageType::BackgroundCheck,
     ),
     connectionId: '<id>',
@@ -403,8 +399,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        id: '<id>',
-        name: '<value>',
         type: Shared\AssessmentPackageType::Other,
     ),
     connectionId: '<id>',

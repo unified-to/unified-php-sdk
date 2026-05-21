@@ -13,13 +13,6 @@ class CommerceLocation
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCommerceLocationAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -130,6 +123,14 @@ class CommerceLocation
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
@@ -197,7 +198,6 @@ class CommerceLocation
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $name
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCommerceLocationAddress  $address
      * @param  ?array<string>  $categories
      * @param  ?\DateTime  $createdAt
@@ -211,6 +211,7 @@ class CommerceLocation
      * @param  ?\Unified\Unified_to\Models\Shared\LocationType  $locationType
      * @param  ?float  $longitude
      * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?string  $priceLevel
      * @param  ?float  $rating
@@ -221,9 +222,8 @@ class CommerceLocation
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyCommerceLocationAddress $address = null, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $imageUrl = null, ?bool $isActive = null, ?string $languageLocale = null, ?float $latitude = null, ?LocationType $locationType = null, ?float $longitude = null, ?array $media = null, ?string $parentId = null, ?string $priceLevel = null, ?float $rating = null, ?array $raw = null, ?float $reviewCount = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?PropertyCommerceLocationAddress $address = null, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $imageUrl = null, ?bool $isActive = null, ?string $languageLocale = null, ?float $latitude = null, ?LocationType $locationType = null, ?float $longitude = null, ?array $media = null, ?string $name = null, ?string $parentId = null, ?string $priceLevel = null, ?float $rating = null, ?array $raw = null, ?float $reviewCount = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
-        $this->name = $name;
         $this->address = $address;
         $this->categories = $categories;
         $this->createdAt = $createdAt;
@@ -237,6 +237,7 @@ class CommerceLocation
         $this->locationType = $locationType;
         $this->longitude = $longitude;
         $this->media = $media;
+        $this->name = $name;
         $this->parentId = $parentId;
         $this->priceLevel = $priceLevel;
         $this->rating = $rating;

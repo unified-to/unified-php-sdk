@@ -13,20 +13,6 @@ class PaymentRefund
 {
     /**
      *
-     * @var string $paymentId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_id')]
-    public string $paymentId;
-
-    /**
-     *
-     * @var float $totalAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
-    public float $totalAmount;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -58,6 +44,14 @@ class PaymentRefund
     public ?string $notes = null;
 
     /**
+     *
+     * @var ?string $paymentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paymentId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -86,6 +80,14 @@ class PaymentRefund
 
     /**
      *
+     * @var ?float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalAmount = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -93,29 +95,29 @@ class PaymentRefund
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $paymentId
-     * @param  float  $totalAmount
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $notes
+     * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentRefundStatus  $status
+     * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $paymentId, float $totalAmount, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?string $paymentId = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
-        $this->paymentId = $paymentId;
-        $this->totalAmount = $totalAmount;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
         $this->notes = $notes;
+        $this->paymentId = $paymentId;
         $this->raw = $raw;
         $this->reference = $reference;
         $this->status = $status;
+        $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }
 }

@@ -13,19 +13,11 @@ class AssessmentPackageRegion
 {
     /**
      *
-     * @var float $costAmount
+     * @var ?float $costAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_amount')]
-    public float $costAmount;
-
-    /**
-     * Countryregion codes where this package is available ({country}-{state} or {country})
-     *
-     * @var array<string> $regions
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('regions')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
-    public array $regions;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $costAmount = null;
 
     /**
      *
@@ -44,17 +36,27 @@ class AssessmentPackageRegion
     public ?float $processingTime = null;
 
     /**
-     * @param  float  $costAmount
-     * @param  array<string>  $regions
+     * Countryregion codes where this package is available ({country}-{state} or {country})
+     *
+     * @var ?array<string> $regions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('regions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $regions = null;
+
+    /**
+     * @param  ?float  $costAmount
      * @param  ?string  $currency
      * @param  ?float  $processingTime
+     * @param  ?array<string>  $regions
      * @phpstan-pure
      */
-    public function __construct(float $costAmount, array $regions, ?string $currency = null, ?float $processingTime = null)
+    public function __construct(?float $costAmount = null, ?string $currency = null, ?float $processingTime = null, ?array $regions = null)
     {
         $this->costAmount = $costAmount;
-        $this->regions = $regions;
         $this->currency = $currency;
         $this->processingTime = $processingTime;
+        $this->regions = $regions;
     }
 }

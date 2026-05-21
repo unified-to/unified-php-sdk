@@ -13,13 +13,6 @@ class FormsForm
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?string $confirmationMessage
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('confirmation_message')]
@@ -102,6 +95,14 @@ class FormsForm
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $publishedUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('published_url')]
@@ -135,7 +136,6 @@ class FormsForm
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $name
      * @param  ?string  $confirmationMessage
      * @param  ?string  $confirmationRedirectUrl
      * @param  ?\DateTime  $createdAt
@@ -146,15 +146,15 @@ class FormsForm
      * @param  ?bool  $hasShuffleQuestions
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $name
      * @param  ?string  $publishedUrl
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $responseCount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, ?string $confirmationMessage = null, ?string $confirmationRedirectUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $fields = null, ?bool $hasMultipleSubmissions = null, ?bool $hasProgressBar = null, ?bool $hasShuffleQuestions = null, ?string $id = null, ?bool $isActive = null, ?string $publishedUrl = null, ?array $raw = null, ?float $responseCount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $confirmationMessage = null, ?string $confirmationRedirectUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $fields = null, ?bool $hasMultipleSubmissions = null, ?bool $hasProgressBar = null, ?bool $hasShuffleQuestions = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $publishedUrl = null, ?array $raw = null, ?float $responseCount = null, ?\DateTime $updatedAt = null)
     {
-        $this->name = $name;
         $this->confirmationMessage = $confirmationMessage;
         $this->confirmationRedirectUrl = $confirmationRedirectUrl;
         $this->createdAt = $createdAt;
@@ -165,6 +165,7 @@ class FormsForm
         $this->hasShuffleQuestions = $hasShuffleQuestions;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->name = $name;
         $this->publishedUrl = $publishedUrl;
         $this->raw = $raw;
         $this->responseCount = $responseCount;

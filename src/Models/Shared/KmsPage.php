@@ -13,13 +13,6 @@ class KmsPage
 {
     /**
      *
-     * @var string $title
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
-    public string $title;
-
-    /**
-     *
      * @var \Unified\Unified_to\Models\Shared\KmsPageType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
@@ -104,6 +97,14 @@ class KmsPage
 
     /**
      *
+     * @var ?string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $title = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -127,7 +128,6 @@ class KmsPage
     public ?string $webUrl = null;
 
     /**
-     * @param  string  $title
      * @param  \Unified\Unified_to\Models\Shared\KmsPageType  $type
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $downloadUrl
@@ -138,14 +138,14 @@ class KmsPage
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $spaceId
+     * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $title, KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?string $spaceId = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?string $spaceId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
-        $this->title = $title;
         $this->type = $type;
         $this->createdAt = $createdAt;
         $this->downloadUrl = $downloadUrl;
@@ -156,6 +156,7 @@ class KmsPage
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->spaceId = $spaceId;
+        $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
         $this->webUrl = $webUrl;

@@ -34,9 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
 );
 
@@ -189,9 +187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -295,9 +291,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );

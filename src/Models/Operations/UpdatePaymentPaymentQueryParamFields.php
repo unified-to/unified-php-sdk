@@ -16,13 +16,15 @@ enum UpdatePaymentPaymentQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case TotalAmount = 'total_amount';
     case ContactId = 'contact_id';
-    case Type = 'type';
     case PaymentMethod = 'payment_method';
+    case Type = 'type';
     case Currency = 'currency';
     case Notes = 'notes';
     case InvoiceId = 'invoice_id';
     case BillId = 'bill_id';
+    case LinkId = 'link_id';
     case AccountId = 'account_id';
     case Reference = 'reference';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

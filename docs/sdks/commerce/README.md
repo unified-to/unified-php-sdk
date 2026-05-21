@@ -131,9 +131,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(
-        available: 7463.62,
-    ),
+    commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
 );
 
@@ -289,9 +287,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
 );
 
@@ -395,9 +391,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
 );
 
@@ -1414,9 +1408,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(
-        available: 7859.84,
-    ),
+    commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1575,9 +1567,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1683,9 +1673,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2254,9 +2242,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(
-        available: 4497.29,
-    ),
+    commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2415,9 +2401,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(
-        name: '<value>',
-    ),
+    commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2523,9 +2507,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(
-        itemId: '<id>',
-    ),
+    commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );

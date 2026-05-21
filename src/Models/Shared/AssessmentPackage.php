@@ -14,20 +14,6 @@ class AssessmentPackage
 {
     /**
      *
-     * @var string $id
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
-    public string $id;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var \Unified\Unified_to\Models\Shared\AssessmentPackageType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
@@ -86,6 +72,14 @@ class AssessmentPackage
 
     /**
      *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
+     *
      * @var ?string $infoUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('info_url')]
@@ -109,6 +103,14 @@ class AssessmentPackage
     #[\Speakeasy\Serializer\Annotation\SerializedName('max_score')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $maxScore = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      *
@@ -175,8 +177,6 @@ class AssessmentPackage
     public ?string $workspaceId = null;
 
     /**
-     * @param  string  $id
-     * @param  string  $name
      * @param  \Unified\Unified_to\Models\Shared\AssessmentPackageType  $type
      * @param  ?array<string>  $aliases
      * @param  ?string  $connectionId
@@ -184,9 +184,11 @@ class AssessmentPackage
      * @param  ?string  $description
      * @param  ?bool  $hasRedirectUrl
      * @param  ?bool  $hasTargetUrl
+     * @param  ?string  $id
      * @param  ?string  $infoUrl
      * @param  ?array<string>  $integrationTypes
      * @param  ?float  $maxScore
+     * @param  ?string  $name
      * @param  ?bool  $needsIpAddress
      * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentParameter>  $parameters
      * @param  ?array<string, mixed>  $raw
@@ -196,10 +198,8 @@ class AssessmentPackage
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $id, string $name, AssessmentPackageType $type, ?array $aliases = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $infoUrl = null, ?array $integrationTypes = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $regions = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
+    public function __construct(AssessmentPackageType $type, ?array $aliases = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?array $integrationTypes = null, ?float $maxScore = null, ?string $name = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $regions = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
     {
-        $this->id = $id;
-        $this->name = $name;
         $this->type = $type;
         $this->aliases = $aliases;
         $this->connectionId = $connectionId;
@@ -207,9 +207,11 @@ class AssessmentPackage
         $this->description = $description;
         $this->hasRedirectUrl = $hasRedirectUrl;
         $this->hasTargetUrl = $hasTargetUrl;
+        $this->id = $id;
         $this->infoUrl = $infoUrl;
         $this->integrationTypes = $integrationTypes;
         $this->maxScore = $maxScore;
+        $this->name = $name;
         $this->needsIpAddress = $needsIpAddress;
         $this->parameters = $parameters;
         $this->raw = $raw;

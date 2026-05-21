@@ -30,12 +30,12 @@ enum CreateAccountingCreditmemoQueryParamFields: string
     case Currency = 'currency';
     case Notes = 'notes';
     case RefundReason = 'refund_reason';
-    case OrganizationId = 'organization_id';
     case Lineitems = 'lineitems';
     case Status = 'status';
     case Url = 'url';
     case PaymentCollectionMethod = 'payment_collection_method';
     case Attachments = 'attachments';
     case Send = 'send';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

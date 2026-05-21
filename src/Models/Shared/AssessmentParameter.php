@@ -12,13 +12,6 @@ namespace Unified\Unified_to\Models\Shared;
 class AssessmentParameter
 {
     /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
      * Valid file MIME types for FILE type
      *
      * @var ?array<string> $fileTypes
@@ -43,6 +36,14 @@ class AssessmentParameter
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_required')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isRequired = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      * Options for MULTIPLE_CHOICE and MULTIPLE_SELECT
@@ -82,22 +83,22 @@ class AssessmentParameter
     public ?array $validRegions = null;
 
     /**
-     * @param  string  $name
      * @param  ?array<string>  $fileTypes
      * @param  ?string  $id
      * @param  ?bool  $isRequired
+     * @param  ?string  $name
      * @param  ?array<string>  $options
      * @param  ?string  $publicQuestion
      * @param  ?\Unified\Unified_to\Models\Shared\AssessmentParameterType  $type
      * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */
-    public function __construct(string $name, ?array $fileTypes = null, ?string $id = null, ?bool $isRequired = null, ?array $options = null, ?string $publicQuestion = null, ?AssessmentParameterType $type = null, ?array $validRegions = null)
+    public function __construct(?array $fileTypes = null, ?string $id = null, ?bool $isRequired = null, ?string $name = null, ?array $options = null, ?string $publicQuestion = null, ?AssessmentParameterType $type = null, ?array $validRegions = null)
     {
-        $this->name = $name;
         $this->fileTypes = $fileTypes;
         $this->id = $id;
         $this->isRequired = $isRequired;
+        $this->name = $name;
         $this->options = $options;
         $this->publicQuestion = $publicQuestion;
         $this->type = $type;

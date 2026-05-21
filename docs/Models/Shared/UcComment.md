@@ -6,7 +6,7 @@
 | Field                  | Type                   | Required               | Description            |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | `callId`               | *?string*              | :heavy_minus_sign:     | N/A                    |
-| `content`              | *string*               | :heavy_check_mark:     | N/A                    |
+| `content`              | *?string*              | :heavy_minus_sign:     | N/A                    |
 | `createdAt`            | *?string*              | :heavy_minus_sign:     | N/A                    |
 | `id`                   | *?string*              | :heavy_minus_sign:     | N/A                    |
 | `raw`                  | array<string, *mixed*> | :heavy_minus_sign:     | N/A                    |

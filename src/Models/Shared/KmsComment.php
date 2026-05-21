@@ -13,10 +13,11 @@ class KmsComment
 {
     /**
      *
-     * @var string $content
+     * @var ?string $content
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
-    public string $content;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $content = null;
 
     /**
      *
@@ -95,7 +96,7 @@ class KmsComment
     public ?string $userId = null;
 
     /**
-     * @param  string  $content
+     * @param  ?string  $content
      * @param  ?\Unified\Unified_to\Models\Shared\ContentType  $contentType
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
@@ -107,7 +108,7 @@ class KmsComment
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $content, ?ContentType $contentType = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $pageId = null, ?string $parentId = null, ?array $raw = null, ?KmsCommentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $content = null, ?ContentType $contentType = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $pageId = null, ?string $parentId = null, ?array $raw = null, ?KmsCommentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->content = $content;
         $this->contentType = $contentType;

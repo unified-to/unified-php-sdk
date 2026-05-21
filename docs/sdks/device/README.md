@@ -34,9 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
 );
 
@@ -189,9 +187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -295,9 +291,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );

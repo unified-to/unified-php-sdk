@@ -12,13 +12,6 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisDevice
 {
     /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
      * $adminUserIds
      *
      * @var ?array<string> $adminUserIds
@@ -126,6 +119,14 @@ class HrisDevice
 
     /**
      *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
+     *
      * @var ?string $os
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('os')]
@@ -177,7 +178,6 @@ class HrisDevice
     public ?string $version = null;
 
     /**
-     * @param  string  $name
      * @param  ?array<string>  $adminUserIds
      * @param  ?string  $assetTag
      * @param  ?\DateTime  $createdAt
@@ -191,6 +191,7 @@ class HrisDevice
      * @param  ?string  $locationId
      * @param  ?string  $manufacturer
      * @param  ?string  $model
+     * @param  ?string  $name
      * @param  ?string  $os
      * @param  ?string  $osVersion
      * @param  ?array<string, mixed>  $raw
@@ -199,9 +200,8 @@ class HrisDevice
      * @param  ?string  $version
      * @phpstan-pure
      */
-    public function __construct(string $name, ?array $adminUserIds = null, ?string $assetTag = null, ?\DateTime $createdAt = null, ?bool $hasAntivirus = null, ?bool $hasFirewall = null, ?bool $hasHdEncrypted = null, ?bool $hasPasswordManager = null, ?bool $hasScreenlock = null, ?string $id = null, ?bool $isMissing = null, ?string $locationId = null, ?string $manufacturer = null, ?string $model = null, ?string $os = null, ?string $osVersion = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $version = null)
+    public function __construct(?array $adminUserIds = null, ?string $assetTag = null, ?\DateTime $createdAt = null, ?bool $hasAntivirus = null, ?bool $hasFirewall = null, ?bool $hasHdEncrypted = null, ?bool $hasPasswordManager = null, ?bool $hasScreenlock = null, ?string $id = null, ?bool $isMissing = null, ?string $locationId = null, ?string $manufacturer = null, ?string $model = null, ?string $name = null, ?string $os = null, ?string $osVersion = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $version = null)
     {
-        $this->name = $name;
         $this->adminUserIds = $adminUserIds;
         $this->assetTag = $assetTag;
         $this->createdAt = $createdAt;
@@ -215,6 +215,7 @@ class HrisDevice
         $this->locationId = $locationId;
         $this->manufacturer = $manufacturer;
         $this->model = $model;
+        $this->name = $name;
         $this->os = $os;
         $this->osVersion = $osVersion;
         $this->raw = $raw;

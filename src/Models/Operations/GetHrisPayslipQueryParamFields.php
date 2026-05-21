@@ -24,6 +24,6 @@ enum GetHrisPayslipQueryParamFields: string
     case GrossAmount = 'gross_amount';
     case NetAmount = 'net_amount';
     case Details = 'details';
-    case Raw = 'raw';
     case Deduction = 'deduction';
+    case Raw = 'raw';
 }

@@ -46,9 +46,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
 );
 
@@ -101,7 +99,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        title: '<value>',
         type: Shared\KmsPageType::Text,
     ),
     connectionId: '<id>',
@@ -155,9 +152,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
 );
 
@@ -512,9 +507,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -568,7 +561,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        title: '<value>',
         type: Shared\KmsPageType::Other,
     ),
     connectionId: '<id>',
@@ -623,9 +615,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -831,9 +821,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(
-        content: '<value>',
-    ),
+    kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -887,7 +875,6 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        title: '<value>',
         type: Shared\KmsPageType::Other,
     ),
     connectionId: '<id>',
@@ -942,9 +929,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(
-        name: '<value>',
-    ),
+    kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );

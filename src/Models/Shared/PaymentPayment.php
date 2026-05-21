@@ -61,11 +61,27 @@ class PaymentPayment
 
     /**
      *
+     * @var ?string $linkId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('link_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $linkId = null;
+
+    /**
+     *
      * @var ?string $notes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
+
+    /**
+     *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
 
     /**
      *
@@ -134,7 +150,9 @@ class PaymentPayment
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $invoiceId
+     * @param  ?string  $linkId
      * @param  ?string  $notes
+     * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
@@ -143,7 +161,7 @@ class PaymentPayment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $notes = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
         $this->billId = $billId;
@@ -151,7 +169,9 @@ class PaymentPayment
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->invoiceId = $invoiceId;
+        $this->linkId = $linkId;
         $this->notes = $notes;
+        $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->raw = $raw;
         $this->reference = $reference;

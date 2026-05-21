@@ -13,13 +13,6 @@ class CommerceReviewComment
 {
     /**
      *
-     * @var string $content
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
-    public string $content;
-
-    /**
-     *
      * @var ?string $authorAvatarUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('author_avatar_url')]
@@ -49,6 +42,14 @@ class CommerceReviewComment
     #[\Speakeasy\Serializer\Annotation\SerializedName('author_name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $authorName = null;
+
+    /**
+     *
+     * @var ?string $content
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $content = null;
 
     /**
      *
@@ -136,11 +137,11 @@ class CommerceReviewComment
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $content
      * @param  ?string  $authorAvatarUrl
      * @param  ?string  $authorEmail
      * @param  ?string  $authorLocation
      * @param  ?string  $authorName
+     * @param  ?string  $content
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $helpfulVotes
      * @param  ?string  $id
@@ -153,13 +154,13 @@ class CommerceReviewComment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $content, ?string $authorAvatarUrl = null, ?string $authorEmail = null, ?string $authorLocation = null, ?string $authorName = null, ?\DateTime $createdAt = null, ?float $helpfulVotes = null, ?string $id = null, ?bool $isPublic = null, ?bool $isVerified = null, ?array $metadata = null, ?array $raw = null, ?CommerceReviewCommentStatus $status = null, ?float $unhelpfulVotes = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $authorAvatarUrl = null, ?string $authorEmail = null, ?string $authorLocation = null, ?string $authorName = null, ?string $content = null, ?\DateTime $createdAt = null, ?float $helpfulVotes = null, ?string $id = null, ?bool $isPublic = null, ?bool $isVerified = null, ?array $metadata = null, ?array $raw = null, ?CommerceReviewCommentStatus $status = null, ?float $unhelpfulVotes = null, ?\DateTime $updatedAt = null)
     {
-        $this->content = $content;
         $this->authorAvatarUrl = $authorAvatarUrl;
         $this->authorEmail = $authorEmail;
         $this->authorLocation = $authorLocation;
         $this->authorName = $authorName;
+        $this->content = $content;
         $this->createdAt = $createdAt;
         $this->helpfulVotes = $helpfulVotes;
         $this->id = $id;

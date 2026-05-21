@@ -13,10 +13,11 @@ class CommerceInventory
 {
     /**
      *
-     * @var float $available
+     * @var ?float $available
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('available')]
-    public float $available;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $available = null;
 
     /**
      *
@@ -77,7 +78,7 @@ class CommerceInventory
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  float  $available
+     * @param  ?float  $available
      * @param  ?string  $id
      * @param  ?string  $itemId
      * @param  ?string  $itemOptionId
@@ -87,7 +88,7 @@ class CommerceInventory
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(float $available, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $available = null, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->available = $available;
         $this->id = $id;

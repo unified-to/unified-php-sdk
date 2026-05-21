@@ -13,13 +13,6 @@ class AtsCompany
 {
     /**
      *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
-
-    /**
-     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress $address
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('address')]
@@ -52,6 +45,14 @@ class AtsCompany
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
+
+    /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
 
     /**
      *
@@ -106,11 +107,11 @@ class AtsCompany
     public ?string $websiteUrl = null;
 
     /**
-     * @param  string  $name
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
+     * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?string  $phone
      * @param  ?array<string, mixed>  $raw
@@ -119,13 +120,13 @@ class AtsCompany
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
-        $this->name = $name;
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->metadata = $metadata;
+        $this->name = $name;
         $this->parentId = $parentId;
         $this->phone = $phone;
         $this->raw = $raw;

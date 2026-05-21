@@ -298,9 +298,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
 );
 
@@ -500,7 +498,6 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -510,7 +507,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        startAt: Utils\Utils::parseDateTime('2024-09-03T22:31:51.863Z'),
+        userId: '<id>',
     ),
     connectionId: '<id>',
 );
@@ -1940,9 +1937,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2146,7 +2141,6 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2156,7 +2150,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        startAt: Utils\Utils::parseDateTime('2024-01-26T05:49:44.056Z'),
+        userId: '<id>',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2987,9 +2981,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(
-        name: '<value>',
-    ),
+    hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3193,7 +3185,6 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
-use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3203,7 +3194,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        startAt: Utils\Utils::parseDateTime('2026-02-26T01:59:20.061Z'),
+        userId: '<id>',
     ),
     connectionId: '<id>',
     id: '<id>',

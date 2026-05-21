@@ -48,9 +48,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
 );
 
@@ -610,9 +608,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -924,9 +920,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcCommentRequest(
-    ucComment: new Shared\UcComment(
-        content: '<value>',
-    ),
+    ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );

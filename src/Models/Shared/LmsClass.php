@@ -13,17 +13,11 @@ class LmsClass
 {
     /**
      *
-     * @var string $courseId
+     * @var ?string $courseId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('course_id')]
-    public string $courseId;
-
-    /**
-     *
-     * @var string $name
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
-    public string $name;
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $courseId = null;
 
     /**
      *
@@ -80,6 +74,14 @@ class LmsClass
     public ?array $media = null;
 
     /**
+     *
+     * @var ?string $name
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $name = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -108,29 +110,29 @@ class LmsClass
     public ?\DateTime $updatedAt = null;
 
     /**
-     * @param  string  $courseId
-     * @param  string  $name
+     * @param  ?string  $courseId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
+     * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $studentIds
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $courseId, string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructorIds = null, ?array $languages = null, ?array $media = null, ?array $raw = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $courseId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructorIds = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?array $raw = null, ?array $studentIds = null, ?\DateTime $updatedAt = null)
     {
         $this->courseId = $courseId;
-        $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->instructorIds = $instructorIds;
         $this->languages = $languages;
         $this->media = $media;
+        $this->name = $name;
         $this->raw = $raw;
         $this->studentIds = $studentIds;
         $this->updatedAt = $updatedAt;
