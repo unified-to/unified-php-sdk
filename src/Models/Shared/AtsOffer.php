@@ -62,16 +62,6 @@ class AtsOffer
     public ?string $id = null;
 
     /**
-     * $raw
-     *
-     * @var ?array<string, mixed> $raw
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('raw')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $raw = null;
-
-    /**
      *
      * @var ?\DateTime $rejectedAt
      */
@@ -119,7 +109,6 @@ class AtsOffer
      * @param  ?string  $creatorUserId
      * @param  ?string  $employeeUserId
      * @param  ?string  $id
-     * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $rejectedAt
      * @param  ?\DateTime  $sentAt
      * @param  ?\DateTime  $startAt
@@ -127,7 +116,7 @@ class AtsOffer
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $acceptedAt = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?string $employeeUserId = null, ?string $id = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?\DateTime $sentAt = null, ?\DateTime $startAt = null, ?AtsOfferStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $acceptedAt = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?string $employeeUserId = null, ?string $id = null, ?\DateTime $rejectedAt = null, ?\DateTime $sentAt = null, ?\DateTime $startAt = null, ?AtsOfferStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->acceptedAt = $acceptedAt;
         $this->compensation = $compensation;
@@ -135,7 +124,6 @@ class AtsOffer
         $this->creatorUserId = $creatorUserId;
         $this->employeeUserId = $employeeUserId;
         $this->id = $id;
-        $this->raw = $raw;
         $this->rejectedAt = $rejectedAt;
         $this->sentAt = $sentAt;
         $this->startAt = $startAt;
