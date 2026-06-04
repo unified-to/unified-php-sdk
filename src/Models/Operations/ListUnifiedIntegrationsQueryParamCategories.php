@@ -39,4 +39,5 @@ enum ListUnifiedIntegrationsQueryParamCategories: string
     case Shipping = 'shipping';
     case Assessment = 'assessment';
     case Signing = 'signing';
+    case Clubs = 'clubs';
 }

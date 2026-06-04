@@ -6,8 +6,10 @@
 
 * [createCommerceLocation](#createcommercelocation) - Create a location
 * [createHrisLocation](#createhrislocation) - Create a location
+* [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
 * [listHrisLocations](#listhrislocations) - List all locations
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
@@ -121,6 +123,57 @@ if ($response->hrisLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getClubsLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetClubsLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->getClubsLocation(
+    request: $request
+);
+
+if ($response->clubsLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsLocationRequest](../../Models/Operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetClubsLocationResponse](../../Models/Operations/GetClubsLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getCommerceLocation
 
 Retrieve a location
@@ -216,6 +269,56 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listClubsLocations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListClubsLocationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->location->listClubsLocations(
+    request: $request
+);
+
+if ($response->clubsLocations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListClubsLocationsRequest](../../Models/Operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListClubsLocationsResponse](../../Models/Operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 

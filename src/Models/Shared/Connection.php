@@ -137,6 +137,22 @@ class Connection
 
     /**
      *
+     * @var ?string $secretsmanagerId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('secretsmanager_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $secretsmanagerId = null;
+
+    /**
+     *
+     * @var ?string $secretsmanagerKey
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('secretsmanager_key')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $secretsmanagerKey = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -176,11 +192,13 @@ class Connection
      * @param  ?bool  $isPaused
      * @param  ?\DateTime  $lastHealthyAt
      * @param  ?\DateTime  $lastUnhealthyAt
+     * @param  ?string  $secretsmanagerId
+     * @param  ?string  $secretsmanagerKey
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?string $authAzureKeyvaultId = null, ?string $authGcpSecretName = null, ?string $authHashiVaultPath = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?string $authAzureKeyvaultId = null, ?string $authGcpSecretName = null, ?string $authHashiVaultPath = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?string $secretsmanagerId = null, ?string $secretsmanagerKey = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;
@@ -197,6 +215,8 @@ class Connection
         $this->isPaused = $isPaused;
         $this->lastHealthyAt = $lastHealthyAt;
         $this->lastUnhealthyAt = $lastUnhealthyAt;
+        $this->secretsmanagerId = $secretsmanagerId;
+        $this->secretsmanagerKey = $secretsmanagerKey;
         $this->updatedAt = $updatedAt;
         $this->workspaceId = $workspaceId;
         $this->environment = $environment;

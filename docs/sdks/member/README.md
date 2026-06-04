@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createMartechMember](#createmartechmember) - Create a member
+* [getClubsMember](#getclubsmember) - Retrieve a member
 * [getMartechMember](#getmartechmember) - Retrieve a member
+* [listClubsMembers](#listclubsmembers) - List all members
 * [listMartechMembers](#listmartechmembers) - List all members
 * [patchMartechMember](#patchmartechmember) - Update a member
 * [removeMartechMember](#removemartechmember) - Remove a member
@@ -63,6 +65,57 @@ if ($response->marketingMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getClubsMember
+
+Retrieve a member
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetClubsMemberRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->member->getClubsMember(
+    request: $request
+);
+
+if ($response->clubsMember !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetClubsMemberRequest](../../Models/Operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetClubsMemberResponse](../../Models/Operations/GetClubsMemberResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getMartechMember
 
 Retrieve a member
@@ -107,6 +160,56 @@ if ($response->marketingMember !== null) {
 ### Response
 
 **[?Operations\GetMartechMemberResponse](../../Models/Operations/GetMartechMemberResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listClubsMembers
+
+List all members
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListClubsMembersRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->member->listClubsMembers(
+    request: $request
+);
+
+if ($response->clubsMembers !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListClubsMembersRequest](../../Models/Operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListClubsMembersResponse](../../Models/Operations/ListClubsMembersResponse.md)**
 
 ### Errors
 

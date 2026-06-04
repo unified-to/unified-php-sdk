@@ -7,8 +7,10 @@
 * [createCalendarEvent](#createcalendarevent) - Create an event
 * [createCrmEvent](#createcrmevent) - Create an event
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
+* [getClubsEvent](#getclubsevent) - Retrieve an event
 * [getCrmEvent](#getcrmevent) - Retrieve an event
 * [listCalendarEvents](#listcalendarevents) - List all events
+* [listClubsEvents](#listclubsevents) - List all events
 * [listCrmEvents](#listcrmevents) - List all events
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
@@ -174,6 +176,57 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getClubsEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetClubsEventRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->getClubsEvent(
+    request: $request
+);
+
+if ($response->clubsEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetClubsEventRequest](../../Models/Operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetClubsEventResponse](../../Models/Operations/GetClubsEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getCrmEvent
 
 Retrieve an event
@@ -268,6 +321,56 @@ if ($response->calendarEvents !== null) {
 ### Response
 
 **[?Operations\ListCalendarEventsResponse](../../Models/Operations/ListCalendarEventsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listClubsEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListClubsEventsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->event->listClubsEvents(
+    request: $request
+);
+
+if ($response->clubsEvents !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListClubsEventsRequest](../../Models/Operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\ListClubsEventsResponse](../../Models/Operations/ListClubsEventsResponse.md)**
 
 ### Errors
 

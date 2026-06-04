@@ -8,9 +8,11 @@
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
 * [getAdsGroup](#getadsgroup) - Retrieve a group
+* [getClubsGroup](#getclubsgroup) - Retrieve a group
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
 * [listAdsGroups](#listadsgroups) - List all groups
+* [listClubsGroups](#listclubsgroups) - List all groups
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
 * [patchAdsGroup](#patchadsgroup) - Update a group
@@ -232,6 +234,57 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getClubsGroup
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetClubsGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->getClubsGroup(
+    request: $request
+);
+
+if ($response->clubsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetClubsGroupRequest](../../Models/Operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetClubsGroupResponse](../../Models/Operations/GetClubsGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHrisGroup
 
 Retrieve a group
@@ -377,6 +430,56 @@ if ($response->adsGroups !== null) {
 ### Response
 
 **[?Operations\ListAdsGroupsResponse](../../Models/Operations/ListAdsGroupsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listClubsGroups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListClubsGroupsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->group->listClubsGroups(
+    request: $request
+);
+
+if ($response->clubsGroups !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListClubsGroupsRequest](../../Models/Operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\ListClubsGroupsResponse](../../Models/Operations/ListClubsGroupsResponse.md)**
 
 ### Errors
 

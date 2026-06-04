@@ -120,6 +120,12 @@ class UnifiedTo
 
     public Webinar $webinar;
 
+    public Clubs $clubs;
+
+    public Location $location;
+
+    public Member $member;
+
     public Commerce $commerce;
 
     public Availability $availability;
@@ -131,8 +137,6 @@ class UnifiedTo
     public Item $item;
 
     public Itemvariant $itemvariant;
-
-    public Location $location;
 
     public Reservation $reservation;
 
@@ -207,8 +211,6 @@ class UnifiedTo
     public Martech $martech;
 
     public ListT $list;
-
-    public Member $member;
 
     public Messaging $messaging;
 
@@ -366,13 +368,15 @@ class UnifiedTo
         $this->link = new Link($this->sdkConfiguration);
         $this->recording = new Recording($this->sdkConfiguration);
         $this->webinar = new Webinar($this->sdkConfiguration);
+        $this->clubs = new Clubs($this->sdkConfiguration);
+        $this->location = new Location($this->sdkConfiguration);
+        $this->member = new Member($this->sdkConfiguration);
         $this->commerce = new Commerce($this->sdkConfiguration);
         $this->availability = new Availability($this->sdkConfiguration);
         $this->collection = new Collection($this->sdkConfiguration);
         $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->itemvariant = new Itemvariant($this->sdkConfiguration);
-        $this->location = new Location($this->sdkConfiguration);
         $this->reservation = new Reservation($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);
@@ -410,7 +414,6 @@ class UnifiedTo
         $this->student = new Student($this->sdkConfiguration);
         $this->martech = new Martech($this->sdkConfiguration);
         $this->list = new ListT($this->sdkConfiguration);
-        $this->member = new Member($this->sdkConfiguration);
         $this->messaging = new Messaging($this->sdkConfiguration);
         $this->channel = new Channel($this->sdkConfiguration);
         $this->message = new Message($this->sdkConfiguration);

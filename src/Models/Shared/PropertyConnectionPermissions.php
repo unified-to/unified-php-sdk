@@ -253,4 +253,14 @@ enum PropertyConnectionPermissions: string
     case SigningSignatoryRead = 'signing_signatory_read';
     case SigningSignatoryWrite = 'signing_signatory_write';
     case SigningTemplateRead = 'signing_template_read';
+    case ClubsGroupRead = 'clubs_group_read';
+    case ClubsGroupWrite = 'clubs_group_write';
+    case ClubsMemberRead = 'clubs_member_read';
+    case ClubsMemberWrite = 'clubs_member_write';
+    case ClubsActivityRead = 'clubs_activity_read';
+    case ClubsActivityWrite = 'clubs_activity_write';
+    case ClubsLocationRead = 'clubs_location_read';
+    case ClubsLocationWrite = 'clubs_location_write';
+    case ClubsEventRead = 'clubs_event_read';
+    case ClubsEventWrite = 'clubs_event_write';
 }

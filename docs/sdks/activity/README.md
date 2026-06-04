@@ -7,8 +7,10 @@
 * [createAtsActivity](#createatsactivity) - Create an activity
 * [createLmsActivity](#createlmsactivity) - Create an activity
 * [getAtsActivity](#getatsactivity) - Retrieve an activity
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
 * [getLmsActivity](#getlmsactivity) - Retrieve an activity
 * [listAtsActivities](#listatsactivities) - List all activities
+* [listClubsActivities](#listclubsactivities) - List all activities
 * [listLmsActivities](#listlmsactivities) - List all activities
 * [patchAtsActivity](#patchatsactivity) - Update an activity
 * [patchLmsActivity](#patchlmsactivity) - Update an activity
@@ -172,6 +174,57 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getClubsActivity
+
+Retrieve an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetClubsActivityRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->activity->getClubsActivity(
+    request: $request
+);
+
+if ($response->clubsActivity !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsActivityRequest](../../Models/Operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetClubsActivityResponse](../../Models/Operations/GetClubsActivityResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getLmsActivity
 
 Retrieve an activity
@@ -266,6 +319,56 @@ if ($response->atsActivities !== null) {
 ### Response
 
 **[?Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listClubsActivities
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListClubsActivitiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->activity->listClubsActivities(
+    request: $request
+);
+
+if ($response->clubsActivities !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListClubsActivitiesRequest](../../Models/Operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\ListClubsActivitiesResponse](../../Models/Operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 

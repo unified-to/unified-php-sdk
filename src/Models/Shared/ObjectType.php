@@ -143,4 +143,9 @@ enum ObjectType: string
     case SigningDocument = 'signing_document';
     case SigningSignatory = 'signing_signatory';
     case SigningTemplate = 'signing_template';
+    case ClubsGroup = 'clubs_group';
+    case ClubsMember = 'clubs_member';
+    case ClubsActivity = 'clubs_activity';
+    case ClubsLocation = 'clubs_location';
+    case ClubsEvent = 'clubs_event';
 }
