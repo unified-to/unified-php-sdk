@@ -20,6 +20,7 @@ enum ListAdsCreativesQueryParamFields: string
     case ItemId = 'item_id';
     case OrganizationId = 'organization_id';
     case Status = 'status';
+    case Data = 'data';
     case CreativeType = 'creative_type';
     case HostingSource = 'hosting_source';
     case Width = 'width';

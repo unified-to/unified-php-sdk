@@ -15,6 +15,8 @@ enum AdsGroupStatus: string
     case Active = 'ACTIVE';
     case Paused = 'PAUSED';
     case Archived = 'ARCHIVED';
+    case Processing = 'PROCESSING';
+    case ProcessingFailed = 'PROCESSING_FAILED';
     case Draft = 'DRAFT';
     case ScheduledForDeletion = 'SCHEDULED_FOR_DELETION';
 }

@@ -64,6 +64,14 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $data
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $data = null;
+
+    /**
+     *
      * @var ?string $externalAdReference
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('external_ad_reference')]
@@ -243,6 +251,7 @@ class AdsCreative
      * @param  ?\DateTime  $createdAt
      * @param  ?\Unified\Unified_to\Models\Shared\CreativeType  $creativeType
      * @param  ?string  $cta
+     * @param  ?string  $data
      * @param  ?string  $externalAdReference
      * @param  ?string  $externalCreativeReference
      * @param  ?string  $externalPlacementReference
@@ -266,7 +275,7 @@ class AdsCreative
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $cta = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?string $linkUrl = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $vastTagUrl = null, ?float $width = null)
+    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $cta = null, ?string $data = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?string $linkUrl = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $vastTagUrl = null, ?float $width = null)
     {
         $this->assetUrls = $assetUrls;
         $this->body = $body;
@@ -274,6 +283,7 @@ class AdsCreative
         $this->createdAt = $createdAt;
         $this->creativeType = $creativeType;
         $this->cta = $cta;
+        $this->data = $data;
         $this->externalAdReference = $externalAdReference;
         $this->externalCreativeReference = $externalCreativeReference;
         $this->externalPlacementReference = $externalPlacementReference;
