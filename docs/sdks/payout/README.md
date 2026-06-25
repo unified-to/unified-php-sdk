@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
-* [listPaymentPayouts](#listpaymentpayouts) - List all payouts
+* [getPaymentPayout2](#getpaymentpayout2) - Retrieve a payout
+* [listPaymentPayouts2](#listpaymentpayouts2) - List all payouts
 
-## getPaymentPayout
+## getPaymentPayout2
 
 Retrieve a payout
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
+<!-- UsageSnippet language="php" operationID="getPaymentPayout2" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetPaymentPayoutRequest(
+$request = new Operations\GetPaymentPayout2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->payout->getPaymentPayout(
+$response = $sdk->payout->getPaymentPayout2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->paymentPayout !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetPaymentPayoutRequest](../../Models/Operations/GetPaymentPayoutRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetPaymentPayout2Request](../../Models/Operations/GetPaymentPayout2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetPaymentPayoutResponse](../../Models/Operations/GetPaymentPayoutResponse.md)**
+**[?Operations\GetPaymentPayout2Response](../../Models/Operations/GetPaymentPayout2Response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->paymentPayout !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listPaymentPayouts
+## listPaymentPayouts2
 
 List all payouts
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
+<!-- UsageSnippet language="php" operationID="listPaymentPayouts2" method="get" path="/payment/{connection_id}/payout" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListPaymentPayoutsRequest(
+$request = new Operations\ListPaymentPayouts2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->payout->listPaymentPayouts(
+$response = $sdk->payout->listPaymentPayouts2(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->paymentPayouts !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListPaymentPayoutsRequest](../../Models/Operations/ListPaymentPayoutsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListPaymentPayouts2Request](../../Models/Operations/ListPaymentPayouts2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListPaymentPayoutsResponse](../../Models/Operations/ListPaymentPayoutsResponse.md)**
+**[?Operations\ListPaymentPayouts2Response](../../Models/Operations/ListPaymentPayouts2Response.md)**
 
 ### Errors
 

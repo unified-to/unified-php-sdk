@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createLmsInstructor](#createlmsinstructor) - Create an instructor
-* [getLmsInstructor](#getlmsinstructor) - Retrieve an instructor
-* [listLmsInstructors](#listlmsinstructors) - List all instructors
-* [patchLmsInstructor](#patchlmsinstructor) - Update an instructor
-* [removeLmsInstructor](#removelmsinstructor) - Remove an instructor
-* [updateLmsInstructor](#updatelmsinstructor) - Update an instructor
+* [createLmsInstructor2](#createlmsinstructor2) - Create an instructor
+* [getLmsInstructor2](#getlmsinstructor2) - Retrieve an instructor
+* [listLmsInstructors2](#listlmsinstructors2) - List all instructors
+* [patchLmsInstructor2](#patchlmsinstructor2) - Update an instructor
+* [removeLmsInstructor2](#removelmsinstructor2) - Remove an instructor
+* [updateLmsInstructor2](#updatelmsinstructor2) - Update an instructor
 
-## createLmsInstructor
+## createLmsInstructor2
 
 Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="php" operationID="createLmsInstructor2" method="post" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsInstructorRequest(
+$request = new Operations\CreateLmsInstructor2Request(
     lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
 );
 
-$response = $sdk->instructor->createLmsInstructor(
+$response = $sdk->instructor->createLmsInstructor2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->lmsInstructor !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateLmsInstructorRequest](../../Models/Operations/CreateLmsInstructorRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateLmsInstructor2Request](../../Models/Operations/CreateLmsInstructor2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateLmsInstructorResponse](../../Models/Operations/CreateLmsInstructorResponse.md)**
+**[?Operations\CreateLmsInstructor2Response](../../Models/Operations/CreateLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->lmsInstructor !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsInstructor
+## getLmsInstructor2
 
 Retrieve an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsInstructor2" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsInstructorRequest(
+$request = new Operations\GetLmsInstructor2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->instructor->getLmsInstructor(
+$response = $sdk->instructor->getLmsInstructor2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->lmsInstructor !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetLmsInstructorRequest](../../Models/Operations/GetLmsInstructorRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetLmsInstructor2Request](../../Models/Operations/GetLmsInstructor2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetLmsInstructorResponse](../../Models/Operations/GetLmsInstructorResponse.md)**
+**[?Operations\GetLmsInstructor2Response](../../Models/Operations/GetLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->lmsInstructor !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsInstructors
+## listLmsInstructors2
 
 List all instructors
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="php" operationID="listLmsInstructors2" method="get" path="/lms/{connection_id}/instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsInstructorsRequest(
+$request = new Operations\ListLmsInstructors2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->instructor->listLmsInstructors(
+$response = $sdk->instructor->listLmsInstructors2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->lmsInstructors !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListLmsInstructorsRequest](../../Models/Operations/ListLmsInstructorsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListLmsInstructors2Request](../../Models/Operations/ListLmsInstructors2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListLmsInstructorsResponse](../../Models/Operations/ListLmsInstructorsResponse.md)**
+**[?Operations\ListLmsInstructors2Response](../../Models/Operations/ListLmsInstructors2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->lmsInstructors !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchLmsInstructor
+## patchLmsInstructor2
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsInstructor2" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchLmsInstructorRequest(
+$request = new Operations\PatchLmsInstructor2Request(
     lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->instructor->patchLmsInstructor(
+$response = $sdk->instructor->patchLmsInstructor2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->lmsInstructor !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchLmsInstructorRequest](../../Models/Operations/PatchLmsInstructorRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchLmsInstructor2Request](../../Models/Operations/PatchLmsInstructor2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchLmsInstructorResponse](../../Models/Operations/PatchLmsInstructorResponse.md)**
+**[?Operations\PatchLmsInstructor2Response](../../Models/Operations/PatchLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->lmsInstructor !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeLmsInstructor
+## removeLmsInstructor2
 
 Remove an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeLmsInstructor2" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveLmsInstructorRequest(
+$request = new Operations\RemoveLmsInstructor2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->instructor->removeLmsInstructor(
+$response = $sdk->instructor->removeLmsInstructor2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveLmsInstructorRequest](../../Models/Operations/RemoveLmsInstructorRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveLmsInstructor2Request](../../Models/Operations/RemoveLmsInstructor2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\RemoveLmsInstructorResponse](../../Models/Operations/RemoveLmsInstructorResponse.md)**
+**[?Operations\RemoveLmsInstructor2Response](../../Models/Operations/RemoveLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateLmsInstructor
+## updateLmsInstructor2
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsInstructor2" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateLmsInstructorRequest(
+$request = new Operations\UpdateLmsInstructor2Request(
     lmsInstructor: new Shared\LmsInstructor(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->instructor->updateLmsInstructor(
+$response = $sdk->instructor->updateLmsInstructor2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->lmsInstructor !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateLmsInstructorRequest](../../Models/Operations/UpdateLmsInstructorRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateLmsInstructor2Request](../../Models/Operations/UpdateLmsInstructor2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateLmsInstructorResponse](../../Models/Operations/UpdateLmsInstructorResponse.md)**
+**[?Operations\UpdateLmsInstructor2Response](../../Models/Operations/UpdateLmsInstructor2Response.md)**
 
 ### Errors
 

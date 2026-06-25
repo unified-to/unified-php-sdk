@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createMetadataMetadata](#createmetadatametadata) - Create a metadata
-* [getMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
-* [listMetadataMetadatas](#listmetadatametadatas) - List all metadatas
-* [patchMetadataMetadata](#patchmetadatametadata) - Update a metadata
-* [removeMetadataMetadata](#removemetadatametadata) - Remove a metadata
-* [updateMetadataMetadata](#updatemetadatametadata) - Update a metadata
+* [createMetadataMetadata2](#createmetadatametadata2) - Create a metadata
+* [getMetadataMetadata2](#getmetadatametadata2) - Retrieve a metadata
+* [listMetadataMetadatas2](#listmetadatametadatas2) - List all metadatas
+* [patchMetadataMetadata2](#patchmetadatametadata2) - Update a metadata
+* [removeMetadataMetadata2](#removemetadatametadata2) - Remove a metadata
+* [updateMetadataMetadata2](#updatemetadatametadata2) - Update a metadata
 
-## createMetadataMetadata
+## createMetadataMetadata2
 
 Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="php" operationID="createMetadataMetadata2" method="post" path="/metadata/{connection_id}/metadata" -->
 ```php
 declare(strict_types=1);
 
@@ -33,7 +33,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateMetadataMetadataRequest(
+$request = new Operations\CreateMetadataMetadata2Request(
     metadataMetadata: new Shared\MetadataMetadata(
         name: '<value>',
         objectType: '<value>',
@@ -41,7 +41,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->metadata->createMetadataMetadata(
+$response = $sdk->metadata->createMetadataMetadata2(
     request: $request
 );
 
@@ -52,13 +52,13 @@ if ($response->metadataMetadata !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateMetadataMetadataRequest](../../Models/Operations/CreateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateMetadataMetadata2Request](../../Models/Operations/CreateMetadataMetadata2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateMetadataMetadataResponse](../../Models/Operations/CreateMetadataMetadataResponse.md)**
+**[?Operations\CreateMetadataMetadata2Response](../../Models/Operations/CreateMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ if ($response->metadataMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getMetadataMetadata
+## getMetadataMetadata2
 
 Retrieve a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="php" operationID="getMetadataMetadata2" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -87,12 +87,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetMetadataMetadataRequest(
+$request = new Operations\GetMetadataMetadata2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->getMetadataMetadata(
+$response = $sdk->metadata->getMetadataMetadata2(
     request: $request
 );
 
@@ -103,13 +103,13 @@ if ($response->metadataMetadata !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetMetadataMetadataRequest](../../Models/Operations/GetMetadataMetadataRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetMetadataMetadata2Request](../../Models/Operations/GetMetadataMetadata2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetMetadataMetadataResponse](../../Models/Operations/GetMetadataMetadataResponse.md)**
+**[?Operations\GetMetadataMetadata2Response](../../Models/Operations/GetMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -117,13 +117,13 @@ if ($response->metadataMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listMetadataMetadatas
+## listMetadataMetadatas2
 
 List all metadatas
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="php" operationID="listMetadataMetadatas2" method="get" path="/metadata/{connection_id}/metadata" -->
 ```php
 declare(strict_types=1);
 
@@ -138,11 +138,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListMetadataMetadatasRequest(
+$request = new Operations\ListMetadataMetadatas2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->metadata->listMetadataMetadatas(
+$response = $sdk->metadata->listMetadataMetadatas2(
     request: $request
 );
 
@@ -153,13 +153,13 @@ if ($response->metadataMetadatas !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListMetadataMetadatasRequest](../../Models/Operations/ListMetadataMetadatasRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListMetadataMetadatas2Request](../../Models/Operations/ListMetadataMetadatas2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListMetadataMetadatasResponse](../../Models/Operations/ListMetadataMetadatasResponse.md)**
+**[?Operations\ListMetadataMetadatas2Response](../../Models/Operations/ListMetadataMetadatas2Response.md)**
 
 ### Errors
 
@@ -167,13 +167,13 @@ if ($response->metadataMetadatas !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchMetadataMetadata
+## patchMetadataMetadata2
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMetadataMetadata2" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -189,7 +189,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchMetadataMetadataRequest(
+$request = new Operations\PatchMetadataMetadata2Request(
     metadataMetadata: new Shared\MetadataMetadata(
         name: '<value>',
         objectType: '<value>',
@@ -198,7 +198,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     id: '<id>',
 );
 
-$response = $sdk->metadata->patchMetadataMetadata(
+$response = $sdk->metadata->patchMetadataMetadata2(
     request: $request
 );
 
@@ -209,13 +209,13 @@ if ($response->metadataMetadata !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchMetadataMetadataRequest](../../Models/Operations/PatchMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchMetadataMetadata2Request](../../Models/Operations/PatchMetadataMetadata2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchMetadataMetadataResponse](../../Models/Operations/PatchMetadataMetadataResponse.md)**
+**[?Operations\PatchMetadataMetadata2Response](../../Models/Operations/PatchMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -223,13 +223,13 @@ if ($response->metadataMetadata !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeMetadataMetadata
+## removeMetadataMetadata2
 
 Remove a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeMetadataMetadata2" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -244,12 +244,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveMetadataMetadataRequest(
+$request = new Operations\RemoveMetadataMetadata2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->metadata->removeMetadataMetadata(
+$response = $sdk->metadata->removeMetadataMetadata2(
     request: $request
 );
 
@@ -260,13 +260,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveMetadataMetadataRequest](../../Models/Operations/RemoveMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveMetadataMetadata2Request](../../Models/Operations/RemoveMetadataMetadata2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveMetadataMetadataResponse](../../Models/Operations/RemoveMetadataMetadataResponse.md)**
+**[?Operations\RemoveMetadataMetadata2Response](../../Models/Operations/RemoveMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -274,13 +274,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMetadataMetadata
+## updateMetadataMetadata2
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMetadataMetadata2" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -296,7 +296,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMetadataMetadataRequest(
+$request = new Operations\UpdateMetadataMetadata2Request(
     metadataMetadata: new Shared\MetadataMetadata(
         name: '<value>',
         objectType: '<value>',
@@ -305,7 +305,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     id: '<id>',
 );
 
-$response = $sdk->metadata->updateMetadataMetadata(
+$response = $sdk->metadata->updateMetadataMetadata2(
     request: $request
 );
 
@@ -316,13 +316,13 @@ if ($response->metadataMetadata !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateMetadataMetadataRequest](../../Models/Operations/UpdateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateMetadataMetadata2Request](../../Models/Operations/UpdateMetadataMetadata2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateMetadataMetadataResponse](../../Models/Operations/UpdateMetadataMetadataResponse.md)**
+**[?Operations\UpdateMetadataMetadata2Response](../../Models/Operations/UpdateMetadataMetadata2Response.md)**
 
 ### Errors
 

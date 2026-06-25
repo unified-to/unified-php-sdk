@@ -98,6 +98,14 @@ class AtsApplication
     public ?string $originalStatus = null;
 
     /**
+     *
+     * @var ?string $originalSubstatus
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('original_substatus')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $originalSubstatus = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -167,6 +175,7 @@ class AtsApplication
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsOffer>  $offers
      * @param  ?string  $originalStatus
+     * @param  ?string  $originalSubstatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $rejectedAt
      * @param  ?string  $rejectedReason
@@ -176,7 +185,7 @@ class AtsApplication
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?string $originalSubstatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;
@@ -188,6 +197,7 @@ class AtsApplication
         $this->metadata = $metadata;
         $this->offers = $offers;
         $this->originalStatus = $originalStatus;
+        $this->originalSubstatus = $originalSubstatus;
         $this->raw = $raw;
         $this->rejectedAt = $rejectedAt;
         $this->rejectedReason = $rejectedReason;

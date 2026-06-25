@@ -47,14 +47,14 @@ class Crm
     /**
      * Create a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompany2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompany2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmCompany(Operations\CreateCrmCompanyRequest $request, ?Options $options = null): Operations\CreateCrmCompanyResponse
+    public function createCrmCompany2(Operations\CreateCrmCompany2Request $request, ?Options $options = null): Operations\CreateCrmCompany2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompanyRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompany2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -63,11 +63,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmCompanyRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmCompany2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmCompany', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmCompany2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmCompanyResponse(
+                $response = new Operations\CreateCrmCompany2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Crm
     /**
      * Create a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmContact(Operations\CreateCrmContactRequest $request, ?Options $options = null): Operations\CreateCrmContactResponse
+    public function createCrmContact2(Operations\CreateCrmContact2Request $request, ?Options $options = null): Operations\CreateCrmContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\CreateCrmContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\CreateCrmContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmContact', 'json');
@@ -131,11 +131,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmContactResponse(
+                $response = new Operations\CreateCrmContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Crm
     /**
      * Create a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDeal2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmDeal2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmDeal(Operations\CreateCrmDealRequest $request, ?Options $options = null): Operations\CreateCrmDealResponse
+    public function createCrmDeal2(Operations\CreateCrmDeal2Request $request, ?Options $options = null): Operations\CreateCrmDeal2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDeal2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -199,11 +199,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmDealRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmDeal2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmDeal', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmDeal2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmDealResponse(
+                $response = new Operations\CreateCrmDeal2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,14 +251,14 @@ class Crm
     /**
      * Create an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmEvent(Operations\CreateCrmEventRequest $request, ?Options $options = null): Operations\CreateCrmEventResponse
+    public function createCrmEvent2(Operations\CreateCrmEvent2Request $request, ?Options $options = null): Operations\CreateCrmEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -267,11 +267,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmEventRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmEvent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -297,7 +297,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmEventResponse(
+                $response = new Operations\CreateCrmEvent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -319,14 +319,14 @@ class Crm
     /**
      * Create a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLead2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmLead2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmLead(Operations\CreateCrmLeadRequest $request, ?Options $options = null): Operations\CreateCrmLeadResponse
+    public function createCrmLead2(Operations\CreateCrmLead2Request $request, ?Options $options = null): Operations\CreateCrmLead2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLead2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -335,11 +335,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmLeadRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmLead2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmLead', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmLead2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -365,7 +365,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmLeadResponse(
+                $response = new Operations\CreateCrmLead2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -387,14 +387,14 @@ class Crm
     /**
      * Create a pipeline
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipeline2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmPipeline2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmPipeline(Operations\CreateCrmPipelineRequest $request, ?Options $options = null): Operations\CreateCrmPipelineResponse
+    public function createCrmPipeline2(Operations\CreateCrmPipeline2Request $request, ?Options $options = null): Operations\CreateCrmPipeline2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\CreateCrmPipelineRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\CreateCrmPipeline2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
@@ -403,11 +403,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmPipelineRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmPipeline2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmPipeline', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmPipeline2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -433,7 +433,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmPipeline', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmPipelineResponse(
+                $response = new Operations\CreateCrmPipeline2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -455,22 +455,22 @@ class Crm
     /**
      * Retrieve a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompany2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmCompany2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmCompany(Operations\GetCrmCompanyRequest $request, ?Options $options = null): Operations\GetCrmCompanyResponse
+    public function getCrmCompany2(Operations\GetCrmCompany2Request $request, ?Options $options = null): Operations\GetCrmCompany2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompanyRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompany2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmCompanyRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmCompany2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmCompany', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmCompany2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -496,7 +496,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmCompanyResponse(
+                $response = new Operations\GetCrmCompany2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -518,22 +518,22 @@ class Crm
     /**
      * Retrieve a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmContact(Operations\GetCrmContactRequest $request, ?Options $options = null): Operations\GetCrmContactResponse
+    public function getCrmContact2(Operations\GetCrmContact2Request $request, ?Options $options = null): Operations\GetCrmContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\GetCrmContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\GetCrmContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -559,7 +559,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmContactResponse(
+                $response = new Operations\GetCrmContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -581,22 +581,22 @@ class Crm
     /**
      * Retrieve a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmDeal2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmDeal2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmDeal(Operations\GetCrmDealRequest $request, ?Options $options = null): Operations\GetCrmDealResponse
+    public function getCrmDeal2(Operations\GetCrmDeal2Request $request, ?Options $options = null): Operations\GetCrmDeal2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDeal2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmDealRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmDeal2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmDeal', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmDeal2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -622,7 +622,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmDealResponse(
+                $response = new Operations\GetCrmDeal2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -644,22 +644,22 @@ class Crm
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmEvent(Operations\GetCrmEventRequest $request, ?Options $options = null): Operations\GetCrmEventResponse
+    public function getCrmEvent2(Operations\GetCrmEvent2Request $request, ?Options $options = null): Operations\GetCrmEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmEventRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmEvent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -685,7 +685,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmEventResponse(
+                $response = new Operations\GetCrmEvent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -707,22 +707,22 @@ class Crm
     /**
      * Retrieve a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmLeadRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmLead2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmLead2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmLead(Operations\GetCrmLeadRequest $request, ?Options $options = null): Operations\GetCrmLeadResponse
+    public function getCrmLead2(Operations\GetCrmLead2Request $request, ?Options $options = null): Operations\GetCrmLead2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLead2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmLeadRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmLead2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmLead', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmLead2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -748,7 +748,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmLeadResponse(
+                $response = new Operations\GetCrmLead2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -770,22 +770,22 @@ class Crm
     /**
      * Retrieve a pipeline
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmPipeline2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmPipeline2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmPipeline(Operations\GetCrmPipelineRequest $request, ?Options $options = null): Operations\GetCrmPipelineResponse
+    public function getCrmPipeline2(Operations\GetCrmPipeline2Request $request, ?Options $options = null): Operations\GetCrmPipeline2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\GetCrmPipelineRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\GetCrmPipeline2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmPipelineRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmPipeline2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmPipeline', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmPipeline2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -811,7 +811,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmPipeline', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmPipelineResponse(
+                $response = new Operations\GetCrmPipeline2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -833,22 +833,22 @@ class Crm
     /**
      * List all companies
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompanies2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmCompanies2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request, ?Options $options = null): Operations\ListCrmCompaniesResponse
+    public function listCrmCompanies2(Operations\ListCrmCompanies2Request $request, ?Options $options = null): Operations\ListCrmCompanies2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompaniesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompanies2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmCompaniesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmCompanies2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmCompanies', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmCompanies2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -874,7 +874,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmCompany>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmCompaniesResponse(
+                $response = new Operations\ListCrmCompanies2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -896,22 +896,22 @@ class Crm
     /**
      * List all contacts
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmContactsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmContacts2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmContacts2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmContacts(Operations\ListCrmContactsRequest $request, ?Options $options = null): Operations\ListCrmContactsResponse
+    public function listCrmContacts2(Operations\ListCrmContacts2Request $request, ?Options $options = null): Operations\ListCrmContacts2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\ListCrmContactsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact', Operations\ListCrmContacts2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmContactsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmContacts2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmContacts', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmContacts2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -937,7 +937,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmContact>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmContactsResponse(
+                $response = new Operations\ListCrmContacts2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -959,22 +959,22 @@ class Crm
     /**
      * List all deals
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmDeals2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmDeals2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmDeals(Operations\ListCrmDealsRequest $request, ?Options $options = null): Operations\ListCrmDealsResponse
+    public function listCrmDeals2(Operations\ListCrmDeals2Request $request, ?Options $options = null): Operations\ListCrmDeals2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDealsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDeals2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmDealsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmDeals2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmDeals', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmDeals2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1000,7 +1000,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmDeal>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmDealsResponse(
+                $response = new Operations\ListCrmDeals2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1022,22 +1022,22 @@ class Crm
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmEvents2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmEvents2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmEvents(Operations\ListCrmEventsRequest $request, ?Options $options = null): Operations\ListCrmEventsResponse
+    public function listCrmEvents2(Operations\ListCrmEvents2Request $request, ?Options $options = null): Operations\ListCrmEvents2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEventsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEvents2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmEventsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmEvents2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmEvents', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmEvents2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1063,7 +1063,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmEventsResponse(
+                $response = new Operations\ListCrmEvents2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1085,22 +1085,22 @@ class Crm
     /**
      * List all leads
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeads2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmLeads2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmLeads(Operations\ListCrmLeadsRequest $request, ?Options $options = null): Operations\ListCrmLeadsResponse
+    public function listCrmLeads2(Operations\ListCrmLeads2Request $request, ?Options $options = null): Operations\ListCrmLeads2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeadsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeads2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmLeadsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmLeads2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmLeads', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmLeads2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1126,7 +1126,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmLead>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmLeadsResponse(
+                $response = new Operations\ListCrmLeads2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1148,22 +1148,22 @@ class Crm
     /**
      * List all pipelines
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelines2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmPipelines2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmPipelines(Operations\ListCrmPipelinesRequest $request, ?Options $options = null): Operations\ListCrmPipelinesResponse
+    public function listCrmPipelines2(Operations\ListCrmPipelines2Request $request, ?Options $options = null): Operations\ListCrmPipelines2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\ListCrmPipelinesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline', Operations\ListCrmPipelines2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmPipelinesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmPipelines2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmPipelines', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmPipelines2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1189,7 +1189,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmPipeline>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmPipelinesResponse(
+                $response = new Operations\ListCrmPipelines2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1211,14 +1211,14 @@ class Crm
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompany2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompany2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request, ?Options $options = null): Operations\PatchCrmCompanyResponse
+    public function patchCrmCompany2(Operations\PatchCrmCompany2Request $request, ?Options $options = null): Operations\PatchCrmCompany2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompanyRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompany2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -1227,11 +1227,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmCompanyRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmCompany2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmCompany', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmCompany2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1257,7 +1257,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmCompanyResponse(
+                $response = new Operations\PatchCrmCompany2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1279,14 +1279,14 @@ class Crm
     /**
      * Update a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmContact(Operations\PatchCrmContactRequest $request, ?Options $options = null): Operations\PatchCrmContactResponse
+    public function patchCrmContact2(Operations\PatchCrmContact2Request $request, ?Options $options = null): Operations\PatchCrmContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\PatchCrmContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\PatchCrmContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmContact', 'json');
@@ -1295,11 +1295,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1325,7 +1325,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmContactResponse(
+                $response = new Operations\PatchCrmContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1347,14 +1347,14 @@ class Crm
     /**
      * Update a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDeal2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmDeal2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmDeal(Operations\PatchCrmDealRequest $request, ?Options $options = null): Operations\PatchCrmDealResponse
+    public function patchCrmDeal2(Operations\PatchCrmDeal2Request $request, ?Options $options = null): Operations\PatchCrmDeal2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDeal2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -1363,11 +1363,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmDealRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmDeal2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmDeal', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmDeal2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1393,7 +1393,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmDealResponse(
+                $response = new Operations\PatchCrmDeal2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1415,14 +1415,14 @@ class Crm
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmEvent(Operations\PatchCrmEventRequest $request, ?Options $options = null): Operations\PatchCrmEventResponse
+    public function patchCrmEvent2(Operations\PatchCrmEvent2Request $request, ?Options $options = null): Operations\PatchCrmEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -1431,11 +1431,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmEventRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmEvent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1461,7 +1461,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmEventResponse(
+                $response = new Operations\PatchCrmEvent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1483,14 +1483,14 @@ class Crm
     /**
      * Update a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLead2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmLead2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmLead(Operations\PatchCrmLeadRequest $request, ?Options $options = null): Operations\PatchCrmLeadResponse
+    public function patchCrmLead2(Operations\PatchCrmLead2Request $request, ?Options $options = null): Operations\PatchCrmLead2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLead2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -1499,11 +1499,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmLeadRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmLead2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmLead', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmLead2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1529,7 +1529,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmLeadResponse(
+                $response = new Operations\PatchCrmLead2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1551,14 +1551,14 @@ class Crm
     /**
      * Update a pipeline
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipeline2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmPipeline2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmPipeline(Operations\PatchCrmPipelineRequest $request, ?Options $options = null): Operations\PatchCrmPipelineResponse
+    public function patchCrmPipeline2(Operations\PatchCrmPipeline2Request $request, ?Options $options = null): Operations\PatchCrmPipeline2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\PatchCrmPipelineRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\PatchCrmPipeline2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
@@ -1567,11 +1567,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmPipelineRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmPipeline2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmPipeline', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmPipeline2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1597,7 +1597,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmPipeline', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmPipelineResponse(
+                $response = new Operations\PatchCrmPipeline2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1619,20 +1619,20 @@ class Crm
     /**
      * Remove a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompany2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompany2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request, ?Options $options = null): Operations\RemoveCrmCompanyResponse
+    public function removeCrmCompany2(Operations\RemoveCrmCompany2Request $request, ?Options $options = null): Operations\RemoveCrmCompany2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompanyRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompany2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmCompany', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmCompany2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1653,7 +1653,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmCompanyResponse(
+            return new Operations\RemoveCrmCompany2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1665,7 +1665,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmCompanyResponse(
+            return new Operations\RemoveCrmCompany2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1676,20 +1676,20 @@ class Crm
     /**
      * Remove a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmContact(Operations\RemoveCrmContactRequest $request, ?Options $options = null): Operations\RemoveCrmContactResponse
+    public function removeCrmContact2(Operations\RemoveCrmContact2Request $request, ?Options $options = null): Operations\RemoveCrmContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\RemoveCrmContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\RemoveCrmContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1710,7 +1710,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmContactResponse(
+            return new Operations\RemoveCrmContact2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1722,7 +1722,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmContactResponse(
+            return new Operations\RemoveCrmContact2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1733,20 +1733,20 @@ class Crm
     /**
      * Remove a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDeal2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDeal2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmDeal(Operations\RemoveCrmDealRequest $request, ?Options $options = null): Operations\RemoveCrmDealResponse
+    public function removeCrmDeal2(Operations\RemoveCrmDeal2Request $request, ?Options $options = null): Operations\RemoveCrmDeal2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDeal2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmDeal', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmDeal2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1767,7 +1767,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmDealResponse(
+            return new Operations\RemoveCrmDeal2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1779,7 +1779,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmDealResponse(
+            return new Operations\RemoveCrmDeal2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1790,20 +1790,20 @@ class Crm
     /**
      * Remove an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmEvent(Operations\RemoveCrmEventRequest $request, ?Options $options = null): Operations\RemoveCrmEventResponse
+    public function removeCrmEvent2(Operations\RemoveCrmEvent2Request $request, ?Options $options = null): Operations\RemoveCrmEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1824,7 +1824,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmEventResponse(
+            return new Operations\RemoveCrmEvent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1836,7 +1836,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmEventResponse(
+            return new Operations\RemoveCrmEvent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1847,20 +1847,20 @@ class Crm
     /**
      * Remove a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLead2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLead2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmLead(Operations\RemoveCrmLeadRequest $request, ?Options $options = null): Operations\RemoveCrmLeadResponse
+    public function removeCrmLead2(Operations\RemoveCrmLead2Request $request, ?Options $options = null): Operations\RemoveCrmLead2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLead2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmLead', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmLead2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1881,7 +1881,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmLeadResponse(
+            return new Operations\RemoveCrmLead2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1893,7 +1893,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmLeadResponse(
+            return new Operations\RemoveCrmLead2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1904,20 +1904,20 @@ class Crm
     /**
      * Remove a pipeline
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipeline2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipeline2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmPipeline(Operations\RemoveCrmPipelineRequest $request, ?Options $options = null): Operations\RemoveCrmPipelineResponse
+    public function removeCrmPipeline2(Operations\RemoveCrmPipeline2Request $request, ?Options $options = null): Operations\RemoveCrmPipeline2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\RemoveCrmPipelineRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\RemoveCrmPipeline2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmPipeline', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmPipeline2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1938,7 +1938,7 @@ class Crm
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmPipelineResponse(
+            return new Operations\RemoveCrmPipeline2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1950,7 +1950,7 @@ class Crm
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmPipelineResponse(
+            return new Operations\RemoveCrmPipeline2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1961,14 +1961,14 @@ class Crm
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompany2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompany2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request, ?Options $options = null): Operations\UpdateCrmCompanyResponse
+    public function updateCrmCompany2(Operations\UpdateCrmCompany2Request $request, ?Options $options = null): Operations\UpdateCrmCompany2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompanyRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompany2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -1977,11 +1977,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmCompanyRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmCompany2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmCompany', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmCompany2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2007,7 +2007,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmCompanyResponse(
+                $response = new Operations\UpdateCrmCompany2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2029,14 +2029,14 @@ class Crm
     /**
      * Update a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmContact(Operations\UpdateCrmContactRequest $request, ?Options $options = null): Operations\UpdateCrmContactResponse
+    public function updateCrmContact2(Operations\UpdateCrmContact2Request $request, ?Options $options = null): Operations\UpdateCrmContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\UpdateCrmContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/contact/{id}', Operations\UpdateCrmContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmContact', 'json');
@@ -2045,11 +2045,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2075,7 +2075,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmContactResponse(
+                $response = new Operations\UpdateCrmContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2097,14 +2097,14 @@ class Crm
     /**
      * Update a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDeal2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDeal2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmDeal(Operations\UpdateCrmDealRequest $request, ?Options $options = null): Operations\UpdateCrmDealResponse
+    public function updateCrmDeal2(Operations\UpdateCrmDeal2Request $request, ?Options $options = null): Operations\UpdateCrmDeal2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDealRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDeal2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -2113,11 +2113,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmDealRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmDeal2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmDeal', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmDeal2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2143,7 +2143,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmDealResponse(
+                $response = new Operations\UpdateCrmDeal2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2165,14 +2165,14 @@ class Crm
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmEvent(Operations\UpdateCrmEventRequest $request, ?Options $options = null): Operations\UpdateCrmEventResponse
+    public function updateCrmEvent2(Operations\UpdateCrmEvent2Request $request, ?Options $options = null): Operations\UpdateCrmEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -2181,11 +2181,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmEventRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmEvent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2211,7 +2211,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmEventResponse(
+                $response = new Operations\UpdateCrmEvent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2233,14 +2233,14 @@ class Crm
     /**
      * Update a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLead2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLead2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmLead(Operations\UpdateCrmLeadRequest $request, ?Options $options = null): Operations\UpdateCrmLeadResponse
+    public function updateCrmLead2(Operations\UpdateCrmLead2Request $request, ?Options $options = null): Operations\UpdateCrmLead2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLeadRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLead2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -2249,11 +2249,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmLeadRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmLead2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmLead', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmLead2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2279,7 +2279,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmLeadResponse(
+                $response = new Operations\UpdateCrmLead2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2301,14 +2301,14 @@ class Crm
     /**
      * Update a pipeline
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipeline2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipeline2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmPipeline(Operations\UpdateCrmPipelineRequest $request, ?Options $options = null): Operations\UpdateCrmPipelineResponse
+    public function updateCrmPipeline2(Operations\UpdateCrmPipeline2Request $request, ?Options $options = null): Operations\UpdateCrmPipeline2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\UpdateCrmPipelineRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/pipeline/{id}', Operations\UpdateCrmPipeline2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmPipeline', 'json');
@@ -2317,11 +2317,11 @@ class Crm
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmPipelineRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmPipeline2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmPipeline', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmPipeline2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2347,7 +2347,7 @@ class Crm
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmPipeline', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmPipelineResponse(
+                $response = new Operations\UpdateCrmPipeline2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

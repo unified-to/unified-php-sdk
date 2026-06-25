@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createLmsClass](#createlmsclass) - Create a class
-* [getLmsClass](#getlmsclass) - Retrieve a class
-* [listLmsClasses](#listlmsclasses) - List all classes
-* [patchLmsClass](#patchlmsclass) - Update a class
-* [removeLmsClass](#removelmsclass) - Remove a class
-* [updateLmsClass](#updatelmsclass) - Update a class
+* [createLmsClass2](#createlmsclass2) - Create a class
+* [getLmsClass2](#getlmsclass2) - Retrieve a class
+* [listLmsClasses2](#listlmsclasses2) - List all classes
+* [patchLmsClass2](#patchlmsclass2) - Update a class
+* [removeLmsClass2](#removelmsclass2) - Remove a class
+* [updateLmsClass2](#updatelmsclass2) - Update a class
 
-## createLmsClass
+## createLmsClass2
 
 Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="php" operationID="createLmsClass2" method="post" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsClassRequest(
+$request = new Operations\CreateLmsClass2Request(
     lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
 );
 
-$response = $sdk->class->createLmsClass(
+$response = $sdk->class->createLmsClass2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->lmsClass !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\CreateLmsClassRequest](../../Models/Operations/CreateLmsClassRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateLmsClass2Request](../../Models/Operations/CreateLmsClass2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateLmsClassResponse](../../Models/Operations/CreateLmsClassResponse.md)**
+**[?Operations\CreateLmsClass2Response](../../Models/Operations/CreateLmsClass2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->lmsClass !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsClass
+## getLmsClass2
 
 Retrieve a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsClass2" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsClassRequest(
+$request = new Operations\GetLmsClass2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->class->getLmsClass(
+$response = $sdk->class->getLmsClass2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->lmsClass !== null) {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\GetLmsClassRequest](../../Models/Operations/GetLmsClassRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetLmsClass2Request](../../Models/Operations/GetLmsClass2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetLmsClassResponse](../../Models/Operations/GetLmsClassResponse.md)**
+**[?Operations\GetLmsClass2Response](../../Models/Operations/GetLmsClass2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->lmsClass !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsClasses
+## listLmsClasses2
 
 List all classes
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="php" operationID="listLmsClasses2" method="get" path="/lms/{connection_id}/class" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsClassesRequest(
+$request = new Operations\ListLmsClasses2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->class->listLmsClasses(
+$response = $sdk->class->listLmsClasses2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->lmsClasses !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListLmsClassesRequest](../../Models/Operations/ListLmsClassesRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListLmsClasses2Request](../../Models/Operations/ListLmsClasses2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListLmsClassesResponse](../../Models/Operations/ListLmsClassesResponse.md)**
+**[?Operations\ListLmsClasses2Response](../../Models/Operations/ListLmsClasses2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->lmsClasses !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchLmsClass
+## patchLmsClass2
 
 Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsClass2" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchLmsClassRequest(
+$request = new Operations\PatchLmsClass2Request(
     lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->class->patchLmsClass(
+$response = $sdk->class->patchLmsClass2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->lmsClass !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\PatchLmsClassRequest](../../Models/Operations/PatchLmsClassRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchLmsClass2Request](../../Models/Operations/PatchLmsClass2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchLmsClassResponse](../../Models/Operations/PatchLmsClassResponse.md)**
+**[?Operations\PatchLmsClass2Response](../../Models/Operations/PatchLmsClass2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->lmsClass !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeLmsClass
+## removeLmsClass2
 
 Remove a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeLmsClass2" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveLmsClassRequest(
+$request = new Operations\RemoveLmsClass2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->class->removeLmsClass(
+$response = $sdk->class->removeLmsClass2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\RemoveLmsClassRequest](../../Models/Operations/RemoveLmsClassRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveLmsClass2Request](../../Models/Operations/RemoveLmsClass2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\RemoveLmsClassResponse](../../Models/Operations/RemoveLmsClassResponse.md)**
+**[?Operations\RemoveLmsClass2Response](../../Models/Operations/RemoveLmsClass2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateLmsClass
+## updateLmsClass2
 
 Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsClass2" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateLmsClassRequest(
+$request = new Operations\UpdateLmsClass2Request(
     lmsClass: new Shared\LmsClass(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->class->updateLmsClass(
+$response = $sdk->class->updateLmsClass2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->lmsClass !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\UpdateLmsClassRequest](../../Models/Operations/UpdateLmsClassRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateLmsClass2Request](../../Models/Operations/UpdateLmsClass2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\UpdateLmsClassResponse](../../Models/Operations/UpdateLmsClassResponse.md)**
+**[?Operations\UpdateLmsClass2Response](../../Models/Operations/UpdateLmsClass2Response.md)**
 
 ### Errors
 

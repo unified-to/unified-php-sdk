@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [createGenaiPrompt](#creategenaiprompt) - Create a prompt
+* [createGenaiPrompt2](#creategenaiprompt2) - Create a prompt
 
-## createGenaiPrompt
+## createGenaiPrompt2
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="php" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateGenaiPromptRequest(
+$request = new Operations\CreateGenaiPrompt2Request(
     genaiPrompt: new Shared\GenaiPrompt(),
     connectionId: '<id>',
 );
 
-$response = $sdk->prompt->createGenaiPrompt(
+$response = $sdk->prompt->createGenaiPrompt2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->genaiPrompt !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateGenaiPromptRequest](../../Models/Operations/CreateGenaiPromptRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateGenaiPrompt2Request](../../Models/Operations/CreateGenaiPrompt2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateGenaiPromptResponse](../../Models/Operations/CreateGenaiPromptResponse.md)**
+**[?Operations\CreateGenaiPrompt2Response](../../Models/Operations/CreateGenaiPrompt2Response.md)**
 
 ### Errors
 

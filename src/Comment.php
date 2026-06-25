@@ -47,14 +47,14 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateKmsCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createKmsComment(Operations\CreateKmsCommentRequest $request, ?Options $options = null): Operations\CreateKmsCommentResponse
+    public function createKmsComment2(Operations\CreateKmsComment2Request $request, ?Options $options = null): Operations\CreateKmsComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment', Operations\CreateKmsCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment', Operations\CreateKmsComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsComment', 'json');
@@ -63,11 +63,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateKmsCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateKmsComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createKmsComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createKmsComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateKmsCommentResponse(
+                $response = new Operations\CreateKmsComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTaskComment(Operations\CreateTaskCommentRequest $request, ?Options $options = null): Operations\CreateTaskCommentResponse
+    public function createTaskComment2(Operations\CreateTaskComment2Request $request, ?Options $options = null): Operations\CreateTaskComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\CreateTaskCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\CreateTaskComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -131,11 +131,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTaskCommentResponse(
+                $response = new Operations\CreateTaskComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Comment
     /**
      * Create a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcComment(Operations\CreateUcCommentRequest $request, ?Options $options = null): Operations\CreateUcCommentResponse
+    public function createUcComment2(Operations\CreateUcComment2Request $request, ?Options $options = null): Operations\CreateUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\CreateUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\CreateUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -199,11 +199,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUcCommentResponse(
+                $response = new Operations\CreateUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetKmsCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getKmsComment(Operations\GetKmsCommentRequest $request, ?Options $options = null): Operations\GetKmsCommentResponse
+    public function getKmsComment2(Operations\GetKmsComment2Request $request, ?Options $options = null): Operations\GetKmsComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\GetKmsCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\GetKmsComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetKmsCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetKmsComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getKmsComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getKmsComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetKmsCommentResponse(
+                $response = new Operations\GetKmsComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskComment(Operations\GetTaskCommentRequest $request, ?Options $options = null): Operations\GetTaskCommentResponse
+    public function getTaskComment2(Operations\GetTaskComment2Request $request, ?Options $options = null): Operations\GetTaskComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\GetTaskCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\GetTaskComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskCommentResponse(
+                $response = new Operations\GetTaskComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Comment
     /**
      * Retrieve a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcComment(Operations\GetUcCommentRequest $request, ?Options $options = null): Operations\GetUcCommentResponse
+    public function getUcComment2(Operations\GetUcComment2Request $request, ?Options $options = null): Operations\GetUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\GetUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\GetUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcCommentResponse(
+                $response = new Operations\GetUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Comment
     /**
      * List all comments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListKmsCommentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListKmsCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsComments2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsComments2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listKmsComments(Operations\ListKmsCommentsRequest $request, ?Options $options = null): Operations\ListKmsCommentsResponse
+    public function listKmsComments2(Operations\ListKmsComments2Request $request, ?Options $options = null): Operations\ListKmsComments2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment', Operations\ListKmsCommentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment', Operations\ListKmsComments2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListKmsCommentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListKmsComments2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listKmsComments', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listKmsComments2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\KmsComment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListKmsCommentsResponse(
+                $response = new Operations\ListKmsComments2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Comment
     /**
      * List all comments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskCommentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskComments2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskComments2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskComments(Operations\ListTaskCommentsRequest $request, ?Options $options = null): Operations\ListTaskCommentsResponse
+    public function listTaskComments2(Operations\ListTaskComments2Request $request, ?Options $options = null): Operations\ListTaskComments2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\ListTaskCommentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\ListTaskComments2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskCommentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskComments2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskComments', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskComments2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskComment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskCommentsResponse(
+                $response = new Operations\ListTaskComments2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Comment
     /**
      * List all comments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcComments2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcComments2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcComments(Operations\ListUcCommentsRequest $request, ?Options $options = null): Operations\ListUcCommentsResponse
+    public function listUcComments2(Operations\ListUcComments2Request $request, ?Options $options = null): Operations\ListUcComments2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\ListUcCommentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\ListUcComments2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcCommentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcComments2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcComments', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcComments2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcComment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcCommentsResponse(
+                $response = new Operations\ListUcComments2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,14 +629,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchKmsCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchKmsComment(Operations\PatchKmsCommentRequest $request, ?Options $options = null): Operations\PatchKmsCommentResponse
+    public function patchKmsComment2(Operations\PatchKmsComment2Request $request, ?Options $options = null): Operations\PatchKmsComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\PatchKmsCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\PatchKmsComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsComment', 'json');
@@ -645,11 +645,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchKmsCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchKmsComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchKmsComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchKmsComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -675,7 +675,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchKmsCommentResponse(
+                $response = new Operations\PatchKmsComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -697,14 +697,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTaskComment(Operations\PatchTaskCommentRequest $request, ?Options $options = null): Operations\PatchTaskCommentResponse
+    public function patchTaskComment2(Operations\PatchTaskComment2Request $request, ?Options $options = null): Operations\PatchTaskComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\PatchTaskCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\PatchTaskComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -713,11 +713,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -743,7 +743,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTaskCommentResponse(
+                $response = new Operations\PatchTaskComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -765,14 +765,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcComment(Operations\PatchUcCommentRequest $request, ?Options $options = null): Operations\PatchUcCommentResponse
+    public function patchUcComment2(Operations\PatchUcComment2Request $request, ?Options $options = null): Operations\PatchUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\PatchUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\PatchUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -781,11 +781,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -811,7 +811,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchUcCommentResponse(
+                $response = new Operations\PatchUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -833,20 +833,20 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeKmsComment(Operations\RemoveKmsCommentRequest $request, ?Options $options = null): Operations\RemoveKmsCommentResponse
+    public function removeKmsComment2(Operations\RemoveKmsComment2Request $request, ?Options $options = null): Operations\RemoveKmsComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\RemoveKmsCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\RemoveKmsComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeKmsComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeKmsComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -867,7 +867,7 @@ class Comment
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveKmsCommentResponse(
+            return new Operations\RemoveKmsComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -879,7 +879,7 @@ class Comment
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveKmsCommentResponse(
+            return new Operations\RemoveKmsComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -890,20 +890,20 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTaskComment(Operations\RemoveTaskCommentRequest $request, ?Options $options = null): Operations\RemoveTaskCommentResponse
+    public function removeTaskComment2(Operations\RemoveTaskComment2Request $request, ?Options $options = null): Operations\RemoveTaskComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\RemoveTaskCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\RemoveTaskComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -924,7 +924,7 @@ class Comment
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskCommentResponse(
+            return new Operations\RemoveTaskComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -936,7 +936,7 @@ class Comment
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskCommentResponse(
+            return new Operations\RemoveTaskComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -947,20 +947,20 @@ class Comment
     /**
      * Remove a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcComment(Operations\RemoveUcCommentRequest $request, ?Options $options = null): Operations\RemoveUcCommentResponse
+    public function removeUcComment2(Operations\RemoveUcComment2Request $request, ?Options $options = null): Operations\RemoveUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\RemoveUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\RemoveUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -981,7 +981,7 @@ class Comment
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcCommentResponse(
+            return new Operations\RemoveUcComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -993,7 +993,7 @@ class Comment
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcCommentResponse(
+            return new Operations\RemoveUcComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1004,14 +1004,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateKmsCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateKmsComment(Operations\UpdateKmsCommentRequest $request, ?Options $options = null): Operations\UpdateKmsCommentResponse
+    public function updateKmsComment2(Operations\UpdateKmsComment2Request $request, ?Options $options = null): Operations\UpdateKmsComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\UpdateKmsCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/comment/{id}', Operations\UpdateKmsComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsComment', 'json');
@@ -1020,11 +1020,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateKmsCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateKmsComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateKmsComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateKmsComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1050,7 +1050,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateKmsCommentResponse(
+                $response = new Operations\UpdateKmsComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1072,14 +1072,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTaskComment(Operations\UpdateTaskCommentRequest $request, ?Options $options = null): Operations\UpdateTaskCommentResponse
+    public function updateTaskComment2(Operations\UpdateTaskComment2Request $request, ?Options $options = null): Operations\UpdateTaskComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\UpdateTaskCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\UpdateTaskComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -1088,11 +1088,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1118,7 +1118,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTaskCommentResponse(
+                $response = new Operations\UpdateTaskComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1140,14 +1140,14 @@ class Comment
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcComment(Operations\UpdateUcCommentRequest $request, ?Options $options = null): Operations\UpdateUcCommentResponse
+    public function updateUcComment2(Operations\UpdateUcComment2Request $request, ?Options $options = null): Operations\UpdateUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\UpdateUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\UpdateUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -1156,11 +1156,11 @@ class Comment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1186,7 +1186,7 @@ class Comment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateUcCommentResponse(
+                $response = new Operations\UpdateUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

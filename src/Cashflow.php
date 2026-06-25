@@ -47,22 +47,22 @@ class Cashflow
     /**
      * Retrieve a cashflow
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCashflowRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingCashflowResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCashflow2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCashflow2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingCashflow(Operations\GetAccountingCashflowRequest $request, ?Options $options = null): Operations\GetAccountingCashflowResponse
+    public function getAccountingCashflow2(Operations\GetAccountingCashflow2Request $request, ?Options $options = null): Operations\GetAccountingCashflow2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/cashflow/{id}', Operations\GetAccountingCashflowRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/cashflow/{id}', Operations\GetAccountingCashflow2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCashflowRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCashflow2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCashflow', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCashflow2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Cashflow
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCashflow', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingCashflowResponse(
+                $response = new Operations\GetAccountingCashflow2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Cashflow
     /**
      * List all cashflows
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCashflowsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingCashflowsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCashflows2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCashflows2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingCashflows(Operations\ListAccountingCashflowsRequest $request, ?Options $options = null): Operations\ListAccountingCashflowsResponse
+    public function listAccountingCashflows2(Operations\ListAccountingCashflows2Request $request, ?Options $options = null): Operations\ListAccountingCashflows2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/cashflow', Operations\ListAccountingCashflowsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/cashflow', Operations\ListAccountingCashflows2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCashflowsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCashflows2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCashflows', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCashflows2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Cashflow
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingCashflow>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingCashflowsResponse(
+                $response = new Operations\ListAccountingCashflows2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

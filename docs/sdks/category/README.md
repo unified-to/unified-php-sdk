@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [createAccountingCategory](#createaccountingcategory) - Create a category
-* [createTicketingCategory](#createticketingcategory) - Create a category
-* [getAccountingCategory](#getaccountingcategory) - Retrieve a category
-* [getTicketingCategory](#getticketingcategory) - Retrieve a category
-* [listAccountingCategories](#listaccountingcategories) - List all categories
-* [listTicketingCategories](#listticketingcategories) - List all categories
-* [patchAccountingCategory](#patchaccountingcategory) - Update a category
-* [patchTicketingCategory](#patchticketingcategory) - Update a category
-* [removeAccountingCategory](#removeaccountingcategory) - Remove a category
-* [removeTicketingCategory](#removeticketingcategory) - Remove a category
-* [updateAccountingCategory](#updateaccountingcategory) - Update a category
-* [updateTicketingCategory](#updateticketingcategory) - Update a category
+* [createAccountingCategory2](#createaccountingcategory2) - Create a category
+* [createTicketingCategory2](#createticketingcategory2) - Create a category
+* [getAccountingCategory2](#getaccountingcategory2) - Retrieve a category
+* [getTicketingCategory2](#getticketingcategory2) - Retrieve a category
+* [listAccountingCategories2](#listaccountingcategories2) - List all categories
+* [listTicketingCategories2](#listticketingcategories2) - List all categories
+* [patchAccountingCategory2](#patchaccountingcategory2) - Update a category
+* [patchTicketingCategory2](#patchticketingcategory2) - Update a category
+* [removeAccountingCategory2](#removeaccountingcategory2) - Remove a category
+* [removeTicketingCategory2](#removeticketingcategory2) - Remove a category
+* [updateAccountingCategory2](#updateaccountingcategory2) - Update a category
+* [updateTicketingCategory2](#updateticketingcategory2) - Update a category
 
-## createAccountingCategory
+## createAccountingCategory2
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCategory2" method="post" path="/accounting/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -39,16 +39,68 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingCategoryRequest(
+$request = new Operations\CreateAccountingCategory2Request(
     accountingCategory: new Shared\AccountingCategory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->category->createAccountingCategory(
+$response = $sdk->category->createAccountingCategory2(
     request: $request
 );
 
 if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateAccountingCategory2Request](../../Models/Operations/CreateAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreateAccountingCategory2Response](../../Models/Operations/CreateAccountingCategory2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createTicketingCategory2
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateTicketingCategory2Request(
+    ticketingCategory: new Shared\TicketingCategory(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->category->createTicketingCategory2(
+    request: $request
+);
+
+if ($response->ticketingCategory !== null) {
     // handle response
 }
 ```
@@ -57,11 +109,11 @@ if ($response->accountingCategory !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingCategoryRequest](../../Models/Operations/CreateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\CreateTicketingCategory2Request](../../Models/Operations/CreateTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateAccountingCategoryResponse](../../Models/Operations/CreateAccountingCategoryResponse.md)**
+**[?Operations\CreateTicketingCategory2Response](../../Models/Operations/CreateTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -69,65 +121,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createTicketingCategory
-
-Create a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateTicketingCategoryRequest(
-    ticketingCategory: new Shared\TicketingCategory(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->category->createTicketingCategory(
-    request: $request
-);
-
-if ($response->ticketingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateTicketingCategoryRequest](../../Models/Operations/CreateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\CreateTicketingCategoryResponse](../../Models/Operations/CreateTicketingCategoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAccountingCategory
+## getAccountingCategory2
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingCategory2" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -142,12 +142,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingCategoryRequest(
+$request = new Operations\GetAccountingCategory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->category->getAccountingCategory(
+$response = $sdk->category->getAccountingCategory2(
     request: $request
 );
 
@@ -158,13 +158,13 @@ if ($response->accountingCategory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingCategoryRequest](../../Models/Operations/GetAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetAccountingCategory2Request](../../Models/Operations/GetAccountingCategory2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetAccountingCategoryResponse](../../Models/Operations/GetAccountingCategoryResponse.md)**
+**[?Operations\GetAccountingCategory2Response](../../Models/Operations/GetAccountingCategory2Response.md)**
 
 ### Errors
 
@@ -172,13 +172,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getTicketingCategory
+## getTicketingCategory2
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -193,12 +193,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetTicketingCategoryRequest(
+$request = new Operations\GetTicketingCategory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->category->getTicketingCategory(
+$response = $sdk->category->getTicketingCategory2(
     request: $request
 );
 
@@ -209,13 +209,13 @@ if ($response->ticketingCategory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetTicketingCategoryRequest](../../Models/Operations/GetTicketingCategoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetTicketingCategory2Request](../../Models/Operations/GetTicketingCategory2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetTicketingCategoryResponse](../../Models/Operations/GetTicketingCategoryResponse.md)**
+**[?Operations\GetTicketingCategory2Response](../../Models/Operations/GetTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -223,13 +223,13 @@ if ($response->ticketingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingCategories
+## listAccountingCategories2
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="listAccountingCategories2" method="get" path="/accounting/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -244,11 +244,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingCategoriesRequest(
+$request = new Operations\ListAccountingCategories2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->category->listAccountingCategories(
+$response = $sdk->category->listAccountingCategories2(
     request: $request
 );
 
@@ -259,13 +259,13 @@ if ($response->accountingCategories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListAccountingCategoriesRequest](../../Models/Operations/ListAccountingCategoriesRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\ListAccountingCategories2Request](../../Models/Operations/ListAccountingCategories2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\ListAccountingCategoriesResponse](../../Models/Operations/ListAccountingCategoriesResponse.md)**
+**[?Operations\ListAccountingCategories2Response](../../Models/Operations/ListAccountingCategories2Response.md)**
 
 ### Errors
 
@@ -273,13 +273,13 @@ if ($response->accountingCategories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingCategories
+## listTicketingCategories2
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -294,11 +294,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingCategoriesRequest(
+$request = new Operations\ListTicketingCategories2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->category->listTicketingCategories(
+$response = $sdk->category->listTicketingCategories2(
     request: $request
 );
 
@@ -309,170 +309,13 @@ if ($response->ticketingCategories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListTicketingCategoriesRequest](../../Models/Operations/ListTicketingCategoriesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\ListTicketingCategoriesResponse](../../Models/Operations/ListTicketingCategoriesResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAccountingCategory
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->category->patchAccountingCategory(
-    request: $request
-);
-
-if ($response->accountingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingCategoryRequest](../../Models/Operations/PatchAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\PatchAccountingCategoryResponse](../../Models/Operations/PatchAccountingCategoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchTicketingCategory
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchTicketingCategoryRequest(
-    ticketingCategory: new Shared\TicketingCategory(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->category->patchTicketingCategory(
-    request: $request
-);
-
-if ($response->ticketingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchTicketingCategoryRequest](../../Models/Operations/PatchTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\PatchTicketingCategoryResponse](../../Models/Operations/PatchTicketingCategoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingCategory
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingCategoryRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->category->removeAccountingCategory(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingCategoryRequest](../../Models/Operations/RemoveAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\ListTicketingCategories2Request](../../Models/Operations/ListTicketingCategories2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\RemoveAccountingCategoryResponse](../../Models/Operations/RemoveAccountingCategoryResponse.md)**
+**[?Operations\ListTicketingCategories2Response](../../Models/Operations/ListTicketingCategories2Response.md)**
 
 ### Errors
 
@@ -480,64 +323,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeTicketingCategory
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveTicketingCategoryRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->category->removeTicketingCategory(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveTicketingCategoryRequest](../../Models/Operations/RemoveTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\RemoveTicketingCategoryResponse](../../Models/Operations/RemoveTicketingCategoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingCategory
+## patchAccountingCategory2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingCategory2" method="patch" path="/accounting/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -553,13 +345,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingCategoryRequest(
+$request = new Operations\PatchAccountingCategory2Request(
     accountingCategory: new Shared\AccountingCategory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->category->updateAccountingCategory(
+$response = $sdk->category->patchAccountingCategory2(
     request: $request
 );
 
@@ -572,11 +364,11 @@ if ($response->accountingCategory !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingCategoryRequest](../../Models/Operations/UpdateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\PatchAccountingCategory2Request](../../Models/Operations/PatchAccountingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateAccountingCategoryResponse](../../Models/Operations/UpdateAccountingCategoryResponse.md)**
+**[?Operations\PatchAccountingCategory2Response](../../Models/Operations/PatchAccountingCategory2Response.md)**
 
 ### Errors
 
@@ -584,13 +376,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateTicketingCategory
+## patchTicketingCategory2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -606,13 +398,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTicketingCategoryRequest(
+$request = new Operations\PatchTicketingCategory2Request(
     ticketingCategory: new Shared\TicketingCategory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->category->updateTicketingCategory(
+$response = $sdk->category->patchTicketingCategory2(
     request: $request
 );
 
@@ -625,11 +417,219 @@ if ($response->ticketingCategory !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateTicketingCategoryRequest](../../Models/Operations/UpdateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\PatchTicketingCategory2Request](../../Models/Operations/PatchTicketingCategory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateTicketingCategoryResponse](../../Models/Operations/UpdateTicketingCategoryResponse.md)**
+**[?Operations\PatchTicketingCategory2Response](../../Models/Operations/PatchTicketingCategory2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingCategory2
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingCategory2" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingCategory2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->category->removeAccountingCategory2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveAccountingCategory2Request](../../Models/Operations/RemoveAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemoveAccountingCategory2Response](../../Models/Operations/RemoveAccountingCategory2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeTicketingCategory2
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveTicketingCategory2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->category->removeTicketingCategory2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveTicketingCategory2Request](../../Models/Operations/RemoveTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveTicketingCategory2Response](../../Models/Operations/RemoveTicketingCategory2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingCategory2
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingCategory2" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingCategory2Request(
+    accountingCategory: new Shared\AccountingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->category->updateAccountingCategory2(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateAccountingCategory2Request](../../Models/Operations/UpdateAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\UpdateAccountingCategory2Response](../../Models/Operations/UpdateAccountingCategory2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateTicketingCategory2
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateTicketingCategory2Request(
+    ticketingCategory: new Shared\TicketingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->category->updateTicketingCategory2(
+    request: $request
+);
+
+if ($response->ticketingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateTicketingCategory2Request](../../Models/Operations/UpdateTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\UpdateTicketingCategory2Response](../../Models/Operations/UpdateTicketingCategory2Response.md)**
 
 ### Errors
 

@@ -44,6 +44,16 @@ class UcRecording
     public ?string $contactPhone = null;
 
     /**
+     * $contacts
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcContact> $contacts
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contacts')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcContact>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $contacts = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -157,6 +167,7 @@ class UcRecording
      * @param  ?string  $contactId
      * @param  ?string  $contactName
      * @param  ?string  $contactPhone
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?\DateTime  $expiresAt
@@ -172,12 +183,13 @@ class UcRecording
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
         $this->contactId = $contactId;
         $this->contactName = $contactName;
         $this->contactPhone = $contactPhone;
+        $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->expiresAt = $expiresAt;

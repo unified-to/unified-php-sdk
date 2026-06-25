@@ -47,22 +47,22 @@ class Clubs
     /**
      * Retrieve an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsActivity(Operations\GetClubsActivityRequest $request, ?Options $options = null): Operations\GetClubsActivityResponse
+    public function getClubsActivity2(Operations\GetClubsActivity2Request $request, ?Options $options = null): Operations\GetClubsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/activity/{id}', Operations\GetClubsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/activity/{id}', Operations\GetClubsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsActivityRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsActivity2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsActivity', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsActivityResponse(
+                $response = new Operations\GetClubsActivity2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Clubs
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsEventRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsEventResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsEvent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsEvent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsEvent(Operations\GetClubsEventRequest $request, ?Options $options = null): Operations\GetClubsEventResponse
+    public function getClubsEvent2(Operations\GetClubsEvent2Request $request, ?Options $options = null): Operations\GetClubsEvent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event/{id}', Operations\GetClubsEventRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event/{id}', Operations\GetClubsEvent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsEventRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsEvent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsEvent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsEvent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsEventResponse(
+                $response = new Operations\GetClubsEvent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -173,22 +173,22 @@ class Clubs
     /**
      * Retrieve a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsGroupRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsGroupResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsGroup2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsGroup2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsGroup(Operations\GetClubsGroupRequest $request, ?Options $options = null): Operations\GetClubsGroupResponse
+    public function getClubsGroup2(Operations\GetClubsGroup2Request $request, ?Options $options = null): Operations\GetClubsGroup2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group/{id}', Operations\GetClubsGroupRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group/{id}', Operations\GetClubsGroup2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsGroupRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsGroup2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsGroup', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsGroup2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -214,7 +214,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsGroupResponse(
+                $response = new Operations\GetClubsGroup2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -236,22 +236,22 @@ class Clubs
     /**
      * Retrieve a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsLocationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsLocationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsLocation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsLocation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsLocation(Operations\GetClubsLocationRequest $request, ?Options $options = null): Operations\GetClubsLocationResponse
+    public function getClubsLocation2(Operations\GetClubsLocation2Request $request, ?Options $options = null): Operations\GetClubsLocation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location/{id}', Operations\GetClubsLocationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location/{id}', Operations\GetClubsLocation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsLocationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsLocation2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsLocation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsLocation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -277,7 +277,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsLocationResponse(
+                $response = new Operations\GetClubsLocation2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -299,22 +299,22 @@ class Clubs
     /**
      * Retrieve a member
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsMemberRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsMemberResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsMember2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsMember2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsMember(Operations\GetClubsMemberRequest $request, ?Options $options = null): Operations\GetClubsMemberResponse
+    public function getClubsMember2(Operations\GetClubsMember2Request $request, ?Options $options = null): Operations\GetClubsMember2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/member/{id}', Operations\GetClubsMemberRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/member/{id}', Operations\GetClubsMember2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsMemberRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsMember2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsMember', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsMember2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -340,7 +340,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsMemberResponse(
+                $response = new Operations\GetClubsMember2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -362,22 +362,22 @@ class Clubs
     /**
      * List all activities
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsActivitiesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsActivitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsActivities2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsActivities2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsActivities(Operations\ListClubsActivitiesRequest $request, ?Options $options = null): Operations\ListClubsActivitiesResponse
+    public function listClubsActivities2(Operations\ListClubsActivities2Request $request, ?Options $options = null): Operations\ListClubsActivities2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/activity', Operations\ListClubsActivitiesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/activity', Operations\ListClubsActivities2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsActivitiesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsActivities2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsActivities', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsActivities2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -403,7 +403,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsActivity>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsActivitiesResponse(
+                $response = new Operations\ListClubsActivities2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -425,22 +425,22 @@ class Clubs
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsEventsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsEventsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsEvents2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsEvents2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsEvents(Operations\ListClubsEventsRequest $request, ?Options $options = null): Operations\ListClubsEventsResponse
+    public function listClubsEvents2(Operations\ListClubsEvents2Request $request, ?Options $options = null): Operations\ListClubsEvents2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event', Operations\ListClubsEventsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event', Operations\ListClubsEvents2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsEventsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsEvents2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsEvents', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsEvents2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -466,7 +466,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsEventsResponse(
+                $response = new Operations\ListClubsEvents2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -488,22 +488,22 @@ class Clubs
     /**
      * List all groups
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsGroupsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsGroupsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsGroups2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsGroups2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsGroups(Operations\ListClubsGroupsRequest $request, ?Options $options = null): Operations\ListClubsGroupsResponse
+    public function listClubsGroups2(Operations\ListClubsGroups2Request $request, ?Options $options = null): Operations\ListClubsGroups2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group', Operations\ListClubsGroupsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group', Operations\ListClubsGroups2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsGroupsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsGroups2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsGroups', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsGroups2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -529,7 +529,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsGroup>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsGroupsResponse(
+                $response = new Operations\ListClubsGroups2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -551,22 +551,22 @@ class Clubs
     /**
      * List all locations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsLocationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsLocationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsLocations2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsLocations2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsLocations(Operations\ListClubsLocationsRequest $request, ?Options $options = null): Operations\ListClubsLocationsResponse
+    public function listClubsLocations2(Operations\ListClubsLocations2Request $request, ?Options $options = null): Operations\ListClubsLocations2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location', Operations\ListClubsLocationsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location', Operations\ListClubsLocations2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsLocationsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsLocations2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsLocations', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsLocations2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -592,7 +592,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsLocation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsLocationsResponse(
+                $response = new Operations\ListClubsLocations2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -614,22 +614,22 @@ class Clubs
     /**
      * List all members
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsMembersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsMembersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsMembers2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsMembers2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsMembers(Operations\ListClubsMembersRequest $request, ?Options $options = null): Operations\ListClubsMembersResponse
+    public function listClubsMembers2(Operations\ListClubsMembers2Request $request, ?Options $options = null): Operations\ListClubsMembers2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/member', Operations\ListClubsMembersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/member', Operations\ListClubsMembers2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsMembersRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsMembers2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsMembers', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsMembers2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -655,7 +655,7 @@ class Clubs
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsMember>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsMembersResponse(
+                $response = new Operations\ListClubsMembers2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

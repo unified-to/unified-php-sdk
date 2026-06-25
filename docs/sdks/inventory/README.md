@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceInventory](#createcommerceinventory) - Create an inventory
-* [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
-* [listCommerceInventories](#listcommerceinventories) - List all inventories
-* [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
-* [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
-* [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
+* [createCommerceInventory2](#createcommerceinventory2) - Create an inventory
+* [getCommerceInventory2](#getcommerceinventory2) - Retrieve an inventory
+* [listCommerceInventories2](#listcommerceinventories2) - List all inventories
+* [patchCommerceInventory2](#patchcommerceinventory2) - Update an inventory
+* [removeCommerceInventory2](#removecommerceinventory2) - Remove an inventory
+* [updateCommerceInventory2](#updatecommerceinventory2) - Update an inventory
 
-## createCommerceInventory
+## createCommerceInventory2
 
 Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="php" operationID="createCommerceInventory2" method="post" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceInventoryRequest(
+$request = new Operations\CreateCommerceInventory2Request(
     commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->inventory->createCommerceInventory(
+$response = $sdk->inventory->createCommerceInventory2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceInventory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateCommerceInventoryRequest](../../Models/Operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateCommerceInventory2Request](../../Models/Operations/CreateCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateCommerceInventoryResponse](../../Models/Operations/CreateCommerceInventoryResponse.md)**
+**[?Operations\CreateCommerceInventory2Response](../../Models/Operations/CreateCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceInventory
+## getCommerceInventory2
 
 Retrieve an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceInventory2" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceInventoryRequest(
+$request = new Operations\GetCommerceInventory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->inventory->getCommerceInventory(
+$response = $sdk->inventory->getCommerceInventory2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceInventory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetCommerceInventoryRequest](../../Models/Operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetCommerceInventory2Request](../../Models/Operations/GetCommerceInventory2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetCommerceInventoryResponse](../../Models/Operations/GetCommerceInventoryResponse.md)**
+**[?Operations\GetCommerceInventory2Response](../../Models/Operations/GetCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceInventories
+## listCommerceInventories2
 
 List all inventories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="php" operationID="listCommerceInventories2" method="get" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceInventoriesRequest(
+$request = new Operations\ListCommerceInventories2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->inventory->listCommerceInventories(
+$response = $sdk->inventory->listCommerceInventories2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceInventories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListCommerceInventoriesRequest](../../Models/Operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceInventories2Request](../../Models/Operations/ListCommerceInventories2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceInventoriesResponse](../../Models/Operations/ListCommerceInventoriesResponse.md)**
+**[?Operations\ListCommerceInventories2Response](../../Models/Operations/ListCommerceInventories2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceInventories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceInventory
+## patchCommerceInventory2
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory2" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceInventoryRequest(
+$request = new Operations\PatchCommerceInventory2Request(
     commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->inventory->patchCommerceInventory(
+$response = $sdk->inventory->patchCommerceInventory2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceInventory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchCommerceInventoryRequest](../../Models/Operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchCommerceInventory2Request](../../Models/Operations/PatchCommerceInventory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchCommerceInventoryResponse](../../Models/Operations/PatchCommerceInventoryResponse.md)**
+**[?Operations\PatchCommerceInventory2Response](../../Models/Operations/PatchCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceInventory
+## removeCommerceInventory2
 
 Remove an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceInventory2" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceInventoryRequest(
+$request = new Operations\RemoveCommerceInventory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->inventory->removeCommerceInventory(
+$response = $sdk->inventory->removeCommerceInventory2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveCommerceInventoryRequest](../../Models/Operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveCommerceInventory2Request](../../Models/Operations/RemoveCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\RemoveCommerceInventoryResponse](../../Models/Operations/RemoveCommerceInventoryResponse.md)**
+**[?Operations\RemoveCommerceInventory2Response](../../Models/Operations/RemoveCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceInventory
+## updateCommerceInventory2
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory2" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceInventoryRequest(
+$request = new Operations\UpdateCommerceInventory2Request(
     commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->inventory->updateCommerceInventory(
+$response = $sdk->inventory->updateCommerceInventory2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceInventory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateCommerceInventoryRequest](../../Models/Operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateCommerceInventory2Request](../../Models/Operations/UpdateCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateCommerceInventoryResponse](../../Models/Operations/UpdateCommerceInventoryResponse.md)**
+**[?Operations\UpdateCommerceInventory2Response](../../Models/Operations/UpdateCommerceInventory2Response.md)**
 
 ### Errors
 

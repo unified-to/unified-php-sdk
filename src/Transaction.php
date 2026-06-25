@@ -47,14 +47,14 @@ class Transaction
     /**
      * Create a transaction
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransaction2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransaction2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingTransaction(Operations\CreateAccountingTransactionRequest $request, ?Options $options = null): Operations\CreateAccountingTransactionResponse
+    public function createAccountingTransaction2(Operations\CreateAccountingTransaction2Request $request, ?Options $options = null): Operations\CreateAccountingTransaction2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\CreateAccountingTransactionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\CreateAccountingTransaction2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
@@ -63,11 +63,11 @@ class Transaction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingTransactionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingTransaction2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingTransaction', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingTransaction2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Transaction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTransaction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingTransactionResponse(
+                $response = new Operations\CreateAccountingTransaction2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Transaction
     /**
      * Retrieve a transaction
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransaction2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTransaction2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTransaction(Operations\GetAccountingTransactionRequest $request, ?Options $options = null): Operations\GetAccountingTransactionResponse
+    public function getAccountingTransaction2(Operations\GetAccountingTransaction2Request $request, ?Options $options = null): Operations\GetAccountingTransaction2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\GetAccountingTransactionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\GetAccountingTransaction2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTransactionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTransaction2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTransaction', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTransaction2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Transaction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTransaction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingTransactionResponse(
+                $response = new Operations\GetAccountingTransaction2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Transaction
     /**
      * List all transactions
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactions2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactions2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTransactions(Operations\ListAccountingTransactionsRequest $request, ?Options $options = null): Operations\ListAccountingTransactionsResponse
+    public function listAccountingTransactions2(Operations\ListAccountingTransactions2Request $request, ?Options $options = null): Operations\ListAccountingTransactions2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\ListAccountingTransactionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction', Operations\ListAccountingTransactions2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTransactionsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTransactions2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTransactions', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTransactions2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Transaction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingTransaction>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingTransactionsResponse(
+                $response = new Operations\ListAccountingTransactions2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Transaction
     /**
      * Update a transaction
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransaction2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransaction2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingTransaction(Operations\PatchAccountingTransactionRequest $request, ?Options $options = null): Operations\PatchAccountingTransactionResponse
+    public function patchAccountingTransaction2(Operations\PatchAccountingTransaction2Request $request, ?Options $options = null): Operations\PatchAccountingTransaction2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\PatchAccountingTransactionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\PatchAccountingTransaction2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
@@ -257,11 +257,11 @@ class Transaction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingTransactionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingTransaction2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingTransaction', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingTransaction2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Transaction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTransaction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingTransactionResponse(
+                $response = new Operations\PatchAccountingTransaction2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Transaction
     /**
      * Remove a transaction
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransaction2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransaction2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingTransaction(Operations\RemoveAccountingTransactionRequest $request, ?Options $options = null): Operations\RemoveAccountingTransactionResponse
+    public function removeAccountingTransaction2(Operations\RemoveAccountingTransaction2Request $request, ?Options $options = null): Operations\RemoveAccountingTransaction2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\RemoveAccountingTransactionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\RemoveAccountingTransaction2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingTransaction', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingTransaction2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Transaction
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingTransactionResponse(
+            return new Operations\RemoveAccountingTransaction2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Transaction
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingTransactionResponse(
+            return new Operations\RemoveAccountingTransaction2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Transaction
     /**
      * Update a transaction
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransaction2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransaction2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingTransaction(Operations\UpdateAccountingTransactionRequest $request, ?Options $options = null): Operations\UpdateAccountingTransactionResponse
+    public function updateAccountingTransaction2(Operations\UpdateAccountingTransaction2Request $request, ?Options $options = null): Operations\UpdateAccountingTransaction2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\UpdateAccountingTransactionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/transaction/{id}', Operations\UpdateAccountingTransaction2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTransaction', 'json');
@@ -382,11 +382,11 @@ class Transaction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingTransactionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingTransaction2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingTransaction', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingTransaction2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Transaction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTransaction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingTransactionResponse(
+                $response = new Operations\UpdateAccountingTransaction2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

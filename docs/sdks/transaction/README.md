@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
-* [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
-* [listAccountingTransactions](#listaccountingtransactions) - List all transactions
-* [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
-* [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
-* [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
+* [createAccountingTransaction2](#createaccountingtransaction2) - Create a transaction
+* [getAccountingTransaction2](#getaccountingtransaction2) - Retrieve a transaction
+* [listAccountingTransactions2](#listaccountingtransactions2) - List all transactions
+* [patchAccountingTransaction2](#patchaccountingtransaction2) - Update a transaction
+* [removeAccountingTransaction2](#removeaccountingtransaction2) - Remove a transaction
+* [updateAccountingTransaction2](#updateaccountingtransaction2) - Update a transaction
 
-## createAccountingTransaction
+## createAccountingTransaction2
 
 Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTransaction2" method="post" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingTransactionRequest(
+$request = new Operations\CreateAccountingTransaction2Request(
     accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
 );
 
-$response = $sdk->transaction->createAccountingTransaction(
+$response = $sdk->transaction->createAccountingTransaction2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\CreateAccountingTransactionRequest](../../Models/Operations/CreateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\CreateAccountingTransaction2Request](../../Models/Operations/CreateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\CreateAccountingTransactionResponse](../../Models/Operations/CreateAccountingTransactionResponse.md)**
+**[?Operations\CreateAccountingTransaction2Response](../../Models/Operations/CreateAccountingTransaction2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingTransaction
+## getAccountingTransaction2
 
 Retrieve a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTransaction2" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTransactionRequest(
+$request = new Operations\GetAccountingTransaction2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->transaction->getAccountingTransaction(
+$response = $sdk->transaction->getAccountingTransaction2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetAccountingTransactionRequest](../../Models/Operations/GetAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingTransaction2Request](../../Models/Operations/GetAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingTransactionResponse](../../Models/Operations/GetAccountingTransactionResponse.md)**
+**[?Operations\GetAccountingTransaction2Response](../../Models/Operations/GetAccountingTransaction2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTransactions
+## listAccountingTransactions2
 
 List all transactions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTransactions2" method="get" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTransactionsRequest(
+$request = new Operations\ListAccountingTransactions2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->transaction->listAccountingTransactions(
+$response = $sdk->transaction->listAccountingTransactions2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingTransactions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListAccountingTransactionsRequest](../../Models/Operations/ListAccountingTransactionsRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingTransactions2Request](../../Models/Operations/ListAccountingTransactions2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingTransactionsResponse](../../Models/Operations/ListAccountingTransactionsResponse.md)**
+**[?Operations\ListAccountingTransactions2Response](../../Models/Operations/ListAccountingTransactions2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingTransactions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingTransaction
+## patchAccountingTransaction2
 
 Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTransaction2" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingTransactionRequest(
+$request = new Operations\PatchAccountingTransaction2Request(
     accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->transaction->patchAccountingTransaction(
+$response = $sdk->transaction->patchAccountingTransaction2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\PatchAccountingTransactionRequest](../../Models/Operations/PatchAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\PatchAccountingTransaction2Request](../../Models/Operations/PatchAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\PatchAccountingTransactionResponse](../../Models/Operations/PatchAccountingTransactionResponse.md)**
+**[?Operations\PatchAccountingTransaction2Response](../../Models/Operations/PatchAccountingTransaction2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingTransaction
+## removeAccountingTransaction2
 
 Remove a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingTransaction2" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingTransactionRequest(
+$request = new Operations\RemoveAccountingTransaction2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->transaction->removeAccountingTransaction(
+$response = $sdk->transaction->removeAccountingTransaction2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\RemoveAccountingTransactionRequest](../../Models/Operations/RemoveAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\RemoveAccountingTransaction2Request](../../Models/Operations/RemoveAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\RemoveAccountingTransactionResponse](../../Models/Operations/RemoveAccountingTransactionResponse.md)**
+**[?Operations\RemoveAccountingTransaction2Response](../../Models/Operations/RemoveAccountingTransaction2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingTransaction
+## updateAccountingTransaction2
 
 Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTransaction2" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingTransactionRequest(
+$request = new Operations\UpdateAccountingTransaction2Request(
     accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->transaction->updateAccountingTransaction(
+$response = $sdk->transaction->updateAccountingTransaction2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\UpdateAccountingTransactionRequest](../../Models/Operations/UpdateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\UpdateAccountingTransaction2Request](../../Models/Operations/UpdateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\UpdateAccountingTransactionResponse](../../Models/Operations/UpdateAccountingTransactionResponse.md)**
+**[?Operations\UpdateAccountingTransaction2Response](../../Models/Operations/UpdateAccountingTransaction2Response.md)**
 
 ### Errors
 

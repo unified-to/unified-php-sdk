@@ -47,22 +47,22 @@ class Refund
     /**
      * Retrieve a refund
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefund2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentRefund2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentRefund(Operations\GetPaymentRefundRequest $request, ?Options $options = null): Operations\GetPaymentRefundResponse
+    public function getPaymentRefund2(Operations\GetPaymentRefund2Request $request, ?Options $options = null): Operations\GetPaymentRefund2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund/{id}', Operations\GetPaymentRefundRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund/{id}', Operations\GetPaymentRefund2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetPaymentRefundRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetPaymentRefund2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getPaymentRefund', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getPaymentRefund2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Refund
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\PaymentRefund', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetPaymentRefundResponse(
+                $response = new Operations\GetPaymentRefund2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Refund
     /**
      * List all refunds
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefunds2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentRefunds2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentRefunds(Operations\ListPaymentRefundsRequest $request, ?Options $options = null): Operations\ListPaymentRefundsResponse
+    public function listPaymentRefunds2(Operations\ListPaymentRefunds2Request $request, ?Options $options = null): Operations\ListPaymentRefunds2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund', Operations\ListPaymentRefundsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/refund', Operations\ListPaymentRefunds2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListPaymentRefundsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListPaymentRefunds2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPaymentRefunds', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPaymentRefunds2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Refund
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\PaymentRefund>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListPaymentRefundsResponse(
+                $response = new Operations\ListPaymentRefunds2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

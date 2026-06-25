@@ -35,9 +35,11 @@ enum PropertyIntegrationCategories: string
     case Calendar = 'calendar';
     case Verification = 'verification';
     case Ads = 'ads';
+    case Analytics = 'analytics';
     case Forms = 'forms';
     case Shipping = 'shipping';
     case Assessment = 'assessment';
     case Signing = 'signing';
     case Clubs = 'clubs';
+    case Datastore = 'datastore';
 }

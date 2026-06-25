@@ -47,14 +47,14 @@ class Uc
     /**
      * Create a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcComment(Operations\CreateUcCommentRequest $request, ?Options $options = null): Operations\CreateUcCommentResponse
+    public function createUcComment2(Operations\CreateUcComment2Request $request, ?Options $options = null): Operations\CreateUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\CreateUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\CreateUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -63,11 +63,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUcCommentResponse(
+                $response = new Operations\CreateUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Uc
     /**
      * Create a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUcContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcContact(Operations\CreateUcContactRequest $request, ?Options $options = null): Operations\CreateUcContactResponse
+    public function createUcContact2(Operations\CreateUcContact2Request $request, ?Options $options = null): Operations\CreateUcContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\CreateUcContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\CreateUcContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucContact', 'json');
@@ -131,11 +131,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateUcContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateUcContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUcContactResponse(
+                $response = new Operations\CreateUcContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Uc
     /**
      * Create a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcRecording(Operations\CreateUcRecordingRequest $request, ?Options $options = null): Operations\CreateUcRecordingResponse
+    public function createUcRecording2(Operations\CreateUcRecording2Request $request, ?Options $options = null): Operations\CreateUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\CreateUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\CreateUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -199,11 +199,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUcRecordingResponse(
+                $response = new Operations\CreateUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Uc
     /**
      * Retrieve a call
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcCallRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcCallResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCall2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCall2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcCall(Operations\GetUcCallRequest $request, ?Options $options = null): Operations\GetUcCallResponse
+    public function getUcCall2(Operations\GetUcCall2Request $request, ?Options $options = null): Operations\GetUcCall2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call/{id}', Operations\GetUcCallRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call/{id}', Operations\GetUcCall2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcCallRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcCall2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcCall', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcCall2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcCall', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcCallResponse(
+                $response = new Operations\GetUcCall2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Uc
     /**
      * Retrieve a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcComment(Operations\GetUcCommentRequest $request, ?Options $options = null): Operations\GetUcCommentResponse
+    public function getUcComment2(Operations\GetUcComment2Request $request, ?Options $options = null): Operations\GetUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\GetUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\GetUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcCommentResponse(
+                $response = new Operations\GetUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Uc
     /**
      * Retrieve a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcContact(Operations\GetUcContactRequest $request, ?Options $options = null): Operations\GetUcContactResponse
+    public function getUcContact2(Operations\GetUcContact2Request $request, ?Options $options = null): Operations\GetUcContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\GetUcContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\GetUcContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcContactResponse(
+                $response = new Operations\GetUcContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Uc
     /**
      * Retrieve a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcRecording(Operations\GetUcRecordingRequest $request, ?Options $options = null): Operations\GetUcRecordingResponse
+    public function getUcRecording2(Operations\GetUcRecording2Request $request, ?Options $options = null): Operations\GetUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\GetUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\GetUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcRecordingResponse(
+                $response = new Operations\GetUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Uc
     /**
      * List all calls
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCalls2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCalls2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcCalls(Operations\ListUcCallsRequest $request, ?Options $options = null): Operations\ListUcCallsResponse
+    public function listUcCalls2(Operations\ListUcCalls2Request $request, ?Options $options = null): Operations\ListUcCalls2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCallsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCalls2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcCallsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcCalls2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcCalls', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcCalls2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcCall>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcCallsResponse(
+                $response = new Operations\ListUcCalls2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Uc
     /**
      * List all comments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcComments2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcComments2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcComments(Operations\ListUcCommentsRequest $request, ?Options $options = null): Operations\ListUcCommentsResponse
+    public function listUcComments2(Operations\ListUcComments2Request $request, ?Options $options = null): Operations\ListUcComments2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\ListUcCommentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment', Operations\ListUcComments2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcCommentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcComments2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcComments', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcComments2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcComment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcCommentsResponse(
+                $response = new Operations\ListUcComments2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,22 +629,22 @@ class Uc
     /**
      * List all contacts
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcContactsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcContacts2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcContacts2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcContacts(Operations\ListUcContactsRequest $request, ?Options $options = null): Operations\ListUcContactsResponse
+    public function listUcContacts2(Operations\ListUcContacts2Request $request, ?Options $options = null): Operations\ListUcContacts2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\ListUcContactsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact', Operations\ListUcContacts2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcContactsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcContacts2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcContacts', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcContacts2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -670,7 +670,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcContact>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcContactsResponse(
+                $response = new Operations\ListUcContacts2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -692,22 +692,22 @@ class Uc
     /**
      * List all recordings
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordings2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcRecordings2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcRecordings(Operations\ListUcRecordingsRequest $request, ?Options $options = null): Operations\ListUcRecordingsResponse
+    public function listUcRecordings2(Operations\ListUcRecordings2Request $request, ?Options $options = null): Operations\ListUcRecordings2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\ListUcRecordingsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\ListUcRecordings2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcRecordingsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcRecordings2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcRecordings', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcRecordings2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -733,7 +733,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcRecording>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcRecordingsResponse(
+                $response = new Operations\ListUcRecordings2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -755,14 +755,14 @@ class Uc
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcComment(Operations\PatchUcCommentRequest $request, ?Options $options = null): Operations\PatchUcCommentResponse
+    public function patchUcComment2(Operations\PatchUcComment2Request $request, ?Options $options = null): Operations\PatchUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\PatchUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\PatchUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -771,11 +771,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -801,7 +801,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchUcCommentResponse(
+                $response = new Operations\PatchUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -823,14 +823,14 @@ class Uc
     /**
      * Update a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUcContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcContact(Operations\PatchUcContactRequest $request, ?Options $options = null): Operations\PatchUcContactResponse
+    public function patchUcContact2(Operations\PatchUcContact2Request $request, ?Options $options = null): Operations\PatchUcContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\PatchUcContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\PatchUcContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucContact', 'json');
@@ -839,11 +839,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchUcContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchUcContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -869,7 +869,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchUcContactResponse(
+                $response = new Operations\PatchUcContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -891,14 +891,14 @@ class Uc
     /**
      * Update a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcRecording(Operations\PatchUcRecordingRequest $request, ?Options $options = null): Operations\PatchUcRecordingResponse
+    public function patchUcRecording2(Operations\PatchUcRecording2Request $request, ?Options $options = null): Operations\PatchUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\PatchUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\PatchUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -907,11 +907,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -937,7 +937,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchUcRecordingResponse(
+                $response = new Operations\PatchUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -959,20 +959,20 @@ class Uc
     /**
      * Remove a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcComment(Operations\RemoveUcCommentRequest $request, ?Options $options = null): Operations\RemoveUcCommentResponse
+    public function removeUcComment2(Operations\RemoveUcComment2Request $request, ?Options $options = null): Operations\RemoveUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\RemoveUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\RemoveUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -993,7 +993,7 @@ class Uc
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcCommentResponse(
+            return new Operations\RemoveUcComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1005,7 +1005,7 @@ class Uc
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcCommentResponse(
+            return new Operations\RemoveUcComment2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1016,20 +1016,20 @@ class Uc
     /**
      * Remove a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUcContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcContact(Operations\RemoveUcContactRequest $request, ?Options $options = null): Operations\RemoveUcContactResponse
+    public function removeUcContact2(Operations\RemoveUcContact2Request $request, ?Options $options = null): Operations\RemoveUcContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\RemoveUcContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\RemoveUcContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1050,7 +1050,7 @@ class Uc
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcContactResponse(
+            return new Operations\RemoveUcContact2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1062,7 +1062,7 @@ class Uc
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcContactResponse(
+            return new Operations\RemoveUcContact2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1073,20 +1073,20 @@ class Uc
     /**
      * Remove a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcRecording(Operations\RemoveUcRecordingRequest $request, ?Options $options = null): Operations\RemoveUcRecordingResponse
+    public function removeUcRecording2(Operations\RemoveUcRecording2Request $request, ?Options $options = null): Operations\RemoveUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\RemoveUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\RemoveUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1107,7 +1107,7 @@ class Uc
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcRecordingResponse(
+            return new Operations\RemoveUcRecording2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1119,7 +1119,7 @@ class Uc
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcRecordingResponse(
+            return new Operations\RemoveUcRecording2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1130,14 +1130,14 @@ class Uc
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcComment2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcComment2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcComment(Operations\UpdateUcCommentRequest $request, ?Options $options = null): Operations\UpdateUcCommentResponse
+    public function updateUcComment2(Operations\UpdateUcComment2Request $request, ?Options $options = null): Operations\UpdateUcComment2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\UpdateUcCommentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/comment/{id}', Operations\UpdateUcComment2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucComment', 'json');
@@ -1146,11 +1146,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcCommentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcComment2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcComment', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcComment2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1176,7 +1176,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateUcCommentResponse(
+                $response = new Operations\UpdateUcComment2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1198,14 +1198,14 @@ class Uc
     /**
      * Update a contact
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUcContactRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcContact2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcContact2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcContact(Operations\UpdateUcContactRequest $request, ?Options $options = null): Operations\UpdateUcContactResponse
+    public function updateUcContact2(Operations\UpdateUcContact2Request $request, ?Options $options = null): Operations\UpdateUcContact2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\UpdateUcContactRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/contact/{id}', Operations\UpdateUcContact2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucContact', 'json');
@@ -1214,11 +1214,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcContactRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcContact2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcContact', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcContact2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1244,7 +1244,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcContact', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateUcContactResponse(
+                $response = new Operations\UpdateUcContact2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1266,14 +1266,14 @@ class Uc
     /**
      * Update a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcRecording(Operations\UpdateUcRecordingRequest $request, ?Options $options = null): Operations\UpdateUcRecordingResponse
+    public function updateUcRecording2(Operations\UpdateUcRecording2Request $request, ?Options $options = null): Operations\UpdateUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\UpdateUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\UpdateUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -1282,11 +1282,11 @@ class Uc
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1312,7 +1312,7 @@ class Uc
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateUcRecordingResponse(
+                $response = new Operations\UpdateUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

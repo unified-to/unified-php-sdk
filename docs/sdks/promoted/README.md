@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getAdsPromoted](#getadspromoted) - Retrieve a promoted
-* [listAdsPromoteds](#listadspromoteds) - List all promoteds
+* [getAdsPromoted2](#getadspromoted2) - Retrieve a promoted
+* [listAdsPromoteds2](#listadspromoteds2) - List all promoteds
 
-## getAdsPromoted
+## getAdsPromoted2
 
 Retrieve a promoted
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsPromotedRequest(
+$request = new Operations\GetAdsPromoted2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->promoted->getAdsPromoted(
+$response = $sdk->promoted->getAdsPromoted2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->adsPromoted !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAdsPromotedRequest](../../Models/Operations/GetAdsPromotedRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsPromoted2Request](../../Models/Operations/GetAdsPromoted2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetAdsPromotedResponse](../../Models/Operations/GetAdsPromotedResponse.md)**
+**[?Operations\GetAdsPromoted2Response](../../Models/Operations/GetAdsPromoted2Response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->adsPromoted !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsPromoteds
+## listAdsPromoteds2
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="php" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsPromotedsRequest(
+$request = new Operations\ListAdsPromoteds2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->promoted->listAdsPromoteds(
+$response = $sdk->promoted->listAdsPromoteds2(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->adsPromoteds !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAdsPromotedsRequest](../../Models/Operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsPromoteds2Request](../../Models/Operations/ListAdsPromoteds2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAdsPromotedsResponse](../../Models/Operations/ListAdsPromotedsResponse.md)**
+**[?Operations\ListAdsPromoteds2Response](../../Models/Operations/ListAdsPromoteds2Response.md)**
 
 ### Errors
 

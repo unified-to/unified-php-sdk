@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [createCommerceCollection](#createcommercecollection) - Create a collection
-* [createLmsCollection](#createlmscollection) - Create a collection
-* [getCommerceCollection](#getcommercecollection) - Retrieve a collection
-* [getLmsCollection](#getlmscollection) - Retrieve a collection
-* [listCommerceCollections](#listcommercecollections) - List all collections
-* [listLmsCollections](#listlmscollections) - List all collections
-* [patchCommerceCollection](#patchcommercecollection) - Update a collection
-* [patchLmsCollection](#patchlmscollection) - Update a collection
-* [removeCommerceCollection](#removecommercecollection) - Remove a collection
-* [removeLmsCollection](#removelmscollection) - Remove a collection
-* [updateCommerceCollection](#updatecommercecollection) - Update a collection
-* [updateLmsCollection](#updatelmscollection) - Update a collection
+* [createCommerceCollection2](#createcommercecollection2) - Create a collection
+* [createLmsCollection2](#createlmscollection2) - Create a collection
+* [getCommerceCollection2](#getcommercecollection2) - Retrieve a collection
+* [getLmsCollection2](#getlmscollection2) - Retrieve a collection
+* [listCommerceCollections2](#listcommercecollections2) - List all collections
+* [listLmsCollections2](#listlmscollections2) - List all collections
+* [patchCommerceCollection2](#patchcommercecollection2) - Update a collection
+* [patchLmsCollection2](#patchlmscollection2) - Update a collection
+* [removeCommerceCollection2](#removecommercecollection2) - Remove a collection
+* [removeLmsCollection2](#removelmscollection2) - Remove a collection
+* [updateCommerceCollection2](#updatecommercecollection2) - Update a collection
+* [updateLmsCollection2](#updatelmscollection2) - Update a collection
 
-## createCommerceCollection
+## createCommerceCollection2
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="createCommerceCollection2" method="post" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -39,14 +39,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceCollectionRequest(
+$request = new Operations\CreateCommerceCollection2Request(
     commerceCollection: new Shared\CommerceCollection(
         name: '<value>',
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->collection->createCommerceCollection(
+$response = $sdk->collection->createCommerceCollection2(
     request: $request
 );
 
@@ -57,13 +57,13 @@ if ($response->commerceCollection !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateCommerceCollectionRequest](../../Models/Operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceCollection2Request](../../Models/Operations/CreateCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\CreateCommerceCollectionResponse](../../Models/Operations/CreateCommerceCollectionResponse.md)**
+**[?Operations\CreateCommerceCollection2Response](../../Models/Operations/CreateCommerceCollection2Response.md)**
 
 ### Errors
 
@@ -71,13 +71,13 @@ if ($response->commerceCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createLmsCollection
+## createLmsCollection2
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="createLmsCollection2" method="post" path="/lms/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -93,12 +93,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsCollectionRequest(
+$request = new Operations\CreateLmsCollection2Request(
     lmsCollection: new Shared\LmsCollection(),
     connectionId: '<id>',
 );
 
-$response = $sdk->collection->createLmsCollection(
+$response = $sdk->collection->createLmsCollection2(
     request: $request
 );
 
@@ -109,13 +109,13 @@ if ($response->lmsCollection !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateLmsCollectionRequest](../../Models/Operations/CreateLmsCollectionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateLmsCollection2Request](../../Models/Operations/CreateLmsCollection2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateLmsCollectionResponse](../../Models/Operations/CreateLmsCollectionResponse.md)**
+**[?Operations\CreateLmsCollection2Response](../../Models/Operations/CreateLmsCollection2Response.md)**
 
 ### Errors
 
@@ -123,13 +123,13 @@ if ($response->lmsCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceCollection
+## getCommerceCollection2
 
 Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceCollection2" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -144,12 +144,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceCollectionRequest(
+$request = new Operations\GetCommerceCollection2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->collection->getCommerceCollection(
+$response = $sdk->collection->getCommerceCollection2(
     request: $request
 );
 
@@ -160,13 +160,13 @@ if ($response->commerceCollection !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetCommerceCollectionRequest](../../Models/Operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceCollection2Request](../../Models/Operations/GetCommerceCollection2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetCommerceCollectionResponse](../../Models/Operations/GetCommerceCollectionResponse.md)**
+**[?Operations\GetCommerceCollection2Response](../../Models/Operations/GetCommerceCollection2Response.md)**
 
 ### Errors
 
@@ -174,13 +174,13 @@ if ($response->commerceCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsCollection
+## getLmsCollection2
 
 Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsCollection" method="get" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsCollection2" method="get" path="/lms/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -195,12 +195,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsCollectionRequest(
+$request = new Operations\GetLmsCollection2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->collection->getLmsCollection(
+$response = $sdk->collection->getLmsCollection2(
     request: $request
 );
 
@@ -211,13 +211,13 @@ if ($response->lmsCollection !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetLmsCollectionRequest](../../Models/Operations/GetLmsCollectionRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetLmsCollection2Request](../../Models/Operations/GetLmsCollection2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetLmsCollectionResponse](../../Models/Operations/GetLmsCollectionResponse.md)**
+**[?Operations\GetLmsCollection2Response](../../Models/Operations/GetLmsCollection2Response.md)**
 
 ### Errors
 
@@ -225,13 +225,13 @@ if ($response->lmsCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceCollections
+## listCommerceCollections2
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="listCommerceCollections2" method="get" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -246,11 +246,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceCollectionsRequest(
+$request = new Operations\ListCommerceCollections2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->collection->listCommerceCollections(
+$response = $sdk->collection->listCommerceCollections2(
     request: $request
 );
 
@@ -261,13 +261,13 @@ if ($response->commerceCollections !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListCommerceCollectionsRequest](../../Models/Operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceCollections2Request](../../Models/Operations/ListCommerceCollections2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceCollectionsResponse](../../Models/Operations/ListCommerceCollectionsResponse.md)**
+**[?Operations\ListCommerceCollections2Response](../../Models/Operations/ListCommerceCollections2Response.md)**
 
 ### Errors
 
@@ -275,13 +275,13 @@ if ($response->commerceCollections !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsCollections
+## listLmsCollections2
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsCollections" method="get" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="listLmsCollections2" method="get" path="/lms/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -296,11 +296,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsCollectionsRequest(
+$request = new Operations\ListLmsCollections2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->collection->listLmsCollections(
+$response = $sdk->collection->listLmsCollections2(
     request: $request
 );
 
@@ -311,223 +311,13 @@ if ($response->lmsCollections !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListLmsCollectionsRequest](../../Models/Operations/ListLmsCollectionsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\ListLmsCollectionsResponse](../../Models/Operations/ListLmsCollectionsResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchCommerceCollection
-
-Update a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchCommerceCollectionRequest(
-    commerceCollection: new Shared\CommerceCollection(
-        name: '<value>',
-    ),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->collection->patchCommerceCollection(
-    request: $request
-);
-
-if ($response->commerceCollection !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchCommerceCollectionRequest](../../Models/Operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\PatchCommerceCollectionResponse](../../Models/Operations/PatchCommerceCollectionResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchLmsCollection
-
-Update a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchLmsCollectionRequest(
-    lmsCollection: new Shared\LmsCollection(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->collection->patchLmsCollection(
-    request: $request
-);
-
-if ($response->lmsCollection !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchLmsCollectionRequest](../../Models/Operations/PatchLmsCollectionRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\PatchLmsCollectionResponse](../../Models/Operations/PatchLmsCollectionResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceCollection
-
-Remove a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceCollectionRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->collection->removeCommerceCollection(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveCommerceCollectionRequest](../../Models/Operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveCommerceCollectionResponse](../../Models/Operations/RemoveCommerceCollectionResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeLmsCollection
-
-Remove a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeLmsCollection" method="delete" path="/lms/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveLmsCollectionRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->collection->removeLmsCollection(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveLmsCollectionRequest](../../Models/Operations/RemoveLmsCollectionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\ListLmsCollections2Request](../../Models/Operations/ListLmsCollections2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveLmsCollectionResponse](../../Models/Operations/RemoveLmsCollectionResponse.md)**
+**[?Operations\ListLmsCollections2Response](../../Models/Operations/ListLmsCollections2Response.md)**
 
 ### Errors
 
@@ -535,13 +325,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceCollection
+## patchCommerceCollection2
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceCollection2" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -557,7 +347,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceCollectionRequest(
+$request = new Operations\PatchCommerceCollection2Request(
     commerceCollection: new Shared\CommerceCollection(
         name: '<value>',
     ),
@@ -565,7 +355,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     id: '<id>',
 );
 
-$response = $sdk->collection->updateCommerceCollection(
+$response = $sdk->collection->patchCommerceCollection2(
     request: $request
 );
 
@@ -578,11 +368,11 @@ if ($response->commerceCollection !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateCommerceCollectionRequest](../../Models/Operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\PatchCommerceCollection2Request](../../Models/Operations/PatchCommerceCollection2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateCommerceCollectionResponse](../../Models/Operations/UpdateCommerceCollectionResponse.md)**
+**[?Operations\PatchCommerceCollection2Response](../../Models/Operations/PatchCommerceCollection2Response.md)**
 
 ### Errors
 
@@ -590,13 +380,13 @@ if ($response->commerceCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateLmsCollection
+## patchLmsCollection2
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsCollection2" method="patch" path="/lms/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -612,13 +402,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateLmsCollectionRequest(
+$request = new Operations\PatchLmsCollection2Request(
     lmsCollection: new Shared\LmsCollection(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->collection->updateLmsCollection(
+$response = $sdk->collection->patchLmsCollection2(
     request: $request
 );
 
@@ -631,11 +421,221 @@ if ($response->lmsCollection !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateLmsCollectionRequest](../../Models/Operations/UpdateLmsCollectionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\PatchLmsCollection2Request](../../Models/Operations/PatchLmsCollection2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateLmsCollectionResponse](../../Models/Operations/UpdateLmsCollectionResponse.md)**
+**[?Operations\PatchLmsCollection2Response](../../Models/Operations/PatchLmsCollection2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceCollection2
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceCollection2" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceCollection2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->collection->removeCommerceCollection2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceCollection2Request](../../Models/Operations/RemoveCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemoveCommerceCollection2Response](../../Models/Operations/RemoveCommerceCollection2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeLmsCollection2
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeLmsCollection2" method="delete" path="/lms/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveLmsCollection2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->collection->removeLmsCollection2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveLmsCollection2Request](../../Models/Operations/RemoveLmsCollection2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\RemoveLmsCollection2Response](../../Models/Operations/RemoveLmsCollection2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCommerceCollection2
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCommerceCollection2" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCommerceCollection2Request(
+    commerceCollection: new Shared\CommerceCollection(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->collection->updateCommerceCollection2(
+    request: $request
+);
+
+if ($response->commerceCollection !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateCommerceCollection2Request](../../Models/Operations/UpdateCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\UpdateCommerceCollection2Response](../../Models/Operations/UpdateCommerceCollection2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateLmsCollection2
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateLmsCollection2" method="put" path="/lms/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateLmsCollection2Request(
+    lmsCollection: new Shared\LmsCollection(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->collection->updateLmsCollection2(
+    request: $request
+);
+
+if ($response->lmsCollection !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateLmsCollection2Request](../../Models/Operations/UpdateLmsCollection2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\UpdateLmsCollection2Response](../../Models/Operations/UpdateLmsCollection2Response.md)**
 
 ### Errors
 

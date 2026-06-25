@@ -47,14 +47,14 @@ class Reservation
     /**
      * Create a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceReservation(Operations\CreateCommerceReservationRequest $request, ?Options $options = null): Operations\CreateCommerceReservationResponse
+    public function createCommerceReservation2(Operations\CreateCommerceReservation2Request $request, ?Options $options = null): Operations\CreateCommerceReservation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\CreateCommerceReservationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\CreateCommerceReservation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -63,11 +63,11 @@ class Reservation
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReservationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReservation2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReservation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Reservation
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceReservationResponse(
+                $response = new Operations\CreateCommerceReservation2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Reservation
     /**
      * Retrieve a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceReservation(Operations\GetCommerceReservationRequest $request, ?Options $options = null): Operations\GetCommerceReservationResponse
+    public function getCommerceReservation2(Operations\GetCommerceReservation2Request $request, ?Options $options = null): Operations\GetCommerceReservation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\GetCommerceReservationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\GetCommerceReservation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReservationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReservation2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReservation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Reservation
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceReservationResponse(
+                $response = new Operations\GetCommerceReservation2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Reservation
     /**
      * List all reservations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservations2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservations2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceReservations(Operations\ListCommerceReservationsRequest $request, ?Options $options = null): Operations\ListCommerceReservationsResponse
+    public function listCommerceReservations2(Operations\ListCommerceReservations2Request $request, ?Options $options = null): Operations\ListCommerceReservations2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\ListCommerceReservationsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\ListCommerceReservations2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReservationsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReservations2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReservations', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReservations2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Reservation
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceReservation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceReservationsResponse(
+                $response = new Operations\ListCommerceReservations2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Reservation
     /**
      * Update a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceReservation(Operations\PatchCommerceReservationRequest $request, ?Options $options = null): Operations\PatchCommerceReservationResponse
+    public function patchCommerceReservation2(Operations\PatchCommerceReservation2Request $request, ?Options $options = null): Operations\PatchCommerceReservation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\PatchCommerceReservationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\PatchCommerceReservation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -257,11 +257,11 @@ class Reservation
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReservationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReservation2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReservation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Reservation
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceReservationResponse(
+                $response = new Operations\PatchCommerceReservation2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Reservation
     /**
      * Remove a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceReservation(Operations\RemoveCommerceReservationRequest $request, ?Options $options = null): Operations\RemoveCommerceReservationResponse
+    public function removeCommerceReservation2(Operations\RemoveCommerceReservation2Request $request, ?Options $options = null): Operations\RemoveCommerceReservation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\RemoveCommerceReservationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\RemoveCommerceReservation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReservation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Reservation
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReservationResponse(
+            return new Operations\RemoveCommerceReservation2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Reservation
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReservationResponse(
+            return new Operations\RemoveCommerceReservation2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Reservation
     /**
      * Update a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservation2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservation2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceReservation(Operations\UpdateCommerceReservationRequest $request, ?Options $options = null): Operations\UpdateCommerceReservationResponse
+    public function updateCommerceReservation2(Operations\UpdateCommerceReservation2Request $request, ?Options $options = null): Operations\UpdateCommerceReservation2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\UpdateCommerceReservationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\UpdateCommerceReservation2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -382,11 +382,11 @@ class Reservation
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReservationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReservation2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReservation', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReservation2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Reservation
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceReservationResponse(
+                $response = new Operations\UpdateCommerceReservation2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

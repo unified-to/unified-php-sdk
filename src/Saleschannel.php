@@ -47,14 +47,14 @@ class Saleschannel
     /**
      * Create a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannel2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannel2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceSaleschannel(Operations\CreateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\CreateCommerceSaleschannelResponse
+    public function createCommerceSaleschannel2(Operations\CreateCommerceSaleschannel2Request $request, ?Options $options = null): Operations\CreateCommerceSaleschannel2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\CreateCommerceSaleschannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\CreateCommerceSaleschannel2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -63,11 +63,11 @@ class Saleschannel
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceSaleschannelRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceSaleschannel2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Saleschannel
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceSaleschannelResponse(
+                $response = new Operations\CreateCommerceSaleschannel2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Saleschannel
     /**
      * Retrieve a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannel2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannel2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceSaleschannel(Operations\GetCommerceSaleschannelRequest $request, ?Options $options = null): Operations\GetCommerceSaleschannelResponse
+    public function getCommerceSaleschannel2(Operations\GetCommerceSaleschannel2Request $request, ?Options $options = null): Operations\GetCommerceSaleschannel2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\GetCommerceSaleschannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\GetCommerceSaleschannel2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceSaleschannelRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceSaleschannel2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Saleschannel
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceSaleschannelResponse(
+                $response = new Operations\GetCommerceSaleschannel2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Saleschannel
     /**
      * List all saleschannels
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannels2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannels2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceSaleschannels(Operations\ListCommerceSaleschannelsRequest $request, ?Options $options = null): Operations\ListCommerceSaleschannelsResponse
+    public function listCommerceSaleschannels2(Operations\ListCommerceSaleschannels2Request $request, ?Options $options = null): Operations\ListCommerceSaleschannels2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\ListCommerceSaleschannelsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\ListCommerceSaleschannels2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceSaleschannelsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceSaleschannels2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceSaleschannels', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceSaleschannels2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Saleschannel
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceSaleschannel>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceSaleschannelsResponse(
+                $response = new Operations\ListCommerceSaleschannels2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Saleschannel
     /**
      * Update a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannel2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannel2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceSaleschannel(Operations\PatchCommerceSaleschannelRequest $request, ?Options $options = null): Operations\PatchCommerceSaleschannelResponse
+    public function patchCommerceSaleschannel2(Operations\PatchCommerceSaleschannel2Request $request, ?Options $options = null): Operations\PatchCommerceSaleschannel2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\PatchCommerceSaleschannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\PatchCommerceSaleschannel2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -257,11 +257,11 @@ class Saleschannel
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceSaleschannelRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceSaleschannel2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Saleschannel
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceSaleschannelResponse(
+                $response = new Operations\PatchCommerceSaleschannel2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Saleschannel
     /**
      * Remove a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannel2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannel2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceSaleschannel(Operations\RemoveCommerceSaleschannelRequest $request, ?Options $options = null): Operations\RemoveCommerceSaleschannelResponse
+    public function removeCommerceSaleschannel2(Operations\RemoveCommerceSaleschannel2Request $request, ?Options $options = null): Operations\RemoveCommerceSaleschannel2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\RemoveCommerceSaleschannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\RemoveCommerceSaleschannel2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Saleschannel
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceSaleschannelResponse(
+            return new Operations\RemoveCommerceSaleschannel2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Saleschannel
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceSaleschannelResponse(
+            return new Operations\RemoveCommerceSaleschannel2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Saleschannel
     /**
      * Update a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannel2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannel2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceSaleschannel(Operations\UpdateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\UpdateCommerceSaleschannelResponse
+    public function updateCommerceSaleschannel2(Operations\UpdateCommerceSaleschannel2Request $request, ?Options $options = null): Operations\UpdateCommerceSaleschannel2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\UpdateCommerceSaleschannelRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\UpdateCommerceSaleschannel2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -382,11 +382,11 @@ class Saleschannel
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceSaleschannelRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceSaleschannel2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Saleschannel
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceSaleschannelResponse(
+                $response = new Operations\UpdateCommerceSaleschannel2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

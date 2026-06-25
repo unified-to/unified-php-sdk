@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createUcRecording](#createucrecording) - Create a recording
-* [getCalendarRecording](#getcalendarrecording) - Retrieve a recording
-* [getUcRecording](#getucrecording) - Retrieve a recording
-* [listCalendarRecordings](#listcalendarrecordings) - List all recordings
-* [listUcRecordings](#listucrecordings) - List all recordings
-* [patchUcRecording](#patchucrecording) - Update a recording
-* [removeUcRecording](#removeucrecording) - Remove a recording
-* [updateUcRecording](#updateucrecording) - Update a recording
+* [createUcRecording2](#createucrecording2) - Create a recording
+* [getCalendarRecording2](#getcalendarrecording2) - Retrieve a recording
+* [getUcRecording2](#getucrecording2) - Retrieve a recording
+* [listCalendarRecordings2](#listcalendarrecordings2) - List all recordings
+* [listUcRecordings2](#listucrecordings2) - List all recordings
+* [patchUcRecording2](#patchucrecording2) - Update a recording
+* [removeUcRecording2](#removeucrecording2) - Remove a recording
+* [updateUcRecording2](#updateucrecording2) - Update a recording
 
-## createUcRecording
+## createUcRecording2
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -35,12 +35,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateUcRecordingRequest(
+$request = new Operations\CreateUcRecording2Request(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
 );
 
-$response = $sdk->recording->createUcRecording(
+$response = $sdk->recording->createUcRecording2(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateUcRecordingRequest](../../Models/Operations/CreateUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateUcRecording2Request](../../Models/Operations/CreateUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateUcRecordingResponse](../../Models/Operations/CreateUcRecordingResponse.md)**
+**[?Operations\CreateUcRecording2Response](../../Models/Operations/CreateUcRecording2Response.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarRecording
+## getCalendarRecording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarRecording2" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarRecordingRequest(
+$request = new Operations\GetCalendarRecording2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->recording->getCalendarRecording(
+$response = $sdk->recording->getCalendarRecording2(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->calendarRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetCalendarRecordingRequest](../../Models/Operations/GetCalendarRecordingRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetCalendarRecording2Request](../../Models/Operations/GetCalendarRecording2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetCalendarRecordingResponse](../../Models/Operations/GetCalendarRecordingResponse.md)**
+**[?Operations\GetCalendarRecording2Response](../../Models/Operations/GetCalendarRecording2Response.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->calendarRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getUcRecording
+## getUcRecording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -137,12 +137,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcRecordingRequest(
+$request = new Operations\GetUcRecording2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->recording->getUcRecording(
+$response = $sdk->recording->getUcRecording2(
     request: $request
 );
 
@@ -153,13 +153,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetUcRecordingRequest](../../Models/Operations/GetUcRecordingRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetUcRecording2Request](../../Models/Operations/GetUcRecording2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetUcRecordingResponse](../../Models/Operations/GetUcRecordingResponse.md)**
+**[?Operations\GetUcRecording2Response](../../Models/Operations/GetUcRecording2Response.md)**
 
 ### Errors
 
@@ -167,13 +167,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarRecordings
+## listCalendarRecordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="listCalendarRecordings2" method="get" path="/calendar/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -188,11 +188,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarRecordingsRequest(
+$request = new Operations\ListCalendarRecordings2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->recording->listCalendarRecordings(
+$response = $sdk->recording->listCalendarRecordings2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->calendarRecordings !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListCalendarRecordingsRequest](../../Models/Operations/ListCalendarRecordingsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListCalendarRecordings2Request](../../Models/Operations/ListCalendarRecordings2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListCalendarRecordingsResponse](../../Models/Operations/ListCalendarRecordingsResponse.md)**
+**[?Operations\ListCalendarRecordings2Response](../../Models/Operations/ListCalendarRecordings2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->calendarRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcRecordings
+## listUcRecordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -238,11 +238,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcRecordingsRequest(
+$request = new Operations\ListUcRecordings2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->recording->listUcRecordings(
+$response = $sdk->recording->listUcRecordings2(
     request: $request
 );
 
@@ -253,13 +253,13 @@ if ($response->ucRecordings !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListUcRecordingsRequest](../../Models/Operations/ListUcRecordingsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListUcRecordings2Request](../../Models/Operations/ListUcRecordings2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListUcRecordingsResponse](../../Models/Operations/ListUcRecordingsResponse.md)**
+**[?Operations\ListUcRecordings2Response](../../Models/Operations/ListUcRecordings2Response.md)**
 
 ### Errors
 
@@ -267,13 +267,13 @@ if ($response->ucRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchUcRecording
+## patchUcRecording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -289,13 +289,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchUcRecordingRequest(
+$request = new Operations\PatchUcRecording2Request(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->recording->patchUcRecording(
+$response = $sdk->recording->patchUcRecording2(
     request: $request
 );
 
@@ -306,13 +306,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchUcRecordingRequest](../../Models/Operations/PatchUcRecordingRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchUcRecording2Request](../../Models/Operations/PatchUcRecording2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchUcRecordingResponse](../../Models/Operations/PatchUcRecordingResponse.md)**
+**[?Operations\PatchUcRecording2Response](../../Models/Operations/PatchUcRecording2Response.md)**
 
 ### Errors
 
@@ -320,13 +320,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeUcRecording
+## removeUcRecording2
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -341,12 +341,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveUcRecordingRequest(
+$request = new Operations\RemoveUcRecording2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->recording->removeUcRecording(
+$response = $sdk->recording->removeUcRecording2(
     request: $request
 );
 
@@ -357,13 +357,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveUcRecordingRequest](../../Models/Operations/RemoveUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveUcRecording2Request](../../Models/Operations/RemoveUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveUcRecordingResponse](../../Models/Operations/RemoveUcRecordingResponse.md)**
+**[?Operations\RemoveUcRecording2Response](../../Models/Operations/RemoveUcRecording2Response.md)**
 
 ### Errors
 
@@ -371,13 +371,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateUcRecording
+## updateUcRecording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -393,13 +393,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateUcRecordingRequest(
+$request = new Operations\UpdateUcRecording2Request(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->recording->updateUcRecording(
+$response = $sdk->recording->updateUcRecording2(
     request: $request
 );
 
@@ -410,13 +410,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateUcRecordingRequest](../../Models/Operations/UpdateUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateUcRecording2Request](../../Models/Operations/UpdateUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateUcRecordingResponse](../../Models/Operations/UpdateUcRecordingResponse.md)**
+**[?Operations\UpdateUcRecording2Response](../../Models/Operations/UpdateUcRecording2Response.md)**
 
 ### Errors
 

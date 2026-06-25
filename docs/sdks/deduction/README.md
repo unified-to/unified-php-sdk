@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createHrisDeduction](#createhrisdeduction) - Create a deduction
-* [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
-* [listHrisDeductions](#listhrisdeductions) - List all deductions
-* [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
-* [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
-* [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
+* [createHrisDeduction2](#createhrisdeduction2) - Create a deduction
+* [getHrisDeduction2](#gethrisdeduction2) - Retrieve a deduction
+* [listHrisDeductions2](#listhrisdeductions2) - List all deductions
+* [patchHrisDeduction2](#patchhrisdeduction2) - Update a deduction
+* [removeHrisDeduction2](#removehrisdeduction2) - Remove a deduction
+* [updateHrisDeduction2](#updatehrisdeduction2) - Update a deduction
 
-## createHrisDeduction
+## createHrisDeduction2
 
 Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="php" operationID="createHrisDeduction2" method="post" path="/hris/{connection_id}/deduction" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisDeductionRequest(
+$request = new Operations\CreateHrisDeduction2Request(
     hrisDeduction: new Shared\HrisDeduction(),
     connectionId: '<id>',
 );
 
-$response = $sdk->deduction->createHrisDeduction(
+$response = $sdk->deduction->createHrisDeduction2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->hrisDeduction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateHrisDeductionRequest](../../Models/Operations/CreateHrisDeductionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateHrisDeduction2Request](../../Models/Operations/CreateHrisDeduction2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateHrisDeductionResponse](../../Models/Operations/CreateHrisDeductionResponse.md)**
+**[?Operations\CreateHrisDeduction2Response](../../Models/Operations/CreateHrisDeduction2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->hrisDeduction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisDeduction
+## getHrisDeduction2
 
 Retrieve a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisDeduction" method="get" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisDeduction2" method="get" path="/hris/{connection_id}/deduction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisDeductionRequest(
+$request = new Operations\GetHrisDeduction2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deduction->getHrisDeduction(
+$response = $sdk->deduction->getHrisDeduction2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->hrisDeduction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetHrisDeductionRequest](../../Models/Operations/GetHrisDeductionRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetHrisDeduction2Request](../../Models/Operations/GetHrisDeduction2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetHrisDeductionResponse](../../Models/Operations/GetHrisDeductionResponse.md)**
+**[?Operations\GetHrisDeduction2Response](../../Models/Operations/GetHrisDeduction2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->hrisDeduction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisDeductions
+## listHrisDeductions2
 
 List all deductions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisDeductions" method="get" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="php" operationID="listHrisDeductions2" method="get" path="/hris/{connection_id}/deduction" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisDeductionsRequest(
+$request = new Operations\ListHrisDeductions2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->deduction->listHrisDeductions(
+$response = $sdk->deduction->listHrisDeductions2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->hrisDeductions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListHrisDeductionsRequest](../../Models/Operations/ListHrisDeductionsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListHrisDeductions2Request](../../Models/Operations/ListHrisDeductions2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListHrisDeductionsResponse](../../Models/Operations/ListHrisDeductionsResponse.md)**
+**[?Operations\ListHrisDeductions2Response](../../Models/Operations/ListHrisDeductions2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->hrisDeductions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisDeduction
+## patchHrisDeduction2
 
 Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDeduction2" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisDeductionRequest(
+$request = new Operations\PatchHrisDeduction2Request(
     hrisDeduction: new Shared\HrisDeduction(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deduction->patchHrisDeduction(
+$response = $sdk->deduction->patchHrisDeduction2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->hrisDeduction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchHrisDeductionRequest](../../Models/Operations/PatchHrisDeductionRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchHrisDeduction2Request](../../Models/Operations/PatchHrisDeduction2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchHrisDeductionResponse](../../Models/Operations/PatchHrisDeductionResponse.md)**
+**[?Operations\PatchHrisDeduction2Response](../../Models/Operations/PatchHrisDeduction2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->hrisDeduction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeHrisDeduction
+## removeHrisDeduction2
 
 Remove a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeHrisDeduction" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeHrisDeduction2" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveHrisDeductionRequest(
+$request = new Operations\RemoveHrisDeduction2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deduction->removeHrisDeduction(
+$response = $sdk->deduction->removeHrisDeduction2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveHrisDeductionRequest](../../Models/Operations/RemoveHrisDeductionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveHrisDeduction2Request](../../Models/Operations/RemoveHrisDeduction2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\RemoveHrisDeductionResponse](../../Models/Operations/RemoveHrisDeductionResponse.md)**
+**[?Operations\RemoveHrisDeduction2Response](../../Models/Operations/RemoveHrisDeduction2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisDeduction
+## updateHrisDeduction2
 
 Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDeduction2" method="put" path="/hris/{connection_id}/deduction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisDeductionRequest(
+$request = new Operations\UpdateHrisDeduction2Request(
     hrisDeduction: new Shared\HrisDeduction(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deduction->updateHrisDeduction(
+$response = $sdk->deduction->updateHrisDeduction2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->hrisDeduction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateHrisDeductionRequest](../../Models/Operations/UpdateHrisDeductionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateHrisDeduction2Request](../../Models/Operations/UpdateHrisDeduction2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateHrisDeductionResponse](../../Models/Operations/UpdateHrisDeductionResponse.md)**
+**[?Operations\UpdateHrisDeduction2Response](../../Models/Operations/UpdateHrisDeduction2Response.md)**
 
 ### Errors
 

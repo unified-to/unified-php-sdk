@@ -3,24 +3,6 @@
 
 ## Supported Types
 
-### `array`
-
-```php
-/**
-* @var array<string, mixed>
-*/
-array $value = /* values here */
-```
-
-### `string`
-
-```php
-/**
-* @var string
-*/
-string $value = /* values here */
-```
-
 ### `float`
 
 ```php
@@ -30,21 +12,12 @@ string $value = /* values here */
 float $value = /* values here */
 ```
 
-### `bool`
+### `string`
 
 ```php
 /**
-* @var bool
+* @var string
 */
-bool $value = /* values here */
-```
-
-### `array`
-
-```php
-/**
-* @var array<\Unified\Unified_to\Models\Shared\AtsMetadata1|string|float|bool>
-*/
-array $value = /* values here */
+string $value = /* values here */
 ```
 

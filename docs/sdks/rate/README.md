@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [createShippingRate](#createshippingrate) - Create a rate
+* [createShippingRate2](#createshippingrate2) - Create a rate
 
-## createShippingRate
+## createShippingRate2
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="php" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateShippingRateRequest(
+$request = new Operations\CreateShippingRate2Request(
     shippingRate: new Shared\ShippingRate(),
     connectionId: '<id>',
 );
 
-$response = $sdk->rate->createShippingRate(
+$response = $sdk->rate->createShippingRate2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->shippingRate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateShippingRateRequest](../../Models/Operations/CreateShippingRateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateShippingRate2Request](../../Models/Operations/CreateShippingRate2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateShippingRateResponse](../../Models/Operations/CreateShippingRateResponse.md)**
+**[?Operations\CreateShippingRate2Response](../../Models/Operations/CreateShippingRate2Response.md)**
 
 ### Errors
 

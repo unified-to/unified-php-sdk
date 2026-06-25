@@ -47,14 +47,14 @@ class Passthrough
     /**
      * Passthrough POST
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreatePassthroughJsonRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreatePassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePassthrough2JsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePassthrough2JsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPassthroughJson(Operations\CreatePassthroughJsonRequest $request, ?Options $options = null): Operations\CreatePassthroughJsonResponse
+    public function createPassthrough2Json(Operations\CreatePassthrough2JsonRequest $request, ?Options $options = null): Operations\CreatePassthrough2JsonResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughJsonRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthrough2JsonRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
@@ -62,11 +62,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreatePassthroughJsonRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreatePassthrough2JsonRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createPassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createPassthrough2_json', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\CreatePassthroughJsonResponse(
+            return new Operations\CreatePassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -96,7 +96,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\CreatePassthroughJsonResponse(
+            return new Operations\CreatePassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -112,7 +112,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreatePassthroughJsonResponse(
+                $response = new Operations\CreatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -125,7 +125,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughJsonResponse(
+                return new Operations\CreatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -136,7 +136,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughJsonResponse(
+                return new Operations\CreatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -147,7 +147,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughJsonResponse(
+                return new Operations\CreatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -158,7 +158,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughJsonResponse(
+                return new Operations\CreatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -173,14 +173,14 @@ class Passthrough
     /**
      * Passthrough POST
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreatePassthroughRawRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreatePassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreatePassthrough2RawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreatePassthrough2RawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createPassthroughRaw(Operations\CreatePassthroughRawRequest $request, ?Options $options = null): Operations\CreatePassthroughRawResponse
+    public function createPassthrough2Raw(Operations\CreatePassthrough2RawRequest $request, ?Options $options = null): Operations\CreatePassthrough2RawResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthroughRawRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\CreatePassthrough2RawRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
@@ -188,11 +188,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreatePassthroughRawRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreatePassthrough2RawRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createPassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createPassthrough2_raw', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -214,7 +214,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\CreatePassthroughRawResponse(
+            return new Operations\CreatePassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -222,7 +222,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\CreatePassthroughRawResponse(
+            return new Operations\CreatePassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -238,7 +238,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreatePassthroughRawResponse(
+                $response = new Operations\CreatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,7 +251,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughRawResponse(
+                return new Operations\CreatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -262,7 +262,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughRawResponse(
+                return new Operations\CreatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -273,7 +273,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughRawResponse(
+                return new Operations\CreatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -284,7 +284,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\CreatePassthroughRawResponse(
+                return new Operations\CreatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -299,22 +299,22 @@ class Passthrough
     /**
      * Passthrough GET
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListPassthroughsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListPassthroughsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListPassthroughs2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPassthroughs2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPassthroughs(Operations\ListPassthroughsRequest $request, ?Options $options = null): Operations\ListPassthroughsResponse
+    public function listPassthroughs2(Operations\ListPassthroughs2Request $request, ?Options $options = null): Operations\ListPassthroughs2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\ListPassthroughsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\ListPassthroughs2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListPassthroughsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListPassthroughs2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPassthroughs', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPassthroughs2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -336,7 +336,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\ListPassthroughsResponse(
+            return new Operations\ListPassthroughs2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -344,7 +344,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\ListPassthroughsResponse(
+            return new Operations\ListPassthroughs2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -360,7 +360,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListPassthroughsResponse(
+                $response = new Operations\ListPassthroughs2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -373,7 +373,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\ListPassthroughsResponse(
+                return new Operations\ListPassthroughs2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -384,7 +384,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\ListPassthroughsResponse(
+                return new Operations\ListPassthroughs2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -395,7 +395,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\ListPassthroughsResponse(
+                return new Operations\ListPassthroughs2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -406,7 +406,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\ListPassthroughsResponse(
+                return new Operations\ListPassthroughs2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -421,14 +421,14 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchPassthroughJsonRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPassthrough2JsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPassthrough2JsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPassthroughJson(Operations\PatchPassthroughJsonRequest $request, ?Options $options = null): Operations\PatchPassthroughJsonResponse
+    public function patchPassthrough2Json(Operations\PatchPassthrough2JsonRequest $request, ?Options $options = null): Operations\PatchPassthrough2JsonResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughJsonRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthrough2JsonRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
@@ -436,11 +436,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchPassthroughJsonRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchPassthrough2JsonRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchPassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchPassthrough2_json', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -462,7 +462,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\PatchPassthroughJsonResponse(
+            return new Operations\PatchPassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -470,7 +470,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\PatchPassthroughJsonResponse(
+            return new Operations\PatchPassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -486,7 +486,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchPassthroughJsonResponse(
+                $response = new Operations\PatchPassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -499,7 +499,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughJsonResponse(
+                return new Operations\PatchPassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -510,7 +510,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughJsonResponse(
+                return new Operations\PatchPassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -521,7 +521,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughJsonResponse(
+                return new Operations\PatchPassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -532,7 +532,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughJsonResponse(
+                return new Operations\PatchPassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -547,14 +547,14 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchPassthroughRawRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchPassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchPassthrough2RawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchPassthrough2RawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchPassthroughRaw(Operations\PatchPassthroughRawRequest $request, ?Options $options = null): Operations\PatchPassthroughRawResponse
+    public function patchPassthrough2Raw(Operations\PatchPassthrough2RawRequest $request, ?Options $options = null): Operations\PatchPassthrough2RawResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthroughRawRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\PatchPassthrough2RawRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
@@ -562,11 +562,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchPassthroughRawRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchPassthrough2RawRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchPassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchPassthrough2_raw', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -588,7 +588,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\PatchPassthroughRawResponse(
+            return new Operations\PatchPassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -596,7 +596,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\PatchPassthroughRawResponse(
+            return new Operations\PatchPassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -612,7 +612,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchPassthroughRawResponse(
+                $response = new Operations\PatchPassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -625,7 +625,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughRawResponse(
+                return new Operations\PatchPassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -636,7 +636,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughRawResponse(
+                return new Operations\PatchPassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -647,7 +647,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughRawResponse(
+                return new Operations\PatchPassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -658,7 +658,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\PatchPassthroughRawResponse(
+                return new Operations\PatchPassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -673,22 +673,22 @@ class Passthrough
     /**
      * Passthrough DELETE
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemovePassthroughRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemovePassthroughResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemovePassthrough2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePassthrough2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removePassthrough(Operations\RemovePassthroughRequest $request, ?Options $options = null): Operations\RemovePassthroughResponse
+    public function removePassthrough2(Operations\RemovePassthrough2Request $request, ?Options $options = null): Operations\RemovePassthrough2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\RemovePassthroughRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\RemovePassthrough2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\RemovePassthroughRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\RemovePassthrough2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removePassthrough', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removePassthrough2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -710,7 +710,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemovePassthroughResponse(
+            return new Operations\RemovePassthrough2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -718,7 +718,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemovePassthroughResponse(
+            return new Operations\RemovePassthrough2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -734,7 +734,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\RemovePassthroughResponse(
+                $response = new Operations\RemovePassthrough2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -747,7 +747,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\RemovePassthroughResponse(
+                return new Operations\RemovePassthrough2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -758,7 +758,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\RemovePassthroughResponse(
+                return new Operations\RemovePassthrough2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -769,7 +769,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\RemovePassthroughResponse(
+                return new Operations\RemovePassthrough2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -780,7 +780,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\RemovePassthroughResponse(
+                return new Operations\RemovePassthrough2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -795,14 +795,14 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthroughJsonRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughJsonResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthrough2JsonRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePassthrough2JsonResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePassthroughJson(Operations\UpdatePassthroughJsonRequest $request, ?Options $options = null): Operations\UpdatePassthroughJsonResponse
+    public function updatePassthrough2Json(Operations\UpdatePassthrough2JsonRequest $request, ?Options $options = null): Operations\UpdatePassthrough2JsonResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughJsonRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthrough2JsonRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'json');
@@ -810,11 +810,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdatePassthroughJsonRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdatePassthrough2JsonRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updatePassthrough_json', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updatePassthrough2_json', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -836,7 +836,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\UpdatePassthroughJsonResponse(
+            return new Operations\UpdatePassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -844,7 +844,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\UpdatePassthroughJsonResponse(
+            return new Operations\UpdatePassthrough2JsonResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -860,7 +860,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdatePassthroughJsonResponse(
+                $response = new Operations\UpdatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -873,7 +873,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughJsonResponse(
+                return new Operations\UpdatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -884,7 +884,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughJsonResponse(
+                return new Operations\UpdatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -895,7 +895,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughJsonResponse(
+                return new Operations\UpdatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -906,7 +906,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughJsonResponse(
+                return new Operations\UpdatePassthrough2JsonResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -921,14 +921,14 @@ class Passthrough
     /**
      * Passthrough PUT
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthroughRawRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdatePassthroughRawResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdatePassthrough2RawRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdatePassthrough2RawResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updatePassthroughRaw(Operations\UpdatePassthroughRawRequest $request, ?Options $options = null): Operations\UpdatePassthroughRawResponse
+    public function updatePassthrough2Raw(Operations\UpdatePassthrough2RawRequest $request, ?Options $options = null): Operations\UpdatePassthrough2RawResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthroughRawRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/passthrough/{connection_id}/{path}', Operations\UpdatePassthrough2RawRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'requestBody', 'raw');
@@ -936,11 +936,11 @@ class Passthrough
             $httpOptions = array_merge_recursive($httpOptions, $body);
         }
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdatePassthroughRawRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdatePassthrough2RawRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updatePassthrough_raw', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updatePassthrough2_raw', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -962,7 +962,7 @@ class Passthrough
         if (Utils\Utils::matchStatusCodes($statusCode, ['204', '205'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\UpdatePassthroughRawResponse(
+            return new Operations\UpdatePassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -970,7 +970,7 @@ class Passthrough
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['304'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\UpdatePassthroughRawResponse(
+            return new Operations\UpdatePassthrough2RawResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -986,7 +986,7 @@ class Passthrough
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'mixed', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdatePassthroughRawResponse(
+                $response = new Operations\UpdatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -999,7 +999,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughRawResponse(
+                return new Operations\UpdatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1010,7 +1010,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughRawResponse(
+                return new Operations\UpdatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1021,7 +1021,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughRawResponse(
+                return new Operations\UpdatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1032,7 +1032,7 @@ class Passthrough
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\UpdatePassthroughRawResponse(
+                return new Operations\UpdatePassthrough2RawResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

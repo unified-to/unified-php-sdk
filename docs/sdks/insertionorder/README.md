@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
-* [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
-* [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
-* [patchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
-* [removeAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
-* [updateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
+* [createAdsInsertionorder2](#createadsinsertionorder2) - Create an insertionorder
+* [getAdsInsertionorder2](#getadsinsertionorder2) - Retrieve an insertionorder
+* [listAdsInsertionorders2](#listadsinsertionorders2) - List all insertionorders
+* [patchAdsInsertionorder2](#patchadsinsertionorder2) - Update an insertionorder
+* [removeAdsInsertionorder2](#removeadsinsertionorder2) - Remove an insertionorder
+* [updateAdsInsertionorder2](#updateadsinsertionorder2) - Update an insertionorder
 
-## createAdsInsertionorder
+## createAdsInsertionorder2
 
 Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="php" operationID="createAdsInsertionorder2" method="post" path="/ads/{connection_id}/insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsInsertionorderRequest(
+$request = new Operations\CreateAdsInsertionorder2Request(
     adsInsertionorder: new Shared\AdsInsertionorder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->insertionorder->createAdsInsertionorder(
+$response = $sdk->insertionorder->createAdsInsertionorder2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->adsInsertionorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateAdsInsertionorderRequest](../../Models/Operations/CreateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateAdsInsertionorder2Request](../../Models/Operations/CreateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateAdsInsertionorderResponse](../../Models/Operations/CreateAdsInsertionorderResponse.md)**
+**[?Operations\CreateAdsInsertionorder2Response](../../Models/Operations/CreateAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->adsInsertionorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsInsertionorder
+## getAdsInsertionorder2
 
 Retrieve an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsInsertionorder2" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsInsertionorderRequest(
+$request = new Operations\GetAdsInsertionorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->insertionorder->getAdsInsertionorder(
+$response = $sdk->insertionorder->getAdsInsertionorder2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->adsInsertionorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetAdsInsertionorderRequest](../../Models/Operations/GetAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAdsInsertionorder2Request](../../Models/Operations/GetAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetAdsInsertionorderResponse](../../Models/Operations/GetAdsInsertionorderResponse.md)**
+**[?Operations\GetAdsInsertionorder2Response](../../Models/Operations/GetAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->adsInsertionorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsInsertionorders
+## listAdsInsertionorders2
 
 List all insertionorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="php" operationID="listAdsInsertionorders2" method="get" path="/ads/{connection_id}/insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsInsertionordersRequest(
+$request = new Operations\ListAdsInsertionorders2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->insertionorder->listAdsInsertionorders(
+$response = $sdk->insertionorder->listAdsInsertionorders2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->adsInsertionorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListAdsInsertionordersRequest](../../Models/Operations/ListAdsInsertionordersRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAdsInsertionorders2Request](../../Models/Operations/ListAdsInsertionorders2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListAdsInsertionordersResponse](../../Models/Operations/ListAdsInsertionordersResponse.md)**
+**[?Operations\ListAdsInsertionorders2Response](../../Models/Operations/ListAdsInsertionorders2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->adsInsertionorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsInsertionorder
+## patchAdsInsertionorder2
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder2" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsInsertionorderRequest(
+$request = new Operations\PatchAdsInsertionorder2Request(
     adsInsertionorder: new Shared\AdsInsertionorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->insertionorder->patchAdsInsertionorder(
+$response = $sdk->insertionorder->patchAdsInsertionorder2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->adsInsertionorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchAdsInsertionorderRequest](../../Models/Operations/PatchAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchAdsInsertionorder2Request](../../Models/Operations/PatchAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAdsInsertionorderResponse](../../Models/Operations/PatchAdsInsertionorderResponse.md)**
+**[?Operations\PatchAdsInsertionorder2Response](../../Models/Operations/PatchAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->adsInsertionorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAdsInsertionorder
+## removeAdsInsertionorder2
 
 Remove an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAdsInsertionorder2" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAdsInsertionorderRequest(
+$request = new Operations\RemoveAdsInsertionorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->insertionorder->removeAdsInsertionorder(
+$response = $sdk->insertionorder->removeAdsInsertionorder2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveAdsInsertionorderRequest](../../Models/Operations/RemoveAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveAdsInsertionorder2Request](../../Models/Operations/RemoveAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\RemoveAdsInsertionorderResponse](../../Models/Operations/RemoveAdsInsertionorderResponse.md)**
+**[?Operations\RemoveAdsInsertionorder2Response](../../Models/Operations/RemoveAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsInsertionorder
+## updateAdsInsertionorder2
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder2" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsInsertionorderRequest(
+$request = new Operations\UpdateAdsInsertionorder2Request(
     adsInsertionorder: new Shared\AdsInsertionorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->insertionorder->updateAdsInsertionorder(
+$response = $sdk->insertionorder->updateAdsInsertionorder2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->adsInsertionorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateAdsInsertionorderRequest](../../Models/Operations/UpdateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateAdsInsertionorder2Request](../../Models/Operations/UpdateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateAdsInsertionorderResponse](../../Models/Operations/UpdateAdsInsertionorderResponse.md)**
+**[?Operations\UpdateAdsInsertionorder2Response](../../Models/Operations/UpdateAdsInsertionorder2Response.md)**
 
 ### Errors
 

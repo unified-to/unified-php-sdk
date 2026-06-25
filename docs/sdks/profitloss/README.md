@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
-* [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
+* [getAccountingProfitloss2](#getaccountingprofitloss2) - Retrieve a profitloss
+* [listAccountingProfitlosses2](#listaccountingprofitlosses2) - List all profitlosses
 
-## getAccountingProfitloss
+## getAccountingProfitloss2
 
 Retrieve a profitloss
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingProfitloss2" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingProfitlossRequest(
+$request = new Operations\GetAccountingProfitloss2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->profitloss->getAccountingProfitloss(
+$response = $sdk->profitloss->getAccountingProfitloss2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->accountingProfitloss !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetAccountingProfitlossRequest](../../Models/Operations/GetAccountingProfitlossRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\GetAccountingProfitloss2Request](../../Models/Operations/GetAccountingProfitloss2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\GetAccountingProfitlossResponse](../../Models/Operations/GetAccountingProfitlossResponse.md)**
+**[?Operations\GetAccountingProfitloss2Response](../../Models/Operations/GetAccountingProfitloss2Response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->accountingProfitloss !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingProfitlosses
+## listAccountingProfitlosses2
 
 List all profitlosses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
+<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses2" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingProfitlossesRequest(
+$request = new Operations\ListAccountingProfitlosses2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->profitloss->listAccountingProfitlosses(
+$response = $sdk->profitloss->listAccountingProfitlosses2(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->accountingProfitlosses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListAccountingProfitlossesRequest](../../Models/Operations/ListAccountingProfitlossesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingProfitlosses2Request](../../Models/Operations/ListAccountingProfitlosses2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingProfitlossesResponse](../../Models/Operations/ListAccountingProfitlossesResponse.md)**
+**[?Operations\ListAccountingProfitlosses2Response](../../Models/Operations/ListAccountingProfitlosses2Response.md)**
 
 ### Errors
 

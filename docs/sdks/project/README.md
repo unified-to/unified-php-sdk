@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createTaskProject](#createtaskproject) - Create a project
-* [getTaskProject](#gettaskproject) - Retrieve a project
-* [listTaskProjects](#listtaskprojects) - List all projects
-* [patchTaskProject](#patchtaskproject) - Update a project
-* [removeTaskProject](#removetaskproject) - Remove a project
-* [updateTaskProject](#updatetaskproject) - Update a project
+* [createTaskProject2](#createtaskproject2) - Create a project
+* [getTaskProject2](#gettaskproject2) - Retrieve a project
+* [listTaskProjects2](#listtaskprojects2) - List all projects
+* [patchTaskProject2](#patchtaskproject2) - Update a project
+* [removeTaskProject2](#removetaskproject2) - Remove a project
+* [updateTaskProject2](#updatetaskproject2) - Update a project
 
-## createTaskProject
+## createTaskProject2
 
 Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="php" operationID="createTaskProject2" method="post" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTaskProjectRequest(
+$request = new Operations\CreateTaskProject2Request(
     taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
 );
 
-$response = $sdk->project->createTaskProject(
+$response = $sdk->project->createTaskProject2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->taskProject !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateTaskProjectRequest](../../Models/Operations/CreateTaskProjectRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateTaskProject2Request](../../Models/Operations/CreateTaskProject2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateTaskProjectResponse](../../Models/Operations/CreateTaskProjectResponse.md)**
+**[?Operations\CreateTaskProject2Response](../../Models/Operations/CreateTaskProject2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->taskProject !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getTaskProject
+## getTaskProject2
 
 Retrieve a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="getTaskProject2" method="get" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetTaskProjectRequest(
+$request = new Operations\GetTaskProject2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->project->getTaskProject(
+$response = $sdk->project->getTaskProject2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->taskProject !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetTaskProjectRequest](../../Models/Operations/GetTaskProjectRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetTaskProject2Request](../../Models/Operations/GetTaskProject2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetTaskProjectResponse](../../Models/Operations/GetTaskProjectResponse.md)**
+**[?Operations\GetTaskProject2Response](../../Models/Operations/GetTaskProject2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->taskProject !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTaskProjects
+## listTaskProjects2
 
 List all projects
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="php" operationID="listTaskProjects2" method="get" path="/task/{connection_id}/project" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTaskProjectsRequest(
+$request = new Operations\ListTaskProjects2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->project->listTaskProjects(
+$response = $sdk->project->listTaskProjects2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->taskProjects !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListTaskProjectsRequest](../../Models/Operations/ListTaskProjectsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListTaskProjects2Request](../../Models/Operations/ListTaskProjects2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListTaskProjectsResponse](../../Models/Operations/ListTaskProjectsResponse.md)**
+**[?Operations\ListTaskProjects2Response](../../Models/Operations/ListTaskProjects2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->taskProjects !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTaskProject
+## patchTaskProject2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskProject2" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTaskProjectRequest(
+$request = new Operations\PatchTaskProject2Request(
     taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->project->patchTaskProject(
+$response = $sdk->project->patchTaskProject2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->taskProject !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchTaskProjectRequest](../../Models/Operations/PatchTaskProjectRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchTaskProject2Request](../../Models/Operations/PatchTaskProject2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchTaskProjectResponse](../../Models/Operations/PatchTaskProjectResponse.md)**
+**[?Operations\PatchTaskProject2Response](../../Models/Operations/PatchTaskProject2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->taskProject !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeTaskProject
+## removeTaskProject2
 
 Remove a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeTaskProject2" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveTaskProjectRequest(
+$request = new Operations\RemoveTaskProject2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->project->removeTaskProject(
+$response = $sdk->project->removeTaskProject2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveTaskProjectRequest](../../Models/Operations/RemoveTaskProjectRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveTaskProject2Request](../../Models/Operations/RemoveTaskProject2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveTaskProjectResponse](../../Models/Operations/RemoveTaskProjectResponse.md)**
+**[?Operations\RemoveTaskProject2Response](../../Models/Operations/RemoveTaskProject2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateTaskProject
+## updateTaskProject2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskProject2" method="put" path="/task/{connection_id}/project/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTaskProjectRequest(
+$request = new Operations\UpdateTaskProject2Request(
     taskProject: new Shared\TaskProject(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->project->updateTaskProject(
+$response = $sdk->project->updateTaskProject2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->taskProject !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateTaskProjectRequest](../../Models/Operations/UpdateTaskProjectRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateTaskProject2Request](../../Models/Operations/UpdateTaskProject2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateTaskProjectResponse](../../Models/Operations/UpdateTaskProjectResponse.md)**
+**[?Operations\UpdateTaskProject2Response](../../Models/Operations/UpdateTaskProject2Response.md)**
 
 ### Errors
 

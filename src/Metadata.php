@@ -47,14 +47,14 @@ class Metadata
     /**
      * Create a metadata
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateMetadataMetadataRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateMetadataMetadata2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMetadataMetadata2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMetadataMetadata(Operations\CreateMetadataMetadataRequest $request, ?Options $options = null): Operations\CreateMetadataMetadataResponse
+    public function createMetadataMetadata2(Operations\CreateMetadataMetadata2Request $request, ?Options $options = null): Operations\CreateMetadataMetadata2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata', Operations\CreateMetadataMetadataRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata', Operations\CreateMetadataMetadata2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'metadataMetadata', 'json');
@@ -63,11 +63,11 @@ class Metadata
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateMetadataMetadataRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateMetadataMetadata2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMetadataMetadata', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMetadataMetadata2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Metadata
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MetadataMetadata', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateMetadataMetadataResponse(
+                $response = new Operations\CreateMetadataMetadata2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Metadata
     /**
      * Retrieve a metadata
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetMetadataMetadataRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetMetadataMetadata2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMetadataMetadata2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMetadataMetadata(Operations\GetMetadataMetadataRequest $request, ?Options $options = null): Operations\GetMetadataMetadataResponse
+    public function getMetadataMetadata2(Operations\GetMetadataMetadata2Request $request, ?Options $options = null): Operations\GetMetadataMetadata2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\GetMetadataMetadataRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\GetMetadataMetadata2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetMetadataMetadataRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetMetadataMetadata2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMetadataMetadata', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMetadataMetadata2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Metadata
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MetadataMetadata', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetMetadataMetadataResponse(
+                $response = new Operations\GetMetadataMetadata2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Metadata
     /**
      * List all metadatas
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListMetadataMetadatasRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListMetadataMetadatasResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListMetadataMetadatas2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMetadataMetadatas2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMetadataMetadatas(Operations\ListMetadataMetadatasRequest $request, ?Options $options = null): Operations\ListMetadataMetadatasResponse
+    public function listMetadataMetadatas2(Operations\ListMetadataMetadatas2Request $request, ?Options $options = null): Operations\ListMetadataMetadatas2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata', Operations\ListMetadataMetadatasRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata', Operations\ListMetadataMetadatas2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListMetadataMetadatasRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListMetadataMetadatas2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMetadataMetadatas', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMetadataMetadatas2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Metadata
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\MetadataMetadata>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListMetadataMetadatasResponse(
+                $response = new Operations\ListMetadataMetadatas2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Metadata
     /**
      * Update a metadata
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchMetadataMetadataRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchMetadataMetadata2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMetadataMetadata2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMetadataMetadata(Operations\PatchMetadataMetadataRequest $request, ?Options $options = null): Operations\PatchMetadataMetadataResponse
+    public function patchMetadataMetadata2(Operations\PatchMetadataMetadata2Request $request, ?Options $options = null): Operations\PatchMetadataMetadata2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\PatchMetadataMetadataRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\PatchMetadataMetadata2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'metadataMetadata', 'json');
@@ -257,11 +257,11 @@ class Metadata
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchMetadataMetadataRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchMetadataMetadata2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMetadataMetadata', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMetadataMetadata2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Metadata
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MetadataMetadata', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchMetadataMetadataResponse(
+                $response = new Operations\PatchMetadataMetadata2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Metadata
     /**
      * Remove a metadata
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMetadataMetadata2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMetadataMetadata2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMetadataMetadata(Operations\RemoveMetadataMetadataRequest $request, ?Options $options = null): Operations\RemoveMetadataMetadataResponse
+    public function removeMetadataMetadata2(Operations\RemoveMetadataMetadata2Request $request, ?Options $options = null): Operations\RemoveMetadataMetadata2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\RemoveMetadataMetadataRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\RemoveMetadataMetadata2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMetadataMetadata', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMetadataMetadata2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Metadata
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMetadataMetadataResponse(
+            return new Operations\RemoveMetadataMetadata2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Metadata
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMetadataMetadataResponse(
+            return new Operations\RemoveMetadataMetadata2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Metadata
     /**
      * Update a metadata
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMetadataMetadata2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMetadataMetadata2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMetadataMetadata(Operations\UpdateMetadataMetadataRequest $request, ?Options $options = null): Operations\UpdateMetadataMetadataResponse
+    public function updateMetadataMetadata2(Operations\UpdateMetadataMetadata2Request $request, ?Options $options = null): Operations\UpdateMetadataMetadata2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\UpdateMetadataMetadataRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/metadata/{connection_id}/metadata/{id}', Operations\UpdateMetadataMetadata2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'metadataMetadata', 'json');
@@ -382,11 +382,11 @@ class Metadata
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateMetadataMetadataRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateMetadataMetadata2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMetadataMetadata', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMetadataMetadata2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Metadata
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MetadataMetadata', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateMetadataMetadataResponse(
+                $response = new Operations\UpdateMetadataMetadata2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

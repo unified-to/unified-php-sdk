@@ -47,14 +47,14 @@ class Purchaseorder
     /**
      * Create a purchaseorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingPurchaseorder(Operations\CreateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\CreateAccountingPurchaseorderResponse
+    public function createAccountingPurchaseorder2(Operations\CreateAccountingPurchaseorder2Request $request, ?Options $options = null): Operations\CreateAccountingPurchaseorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder', Operations\CreateAccountingPurchaseorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder', Operations\CreateAccountingPurchaseorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingPurchaseorder', 'json');
@@ -63,11 +63,11 @@ class Purchaseorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingPurchaseorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingPurchaseorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingPurchaseorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingPurchaseorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Purchaseorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingPurchaseorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingPurchaseorderResponse(
+                $response = new Operations\CreateAccountingPurchaseorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Purchaseorder
     /**
      * Retrieve a purchaseorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingPurchaseorder(Operations\GetAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\GetAccountingPurchaseorderResponse
+    public function getAccountingPurchaseorder2(Operations\GetAccountingPurchaseorder2Request $request, ?Options $options = null): Operations\GetAccountingPurchaseorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\GetAccountingPurchaseorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\GetAccountingPurchaseorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingPurchaseorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingPurchaseorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingPurchaseorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingPurchaseorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Purchaseorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingPurchaseorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingPurchaseorderResponse(
+                $response = new Operations\GetAccountingPurchaseorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Purchaseorder
     /**
      * List all purchaseorders
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchaseorders2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchaseorders2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingPurchaseorders(Operations\ListAccountingPurchaseordersRequest $request, ?Options $options = null): Operations\ListAccountingPurchaseordersResponse
+    public function listAccountingPurchaseorders2(Operations\ListAccountingPurchaseorders2Request $request, ?Options $options = null): Operations\ListAccountingPurchaseorders2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder', Operations\ListAccountingPurchaseordersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder', Operations\ListAccountingPurchaseorders2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingPurchaseordersRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingPurchaseorders2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingPurchaseorders', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingPurchaseorders2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Purchaseorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingPurchaseorder>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingPurchaseordersResponse(
+                $response = new Operations\ListAccountingPurchaseorders2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Purchaseorder
     /**
      * Update a purchaseorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingPurchaseorder(Operations\PatchAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\PatchAccountingPurchaseorderResponse
+    public function patchAccountingPurchaseorder2(Operations\PatchAccountingPurchaseorder2Request $request, ?Options $options = null): Operations\PatchAccountingPurchaseorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\PatchAccountingPurchaseorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\PatchAccountingPurchaseorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingPurchaseorder', 'json');
@@ -257,11 +257,11 @@ class Purchaseorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingPurchaseorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingPurchaseorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingPurchaseorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingPurchaseorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Purchaseorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingPurchaseorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingPurchaseorderResponse(
+                $response = new Operations\PatchAccountingPurchaseorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Purchaseorder
     /**
      * Remove a purchaseorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingPurchaseorder(Operations\RemoveAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\RemoveAccountingPurchaseorderResponse
+    public function removeAccountingPurchaseorder2(Operations\RemoveAccountingPurchaseorder2Request $request, ?Options $options = null): Operations\RemoveAccountingPurchaseorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\RemoveAccountingPurchaseorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\RemoveAccountingPurchaseorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingPurchaseorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingPurchaseorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Purchaseorder
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingPurchaseorderResponse(
+            return new Operations\RemoveAccountingPurchaseorder2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Purchaseorder
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingPurchaseorderResponse(
+            return new Operations\RemoveAccountingPurchaseorder2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Purchaseorder
     /**
      * Update a purchaseorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingPurchaseorder(Operations\UpdateAccountingPurchaseorderRequest $request, ?Options $options = null): Operations\UpdateAccountingPurchaseorderResponse
+    public function updateAccountingPurchaseorder2(Operations\UpdateAccountingPurchaseorder2Request $request, ?Options $options = null): Operations\UpdateAccountingPurchaseorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\UpdateAccountingPurchaseorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/purchaseorder/{id}', Operations\UpdateAccountingPurchaseorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingPurchaseorder', 'json');
@@ -382,11 +382,11 @@ class Purchaseorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingPurchaseorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingPurchaseorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingPurchaseorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingPurchaseorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Purchaseorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingPurchaseorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingPurchaseorderResponse(
+                $response = new Operations\UpdateAccountingPurchaseorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

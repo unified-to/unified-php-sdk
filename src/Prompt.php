@@ -47,14 +47,14 @@ class Prompt
     /**
      * Create a prompt
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPromptRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateGenaiPromptResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPrompt2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiPrompt2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createGenaiPrompt(Operations\CreateGenaiPromptRequest $request, ?Options $options = null): Operations\CreateGenaiPromptResponse
+    public function createGenaiPrompt2(Operations\CreateGenaiPrompt2Request $request, ?Options $options = null): Operations\CreateGenaiPrompt2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/prompt', Operations\CreateGenaiPromptRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/prompt', Operations\CreateGenaiPrompt2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'genaiPrompt', 'json');
@@ -63,11 +63,11 @@ class Prompt
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateGenaiPromptRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateGenaiPrompt2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createGenaiPrompt', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createGenaiPrompt2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Prompt
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\GenaiPrompt', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateGenaiPromptResponse(
+                $response = new Operations\CreateGenaiPrompt2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

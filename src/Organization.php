@@ -47,14 +47,14 @@ class Organization
     /**
      * Create an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAdsOrganization(Operations\CreateAdsOrganizationRequest $request, ?Options $options = null): Operations\CreateAdsOrganizationResponse
+    public function createAdsOrganization2(Operations\CreateAdsOrganization2Request $request, ?Options $options = null): Operations\CreateAdsOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization', Operations\CreateAdsOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization', Operations\CreateAdsOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsOrganization', 'json');
@@ -63,11 +63,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAdsOrganizationResponse(
+                $response = new Operations\CreateAdsOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Organization
     /**
      * Create an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoOrganization(Operations\CreateRepoOrganizationRequest $request, ?Options $options = null): Operations\CreateRepoOrganizationResponse
+    public function createRepoOrganization2(Operations\CreateRepoOrganization2Request $request, ?Options $options = null): Operations\CreateRepoOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\CreateRepoOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\CreateRepoOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -131,11 +131,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoOrganizationResponse(
+                $response = new Operations\CreateRepoOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,22 +183,22 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingOrganization(Operations\GetAccountingOrganizationRequest $request, ?Options $options = null): Operations\GetAccountingOrganizationResponse
+    public function getAccountingOrganization2(Operations\GetAccountingOrganization2Request $request, ?Options $options = null): Operations\GetAccountingOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization/{id}', Operations\GetAccountingOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization/{id}', Operations\GetAccountingOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -224,7 +224,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingOrganizationResponse(
+                $response = new Operations\GetAccountingOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -246,22 +246,22 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAdsOrganization(Operations\GetAdsOrganizationRequest $request, ?Options $options = null): Operations\GetAdsOrganizationResponse
+    public function getAdsOrganization2(Operations\GetAdsOrganization2Request $request, ?Options $options = null): Operations\GetAdsOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\GetAdsOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\GetAdsOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAdsOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAdsOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAdsOrganizationResponse(
+                $response = new Operations\GetAdsOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,22 +309,22 @@ class Organization
     /**
      * Retrieve an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoOrganization(Operations\GetRepoOrganizationRequest $request, ?Options $options = null): Operations\GetRepoOrganizationResponse
+    public function getRepoOrganization2(Operations\GetRepoOrganization2Request $request, ?Options $options = null): Operations\GetRepoOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\GetRepoOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\GetRepoOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -350,7 +350,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoOrganizationResponse(
+                $response = new Operations\GetRepoOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -372,22 +372,22 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizations2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizations2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingOrganizations(Operations\ListAccountingOrganizationsRequest $request, ?Options $options = null): Operations\ListAccountingOrganizationsResponse
+    public function listAccountingOrganizations2(Operations\ListAccountingOrganizations2Request $request, ?Options $options = null): Operations\ListAccountingOrganizations2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization', Operations\ListAccountingOrganizationsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/organization', Operations\ListAccountingOrganizations2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingOrganizationsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingOrganizations2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingOrganizations', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingOrganizations2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingOrganizationsResponse(
+                $response = new Operations\ListAccountingOrganizations2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,22 +435,22 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizations2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizations2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAdsOrganizations(Operations\ListAdsOrganizationsRequest $request, ?Options $options = null): Operations\ListAdsOrganizationsResponse
+    public function listAdsOrganizations2(Operations\ListAdsOrganizations2Request $request, ?Options $options = null): Operations\ListAdsOrganizations2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization', Operations\ListAdsOrganizationsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization', Operations\ListAdsOrganizations2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAdsOrganizationsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAdsOrganizations2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsOrganizations', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsOrganizations2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -476,7 +476,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AdsOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAdsOrganizationsResponse(
+                $response = new Operations\ListAdsOrganizations2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -498,22 +498,22 @@ class Organization
     /**
      * List all organizations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizations2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizations2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoOrganizations(Operations\ListRepoOrganizationsRequest $request, ?Options $options = null): Operations\ListRepoOrganizationsResponse
+    public function listRepoOrganizations2(Operations\ListRepoOrganizations2Request $request, ?Options $options = null): Operations\ListRepoOrganizations2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\ListRepoOrganizationsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\ListRepoOrganizations2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoOrganizationsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoOrganizations2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoOrganizations', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoOrganizations2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -539,7 +539,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoOrganizationsResponse(
+                $response = new Operations\ListRepoOrganizations2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -561,14 +561,14 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAdsOrganization(Operations\PatchAdsOrganizationRequest $request, ?Options $options = null): Operations\PatchAdsOrganizationResponse
+    public function patchAdsOrganization2(Operations\PatchAdsOrganization2Request $request, ?Options $options = null): Operations\PatchAdsOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\PatchAdsOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\PatchAdsOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsOrganization', 'json');
@@ -577,11 +577,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAdsOrganizationResponse(
+                $response = new Operations\PatchAdsOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,14 +629,14 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoOrganization(Operations\PatchRepoOrganizationRequest $request, ?Options $options = null): Operations\PatchRepoOrganizationResponse
+    public function patchRepoOrganization2(Operations\PatchRepoOrganization2Request $request, ?Options $options = null): Operations\PatchRepoOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\PatchRepoOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\PatchRepoOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -645,11 +645,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -675,7 +675,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoOrganizationResponse(
+                $response = new Operations\PatchRepoOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -697,20 +697,20 @@ class Organization
     /**
      * Remove an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAdsOrganization(Operations\RemoveAdsOrganizationRequest $request, ?Options $options = null): Operations\RemoveAdsOrganizationResponse
+    public function removeAdsOrganization2(Operations\RemoveAdsOrganization2Request $request, ?Options $options = null): Operations\RemoveAdsOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\RemoveAdsOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\RemoveAdsOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -731,7 +731,7 @@ class Organization
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsOrganizationResponse(
+            return new Operations\RemoveAdsOrganization2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -743,7 +743,7 @@ class Organization
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsOrganizationResponse(
+            return new Operations\RemoveAdsOrganization2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -754,20 +754,20 @@ class Organization
     /**
      * Remove an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoOrganization(Operations\RemoveRepoOrganizationRequest $request, ?Options $options = null): Operations\RemoveRepoOrganizationResponse
+    public function removeRepoOrganization2(Operations\RemoveRepoOrganization2Request $request, ?Options $options = null): Operations\RemoveRepoOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\RemoveRepoOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\RemoveRepoOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -788,7 +788,7 @@ class Organization
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoOrganizationResponse(
+            return new Operations\RemoveRepoOrganization2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -800,7 +800,7 @@ class Organization
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoOrganizationResponse(
+            return new Operations\RemoveRepoOrganization2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -811,14 +811,14 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAdsOrganization(Operations\UpdateAdsOrganizationRequest $request, ?Options $options = null): Operations\UpdateAdsOrganizationResponse
+    public function updateAdsOrganization2(Operations\UpdateAdsOrganization2Request $request, ?Options $options = null): Operations\UpdateAdsOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\UpdateAdsOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/organization/{id}', Operations\UpdateAdsOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsOrganization', 'json');
@@ -827,11 +827,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -857,7 +857,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAdsOrganizationResponse(
+                $response = new Operations\UpdateAdsOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -879,14 +879,14 @@ class Organization
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganization2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganization2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoOrganization(Operations\UpdateRepoOrganizationRequest $request, ?Options $options = null): Operations\UpdateRepoOrganizationResponse
+    public function updateRepoOrganization2(Operations\UpdateRepoOrganization2Request $request, ?Options $options = null): Operations\UpdateRepoOrganization2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\UpdateRepoOrganizationRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\UpdateRepoOrganization2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -895,11 +895,11 @@ class Organization
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoOrganizationRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoOrganization2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoOrganization', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoOrganization2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -925,7 +925,7 @@ class Organization
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoOrganizationResponse(
+                $response = new Operations\UpdateRepoOrganization2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

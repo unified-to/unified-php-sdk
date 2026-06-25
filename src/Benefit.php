@@ -47,14 +47,14 @@ class Benefit
     /**
      * Create a benefit
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefitRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefit2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefit2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisBenefit(Operations\CreateHrisBenefitRequest $request, ?Options $options = null): Operations\CreateHrisBenefitResponse
+    public function createHrisBenefit2(Operations\CreateHrisBenefit2Request $request, ?Options $options = null): Operations\CreateHrisBenefit2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit', Operations\CreateHrisBenefitRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit', Operations\CreateHrisBenefit2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBenefit', 'json');
@@ -63,11 +63,11 @@ class Benefit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisBenefitRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisBenefit2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisBenefit', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisBenefit2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Benefit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBenefit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisBenefitResponse(
+                $response = new Operations\CreateHrisBenefit2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Benefit
     /**
      * Retrieve a benefit
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefitRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefit2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBenefit2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisBenefit(Operations\GetHrisBenefitRequest $request, ?Options $options = null): Operations\GetHrisBenefitResponse
+    public function getHrisBenefit2(Operations\GetHrisBenefit2Request $request, ?Options $options = null): Operations\GetHrisBenefit2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\GetHrisBenefitRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\GetHrisBenefit2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisBenefitRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisBenefit2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisBenefit', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisBenefit2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Benefit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBenefit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisBenefitResponse(
+                $response = new Operations\GetHrisBenefit2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Benefit
     /**
      * List all benefits
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefitsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisBenefitsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefits2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBenefits2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisBenefits(Operations\ListHrisBenefitsRequest $request, ?Options $options = null): Operations\ListHrisBenefitsResponse
+    public function listHrisBenefits2(Operations\ListHrisBenefits2Request $request, ?Options $options = null): Operations\ListHrisBenefits2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit', Operations\ListHrisBenefitsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit', Operations\ListHrisBenefits2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisBenefitsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisBenefits2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisBenefits', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisBenefits2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Benefit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisBenefit>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisBenefitsResponse(
+                $response = new Operations\ListHrisBenefits2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Benefit
     /**
      * Update a benefit
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefitRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefit2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefit2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisBenefit(Operations\PatchHrisBenefitRequest $request, ?Options $options = null): Operations\PatchHrisBenefitResponse
+    public function patchHrisBenefit2(Operations\PatchHrisBenefit2Request $request, ?Options $options = null): Operations\PatchHrisBenefit2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\PatchHrisBenefitRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\PatchHrisBenefit2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBenefit', 'json');
@@ -257,11 +257,11 @@ class Benefit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisBenefitRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisBenefit2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisBenefit', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisBenefit2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Benefit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBenefit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisBenefitResponse(
+                $response = new Operations\PatchHrisBenefit2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Benefit
     /**
      * Remove a benefit
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefitRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefit2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefit2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisBenefit(Operations\RemoveHrisBenefitRequest $request, ?Options $options = null): Operations\RemoveHrisBenefitResponse
+    public function removeHrisBenefit2(Operations\RemoveHrisBenefit2Request $request, ?Options $options = null): Operations\RemoveHrisBenefit2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\RemoveHrisBenefitRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\RemoveHrisBenefit2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisBenefit', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisBenefit2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Benefit
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisBenefitResponse(
+            return new Operations\RemoveHrisBenefit2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Benefit
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisBenefitResponse(
+            return new Operations\RemoveHrisBenefit2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Benefit
     /**
      * Update a benefit
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefitRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefitResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefit2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefit2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisBenefit(Operations\UpdateHrisBenefitRequest $request, ?Options $options = null): Operations\UpdateHrisBenefitResponse
+    public function updateHrisBenefit2(Operations\UpdateHrisBenefit2Request $request, ?Options $options = null): Operations\UpdateHrisBenefit2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\UpdateHrisBenefitRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/benefit/{id}', Operations\UpdateHrisBenefit2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBenefit', 'json');
@@ -382,11 +382,11 @@ class Benefit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisBenefitRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisBenefit2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisBenefit', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisBenefit2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Benefit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBenefit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisBenefitResponse(
+                $response = new Operations\UpdateHrisBenefit2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

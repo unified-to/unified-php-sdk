@@ -47,14 +47,14 @@ class Ticket
     /**
      * Create a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicket2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicket2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTicketingTicket(Operations\CreateTicketingTicketRequest $request, ?Options $options = null): Operations\CreateTicketingTicketResponse
+    public function createTicketingTicket2(Operations\CreateTicketingTicket2Request $request, ?Options $options = null): Operations\CreateTicketingTicket2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\CreateTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\CreateTicketingTicket2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
@@ -63,11 +63,11 @@ class Ticket
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingTicketRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingTicket2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingTicket', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingTicket2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Ticket
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTicketingTicketResponse(
+                $response = new Operations\CreateTicketingTicket2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Ticket
     /**
      * Retrieve a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicket2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingTicket2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTicketingTicket(Operations\GetTicketingTicketRequest $request, ?Options $options = null): Operations\GetTicketingTicketResponse
+    public function getTicketingTicket2(Operations\GetTicketingTicket2Request $request, ?Options $options = null): Operations\GetTicketingTicket2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\GetTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\GetTicketingTicket2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingTicketRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingTicket2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingTicket', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingTicket2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Ticket
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTicketingTicketResponse(
+                $response = new Operations\GetTicketingTicket2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Ticket
     /**
      * List all tickets
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingTickets2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingTickets2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTicketingTickets(Operations\ListTicketingTicketsRequest $request, ?Options $options = null): Operations\ListTicketingTicketsResponse
+    public function listTicketingTickets2(Operations\ListTicketingTickets2Request $request, ?Options $options = null): Operations\ListTicketingTickets2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\ListTicketingTicketsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket', Operations\ListTicketingTickets2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingTicketsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingTickets2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingTickets', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingTickets2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Ticket
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TicketingTicket>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTicketingTicketsResponse(
+                $response = new Operations\ListTicketingTickets2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Ticket
     /**
      * Update a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicket2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicket2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTicketingTicket(Operations\PatchTicketingTicketRequest $request, ?Options $options = null): Operations\PatchTicketingTicketResponse
+    public function patchTicketingTicket2(Operations\PatchTicketingTicket2Request $request, ?Options $options = null): Operations\PatchTicketingTicket2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\PatchTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\PatchTicketingTicket2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
@@ -257,11 +257,11 @@ class Ticket
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingTicketRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingTicket2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingTicket', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingTicket2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Ticket
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTicketingTicketResponse(
+                $response = new Operations\PatchTicketingTicket2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Ticket
     /**
      * Remove a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicket2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicket2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTicketingTicket(Operations\RemoveTicketingTicketRequest $request, ?Options $options = null): Operations\RemoveTicketingTicketResponse
+    public function removeTicketingTicket2(Operations\RemoveTicketingTicket2Request $request, ?Options $options = null): Operations\RemoveTicketingTicket2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\RemoveTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\RemoveTicketingTicket2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingTicket', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingTicket2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Ticket
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingTicketResponse(
+            return new Operations\RemoveTicketingTicket2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Ticket
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingTicketResponse(
+            return new Operations\RemoveTicketingTicket2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Ticket
     /**
      * Update a ticket
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicket2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicket2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTicketingTicket(Operations\UpdateTicketingTicketRequest $request, ?Options $options = null): Operations\UpdateTicketingTicketResponse
+    public function updateTicketingTicket2(Operations\UpdateTicketingTicket2Request $request, ?Options $options = null): Operations\UpdateTicketingTicket2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\UpdateTicketingTicketRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/ticket/{id}', Operations\UpdateTicketingTicket2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingTicket', 'json');
@@ -382,11 +382,11 @@ class Ticket
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingTicketRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingTicket2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingTicket', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingTicket2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Ticket
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingTicket', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTicketingTicketResponse(
+                $response = new Operations\UpdateTicketingTicket2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceReview](#createcommercereview) - Create a review
-* [getCommerceReview](#getcommercereview) - Retrieve a review
-* [listCommerceReviews](#listcommercereviews) - List all reviews
-* [patchCommerceReview](#patchcommercereview) - Update a review
-* [removeCommerceReview](#removecommercereview) - Remove a review
-* [updateCommerceReview](#updatecommercereview) - Update a review
+* [createCommerceReview2](#createcommercereview2) - Create a review
+* [getCommerceReview2](#getcommercereview2) - Retrieve a review
+* [listCommerceReviews2](#listcommercereviews2) - List all reviews
+* [patchCommerceReview2](#patchcommercereview2) - Update a review
+* [removeCommerceReview2](#removecommercereview2) - Remove a review
+* [updateCommerceReview2](#updatecommercereview2) - Update a review
 
-## createCommerceReview
+## createCommerceReview2
 
 Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="php" operationID="createCommerceReview2" method="post" path="/commerce/{connection_id}/review" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceReviewRequest(
+$request = new Operations\CreateCommerceReview2Request(
     commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
 );
 
-$response = $sdk->review->createCommerceReview(
+$response = $sdk->review->createCommerceReview2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceReview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateCommerceReviewRequest](../../Models/Operations/CreateCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateCommerceReview2Request](../../Models/Operations/CreateCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateCommerceReviewResponse](../../Models/Operations/CreateCommerceReviewResponse.md)**
+**[?Operations\CreateCommerceReview2Response](../../Models/Operations/CreateCommerceReview2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceReview
+## getCommerceReview2
 
 Retrieve a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceReview2" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceReviewRequest(
+$request = new Operations\GetCommerceReview2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->review->getCommerceReview(
+$response = $sdk->review->getCommerceReview2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceReview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetCommerceReviewRequest](../../Models/Operations/GetCommerceReviewRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetCommerceReview2Request](../../Models/Operations/GetCommerceReview2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetCommerceReviewResponse](../../Models/Operations/GetCommerceReviewResponse.md)**
+**[?Operations\GetCommerceReview2Response](../../Models/Operations/GetCommerceReview2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceReviews
+## listCommerceReviews2
 
 List all reviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="php" operationID="listCommerceReviews2" method="get" path="/commerce/{connection_id}/review" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceReviewsRequest(
+$request = new Operations\ListCommerceReviews2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->review->listCommerceReviews(
+$response = $sdk->review->listCommerceReviews2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceReviews !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListCommerceReviewsRequest](../../Models/Operations/ListCommerceReviewsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListCommerceReviews2Request](../../Models/Operations/ListCommerceReviews2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListCommerceReviewsResponse](../../Models/Operations/ListCommerceReviewsResponse.md)**
+**[?Operations\ListCommerceReviews2Response](../../Models/Operations/ListCommerceReviews2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceReviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceReview
+## patchCommerceReview2
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceReview2" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceReviewRequest(
+$request = new Operations\PatchCommerceReview2Request(
     commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->review->patchCommerceReview(
+$response = $sdk->review->patchCommerceReview2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceReview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchCommerceReviewRequest](../../Models/Operations/PatchCommerceReviewRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchCommerceReview2Request](../../Models/Operations/PatchCommerceReview2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchCommerceReviewResponse](../../Models/Operations/PatchCommerceReviewResponse.md)**
+**[?Operations\PatchCommerceReview2Response](../../Models/Operations/PatchCommerceReview2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceReview
+## removeCommerceReview2
 
 Remove a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceReview2" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceReviewRequest(
+$request = new Operations\RemoveCommerceReview2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->review->removeCommerceReview(
+$response = $sdk->review->removeCommerceReview2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveCommerceReviewRequest](../../Models/Operations/RemoveCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveCommerceReview2Request](../../Models/Operations/RemoveCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveCommerceReviewResponse](../../Models/Operations/RemoveCommerceReviewResponse.md)**
+**[?Operations\RemoveCommerceReview2Response](../../Models/Operations/RemoveCommerceReview2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceReview
+## updateCommerceReview2
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReview2" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceReviewRequest(
+$request = new Operations\UpdateCommerceReview2Request(
     commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->review->updateCommerceReview(
+$response = $sdk->review->updateCommerceReview2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceReview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateCommerceReviewRequest](../../Models/Operations/UpdateCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateCommerceReview2Request](../../Models/Operations/UpdateCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateCommerceReviewResponse](../../Models/Operations/UpdateCommerceReviewResponse.md)**
+**[?Operations\UpdateCommerceReview2Response](../../Models/Operations/UpdateCommerceReview2Response.md)**
 
 ### Errors
 

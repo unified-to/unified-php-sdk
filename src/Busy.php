@@ -47,22 +47,22 @@ class Busy
     /**
      * List all busies
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCalendarBusiesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCalendarBusiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarBusies2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarBusies2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCalendarBusies(Operations\ListCalendarBusiesRequest $request, ?Options $options = null): Operations\ListCalendarBusiesResponse
+    public function listCalendarBusies2(Operations\ListCalendarBusies2Request $request, ?Options $options = null): Operations\ListCalendarBusies2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/busy', Operations\ListCalendarBusiesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/busy', Operations\ListCalendarBusies2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarBusiesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarBusies2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarBusies', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarBusies2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Busy
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CalendarBusy>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCalendarBusiesResponse(
+                $response = new Operations\ListCalendarBusies2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

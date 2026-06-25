@@ -133,6 +133,11 @@ enum ObjectType: string
     case AdsInsertionorder = 'ads_insertionorder';
     case AdsTarget = 'ads_target';
     case AdsPromoted = 'ads_promoted';
+    case AnalyticsProperty = 'analytics_property';
+    case AnalyticsEvent = 'analytics_event';
+    case AnalyticsSession = 'analytics_session';
+    case AnalyticsVisitor = 'analytics_visitor';
+    case AnalyticsReport = 'analytics_report';
     case FormsForm = 'forms_form';
     case FormsSubmission = 'forms_submission';
     case ShippingCarrier = 'shipping_carrier';
@@ -148,4 +153,8 @@ enum ObjectType: string
     case ClubsActivity = 'clubs_activity';
     case ClubsLocation = 'clubs_location';
     case ClubsEvent = 'clubs_event';
+    case DatastoreDatabase = 'datastore_database';
+    case DatastoreTable = 'datastore_table';
+    case DatastoreRecord = 'datastore_record';
+    case DatastoreQuery = 'datastore_query';
 }

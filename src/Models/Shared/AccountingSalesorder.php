@@ -53,6 +53,16 @@ class AccountingSalesorder
     public ?string $currency = null;
 
     /**
+     * $fees
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingFee> $fees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingFee>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $fees = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -144,6 +154,7 @@ class AccountingSalesorder
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingFee>  $fees
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $organizationId
@@ -156,13 +167,14 @@ class AccountingSalesorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $fees = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->fees = $fees;
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->organizationId = $organizationId;

@@ -47,14 +47,14 @@ class Bankaccount
     /**
      * Create a bankaccount
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccountRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccount2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccount2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisBankaccount(Operations\CreateHrisBankaccountRequest $request, ?Options $options = null): Operations\CreateHrisBankaccountResponse
+    public function createHrisBankaccount2(Operations\CreateHrisBankaccount2Request $request, ?Options $options = null): Operations\CreateHrisBankaccount2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount', Operations\CreateHrisBankaccountRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount', Operations\CreateHrisBankaccount2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBankaccount', 'json');
@@ -63,11 +63,11 @@ class Bankaccount
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisBankaccountRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisBankaccount2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisBankaccount', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisBankaccount2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Bankaccount
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBankaccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisBankaccountResponse(
+                $response = new Operations\CreateHrisBankaccount2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Bankaccount
     /**
      * Retrieve a bankaccount
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccountRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccount2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccount2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisBankaccount(Operations\GetHrisBankaccountRequest $request, ?Options $options = null): Operations\GetHrisBankaccountResponse
+    public function getHrisBankaccount2(Operations\GetHrisBankaccount2Request $request, ?Options $options = null): Operations\GetHrisBankaccount2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\GetHrisBankaccountRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\GetHrisBankaccount2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisBankaccountRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisBankaccount2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisBankaccount', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisBankaccount2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Bankaccount
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBankaccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisBankaccountResponse(
+                $response = new Operations\GetHrisBankaccount2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Bankaccount
     /**
      * List all bankaccounts
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccountsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccountsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccounts2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccounts2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisBankaccounts(Operations\ListHrisBankaccountsRequest $request, ?Options $options = null): Operations\ListHrisBankaccountsResponse
+    public function listHrisBankaccounts2(Operations\ListHrisBankaccounts2Request $request, ?Options $options = null): Operations\ListHrisBankaccounts2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount', Operations\ListHrisBankaccountsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount', Operations\ListHrisBankaccounts2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisBankaccountsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisBankaccounts2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisBankaccounts', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisBankaccounts2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Bankaccount
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisBankaccount>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisBankaccountsResponse(
+                $response = new Operations\ListHrisBankaccounts2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Bankaccount
     /**
      * Update a bankaccount
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccountRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccount2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccount2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisBankaccount(Operations\PatchHrisBankaccountRequest $request, ?Options $options = null): Operations\PatchHrisBankaccountResponse
+    public function patchHrisBankaccount2(Operations\PatchHrisBankaccount2Request $request, ?Options $options = null): Operations\PatchHrisBankaccount2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\PatchHrisBankaccountRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\PatchHrisBankaccount2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBankaccount', 'json');
@@ -257,11 +257,11 @@ class Bankaccount
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisBankaccountRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisBankaccount2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisBankaccount', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisBankaccount2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Bankaccount
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBankaccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisBankaccountResponse(
+                $response = new Operations\PatchHrisBankaccount2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Bankaccount
     /**
      * Remove a bankaccount
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccount2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccount2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisBankaccount(Operations\RemoveHrisBankaccountRequest $request, ?Options $options = null): Operations\RemoveHrisBankaccountResponse
+    public function removeHrisBankaccount2(Operations\RemoveHrisBankaccount2Request $request, ?Options $options = null): Operations\RemoveHrisBankaccount2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\RemoveHrisBankaccountRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\RemoveHrisBankaccount2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisBankaccount', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisBankaccount2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Bankaccount
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisBankaccountResponse(
+            return new Operations\RemoveHrisBankaccount2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Bankaccount
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisBankaccountResponse(
+            return new Operations\RemoveHrisBankaccount2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Bankaccount
     /**
      * Update a bankaccount
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccount2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccount2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisBankaccount(Operations\UpdateHrisBankaccountRequest $request, ?Options $options = null): Operations\UpdateHrisBankaccountResponse
+    public function updateHrisBankaccount2(Operations\UpdateHrisBankaccount2Request $request, ?Options $options = null): Operations\UpdateHrisBankaccount2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\UpdateHrisBankaccountRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/bankaccount/{id}', Operations\UpdateHrisBankaccount2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisBankaccount', 'json');
@@ -382,11 +382,11 @@ class Bankaccount
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisBankaccountRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisBankaccount2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisBankaccount', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisBankaccount2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Bankaccount
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisBankaccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisBankaccountResponse(
+                $response = new Operations\UpdateHrisBankaccount2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

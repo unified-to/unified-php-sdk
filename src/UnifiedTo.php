@@ -84,6 +84,16 @@ class UnifiedTo
 
     public Target $target;
 
+    public Analytics $analytics;
+
+    public Event $event;
+
+    public Property $property;
+
+    public Session $session;
+
+    public Visitor $visitor;
+
     public Assessment $assessment;
 
     public Package $package;
@@ -111,8 +121,6 @@ class UnifiedTo
     public Calendar $calendar;
 
     public Busy $busy;
-
-    public Event $event;
 
     public Link $link;
 
@@ -151,6 +159,16 @@ class UnifiedTo
     public Lead $lead;
 
     public Pipeline $pipeline;
+
+    public Datastore $datastore;
+
+    public Database $database;
+
+    public Query $query;
+
+    public Record $record;
+
+    public Table $table;
 
     public Enrich $enrich;
 
@@ -350,6 +368,11 @@ class UnifiedTo
         $this->insertionorder = new Insertionorder($this->sdkConfiguration);
         $this->promoted = new Promoted($this->sdkConfiguration);
         $this->target = new Target($this->sdkConfiguration);
+        $this->analytics = new Analytics($this->sdkConfiguration);
+        $this->event = new Event($this->sdkConfiguration);
+        $this->property = new Property($this->sdkConfiguration);
+        $this->session = new Session($this->sdkConfiguration);
+        $this->visitor = new Visitor($this->sdkConfiguration);
         $this->assessment = new Assessment($this->sdkConfiguration);
         $this->package = new Package($this->sdkConfiguration);
         $this->ats = new Ats($this->sdkConfiguration);
@@ -364,7 +387,6 @@ class UnifiedTo
         $this->scorecard = new Scorecard($this->sdkConfiguration);
         $this->calendar = new Calendar($this->sdkConfiguration);
         $this->busy = new Busy($this->sdkConfiguration);
-        $this->event = new Event($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);
         $this->recording = new Recording($this->sdkConfiguration);
         $this->webinar = new Webinar($this->sdkConfiguration);
@@ -384,6 +406,11 @@ class UnifiedTo
         $this->deal = new Deal($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);
         $this->pipeline = new Pipeline($this->sdkConfiguration);
+        $this->datastore = new Datastore($this->sdkConfiguration);
+        $this->database = new Database($this->sdkConfiguration);
+        $this->query = new Query($this->sdkConfiguration);
+        $this->record = new Record($this->sdkConfiguration);
+        $this->table = new Table($this->sdkConfiguration);
         $this->enrich = new Enrich($this->sdkConfiguration);
         $this->person = new Person($this->sdkConfiguration);
         $this->forms = new Forms($this->sdkConfiguration);

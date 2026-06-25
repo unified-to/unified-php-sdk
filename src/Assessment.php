@@ -47,14 +47,14 @@ class Assessment
     /**
      * Create an assessment package
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAssessmentPackageRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAssessmentPackage2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAssessmentPackage2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAssessmentPackage(Operations\CreateAssessmentPackageRequest $request, ?Options $options = null): Operations\CreateAssessmentPackageResponse
+    public function createAssessmentPackage2(Operations\CreateAssessmentPackage2Request $request, ?Options $options = null): Operations\CreateAssessmentPackage2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package', Operations\CreateAssessmentPackageRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package', Operations\CreateAssessmentPackage2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'assessmentPackage', 'json');
@@ -65,7 +65,7 @@ class Assessment
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAssessmentPackage', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAssessmentPackage2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -90,7 +90,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentPackage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAssessmentPackageResponse(
+                $response = new Operations\CreateAssessmentPackage2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -112,20 +112,20 @@ class Assessment
     /**
      * Get an assessment package
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAssessmentPackageRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAssessmentPackage2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAssessmentPackage2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAssessmentPackage(Operations\GetAssessmentPackageRequest $request, ?Options $options = null): Operations\GetAssessmentPackageResponse
+    public function getAssessmentPackage2(Operations\GetAssessmentPackage2Request $request, ?Options $options = null): Operations\GetAssessmentPackage2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\GetAssessmentPackageRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\GetAssessmentPackage2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAssessmentPackage', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAssessmentPackage2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -150,7 +150,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentPackage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAssessmentPackageResponse(
+                $response = new Operations\GetAssessmentPackage2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -172,22 +172,22 @@ class Assessment
     /**
      * List assessment packages
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAssessmentPackagesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAssessmentPackagesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAssessmentPackages2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAssessmentPackages2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAssessmentPackages(Operations\ListAssessmentPackagesRequest $request, ?Options $options = null): Operations\ListAssessmentPackagesResponse
+    public function listAssessmentPackages2(Operations\ListAssessmentPackages2Request $request, ?Options $options = null): Operations\ListAssessmentPackages2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package', Operations\ListAssessmentPackagesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package', Operations\ListAssessmentPackages2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAssessmentPackagesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAssessmentPackages2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAssessmentPackages', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAssessmentPackages2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -213,7 +213,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AssessmentPackage>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAssessmentPackagesResponse(
+                $response = new Operations\ListAssessmentPackages2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -235,14 +235,14 @@ class Assessment
     /**
      * Update an order
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAssessmentOrder(Operations\PatchAssessmentOrderRequest $request, ?Options $options = null): Operations\PatchAssessmentOrderResponse
+    public function patchAssessmentOrder2(Operations\PatchAssessmentOrder2Request $request, ?Options $options = null): Operations\PatchAssessmentOrder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/order/{id}', Operations\PatchAssessmentOrderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/order/{id}', Operations\PatchAssessmentOrder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'assessmentOrder', 'json');
@@ -251,11 +251,11 @@ class Assessment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAssessmentOrderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAssessmentOrder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAssessmentOrder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAssessmentOrder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -281,7 +281,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentOrder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAssessmentOrderResponse(
+                $response = new Operations\PatchAssessmentOrder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -303,14 +303,14 @@ class Assessment
     /**
      * Update an assessment package
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentPackageRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentPackage2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAssessmentPackage2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAssessmentPackage(Operations\PatchAssessmentPackageRequest $request, ?Options $options = null): Operations\PatchAssessmentPackageResponse
+    public function patchAssessmentPackage2(Operations\PatchAssessmentPackage2Request $request, ?Options $options = null): Operations\PatchAssessmentPackage2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\PatchAssessmentPackageRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\PatchAssessmentPackage2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'assessmentPackage', 'json');
@@ -321,7 +321,7 @@ class Assessment
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAssessmentPackage', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAssessmentPackage2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -346,7 +346,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentPackage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAssessmentPackageResponse(
+                $response = new Operations\PatchAssessmentPackage2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -368,20 +368,20 @@ class Assessment
     /**
      * Delete an assessment package
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAssessmentPackageRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAssessmentPackage2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAssessmentPackage2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAssessmentPackage(Operations\RemoveAssessmentPackageRequest $request, ?Options $options = null): Operations\RemoveAssessmentPackageResponse
+    public function removeAssessmentPackage2(Operations\RemoveAssessmentPackage2Request $request, ?Options $options = null): Operations\RemoveAssessmentPackage2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\RemoveAssessmentPackageRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\RemoveAssessmentPackage2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAssessmentPackage', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAssessmentPackage2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -402,7 +402,7 @@ class Assessment
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAssessmentPackageResponse(
+            return new Operations\RemoveAssessmentPackage2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -414,7 +414,7 @@ class Assessment
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAssessmentPackageResponse(
+            return new Operations\RemoveAssessmentPackage2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -425,14 +425,14 @@ class Assessment
     /**
      * Update an order
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAssessmentOrder(Operations\UpdateAssessmentOrderRequest $request, ?Options $options = null): Operations\UpdateAssessmentOrderResponse
+    public function updateAssessmentOrder2(Operations\UpdateAssessmentOrder2Request $request, ?Options $options = null): Operations\UpdateAssessmentOrder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/order/{id}', Operations\UpdateAssessmentOrderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/order/{id}', Operations\UpdateAssessmentOrder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'assessmentOrder', 'json');
@@ -441,11 +441,11 @@ class Assessment
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAssessmentOrderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAssessmentOrder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAssessmentOrder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAssessmentOrder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -471,7 +471,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentOrder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAssessmentOrderResponse(
+                $response = new Operations\UpdateAssessmentOrder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -493,14 +493,14 @@ class Assessment
     /**
      * Update an assessment package
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentPackageRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentPackageResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentPackage2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentPackage2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAssessmentPackage(Operations\UpdateAssessmentPackageRequest $request, ?Options $options = null): Operations\UpdateAssessmentPackageResponse
+    public function updateAssessmentPackage2(Operations\UpdateAssessmentPackage2Request $request, ?Options $options = null): Operations\UpdateAssessmentPackage2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\UpdateAssessmentPackageRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/assessment/{connection_id}/package/{id}', Operations\UpdateAssessmentPackage2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'assessmentPackage', 'json');
@@ -511,7 +511,7 @@ class Assessment
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAssessmentPackage', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAssessmentPackage2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -536,7 +536,7 @@ class Assessment
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AssessmentPackage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAssessmentPackageResponse(
+                $response = new Operations\UpdateAssessmentPackage2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

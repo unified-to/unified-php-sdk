@@ -4,30 +4,33 @@
 
 ### Available Operations
 
-* [createCalendarEvent](#createcalendarevent) - Create an event
-* [createCrmEvent](#createcrmevent) - Create an event
-* [getCalendarEvent](#getcalendarevent) - Retrieve an event
-* [getClubsEvent](#getclubsevent) - Retrieve an event
-* [getCrmEvent](#getcrmevent) - Retrieve an event
-* [listCalendarEvents](#listcalendarevents) - List all events
-* [listClubsEvents](#listclubsevents) - List all events
-* [listCrmEvents](#listcrmevents) - List all events
-* [patchCalendarEvent](#patchcalendarevent) - Update an event
-* [patchCrmEvent](#patchcrmevent) - Update an event
-* [patchMessagingEvent](#patchmessagingevent) - Update an event
-* [removeCalendarEvent](#removecalendarevent) - Remove an event
-* [removeCrmEvent](#removecrmevent) - Remove an event
-* [updateCalendarEvent](#updatecalendarevent) - Update an event
-* [updateCrmEvent](#updatecrmevent) - Update an event
-* [updateMessagingEvent](#updatemessagingevent) - Update an event
+* [createAnalyticsEvent2](#createanalyticsevent2) - Create an event
+* [createCalendarEvent2](#createcalendarevent2) - Create an event
+* [createCrmEvent2](#createcrmevent2) - Create an event
+* [getAnalyticsEvent2](#getanalyticsevent2) - Retrieve an event
+* [getCalendarEvent2](#getcalendarevent2) - Retrieve an event
+* [getClubsEvent2](#getclubsevent2) - Retrieve an event
+* [getCrmEvent2](#getcrmevent2) - Retrieve an event
+* [listAnalyticsEvents2](#listanalyticsevents2) - List all events
+* [listCalendarEvents2](#listcalendarevents2) - List all events
+* [listClubsEvents2](#listclubsevents2) - List all events
+* [listCrmEvents2](#listcrmevents2) - List all events
+* [patchCalendarEvent2](#patchcalendarevent2) - Update an event
+* [patchCrmEvent2](#patchcrmevent2) - Update an event
+* [patchMessagingEvent2](#patchmessagingevent2) - Update an event
+* [removeCalendarEvent2](#removecalendarevent2) - Remove an event
+* [removeCrmEvent2](#removecrmevent2) - Remove an event
+* [updateCalendarEvent2](#updatecalendarevent2) - Update an event
+* [updateCrmEvent2](#updatecrmevent2) - Update an event
+* [updateMessagingEvent2](#updatemessagingevent2) - Update an event
 
-## createCalendarEvent
+## createAnalyticsEvent2
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsEvent2" method="post" path="/analytics/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -43,12 +46,64 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCalendarEventRequest(
+$request = new Operations\CreateAnalyticsEvent2Request(
+    analyticsEvent: new Shared\AnalyticsEvent(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->event->createAnalyticsEvent2(
+    request: $request
+);
+
+if ($response->analyticsEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAnalyticsEvent2Request](../../Models/Operations/CreateAnalyticsEvent2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateAnalyticsEvent2Response](../../Models/Operations/CreateAnalyticsEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCalendarEvent2
+
+Create an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCalendarEvent2" method="post" path="/calendar/{connection_id}/event" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCalendarEvent2Request(
     calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
 );
 
-$response = $sdk->event->createCalendarEvent(
+$response = $sdk->event->createCalendarEvent2(
     request: $request
 );
 
@@ -59,13 +114,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateCalendarEventRequest](../../Models/Operations/CreateCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateCalendarEvent2Request](../../Models/Operations/CreateCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateCalendarEventResponse](../../Models/Operations/CreateCalendarEventResponse.md)**
+**[?Operations\CreateCalendarEvent2Response](../../Models/Operations/CreateCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -73,13 +128,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCrmEvent
+## createCrmEvent2
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="createCrmEvent2" method="post" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -95,12 +150,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCrmEventRequest(
+$request = new Operations\CreateCrmEvent2Request(
     crmEvent: new Shared\CrmEvent(),
     connectionId: '<id>',
 );
 
-$response = $sdk->event->createCrmEvent(
+$response = $sdk->event->createCrmEvent2(
     request: $request
 );
 
@@ -111,13 +166,13 @@ if ($response->crmEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\CreateCrmEventRequest](../../Models/Operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateCrmEvent2Request](../../Models/Operations/CreateCrmEvent2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateCrmEventResponse](../../Models/Operations/CreateCrmEventResponse.md)**
+**[?Operations\CreateCrmEvent2Response](../../Models/Operations/CreateCrmEvent2Response.md)**
 
 ### Errors
 
@@ -125,13 +180,13 @@ if ($response->crmEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarEvent
+## getAnalyticsEvent2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAnalyticsEvent2" method="get" path="/analytics/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -146,12 +201,63 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarEventRequest(
+$request = new Operations\GetAnalyticsEvent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->getCalendarEvent(
+$response = $sdk->event->getAnalyticsEvent2(
+    request: $request
+);
+
+if ($response->analyticsEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAnalyticsEvent2Request](../../Models/Operations/GetAnalyticsEvent2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetAnalyticsEvent2Response](../../Models/Operations/GetAnalyticsEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCalendarEvent2
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCalendarEvent2" method="get" path="/calendar/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCalendarEvent2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->getCalendarEvent2(
     request: $request
 );
 
@@ -162,13 +268,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetCalendarEventRequest](../../Models/Operations/GetCalendarEventRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetCalendarEvent2Request](../../Models/Operations/GetCalendarEvent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetCalendarEventResponse](../../Models/Operations/GetCalendarEventResponse.md)**
+**[?Operations\GetCalendarEvent2Response](../../Models/Operations/GetCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -176,13 +282,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsEvent
+## getClubsEvent2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsEvent2" method="get" path="/clubs/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -197,12 +303,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsEventRequest(
+$request = new Operations\GetClubsEvent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->getClubsEvent(
+$response = $sdk->event->getClubsEvent2(
     request: $request
 );
 
@@ -213,13 +319,13 @@ if ($response->clubsEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetClubsEventRequest](../../Models/Operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetClubsEvent2Request](../../Models/Operations/GetClubsEvent2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetClubsEventResponse](../../Models/Operations/GetClubsEventResponse.md)**
+**[?Operations\GetClubsEvent2Response](../../Models/Operations/GetClubsEvent2Response.md)**
 
 ### Errors
 
@@ -227,13 +333,13 @@ if ($response->clubsEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCrmEvent
+## getCrmEvent2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCrmEvent2" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -248,12 +354,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCrmEventRequest(
+$request = new Operations\GetCrmEvent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->getCrmEvent(
+$response = $sdk->event->getCrmEvent2(
     request: $request
 );
 
@@ -264,13 +370,13 @@ if ($response->crmEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\GetCrmEventRequest](../../Models/Operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetCrmEvent2Request](../../Models/Operations/GetCrmEvent2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetCrmEventResponse](../../Models/Operations/GetCrmEventResponse.md)**
+**[?Operations\GetCrmEvent2Response](../../Models/Operations/GetCrmEvent2Response.md)**
 
 ### Errors
 
@@ -278,13 +384,13 @@ if ($response->crmEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarEvents
+## listAnalyticsEvents2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="listAnalyticsEvents2" method="get" path="/analytics/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -299,11 +405,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarEventsRequest(
+$request = new Operations\ListAnalyticsEvents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->event->listCalendarEvents(
+$response = $sdk->event->listAnalyticsEvents2(
+    request: $request
+);
+
+if ($response->analyticsEvents !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAnalyticsEvents2Request](../../Models/Operations/ListAnalyticsEvents2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\ListAnalyticsEvents2Response](../../Models/Operations/ListAnalyticsEvents2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCalendarEvents2
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCalendarEvents2" method="get" path="/calendar/{connection_id}/event" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCalendarEvents2Request(
+    connectionId: '<id>',
+);
+
+$response = $sdk->event->listCalendarEvents2(
     request: $request
 );
 
@@ -314,13 +470,13 @@ if ($response->calendarEvents !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListCalendarEventsRequest](../../Models/Operations/ListCalendarEventsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListCalendarEvents2Request](../../Models/Operations/ListCalendarEvents2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListCalendarEventsResponse](../../Models/Operations/ListCalendarEventsResponse.md)**
+**[?Operations\ListCalendarEvents2Response](../../Models/Operations/ListCalendarEvents2Response.md)**
 
 ### Errors
 
@@ -328,13 +484,13 @@ if ($response->calendarEvents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsEvents
+## listClubsEvents2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="listClubsEvents2" method="get" path="/clubs/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -349,11 +505,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsEventsRequest(
+$request = new Operations\ListClubsEvents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->event->listClubsEvents(
+$response = $sdk->event->listClubsEvents2(
     request: $request
 );
 
@@ -364,13 +520,13 @@ if ($response->clubsEvents !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListClubsEventsRequest](../../Models/Operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListClubsEvents2Request](../../Models/Operations/ListClubsEvents2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListClubsEventsResponse](../../Models/Operations/ListClubsEventsResponse.md)**
+**[?Operations\ListClubsEvents2Response](../../Models/Operations/ListClubsEvents2Response.md)**
 
 ### Errors
 
@@ -378,13 +534,13 @@ if ($response->clubsEvents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCrmEvents
+## listCrmEvents2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="listCrmEvents2" method="get" path="/crm/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -399,11 +555,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCrmEventsRequest(
+$request = new Operations\ListCrmEvents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->event->listCrmEvents(
+$response = $sdk->event->listCrmEvents2(
     request: $request
 );
 
@@ -414,274 +570,13 @@ if ($response->crmEvents !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\ListCrmEventsRequest](../../Models/Operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-### Response
-
-**[?Operations\ListCrmEventsResponse](../../Models/Operations/ListCrmEventsResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchCalendarEvent
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchCalendarEventRequest(
-    calendarEvent: new Shared\CalendarEvent(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->event->patchCalendarEvent(
-    request: $request
-);
-
-if ($response->calendarEvent !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchCalendarEventRequest](../../Models/Operations/PatchCalendarEventRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\PatchCalendarEventResponse](../../Models/Operations/PatchCalendarEventResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchCrmEvent
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchCrmEventRequest(
-    crmEvent: new Shared\CrmEvent(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->event->patchCrmEvent(
-    request: $request
-);
-
-if ($response->crmEvent !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\PatchCrmEventRequest](../../Models/Operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-### Response
-
-**[?Operations\PatchCrmEventResponse](../../Models/Operations/PatchCrmEventResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchMessagingEvent
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchMessagingEventRequest(
-    messagingEvent: new Shared\MessagingEvent(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->event->patchMessagingEvent(
-    request: $request
-);
-
-if ($response->messagingEvent !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchMessagingEventRequest](../../Models/Operations/PatchMessagingEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\PatchMessagingEventResponse](../../Models/Operations/PatchMessagingEventResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCalendarEvent
-
-Remove an event
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCalendarEventRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->event->removeCalendarEvent(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveCalendarEventRequest](../../Models/Operations/RemoveCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\RemoveCalendarEventResponse](../../Models/Operations/RemoveCalendarEventResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCrmEvent
-
-Remove an event
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCrmEventRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->event->removeCrmEvent(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\RemoveCrmEventRequest](../../Models/Operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `$request`                                                                           | [Operations\ListCrmEvents2Request](../../Models/Operations/ListCrmEvents2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\RemoveCrmEventResponse](../../Models/Operations/RemoveCrmEventResponse.md)**
+**[?Operations\ListCrmEvents2Response](../../Models/Operations/ListCrmEvents2Response.md)**
 
 ### Errors
 
@@ -689,13 +584,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCalendarEvent
+## patchCalendarEvent2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCalendarEvent2" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -711,13 +606,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCalendarEventRequest(
+$request = new Operations\PatchCalendarEvent2Request(
     calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->updateCalendarEvent(
+$response = $sdk->event->patchCalendarEvent2(
     request: $request
 );
 
@@ -730,11 +625,11 @@ if ($response->calendarEvent !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateCalendarEventRequest](../../Models/Operations/UpdateCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\PatchCalendarEvent2Request](../../Models/Operations/PatchCalendarEvent2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateCalendarEventResponse](../../Models/Operations/UpdateCalendarEventResponse.md)**
+**[?Operations\PatchCalendarEvent2Response](../../Models/Operations/PatchCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -742,13 +637,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCrmEvent
+## patchCrmEvent2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmEvent2" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -764,13 +659,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCrmEventRequest(
+$request = new Operations\PatchCrmEvent2Request(
     crmEvent: new Shared\CrmEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->updateCrmEvent(
+$response = $sdk->event->patchCrmEvent2(
     request: $request
 );
 
@@ -783,11 +678,11 @@ if ($response->crmEvent !== null) {
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\UpdateCrmEventRequest](../../Models/Operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `$request`                                                                           | [Operations\PatchCrmEvent2Request](../../Models/Operations/PatchCrmEvent2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\UpdateCrmEventResponse](../../Models/Operations/UpdateCrmEventResponse.md)**
+**[?Operations\PatchCrmEvent2Response](../../Models/Operations/PatchCrmEvent2Response.md)**
 
 ### Errors
 
@@ -795,13 +690,13 @@ if ($response->crmEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMessagingEvent
+## patchMessagingEvent2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingEvent2" method="patch" path="/messaging/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -817,13 +712,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMessagingEventRequest(
+$request = new Operations\PatchMessagingEvent2Request(
     messagingEvent: new Shared\MessagingEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->event->updateMessagingEvent(
+$response = $sdk->event->patchMessagingEvent2(
     request: $request
 );
 
@@ -836,11 +731,272 @@ if ($response->messagingEvent !== null) {
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateMessagingEventRequest](../../Models/Operations/UpdateMessagingEventRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `$request`                                                                                       | [Operations\PatchMessagingEvent2Request](../../Models/Operations/PatchMessagingEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateMessagingEventResponse](../../Models/Operations/UpdateMessagingEventResponse.md)**
+**[?Operations\PatchMessagingEvent2Response](../../Models/Operations/PatchMessagingEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCalendarEvent2
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCalendarEvent2" method="delete" path="/calendar/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCalendarEvent2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->removeCalendarEvent2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveCalendarEvent2Request](../../Models/Operations/RemoveCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\RemoveCalendarEvent2Response](../../Models/Operations/RemoveCalendarEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCrmEvent2
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCrmEvent2" method="delete" path="/crm/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCrmEvent2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->removeCrmEvent2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveCrmEvent2Request](../../Models/Operations/RemoveCrmEvent2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\RemoveCrmEvent2Response](../../Models/Operations/RemoveCrmEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCalendarEvent2
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCalendarEvent2" method="put" path="/calendar/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCalendarEvent2Request(
+    calendarEvent: new Shared\CalendarEvent(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->updateCalendarEvent2(
+    request: $request
+);
+
+if ($response->calendarEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateCalendarEvent2Request](../../Models/Operations/UpdateCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\UpdateCalendarEvent2Response](../../Models/Operations/UpdateCalendarEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCrmEvent2
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCrmEvent2" method="put" path="/crm/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCrmEvent2Request(
+    crmEvent: new Shared\CrmEvent(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->updateCrmEvent2(
+    request: $request
+);
+
+if ($response->crmEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateCrmEvent2Request](../../Models/Operations/UpdateCrmEvent2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\UpdateCrmEvent2Response](../../Models/Operations/UpdateCrmEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateMessagingEvent2
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateMessagingEvent2" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateMessagingEvent2Request(
+    messagingEvent: new Shared\MessagingEvent(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->updateMessagingEvent2(
+    request: $request
+);
+
+if ($response->messagingEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateMessagingEvent2Request](../../Models/Operations/UpdateMessagingEvent2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\UpdateMessagingEvent2Response](../../Models/Operations/UpdateMessagingEvent2Response.md)**
 
 ### Errors
 

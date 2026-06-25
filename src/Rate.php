@@ -47,14 +47,14 @@ class Rate
     /**
      * Create a rate
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateShippingRateRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateShippingRateResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingRate2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingRate2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createShippingRate(Operations\CreateShippingRateRequest $request, ?Options $options = null): Operations\CreateShippingRateResponse
+    public function createShippingRate2(Operations\CreateShippingRate2Request $request, ?Options $options = null): Operations\CreateShippingRate2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/rate', Operations\CreateShippingRateRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/rate', Operations\CreateShippingRate2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingRate', 'json');
@@ -63,11 +63,11 @@ class Rate
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingRateRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingRate2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingRate', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingRate2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Rate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingRate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateShippingRateResponse(
+                $response = new Operations\CreateShippingRate2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

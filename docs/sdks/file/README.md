@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createStorageFile](#createstoragefile) - Create a file
-* [getStorageFile](#getstoragefile) - Retrieve a file
-* [listStorageFiles](#liststoragefiles) - List all files
-* [patchStorageFile](#patchstoragefile) - Update a file
-* [removeStorageFile](#removestoragefile) - Remove a file
-* [updateStorageFile](#updatestoragefile) - Update a file
+* [createStorageFile2](#createstoragefile2) - Create a file
+* [getStorageFile2](#getstoragefile2) - Retrieve a file
+* [listStorageFiles2](#liststoragefiles2) - List all files
+* [patchStorageFile2](#patchstoragefile2) - Update a file
+* [removeStorageFile2](#removestoragefile2) - Remove a file
+* [updateStorageFile2](#updatestoragefile2) - Update a file
 
-## createStorageFile
+## createStorageFile2
 
 Create a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="php" operationID="createStorageFile2" method="post" path="/storage/{connection_id}/file" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateStorageFileRequest(
+$request = new Operations\CreateStorageFile2Request(
     storageFile: new Shared\StorageFile(),
     connectionId: '<id>',
 );
 
-$response = $sdk->file->createStorageFile(
+$response = $sdk->file->createStorageFile2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->storageFile !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateStorageFileRequest](../../Models/Operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateStorageFile2Request](../../Models/Operations/CreateStorageFile2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateStorageFileResponse](../../Models/Operations/CreateStorageFileResponse.md)**
+**[?Operations\CreateStorageFile2Response](../../Models/Operations/CreateStorageFile2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->storageFile !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getStorageFile
+## getStorageFile2
 
 Retrieve a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="getStorageFile2" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetStorageFileRequest(
+$request = new Operations\GetStorageFile2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->file->getStorageFile(
+$response = $sdk->file->getStorageFile2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->storageFile !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetStorageFileRequest](../../Models/Operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetStorageFile2Request](../../Models/Operations/GetStorageFile2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetStorageFileResponse](../../Models/Operations/GetStorageFileResponse.md)**
+**[?Operations\GetStorageFile2Response](../../Models/Operations/GetStorageFile2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->storageFile !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listStorageFiles
+## listStorageFiles2
 
 List all files
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="php" operationID="listStorageFiles2" method="get" path="/storage/{connection_id}/file" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListStorageFilesRequest(
+$request = new Operations\ListStorageFiles2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->file->listStorageFiles(
+$response = $sdk->file->listStorageFiles2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->storageFiles !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListStorageFilesRequest](../../Models/Operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListStorageFiles2Request](../../Models/Operations/ListStorageFiles2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListStorageFilesResponse](../../Models/Operations/ListStorageFilesResponse.md)**
+**[?Operations\ListStorageFiles2Response](../../Models/Operations/ListStorageFiles2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->storageFiles !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchStorageFile
+## patchStorageFile2
 
 Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchStorageFile2" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchStorageFileRequest(
+$request = new Operations\PatchStorageFile2Request(
     storageFile: new Shared\StorageFile(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->file->patchStorageFile(
+$response = $sdk->file->patchStorageFile2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->storageFile !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchStorageFileRequest](../../Models/Operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchStorageFile2Request](../../Models/Operations/PatchStorageFile2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchStorageFileResponse](../../Models/Operations/PatchStorageFileResponse.md)**
+**[?Operations\PatchStorageFile2Response](../../Models/Operations/PatchStorageFile2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->storageFile !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeStorageFile
+## removeStorageFile2
 
 Remove a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeStorageFile2" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveStorageFileRequest(
+$request = new Operations\RemoveStorageFile2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->file->removeStorageFile(
+$response = $sdk->file->removeStorageFile2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveStorageFileRequest](../../Models/Operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveStorageFile2Request](../../Models/Operations/RemoveStorageFile2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveStorageFileResponse](../../Models/Operations/RemoveStorageFileResponse.md)**
+**[?Operations\RemoveStorageFile2Response](../../Models/Operations/RemoveStorageFile2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateStorageFile
+## updateStorageFile2
 
 Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateStorageFile2" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateStorageFileRequest(
+$request = new Operations\UpdateStorageFile2Request(
     storageFile: new Shared\StorageFile(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->file->updateStorageFile(
+$response = $sdk->file->updateStorageFile2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->storageFile !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateStorageFileRequest](../../Models/Operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateStorageFile2Request](../../Models/Operations/UpdateStorageFile2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateStorageFileResponse](../../Models/Operations/UpdateStorageFileResponse.md)**
+**[?Operations\UpdateStorageFile2Response](../../Models/Operations/UpdateStorageFile2Response.md)**
 
 ### Errors
 

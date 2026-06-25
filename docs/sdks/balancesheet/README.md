@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
-* [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
+* [getAccountingBalancesheet2](#getaccountingbalancesheet2) - Retrieve a balancesheet
+* [listAccountingBalancesheets2](#listaccountingbalancesheets2) - List all balancesheets
 
-## getAccountingBalancesheet
+## getAccountingBalancesheet2
 
 Retrieve a balancesheet
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet2" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingBalancesheetRequest(
+$request = new Operations\GetAccountingBalancesheet2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->balancesheet->getAccountingBalancesheet(
+$response = $sdk->balancesheet->getAccountingBalancesheet2(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->accountingBalancesheet !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\GetAccountingBalancesheetRequest](../../Models/Operations/GetAccountingBalancesheetRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\GetAccountingBalancesheet2Request](../../Models/Operations/GetAccountingBalancesheet2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\GetAccountingBalancesheetResponse](../../Models/Operations/GetAccountingBalancesheetResponse.md)**
+**[?Operations\GetAccountingBalancesheet2Response](../../Models/Operations/GetAccountingBalancesheet2Response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->accountingBalancesheet !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingBalancesheets
+## listAccountingBalancesheets2
 
 List all balancesheets
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
+<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets2" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingBalancesheetsRequest(
+$request = new Operations\ListAccountingBalancesheets2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->balancesheet->listAccountingBalancesheets(
+$response = $sdk->balancesheet->listAccountingBalancesheets2(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->accountingBalancesheets !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\ListAccountingBalancesheetsRequest](../../Models/Operations/ListAccountingBalancesheetsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\ListAccountingBalancesheets2Request](../../Models/Operations/ListAccountingBalancesheets2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\ListAccountingBalancesheetsResponse](../../Models/Operations/ListAccountingBalancesheetsResponse.md)**
+**[?Operations\ListAccountingBalancesheets2Response](../../Models/Operations/ListAccountingBalancesheets2Response.md)**
 
 ### Errors
 

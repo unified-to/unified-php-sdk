@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createLmsStudent](#createlmsstudent) - Create a student
-* [getLmsStudent](#getlmsstudent) - Retrieve a student
-* [listLmsStudents](#listlmsstudents) - List all students
-* [patchLmsStudent](#patchlmsstudent) - Update a student
-* [removeLmsStudent](#removelmsstudent) - Remove a student
-* [updateLmsStudent](#updatelmsstudent) - Update a student
+* [createLmsStudent2](#createlmsstudent2) - Create a student
+* [getLmsStudent2](#getlmsstudent2) - Retrieve a student
+* [listLmsStudents2](#listlmsstudents2) - List all students
+* [patchLmsStudent2](#patchlmsstudent2) - Update a student
+* [removeLmsStudent2](#removelmsstudent2) - Remove a student
+* [updateLmsStudent2](#updatelmsstudent2) - Update a student
 
-## createLmsStudent
+## createLmsStudent2
 
 Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="php" operationID="createLmsStudent2" method="post" path="/lms/{connection_id}/student" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsStudentRequest(
+$request = new Operations\CreateLmsStudent2Request(
     lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
 );
 
-$response = $sdk->student->createLmsStudent(
+$response = $sdk->student->createLmsStudent2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->lmsStudent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateLmsStudentRequest](../../Models/Operations/CreateLmsStudentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateLmsStudent2Request](../../Models/Operations/CreateLmsStudent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateLmsStudentResponse](../../Models/Operations/CreateLmsStudentResponse.md)**
+**[?Operations\CreateLmsStudent2Response](../../Models/Operations/CreateLmsStudent2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->lmsStudent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsStudent
+## getLmsStudent2
 
 Retrieve a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsStudent2" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsStudentRequest(
+$request = new Operations\GetLmsStudent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->student->getLmsStudent(
+$response = $sdk->student->getLmsStudent2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->lmsStudent !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetLmsStudentRequest](../../Models/Operations/GetLmsStudentRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetLmsStudent2Request](../../Models/Operations/GetLmsStudent2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetLmsStudentResponse](../../Models/Operations/GetLmsStudentResponse.md)**
+**[?Operations\GetLmsStudent2Response](../../Models/Operations/GetLmsStudent2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->lmsStudent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsStudents
+## listLmsStudents2
 
 List all students
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="php" operationID="listLmsStudents2" method="get" path="/lms/{connection_id}/student" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsStudentsRequest(
+$request = new Operations\ListLmsStudents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->student->listLmsStudents(
+$response = $sdk->student->listLmsStudents2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->lmsStudents !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListLmsStudentsRequest](../../Models/Operations/ListLmsStudentsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListLmsStudents2Request](../../Models/Operations/ListLmsStudents2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListLmsStudentsResponse](../../Models/Operations/ListLmsStudentsResponse.md)**
+**[?Operations\ListLmsStudents2Response](../../Models/Operations/ListLmsStudents2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->lmsStudents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchLmsStudent
+## patchLmsStudent2
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsStudent2" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchLmsStudentRequest(
+$request = new Operations\PatchLmsStudent2Request(
     lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->student->patchLmsStudent(
+$response = $sdk->student->patchLmsStudent2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->lmsStudent !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchLmsStudentRequest](../../Models/Operations/PatchLmsStudentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchLmsStudent2Request](../../Models/Operations/PatchLmsStudent2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchLmsStudentResponse](../../Models/Operations/PatchLmsStudentResponse.md)**
+**[?Operations\PatchLmsStudent2Response](../../Models/Operations/PatchLmsStudent2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->lmsStudent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeLmsStudent
+## removeLmsStudent2
 
 Remove a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeLmsStudent2" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveLmsStudentRequest(
+$request = new Operations\RemoveLmsStudent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->student->removeLmsStudent(
+$response = $sdk->student->removeLmsStudent2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveLmsStudentRequest](../../Models/Operations/RemoveLmsStudentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveLmsStudent2Request](../../Models/Operations/RemoveLmsStudent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveLmsStudentResponse](../../Models/Operations/RemoveLmsStudentResponse.md)**
+**[?Operations\RemoveLmsStudent2Response](../../Models/Operations/RemoveLmsStudent2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateLmsStudent
+## updateLmsStudent2
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsStudent2" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateLmsStudentRequest(
+$request = new Operations\UpdateLmsStudent2Request(
     lmsStudent: new Shared\LmsStudent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->student->updateLmsStudent(
+$response = $sdk->student->updateLmsStudent2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->lmsStudent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateLmsStudentRequest](../../Models/Operations/UpdateLmsStudentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateLmsStudent2Request](../../Models/Operations/UpdateLmsStudent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateLmsStudentResponse](../../Models/Operations/UpdateLmsStudentResponse.md)**
+**[?Operations\UpdateLmsStudent2Response](../../Models/Operations/UpdateLmsStudent2Response.md)**
 
 ### Errors
 

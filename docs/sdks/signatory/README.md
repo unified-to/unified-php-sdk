@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createSigningSignatory](#createsigningsignatory) - Create a signatory
-* [getSigningSignatory](#getsigningsignatory) - Retrieve a signatory
-* [listSigningSignatories](#listsigningsignatories) - List all signatories
-* [patchSigningSignatory](#patchsigningsignatory) - Update a signatory
-* [removeSigningSignatory](#removesigningsignatory) - Remove a signatory
-* [updateSigningSignatory](#updatesigningsignatory) - Update a signatory
+* [createSigningSignatory2](#createsigningsignatory2) - Create a signatory
+* [getSigningSignatory2](#getsigningsignatory2) - Retrieve a signatory
+* [listSigningSignatories2](#listsigningsignatories2) - List all signatories
+* [patchSigningSignatory2](#patchsigningsignatory2) - Update a signatory
+* [removeSigningSignatory2](#removesigningsignatory2) - Remove a signatory
+* [updateSigningSignatory2](#updatesigningsignatory2) - Update a signatory
 
-## createSigningSignatory
+## createSigningSignatory2
 
 Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="php" operationID="createSigningSignatory2" method="post" path="/signing/{connection_id}/signatory" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateSigningSignatoryRequest(
+$request = new Operations\CreateSigningSignatory2Request(
     signingSignatory: new Shared\SigningSignatory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->signatory->createSigningSignatory(
+$response = $sdk->signatory->createSigningSignatory2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->signingSignatory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateSigningSignatoryRequest](../../Models/Operations/CreateSigningSignatoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateSigningSignatory2Request](../../Models/Operations/CreateSigningSignatory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateSigningSignatoryResponse](../../Models/Operations/CreateSigningSignatoryResponse.md)**
+**[?Operations\CreateSigningSignatory2Response](../../Models/Operations/CreateSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->signingSignatory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getSigningSignatory
+## getSigningSignatory2
 
 Retrieve a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getSigningSignatory" method="get" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="getSigningSignatory2" method="get" path="/signing/{connection_id}/signatory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetSigningSignatoryRequest(
+$request = new Operations\GetSigningSignatory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->signatory->getSigningSignatory(
+$response = $sdk->signatory->getSigningSignatory2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->signingSignatory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetSigningSignatoryRequest](../../Models/Operations/GetSigningSignatoryRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetSigningSignatory2Request](../../Models/Operations/GetSigningSignatory2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetSigningSignatoryResponse](../../Models/Operations/GetSigningSignatoryResponse.md)**
+**[?Operations\GetSigningSignatory2Response](../../Models/Operations/GetSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->signingSignatory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listSigningSignatories
+## listSigningSignatories2
 
 List all signatories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listSigningSignatories" method="get" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="php" operationID="listSigningSignatories2" method="get" path="/signing/{connection_id}/signatory" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListSigningSignatoriesRequest(
+$request = new Operations\ListSigningSignatories2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->signatory->listSigningSignatories(
+$response = $sdk->signatory->listSigningSignatories2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->signingSignatories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListSigningSignatoriesRequest](../../Models/Operations/ListSigningSignatoriesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListSigningSignatories2Request](../../Models/Operations/ListSigningSignatories2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListSigningSignatoriesResponse](../../Models/Operations/ListSigningSignatoriesResponse.md)**
+**[?Operations\ListSigningSignatories2Response](../../Models/Operations/ListSigningSignatories2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->signingSignatories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchSigningSignatory
+## patchSigningSignatory2
 
 Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchSigningSignatory2" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchSigningSignatoryRequest(
+$request = new Operations\PatchSigningSignatory2Request(
     signingSignatory: new Shared\SigningSignatory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->signatory->patchSigningSignatory(
+$response = $sdk->signatory->patchSigningSignatory2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->signingSignatory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchSigningSignatoryRequest](../../Models/Operations/PatchSigningSignatoryRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchSigningSignatory2Request](../../Models/Operations/PatchSigningSignatory2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchSigningSignatoryResponse](../../Models/Operations/PatchSigningSignatoryResponse.md)**
+**[?Operations\PatchSigningSignatory2Response](../../Models/Operations/PatchSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->signingSignatory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeSigningSignatory
+## removeSigningSignatory2
 
 Remove a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeSigningSignatory" method="delete" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeSigningSignatory2" method="delete" path="/signing/{connection_id}/signatory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveSigningSignatoryRequest(
+$request = new Operations\RemoveSigningSignatory2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->signatory->removeSigningSignatory(
+$response = $sdk->signatory->removeSigningSignatory2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveSigningSignatoryRequest](../../Models/Operations/RemoveSigningSignatoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveSigningSignatory2Request](../../Models/Operations/RemoveSigningSignatory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveSigningSignatoryResponse](../../Models/Operations/RemoveSigningSignatoryResponse.md)**
+**[?Operations\RemoveSigningSignatory2Response](../../Models/Operations/RemoveSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateSigningSignatory
+## updateSigningSignatory2
 
 Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateSigningSignatory2" method="put" path="/signing/{connection_id}/signatory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateSigningSignatoryRequest(
+$request = new Operations\UpdateSigningSignatory2Request(
     signingSignatory: new Shared\SigningSignatory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->signatory->updateSigningSignatory(
+$response = $sdk->signatory->updateSigningSignatory2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->signingSignatory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateSigningSignatoryRequest](../../Models/Operations/UpdateSigningSignatoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateSigningSignatory2Request](../../Models/Operations/UpdateSigningSignatory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateSigningSignatoryResponse](../../Models/Operations/UpdateSigningSignatoryResponse.md)**
+**[?Operations\UpdateSigningSignatory2Response](../../Models/Operations/UpdateSigningSignatory2Response.md)**
 
 ### Errors
 

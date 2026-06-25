@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCrmLead](#createcrmlead) - Create a lead
-* [getCrmLead](#getcrmlead) - Retrieve a lead
-* [listCrmLeads](#listcrmleads) - List all leads
-* [patchCrmLead](#patchcrmlead) - Update a lead
-* [removeCrmLead](#removecrmlead) - Remove a lead
-* [updateCrmLead](#updatecrmlead) - Update a lead
+* [createCrmLead2](#createcrmlead2) - Create a lead
+* [getCrmLead2](#getcrmlead2) - Retrieve a lead
+* [listCrmLeads2](#listcrmleads2) - List all leads
+* [patchCrmLead2](#patchcrmlead2) - Update a lead
+* [removeCrmLead2](#removecrmlead2) - Remove a lead
+* [updateCrmLead2](#updatecrmlead2) - Update a lead
 
-## createCrmLead
+## createCrmLead2
 
 Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="php" operationID="createCrmLead2" method="post" path="/crm/{connection_id}/lead" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCrmLeadRequest(
+$request = new Operations\CreateCrmLead2Request(
     crmLead: new Shared\CrmLead(),
     connectionId: '<id>',
 );
 
-$response = $sdk->lead->createCrmLead(
+$response = $sdk->lead->createCrmLead2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->crmLead !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\CreateCrmLeadRequest](../../Models/Operations/CreateCrmLeadRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateCrmLead2Request](../../Models/Operations/CreateCrmLead2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\CreateCrmLeadResponse](../../Models/Operations/CreateCrmLeadResponse.md)**
+**[?Operations\CreateCrmLead2Response](../../Models/Operations/CreateCrmLead2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->crmLead !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCrmLead
+## getCrmLead2
 
 Retrieve a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCrmLead2" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCrmLeadRequest(
+$request = new Operations\GetCrmLead2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->lead->getCrmLead(
+$response = $sdk->lead->getCrmLead2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->crmLead !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\GetCrmLeadRequest](../../Models/Operations/GetCrmLeadRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetCrmLead2Request](../../Models/Operations/GetCrmLead2Request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\GetCrmLeadResponse](../../Models/Operations/GetCrmLeadResponse.md)**
+**[?Operations\GetCrmLead2Response](../../Models/Operations/GetCrmLead2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->crmLead !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCrmLeads
+## listCrmLeads2
 
 List all leads
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="php" operationID="listCrmLeads2" method="get" path="/crm/{connection_id}/lead" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCrmLeadsRequest(
+$request = new Operations\ListCrmLeads2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->lead->listCrmLeads(
+$response = $sdk->lead->listCrmLeads2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->crmLeads !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\ListCrmLeadsRequest](../../Models/Operations/ListCrmLeadsRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListCrmLeads2Request](../../Models/Operations/ListCrmLeads2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\ListCrmLeadsResponse](../../Models/Operations/ListCrmLeadsResponse.md)**
+**[?Operations\ListCrmLeads2Response](../../Models/Operations/ListCrmLeads2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->crmLeads !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCrmLead
+## patchCrmLead2
 
 Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmLead2" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCrmLeadRequest(
+$request = new Operations\PatchCrmLead2Request(
     crmLead: new Shared\CrmLead(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->lead->patchCrmLead(
+$response = $sdk->lead->patchCrmLead2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->crmLead !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\PatchCrmLeadRequest](../../Models/Operations/PatchCrmLeadRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchCrmLead2Request](../../Models/Operations/PatchCrmLead2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\PatchCrmLeadResponse](../../Models/Operations/PatchCrmLeadResponse.md)**
+**[?Operations\PatchCrmLead2Response](../../Models/Operations/PatchCrmLead2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->crmLead !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCrmLead
+## removeCrmLead2
 
 Remove a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCrmLead2" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCrmLeadRequest(
+$request = new Operations\RemoveCrmLead2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->lead->removeCrmLead(
+$response = $sdk->lead->removeCrmLead2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\RemoveCrmLeadRequest](../../Models/Operations/RemoveCrmLeadRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveCrmLead2Request](../../Models/Operations/RemoveCrmLead2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\RemoveCrmLeadResponse](../../Models/Operations/RemoveCrmLeadResponse.md)**
+**[?Operations\RemoveCrmLead2Response](../../Models/Operations/RemoveCrmLead2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCrmLead
+## updateCrmLead2
 
 Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmLead2" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCrmLeadRequest(
+$request = new Operations\UpdateCrmLead2Request(
     crmLead: new Shared\CrmLead(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->lead->updateCrmLead(
+$response = $sdk->lead->updateCrmLead2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->crmLead !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\UpdateCrmLeadRequest](../../Models/Operations/UpdateCrmLeadRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateCrmLead2Request](../../Models/Operations/UpdateCrmLead2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\UpdateCrmLeadResponse](../../Models/Operations/UpdateCrmLeadResponse.md)**
+**[?Operations\UpdateCrmLead2Response](../../Models/Operations/UpdateCrmLead2Response.md)**
 
 ### Errors
 

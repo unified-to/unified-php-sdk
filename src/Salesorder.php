@@ -47,14 +47,14 @@ class Salesorder
     /**
      * Create a salesorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingSalesorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingSalesorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingSalesorder(Operations\CreateAccountingSalesorderRequest $request, ?Options $options = null): Operations\CreateAccountingSalesorderResponse
+    public function createAccountingSalesorder2(Operations\CreateAccountingSalesorder2Request $request, ?Options $options = null): Operations\CreateAccountingSalesorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder', Operations\CreateAccountingSalesorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder', Operations\CreateAccountingSalesorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingSalesorder', 'json');
@@ -63,11 +63,11 @@ class Salesorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingSalesorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingSalesorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingSalesorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingSalesorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Salesorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingSalesorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingSalesorderResponse(
+                $response = new Operations\CreateAccountingSalesorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Salesorder
     /**
      * Retrieve a salesorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingSalesorder(Operations\GetAccountingSalesorderRequest $request, ?Options $options = null): Operations\GetAccountingSalesorderResponse
+    public function getAccountingSalesorder2(Operations\GetAccountingSalesorder2Request $request, ?Options $options = null): Operations\GetAccountingSalesorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\GetAccountingSalesorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\GetAccountingSalesorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingSalesorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingSalesorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingSalesorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingSalesorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Salesorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingSalesorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingSalesorderResponse(
+                $response = new Operations\GetAccountingSalesorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Salesorder
     /**
      * List all salesorders
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesordersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesordersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesorders2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesorders2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingSalesorders(Operations\ListAccountingSalesordersRequest $request, ?Options $options = null): Operations\ListAccountingSalesordersResponse
+    public function listAccountingSalesorders2(Operations\ListAccountingSalesorders2Request $request, ?Options $options = null): Operations\ListAccountingSalesorders2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder', Operations\ListAccountingSalesordersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder', Operations\ListAccountingSalesorders2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingSalesordersRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingSalesorders2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingSalesorders', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingSalesorders2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Salesorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingSalesorder>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingSalesordersResponse(
+                $response = new Operations\ListAccountingSalesorders2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Salesorder
     /**
      * Update a salesorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingSalesorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingSalesorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingSalesorder(Operations\PatchAccountingSalesorderRequest $request, ?Options $options = null): Operations\PatchAccountingSalesorderResponse
+    public function patchAccountingSalesorder2(Operations\PatchAccountingSalesorder2Request $request, ?Options $options = null): Operations\PatchAccountingSalesorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\PatchAccountingSalesorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\PatchAccountingSalesorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingSalesorder', 'json');
@@ -257,11 +257,11 @@ class Salesorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingSalesorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingSalesorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingSalesorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingSalesorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Salesorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingSalesorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingSalesorderResponse(
+                $response = new Operations\PatchAccountingSalesorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Salesorder
     /**
      * Remove a salesorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingSalesorder(Operations\RemoveAccountingSalesorderRequest $request, ?Options $options = null): Operations\RemoveAccountingSalesorderResponse
+    public function removeAccountingSalesorder2(Operations\RemoveAccountingSalesorder2Request $request, ?Options $options = null): Operations\RemoveAccountingSalesorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\RemoveAccountingSalesorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\RemoveAccountingSalesorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingSalesorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingSalesorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Salesorder
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingSalesorderResponse(
+            return new Operations\RemoveAccountingSalesorder2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Salesorder
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingSalesorderResponse(
+            return new Operations\RemoveAccountingSalesorder2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Salesorder
     /**
      * Update a salesorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorder2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorder2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingSalesorder(Operations\UpdateAccountingSalesorderRequest $request, ?Options $options = null): Operations\UpdateAccountingSalesorderResponse
+    public function updateAccountingSalesorder2(Operations\UpdateAccountingSalesorder2Request $request, ?Options $options = null): Operations\UpdateAccountingSalesorder2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\UpdateAccountingSalesorderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/salesorder/{id}', Operations\UpdateAccountingSalesorder2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingSalesorder', 'json');
@@ -382,11 +382,11 @@ class Salesorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingSalesorderRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingSalesorder2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingSalesorder', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingSalesorder2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Salesorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingSalesorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingSalesorderResponse(
+                $response = new Operations\UpdateAccountingSalesorder2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

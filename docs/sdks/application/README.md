@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAtsApplication](#createatsapplication) - Create an application
-* [getAtsApplication](#getatsapplication) - Retrieve an application
-* [listAtsApplications](#listatsapplications) - List all applications
-* [patchAtsApplication](#patchatsapplication) - Update an application
-* [removeAtsApplication](#removeatsapplication) - Remove an application
-* [updateAtsApplication](#updateatsapplication) - Update an application
+* [createAtsApplication2](#createatsapplication2) - Create an application
+* [getAtsApplication2](#getatsapplication2) - Retrieve an application
+* [listAtsApplications2](#listatsapplications2) - List all applications
+* [patchAtsApplication2](#patchatsapplication2) - Update an application
+* [removeAtsApplication2](#removeatsapplication2) - Remove an application
+* [updateAtsApplication2](#updateatsapplication2) - Update an application
 
-## createAtsApplication
+## createAtsApplication2
 
 Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="createAtsApplication2" method="post" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsApplicationRequest(
+$request = new Operations\CreateAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
 );
 
-$response = $sdk->application->createAtsApplication(
+$response = $sdk->application->createAtsApplication2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateAtsApplicationRequest](../../Models/Operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAtsApplication2Request](../../Models/Operations/CreateAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateAtsApplicationResponse](../../Models/Operations/CreateAtsApplicationResponse.md)**
+**[?Operations\CreateAtsApplication2Response](../../Models/Operations/CreateAtsApplication2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsApplication
+## getAtsApplication2
 
 Retrieve an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAtsApplication2" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsApplicationRequest(
+$request = new Operations\GetAtsApplication2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->application->getAtsApplication(
+$response = $sdk->application->getAtsApplication2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetAtsApplicationRequest](../../Models/Operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAtsApplication2Request](../../Models/Operations/GetAtsApplication2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetAtsApplicationResponse](../../Models/Operations/GetAtsApplicationResponse.md)**
+**[?Operations\GetAtsApplication2Response](../../Models/Operations/GetAtsApplication2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsApplications
+## listAtsApplications2
 
 List all applications
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="listAtsApplications2" method="get" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsApplicationsRequest(
+$request = new Operations\ListAtsApplications2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->application->listAtsApplications(
+$response = $sdk->application->listAtsApplications2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->atsApplications !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListAtsApplicationsRequest](../../Models/Operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAtsApplications2Request](../../Models/Operations/ListAtsApplications2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListAtsApplicationsResponse](../../Models/Operations/ListAtsApplicationsResponse.md)**
+**[?Operations\ListAtsApplications2Response](../../Models/Operations/ListAtsApplications2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->atsApplications !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsApplication
+## patchAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsApplication2" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsApplicationRequest(
+$request = new Operations\PatchAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->application->patchAtsApplication(
+$response = $sdk->application->patchAtsApplication2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchAtsApplicationRequest](../../Models/Operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAtsApplication2Request](../../Models/Operations/PatchAtsApplication2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchAtsApplicationResponse](../../Models/Operations/PatchAtsApplicationResponse.md)**
+**[?Operations\PatchAtsApplication2Response](../../Models/Operations/PatchAtsApplication2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsApplication
+## removeAtsApplication2
 
 Remove an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsApplication2" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsApplicationRequest(
+$request = new Operations\RemoveAtsApplication2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->application->removeAtsApplication(
+$response = $sdk->application->removeAtsApplication2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveAtsApplicationRequest](../../Models/Operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveAtsApplication2Request](../../Models/Operations/RemoveAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveAtsApplicationResponse](../../Models/Operations/RemoveAtsApplicationResponse.md)**
+**[?Operations\RemoveAtsApplication2Response](../../Models/Operations/RemoveAtsApplication2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsApplication
+## updateAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsApplication2" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsApplicationRequest(
+$request = new Operations\UpdateAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->application->updateAtsApplication(
+$response = $sdk->application->updateAtsApplication2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateAtsApplicationRequest](../../Models/Operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateAtsApplication2Request](../../Models/Operations/UpdateAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateAtsApplicationResponse](../../Models/Operations/UpdateAtsApplicationResponse.md)**
+**[?Operations\UpdateAtsApplication2Response](../../Models/Operations/UpdateAtsApplication2Response.md)**
 
 ### Errors
 

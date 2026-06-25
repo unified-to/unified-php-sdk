@@ -4,63 +4,63 @@
 
 ### Available Operations
 
-* [createAtsActivity](#createatsactivity) - Create an activity
-* [createAtsApplication](#createatsapplication) - Create an application
-* [createAtsCandidate](#createatscandidate) - Create a candidate
-* [createAtsCompany](#createatscompany) - Create a company
-* [createAtsDocument](#createatsdocument) - Create a document
-* [createAtsInterview](#createatsinterview) - Create an interview
-* [createAtsJob](#createatsjob) - Create a job
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsActivity](#getatsactivity) - Retrieve an activity
-* [getAtsApplication](#getatsapplication) - Retrieve an application
-* [getAtsCandidate](#getatscandidate) - Retrieve a candidate
-* [getAtsCompany](#getatscompany) - Retrieve a company
-* [getAtsDocument](#getatsdocument) - Retrieve a document
-* [getAtsInterview](#getatsinterview) - Retrieve an interview
-* [getAtsJob](#getatsjob) - Retrieve a job
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsActivities](#listatsactivities) - List all activities
-* [listAtsApplications](#listatsapplications) - List all applications
-* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
-* [listAtsCandidates](#listatscandidates) - List all candidates
-* [listAtsCompanies](#listatscompanies) - List all companies
-* [listAtsDocuments](#listatsdocuments) - List all documents
-* [listAtsInterviews](#listatsinterviews) - List all interviews
-* [listAtsJobs](#listatsjobs) - List all jobs
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsActivity](#patchatsactivity) - Update an activity
-* [patchAtsApplication](#patchatsapplication) - Update an application
-* [patchAtsCandidate](#patchatscandidate) - Update a candidate
-* [patchAtsCompany](#patchatscompany) - Update a company
-* [patchAtsDocument](#patchatsdocument) - Update a document
-* [patchAtsInterview](#patchatsinterview) - Update an interview
-* [patchAtsJob](#patchatsjob) - Update a job
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsActivity](#removeatsactivity) - Remove an activity
-* [removeAtsApplication](#removeatsapplication) - Remove an application
-* [removeAtsCandidate](#removeatscandidate) - Remove a candidate
-* [removeAtsCompany](#removeatscompany) - Remove a company
-* [removeAtsDocument](#removeatsdocument) - Remove a document
-* [removeAtsInterview](#removeatsinterview) - Remove an interview
-* [removeAtsJob](#removeatsjob) - Remove a job
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsActivity](#updateatsactivity) - Update an activity
-* [updateAtsApplication](#updateatsapplication) - Update an application
-* [updateAtsCandidate](#updateatscandidate) - Update a candidate
-* [updateAtsCompany](#updateatscompany) - Update a company
-* [updateAtsDocument](#updateatsdocument) - Update a document
-* [updateAtsInterview](#updateatsinterview) - Update an interview
-* [updateAtsJob](#updateatsjob) - Update a job
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsActivity2](#createatsactivity2) - Create an activity
+* [createAtsApplication2](#createatsapplication2) - Create an application
+* [createAtsCandidate2](#createatscandidate2) - Create a candidate
+* [createAtsCompany2](#createatscompany2) - Create a company
+* [createAtsDocument2](#createatsdocument2) - Create a document
+* [createAtsInterview2](#createatsinterview2) - Create an interview
+* [createAtsJob2](#createatsjob2) - Create a job
+* [createAtsScorecard2](#createatsscorecard2) - Create a scorecard
+* [getAtsActivity2](#getatsactivity2) - Retrieve an activity
+* [getAtsApplication2](#getatsapplication2) - Retrieve an application
+* [getAtsCandidate2](#getatscandidate2) - Retrieve a candidate
+* [getAtsCompany2](#getatscompany2) - Retrieve a company
+* [getAtsDocument2](#getatsdocument2) - Retrieve a document
+* [getAtsInterview2](#getatsinterview2) - Retrieve an interview
+* [getAtsJob2](#getatsjob2) - Retrieve a job
+* [getAtsScorecard2](#getatsscorecard2) - Retrieve a scorecard
+* [listAtsActivities2](#listatsactivities2) - List all activities
+* [listAtsApplications2](#listatsapplications2) - List all applications
+* [listAtsApplicationstatuses2](#listatsapplicationstatuses2) - List all applicationstatuses
+* [listAtsCandidates2](#listatscandidates2) - List all candidates
+* [listAtsCompanies2](#listatscompanies2) - List all companies
+* [listAtsDocuments2](#listatsdocuments2) - List all documents
+* [listAtsInterviews2](#listatsinterviews2) - List all interviews
+* [listAtsJobs2](#listatsjobs2) - List all jobs
+* [listAtsScorecards2](#listatsscorecards2) - List all scorecards
+* [patchAtsActivity2](#patchatsactivity2) - Update an activity
+* [patchAtsApplication2](#patchatsapplication2) - Update an application
+* [patchAtsCandidate2](#patchatscandidate2) - Update a candidate
+* [patchAtsCompany2](#patchatscompany2) - Update a company
+* [patchAtsDocument2](#patchatsdocument2) - Update a document
+* [patchAtsInterview2](#patchatsinterview2) - Update an interview
+* [patchAtsJob2](#patchatsjob2) - Update a job
+* [patchAtsScorecard2](#patchatsscorecard2) - Update a scorecard
+* [removeAtsActivity2](#removeatsactivity2) - Remove an activity
+* [removeAtsApplication2](#removeatsapplication2) - Remove an application
+* [removeAtsCandidate2](#removeatscandidate2) - Remove a candidate
+* [removeAtsCompany2](#removeatscompany2) - Remove a company
+* [removeAtsDocument2](#removeatsdocument2) - Remove a document
+* [removeAtsInterview2](#removeatsinterview2) - Remove an interview
+* [removeAtsJob2](#removeatsjob2) - Remove a job
+* [removeAtsScorecard2](#removeatsscorecard2) - Remove a scorecard
+* [updateAtsActivity2](#updateatsactivity2) - Update an activity
+* [updateAtsApplication2](#updateatsapplication2) - Update an application
+* [updateAtsCandidate2](#updateatscandidate2) - Update a candidate
+* [updateAtsCompany2](#updateatscompany2) - Update a company
+* [updateAtsDocument2](#updateatsdocument2) - Update a document
+* [updateAtsInterview2](#updateatsinterview2) - Update an interview
+* [updateAtsJob2](#updateatsjob2) - Update a job
+* [updateAtsScorecard2](#updateatsscorecard2) - Update a scorecard
 
-## createAtsActivity
+## createAtsActivity2
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createAtsActivity2" method="post" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -76,12 +76,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsActivityRequest(
+$request = new Operations\CreateAtsActivity2Request(
     atsActivity: new Shared\AtsActivity(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsActivity(
+$response = $sdk->ats->createAtsActivity2(
     request: $request
 );
 
@@ -92,13 +92,13 @@ if ($response->atsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateAtsActivityRequest](../../Models/Operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateAtsActivity2Request](../../Models/Operations/CreateAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateAtsActivityResponse](../../Models/Operations/CreateAtsActivityResponse.md)**
+**[?Operations\CreateAtsActivity2Response](../../Models/Operations/CreateAtsActivity2Response.md)**
 
 ### Errors
 
@@ -106,13 +106,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsApplication
+## createAtsApplication2
 
 Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="createAtsApplication2" method="post" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -128,12 +128,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsApplicationRequest(
+$request = new Operations\CreateAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsApplication(
+$response = $sdk->ats->createAtsApplication2(
     request: $request
 );
 
@@ -144,13 +144,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateAtsApplicationRequest](../../Models/Operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAtsApplication2Request](../../Models/Operations/CreateAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateAtsApplicationResponse](../../Models/Operations/CreateAtsApplicationResponse.md)**
+**[?Operations\CreateAtsApplication2Response](../../Models/Operations/CreateAtsApplication2Response.md)**
 
 ### Errors
 
@@ -158,13 +158,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsCandidate
+## createAtsCandidate2
 
 Create a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="php" operationID="createAtsCandidate2" method="post" path="/ats/{connection_id}/candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -180,12 +180,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsCandidateRequest(
+$request = new Operations\CreateAtsCandidate2Request(
     atsCandidate: new Shared\AtsCandidate(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsCandidate(
+$response = $sdk->ats->createAtsCandidate2(
     request: $request
 );
 
@@ -196,13 +196,13 @@ if ($response->atsCandidate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsCandidateRequest](../../Models/Operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateAtsCandidate2Request](../../Models/Operations/CreateAtsCandidate2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateAtsCandidateResponse](../../Models/Operations/CreateAtsCandidateResponse.md)**
+**[?Operations\CreateAtsCandidate2Response](../../Models/Operations/CreateAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -210,13 +210,13 @@ if ($response->atsCandidate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsCompany
+## createAtsCompany2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="createAtsCompany2" method="post" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -232,12 +232,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsCompanyRequest(
+$request = new Operations\CreateAtsCompany2Request(
     atsCompany: new Shared\AtsCompany(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsCompany(
+$response = $sdk->ats->createAtsCompany2(
     request: $request
 );
 
@@ -248,13 +248,13 @@ if ($response->atsCompany !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateAtsCompanyRequest](../../Models/Operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateAtsCompany2Request](../../Models/Operations/CreateAtsCompany2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateAtsCompanyResponse](../../Models/Operations/CreateAtsCompanyResponse.md)**
+**[?Operations\CreateAtsCompany2Response](../../Models/Operations/CreateAtsCompany2Response.md)**
 
 ### Errors
 
@@ -262,13 +262,13 @@ if ($response->atsCompany !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsDocument
+## createAtsDocument2
 
 Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createAtsDocument2" method="post" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -284,12 +284,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsDocumentRequest(
+$request = new Operations\CreateAtsDocument2Request(
     atsDocument: new Shared\AtsDocument(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsDocument(
+$response = $sdk->ats->createAtsDocument2(
     request: $request
 );
 
@@ -300,13 +300,13 @@ if ($response->atsDocument !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateAtsDocumentRequest](../../Models/Operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateAtsDocument2Request](../../Models/Operations/CreateAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateAtsDocumentResponse](../../Models/Operations/CreateAtsDocumentResponse.md)**
+**[?Operations\CreateAtsDocument2Response](../../Models/Operations/CreateAtsDocument2Response.md)**
 
 ### Errors
 
@@ -314,13 +314,13 @@ if ($response->atsDocument !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsInterview
+## createAtsInterview2
 
 Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="createAtsInterview2" method="post" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -336,12 +336,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsInterviewRequest(
+$request = new Operations\CreateAtsInterview2Request(
     atsInterview: new Shared\AtsInterview(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsInterview(
+$response = $sdk->ats->createAtsInterview2(
     request: $request
 );
 
@@ -352,13 +352,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsInterviewRequest](../../Models/Operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateAtsInterview2Request](../../Models/Operations/CreateAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateAtsInterviewResponse](../../Models/Operations/CreateAtsInterviewResponse.md)**
+**[?Operations\CreateAtsInterview2Response](../../Models/Operations/CreateAtsInterview2Response.md)**
 
 ### Errors
 
@@ -366,13 +366,13 @@ if ($response->atsInterview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAtsJob
+## createAtsJob2
 
 Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="php" operationID="createAtsJob2" method="post" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -388,272 +388,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsJobRequest(
+$request = new Operations\CreateAtsJob2Request(
     atsJob: new Shared\AtsJob(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->createAtsJob(
+$response = $sdk->ats->createAtsJob2(
     request: $request
 );
 
 if ($response->atsJob !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\CreateAtsJobRequest](../../Models/Operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-### Response
-
-**[?Operations\CreateAtsJobResponse](../../Models/Operations/CreateAtsJobResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createAtsScorecard
-
-Create a scorecard
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ats->createAtsScorecard(
-    request: $request
-);
-
-if ($response->atsScorecard !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsScorecardRequest](../../Models/Operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\CreateAtsScorecardResponse](../../Models/Operations/CreateAtsScorecardResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsActivity
-
-Retrieve an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsActivityRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsActivity(
-    request: $request
-);
-
-if ($response->atsActivity !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAtsActivityRequest](../../Models/Operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetAtsActivityResponse](../../Models/Operations/GetAtsActivityResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsApplication
-
-Retrieve an application
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsApplicationRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsApplication(
-    request: $request
-);
-
-if ($response->atsApplication !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetAtsApplicationRequest](../../Models/Operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\GetAtsApplicationResponse](../../Models/Operations/GetAtsApplicationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsCandidate
-
-Retrieve a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsCandidateRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsCandidate(
-    request: $request
-);
-
-if ($response->atsCandidate !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsCandidateRequest](../../Models/Operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\GetAtsCandidateResponse](../../Models/Operations/GetAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsCompany
-
-Retrieve a company
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsCompanyRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsCompany(
-    request: $request
-);
-
-if ($response->atsCompany !== null) {
     // handle response
 }
 ```
@@ -662,11 +406,11 @@ if ($response->atsCompany !== null) {
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetAtsCompanyRequest](../../Models/Operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `$request`                                                                         | [Operations\CreateAtsJob2Request](../../Models/Operations/CreateAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetAtsCompanyResponse](../../Models/Operations/GetAtsCompanyResponse.md)**
+**[?Operations\CreateAtsJob2Response](../../Models/Operations/CreateAtsJob2Response.md)**
 
 ### Errors
 
@@ -674,13 +418,13 @@ if ($response->atsCompany !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsDocument
+## createAtsScorecard2
 
-Retrieve a document
+Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="createAtsScorecard2" method="post" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -688,6 +432,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -695,165 +440,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsDocumentRequest(
+$request = new Operations\CreateAtsScorecard2Request(
+    atsScorecard: new Shared\AtsScorecard(),
     connectionId: '<id>',
-    id: '<id>',
 );
 
-$response = $sdk->ats->getAtsDocument(
-    request: $request
-);
-
-if ($response->atsDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAtsDocumentRequest](../../Models/Operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetAtsDocumentResponse](../../Models/Operations/GetAtsDocumentResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsInterview
-
-Retrieve an interview
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsInterviewRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsInterview(
-    request: $request
-);
-
-if ($response->atsInterview !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsInterviewRequest](../../Models/Operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\GetAtsInterviewResponse](../../Models/Operations/GetAtsInterviewResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsJob
-
-Retrieve a job
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsJobRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsJob(
-    request: $request
-);
-
-if ($response->atsJob !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `$request`                                                                 | [Operations\GetAtsJobRequest](../../Models/Operations/GetAtsJobRequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-
-### Response
-
-**[?Operations\GetAtsJobResponse](../../Models/Operations/GetAtsJobResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsScorecard
-
-Retrieve a scorecard
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsScorecardRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->getAtsScorecard(
+$response = $sdk->ats->createAtsScorecard2(
     request: $request
 );
 
@@ -864,13 +456,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsScorecardRequest](../../Models/Operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateAtsScorecard2Request](../../Models/Operations/CreateAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetAtsScorecardResponse](../../Models/Operations/GetAtsScorecardResponse.md)**
+**[?Operations\CreateAtsScorecard2Response](../../Models/Operations/CreateAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -878,13 +470,13 @@ if ($response->atsScorecard !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsActivities
+## getAtsActivity2
 
-List all activities
+Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="getAtsActivity2" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -899,11 +491,419 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsActivitiesRequest(
+$request = new Operations\GetAtsActivity2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsActivity2(
+    request: $request
+);
+
+if ($response->atsActivity !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAtsActivity2Request](../../Models/Operations/GetAtsActivity2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAtsActivity2Response](../../Models/Operations/GetAtsActivity2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsApplication2
+
+Retrieve an application
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsApplication2" method="get" path="/ats/{connection_id}/application/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsApplication2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsApplication2(
+    request: $request
+);
+
+if ($response->atsApplication !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAtsApplication2Request](../../Models/Operations/GetAtsApplication2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetAtsApplication2Response](../../Models/Operations/GetAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsCandidate2
+
+Retrieve a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsCandidate2" method="get" path="/ats/{connection_id}/candidate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsCandidate2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsCandidate2(
+    request: $request
+);
+
+if ($response->atsCandidate !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetAtsCandidate2Request](../../Models/Operations/GetAtsCandidate2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetAtsCandidate2Response](../../Models/Operations/GetAtsCandidate2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsCompany2
+
+Retrieve a company
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsCompany2" method="get" path="/ats/{connection_id}/company/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsCompany2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsCompany2(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetAtsCompany2Request](../../Models/Operations/GetAtsCompany2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetAtsCompany2Response](../../Models/Operations/GetAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsDocument2
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsDocument2" method="get" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsDocument2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsDocument2(
+    request: $request
+);
+
+if ($response->atsDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAtsDocument2Request](../../Models/Operations/GetAtsDocument2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAtsDocument2Response](../../Models/Operations/GetAtsDocument2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsInterview2
+
+Retrieve an interview
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsInterview2" method="get" path="/ats/{connection_id}/interview/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsInterview2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsInterview2(
+    request: $request
+);
+
+if ($response->atsInterview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetAtsInterview2Request](../../Models/Operations/GetAtsInterview2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetAtsInterview2Response](../../Models/Operations/GetAtsInterview2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsJob2
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsJob2" method="get" path="/ats/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsJob2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsJob2(
+    request: $request
+);
+
+if ($response->atsJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `$request`                                                                   | [Operations\GetAtsJob2Request](../../Models/Operations/GetAtsJob2Request.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+### Response
+
+**[?Operations\GetAtsJob2Response](../../Models/Operations/GetAtsJob2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsScorecard2
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsScorecard2" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsScorecard2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->getAtsScorecard2(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetAtsScorecard2Request](../../Models/Operations/GetAtsScorecard2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetAtsScorecard2Response](../../Models/Operations/GetAtsScorecard2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAtsActivities2
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAtsActivities2" method="get" path="/ats/{connection_id}/activity" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAtsActivities2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsActivities(
+$response = $sdk->ats->listAtsActivities2(
     request: $request
 );
 
@@ -914,13 +914,13 @@ if ($response->atsActivities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsActivitiesRequest](../../Models/Operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsActivities2Request](../../Models/Operations/ListAtsActivities2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
+**[?Operations\ListAtsActivities2Response](../../Models/Operations/ListAtsActivities2Response.md)**
 
 ### Errors
 
@@ -928,13 +928,13 @@ if ($response->atsActivities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsApplications
+## listAtsApplications2
 
 List all applications
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="listAtsApplications2" method="get" path="/ats/{connection_id}/application" -->
 ```php
 declare(strict_types=1);
 
@@ -949,11 +949,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsApplicationsRequest(
+$request = new Operations\ListAtsApplications2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsApplications(
+$response = $sdk->ats->listAtsApplications2(
     request: $request
 );
 
@@ -964,13 +964,13 @@ if ($response->atsApplications !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListAtsApplicationsRequest](../../Models/Operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAtsApplications2Request](../../Models/Operations/ListAtsApplications2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListAtsApplicationsResponse](../../Models/Operations/ListAtsApplicationsResponse.md)**
+**[?Operations\ListAtsApplications2Response](../../Models/Operations/ListAtsApplications2Response.md)**
 
 ### Errors
 
@@ -978,13 +978,13 @@ if ($response->atsApplications !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsApplicationstatuses
+## listAtsApplicationstatuses2
 
 List all applicationstatuses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
+<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses2" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```php
 declare(strict_types=1);
 
@@ -999,11 +999,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsApplicationstatusesRequest(
+$request = new Operations\ListAtsApplicationstatuses2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsApplicationstatuses(
+$response = $sdk->ats->listAtsApplicationstatuses2(
     request: $request
 );
 
@@ -1014,13 +1014,13 @@ if ($response->atsStatuses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListAtsApplicationstatusesRequest](../../Models/Operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAtsApplicationstatuses2Request](../../Models/Operations/ListAtsApplicationstatuses2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAtsApplicationstatusesResponse](../../Models/Operations/ListAtsApplicationstatusesResponse.md)**
+**[?Operations\ListAtsApplicationstatuses2Response](../../Models/Operations/ListAtsApplicationstatuses2Response.md)**
 
 ### Errors
 
@@ -1028,13 +1028,13 @@ if ($response->atsStatuses !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsCandidates
+## listAtsCandidates2
 
 List all candidates
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="php" operationID="listAtsCandidates2" method="get" path="/ats/{connection_id}/candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -1049,11 +1049,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsCandidatesRequest(
+$request = new Operations\ListAtsCandidates2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsCandidates(
+$response = $sdk->ats->listAtsCandidates2(
     request: $request
 );
 
@@ -1064,13 +1064,13 @@ if ($response->atsCandidates !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsCandidatesRequest](../../Models/Operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsCandidates2Request](../../Models/Operations/ListAtsCandidates2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsCandidatesResponse](../../Models/Operations/ListAtsCandidatesResponse.md)**
+**[?Operations\ListAtsCandidates2Response](../../Models/Operations/ListAtsCandidates2Response.md)**
 
 ### Errors
 
@@ -1078,13 +1078,13 @@ if ($response->atsCandidates !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsCompanies
+## listAtsCompanies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="listAtsCompanies2" method="get" path="/ats/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -1099,11 +1099,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsCompaniesRequest(
+$request = new Operations\ListAtsCompanies2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsCompanies(
+$response = $sdk->ats->listAtsCompanies2(
     request: $request
 );
 
@@ -1114,13 +1114,13 @@ if ($response->atsCompanies !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAtsCompaniesRequest](../../Models/Operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAtsCompanies2Request](../../Models/Operations/ListAtsCompanies2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAtsCompaniesResponse](../../Models/Operations/ListAtsCompaniesResponse.md)**
+**[?Operations\ListAtsCompanies2Response](../../Models/Operations/ListAtsCompanies2Response.md)**
 
 ### Errors
 
@@ -1128,13 +1128,13 @@ if ($response->atsCompanies !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsDocuments
+## listAtsDocuments2
 
 List all documents
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="listAtsDocuments2" method="get" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -1149,11 +1149,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsDocumentsRequest(
+$request = new Operations\ListAtsDocuments2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsDocuments(
+$response = $sdk->ats->listAtsDocuments2(
     request: $request
 );
 
@@ -1164,13 +1164,13 @@ if ($response->atsDocuments !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAtsDocumentsRequest](../../Models/Operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAtsDocuments2Request](../../Models/Operations/ListAtsDocuments2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAtsDocumentsResponse](../../Models/Operations/ListAtsDocumentsResponse.md)**
+**[?Operations\ListAtsDocuments2Response](../../Models/Operations/ListAtsDocuments2Response.md)**
 
 ### Errors
 
@@ -1178,13 +1178,13 @@ if ($response->atsDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsInterviews
+## listAtsInterviews2
 
 List all interviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="listAtsInterviews2" method="get" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -1199,11 +1199,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsInterviewsRequest(
+$request = new Operations\ListAtsInterviews2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsInterviews(
+$response = $sdk->ats->listAtsInterviews2(
     request: $request
 );
 
@@ -1214,13 +1214,13 @@ if ($response->atsInterviews !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsInterviewsRequest](../../Models/Operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsInterviews2Request](../../Models/Operations/ListAtsInterviews2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsInterviewsResponse](../../Models/Operations/ListAtsInterviewsResponse.md)**
+**[?Operations\ListAtsInterviews2Response](../../Models/Operations/ListAtsInterviews2Response.md)**
 
 ### Errors
 
@@ -1228,13 +1228,13 @@ if ($response->atsInterviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsJobs
+## listAtsJobs2
 
 List all jobs
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="php" operationID="listAtsJobs2" method="get" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -1249,11 +1249,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsJobsRequest(
+$request = new Operations\ListAtsJobs2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsJobs(
+$response = $sdk->ats->listAtsJobs2(
     request: $request
 );
 
@@ -1264,13 +1264,13 @@ if ($response->atsJobs !== null) {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\ListAtsJobsRequest](../../Models/Operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\ListAtsJobs2Request](../../Models/Operations/ListAtsJobs2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\ListAtsJobsResponse](../../Models/Operations/ListAtsJobsResponse.md)**
+**[?Operations\ListAtsJobs2Response](../../Models/Operations/ListAtsJobs2Response.md)**
 
 ### Errors
 
@@ -1278,13 +1278,13 @@ if ($response->atsJobs !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsScorecards
+## listAtsScorecards2
 
 List all scorecards
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="php" operationID="listAtsScorecards2" method="get" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -1299,11 +1299,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsScorecardsRequest(
+$request = new Operations\ListAtsScorecards2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ats->listAtsScorecards(
+$response = $sdk->ats->listAtsScorecards2(
     request: $request
 );
 
@@ -1314,13 +1314,13 @@ if ($response->atsScorecards !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsScorecardsRequest](../../Models/Operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsScorecards2Request](../../Models/Operations/ListAtsScorecards2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsScorecardsResponse](../../Models/Operations/ListAtsScorecardsResponse.md)**
+**[?Operations\ListAtsScorecards2Response](../../Models/Operations/ListAtsScorecards2Response.md)**
 
 ### Errors
 
@@ -1328,13 +1328,13 @@ if ($response->atsScorecards !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsActivity
+## patchAtsActivity2
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsActivity2" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1350,13 +1350,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsActivityRequest(
+$request = new Operations\PatchAtsActivity2Request(
     atsActivity: new Shared\AtsActivity(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->patchAtsActivity(
+$response = $sdk->ats->patchAtsActivity2(
     request: $request
 );
 
@@ -1367,13 +1367,13 @@ if ($response->atsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchAtsActivityRequest](../../Models/Operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchAtsActivity2Request](../../Models/Operations/PatchAtsActivity2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchAtsActivityResponse](../../Models/Operations/PatchAtsActivityResponse.md)**
+**[?Operations\PatchAtsActivity2Response](../../Models/Operations/PatchAtsActivity2Response.md)**
 
 ### Errors
 
@@ -1381,13 +1381,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsApplication
+## patchAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsApplication2" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1403,17 +1403,488 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsApplicationRequest(
+$request = new Operations\PatchAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->patchAtsApplication(
+$response = $sdk->ats->patchAtsApplication2(
     request: $request
 );
 
 if ($response->atsApplication !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAtsApplication2Request](../../Models/Operations/PatchAtsApplication2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchAtsApplication2Response](../../Models/Operations/PatchAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsCandidate2
+
+Update a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsCandidate2" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsCandidate2Request(
+    atsCandidate: new Shared\AtsCandidate(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsCandidate2(
+    request: $request
+);
+
+if ($response->atsCandidate !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchAtsCandidate2Request](../../Models/Operations/PatchAtsCandidate2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchAtsCandidate2Response](../../Models/Operations/PatchAtsCandidate2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsCompany2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsCompany2" method="patch" path="/ats/{connection_id}/company/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsCompany2Request(
+    atsCompany: new Shared\AtsCompany(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsCompany2(
+    request: $request
+);
+
+if ($response->atsCompany !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchAtsCompany2Request](../../Models/Operations/PatchAtsCompany2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchAtsCompany2Response](../../Models/Operations/PatchAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsDocument2
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsDocument2" method="patch" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsDocument2Request(
+    atsDocument: new Shared\AtsDocument(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsDocument2(
+    request: $request
+);
+
+if ($response->atsDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchAtsDocument2Request](../../Models/Operations/PatchAtsDocument2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\PatchAtsDocument2Response](../../Models/Operations/PatchAtsDocument2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsInterview2
+
+Update an interview
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsInterview2" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsInterview2Request(
+    atsInterview: new Shared\AtsInterview(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsInterview2(
+    request: $request
+);
+
+if ($response->atsInterview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchAtsInterview2Request](../../Models/Operations/PatchAtsInterview2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchAtsInterview2Response](../../Models/Operations/PatchAtsInterview2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsJob2
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsJob2" method="patch" path="/ats/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsJob2Request(
+    atsJob: new Shared\AtsJob(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsJob2(
+    request: $request
+);
+
+if ($response->atsJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\PatchAtsJob2Request](../../Models/Operations/PatchAtsJob2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\PatchAtsJob2Response](../../Models/Operations/PatchAtsJob2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAtsScorecard2
+
+Update a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAtsScorecard2" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAtsScorecard2Request(
+    atsScorecard: new Shared\AtsScorecard(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->patchAtsScorecard2(
+    request: $request
+);
+
+if ($response->atsScorecard !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchAtsScorecard2Request](../../Models/Operations/PatchAtsScorecard2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchAtsScorecard2Response](../../Models/Operations/PatchAtsScorecard2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsActivity2
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsActivity2" method="delete" path="/ats/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsActivity2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->removeAtsActivity2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAtsActivity2Request](../../Models/Operations/RemoveAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveAtsActivity2Response](../../Models/Operations/RemoveAtsActivity2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsApplication2
+
+Remove an application
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsApplication2" method="delete" path="/ats/{connection_id}/application/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsApplication2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->removeAtsApplication2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveAtsApplication2Request](../../Models/Operations/RemoveAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveAtsApplication2Response](../../Models/Operations/RemoveAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsCandidate2
+
+Remove a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsCandidate2" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsCandidate2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->removeAtsCandidate2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
     // handle response
 }
 ```
@@ -1422,11 +1893,11 @@ if ($response->atsApplication !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchAtsApplicationRequest](../../Models/Operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\RemoveAtsCandidate2Request](../../Models/Operations/RemoveAtsCandidate2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchAtsApplicationResponse](../../Models/Operations/PatchAtsApplicationResponse.md)**
+**[?Operations\RemoveAtsCandidate2Response](../../Models/Operations/RemoveAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -1434,484 +1905,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsCandidate
-
-Update a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsCandidateRequest(
-    atsCandidate: new Shared\AtsCandidate(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsCandidate(
-    request: $request
-);
-
-if ($response->atsCandidate !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsCandidateRequest](../../Models/Operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\PatchAtsCandidateResponse](../../Models/Operations/PatchAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAtsCompany
-
-Update a company
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsCompany(
-    request: $request
-);
-
-if ($response->atsCompany !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchAtsCompanyRequest](../../Models/Operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\PatchAtsCompanyResponse](../../Models/Operations/PatchAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAtsDocument
-
-Update a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsDocument(
-    request: $request
-);
-
-if ($response->atsDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchAtsDocumentRequest](../../Models/Operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\PatchAtsDocumentResponse](../../Models/Operations/PatchAtsDocumentResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAtsInterview
-
-Update an interview
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsInterview(
-    request: $request
-);
-
-if ($response->atsInterview !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsInterviewRequest](../../Models/Operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\PatchAtsInterviewResponse](../../Models/Operations/PatchAtsInterviewResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAtsJob
-
-Update a job
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsJobRequest(
-    atsJob: new Shared\AtsJob(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsJob(
-    request: $request
-);
-
-if ($response->atsJob !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\PatchAtsJobRequest](../../Models/Operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-
-### Response
-
-**[?Operations\PatchAtsJobResponse](../../Models/Operations/PatchAtsJobResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAtsScorecard
-
-Update a scorecard
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->patchAtsScorecard(
-    request: $request
-);
-
-if ($response->atsScorecard !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsScorecardRequest](../../Models/Operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\PatchAtsScorecardResponse](../../Models/Operations/PatchAtsScorecardResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsActivity
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsActivityRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->removeAtsActivity(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveAtsActivityRequest](../../Models/Operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveAtsActivityResponse](../../Models/Operations/RemoveAtsActivityResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsApplication
-
-Remove an application
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsApplicationRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->removeAtsApplication(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveAtsApplicationRequest](../../Models/Operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\RemoveAtsApplicationResponse](../../Models/Operations/RemoveAtsApplicationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsCandidate
-
-Remove a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsCandidateRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->removeAtsCandidate(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsCandidateRequest](../../Models/Operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\RemoveAtsCandidateResponse](../../Models/Operations/RemoveAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsCompany
+## removeAtsCompany2
 
 Remove a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsCompany2" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1926,63 +1926,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsCompanyRequest(
+$request = new Operations\RemoveAtsCompany2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->removeAtsCompany(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveAtsCompanyRequest](../../Models/Operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\RemoveAtsCompanyResponse](../../Models/Operations/RemoveAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsDocument
-
-Remove a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsDocumentRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ats->removeAtsDocument(
+$response = $sdk->ats->removeAtsCompany2(
     request: $request
 );
 
@@ -1995,11 +1944,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveAtsDocumentRequest](../../Models/Operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\RemoveAtsCompany2Request](../../Models/Operations/RemoveAtsCompany2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveAtsDocumentResponse](../../Models/Operations/RemoveAtsDocumentResponse.md)**
+**[?Operations\RemoveAtsCompany2Response](../../Models/Operations/RemoveAtsCompany2Response.md)**
 
 ### Errors
 
@@ -2007,13 +1956,64 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsInterview
+## removeAtsDocument2
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsDocument2" method="delete" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsDocument2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ats->removeAtsDocument2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAtsDocument2Request](../../Models/Operations/RemoveAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveAtsDocument2Response](../../Models/Operations/RemoveAtsDocument2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsInterview2
 
 Remove an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsInterview2" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2028,12 +2028,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsInterviewRequest(
+$request = new Operations\RemoveAtsInterview2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->removeAtsInterview(
+$response = $sdk->ats->removeAtsInterview2(
     request: $request
 );
 
@@ -2044,13 +2044,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsInterviewRequest](../../Models/Operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveAtsInterview2Request](../../Models/Operations/RemoveAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveAtsInterviewResponse](../../Models/Operations/RemoveAtsInterviewResponse.md)**
+**[?Operations\RemoveAtsInterview2Response](../../Models/Operations/RemoveAtsInterview2Response.md)**
 
 ### Errors
 
@@ -2058,13 +2058,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsJob
+## removeAtsJob2
 
 Remove a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsJob2" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2079,12 +2079,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsJobRequest(
+$request = new Operations\RemoveAtsJob2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->removeAtsJob(
+$response = $sdk->ats->removeAtsJob2(
     request: $request
 );
 
@@ -2095,13 +2095,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\RemoveAtsJobRequest](../../Models/Operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemoveAtsJob2Request](../../Models/Operations/RemoveAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\RemoveAtsJobResponse](../../Models/Operations/RemoveAtsJobResponse.md)**
+**[?Operations\RemoveAtsJob2Response](../../Models/Operations/RemoveAtsJob2Response.md)**
 
 ### Errors
 
@@ -2109,13 +2109,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsScorecard
+## removeAtsScorecard2
 
 Remove a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsScorecard2" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2130,12 +2130,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsScorecardRequest(
+$request = new Operations\RemoveAtsScorecard2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->removeAtsScorecard(
+$response = $sdk->ats->removeAtsScorecard2(
     request: $request
 );
 
@@ -2146,13 +2146,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsScorecardRequest](../../Models/Operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveAtsScorecard2Request](../../Models/Operations/RemoveAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveAtsScorecardResponse](../../Models/Operations/RemoveAtsScorecardResponse.md)**
+**[?Operations\RemoveAtsScorecard2Response](../../Models/Operations/RemoveAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -2160,13 +2160,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsActivity
+## updateAtsActivity2
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsActivity2" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2182,13 +2182,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsActivityRequest(
+$request = new Operations\UpdateAtsActivity2Request(
     atsActivity: new Shared\AtsActivity(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsActivity(
+$response = $sdk->ats->updateAtsActivity2(
     request: $request
 );
 
@@ -2199,13 +2199,13 @@ if ($response->atsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateAtsActivityRequest](../../Models/Operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAtsActivity2Request](../../Models/Operations/UpdateAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateAtsActivityResponse](../../Models/Operations/UpdateAtsActivityResponse.md)**
+**[?Operations\UpdateAtsActivity2Response](../../Models/Operations/UpdateAtsActivity2Response.md)**
 
 ### Errors
 
@@ -2213,13 +2213,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsApplication
+## updateAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsApplication2" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2235,13 +2235,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsApplicationRequest(
+$request = new Operations\UpdateAtsApplication2Request(
     atsApplication: new Shared\AtsApplication(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsApplication(
+$response = $sdk->ats->updateAtsApplication2(
     request: $request
 );
 
@@ -2252,13 +2252,13 @@ if ($response->atsApplication !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateAtsApplicationRequest](../../Models/Operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateAtsApplication2Request](../../Models/Operations/UpdateAtsApplication2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateAtsApplicationResponse](../../Models/Operations/UpdateAtsApplicationResponse.md)**
+**[?Operations\UpdateAtsApplication2Response](../../Models/Operations/UpdateAtsApplication2Response.md)**
 
 ### Errors
 
@@ -2266,13 +2266,13 @@ if ($response->atsApplication !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsCandidate
+## updateAtsCandidate2
 
 Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsCandidate2" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2288,13 +2288,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsCandidateRequest(
+$request = new Operations\UpdateAtsCandidate2Request(
     atsCandidate: new Shared\AtsCandidate(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsCandidate(
+$response = $sdk->ats->updateAtsCandidate2(
     request: $request
 );
 
@@ -2305,13 +2305,13 @@ if ($response->atsCandidate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsCandidateRequest](../../Models/Operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateAtsCandidate2Request](../../Models/Operations/UpdateAtsCandidate2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateAtsCandidateResponse](../../Models/Operations/UpdateAtsCandidateResponse.md)**
+**[?Operations\UpdateAtsCandidate2Response](../../Models/Operations/UpdateAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -2319,13 +2319,13 @@ if ($response->atsCandidate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsCompany
+## updateAtsCompany2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsCompany2" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2341,13 +2341,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsCompanyRequest(
+$request = new Operations\UpdateAtsCompany2Request(
     atsCompany: new Shared\AtsCompany(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsCompany(
+$response = $sdk->ats->updateAtsCompany2(
     request: $request
 );
 
@@ -2358,13 +2358,13 @@ if ($response->atsCompany !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateAtsCompanyRequest](../../Models/Operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateAtsCompany2Request](../../Models/Operations/UpdateAtsCompany2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateAtsCompanyResponse](../../Models/Operations/UpdateAtsCompanyResponse.md)**
+**[?Operations\UpdateAtsCompany2Response](../../Models/Operations/UpdateAtsCompany2Response.md)**
 
 ### Errors
 
@@ -2372,13 +2372,13 @@ if ($response->atsCompany !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsDocument
+## updateAtsDocument2
 
 Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsDocument2" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2394,13 +2394,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsDocumentRequest(
+$request = new Operations\UpdateAtsDocument2Request(
     atsDocument: new Shared\AtsDocument(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsDocument(
+$response = $sdk->ats->updateAtsDocument2(
     request: $request
 );
 
@@ -2411,13 +2411,13 @@ if ($response->atsDocument !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateAtsDocumentRequest](../../Models/Operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAtsDocument2Request](../../Models/Operations/UpdateAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateAtsDocumentResponse](../../Models/Operations/UpdateAtsDocumentResponse.md)**
+**[?Operations\UpdateAtsDocument2Response](../../Models/Operations/UpdateAtsDocument2Response.md)**
 
 ### Errors
 
@@ -2425,13 +2425,13 @@ if ($response->atsDocument !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsInterview
+## updateAtsInterview2
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsInterview2" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2447,13 +2447,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsInterviewRequest(
+$request = new Operations\UpdateAtsInterview2Request(
     atsInterview: new Shared\AtsInterview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsInterview(
+$response = $sdk->ats->updateAtsInterview2(
     request: $request
 );
 
@@ -2464,13 +2464,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsInterviewRequest](../../Models/Operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateAtsInterview2Request](../../Models/Operations/UpdateAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateAtsInterviewResponse](../../Models/Operations/UpdateAtsInterviewResponse.md)**
+**[?Operations\UpdateAtsInterview2Response](../../Models/Operations/UpdateAtsInterview2Response.md)**
 
 ### Errors
 
@@ -2478,13 +2478,13 @@ if ($response->atsInterview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsJob
+## updateAtsJob2
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsJob2" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2500,13 +2500,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsJobRequest(
+$request = new Operations\UpdateAtsJob2Request(
     atsJob: new Shared\AtsJob(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsJob(
+$response = $sdk->ats->updateAtsJob2(
     request: $request
 );
 
@@ -2517,13 +2517,13 @@ if ($response->atsJob !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\UpdateAtsJobRequest](../../Models/Operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\UpdateAtsJob2Request](../../Models/Operations/UpdateAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\UpdateAtsJobResponse](../../Models/Operations/UpdateAtsJobResponse.md)**
+**[?Operations\UpdateAtsJob2Response](../../Models/Operations/UpdateAtsJob2Response.md)**
 
 ### Errors
 
@@ -2531,13 +2531,13 @@ if ($response->atsJob !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsScorecard
+## updateAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsScorecard2" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2553,13 +2553,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsScorecardRequest(
+$request = new Operations\UpdateAtsScorecard2Request(
     atsScorecard: new Shared\AtsScorecard(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ats->updateAtsScorecard(
+$response = $sdk->ats->updateAtsScorecard2(
     request: $request
 );
 
@@ -2570,13 +2570,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsScorecardRequest](../../Models/Operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateAtsScorecard2Request](../../Models/Operations/UpdateAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateAtsScorecardResponse](../../Models/Operations/UpdateAtsScorecardResponse.md)**
+**[?Operations\UpdateAtsScorecard2Response](../../Models/Operations/UpdateAtsScorecard2Response.md)**
 
 ### Errors
 

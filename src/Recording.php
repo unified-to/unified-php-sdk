@@ -47,14 +47,14 @@ class Recording
     /**
      * Create a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUcRecording(Operations\CreateUcRecordingRequest $request, ?Options $options = null): Operations\CreateUcRecordingResponse
+    public function createUcRecording2(Operations\CreateUcRecording2Request $request, ?Options $options = null): Operations\CreateUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\CreateUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\CreateUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -63,11 +63,11 @@ class Recording
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUcRecordingResponse(
+                $response = new Operations\CreateUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Recording
     /**
      * Retrieve a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCalendarRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCalendarRecording(Operations\GetCalendarRecordingRequest $request, ?Options $options = null): Operations\GetCalendarRecordingResponse
+    public function getCalendarRecording2(Operations\GetCalendarRecording2Request $request, ?Options $options = null): Operations\GetCalendarRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/recording/{id}', Operations\GetCalendarRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/recording/{id}', Operations\GetCalendarRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCalendarRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCalendarRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCalendarRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCalendarRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CalendarRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCalendarRecordingResponse(
+                $response = new Operations\GetCalendarRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Recording
     /**
      * Retrieve a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcRecording(Operations\GetUcRecordingRequest $request, ?Options $options = null): Operations\GetUcRecordingResponse
+    public function getUcRecording2(Operations\GetUcRecording2Request $request, ?Options $options = null): Operations\GetUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\GetUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\GetUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcRecordingResponse(
+                $response = new Operations\GetUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,22 +241,22 @@ class Recording
     /**
      * List all recordings
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordingsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordings2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordings2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCalendarRecordings(Operations\ListCalendarRecordingsRequest $request, ?Options $options = null): Operations\ListCalendarRecordingsResponse
+    public function listCalendarRecordings2(Operations\ListCalendarRecordings2Request $request, ?Options $options = null): Operations\ListCalendarRecordings2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/recording', Operations\ListCalendarRecordingsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/recording', Operations\ListCalendarRecordings2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarRecordingsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarRecordings2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarRecordings', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarRecordings2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -282,7 +282,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CalendarRecording>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCalendarRecordingsResponse(
+                $response = new Operations\ListCalendarRecordings2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -304,22 +304,22 @@ class Recording
     /**
      * List all recordings
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListUcRecordings2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcRecordings2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcRecordings(Operations\ListUcRecordingsRequest $request, ?Options $options = null): Operations\ListUcRecordingsResponse
+    public function listUcRecordings2(Operations\ListUcRecordings2Request $request, ?Options $options = null): Operations\ListUcRecordings2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\ListUcRecordingsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording', Operations\ListUcRecordings2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcRecordingsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcRecordings2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcRecordings', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcRecordings2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -345,7 +345,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcRecording>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcRecordingsResponse(
+                $response = new Operations\ListUcRecordings2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -367,14 +367,14 @@ class Recording
     /**
      * Update a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchUcRecording(Operations\PatchUcRecordingRequest $request, ?Options $options = null): Operations\PatchUcRecordingResponse
+    public function patchUcRecording2(Operations\PatchUcRecording2Request $request, ?Options $options = null): Operations\PatchUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\PatchUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\PatchUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -383,11 +383,11 @@ class Recording
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchUcRecordingResponse(
+                $response = new Operations\PatchUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,20 +435,20 @@ class Recording
     /**
      * Remove a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUcRecording(Operations\RemoveUcRecordingRequest $request, ?Options $options = null): Operations\RemoveUcRecordingResponse
+    public function removeUcRecording2(Operations\RemoveUcRecording2Request $request, ?Options $options = null): Operations\RemoveUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\RemoveUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\RemoveUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -469,7 +469,7 @@ class Recording
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcRecordingResponse(
+            return new Operations\RemoveUcRecording2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -481,7 +481,7 @@ class Recording
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUcRecordingResponse(
+            return new Operations\RemoveUcRecording2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -492,14 +492,14 @@ class Recording
     /**
      * Update a recording
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecording2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateUcRecording2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateUcRecording(Operations\UpdateUcRecordingRequest $request, ?Options $options = null): Operations\UpdateUcRecordingResponse
+    public function updateUcRecording2(Operations\UpdateUcRecording2Request $request, ?Options $options = null): Operations\UpdateUcRecording2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\UpdateUcRecordingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/recording/{id}', Operations\UpdateUcRecording2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ucRecording', 'json');
@@ -508,11 +508,11 @@ class Recording
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcRecordingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateUcRecording2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcRecording', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateUcRecording2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -538,7 +538,7 @@ class Recording
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcRecording', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateUcRecordingResponse(
+                $response = new Operations\UpdateUcRecording2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

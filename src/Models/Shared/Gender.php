@@ -13,4 +13,7 @@ enum Gender: string
 {
     case Male = 'MALE';
     case Female = 'FEMALE';
+    case Intersex = 'INTERSEX';
+    case Trans = 'TRANS';
+    case NonBinary = 'NON_BINARY';
 }

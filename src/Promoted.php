@@ -47,22 +47,22 @@ class Promoted
     /**
      * Retrieve a promoted
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAdsPromotedRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAdsPromotedResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsPromoted2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsPromoted2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAdsPromoted(Operations\GetAdsPromotedRequest $request, ?Options $options = null): Operations\GetAdsPromotedResponse
+    public function getAdsPromoted2(Operations\GetAdsPromoted2Request $request, ?Options $options = null): Operations\GetAdsPromoted2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted/{id}', Operations\GetAdsPromotedRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted/{id}', Operations\GetAdsPromoted2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAdsPromotedRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAdsPromoted2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsPromoted', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsPromoted2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Promoted
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsPromoted', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAdsPromotedResponse(
+                $response = new Operations\GetAdsPromoted2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Promoted
     /**
      * List all promoteds
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAdsPromotedsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAdsPromotedsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsPromoteds2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsPromoteds2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAdsPromoteds(Operations\ListAdsPromotedsRequest $request, ?Options $options = null): Operations\ListAdsPromotedsResponse
+    public function listAdsPromoteds2(Operations\ListAdsPromoteds2Request $request, ?Options $options = null): Operations\ListAdsPromoteds2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted', Operations\ListAdsPromotedsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/promoted', Operations\ListAdsPromoteds2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAdsPromotedsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAdsPromoteds2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsPromoteds', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsPromoteds2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Promoted
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AdsPromoted>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAdsPromotedsResponse(
+                $response = new Operations\ListAdsPromoteds2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

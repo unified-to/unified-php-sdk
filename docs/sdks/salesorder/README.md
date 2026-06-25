@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
-* [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
-* [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
-* [patchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
-* [removeAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
-* [updateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
+* [createAccountingSalesorder2](#createaccountingsalesorder2) - Create a salesorder
+* [getAccountingSalesorder2](#getaccountingsalesorder2) - Retrieve a salesorder
+* [listAccountingSalesorders2](#listaccountingsalesorders2) - List all salesorders
+* [patchAccountingSalesorder2](#patchaccountingsalesorder2) - Update a salesorder
+* [removeAccountingSalesorder2](#removeaccountingsalesorder2) - Remove a salesorder
+* [updateAccountingSalesorder2](#updateaccountingsalesorder2) - Update a salesorder
 
-## createAccountingSalesorder
+## createAccountingSalesorder2
 
 Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder2" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingSalesorderRequest(
+$request = new Operations\CreateAccountingSalesorder2Request(
     accountingSalesorder: new Shared\AccountingSalesorder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->salesorder->createAccountingSalesorder(
+$response = $sdk->salesorder->createAccountingSalesorder2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateAccountingSalesorderRequest](../../Models/Operations/CreateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\CreateAccountingSalesorder2Request](../../Models/Operations/CreateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\CreateAccountingSalesorderResponse](../../Models/Operations/CreateAccountingSalesorderResponse.md)**
+**[?Operations\CreateAccountingSalesorder2Response](../../Models/Operations/CreateAccountingSalesorder2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingSalesorder
+## getAccountingSalesorder2
 
 Retrieve a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingSalesorder2" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingSalesorderRequest(
+$request = new Operations\GetAccountingSalesorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->salesorder->getAccountingSalesorder(
+$response = $sdk->salesorder->getAccountingSalesorder2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetAccountingSalesorderRequest](../../Models/Operations/GetAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\GetAccountingSalesorder2Request](../../Models/Operations/GetAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\GetAccountingSalesorderResponse](../../Models/Operations/GetAccountingSalesorderResponse.md)**
+**[?Operations\GetAccountingSalesorder2Response](../../Models/Operations/GetAccountingSalesorder2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingSalesorders
+## listAccountingSalesorders2
 
 List all salesorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="listAccountingSalesorders2" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingSalesordersRequest(
+$request = new Operations\ListAccountingSalesorders2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->salesorder->listAccountingSalesorders(
+$response = $sdk->salesorder->listAccountingSalesorders2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingSalesorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListAccountingSalesordersRequest](../../Models/Operations/ListAccountingSalesordersRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListAccountingSalesorders2Request](../../Models/Operations/ListAccountingSalesorders2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\ListAccountingSalesordersResponse](../../Models/Operations/ListAccountingSalesordersResponse.md)**
+**[?Operations\ListAccountingSalesorders2Response](../../Models/Operations/ListAccountingSalesorders2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingSalesorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingSalesorder
+## patchAccountingSalesorder2
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder2" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingSalesorderRequest(
+$request = new Operations\PatchAccountingSalesorder2Request(
     accountingSalesorder: new Shared\AccountingSalesorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->salesorder->patchAccountingSalesorder(
+$response = $sdk->salesorder->patchAccountingSalesorder2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchAccountingSalesorderRequest](../../Models/Operations/PatchAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchAccountingSalesorder2Request](../../Models/Operations/PatchAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\PatchAccountingSalesorderResponse](../../Models/Operations/PatchAccountingSalesorderResponse.md)**
+**[?Operations\PatchAccountingSalesorder2Response](../../Models/Operations/PatchAccountingSalesorder2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingSalesorder
+## removeAccountingSalesorder2
 
 Remove a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder2" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingSalesorderRequest(
+$request = new Operations\RemoveAccountingSalesorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->salesorder->removeAccountingSalesorder(
+$response = $sdk->salesorder->removeAccountingSalesorder2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveAccountingSalesorderRequest](../../Models/Operations/RemoveAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\RemoveAccountingSalesorder2Request](../../Models/Operations/RemoveAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\RemoveAccountingSalesorderResponse](../../Models/Operations/RemoveAccountingSalesorderResponse.md)**
+**[?Operations\RemoveAccountingSalesorder2Response](../../Models/Operations/RemoveAccountingSalesorder2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingSalesorder
+## updateAccountingSalesorder2
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder2" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingSalesorderRequest(
+$request = new Operations\UpdateAccountingSalesorder2Request(
     accountingSalesorder: new Shared\AccountingSalesorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->salesorder->updateAccountingSalesorder(
+$response = $sdk->salesorder->updateAccountingSalesorder2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateAccountingSalesorderRequest](../../Models/Operations/UpdateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\UpdateAccountingSalesorder2Request](../../Models/Operations/UpdateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\UpdateAccountingSalesorderResponse](../../Models/Operations/UpdateAccountingSalesorderResponse.md)**
+**[?Operations\UpdateAccountingSalesorder2Response](../../Models/Operations/UpdateAccountingSalesorder2Response.md)**
 
 ### Errors
 

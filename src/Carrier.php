@@ -47,22 +47,22 @@ class Carrier
     /**
      * Retrieve a carrier
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrierRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingCarrierResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrier2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingCarrier2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingCarrier(Operations\GetShippingCarrierRequest $request, ?Options $options = null): Operations\GetShippingCarrierResponse
+    public function getShippingCarrier2(Operations\GetShippingCarrier2Request $request, ?Options $options = null): Operations\GetShippingCarrier2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier/{id}', Operations\GetShippingCarrierRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier/{id}', Operations\GetShippingCarrier2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingCarrierRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingCarrier2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingCarrier', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingCarrier2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Carrier
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingCarrier', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingCarrierResponse(
+                $response = new Operations\GetShippingCarrier2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Carrier
     /**
      * List all carriers
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingCarriersResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriers2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingCarriers2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingCarriers(Operations\ListShippingCarriersRequest $request, ?Options $options = null): Operations\ListShippingCarriersResponse
+    public function listShippingCarriers2(Operations\ListShippingCarriers2Request $request, ?Options $options = null): Operations\ListShippingCarriers2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier', Operations\ListShippingCarriersRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier', Operations\ListShippingCarriers2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingCarriersRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingCarriers2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingCarriers', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingCarriers2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Carrier
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingCarrier>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingCarriersResponse(
+                $response = new Operations\ListShippingCarriers2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

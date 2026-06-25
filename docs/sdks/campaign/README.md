@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [createAdsCampaign](#createadscampaign) - Create a campaign
-* [createMartechCampaign](#createmartechcampaign) - Create a campaign
-* [getAdsCampaign](#getadscampaign) - Retrieve a campaign
-* [getMartechCampaign](#getmartechcampaign) - Retrieve a campaign
-* [listAdsCampaigns](#listadscampaigns) - List all campaigns
-* [listMartechCampaigns](#listmartechcampaigns) - List all campaigns
-* [patchAdsCampaign](#patchadscampaign) - Update a campaign
-* [patchMartechCampaign](#patchmartechcampaign) - Update a campaign
-* [removeAdsCampaign](#removeadscampaign) - Remove a campaign
-* [removeMartechCampaign](#removemartechcampaign) - Remove a campaign
-* [updateAdsCampaign](#updateadscampaign) - Update a campaign
-* [updateMartechCampaign](#updatemartechcampaign) - Update a campaign
+* [createAdsCampaign2](#createadscampaign2) - Create a campaign
+* [createMartechCampaign2](#createmartechcampaign2) - Create a campaign
+* [getAdsCampaign2](#getadscampaign2) - Retrieve a campaign
+* [getMartechCampaign2](#getmartechcampaign2) - Retrieve a campaign
+* [listAdsCampaigns2](#listadscampaigns2) - List all campaigns
+* [listMartechCampaigns2](#listmartechcampaigns2) - List all campaigns
+* [patchAdsCampaign2](#patchadscampaign2) - Update a campaign
+* [patchMartechCampaign2](#patchmartechcampaign2) - Update a campaign
+* [removeAdsCampaign2](#removeadscampaign2) - Remove a campaign
+* [removeMartechCampaign2](#removemartechcampaign2) - Remove a campaign
+* [updateAdsCampaign2](#updateadscampaign2) - Update a campaign
+* [updateMartechCampaign2](#updatemartechcampaign2) - Update a campaign
 
-## createAdsCampaign
+## createAdsCampaign2
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createAdsCampaign2" method="post" path="/ads/{connection_id}/campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -39,170 +39,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsCampaignRequest(
+$request = new Operations\CreateAdsCampaign2Request(
     adsCampaign: new Shared\AdsCampaign(),
     connectionId: '<id>',
 );
 
-$response = $sdk->campaign->createAdsCampaign(
+$response = $sdk->campaign->createAdsCampaign2(
     request: $request
 );
 
 if ($response->adsCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateAdsCampaignRequest](../../Models/Operations/CreateAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\CreateAdsCampaignResponse](../../Models/Operations/CreateAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createMartechCampaign
-
-Create a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateMartechCampaignRequest(
-    marketingCampaign: new Shared\MarketingCampaign(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->campaign->createMartechCampaign(
-    request: $request
-);
-
-if ($response->marketingCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateMartechCampaignRequest](../../Models/Operations/CreateMartechCampaignRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\CreateMartechCampaignResponse](../../Models/Operations/CreateMartechCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsCampaign
-
-Retrieve a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsCampaign" method="get" path="/ads/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->getAdsCampaign(
-    request: $request
-);
-
-if ($response->adsCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAdsCampaignRequest](../../Models/Operations/GetAdsCampaignRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetAdsCampaignResponse](../../Models/Operations/GetAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getMartechCampaign
-
-Retrieve a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getMartechCampaign" method="get" path="/martech/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetMartechCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->getMartechCampaign(
-    request: $request
-);
-
-if ($response->marketingCampaign !== null) {
     // handle response
 }
 ```
@@ -211,11 +57,11 @@ if ($response->marketingCampaign !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetMartechCampaignRequest](../../Models/Operations/GetMartechCampaignRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\CreateAdsCampaign2Request](../../Models/Operations/CreateAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetMartechCampaignResponse](../../Models/Operations/GetMartechCampaignResponse.md)**
+**[?Operations\CreateAdsCampaign2Response](../../Models/Operations/CreateAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -223,13 +69,65 @@ if ($response->marketingCampaign !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsCampaigns
+## createMartechCampaign2
 
-List all campaigns
+Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsCampaigns" method="get" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createMartechCampaign2" method="post" path="/martech/{connection_id}/campaign" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateMartechCampaign2Request(
+    marketingCampaign: new Shared\MarketingCampaign(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->campaign->createMartechCampaign2(
+    request: $request
+);
+
+if ($response->marketingCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateMartechCampaign2Request](../../Models/Operations/CreateMartechCampaign2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\CreateMartechCampaign2Response](../../Models/Operations/CreateMartechCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsCampaign2
+
+Retrieve a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsCampaign2" method="get" path="/ads/{connection_id}/campaign/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -244,11 +142,113 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsCampaignsRequest(
+$request = new Operations\GetAdsCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->getAdsCampaign2(
+    request: $request
+);
+
+if ($response->adsCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsCampaign2Request](../../Models/Operations/GetAdsCampaign2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAdsCampaign2Response](../../Models/Operations/GetAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getMartechCampaign2
+
+Retrieve a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getMartechCampaign2" method="get" path="/martech/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetMartechCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->getMartechCampaign2(
+    request: $request
+);
+
+if ($response->marketingCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetMartechCampaign2Request](../../Models/Operations/GetMartechCampaign2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetMartechCampaign2Response](../../Models/Operations/GetMartechCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAdsCampaigns2
+
+List all campaigns
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsCampaigns2" method="get" path="/ads/{connection_id}/campaign" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsCampaigns2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->campaign->listAdsCampaigns(
+$response = $sdk->campaign->listAdsCampaigns2(
     request: $request
 );
 
@@ -259,13 +259,13 @@ if ($response->adsCampaigns !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAdsCampaignsRequest](../../Models/Operations/ListAdsCampaignsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsCampaigns2Request](../../Models/Operations/ListAdsCampaigns2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAdsCampaignsResponse](../../Models/Operations/ListAdsCampaignsResponse.md)**
+**[?Operations\ListAdsCampaigns2Response](../../Models/Operations/ListAdsCampaigns2Response.md)**
 
 ### Errors
 
@@ -273,13 +273,13 @@ if ($response->adsCampaigns !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listMartechCampaigns
+## listMartechCampaigns2
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listMartechCampaigns" method="get" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="listMartechCampaigns2" method="get" path="/martech/{connection_id}/campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -294,11 +294,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListMartechCampaignsRequest(
+$request = new Operations\ListMartechCampaigns2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->campaign->listMartechCampaigns(
+$response = $sdk->campaign->listMartechCampaigns2(
     request: $request
 );
 
@@ -309,221 +309,13 @@ if ($response->marketingCampaigns !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListMartechCampaignsRequest](../../Models/Operations/ListMartechCampaignsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\ListMartechCampaignsResponse](../../Models/Operations/ListMartechCampaignsResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAdsCampaign
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->patchAdsCampaign(
-    request: $request
-);
-
-if ($response->adsCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchAdsCampaignRequest](../../Models/Operations/PatchAdsCampaignRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\PatchAdsCampaignResponse](../../Models/Operations/PatchAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchMartechCampaign
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchMartechCampaignRequest(
-    marketingCampaign: new Shared\MarketingCampaign(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->patchMartechCampaign(
-    request: $request
-);
-
-if ($response->marketingCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchMartechCampaignRequest](../../Models/Operations/PatchMartechCampaignRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\PatchMartechCampaignResponse](../../Models/Operations/PatchMartechCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsCampaign
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsCampaign" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->removeAdsCampaign(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveAdsCampaignRequest](../../Models/Operations/RemoveAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveAdsCampaignResponse](../../Models/Operations/RemoveAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeMartechCampaign
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeMartechCampaign" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveMartechCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->campaign->removeMartechCampaign(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveMartechCampaignRequest](../../Models/Operations/RemoveMartechCampaignRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\ListMartechCampaigns2Request](../../Models/Operations/ListMartechCampaigns2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveMartechCampaignResponse](../../Models/Operations/RemoveMartechCampaignResponse.md)**
+**[?Operations\ListMartechCampaigns2Response](../../Models/Operations/ListMartechCampaigns2Response.md)**
 
 ### Errors
 
@@ -531,13 +323,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsCampaign
+## patchAdsCampaign2
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCampaign2" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -553,13 +345,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsCampaignRequest(
+$request = new Operations\PatchAdsCampaign2Request(
     adsCampaign: new Shared\AdsCampaign(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->campaign->updateAdsCampaign(
+$response = $sdk->campaign->patchAdsCampaign2(
     request: $request
 );
 
@@ -572,11 +364,11 @@ if ($response->adsCampaign !== null) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateAdsCampaignRequest](../../Models/Operations/UpdateAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\PatchAdsCampaign2Request](../../Models/Operations/PatchAdsCampaign2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateAdsCampaignResponse](../../Models/Operations/UpdateAdsCampaignResponse.md)**
+**[?Operations\PatchAdsCampaign2Response](../../Models/Operations/PatchAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -584,13 +376,13 @@ if ($response->adsCampaign !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMartechCampaign
+## patchMartechCampaign2
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechCampaign2" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -606,13 +398,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMartechCampaignRequest(
+$request = new Operations\PatchMartechCampaign2Request(
     marketingCampaign: new Shared\MarketingCampaign(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->campaign->updateMartechCampaign(
+$response = $sdk->campaign->patchMartechCampaign2(
     request: $request
 );
 
@@ -625,11 +417,219 @@ if ($response->marketingCampaign !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateMartechCampaignRequest](../../Models/Operations/UpdateMartechCampaignRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\PatchMartechCampaign2Request](../../Models/Operations/PatchMartechCampaign2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateMartechCampaignResponse](../../Models/Operations/UpdateMartechCampaignResponse.md)**
+**[?Operations\PatchMartechCampaign2Response](../../Models/Operations/PatchMartechCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsCampaign2
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsCampaign2" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->removeAdsCampaign2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAdsCampaign2Request](../../Models/Operations/RemoveAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveAdsCampaign2Response](../../Models/Operations/RemoveAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeMartechCampaign2
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeMartechCampaign2" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveMartechCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->removeMartechCampaign2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveMartechCampaign2Request](../../Models/Operations/RemoveMartechCampaign2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\RemoveMartechCampaign2Response](../../Models/Operations/RemoveMartechCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAdsCampaign2
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAdsCampaign2" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAdsCampaign2Request(
+    adsCampaign: new Shared\AdsCampaign(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->updateAdsCampaign2(
+    request: $request
+);
+
+if ($response->adsCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAdsCampaign2Request](../../Models/Operations/UpdateAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\UpdateAdsCampaign2Response](../../Models/Operations/UpdateAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateMartechCampaign2
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateMartechCampaign2" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateMartechCampaign2Request(
+    marketingCampaign: new Shared\MarketingCampaign(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->campaign->updateMartechCampaign2(
+    request: $request
+);
+
+if ($response->marketingCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateMartechCampaign2Request](../../Models/Operations/UpdateMartechCampaign2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\UpdateMartechCampaign2Response](../../Models/Operations/UpdateMartechCampaign2Response.md)**
 
 ### Errors
 

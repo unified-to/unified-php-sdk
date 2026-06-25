@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [listCommerceAvailabilities](#listcommerceavailabilities) - List all availabilities
+* [listCommerceAvailabilities2](#listcommerceavailabilities2) - List all availabilities
 
-## listCommerceAvailabilities
+## listCommerceAvailabilities2
 
 List all availabilities
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
+<!-- UsageSnippet language="php" operationID="listCommerceAvailabilities2" method="get" path="/commerce/{connection_id}/availability" -->
 ```php
 declare(strict_types=1);
 
@@ -27,11 +27,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceAvailabilitiesRequest(
+$request = new Operations\ListCommerceAvailabilities2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->availability->listCommerceAvailabilities(
+$response = $sdk->availability->listCommerceAvailabilities2(
     request: $request
 );
 
@@ -42,13 +42,13 @@ if ($response->commerceAvailabilities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListCommerceAvailabilitiesRequest](../../Models/Operations/ListCommerceAvailabilitiesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListCommerceAvailabilities2Request](../../Models/Operations/ListCommerceAvailabilities2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListCommerceAvailabilitiesResponse](../../Models/Operations/ListCommerceAvailabilitiesResponse.md)**
+**[?Operations\ListCommerceAvailabilities2Response](../../Models/Operations/ListCommerceAvailabilities2Response.md)**
 
 ### Errors
 

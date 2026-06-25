@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
-* [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
-* [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
-* [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
-* [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
-* [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
+* [createAccountingPurchaseorder2](#createaccountingpurchaseorder2) - Create a purchaseorder
+* [getAccountingPurchaseorder2](#getaccountingpurchaseorder2) - Retrieve a purchaseorder
+* [listAccountingPurchaseorders2](#listaccountingpurchaseorders2) - List all purchaseorders
+* [patchAccountingPurchaseorder2](#patchaccountingpurchaseorder2) - Update a purchaseorder
+* [removeAccountingPurchaseorder2](#removeaccountingpurchaseorder2) - Remove a purchaseorder
+* [updateAccountingPurchaseorder2](#updateaccountingpurchaseorder2) - Update a purchaseorder
 
-## createAccountingPurchaseorder
+## createAccountingPurchaseorder2
 
 Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder2" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingPurchaseorderRequest(
+$request = new Operations\CreateAccountingPurchaseorder2Request(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->purchaseorder->createAccountingPurchaseorder(
+$response = $sdk->purchaseorder->createAccountingPurchaseorder2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [Operations\CreateAccountingPurchaseorderRequest](../../Models/Operations/CreateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\CreateAccountingPurchaseorder2Request](../../Models/Operations/CreateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 ### Response
 
-**[?Operations\CreateAccountingPurchaseorderResponse](../../Models/Operations/CreateAccountingPurchaseorderResponse.md)**
+**[?Operations\CreateAccountingPurchaseorder2Response](../../Models/Operations/CreateAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingPurchaseorder
+## getAccountingPurchaseorder2
 
 Retrieve a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingPurchaseorder2" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingPurchaseorderRequest(
+$request = new Operations\GetAccountingPurchaseorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->purchaseorder->getAccountingPurchaseorder(
+$response = $sdk->purchaseorder->getAccountingPurchaseorder2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingPurchaseorderRequest](../../Models/Operations/GetAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\GetAccountingPurchaseorder2Request](../../Models/Operations/GetAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\GetAccountingPurchaseorderResponse](../../Models/Operations/GetAccountingPurchaseorderResponse.md)**
+**[?Operations\GetAccountingPurchaseorder2Response](../../Models/Operations/GetAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingPurchaseorders
+## listAccountingPurchaseorders2
 
 List all purchaseorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="listAccountingPurchaseorders2" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingPurchaseordersRequest(
+$request = new Operations\ListAccountingPurchaseorders2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->purchaseorder->listAccountingPurchaseorders(
+$response = $sdk->purchaseorder->listAccountingPurchaseorders2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingPurchaseorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingPurchaseordersRequest](../../Models/Operations/ListAccountingPurchaseordersRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\ListAccountingPurchaseorders2Request](../../Models/Operations/ListAccountingPurchaseorders2Request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 ### Response
 
-**[?Operations\ListAccountingPurchaseordersResponse](../../Models/Operations/ListAccountingPurchaseordersResponse.md)**
+**[?Operations\ListAccountingPurchaseorders2Response](../../Models/Operations/ListAccountingPurchaseorders2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingPurchaseorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingPurchaseorder
+## patchAccountingPurchaseorder2
 
 Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder2" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingPurchaseorderRequest(
+$request = new Operations\PatchAccountingPurchaseorder2Request(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->purchaseorder->patchAccountingPurchaseorder(
+$response = $sdk->purchaseorder->patchAccountingPurchaseorder2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\PatchAccountingPurchaseorderRequest](../../Models/Operations/PatchAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\PatchAccountingPurchaseorder2Request](../../Models/Operations/PatchAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 ### Response
 
-**[?Operations\PatchAccountingPurchaseorderResponse](../../Models/Operations/PatchAccountingPurchaseorderResponse.md)**
+**[?Operations\PatchAccountingPurchaseorder2Response](../../Models/Operations/PatchAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingPurchaseorder
+## removeAccountingPurchaseorder2
 
 Remove a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingPurchaseorder2" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingPurchaseorderRequest(
+$request = new Operations\RemoveAccountingPurchaseorder2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->purchaseorder->removeAccountingPurchaseorder(
+$response = $sdk->purchaseorder->removeAccountingPurchaseorder2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [Operations\RemoveAccountingPurchaseorderRequest](../../Models/Operations/RemoveAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\RemoveAccountingPurchaseorder2Request](../../Models/Operations/RemoveAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 ### Response
 
-**[?Operations\RemoveAccountingPurchaseorderResponse](../../Models/Operations/RemoveAccountingPurchaseorderResponse.md)**
+**[?Operations\RemoveAccountingPurchaseorder2Response](../../Models/Operations/RemoveAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingPurchaseorder
+## updateAccountingPurchaseorder2
 
 Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder2" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingPurchaseorderRequest(
+$request = new Operations\UpdateAccountingPurchaseorder2Request(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->purchaseorder->updateAccountingPurchaseorder(
+$response = $sdk->purchaseorder->updateAccountingPurchaseorder2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [Operations\UpdateAccountingPurchaseorderRequest](../../Models/Operations/UpdateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\UpdateAccountingPurchaseorder2Request](../../Models/Operations/UpdateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 ### Response
 
-**[?Operations\UpdateAccountingPurchaseorderResponse](../../Models/Operations/UpdateAccountingPurchaseorderResponse.md)**
+**[?Operations\UpdateAccountingPurchaseorder2Response](../../Models/Operations/UpdateAccountingPurchaseorder2Response.md)**
 
 ### Errors
 

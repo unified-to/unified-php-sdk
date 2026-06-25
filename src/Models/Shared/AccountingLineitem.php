@@ -46,6 +46,16 @@ class AccountingLineitem
     public ?float $discountAmount = null;
 
     /**
+     * $fees
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingFee> $fees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingFee>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $fees = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -182,6 +192,7 @@ class AccountingLineitem
      * @param  ?array<string>  $categoryIds
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $discountAmount
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingFee>  $fees
      * @param  ?string  $id
      * @param  ?string  $itemDescription
      * @param  ?string  $itemId
@@ -200,12 +211,13 @@ class AccountingLineitem
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?array $itemVariants = null, ?array $locations = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?array $fees = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?array $itemVariants = null, ?array $locations = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
         $this->createdAt = $createdAt;
         $this->discountAmount = $discountAmount;
+        $this->fees = $fees;
         $this->id = $id;
         $this->itemDescription = $itemDescription;
         $this->itemId = $itemId;

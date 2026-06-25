@@ -47,14 +47,14 @@ class Collection
     /**
      * Create a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceCollection(Operations\CreateCommerceCollectionRequest $request, ?Options $options = null): Operations\CreateCommerceCollectionResponse
+    public function createCommerceCollection2(Operations\CreateCommerceCollection2Request $request, ?Options $options = null): Operations\CreateCommerceCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -63,11 +63,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceCollectionResponse(
+                $response = new Operations\CreateCommerceCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Collection
     /**
      * Create a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsCollection(Operations\CreateLmsCollectionRequest $request, ?Options $options = null): Operations\CreateLmsCollectionResponse
+    public function createLmsCollection2(Operations\CreateLmsCollection2Request $request, ?Options $options = null): Operations\CreateLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\CreateLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\CreateLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -131,11 +131,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsCollectionResponse(
+                $response = new Operations\CreateLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,22 +183,22 @@ class Collection
     /**
      * Retrieve a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceCollection(Operations\GetCommerceCollectionRequest $request, ?Options $options = null): Operations\GetCommerceCollectionResponse
+    public function getCommerceCollection2(Operations\GetCommerceCollection2Request $request, ?Options $options = null): Operations\GetCommerceCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -224,7 +224,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceCollectionResponse(
+                $response = new Operations\GetCommerceCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -246,22 +246,22 @@ class Collection
     /**
      * Retrieve a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsCollection(Operations\GetLmsCollectionRequest $request, ?Options $options = null): Operations\GetLmsCollectionResponse
+    public function getLmsCollection2(Operations\GetLmsCollection2Request $request, ?Options $options = null): Operations\GetLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\GetLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\GetLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsCollectionResponse(
+                $response = new Operations\GetLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,22 +309,22 @@ class Collection
     /**
      * List all collections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollections2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollections2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceCollections(Operations\ListCommerceCollectionsRequest $request, ?Options $options = null): Operations\ListCommerceCollectionsResponse
+    public function listCommerceCollections2(Operations\ListCommerceCollections2Request $request, ?Options $options = null): Operations\ListCommerceCollections2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollectionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollections2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceCollectionsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceCollections2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceCollections', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceCollections2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -350,7 +350,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceCollection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceCollectionsResponse(
+                $response = new Operations\ListCommerceCollections2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -372,22 +372,22 @@ class Collection
     /**
      * List all collections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsCollectionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsCollections2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsCollections2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsCollections(Operations\ListLmsCollectionsRequest $request, ?Options $options = null): Operations\ListLmsCollectionsResponse
+    public function listLmsCollections2(Operations\ListLmsCollections2Request $request, ?Options $options = null): Operations\ListLmsCollections2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\ListLmsCollectionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\ListLmsCollections2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCollectionsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCollections2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCollections', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCollections2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsCollection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsCollectionsResponse(
+                $response = new Operations\ListLmsCollections2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,14 +435,14 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceCollection(Operations\PatchCommerceCollectionRequest $request, ?Options $options = null): Operations\PatchCommerceCollectionResponse
+    public function patchCommerceCollection2(Operations\PatchCommerceCollection2Request $request, ?Options $options = null): Operations\PatchCommerceCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -451,11 +451,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceCollectionResponse(
+                $response = new Operations\PatchCommerceCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,14 +503,14 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsCollection(Operations\PatchLmsCollectionRequest $request, ?Options $options = null): Operations\PatchLmsCollectionResponse
+    public function patchLmsCollection2(Operations\PatchLmsCollection2Request $request, ?Options $options = null): Operations\PatchLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\PatchLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\PatchLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -519,11 +519,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -549,7 +549,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsCollectionResponse(
+                $response = new Operations\PatchLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -571,20 +571,20 @@ class Collection
     /**
      * Remove a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceCollection(Operations\RemoveCommerceCollectionRequest $request, ?Options $options = null): Operations\RemoveCommerceCollectionResponse
+    public function removeCommerceCollection2(Operations\RemoveCommerceCollection2Request $request, ?Options $options = null): Operations\RemoveCommerceCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -605,7 +605,7 @@ class Collection
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceCollectionResponse(
+            return new Operations\RemoveCommerceCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -617,7 +617,7 @@ class Collection
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceCollectionResponse(
+            return new Operations\RemoveCommerceCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -628,20 +628,20 @@ class Collection
     /**
      * Remove a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsCollection(Operations\RemoveLmsCollectionRequest $request, ?Options $options = null): Operations\RemoveLmsCollectionResponse
+    public function removeLmsCollection2(Operations\RemoveLmsCollection2Request $request, ?Options $options = null): Operations\RemoveLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\RemoveLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\RemoveLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -662,7 +662,7 @@ class Collection
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCollectionResponse(
+            return new Operations\RemoveLmsCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -674,7 +674,7 @@ class Collection
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCollectionResponse(
+            return new Operations\RemoveLmsCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -685,14 +685,14 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceCollection(Operations\UpdateCommerceCollectionRequest $request, ?Options $options = null): Operations\UpdateCommerceCollectionResponse
+    public function updateCommerceCollection2(Operations\UpdateCommerceCollection2Request $request, ?Options $options = null): Operations\UpdateCommerceCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -701,11 +701,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -731,7 +731,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceCollectionResponse(
+                $response = new Operations\UpdateCommerceCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -753,14 +753,14 @@ class Collection
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsCollection(Operations\UpdateLmsCollectionRequest $request, ?Options $options = null): Operations\UpdateLmsCollectionResponse
+    public function updateLmsCollection2(Operations\UpdateLmsCollection2Request $request, ?Options $options = null): Operations\UpdateLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\UpdateLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\UpdateLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -769,11 +769,11 @@ class Collection
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -799,7 +799,7 @@ class Collection
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsCollectionResponse(
+                $response = new Operations\UpdateLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

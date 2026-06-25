@@ -60,6 +60,23 @@ class HrisTimeoff
 
     /**
      *
+     * @var ?float $duration
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $duration = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\DurationType $durationType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('duration_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DurationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?DurationType $durationType = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -141,6 +158,8 @@ class HrisTimeoff
      * @param  ?string  $comments
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
+     * @param  ?float  $duration
+     * @param  ?\Unified\Unified_to\Models\Shared\DurationType  $durationType
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isPaid
@@ -152,7 +171,7 @@ class HrisTimeoff
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->approvedAt = $approvedAt;
@@ -160,6 +179,8 @@ class HrisTimeoff
         $this->comments = $comments;
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
+        $this->duration = $duration;
+        $this->durationType = $durationType;
         $this->endAt = $endAt;
         $this->id = $id;
         $this->isPaid = $isPaid;

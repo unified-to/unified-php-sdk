@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createLmsContent](#createlmscontent) - Create a content
-* [getLmsContent](#getlmscontent) - Retrieve a content
-* [listLmsContents](#listlmscontents) - List all contents
-* [patchLmsContent](#patchlmscontent) - Update a content
-* [removeLmsContent](#removelmscontent) - Remove a content
-* [updateLmsContent](#updatelmscontent) - Update a content
+* [createLmsContent2](#createlmscontent2) - Create a content
+* [getLmsContent2](#getlmscontent2) - Retrieve a content
+* [listLmsContents2](#listlmscontents2) - List all contents
+* [patchLmsContent2](#patchlmscontent2) - Update a content
+* [removeLmsContent2](#removelmscontent2) - Remove a content
+* [updateLmsContent2](#updatelmscontent2) - Update a content
 
-## createLmsContent
+## createLmsContent2
 
 Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="php" operationID="createLmsContent2" method="post" path="/lms/{connection_id}/content" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsContentRequest(
+$request = new Operations\CreateLmsContent2Request(
     lmsContent: new Shared\LmsContent(),
     connectionId: '<id>',
 );
 
-$response = $sdk->content->createLmsContent(
+$response = $sdk->content->createLmsContent2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->lmsContent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateLmsContentRequest](../../Models/Operations/CreateLmsContentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateLmsContent2Request](../../Models/Operations/CreateLmsContent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateLmsContentResponse](../../Models/Operations/CreateLmsContentResponse.md)**
+**[?Operations\CreateLmsContent2Response](../../Models/Operations/CreateLmsContent2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->lmsContent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsContent
+## getLmsContent2
 
 Retrieve a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsContent" method="get" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsContent2" method="get" path="/lms/{connection_id}/content/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsContentRequest(
+$request = new Operations\GetLmsContent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->content->getLmsContent(
+$response = $sdk->content->getLmsContent2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->lmsContent !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetLmsContentRequest](../../Models/Operations/GetLmsContentRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetLmsContent2Request](../../Models/Operations/GetLmsContent2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetLmsContentResponse](../../Models/Operations/GetLmsContentResponse.md)**
+**[?Operations\GetLmsContent2Response](../../Models/Operations/GetLmsContent2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->lmsContent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsContents
+## listLmsContents2
 
 List all contents
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsContents" method="get" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="php" operationID="listLmsContents2" method="get" path="/lms/{connection_id}/content" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsContentsRequest(
+$request = new Operations\ListLmsContents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->content->listLmsContents(
+$response = $sdk->content->listLmsContents2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->lmsContents !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListLmsContentsRequest](../../Models/Operations/ListLmsContentsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListLmsContents2Request](../../Models/Operations/ListLmsContents2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListLmsContentsResponse](../../Models/Operations/ListLmsContentsResponse.md)**
+**[?Operations\ListLmsContents2Response](../../Models/Operations/ListLmsContents2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->lmsContents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchLmsContent
+## patchLmsContent2
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsContent2" method="patch" path="/lms/{connection_id}/content/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchLmsContentRequest(
+$request = new Operations\PatchLmsContent2Request(
     lmsContent: new Shared\LmsContent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->content->patchLmsContent(
+$response = $sdk->content->patchLmsContent2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->lmsContent !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchLmsContentRequest](../../Models/Operations/PatchLmsContentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchLmsContent2Request](../../Models/Operations/PatchLmsContent2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchLmsContentResponse](../../Models/Operations/PatchLmsContentResponse.md)**
+**[?Operations\PatchLmsContent2Response](../../Models/Operations/PatchLmsContent2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->lmsContent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeLmsContent
+## removeLmsContent2
 
 Remove a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeLmsContent" method="delete" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeLmsContent2" method="delete" path="/lms/{connection_id}/content/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveLmsContentRequest(
+$request = new Operations\RemoveLmsContent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->content->removeLmsContent(
+$response = $sdk->content->removeLmsContent2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveLmsContentRequest](../../Models/Operations/RemoveLmsContentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveLmsContent2Request](../../Models/Operations/RemoveLmsContent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveLmsContentResponse](../../Models/Operations/RemoveLmsContentResponse.md)**
+**[?Operations\RemoveLmsContent2Response](../../Models/Operations/RemoveLmsContent2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateLmsContent
+## updateLmsContent2
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsContent2" method="put" path="/lms/{connection_id}/content/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateLmsContentRequest(
+$request = new Operations\UpdateLmsContent2Request(
     lmsContent: new Shared\LmsContent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->content->updateLmsContent(
+$response = $sdk->content->updateLmsContent2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->lmsContent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateLmsContentRequest](../../Models/Operations/UpdateLmsContentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateLmsContent2Request](../../Models/Operations/UpdateLmsContent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateLmsContentResponse](../../Models/Operations/UpdateLmsContentResponse.md)**
+**[?Operations\UpdateLmsContent2Response](../../Models/Operations/UpdateLmsContent2Response.md)**
 
 ### Errors
 

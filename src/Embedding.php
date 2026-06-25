@@ -47,14 +47,14 @@ class Embedding
     /**
      * Create an embedding
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbedding2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbedding2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createGenaiEmbedding(Operations\CreateGenaiEmbeddingRequest $request, ?Options $options = null): Operations\CreateGenaiEmbeddingResponse
+    public function createGenaiEmbedding2(Operations\CreateGenaiEmbedding2Request $request, ?Options $options = null): Operations\CreateGenaiEmbedding2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/embedding', Operations\CreateGenaiEmbeddingRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/embedding', Operations\CreateGenaiEmbedding2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'genaiEmbedding', 'json');
@@ -63,11 +63,11 @@ class Embedding
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateGenaiEmbeddingRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateGenaiEmbedding2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createGenaiEmbedding', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createGenaiEmbedding2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Embedding
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\GenaiEmbedding', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateGenaiEmbeddingResponse(
+                $response = new Operations\CreateGenaiEmbedding2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

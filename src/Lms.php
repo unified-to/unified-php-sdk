@@ -47,14 +47,14 @@ class Lms
     /**
      * Create an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsActivity(Operations\CreateLmsActivityRequest $request, ?Options $options = null): Operations\CreateLmsActivityResponse
+    public function createLmsActivity2(Operations\CreateLmsActivity2Request $request, ?Options $options = null): Operations\CreateLmsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity', Operations\CreateLmsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity', Operations\CreateLmsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsActivity', 'json');
@@ -63,11 +63,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsActivityRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsActivity2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsActivity', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsActivityResponse(
+                $response = new Operations\CreateLmsActivity2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Lms
     /**
      * Create a class
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsClassRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsClass2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsClass2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsClass(Operations\CreateLmsClassRequest $request, ?Options $options = null): Operations\CreateLmsClassResponse
+    public function createLmsClass2(Operations\CreateLmsClass2Request $request, ?Options $options = null): Operations\CreateLmsClass2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class', Operations\CreateLmsClassRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class', Operations\CreateLmsClass2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsClass', 'json');
@@ -131,11 +131,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsClassRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsClass2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsClass', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsClass2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsClass', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsClassResponse(
+                $response = new Operations\CreateLmsClass2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Lms
     /**
      * Create a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsCollection(Operations\CreateLmsCollectionRequest $request, ?Options $options = null): Operations\CreateLmsCollectionResponse
+    public function createLmsCollection2(Operations\CreateLmsCollection2Request $request, ?Options $options = null): Operations\CreateLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\CreateLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\CreateLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -199,11 +199,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsCollectionResponse(
+                $response = new Operations\CreateLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,14 +251,14 @@ class Lms
     /**
      * Create a content
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsContentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsContent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsContent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsContent(Operations\CreateLmsContentRequest $request, ?Options $options = null): Operations\CreateLmsContentResponse
+    public function createLmsContent2(Operations\CreateLmsContent2Request $request, ?Options $options = null): Operations\CreateLmsContent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content', Operations\CreateLmsContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content', Operations\CreateLmsContent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsContent', 'json');
@@ -267,11 +267,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsContentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsContent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsContent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsContent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -297,7 +297,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsContent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsContentResponse(
+                $response = new Operations\CreateLmsContent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -319,14 +319,14 @@ class Lms
     /**
      * Create a course
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCourseRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsCourse2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsCourse2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsCourse(Operations\CreateLmsCourseRequest $request, ?Options $options = null): Operations\CreateLmsCourseResponse
+    public function createLmsCourse2(Operations\CreateLmsCourse2Request $request, ?Options $options = null): Operations\CreateLmsCourse2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course', Operations\CreateLmsCourseRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course', Operations\CreateLmsCourse2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCourse', 'json');
@@ -335,11 +335,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCourseRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsCourse2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCourse', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsCourse2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -365,7 +365,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCourse', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsCourseResponse(
+                $response = new Operations\CreateLmsCourse2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -387,14 +387,14 @@ class Lms
     /**
      * Create an instructor
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsInstructorRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsInstructor2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsInstructor2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsInstructor(Operations\CreateLmsInstructorRequest $request, ?Options $options = null): Operations\CreateLmsInstructorResponse
+    public function createLmsInstructor2(Operations\CreateLmsInstructor2Request $request, ?Options $options = null): Operations\CreateLmsInstructor2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor', Operations\CreateLmsInstructorRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor', Operations\CreateLmsInstructor2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsInstructor', 'json');
@@ -403,11 +403,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsInstructorRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsInstructor2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsInstructor', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsInstructor2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -433,7 +433,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsInstructor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsInstructorResponse(
+                $response = new Operations\CreateLmsInstructor2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -455,14 +455,14 @@ class Lms
     /**
      * Create a student
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateLmsStudentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateLmsStudent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateLmsStudent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createLmsStudent(Operations\CreateLmsStudentRequest $request, ?Options $options = null): Operations\CreateLmsStudentResponse
+    public function createLmsStudent2(Operations\CreateLmsStudent2Request $request, ?Options $options = null): Operations\CreateLmsStudent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student', Operations\CreateLmsStudentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student', Operations\CreateLmsStudent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsStudent', 'json');
@@ -471,11 +471,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsStudentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateLmsStudent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsStudent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createLmsStudent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -501,7 +501,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsStudent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateLmsStudentResponse(
+                $response = new Operations\CreateLmsStudent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -523,22 +523,22 @@ class Lms
     /**
      * Retrieve an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsActivity(Operations\GetLmsActivityRequest $request, ?Options $options = null): Operations\GetLmsActivityResponse
+    public function getLmsActivity2(Operations\GetLmsActivity2Request $request, ?Options $options = null): Operations\GetLmsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\GetLmsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\GetLmsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsActivityRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsActivity2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -564,7 +564,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsActivity', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsActivityResponse(
+                $response = new Operations\GetLmsActivity2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -586,22 +586,22 @@ class Lms
     /**
      * Retrieve a class
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsClassRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsClass2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsClass2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsClass(Operations\GetLmsClassRequest $request, ?Options $options = null): Operations\GetLmsClassResponse
+    public function getLmsClass2(Operations\GetLmsClass2Request $request, ?Options $options = null): Operations\GetLmsClass2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\GetLmsClassRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\GetLmsClass2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsClassRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsClass2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsClass', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsClass2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -627,7 +627,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsClass', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsClassResponse(
+                $response = new Operations\GetLmsClass2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -649,22 +649,22 @@ class Lms
     /**
      * Retrieve a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsCollection(Operations\GetLmsCollectionRequest $request, ?Options $options = null): Operations\GetLmsCollectionResponse
+    public function getLmsCollection2(Operations\GetLmsCollection2Request $request, ?Options $options = null): Operations\GetLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\GetLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\GetLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -690,7 +690,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsCollectionResponse(
+                $response = new Operations\GetLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -712,22 +712,22 @@ class Lms
     /**
      * Retrieve a content
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsContentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsContent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsContent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsContent(Operations\GetLmsContentRequest $request, ?Options $options = null): Operations\GetLmsContentResponse
+    public function getLmsContent2(Operations\GetLmsContent2Request $request, ?Options $options = null): Operations\GetLmsContent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\GetLmsContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\GetLmsContent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsContentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsContent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsContent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsContent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -753,7 +753,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsContent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsContentResponse(
+                $response = new Operations\GetLmsContent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -775,22 +775,22 @@ class Lms
     /**
      * Retrieve a course
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsCourseRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsCourse2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsCourse2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsCourse(Operations\GetLmsCourseRequest $request, ?Options $options = null): Operations\GetLmsCourseResponse
+    public function getLmsCourse2(Operations\GetLmsCourse2Request $request, ?Options $options = null): Operations\GetLmsCourse2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\GetLmsCourseRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\GetLmsCourse2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCourseRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsCourse2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCourse', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsCourse2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -816,7 +816,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCourse', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsCourseResponse(
+                $response = new Operations\GetLmsCourse2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -838,22 +838,22 @@ class Lms
     /**
      * Retrieve an instructor
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsInstructorRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsInstructor2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsInstructor2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsInstructor(Operations\GetLmsInstructorRequest $request, ?Options $options = null): Operations\GetLmsInstructorResponse
+    public function getLmsInstructor2(Operations\GetLmsInstructor2Request $request, ?Options $options = null): Operations\GetLmsInstructor2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\GetLmsInstructorRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\GetLmsInstructor2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsInstructorRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsInstructor2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsInstructor', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsInstructor2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -879,7 +879,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsInstructor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsInstructorResponse(
+                $response = new Operations\GetLmsInstructor2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -901,22 +901,22 @@ class Lms
     /**
      * Retrieve a student
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetLmsStudentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetLmsStudent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetLmsStudent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getLmsStudent(Operations\GetLmsStudentRequest $request, ?Options $options = null): Operations\GetLmsStudentResponse
+    public function getLmsStudent2(Operations\GetLmsStudent2Request $request, ?Options $options = null): Operations\GetLmsStudent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\GetLmsStudentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\GetLmsStudent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetLmsStudentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetLmsStudent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsStudent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getLmsStudent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -942,7 +942,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsStudent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetLmsStudentResponse(
+                $response = new Operations\GetLmsStudent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -964,22 +964,22 @@ class Lms
     /**
      * List all activities
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsActivitiesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsActivitiesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsActivities2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsActivities2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsActivities(Operations\ListLmsActivitiesRequest $request, ?Options $options = null): Operations\ListLmsActivitiesResponse
+    public function listLmsActivities2(Operations\ListLmsActivities2Request $request, ?Options $options = null): Operations\ListLmsActivities2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity', Operations\ListLmsActivitiesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity', Operations\ListLmsActivities2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsActivitiesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsActivities2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsActivities', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsActivities2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1005,7 +1005,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsActivity>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsActivitiesResponse(
+                $response = new Operations\ListLmsActivities2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1027,22 +1027,22 @@ class Lms
     /**
      * List all classes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsClassesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsClassesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsClasses2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsClasses2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsClasses(Operations\ListLmsClassesRequest $request, ?Options $options = null): Operations\ListLmsClassesResponse
+    public function listLmsClasses2(Operations\ListLmsClasses2Request $request, ?Options $options = null): Operations\ListLmsClasses2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class', Operations\ListLmsClassesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class', Operations\ListLmsClasses2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsClassesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsClasses2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsClasses', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsClasses2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1068,7 +1068,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsClass>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsClassesResponse(
+                $response = new Operations\ListLmsClasses2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1090,22 +1090,22 @@ class Lms
     /**
      * List all collections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsCollectionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsCollectionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsCollections2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsCollections2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsCollections(Operations\ListLmsCollectionsRequest $request, ?Options $options = null): Operations\ListLmsCollectionsResponse
+    public function listLmsCollections2(Operations\ListLmsCollections2Request $request, ?Options $options = null): Operations\ListLmsCollections2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\ListLmsCollectionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection', Operations\ListLmsCollections2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCollectionsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCollections2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCollections', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCollections2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1131,7 +1131,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsCollection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsCollectionsResponse(
+                $response = new Operations\ListLmsCollections2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1153,22 +1153,22 @@ class Lms
     /**
      * List all contents
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsContentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsContentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsContents2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsContents2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsContents(Operations\ListLmsContentsRequest $request, ?Options $options = null): Operations\ListLmsContentsResponse
+    public function listLmsContents2(Operations\ListLmsContents2Request $request, ?Options $options = null): Operations\ListLmsContents2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content', Operations\ListLmsContentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content', Operations\ListLmsContents2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsContentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsContents2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsContents', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsContents2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1194,7 +1194,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsContent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsContentsResponse(
+                $response = new Operations\ListLmsContents2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1216,22 +1216,22 @@ class Lms
     /**
      * List all courses
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsCoursesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsCoursesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsCourses2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsCourses2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsCourses(Operations\ListLmsCoursesRequest $request, ?Options $options = null): Operations\ListLmsCoursesResponse
+    public function listLmsCourses2(Operations\ListLmsCourses2Request $request, ?Options $options = null): Operations\ListLmsCourses2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course', Operations\ListLmsCoursesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course', Operations\ListLmsCourses2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCoursesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsCourses2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCourses', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsCourses2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1257,7 +1257,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsCourse>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsCoursesResponse(
+                $response = new Operations\ListLmsCourses2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1279,22 +1279,22 @@ class Lms
     /**
      * List all instructors
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsInstructorsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsInstructorsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsInstructors2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsInstructors2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsInstructors(Operations\ListLmsInstructorsRequest $request, ?Options $options = null): Operations\ListLmsInstructorsResponse
+    public function listLmsInstructors2(Operations\ListLmsInstructors2Request $request, ?Options $options = null): Operations\ListLmsInstructors2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor', Operations\ListLmsInstructorsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor', Operations\ListLmsInstructors2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsInstructorsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsInstructors2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsInstructors', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsInstructors2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1320,7 +1320,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsInstructor>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsInstructorsResponse(
+                $response = new Operations\ListLmsInstructors2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1342,22 +1342,22 @@ class Lms
     /**
      * List all students
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListLmsStudentsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListLmsStudentsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListLmsStudents2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListLmsStudents2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listLmsStudents(Operations\ListLmsStudentsRequest $request, ?Options $options = null): Operations\ListLmsStudentsResponse
+    public function listLmsStudents2(Operations\ListLmsStudents2Request $request, ?Options $options = null): Operations\ListLmsStudents2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student', Operations\ListLmsStudentsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student', Operations\ListLmsStudents2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListLmsStudentsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListLmsStudents2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsStudents', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listLmsStudents2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1383,7 +1383,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\LmsStudent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListLmsStudentsResponse(
+                $response = new Operations\ListLmsStudents2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1405,14 +1405,14 @@ class Lms
     /**
      * Update an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsActivity(Operations\PatchLmsActivityRequest $request, ?Options $options = null): Operations\PatchLmsActivityResponse
+    public function patchLmsActivity2(Operations\PatchLmsActivity2Request $request, ?Options $options = null): Operations\PatchLmsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\PatchLmsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\PatchLmsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsActivity', 'json');
@@ -1421,11 +1421,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsActivityRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsActivity2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1451,7 +1451,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsActivity', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsActivityResponse(
+                $response = new Operations\PatchLmsActivity2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1473,14 +1473,14 @@ class Lms
     /**
      * Update a class
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsClassRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsClass2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsClass2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsClass(Operations\PatchLmsClassRequest $request, ?Options $options = null): Operations\PatchLmsClassResponse
+    public function patchLmsClass2(Operations\PatchLmsClass2Request $request, ?Options $options = null): Operations\PatchLmsClass2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\PatchLmsClassRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\PatchLmsClass2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsClass', 'json');
@@ -1489,11 +1489,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsClassRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsClass2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsClass', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsClass2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1519,7 +1519,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsClass', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsClassResponse(
+                $response = new Operations\PatchLmsClass2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1541,14 +1541,14 @@ class Lms
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsCollection(Operations\PatchLmsCollectionRequest $request, ?Options $options = null): Operations\PatchLmsCollectionResponse
+    public function patchLmsCollection2(Operations\PatchLmsCollection2Request $request, ?Options $options = null): Operations\PatchLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\PatchLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\PatchLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -1557,11 +1557,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1587,7 +1587,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsCollectionResponse(
+                $response = new Operations\PatchLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1609,14 +1609,14 @@ class Lms
     /**
      * Update a content
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsContentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsContent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsContent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsContent(Operations\PatchLmsContentRequest $request, ?Options $options = null): Operations\PatchLmsContentResponse
+    public function patchLmsContent2(Operations\PatchLmsContent2Request $request, ?Options $options = null): Operations\PatchLmsContent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\PatchLmsContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\PatchLmsContent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsContent', 'json');
@@ -1625,11 +1625,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsContentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsContent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsContent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsContent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1655,7 +1655,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsContent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsContentResponse(
+                $response = new Operations\PatchLmsContent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1677,14 +1677,14 @@ class Lms
     /**
      * Update a course
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCourseRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsCourse2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsCourse2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsCourse(Operations\PatchLmsCourseRequest $request, ?Options $options = null): Operations\PatchLmsCourseResponse
+    public function patchLmsCourse2(Operations\PatchLmsCourse2Request $request, ?Options $options = null): Operations\PatchLmsCourse2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\PatchLmsCourseRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\PatchLmsCourse2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCourse', 'json');
@@ -1693,11 +1693,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCourseRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsCourse2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCourse', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsCourse2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1723,7 +1723,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCourse', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsCourseResponse(
+                $response = new Operations\PatchLmsCourse2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1745,14 +1745,14 @@ class Lms
     /**
      * Update an instructor
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsInstructorRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsInstructor2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsInstructor2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsInstructor(Operations\PatchLmsInstructorRequest $request, ?Options $options = null): Operations\PatchLmsInstructorResponse
+    public function patchLmsInstructor2(Operations\PatchLmsInstructor2Request $request, ?Options $options = null): Operations\PatchLmsInstructor2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\PatchLmsInstructorRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\PatchLmsInstructor2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsInstructor', 'json');
@@ -1761,11 +1761,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsInstructorRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsInstructor2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsInstructor', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsInstructor2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1791,7 +1791,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsInstructor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsInstructorResponse(
+                $response = new Operations\PatchLmsInstructor2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1813,14 +1813,14 @@ class Lms
     /**
      * Update a student
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchLmsStudentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchLmsStudent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchLmsStudent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchLmsStudent(Operations\PatchLmsStudentRequest $request, ?Options $options = null): Operations\PatchLmsStudentResponse
+    public function patchLmsStudent2(Operations\PatchLmsStudent2Request $request, ?Options $options = null): Operations\PatchLmsStudent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\PatchLmsStudentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\PatchLmsStudent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsStudent', 'json');
@@ -1829,11 +1829,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsStudentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchLmsStudent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsStudent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchLmsStudent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1859,7 +1859,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsStudent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchLmsStudentResponse(
+                $response = new Operations\PatchLmsStudent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1881,20 +1881,20 @@ class Lms
     /**
      * Remove an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsActivity(Operations\RemoveLmsActivityRequest $request, ?Options $options = null): Operations\RemoveLmsActivityResponse
+    public function removeLmsActivity2(Operations\RemoveLmsActivity2Request $request, ?Options $options = null): Operations\RemoveLmsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\RemoveLmsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\RemoveLmsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1915,7 +1915,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsActivityResponse(
+            return new Operations\RemoveLmsActivity2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1927,7 +1927,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsActivityResponse(
+            return new Operations\RemoveLmsActivity2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1938,20 +1938,20 @@ class Lms
     /**
      * Remove a class
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsClassRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsClass2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsClass2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsClass(Operations\RemoveLmsClassRequest $request, ?Options $options = null): Operations\RemoveLmsClassResponse
+    public function removeLmsClass2(Operations\RemoveLmsClass2Request $request, ?Options $options = null): Operations\RemoveLmsClass2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\RemoveLmsClassRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\RemoveLmsClass2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsClass', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsClass2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1972,7 +1972,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsClassResponse(
+            return new Operations\RemoveLmsClass2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1984,7 +1984,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsClassResponse(
+            return new Operations\RemoveLmsClass2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1995,20 +1995,20 @@ class Lms
     /**
      * Remove a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsCollection(Operations\RemoveLmsCollectionRequest $request, ?Options $options = null): Operations\RemoveLmsCollectionResponse
+    public function removeLmsCollection2(Operations\RemoveLmsCollection2Request $request, ?Options $options = null): Operations\RemoveLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\RemoveLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\RemoveLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2029,7 +2029,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCollectionResponse(
+            return new Operations\RemoveLmsCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2041,7 +2041,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCollectionResponse(
+            return new Operations\RemoveLmsCollection2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2052,20 +2052,20 @@ class Lms
     /**
      * Remove a content
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsContentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsContent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsContent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsContent(Operations\RemoveLmsContentRequest $request, ?Options $options = null): Operations\RemoveLmsContentResponse
+    public function removeLmsContent2(Operations\RemoveLmsContent2Request $request, ?Options $options = null): Operations\RemoveLmsContent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\RemoveLmsContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\RemoveLmsContent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsContent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsContent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2086,7 +2086,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsContentResponse(
+            return new Operations\RemoveLmsContent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2098,7 +2098,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsContentResponse(
+            return new Operations\RemoveLmsContent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2109,20 +2109,20 @@ class Lms
     /**
      * Remove a course
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCourseRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCourse2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsCourse2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsCourse(Operations\RemoveLmsCourseRequest $request, ?Options $options = null): Operations\RemoveLmsCourseResponse
+    public function removeLmsCourse2(Operations\RemoveLmsCourse2Request $request, ?Options $options = null): Operations\RemoveLmsCourse2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\RemoveLmsCourseRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\RemoveLmsCourse2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCourse', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsCourse2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2143,7 +2143,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCourseResponse(
+            return new Operations\RemoveLmsCourse2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2155,7 +2155,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsCourseResponse(
+            return new Operations\RemoveLmsCourse2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2166,20 +2166,20 @@ class Lms
     /**
      * Remove an instructor
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsInstructorRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsInstructor2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsInstructor2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsInstructor(Operations\RemoveLmsInstructorRequest $request, ?Options $options = null): Operations\RemoveLmsInstructorResponse
+    public function removeLmsInstructor2(Operations\RemoveLmsInstructor2Request $request, ?Options $options = null): Operations\RemoveLmsInstructor2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\RemoveLmsInstructorRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\RemoveLmsInstructor2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsInstructor', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsInstructor2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2200,7 +2200,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsInstructorResponse(
+            return new Operations\RemoveLmsInstructor2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2212,7 +2212,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsInstructorResponse(
+            return new Operations\RemoveLmsInstructor2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2223,20 +2223,20 @@ class Lms
     /**
      * Remove a student
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsStudentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveLmsStudent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveLmsStudent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeLmsStudent(Operations\RemoveLmsStudentRequest $request, ?Options $options = null): Operations\RemoveLmsStudentResponse
+    public function removeLmsStudent2(Operations\RemoveLmsStudent2Request $request, ?Options $options = null): Operations\RemoveLmsStudent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\RemoveLmsStudentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\RemoveLmsStudent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsStudent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeLmsStudent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2257,7 +2257,7 @@ class Lms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsStudentResponse(
+            return new Operations\RemoveLmsStudent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2269,7 +2269,7 @@ class Lms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveLmsStudentResponse(
+            return new Operations\RemoveLmsStudent2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2280,14 +2280,14 @@ class Lms
     /**
      * Update an activity
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsActivityRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsActivityResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsActivity2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsActivity2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsActivity(Operations\UpdateLmsActivityRequest $request, ?Options $options = null): Operations\UpdateLmsActivityResponse
+    public function updateLmsActivity2(Operations\UpdateLmsActivity2Request $request, ?Options $options = null): Operations\UpdateLmsActivity2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\UpdateLmsActivityRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/activity/{id}', Operations\UpdateLmsActivity2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsActivity', 'json');
@@ -2296,11 +2296,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsActivityRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsActivity2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsActivity', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsActivity2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2326,7 +2326,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsActivity', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsActivityResponse(
+                $response = new Operations\UpdateLmsActivity2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2348,14 +2348,14 @@ class Lms
     /**
      * Update a class
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsClassRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsClassResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsClass2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsClass2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsClass(Operations\UpdateLmsClassRequest $request, ?Options $options = null): Operations\UpdateLmsClassResponse
+    public function updateLmsClass2(Operations\UpdateLmsClass2Request $request, ?Options $options = null): Operations\UpdateLmsClass2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\UpdateLmsClassRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/class/{id}', Operations\UpdateLmsClass2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsClass', 'json');
@@ -2364,11 +2364,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsClassRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsClass2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsClass', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsClass2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2394,7 +2394,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsClass', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsClassResponse(
+                $response = new Operations\UpdateLmsClass2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2416,14 +2416,14 @@ class Lms
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollectionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollectionResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollection2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollection2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsCollection(Operations\UpdateLmsCollectionRequest $request, ?Options $options = null): Operations\UpdateLmsCollectionResponse
+    public function updateLmsCollection2(Operations\UpdateLmsCollection2Request $request, ?Options $options = null): Operations\UpdateLmsCollection2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\UpdateLmsCollectionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/collection/{id}', Operations\UpdateLmsCollection2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCollection', 'json');
@@ -2432,11 +2432,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCollectionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCollection2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCollection', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCollection2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2462,7 +2462,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsCollectionResponse(
+                $response = new Operations\UpdateLmsCollection2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2484,14 +2484,14 @@ class Lms
     /**
      * Update a content
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsContentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsContentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsContent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsContent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsContent(Operations\UpdateLmsContentRequest $request, ?Options $options = null): Operations\UpdateLmsContentResponse
+    public function updateLmsContent2(Operations\UpdateLmsContent2Request $request, ?Options $options = null): Operations\UpdateLmsContent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\UpdateLmsContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/content/{id}', Operations\UpdateLmsContent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsContent', 'json');
@@ -2500,11 +2500,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsContentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsContent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsContent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsContent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2530,7 +2530,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsContent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsContentResponse(
+                $response = new Operations\UpdateLmsContent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2552,14 +2552,14 @@ class Lms
     /**
      * Update a course
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCourseRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCourseResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCourse2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsCourse2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsCourse(Operations\UpdateLmsCourseRequest $request, ?Options $options = null): Operations\UpdateLmsCourseResponse
+    public function updateLmsCourse2(Operations\UpdateLmsCourse2Request $request, ?Options $options = null): Operations\UpdateLmsCourse2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\UpdateLmsCourseRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/course/{id}', Operations\UpdateLmsCourse2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsCourse', 'json');
@@ -2568,11 +2568,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCourseRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsCourse2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCourse', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsCourse2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2598,7 +2598,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsCourse', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsCourseResponse(
+                $response = new Operations\UpdateLmsCourse2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2620,14 +2620,14 @@ class Lms
     /**
      * Update an instructor
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsInstructorRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsInstructorResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsInstructor2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsInstructor2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsInstructor(Operations\UpdateLmsInstructorRequest $request, ?Options $options = null): Operations\UpdateLmsInstructorResponse
+    public function updateLmsInstructor2(Operations\UpdateLmsInstructor2Request $request, ?Options $options = null): Operations\UpdateLmsInstructor2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\UpdateLmsInstructorRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/instructor/{id}', Operations\UpdateLmsInstructor2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsInstructor', 'json');
@@ -2636,11 +2636,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsInstructorRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsInstructor2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsInstructor', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsInstructor2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2666,7 +2666,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsInstructor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsInstructorResponse(
+                $response = new Operations\UpdateLmsInstructor2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2688,14 +2688,14 @@ class Lms
     /**
      * Update a student
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsStudentRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateLmsStudentResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateLmsStudent2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateLmsStudent2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateLmsStudent(Operations\UpdateLmsStudentRequest $request, ?Options $options = null): Operations\UpdateLmsStudentResponse
+    public function updateLmsStudent2(Operations\UpdateLmsStudent2Request $request, ?Options $options = null): Operations\UpdateLmsStudent2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\UpdateLmsStudentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/lms/{connection_id}/student/{id}', Operations\UpdateLmsStudent2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'lmsStudent', 'json');
@@ -2704,11 +2704,11 @@ class Lms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsStudentRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateLmsStudent2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsStudent', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateLmsStudent2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2734,7 +2734,7 @@ class Lms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\LmsStudent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateLmsStudentResponse(
+                $response = new Operations\UpdateLmsStudent2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

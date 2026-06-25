@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsScorecard2](#createatsscorecard2) - Create a scorecard
+* [getAtsScorecard2](#getatsscorecard2) - Retrieve a scorecard
+* [listAtsScorecards2](#listatsscorecards2) - List all scorecards
+* [patchAtsScorecard2](#patchatsscorecard2) - Update a scorecard
+* [removeAtsScorecard2](#removeatsscorecard2) - Remove a scorecard
+* [updateAtsScorecard2](#updateatsscorecard2) - Update a scorecard
 
-## createAtsScorecard
+## createAtsScorecard2
 
 Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="php" operationID="createAtsScorecard2" method="post" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsScorecardRequest(
+$request = new Operations\CreateAtsScorecard2Request(
     atsScorecard: new Shared\AtsScorecard(),
     connectionId: '<id>',
 );
 
-$response = $sdk->scorecard->createAtsScorecard(
+$response = $sdk->scorecard->createAtsScorecard2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsScorecardRequest](../../Models/Operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateAtsScorecard2Request](../../Models/Operations/CreateAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateAtsScorecardResponse](../../Models/Operations/CreateAtsScorecardResponse.md)**
+**[?Operations\CreateAtsScorecard2Response](../../Models/Operations/CreateAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->atsScorecard !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsScorecard
+## getAtsScorecard2
 
 Retrieve a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAtsScorecard2" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsScorecardRequest(
+$request = new Operations\GetAtsScorecard2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->scorecard->getAtsScorecard(
+$response = $sdk->scorecard->getAtsScorecard2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsScorecardRequest](../../Models/Operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetAtsScorecard2Request](../../Models/Operations/GetAtsScorecard2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetAtsScorecardResponse](../../Models/Operations/GetAtsScorecardResponse.md)**
+**[?Operations\GetAtsScorecard2Response](../../Models/Operations/GetAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->atsScorecard !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsScorecards
+## listAtsScorecards2
 
 List all scorecards
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="php" operationID="listAtsScorecards2" method="get" path="/ats/{connection_id}/scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsScorecardsRequest(
+$request = new Operations\ListAtsScorecards2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->scorecard->listAtsScorecards(
+$response = $sdk->scorecard->listAtsScorecards2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->atsScorecards !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsScorecardsRequest](../../Models/Operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsScorecards2Request](../../Models/Operations/ListAtsScorecards2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsScorecardsResponse](../../Models/Operations/ListAtsScorecardsResponse.md)**
+**[?Operations\ListAtsScorecards2Response](../../Models/Operations/ListAtsScorecards2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->atsScorecards !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsScorecard
+## patchAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsScorecard2" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsScorecardRequest(
+$request = new Operations\PatchAtsScorecard2Request(
     atsScorecard: new Shared\AtsScorecard(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->scorecard->patchAtsScorecard(
+$response = $sdk->scorecard->patchAtsScorecard2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsScorecardRequest](../../Models/Operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchAtsScorecard2Request](../../Models/Operations/PatchAtsScorecard2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchAtsScorecardResponse](../../Models/Operations/PatchAtsScorecardResponse.md)**
+**[?Operations\PatchAtsScorecard2Response](../../Models/Operations/PatchAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->atsScorecard !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsScorecard
+## removeAtsScorecard2
 
 Remove a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsScorecard2" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsScorecardRequest(
+$request = new Operations\RemoveAtsScorecard2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->scorecard->removeAtsScorecard(
+$response = $sdk->scorecard->removeAtsScorecard2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsScorecardRequest](../../Models/Operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveAtsScorecard2Request](../../Models/Operations/RemoveAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveAtsScorecardResponse](../../Models/Operations/RemoveAtsScorecardResponse.md)**
+**[?Operations\RemoveAtsScorecard2Response](../../Models/Operations/RemoveAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsScorecard
+## updateAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsScorecard2" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsScorecardRequest(
+$request = new Operations\UpdateAtsScorecard2Request(
     atsScorecard: new Shared\AtsScorecard(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->scorecard->updateAtsScorecard(
+$response = $sdk->scorecard->updateAtsScorecard2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->atsScorecard !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsScorecardRequest](../../Models/Operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateAtsScorecard2Request](../../Models/Operations/UpdateAtsScorecard2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateAtsScorecardResponse](../../Models/Operations/UpdateAtsScorecardResponse.md)**
+**[?Operations\UpdateAtsScorecard2Response](../../Models/Operations/UpdateAtsScorecard2Response.md)**
 
 ### Errors
 

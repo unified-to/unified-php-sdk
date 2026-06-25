@@ -47,22 +47,22 @@ class Profitloss
     /**
      * Retrieve a profitloss
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingProfitlossRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingProfitlossResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingProfitloss2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingProfitloss2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingProfitloss(Operations\GetAccountingProfitlossRequest $request, ?Options $options = null): Operations\GetAccountingProfitlossResponse
+    public function getAccountingProfitloss2(Operations\GetAccountingProfitloss2Request $request, ?Options $options = null): Operations\GetAccountingProfitloss2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/profitloss/{id}', Operations\GetAccountingProfitlossRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/profitloss/{id}', Operations\GetAccountingProfitloss2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingProfitlossRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingProfitloss2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingProfitloss', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingProfitloss2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Profitloss
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingProfitloss', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingProfitlossResponse(
+                $response = new Operations\GetAccountingProfitloss2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Profitloss
     /**
      * List all profitlosses
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingProfitlosses2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingProfitlosses2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingProfitlosses(Operations\ListAccountingProfitlossesRequest $request, ?Options $options = null): Operations\ListAccountingProfitlossesResponse
+    public function listAccountingProfitlosses2(Operations\ListAccountingProfitlosses2Request $request, ?Options $options = null): Operations\ListAccountingProfitlosses2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/profitloss', Operations\ListAccountingProfitlossesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/profitloss', Operations\ListAccountingProfitlosses2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingProfitlossesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingProfitlosses2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingProfitlosses', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingProfitlosses2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Profitloss
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingProfitloss>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingProfitlossesResponse(
+                $response = new Operations\ListAccountingProfitlosses2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

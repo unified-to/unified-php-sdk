@@ -4,55 +4,55 @@
 
 ### Available Operations
 
-* [createAdsAd](#createadsad) - Create an ad
-* [createAdsCampaign](#createadscampaign) - Create a campaign
-* [createAdsCreative](#createadscreative) - Create a creative
-* [createAdsGroup](#createadsgroup) - Create a group
-* [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
-* [createAdsOrganization](#createadsorganization) - Create an organization
-* [getAdsAd](#getadsad) - Retrieve an ad
-* [getAdsCampaign](#getadscampaign) - Retrieve a campaign
-* [getAdsCreative](#getadscreative) - Retrieve a creative
-* [getAdsGroup](#getadsgroup) - Retrieve a group
-* [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
-* [getAdsOrganization](#getadsorganization) - Retrieve an organization
-* [getAdsPromoted](#getadspromoted) - Retrieve a promoted
-* [getAdsTarget](#getadstarget) - Retrieve a target
-* [listAdsAds](#listadsads) - List all ads
-* [listAdsCampaigns](#listadscampaigns) - List all campaigns
-* [listAdsCreatives](#listadscreatives) - List all creatives
-* [listAdsGroups](#listadsgroups) - List all groups
-* [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
-* [listAdsOrganizations](#listadsorganizations) - List all organizations
-* [listAdsPromoteds](#listadspromoteds) - List all promoteds
-* [listAdsReports](#listadsreports) - List all reports
-* [listAdsTargets](#listadstargets) - List all targets
-* [patchAdsAd](#patchadsad) - Update an ad
-* [patchAdsCampaign](#patchadscampaign) - Update a campaign
-* [patchAdsCreative](#patchadscreative) - Update a creative
-* [patchAdsGroup](#patchadsgroup) - Update a group
-* [patchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
-* [patchAdsOrganization](#patchadsorganization) - Update an organization
-* [removeAdsAd](#removeadsad) - Remove an ad
-* [removeAdsCampaign](#removeadscampaign) - Remove a campaign
-* [removeAdsCreative](#removeadscreative) - Remove a creative
-* [removeAdsGroup](#removeadsgroup) - Remove a group
-* [removeAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
-* [removeAdsOrganization](#removeadsorganization) - Remove an organization
-* [updateAdsAd](#updateadsad) - Update an ad
-* [updateAdsCampaign](#updateadscampaign) - Update a campaign
-* [updateAdsCreative](#updateadscreative) - Update a creative
-* [updateAdsGroup](#updateadsgroup) - Update a group
-* [updateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
-* [updateAdsOrganization](#updateadsorganization) - Update an organization
+* [createAdsAd2](#createadsad2) - Create an ad
+* [createAdsCampaign2](#createadscampaign2) - Create a campaign
+* [createAdsCreative2](#createadscreative2) - Create a creative
+* [createAdsGroup2](#createadsgroup2) - Create a group
+* [createAdsInsertionorder2](#createadsinsertionorder2) - Create an insertionorder
+* [createAdsOrganization2](#createadsorganization2) - Create an organization
+* [getAdsAd2](#getadsad2) - Retrieve an ad
+* [getAdsCampaign2](#getadscampaign2) - Retrieve a campaign
+* [getAdsCreative2](#getadscreative2) - Retrieve a creative
+* [getAdsGroup2](#getadsgroup2) - Retrieve a group
+* [getAdsInsertionorder2](#getadsinsertionorder2) - Retrieve an insertionorder
+* [getAdsOrganization2](#getadsorganization2) - Retrieve an organization
+* [getAdsPromoted2](#getadspromoted2) - Retrieve a promoted
+* [getAdsTarget2](#getadstarget2) - Retrieve a target
+* [listAdsAds2](#listadsads2) - List all ads
+* [listAdsCampaigns2](#listadscampaigns2) - List all campaigns
+* [listAdsCreatives2](#listadscreatives2) - List all creatives
+* [listAdsGroups2](#listadsgroups2) - List all groups
+* [listAdsInsertionorders2](#listadsinsertionorders2) - List all insertionorders
+* [listAdsOrganizations2](#listadsorganizations2) - List all organizations
+* [listAdsPromoteds2](#listadspromoteds2) - List all promoteds
+* [listAdsReports2](#listadsreports2) - List all reports
+* [listAdsTargets2](#listadstargets2) - List all targets
+* [patchAdsAd2](#patchadsad2) - Update an ad
+* [patchAdsCampaign2](#patchadscampaign2) - Update a campaign
+* [patchAdsCreative2](#patchadscreative2) - Update a creative
+* [patchAdsGroup2](#patchadsgroup2) - Update a group
+* [patchAdsInsertionorder2](#patchadsinsertionorder2) - Update an insertionorder
+* [patchAdsOrganization2](#patchadsorganization2) - Update an organization
+* [removeAdsAd2](#removeadsad2) - Remove an ad
+* [removeAdsCampaign2](#removeadscampaign2) - Remove a campaign
+* [removeAdsCreative2](#removeadscreative2) - Remove a creative
+* [removeAdsGroup2](#removeadsgroup2) - Remove a group
+* [removeAdsInsertionorder2](#removeadsinsertionorder2) - Remove an insertionorder
+* [removeAdsOrganization2](#removeadsorganization2) - Remove an organization
+* [updateAdsAd2](#updateadsad2) - Update an ad
+* [updateAdsCampaign2](#updateadscampaign2) - Update a campaign
+* [updateAdsCreative2](#updateadscreative2) - Update a creative
+* [updateAdsGroup2](#updateadsgroup2) - Update a group
+* [updateAdsInsertionorder2](#updateadsinsertionorder2) - Update an insertionorder
+* [updateAdsOrganization2](#updateadsorganization2) - Update an organization
 
-## createAdsAd
+## createAdsAd2
 
 Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="php" operationID="createAdsAd2" method="post" path="/ads/{connection_id}/ad" -->
 ```php
 declare(strict_types=1);
 
@@ -68,12 +68,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsAdRequest(
+$request = new Operations\CreateAdsAd2Request(
     adsAd: new Shared\AdsAd(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->createAdsAd(
+$response = $sdk->ads->createAdsAd2(
     request: $request
 );
 
@@ -84,13 +84,13 @@ if ($response->adsAd !== null) {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\CreateAdsAdRequest](../../Models/Operations/CreateAdsAdRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\CreateAdsAd2Request](../../Models/Operations/CreateAdsAd2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\CreateAdsAdResponse](../../Models/Operations/CreateAdsAdResponse.md)**
+**[?Operations\CreateAdsAd2Response](../../Models/Operations/CreateAdsAd2Response.md)**
 
 ### Errors
 
@@ -98,13 +98,13 @@ if ($response->adsAd !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAdsCampaign
+## createAdsCampaign2
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createAdsCampaign2" method="post" path="/ads/{connection_id}/campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -120,530 +120,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsCampaignRequest(
+$request = new Operations\CreateAdsCampaign2Request(
     adsCampaign: new Shared\AdsCampaign(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->createAdsCampaign(
+$response = $sdk->ads->createAdsCampaign2(
     request: $request
 );
 
 if ($response->adsCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateAdsCampaignRequest](../../Models/Operations/CreateAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\CreateAdsCampaignResponse](../../Models/Operations/CreateAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createAdsCreative
-
-Create a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ads->createAdsCreative(
-    request: $request
-);
-
-if ($response->adsCreative !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateAdsCreativeRequest](../../Models/Operations/CreateAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\CreateAdsCreativeResponse](../../Models/Operations/CreateAdsCreativeResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createAdsGroup
-
-Create a group
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ads->createAdsGroup(
-    request: $request
-);
-
-if ($response->adsGroup !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\CreateAdsGroupRequest](../../Models/Operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\CreateAdsGroupResponse](../../Models/Operations/CreateAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createAdsInsertionorder
-
-Create an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ads->createAdsInsertionorder(
-    request: $request
-);
-
-if ($response->adsInsertionorder !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateAdsInsertionorderRequest](../../Models/Operations/CreateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\CreateAdsInsertionorderResponse](../../Models/Operations/CreateAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createAdsOrganization
-
-Create an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ads->createAdsOrganization(
-    request: $request
-);
-
-if ($response->adsOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateAdsOrganizationRequest](../../Models/Operations/CreateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\CreateAdsOrganizationResponse](../../Models/Operations/CreateAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsAd
-
-Retrieve an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsAd" method="get" path="/ads/{connection_id}/ad/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsAdRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsAd(
-    request: $request
-);
-
-if ($response->adsAd !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `$request`                                                               | [Operations\GetAdsAdRequest](../../Models/Operations/GetAdsAdRequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
-
-### Response
-
-**[?Operations\GetAdsAdResponse](../../Models/Operations/GetAdsAdResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsCampaign
-
-Retrieve a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsCampaign" method="get" path="/ads/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsCampaign(
-    request: $request
-);
-
-if ($response->adsCampaign !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAdsCampaignRequest](../../Models/Operations/GetAdsCampaignRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetAdsCampaignResponse](../../Models/Operations/GetAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsCreative
-
-Retrieve a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsCreativeRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsCreative(
-    request: $request
-);
-
-if ($response->adsCreative !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAdsCreativeRequest](../../Models/Operations/GetAdsCreativeRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetAdsCreativeResponse](../../Models/Operations/GetAdsCreativeResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsGroup
-
-Retrieve a group
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsGroupRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsGroup(
-    request: $request
-);
-
-if ($response->adsGroup !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\GetAdsGroupRequest](../../Models/Operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-
-### Response
-
-**[?Operations\GetAdsGroupResponse](../../Models/Operations/GetAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsInsertionorder
-
-Retrieve an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsInsertionorderRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsInsertionorder(
-    request: $request
-);
-
-if ($response->adsInsertionorder !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetAdsInsertionorderRequest](../../Models/Operations/GetAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\GetAdsInsertionorderResponse](../../Models/Operations/GetAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAdsOrganization
-
-Retrieve an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAdsOrganizationRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->getAdsOrganization(
-    request: $request
-);
-
-if ($response->adsOrganization !== null) {
     // handle response
 }
 ```
@@ -652,11 +138,11 @@ if ($response->adsOrganization !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetAdsOrganizationRequest](../../Models/Operations/GetAdsOrganizationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\CreateAdsCampaign2Request](../../Models/Operations/CreateAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetAdsOrganizationResponse](../../Models/Operations/GetAdsOrganizationResponse.md)**
+**[?Operations\CreateAdsCampaign2Response](../../Models/Operations/CreateAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -664,13 +150,221 @@ if ($response->adsOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsPromoted
+## createAdsCreative2
 
-Retrieve a promoted
+Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="php" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsCreative2Request(
+    adsCreative: new Shared\AdsCreative(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->createAdsCreative2(
+    request: $request
+);
+
+if ($response->adsCreative !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateAdsCreative2Request](../../Models/Operations/CreateAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\CreateAdsCreative2Response](../../Models/Operations/CreateAdsCreative2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAdsGroup2
+
+Create a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsGroup2Request(
+    adsGroup: new Shared\AdsGroup(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->createAdsGroup2(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateAdsGroup2Request](../../Models/Operations/CreateAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\CreateAdsGroup2Response](../../Models/Operations/CreateAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAdsInsertionorder2
+
+Create an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAdsInsertionorder2" method="post" path="/ads/{connection_id}/insertionorder" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsInsertionorder2Request(
+    adsInsertionorder: new Shared\AdsInsertionorder(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->createAdsInsertionorder2(
+    request: $request
+);
+
+if ($response->adsInsertionorder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateAdsInsertionorder2Request](../../Models/Operations/CreateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\CreateAdsInsertionorder2Response](../../Models/Operations/CreateAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAdsOrganization2
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsOrganization2Request(
+    adsOrganization: new Shared\AdsOrganization(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->createAdsOrganization2(
+    request: $request
+);
+
+if ($response->adsOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateAdsOrganization2Request](../../Models/Operations/CreateAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\CreateAdsOrganization2Response](../../Models/Operations/CreateAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsAd2
+
+Retrieve an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsAd2" method="get" path="/ads/{connection_id}/ad/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -685,12 +379,318 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsPromotedRequest(
+$request = new Operations\GetAdsAd2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->getAdsPromoted(
+$response = $sdk->ads->getAdsAd2(
+    request: $request
+);
+
+if ($response->adsAd !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Operations\GetAdsAd2Request](../../Models/Operations/GetAdsAd2Request.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+
+### Response
+
+**[?Operations\GetAdsAd2Response](../../Models/Operations/GetAdsAd2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsCampaign2
+
+Retrieve a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsCampaign2" method="get" path="/ads/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsCampaign2(
+    request: $request
+);
+
+if ($response->adsCampaign !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsCampaign2Request](../../Models/Operations/GetAdsCampaign2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAdsCampaign2Response](../../Models/Operations/GetAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsCreative2
+
+Retrieve a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsCreative2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsCreative2(
+    request: $request
+);
+
+if ($response->adsCreative !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsCreative2Request](../../Models/Operations/GetAdsCreative2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAdsCreative2Response](../../Models/Operations/GetAdsCreative2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsGroup2
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsGroup2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsGroup2(
+    request: $request
+);
+
+if ($response->adsGroup !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetAdsGroup2Request](../../Models/Operations/GetAdsGroup2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\GetAdsGroup2Response](../../Models/Operations/GetAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsInsertionorder2
+
+Retrieve an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsInsertionorder2" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsInsertionorder2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsInsertionorder2(
+    request: $request
+);
+
+if ($response->adsInsertionorder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAdsInsertionorder2Request](../../Models/Operations/GetAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetAdsInsertionorder2Response](../../Models/Operations/GetAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsOrganization2
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsOrganization2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsOrganization2(
+    request: $request
+);
+
+if ($response->adsOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetAdsOrganization2Request](../../Models/Operations/GetAdsOrganization2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetAdsOrganization2Response](../../Models/Operations/GetAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsPromoted2
+
+Retrieve a promoted
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsPromoted2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsPromoted2(
     request: $request
 );
 
@@ -701,13 +701,13 @@ if ($response->adsPromoted !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetAdsPromotedRequest](../../Models/Operations/GetAdsPromotedRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsPromoted2Request](../../Models/Operations/GetAdsPromoted2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetAdsPromotedResponse](../../Models/Operations/GetAdsPromotedResponse.md)**
+**[?Operations\GetAdsPromoted2Response](../../Models/Operations/GetAdsPromoted2Response.md)**
 
 ### Errors
 
@@ -715,13 +715,13 @@ if ($response->adsPromoted !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsTarget
+## getAdsTarget2
 
 Retrieve a target
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsTarget2" method="get" path="/ads/{connection_id}/target/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -736,12 +736,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsTargetRequest(
+$request = new Operations\GetAdsTarget2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->getAdsTarget(
+$response = $sdk->ads->getAdsTarget2(
     request: $request
 );
 
@@ -752,13 +752,13 @@ if ($response->adsTarget !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\GetAdsTargetRequest](../../Models/Operations/GetAdsTargetRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetAdsTarget2Request](../../Models/Operations/GetAdsTarget2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetAdsTargetResponse](../../Models/Operations/GetAdsTargetResponse.md)**
+**[?Operations\GetAdsTarget2Response](../../Models/Operations/GetAdsTarget2Response.md)**
 
 ### Errors
 
@@ -766,13 +766,13 @@ if ($response->adsTarget !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsAds
+## listAdsAds2
 
 List all ads
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsAds" method="get" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="php" operationID="listAdsAds2" method="get" path="/ads/{connection_id}/ad" -->
 ```php
 declare(strict_types=1);
 
@@ -787,11 +787,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsAdsRequest(
+$request = new Operations\ListAdsAds2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsAds(
+$response = $sdk->ads->listAdsAds2(
     request: $request
 );
 
@@ -802,13 +802,13 @@ if ($response->adsAds !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\ListAdsAdsRequest](../../Models/Operations/ListAdsAdsRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListAdsAds2Request](../../Models/Operations/ListAdsAds2Request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\ListAdsAdsResponse](../../Models/Operations/ListAdsAdsResponse.md)**
+**[?Operations\ListAdsAds2Response](../../Models/Operations/ListAdsAds2Response.md)**
 
 ### Errors
 
@@ -816,13 +816,13 @@ if ($response->adsAds !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsCampaigns
+## listAdsCampaigns2
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsCampaigns" method="get" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="listAdsCampaigns2" method="get" path="/ads/{connection_id}/campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -837,11 +837,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsCampaignsRequest(
+$request = new Operations\ListAdsCampaigns2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsCampaigns(
+$response = $sdk->ads->listAdsCampaigns2(
     request: $request
 );
 
@@ -852,13 +852,13 @@ if ($response->adsCampaigns !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAdsCampaignsRequest](../../Models/Operations/ListAdsCampaignsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsCampaigns2Request](../../Models/Operations/ListAdsCampaigns2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAdsCampaignsResponse](../../Models/Operations/ListAdsCampaignsResponse.md)**
+**[?Operations\ListAdsCampaigns2Response](../../Models/Operations/ListAdsCampaigns2Response.md)**
 
 ### Errors
 
@@ -866,13 +866,13 @@ if ($response->adsCampaigns !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsCreatives
+## listAdsCreatives2
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="php" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
 ```php
 declare(strict_types=1);
 
@@ -887,11 +887,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsCreativesRequest(
+$request = new Operations\ListAdsCreatives2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsCreatives(
+$response = $sdk->ads->listAdsCreatives2(
     request: $request
 );
 
@@ -902,13 +902,13 @@ if ($response->adsCreatives !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAdsCreativesRequest](../../Models/Operations/ListAdsCreativesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsCreatives2Request](../../Models/Operations/ListAdsCreatives2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAdsCreativesResponse](../../Models/Operations/ListAdsCreativesResponse.md)**
+**[?Operations\ListAdsCreatives2Response](../../Models/Operations/ListAdsCreatives2Response.md)**
 
 ### Errors
 
@@ -916,13 +916,13 @@ if ($response->adsCreatives !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsGroups
+## listAdsGroups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -937,11 +937,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsGroupsRequest(
+$request = new Operations\ListAdsGroups2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsGroups(
+$response = $sdk->ads->listAdsGroups2(
     request: $request
 );
 
@@ -952,13 +952,13 @@ if ($response->adsGroups !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\ListAdsGroupsRequest](../../Models/Operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListAdsGroups2Request](../../Models/Operations/ListAdsGroups2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListAdsGroupsResponse](../../Models/Operations/ListAdsGroupsResponse.md)**
+**[?Operations\ListAdsGroups2Response](../../Models/Operations/ListAdsGroups2Response.md)**
 
 ### Errors
 
@@ -966,13 +966,13 @@ if ($response->adsGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsInsertionorders
+## listAdsInsertionorders2
 
 List all insertionorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="php" operationID="listAdsInsertionorders2" method="get" path="/ads/{connection_id}/insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -987,11 +987,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsInsertionordersRequest(
+$request = new Operations\ListAdsInsertionorders2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsInsertionorders(
+$response = $sdk->ads->listAdsInsertionorders2(
     request: $request
 );
 
@@ -1002,13 +1002,13 @@ if ($response->adsInsertionorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListAdsInsertionordersRequest](../../Models/Operations/ListAdsInsertionordersRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAdsInsertionorders2Request](../../Models/Operations/ListAdsInsertionorders2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListAdsInsertionordersResponse](../../Models/Operations/ListAdsInsertionordersResponse.md)**
+**[?Operations\ListAdsInsertionorders2Response](../../Models/Operations/ListAdsInsertionorders2Response.md)**
 
 ### Errors
 
@@ -1016,13 +1016,13 @@ if ($response->adsInsertionorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsOrganizations
+## listAdsOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -1037,11 +1037,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsOrganizationsRequest(
+$request = new Operations\ListAdsOrganizations2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsOrganizations(
+$response = $sdk->ads->listAdsOrganizations2(
     request: $request
 );
 
@@ -1052,13 +1052,13 @@ if ($response->adsOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListAdsOrganizationsRequest](../../Models/Operations/ListAdsOrganizationsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListAdsOrganizations2Request](../../Models/Operations/ListAdsOrganizations2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListAdsOrganizationsResponse](../../Models/Operations/ListAdsOrganizationsResponse.md)**
+**[?Operations\ListAdsOrganizations2Response](../../Models/Operations/ListAdsOrganizations2Response.md)**
 
 ### Errors
 
@@ -1066,13 +1066,13 @@ if ($response->adsOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsPromoteds
+## listAdsPromoteds2
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="php" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
 ```php
 declare(strict_types=1);
 
@@ -1087,11 +1087,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsPromotedsRequest(
+$request = new Operations\ListAdsPromoteds2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsPromoteds(
+$response = $sdk->ads->listAdsPromoteds2(
     request: $request
 );
 
@@ -1102,13 +1102,13 @@ if ($response->adsPromoteds !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListAdsPromotedsRequest](../../Models/Operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAdsPromoteds2Request](../../Models/Operations/ListAdsPromoteds2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAdsPromotedsResponse](../../Models/Operations/ListAdsPromotedsResponse.md)**
+**[?Operations\ListAdsPromoteds2Response](../../Models/Operations/ListAdsPromoteds2Response.md)**
 
 ### Errors
 
@@ -1116,13 +1116,13 @@ if ($response->adsPromoteds !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsReports
+## listAdsReports2
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
+<!-- UsageSnippet language="php" operationID="listAdsReports2" method="get" path="/ads/{connection_id}/report" -->
 ```php
 declare(strict_types=1);
 
@@ -1137,11 +1137,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsReportsRequest(
+$request = new Operations\ListAdsReports2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsReports(
+$response = $sdk->ads->listAdsReports2(
     request: $request
 );
 
@@ -1152,13 +1152,13 @@ if ($response->adsReports !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListAdsReportsRequest](../../Models/Operations/ListAdsReportsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListAdsReports2Request](../../Models/Operations/ListAdsReports2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListAdsReportsResponse](../../Models/Operations/ListAdsReportsResponse.md)**
+**[?Operations\ListAdsReports2Response](../../Models/Operations/ListAdsReports2Response.md)**
 
 ### Errors
 
@@ -1166,13 +1166,13 @@ if ($response->adsReports !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsTargets
+## listAdsTargets2
 
 List all targets
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+<!-- UsageSnippet language="php" operationID="listAdsTargets2" method="get" path="/ads/{connection_id}/target" -->
 ```php
 declare(strict_types=1);
 
@@ -1187,11 +1187,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsTargetsRequest(
+$request = new Operations\ListAdsTargets2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->ads->listAdsTargets(
+$response = $sdk->ads->listAdsTargets2(
     request: $request
 );
 
@@ -1202,13 +1202,13 @@ if ($response->adsTargets !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListAdsTargetsRequest](../../Models/Operations/ListAdsTargetsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListAdsTargets2Request](../../Models/Operations/ListAdsTargets2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListAdsTargetsResponse](../../Models/Operations/ListAdsTargetsResponse.md)**
+**[?Operations\ListAdsTargets2Response](../../Models/Operations/ListAdsTargets2Response.md)**
 
 ### Errors
 
@@ -1216,13 +1216,13 @@ if ($response->adsTargets !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsAd
+## patchAdsAd2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsAd2" method="patch" path="/ads/{connection_id}/ad/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1238,13 +1238,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsAdRequest(
+$request = new Operations\PatchAdsAd2Request(
     adsAd: new Shared\AdsAd(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->patchAdsAd(
+$response = $sdk->ads->patchAdsAd2(
     request: $request
 );
 
@@ -1255,13 +1255,13 @@ if ($response->adsAd !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\PatchAdsAdRequest](../../Models/Operations/PatchAdsAdRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\PatchAdsAd2Request](../../Models/Operations/PatchAdsAd2Request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\PatchAdsAdResponse](../../Models/Operations/PatchAdsAdResponse.md)**
+**[?Operations\PatchAdsAd2Response](../../Models/Operations/PatchAdsAd2Response.md)**
 
 ### Errors
 
@@ -1269,13 +1269,13 @@ if ($response->adsAd !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsCampaign
+## patchAdsCampaign2
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCampaign2" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1291,13 +1291,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsCampaignRequest(
+$request = new Operations\PatchAdsCampaign2Request(
     adsCampaign: new Shared\AdsCampaign(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->patchAdsCampaign(
+$response = $sdk->ads->patchAdsCampaign2(
     request: $request
 );
 
@@ -1308,13 +1308,13 @@ if ($response->adsCampaign !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchAdsCampaignRequest](../../Models/Operations/PatchAdsCampaignRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchAdsCampaign2Request](../../Models/Operations/PatchAdsCampaign2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchAdsCampaignResponse](../../Models/Operations/PatchAdsCampaignResponse.md)**
+**[?Operations\PatchAdsCampaign2Response](../../Models/Operations/PatchAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -1322,13 +1322,13 @@ if ($response->adsCampaign !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsCreative
+## patchAdsCreative2
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1344,13 +1344,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsCreativeRequest(
+$request = new Operations\PatchAdsCreative2Request(
     adsCreative: new Shared\AdsCreative(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->patchAdsCreative(
+$response = $sdk->ads->patchAdsCreative2(
     request: $request
 );
 
@@ -1361,13 +1361,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchAdsCreativeRequest](../../Models/Operations/PatchAdsCreativeRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchAdsCreative2Request](../../Models/Operations/PatchAdsCreative2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchAdsCreativeResponse](../../Models/Operations/PatchAdsCreativeResponse.md)**
+**[?Operations\PatchAdsCreative2Response](../../Models/Operations/PatchAdsCreative2Response.md)**
 
 ### Errors
 
@@ -1375,13 +1375,13 @@ if ($response->adsCreative !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsGroup
+## patchAdsGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1397,13 +1397,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsGroupRequest(
+$request = new Operations\PatchAdsGroup2Request(
     adsGroup: new Shared\AdsGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->patchAdsGroup(
+$response = $sdk->ads->patchAdsGroup2(
     request: $request
 );
 
@@ -1414,13 +1414,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\PatchAdsGroupRequest](../../Models/Operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchAdsGroup2Request](../../Models/Operations/PatchAdsGroup2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchAdsGroupResponse](../../Models/Operations/PatchAdsGroupResponse.md)**
+**[?Operations\PatchAdsGroup2Response](../../Models/Operations/PatchAdsGroup2Response.md)**
 
 ### Errors
 
@@ -1428,13 +1428,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsInsertionorder
+## patchAdsInsertionorder2
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder2" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1450,17 +1450,376 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsInsertionorderRequest(
+$request = new Operations\PatchAdsInsertionorder2Request(
     adsInsertionorder: new Shared\AdsInsertionorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->patchAdsInsertionorder(
+$response = $sdk->ads->patchAdsInsertionorder2(
     request: $request
 );
 
 if ($response->adsInsertionorder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchAdsInsertionorder2Request](../../Models/Operations/PatchAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\PatchAdsInsertionorder2Response](../../Models/Operations/PatchAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAdsOrganization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAdsOrganization2Request(
+    adsOrganization: new Shared\AdsOrganization(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->patchAdsOrganization2(
+    request: $request
+);
+
+if ($response->adsOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchAdsOrganization2Request](../../Models/Operations/PatchAdsOrganization2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\PatchAdsOrganization2Response](../../Models/Operations/PatchAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsAd2
+
+Remove an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsAd2" method="delete" path="/ads/{connection_id}/ad/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsAd2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsAd2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\RemoveAdsAd2Request](../../Models/Operations/RemoveAdsAd2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\RemoveAdsAd2Response](../../Models/Operations/RemoveAdsAd2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsCampaign2
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsCampaign2" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsCampaign2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsCampaign2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAdsCampaign2Request](../../Models/Operations/RemoveAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveAdsCampaign2Response](../../Models/Operations/RemoveAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsCreative2
+
+Remove a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsCreative2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsCreative2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveAdsCreative2Request](../../Models/Operations/RemoveAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveAdsCreative2Response](../../Models/Operations/RemoveAdsCreative2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsGroup2
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsGroup2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsGroup2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveAdsGroup2Request](../../Models/Operations/RemoveAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\RemoveAdsGroup2Response](../../Models/Operations/RemoveAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsInsertionorder2
+
+Remove an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsInsertionorder2" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsInsertionorder2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsInsertionorder2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveAdsInsertionorder2Request](../../Models/Operations/RemoveAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveAdsInsertionorder2Response](../../Models/Operations/RemoveAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsOrganization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsOrganization2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->removeAdsOrganization2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
     // handle response
 }
 ```
@@ -1469,11 +1828,11 @@ if ($response->adsInsertionorder !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchAdsInsertionorderRequest](../../Models/Operations/PatchAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\RemoveAdsOrganization2Request](../../Models/Operations/RemoveAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchAdsInsertionorderResponse](../../Models/Operations/PatchAdsInsertionorderResponse.md)**
+**[?Operations\RemoveAdsOrganization2Response](../../Models/Operations/RemoveAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -1481,372 +1840,13 @@ if ($response->adsInsertionorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsOrganization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->patchAdsOrganization(
-    request: $request
-);
-
-if ($response->adsOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchAdsOrganizationRequest](../../Models/Operations/PatchAdsOrganizationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\PatchAdsOrganizationResponse](../../Models/Operations/PatchAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsAd
-
-Remove an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsAd" method="delete" path="/ads/{connection_id}/ad/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsAdRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsAd(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\RemoveAdsAdRequest](../../Models/Operations/RemoveAdsAdRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-
-### Response
-
-**[?Operations\RemoveAdsAdResponse](../../Models/Operations/RemoveAdsAdResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsCampaign
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsCampaign" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsCampaignRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsCampaign(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveAdsCampaignRequest](../../Models/Operations/RemoveAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveAdsCampaignResponse](../../Models/Operations/RemoveAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsCreative
-
-Remove a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsCreativeRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsCreative(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveAdsCreativeRequest](../../Models/Operations/RemoveAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveAdsCreativeResponse](../../Models/Operations/RemoveAdsCreativeResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsGroup
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsGroupRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsGroup(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\RemoveAdsGroupRequest](../../Models/Operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\RemoveAdsGroupResponse](../../Models/Operations/RemoveAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsInsertionorder
-
-Remove an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsInsertionorderRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsInsertionorder(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveAdsInsertionorderRequest](../../Models/Operations/RemoveAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\RemoveAdsInsertionorderResponse](../../Models/Operations/RemoveAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsOrganization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsOrganizationRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ads->removeAdsOrganization(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveAdsOrganizationRequest](../../Models/Operations/RemoveAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\RemoveAdsOrganizationResponse](../../Models/Operations/RemoveAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAdsAd
+## updateAdsAd2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsAd2" method="put" path="/ads/{connection_id}/ad/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1862,13 +1862,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsAdRequest(
+$request = new Operations\UpdateAdsAd2Request(
     adsAd: new Shared\AdsAd(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsAd(
+$response = $sdk->ads->updateAdsAd2(
     request: $request
 );
 
@@ -1879,13 +1879,13 @@ if ($response->adsAd !== null) {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\UpdateAdsAdRequest](../../Models/Operations/UpdateAdsAdRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\UpdateAdsAd2Request](../../Models/Operations/UpdateAdsAd2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\UpdateAdsAdResponse](../../Models/Operations/UpdateAdsAdResponse.md)**
+**[?Operations\UpdateAdsAd2Response](../../Models/Operations/UpdateAdsAd2Response.md)**
 
 ### Errors
 
@@ -1893,13 +1893,13 @@ if ($response->adsAd !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsCampaign
+## updateAdsCampaign2
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCampaign2" method="put" path="/ads/{connection_id}/campaign/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1915,13 +1915,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsCampaignRequest(
+$request = new Operations\UpdateAdsCampaign2Request(
     adsCampaign: new Shared\AdsCampaign(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsCampaign(
+$response = $sdk->ads->updateAdsCampaign2(
     request: $request
 );
 
@@ -1932,13 +1932,13 @@ if ($response->adsCampaign !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateAdsCampaignRequest](../../Models/Operations/UpdateAdsCampaignRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAdsCampaign2Request](../../Models/Operations/UpdateAdsCampaign2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateAdsCampaignResponse](../../Models/Operations/UpdateAdsCampaignResponse.md)**
+**[?Operations\UpdateAdsCampaign2Response](../../Models/Operations/UpdateAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -1946,13 +1946,13 @@ if ($response->adsCampaign !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsCreative
+## updateAdsCreative2
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1968,13 +1968,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsCreativeRequest(
+$request = new Operations\UpdateAdsCreative2Request(
     adsCreative: new Shared\AdsCreative(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsCreative(
+$response = $sdk->ads->updateAdsCreative2(
     request: $request
 );
 
@@ -1985,13 +1985,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateAdsCreativeRequest](../../Models/Operations/UpdateAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateAdsCreative2Request](../../Models/Operations/UpdateAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateAdsCreativeResponse](../../Models/Operations/UpdateAdsCreativeResponse.md)**
+**[?Operations\UpdateAdsCreative2Response](../../Models/Operations/UpdateAdsCreative2Response.md)**
 
 ### Errors
 
@@ -1999,13 +1999,13 @@ if ($response->adsCreative !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsGroup
+## updateAdsGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2021,13 +2021,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsGroupRequest(
+$request = new Operations\UpdateAdsGroup2Request(
     adsGroup: new Shared\AdsGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsGroup(
+$response = $sdk->ads->updateAdsGroup2(
     request: $request
 );
 
@@ -2038,13 +2038,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\UpdateAdsGroupRequest](../../Models/Operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateAdsGroup2Request](../../Models/Operations/UpdateAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\UpdateAdsGroupResponse](../../Models/Operations/UpdateAdsGroupResponse.md)**
+**[?Operations\UpdateAdsGroup2Response](../../Models/Operations/UpdateAdsGroup2Response.md)**
 
 ### Errors
 
@@ -2052,13 +2052,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsInsertionorder
+## updateAdsInsertionorder2
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder2" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2074,13 +2074,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsInsertionorderRequest(
+$request = new Operations\UpdateAdsInsertionorder2Request(
     adsInsertionorder: new Shared\AdsInsertionorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsInsertionorder(
+$response = $sdk->ads->updateAdsInsertionorder2(
     request: $request
 );
 
@@ -2091,13 +2091,13 @@ if ($response->adsInsertionorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateAdsInsertionorderRequest](../../Models/Operations/UpdateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateAdsInsertionorder2Request](../../Models/Operations/UpdateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateAdsInsertionorderResponse](../../Models/Operations/UpdateAdsInsertionorderResponse.md)**
+**[?Operations\UpdateAdsInsertionorder2Response](../../Models/Operations/UpdateAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -2105,13 +2105,13 @@ if ($response->adsInsertionorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsOrganization
+## updateAdsOrganization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2127,13 +2127,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsOrganizationRequest(
+$request = new Operations\UpdateAdsOrganization2Request(
     adsOrganization: new Shared\AdsOrganization(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ads->updateAdsOrganization(
+$response = $sdk->ads->updateAdsOrganization2(
     request: $request
 );
 
@@ -2144,13 +2144,13 @@ if ($response->adsOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateAdsOrganizationRequest](../../Models/Operations/UpdateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateAdsOrganization2Request](../../Models/Operations/UpdateAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateAdsOrganizationResponse](../../Models/Operations/UpdateAdsOrganizationResponse.md)**
+**[?Operations\UpdateAdsOrganization2Response](../../Models/Operations/UpdateAdsOrganization2Response.md)**
 
 ### Errors
 

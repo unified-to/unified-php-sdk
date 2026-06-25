@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createMartechList](#createmartechlist) - Create a list
-* [getMartechList](#getmartechlist) - Retrieve a list
-* [listMartechLists](#listmartechlists) - List all lists
-* [patchMartechList](#patchmartechlist) - Update a list
-* [removeMartechList](#removemartechlist) - Remove a list
-* [updateMartechList](#updatemartechlist) - Update a list
+* [createMartechList2](#createmartechlist2) - Create a list
+* [getMartechList2](#getmartechlist2) - Retrieve a list
+* [listMartechLists2](#listmartechlists2) - List all lists
+* [patchMartechList2](#patchmartechlist2) - Update a list
+* [removeMartechList2](#removemartechlist2) - Remove a list
+* [updateMartechList2](#updatemartechlist2) - Update a list
 
-## createMartechList
+## createMartechList2
 
 Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="php" operationID="createMartechList2" method="post" path="/martech/{connection_id}/list" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateMartechListRequest(
+$request = new Operations\CreateMartechList2Request(
     marketingList: new Shared\MarketingList(),
     connectionId: '<id>',
 );
 
-$response = $sdk->list->createMartechList(
+$response = $sdk->list->createMartechList2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->marketingList !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateMartechListRequest](../../Models/Operations/CreateMartechListRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateMartechList2Request](../../Models/Operations/CreateMartechList2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateMartechListResponse](../../Models/Operations/CreateMartechListResponse.md)**
+**[?Operations\CreateMartechList2Response](../../Models/Operations/CreateMartechList2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->marketingList !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getMartechList
+## getMartechList2
 
 Retrieve a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="getMartechList2" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetMartechListRequest(
+$request = new Operations\GetMartechList2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->list->getMartechList(
+$response = $sdk->list->getMartechList2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->marketingList !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetMartechListRequest](../../Models/Operations/GetMartechListRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetMartechList2Request](../../Models/Operations/GetMartechList2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetMartechListResponse](../../Models/Operations/GetMartechListResponse.md)**
+**[?Operations\GetMartechList2Response](../../Models/Operations/GetMartechList2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->marketingList !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listMartechLists
+## listMartechLists2
 
 List all lists
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="php" operationID="listMartechLists2" method="get" path="/martech/{connection_id}/list" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListMartechListsRequest(
+$request = new Operations\ListMartechLists2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->list->listMartechLists(
+$response = $sdk->list->listMartechLists2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->marketingLists !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListMartechListsRequest](../../Models/Operations/ListMartechListsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListMartechLists2Request](../../Models/Operations/ListMartechLists2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListMartechListsResponse](../../Models/Operations/ListMartechListsResponse.md)**
+**[?Operations\ListMartechLists2Response](../../Models/Operations/ListMartechLists2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->marketingLists !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchMartechList
+## patchMartechList2
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechList2" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchMartechListRequest(
+$request = new Operations\PatchMartechList2Request(
     marketingList: new Shared\MarketingList(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->list->patchMartechList(
+$response = $sdk->list->patchMartechList2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->marketingList !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchMartechListRequest](../../Models/Operations/PatchMartechListRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchMartechList2Request](../../Models/Operations/PatchMartechList2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchMartechListResponse](../../Models/Operations/PatchMartechListResponse.md)**
+**[?Operations\PatchMartechList2Response](../../Models/Operations/PatchMartechList2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->marketingList !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeMartechList
+## removeMartechList2
 
 Remove a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeMartechList2" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveMartechListRequest(
+$request = new Operations\RemoveMartechList2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->list->removeMartechList(
+$response = $sdk->list->removeMartechList2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveMartechListRequest](../../Models/Operations/RemoveMartechListRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveMartechList2Request](../../Models/Operations/RemoveMartechList2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveMartechListResponse](../../Models/Operations/RemoveMartechListResponse.md)**
+**[?Operations\RemoveMartechList2Response](../../Models/Operations/RemoveMartechList2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMartechList
+## updateMartechList2
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMartechList2" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMartechListRequest(
+$request = new Operations\UpdateMartechList2Request(
     marketingList: new Shared\MarketingList(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->list->updateMartechList(
+$response = $sdk->list->updateMartechList2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->marketingList !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateMartechListRequest](../../Models/Operations/UpdateMartechListRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateMartechList2Request](../../Models/Operations/UpdateMartechList2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateMartechListResponse](../../Models/Operations/UpdateMartechListResponse.md)**
+**[?Operations\UpdateMartechList2Response](../../Models/Operations/UpdateMartechList2Response.md)**
 
 ### Errors
 

@@ -47,14 +47,14 @@ class Forms
     /**
      * Create a form
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateFormsFormRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateFormsForm2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateFormsForm2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createFormsForm(Operations\CreateFormsFormRequest $request, ?Options $options = null): Operations\CreateFormsFormResponse
+    public function createFormsForm2(Operations\CreateFormsForm2Request $request, ?Options $options = null): Operations\CreateFormsForm2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form', Operations\CreateFormsFormRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form', Operations\CreateFormsForm2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'formsForm', 'json');
@@ -63,11 +63,11 @@ class Forms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateFormsFormRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateFormsForm2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createFormsForm', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createFormsForm2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsForm', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateFormsFormResponse(
+                $response = new Operations\CreateFormsForm2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Forms
     /**
      * Retrieve a form
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetFormsFormRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsForm2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsForm2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getFormsForm(Operations\GetFormsFormRequest $request, ?Options $options = null): Operations\GetFormsFormResponse
+    public function getFormsForm2(Operations\GetFormsForm2Request $request, ?Options $options = null): Operations\GetFormsForm2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\GetFormsFormRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\GetFormsForm2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetFormsFormRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetFormsForm2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsForm', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsForm2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsForm', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetFormsFormResponse(
+                $response = new Operations\GetFormsForm2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Forms
     /**
      * Retrieve a submission
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmissionRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmissionResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmission2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmission2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getFormsSubmission(Operations\GetFormsSubmissionRequest $request, ?Options $options = null): Operations\GetFormsSubmissionResponse
+    public function getFormsSubmission2(Operations\GetFormsSubmission2Request $request, ?Options $options = null): Operations\GetFormsSubmission2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission/{id}', Operations\GetFormsSubmissionRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission/{id}', Operations\GetFormsSubmission2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetFormsSubmissionRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetFormsSubmission2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsSubmission', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsSubmission2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsSubmission', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetFormsSubmissionResponse(
+                $response = new Operations\GetFormsSubmission2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,22 +241,22 @@ class Forms
     /**
      * List all forms
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListFormsFormsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListFormsFormsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsForms2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsForms2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listFormsForms(Operations\ListFormsFormsRequest $request, ?Options $options = null): Operations\ListFormsFormsResponse
+    public function listFormsForms2(Operations\ListFormsForms2Request $request, ?Options $options = null): Operations\ListFormsForms2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form', Operations\ListFormsFormsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form', Operations\ListFormsForms2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListFormsFormsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListFormsForms2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsForms', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsForms2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -282,7 +282,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\FormsForm>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListFormsFormsResponse(
+                $response = new Operations\ListFormsForms2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -304,22 +304,22 @@ class Forms
     /**
      * List all submissions
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissionsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissionsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissions2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissions2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listFormsSubmissions(Operations\ListFormsSubmissionsRequest $request, ?Options $options = null): Operations\ListFormsSubmissionsResponse
+    public function listFormsSubmissions2(Operations\ListFormsSubmissions2Request $request, ?Options $options = null): Operations\ListFormsSubmissions2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission', Operations\ListFormsSubmissionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission', Operations\ListFormsSubmissions2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListFormsSubmissionsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListFormsSubmissions2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsSubmissions', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsSubmissions2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -345,7 +345,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\FormsSubmission>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListFormsSubmissionsResponse(
+                $response = new Operations\ListFormsSubmissions2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -367,14 +367,14 @@ class Forms
     /**
      * Update a form
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchFormsFormRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchFormsForm2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchFormsForm2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchFormsForm(Operations\PatchFormsFormRequest $request, ?Options $options = null): Operations\PatchFormsFormResponse
+    public function patchFormsForm2(Operations\PatchFormsForm2Request $request, ?Options $options = null): Operations\PatchFormsForm2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\PatchFormsFormRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\PatchFormsForm2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'formsForm', 'json');
@@ -383,11 +383,11 @@ class Forms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchFormsFormRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchFormsForm2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchFormsForm', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchFormsForm2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsForm', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchFormsFormResponse(
+                $response = new Operations\PatchFormsForm2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,20 +435,20 @@ class Forms
     /**
      * Remove a form
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveFormsFormRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveFormsForm2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveFormsForm2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeFormsForm(Operations\RemoveFormsFormRequest $request, ?Options $options = null): Operations\RemoveFormsFormResponse
+    public function removeFormsForm2(Operations\RemoveFormsForm2Request $request, ?Options $options = null): Operations\RemoveFormsForm2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\RemoveFormsFormRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\RemoveFormsForm2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeFormsForm', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeFormsForm2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -469,7 +469,7 @@ class Forms
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveFormsFormResponse(
+            return new Operations\RemoveFormsForm2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -481,7 +481,7 @@ class Forms
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveFormsFormResponse(
+            return new Operations\RemoveFormsForm2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -492,14 +492,14 @@ class Forms
     /**
      * Update a form
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateFormsFormRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateFormsFormResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateFormsForm2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateFormsForm2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateFormsForm(Operations\UpdateFormsFormRequest $request, ?Options $options = null): Operations\UpdateFormsFormResponse
+    public function updateFormsForm2(Operations\UpdateFormsForm2Request $request, ?Options $options = null): Operations\UpdateFormsForm2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\UpdateFormsFormRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/form/{id}', Operations\UpdateFormsForm2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'formsForm', 'json');
@@ -508,11 +508,11 @@ class Forms
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateFormsFormRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateFormsForm2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateFormsForm', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateFormsForm2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -538,7 +538,7 @@ class Forms
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsForm', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateFormsFormResponse(
+                $response = new Operations\UpdateFormsForm2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

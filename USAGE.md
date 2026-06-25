@@ -14,12 +14,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingAccountRequest(
+$request = new Operations\CreateAccountingAccount2Request(
     accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingAccount(
+$response = $sdk->accounting->createAccountingAccount2(
     request: $request
 );
 

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createRepoCommit](#createrepocommit) - Create a commit
-* [getRepoCommit](#getrepocommit) - Retrieve a commit
-* [listRepoCommits](#listrepocommits) - List all commits
-* [patchRepoCommit](#patchrepocommit) - Update a commit
-* [removeRepoCommit](#removerepocommit) - Remove a commit
-* [updateRepoCommit](#updaterepocommit) - Update a commit
+* [createRepoCommit2](#createrepocommit2) - Create a commit
+* [getRepoCommit2](#getrepocommit2) - Retrieve a commit
+* [listRepoCommits2](#listrepocommits2) - List all commits
+* [patchRepoCommit2](#patchrepocommit2) - Update a commit
+* [removeRepoCommit2](#removerepocommit2) - Remove a commit
+* [updateRepoCommit2](#updaterepocommit2) - Update a commit
 
-## createRepoCommit
+## createRepoCommit2
 
 Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="php" operationID="createRepoCommit2" method="post" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -33,14 +33,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateRepoCommitRequest(
+$request = new Operations\CreateRepoCommit2Request(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->commit->createRepoCommit(
+$response = $sdk->commit->createRepoCommit2(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateRepoCommitRequest](../../Models/Operations/CreateRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateRepoCommit2Request](../../Models/Operations/CreateRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateRepoCommitResponse](../../Models/Operations/CreateRepoCommitResponse.md)**
+**[?Operations\CreateRepoCommit2Response](../../Models/Operations/CreateRepoCommit2Response.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->repoCommit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getRepoCommit
+## getRepoCommit2
 
 Retrieve a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="getRepoCommit2" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetRepoCommitRequest(
+$request = new Operations\GetRepoCommit2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commit->getRepoCommit(
+$response = $sdk->commit->getRepoCommit2(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetRepoCommitRequest](../../Models/Operations/GetRepoCommitRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetRepoCommit2Request](../../Models/Operations/GetRepoCommit2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetRepoCommitResponse](../../Models/Operations/GetRepoCommitResponse.md)**
+**[?Operations\GetRepoCommit2Response](../../Models/Operations/GetRepoCommit2Response.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->repoCommit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoCommits
+## listRepoCommits2
 
 List all commits
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="php" operationID="listRepoCommits2" method="get" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -137,11 +137,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoCommitsRequest(
+$request = new Operations\ListRepoCommits2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->commit->listRepoCommits(
+$response = $sdk->commit->listRepoCommits2(
     request: $request
 );
 
@@ -152,13 +152,13 @@ if ($response->repoCommits !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListRepoCommitsRequest](../../Models/Operations/ListRepoCommitsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListRepoCommits2Request](../../Models/Operations/ListRepoCommits2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListRepoCommitsResponse](../../Models/Operations/ListRepoCommitsResponse.md)**
+**[?Operations\ListRepoCommits2Response](../../Models/Operations/ListRepoCommits2Response.md)**
 
 ### Errors
 
@@ -166,13 +166,13 @@ if ($response->repoCommits !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoCommit
+## patchRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoCommit2" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -188,7 +188,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoCommitRequest(
+$request = new Operations\PatchRepoCommit2Request(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
     ),
@@ -196,7 +196,7 @@ $request = new Operations\PatchRepoCommitRequest(
     id: '<id>',
 );
 
-$response = $sdk->commit->patchRepoCommit(
+$response = $sdk->commit->patchRepoCommit2(
     request: $request
 );
 
@@ -207,13 +207,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchRepoCommitRequest](../../Models/Operations/PatchRepoCommitRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchRepoCommit2Request](../../Models/Operations/PatchRepoCommit2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchRepoCommitResponse](../../Models/Operations/PatchRepoCommitResponse.md)**
+**[?Operations\PatchRepoCommit2Response](../../Models/Operations/PatchRepoCommit2Response.md)**
 
 ### Errors
 
@@ -221,13 +221,13 @@ if ($response->repoCommit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoCommit
+## removeRepoCommit2
 
 Remove a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoCommit2" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -242,12 +242,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoCommitRequest(
+$request = new Operations\RemoveRepoCommit2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commit->removeRepoCommit(
+$response = $sdk->commit->removeRepoCommit2(
     request: $request
 );
 
@@ -258,13 +258,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveRepoCommitRequest](../../Models/Operations/RemoveRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveRepoCommit2Request](../../Models/Operations/RemoveRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveRepoCommitResponse](../../Models/Operations/RemoveRepoCommitResponse.md)**
+**[?Operations\RemoveRepoCommit2Response](../../Models/Operations/RemoveRepoCommit2Response.md)**
 
 ### Errors
 
@@ -272,13 +272,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoCommit
+## updateRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoCommit2" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -294,7 +294,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoCommitRequest(
+$request = new Operations\UpdateRepoCommit2Request(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
     ),
@@ -302,7 +302,7 @@ $request = new Operations\UpdateRepoCommitRequest(
     id: '<id>',
 );
 
-$response = $sdk->commit->updateRepoCommit(
+$response = $sdk->commit->updateRepoCommit2(
     request: $request
 );
 
@@ -313,13 +313,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateRepoCommitRequest](../../Models/Operations/UpdateRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateRepoCommit2Request](../../Models/Operations/UpdateRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateRepoCommitResponse](../../Models/Operations/UpdateRepoCommitResponse.md)**
+**[?Operations\UpdateRepoCommit2Response](../../Models/Operations/UpdateRepoCommit2Response.md)**
 
 ### Errors
 

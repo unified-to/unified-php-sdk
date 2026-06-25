@@ -90,12 +90,12 @@ class EnrichPerson
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\Gender $gender
+     * @var ?\Unified\Unified_to\Models\Shared\EnrichPersonGender $gender
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gender')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Gender|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EnrichPersonGender|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Gender $gender = null;
+    public ?EnrichPersonGender $gender = null;
 
     /**
      *
@@ -241,7 +241,7 @@ class EnrichPerson
      * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichEmail>  $emails
      * @param  ?string  $facebookUrl
      * @param  ?string  $firstName
-     * @param  ?\Unified\Unified_to\Models\Shared\Gender  $gender
+     * @param  ?\Unified\Unified_to\Models\Shared\EnrichPersonGender  $gender
      * @param  ?string  $githubUrl
      * @param  ?string  $githubUsername
      * @param  ?string  $id
@@ -260,7 +260,7 @@ class EnrichPerson
      * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>  $workHistories
      * @phpstan-pure
      */
-    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?Gender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
+    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?EnrichPersonGender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
     {
         $this->address = $address;
         $this->bio = $bio;

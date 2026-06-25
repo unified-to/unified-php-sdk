@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
+* [listAtsApplicationstatuses2](#listatsapplicationstatuses2) - List all applicationstatuses
 
-## listAtsApplicationstatuses
+## listAtsApplicationstatuses2
 
 List all applicationstatuses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
+<!-- UsageSnippet language="php" operationID="listAtsApplicationstatuses2" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```php
 declare(strict_types=1);
 
@@ -27,11 +27,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsApplicationstatusesRequest(
+$request = new Operations\ListAtsApplicationstatuses2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->applicationstatus->listAtsApplicationstatuses(
+$response = $sdk->applicationstatus->listAtsApplicationstatuses2(
     request: $request
 );
 
@@ -42,13 +42,13 @@ if ($response->atsStatuses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListAtsApplicationstatusesRequest](../../Models/Operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAtsApplicationstatuses2Request](../../Models/Operations/ListAtsApplicationstatuses2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAtsApplicationstatusesResponse](../../Models/Operations/ListAtsApplicationstatusesResponse.md)**
+**[?Operations\ListAtsApplicationstatuses2Response](../../Models/Operations/ListAtsApplicationstatuses2Response.md)**
 
 ### Errors
 

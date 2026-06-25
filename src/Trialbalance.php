@@ -47,22 +47,22 @@ class Trialbalance
     /**
      * Retrieve a trialbalance
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTrialbalance2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTrialbalance2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTrialbalance(Operations\GetAccountingTrialbalanceRequest $request, ?Options $options = null): Operations\GetAccountingTrialbalanceResponse
+    public function getAccountingTrialbalance2(Operations\GetAccountingTrialbalance2Request $request, ?Options $options = null): Operations\GetAccountingTrialbalance2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/trialbalance/{id}', Operations\GetAccountingTrialbalanceRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/trialbalance/{id}', Operations\GetAccountingTrialbalance2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTrialbalanceRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTrialbalance2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTrialbalance', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTrialbalance2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Trialbalance
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTrialbalance', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingTrialbalanceResponse(
+                $response = new Operations\GetAccountingTrialbalance2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Trialbalance
     /**
      * List all trialbalances
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTrialbalances2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTrialbalances2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTrialbalances(Operations\ListAccountingTrialbalancesRequest $request, ?Options $options = null): Operations\ListAccountingTrialbalancesResponse
+    public function listAccountingTrialbalances2(Operations\ListAccountingTrialbalances2Request $request, ?Options $options = null): Operations\ListAccountingTrialbalances2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/trialbalance', Operations\ListAccountingTrialbalancesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/trialbalance', Operations\ListAccountingTrialbalances2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTrialbalancesRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTrialbalances2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTrialbalances', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTrialbalances2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Trialbalance
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingTrialbalance>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingTrialbalancesResponse(
+                $response = new Operations\ListAccountingTrialbalances2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

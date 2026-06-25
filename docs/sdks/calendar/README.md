@@ -4,41 +4,41 @@
 
 ### Available Operations
 
-* [createCalendarCalendar](#createcalendarcalendar) - Create a calendar
-* [createCalendarEvent](#createcalendarevent) - Create an event
-* [createCalendarLink](#createcalendarlink) - Create a link
-* [createCalendarWebinar](#createcalendarwebinar) - Create a webinar
-* [getCalendarCalendar](#getcalendarcalendar) - Retrieve a calendar
-* [getCalendarEvent](#getcalendarevent) - Retrieve an event
-* [getCalendarLink](#getcalendarlink) - Retrieve a link
-* [getCalendarRecording](#getcalendarrecording) - Retrieve a recording
-* [getCalendarWebinar](#getcalendarwebinar) - Retrieve a webinar
-* [listCalendarBusies](#listcalendarbusies) - List all busies
-* [listCalendarCalendars](#listcalendarcalendars) - List all calendars
-* [listCalendarEvents](#listcalendarevents) - List all events
-* [listCalendarLinks](#listcalendarlinks) - List all links
-* [listCalendarRecordings](#listcalendarrecordings) - List all recordings
-* [listCalendarWebinars](#listcalendarwebinars) - List all webinars
-* [patchCalendarCalendar](#patchcalendarcalendar) - Update a calendar
-* [patchCalendarEvent](#patchcalendarevent) - Update an event
-* [patchCalendarLink](#patchcalendarlink) - Update a link
-* [patchCalendarWebinar](#patchcalendarwebinar) - Update a webinar
-* [removeCalendarCalendar](#removecalendarcalendar) - Remove a calendar
-* [removeCalendarEvent](#removecalendarevent) - Remove an event
-* [removeCalendarLink](#removecalendarlink) - Remove a link
-* [removeCalendarWebinar](#removecalendarwebinar) - Remove a webinar
-* [updateCalendarCalendar](#updatecalendarcalendar) - Update a calendar
-* [updateCalendarEvent](#updatecalendarevent) - Update an event
-* [updateCalendarLink](#updatecalendarlink) - Update a link
-* [updateCalendarWebinar](#updatecalendarwebinar) - Update a webinar
+* [createCalendarCalendar2](#createcalendarcalendar2) - Create a calendar
+* [createCalendarEvent2](#createcalendarevent2) - Create an event
+* [createCalendarLink2](#createcalendarlink2) - Create a link
+* [createCalendarWebinar2](#createcalendarwebinar2) - Create a webinar
+* [getCalendarCalendar2](#getcalendarcalendar2) - Retrieve a calendar
+* [getCalendarEvent2](#getcalendarevent2) - Retrieve an event
+* [getCalendarLink2](#getcalendarlink2) - Retrieve a link
+* [getCalendarRecording2](#getcalendarrecording2) - Retrieve a recording
+* [getCalendarWebinar2](#getcalendarwebinar2) - Retrieve a webinar
+* [listCalendarBusies2](#listcalendarbusies2) - List all busies
+* [listCalendarCalendars2](#listcalendarcalendars2) - List all calendars
+* [listCalendarEvents2](#listcalendarevents2) - List all events
+* [listCalendarLinks2](#listcalendarlinks2) - List all links
+* [listCalendarRecordings2](#listcalendarrecordings2) - List all recordings
+* [listCalendarWebinars2](#listcalendarwebinars2) - List all webinars
+* [patchCalendarCalendar2](#patchcalendarcalendar2) - Update a calendar
+* [patchCalendarEvent2](#patchcalendarevent2) - Update an event
+* [patchCalendarLink2](#patchcalendarlink2) - Update a link
+* [patchCalendarWebinar2](#patchcalendarwebinar2) - Update a webinar
+* [removeCalendarCalendar2](#removecalendarcalendar2) - Remove a calendar
+* [removeCalendarEvent2](#removecalendarevent2) - Remove an event
+* [removeCalendarLink2](#removecalendarlink2) - Remove a link
+* [removeCalendarWebinar2](#removecalendarwebinar2) - Remove a webinar
+* [updateCalendarCalendar2](#updatecalendarcalendar2) - Update a calendar
+* [updateCalendarEvent2](#updatecalendarevent2) - Update an event
+* [updateCalendarLink2](#updatecalendarlink2) - Update a link
+* [updateCalendarWebinar2](#updatecalendarwebinar2) - Update a webinar
 
-## createCalendarCalendar
+## createCalendarCalendar2
 
 Create a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
+<!-- UsageSnippet language="php" operationID="createCalendarCalendar2" method="post" path="/calendar/{connection_id}/calendar" -->
 ```php
 declare(strict_types=1);
 
@@ -54,12 +54,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCalendarCalendarRequest(
+$request = new Operations\CreateCalendarCalendar2Request(
     calendarCalendar: new Shared\CalendarCalendar(),
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->createCalendarCalendar(
+$response = $sdk->calendar->createCalendarCalendar2(
     request: $request
 );
 
@@ -70,13 +70,13 @@ if ($response->calendarCalendar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateCalendarCalendarRequest](../../Models/Operations/CreateCalendarCalendarRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateCalendarCalendar2Request](../../Models/Operations/CreateCalendarCalendar2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateCalendarCalendarResponse](../../Models/Operations/CreateCalendarCalendarResponse.md)**
+**[?Operations\CreateCalendarCalendar2Response](../../Models/Operations/CreateCalendarCalendar2Response.md)**
 
 ### Errors
 
@@ -84,13 +84,13 @@ if ($response->calendarCalendar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCalendarEvent
+## createCalendarEvent2
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="createCalendarEvent2" method="post" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -106,12 +106,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCalendarEventRequest(
+$request = new Operations\CreateCalendarEvent2Request(
     calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->createCalendarEvent(
+$response = $sdk->calendar->createCalendarEvent2(
     request: $request
 );
 
@@ -122,13 +122,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateCalendarEventRequest](../../Models/Operations/CreateCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateCalendarEvent2Request](../../Models/Operations/CreateCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateCalendarEventResponse](../../Models/Operations/CreateCalendarEventResponse.md)**
+**[?Operations\CreateCalendarEvent2Response](../../Models/Operations/CreateCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -136,13 +136,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCalendarLink
+## createCalendarLink2
 
 Create a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="php" operationID="createCalendarLink2" method="post" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -158,14 +158,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCalendarLinkRequest(
+$request = new Operations\CreateCalendarLink2Request(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://misguided-thongs.info',
+        url: 'https://prestigious-fort.name/',
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->createCalendarLink(
+$response = $sdk->calendar->createCalendarLink2(
     request: $request
 );
 
@@ -176,13 +176,13 @@ if ($response->calendarLink !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateCalendarLinkRequest](../../Models/Operations/CreateCalendarLinkRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateCalendarLink2Request](../../Models/Operations/CreateCalendarLink2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateCalendarLinkResponse](../../Models/Operations/CreateCalendarLinkResponse.md)**
+**[?Operations\CreateCalendarLink2Response](../../Models/Operations/CreateCalendarLink2Response.md)**
 
 ### Errors
 
@@ -190,13 +190,13 @@ if ($response->calendarLink !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCalendarWebinar
+## createCalendarWebinar2
 
 Create a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="php" operationID="createCalendarWebinar2" method="post" path="/calendar/{connection_id}/webinar" -->
 ```php
 declare(strict_types=1);
 
@@ -212,12 +212,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCalendarWebinarRequest(
+$request = new Operations\CreateCalendarWebinar2Request(
     calendarWebinar: new Shared\CalendarWebinar(),
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->createCalendarWebinar(
+$response = $sdk->calendar->createCalendarWebinar2(
     request: $request
 );
 
@@ -228,13 +228,13 @@ if ($response->calendarWebinar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateCalendarWebinarRequest](../../Models/Operations/CreateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateCalendarWebinar2Request](../../Models/Operations/CreateCalendarWebinar2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateCalendarWebinarResponse](../../Models/Operations/CreateCalendarWebinarResponse.md)**
+**[?Operations\CreateCalendarWebinar2Response](../../Models/Operations/CreateCalendarWebinar2Response.md)**
 
 ### Errors
 
@@ -242,13 +242,13 @@ if ($response->calendarWebinar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarCalendar
+## getCalendarCalendar2
 
 Retrieve a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarCalendar2" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -263,12 +263,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarCalendarRequest(
+$request = new Operations\GetCalendarCalendar2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->getCalendarCalendar(
+$response = $sdk->calendar->getCalendarCalendar2(
     request: $request
 );
 
@@ -279,13 +279,13 @@ if ($response->calendarCalendar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetCalendarCalendarRequest](../../Models/Operations/GetCalendarCalendarRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetCalendarCalendar2Request](../../Models/Operations/GetCalendarCalendar2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetCalendarCalendarResponse](../../Models/Operations/GetCalendarCalendarResponse.md)**
+**[?Operations\GetCalendarCalendar2Response](../../Models/Operations/GetCalendarCalendar2Response.md)**
 
 ### Errors
 
@@ -293,13 +293,13 @@ if ($response->calendarCalendar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarEvent
+## getCalendarEvent2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarEvent2" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -314,12 +314,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarEventRequest(
+$request = new Operations\GetCalendarEvent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->getCalendarEvent(
+$response = $sdk->calendar->getCalendarEvent2(
     request: $request
 );
 
@@ -330,13 +330,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetCalendarEventRequest](../../Models/Operations/GetCalendarEventRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetCalendarEvent2Request](../../Models/Operations/GetCalendarEvent2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetCalendarEventResponse](../../Models/Operations/GetCalendarEventResponse.md)**
+**[?Operations\GetCalendarEvent2Response](../../Models/Operations/GetCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -344,13 +344,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarLink
+## getCalendarLink2
 
 Retrieve a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarLink2" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -365,12 +365,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarLinkRequest(
+$request = new Operations\GetCalendarLink2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->getCalendarLink(
+$response = $sdk->calendar->getCalendarLink2(
     request: $request
 );
 
@@ -381,13 +381,13 @@ if ($response->calendarLink !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetCalendarLinkRequest](../../Models/Operations/GetCalendarLinkRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetCalendarLink2Request](../../Models/Operations/GetCalendarLink2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetCalendarLinkResponse](../../Models/Operations/GetCalendarLinkResponse.md)**
+**[?Operations\GetCalendarLink2Response](../../Models/Operations/GetCalendarLink2Response.md)**
 
 ### Errors
 
@@ -395,13 +395,13 @@ if ($response->calendarLink !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarRecording
+## getCalendarRecording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarRecording2" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -416,12 +416,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarRecordingRequest(
+$request = new Operations\GetCalendarRecording2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->getCalendarRecording(
+$response = $sdk->calendar->getCalendarRecording2(
     request: $request
 );
 
@@ -432,13 +432,13 @@ if ($response->calendarRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetCalendarRecordingRequest](../../Models/Operations/GetCalendarRecordingRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetCalendarRecording2Request](../../Models/Operations/GetCalendarRecording2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetCalendarRecordingResponse](../../Models/Operations/GetCalendarRecordingResponse.md)**
+**[?Operations\GetCalendarRecording2Response](../../Models/Operations/GetCalendarRecording2Response.md)**
 
 ### Errors
 
@@ -446,13 +446,13 @@ if ($response->calendarRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCalendarWebinar
+## getCalendarWebinar2
 
 Retrieve a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCalendarWebinar2" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -467,12 +467,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCalendarWebinarRequest(
+$request = new Operations\GetCalendarWebinar2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->getCalendarWebinar(
+$response = $sdk->calendar->getCalendarWebinar2(
     request: $request
 );
 
@@ -483,13 +483,13 @@ if ($response->calendarWebinar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetCalendarWebinarRequest](../../Models/Operations/GetCalendarWebinarRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetCalendarWebinar2Request](../../Models/Operations/GetCalendarWebinar2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetCalendarWebinarResponse](../../Models/Operations/GetCalendarWebinarResponse.md)**
+**[?Operations\GetCalendarWebinar2Response](../../Models/Operations/GetCalendarWebinar2Response.md)**
 
 ### Errors
 
@@ -497,13 +497,13 @@ if ($response->calendarWebinar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarBusies
+## listCalendarBusies2
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="php" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
 ```php
 declare(strict_types=1);
 
@@ -518,11 +518,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarBusiesRequest(
+$request = new Operations\ListCalendarBusies2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarBusies(
+$response = $sdk->calendar->listCalendarBusies2(
     request: $request
 );
 
@@ -533,13 +533,13 @@ if ($response->calendarBusies !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListCalendarBusiesRequest](../../Models/Operations/ListCalendarBusiesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListCalendarBusies2Request](../../Models/Operations/ListCalendarBusies2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListCalendarBusiesResponse](../../Models/Operations/ListCalendarBusiesResponse.md)**
+**[?Operations\ListCalendarBusies2Response](../../Models/Operations/ListCalendarBusies2Response.md)**
 
 ### Errors
 
@@ -547,13 +547,13 @@ if ($response->calendarBusies !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarCalendars
+## listCalendarCalendars2
 
 List all calendars
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
+<!-- UsageSnippet language="php" operationID="listCalendarCalendars2" method="get" path="/calendar/{connection_id}/calendar" -->
 ```php
 declare(strict_types=1);
 
@@ -568,11 +568,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarCalendarsRequest(
+$request = new Operations\ListCalendarCalendars2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarCalendars(
+$response = $sdk->calendar->listCalendarCalendars2(
     request: $request
 );
 
@@ -583,13 +583,13 @@ if ($response->calendarCalendars !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListCalendarCalendarsRequest](../../Models/Operations/ListCalendarCalendarsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListCalendarCalendars2Request](../../Models/Operations/ListCalendarCalendars2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListCalendarCalendarsResponse](../../Models/Operations/ListCalendarCalendarsResponse.md)**
+**[?Operations\ListCalendarCalendars2Response](../../Models/Operations/ListCalendarCalendars2Response.md)**
 
 ### Errors
 
@@ -597,13 +597,13 @@ if ($response->calendarCalendars !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarEvents
+## listCalendarEvents2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="listCalendarEvents2" method="get" path="/calendar/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -618,11 +618,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarEventsRequest(
+$request = new Operations\ListCalendarEvents2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarEvents(
+$response = $sdk->calendar->listCalendarEvents2(
     request: $request
 );
 
@@ -633,13 +633,13 @@ if ($response->calendarEvents !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListCalendarEventsRequest](../../Models/Operations/ListCalendarEventsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListCalendarEvents2Request](../../Models/Operations/ListCalendarEvents2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListCalendarEventsResponse](../../Models/Operations/ListCalendarEventsResponse.md)**
+**[?Operations\ListCalendarEvents2Response](../../Models/Operations/ListCalendarEvents2Response.md)**
 
 ### Errors
 
@@ -647,13 +647,13 @@ if ($response->calendarEvents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarLinks
+## listCalendarLinks2
 
 List all links
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="php" operationID="listCalendarLinks2" method="get" path="/calendar/{connection_id}/link" -->
 ```php
 declare(strict_types=1);
 
@@ -668,11 +668,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarLinksRequest(
+$request = new Operations\ListCalendarLinks2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarLinks(
+$response = $sdk->calendar->listCalendarLinks2(
     request: $request
 );
 
@@ -683,13 +683,13 @@ if ($response->calendarLinks !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListCalendarLinksRequest](../../Models/Operations/ListCalendarLinksRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListCalendarLinks2Request](../../Models/Operations/ListCalendarLinks2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListCalendarLinksResponse](../../Models/Operations/ListCalendarLinksResponse.md)**
+**[?Operations\ListCalendarLinks2Response](../../Models/Operations/ListCalendarLinks2Response.md)**
 
 ### Errors
 
@@ -697,13 +697,13 @@ if ($response->calendarLinks !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarRecordings
+## listCalendarRecordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="listCalendarRecordings2" method="get" path="/calendar/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -718,11 +718,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarRecordingsRequest(
+$request = new Operations\ListCalendarRecordings2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarRecordings(
+$response = $sdk->calendar->listCalendarRecordings2(
     request: $request
 );
 
@@ -733,13 +733,13 @@ if ($response->calendarRecordings !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListCalendarRecordingsRequest](../../Models/Operations/ListCalendarRecordingsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListCalendarRecordings2Request](../../Models/Operations/ListCalendarRecordings2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListCalendarRecordingsResponse](../../Models/Operations/ListCalendarRecordingsResponse.md)**
+**[?Operations\ListCalendarRecordings2Response](../../Models/Operations/ListCalendarRecordings2Response.md)**
 
 ### Errors
 
@@ -747,13 +747,13 @@ if ($response->calendarRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCalendarWebinars
+## listCalendarWebinars2
 
 List all webinars
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="php" operationID="listCalendarWebinars2" method="get" path="/calendar/{connection_id}/webinar" -->
 ```php
 declare(strict_types=1);
 
@@ -768,11 +768,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarWebinarsRequest(
+$request = new Operations\ListCalendarWebinars2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->calendar->listCalendarWebinars(
+$response = $sdk->calendar->listCalendarWebinars2(
     request: $request
 );
 
@@ -783,13 +783,13 @@ if ($response->calendarWebinars !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListCalendarWebinarsRequest](../../Models/Operations/ListCalendarWebinarsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListCalendarWebinars2Request](../../Models/Operations/ListCalendarWebinars2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListCalendarWebinarsResponse](../../Models/Operations/ListCalendarWebinarsResponse.md)**
+**[?Operations\ListCalendarWebinars2Response](../../Models/Operations/ListCalendarWebinars2Response.md)**
 
 ### Errors
 
@@ -797,13 +797,13 @@ if ($response->calendarWebinars !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCalendarCalendar
+## patchCalendarCalendar2
 
 Update a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCalendarCalendar2" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -819,13 +819,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCalendarCalendarRequest(
+$request = new Operations\PatchCalendarCalendar2Request(
     calendarCalendar: new Shared\CalendarCalendar(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->patchCalendarCalendar(
+$response = $sdk->calendar->patchCalendarCalendar2(
     request: $request
 );
 
@@ -836,13 +836,13 @@ if ($response->calendarCalendar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchCalendarCalendarRequest](../../Models/Operations/PatchCalendarCalendarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchCalendarCalendar2Request](../../Models/Operations/PatchCalendarCalendar2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchCalendarCalendarResponse](../../Models/Operations/PatchCalendarCalendarResponse.md)**
+**[?Operations\PatchCalendarCalendar2Response](../../Models/Operations/PatchCalendarCalendar2Response.md)**
 
 ### Errors
 
@@ -850,13 +850,13 @@ if ($response->calendarCalendar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCalendarEvent
+## patchCalendarEvent2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCalendarEvent2" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -872,13 +872,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCalendarEventRequest(
+$request = new Operations\PatchCalendarEvent2Request(
     calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->patchCalendarEvent(
+$response = $sdk->calendar->patchCalendarEvent2(
     request: $request
 );
 
@@ -889,13 +889,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchCalendarEventRequest](../../Models/Operations/PatchCalendarEventRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchCalendarEvent2Request](../../Models/Operations/PatchCalendarEvent2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchCalendarEventResponse](../../Models/Operations/PatchCalendarEventResponse.md)**
+**[?Operations\PatchCalendarEvent2Response](../../Models/Operations/PatchCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -903,13 +903,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCalendarLink
+## patchCalendarLink2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCalendarLink2" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -925,15 +925,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCalendarLinkRequest(
+$request = new Operations\PatchCalendarLink2Request(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://warm-hexagon.name/',
+        url: 'https://probable-accelerator.info',
     ),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->patchCalendarLink(
+$response = $sdk->calendar->patchCalendarLink2(
     request: $request
 );
 
@@ -944,13 +944,13 @@ if ($response->calendarLink !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchCalendarLinkRequest](../../Models/Operations/PatchCalendarLinkRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchCalendarLink2Request](../../Models/Operations/PatchCalendarLink2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchCalendarLinkResponse](../../Models/Operations/PatchCalendarLinkResponse.md)**
+**[?Operations\PatchCalendarLink2Response](../../Models/Operations/PatchCalendarLink2Response.md)**
 
 ### Errors
 
@@ -958,13 +958,13 @@ if ($response->calendarLink !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCalendarWebinar
+## patchCalendarWebinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCalendarWebinar2" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -980,13 +980,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCalendarWebinarRequest(
+$request = new Operations\PatchCalendarWebinar2Request(
     calendarWebinar: new Shared\CalendarWebinar(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->patchCalendarWebinar(
+$response = $sdk->calendar->patchCalendarWebinar2(
     request: $request
 );
 
@@ -997,13 +997,13 @@ if ($response->calendarWebinar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchCalendarWebinarRequest](../../Models/Operations/PatchCalendarWebinarRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchCalendarWebinar2Request](../../Models/Operations/PatchCalendarWebinar2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchCalendarWebinarResponse](../../Models/Operations/PatchCalendarWebinarResponse.md)**
+**[?Operations\PatchCalendarWebinar2Response](../../Models/Operations/PatchCalendarWebinar2Response.md)**
 
 ### Errors
 
@@ -1011,13 +1011,13 @@ if ($response->calendarWebinar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCalendarCalendar
+## removeCalendarCalendar2
 
 Remove a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCalendarCalendar2" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1032,12 +1032,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCalendarCalendarRequest(
+$request = new Operations\RemoveCalendarCalendar2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->removeCalendarCalendar(
+$response = $sdk->calendar->removeCalendarCalendar2(
     request: $request
 );
 
@@ -1048,13 +1048,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveCalendarCalendarRequest](../../Models/Operations/RemoveCalendarCalendarRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveCalendarCalendar2Request](../../Models/Operations/RemoveCalendarCalendar2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveCalendarCalendarResponse](../../Models/Operations/RemoveCalendarCalendarResponse.md)**
+**[?Operations\RemoveCalendarCalendar2Response](../../Models/Operations/RemoveCalendarCalendar2Response.md)**
 
 ### Errors
 
@@ -1062,13 +1062,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCalendarEvent
+## removeCalendarEvent2
 
 Remove an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCalendarEvent2" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1083,12 +1083,63 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCalendarEventRequest(
+$request = new Operations\RemoveCalendarEvent2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->removeCalendarEvent(
+$response = $sdk->calendar->removeCalendarEvent2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveCalendarEvent2Request](../../Models/Operations/RemoveCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\RemoveCalendarEvent2Response](../../Models/Operations/RemoveCalendarEvent2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCalendarLink2
+
+Remove a link
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCalendarLink2" method="delete" path="/calendar/{connection_id}/link/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCalendarLink2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->calendar->removeCalendarLink2(
     request: $request
 );
 
@@ -1101,11 +1152,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveCalendarEventRequest](../../Models/Operations/RemoveCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\RemoveCalendarLink2Request](../../Models/Operations/RemoveCalendarLink2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveCalendarEventResponse](../../Models/Operations/RemoveCalendarEventResponse.md)**
+**[?Operations\RemoveCalendarLink2Response](../../Models/Operations/RemoveCalendarLink2Response.md)**
 
 ### Errors
 
@@ -1113,64 +1164,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCalendarLink
-
-Remove a link
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCalendarLinkRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->calendar->removeCalendarLink(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveCalendarLinkRequest](../../Models/Operations/RemoveCalendarLinkRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\RemoveCalendarLinkResponse](../../Models/Operations/RemoveCalendarLinkResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCalendarWebinar
+## removeCalendarWebinar2
 
 Remove a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCalendarWebinar2" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1185,12 +1185,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCalendarWebinarRequest(
+$request = new Operations\RemoveCalendarWebinar2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->removeCalendarWebinar(
+$response = $sdk->calendar->removeCalendarWebinar2(
     request: $request
 );
 
@@ -1201,13 +1201,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveCalendarWebinarRequest](../../Models/Operations/RemoveCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveCalendarWebinar2Request](../../Models/Operations/RemoveCalendarWebinar2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\RemoveCalendarWebinarResponse](../../Models/Operations/RemoveCalendarWebinarResponse.md)**
+**[?Operations\RemoveCalendarWebinar2Response](../../Models/Operations/RemoveCalendarWebinar2Response.md)**
 
 ### Errors
 
@@ -1215,13 +1215,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCalendarCalendar
+## updateCalendarCalendar2
 
 Update a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCalendarCalendar2" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1237,13 +1237,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCalendarCalendarRequest(
+$request = new Operations\UpdateCalendarCalendar2Request(
     calendarCalendar: new Shared\CalendarCalendar(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->updateCalendarCalendar(
+$response = $sdk->calendar->updateCalendarCalendar2(
     request: $request
 );
 
@@ -1254,13 +1254,13 @@ if ($response->calendarCalendar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateCalendarCalendarRequest](../../Models/Operations/UpdateCalendarCalendarRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateCalendarCalendar2Request](../../Models/Operations/UpdateCalendarCalendar2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateCalendarCalendarResponse](../../Models/Operations/UpdateCalendarCalendarResponse.md)**
+**[?Operations\UpdateCalendarCalendar2Response](../../Models/Operations/UpdateCalendarCalendar2Response.md)**
 
 ### Errors
 
@@ -1268,13 +1268,13 @@ if ($response->calendarCalendar !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCalendarEvent
+## updateCalendarEvent2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCalendarEvent2" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1290,13 +1290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCalendarEventRequest(
+$request = new Operations\UpdateCalendarEvent2Request(
     calendarEvent: new Shared\CalendarEvent(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->updateCalendarEvent(
+$response = $sdk->calendar->updateCalendarEvent2(
     request: $request
 );
 
@@ -1307,13 +1307,13 @@ if ($response->calendarEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateCalendarEventRequest](../../Models/Operations/UpdateCalendarEventRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateCalendarEvent2Request](../../Models/Operations/UpdateCalendarEvent2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateCalendarEventResponse](../../Models/Operations/UpdateCalendarEventResponse.md)**
+**[?Operations\UpdateCalendarEvent2Response](../../Models/Operations/UpdateCalendarEvent2Response.md)**
 
 ### Errors
 
@@ -1321,13 +1321,13 @@ if ($response->calendarEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCalendarLink
+## updateCalendarLink2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCalendarLink2" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1343,15 +1343,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCalendarLinkRequest(
+$request = new Operations\UpdateCalendarLink2Request(
     calendarLink: new Shared\CalendarLink(
-        url: 'https://partial-hydrocarbon.info',
+        url: 'https://soupy-extension.net/',
     ),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->updateCalendarLink(
+$response = $sdk->calendar->updateCalendarLink2(
     request: $request
 );
 
@@ -1362,13 +1362,13 @@ if ($response->calendarLink !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateCalendarLinkRequest](../../Models/Operations/UpdateCalendarLinkRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateCalendarLink2Request](../../Models/Operations/UpdateCalendarLink2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateCalendarLinkResponse](../../Models/Operations/UpdateCalendarLinkResponse.md)**
+**[?Operations\UpdateCalendarLink2Response](../../Models/Operations/UpdateCalendarLink2Response.md)**
 
 ### Errors
 
@@ -1376,13 +1376,13 @@ if ($response->calendarLink !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCalendarWebinar
+## updateCalendarWebinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCalendarWebinar2" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1398,13 +1398,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCalendarWebinarRequest(
+$request = new Operations\UpdateCalendarWebinar2Request(
     calendarWebinar: new Shared\CalendarWebinar(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->calendar->updateCalendarWebinar(
+$response = $sdk->calendar->updateCalendarWebinar2(
     request: $request
 );
 
@@ -1415,13 +1415,13 @@ if ($response->calendarWebinar !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateCalendarWebinarRequest](../../Models/Operations/UpdateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateCalendarWebinar2Request](../../Models/Operations/UpdateCalendarWebinar2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateCalendarWebinarResponse](../../Models/Operations/UpdateCalendarWebinarResponse.md)**
+**[?Operations\UpdateCalendarWebinar2Response](../../Models/Operations/UpdateCalendarWebinar2Response.md)**
 
 ### Errors
 

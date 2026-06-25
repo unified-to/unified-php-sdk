@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createHrisTimeoff](#createhristimeoff) - Create a timeoff
-* [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
-* [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
-* [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
-* [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
-* [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
+* [createHrisTimeoff2](#createhristimeoff2) - Create a timeoff
+* [getHrisTimeoff2](#gethristimeoff2) - Retrieve a timeoff
+* [listHrisTimeoffs2](#listhristimeoffs2) - List all timeoffs
+* [patchHrisTimeoff2](#patchhristimeoff2) - Update a timeoff
+* [removeHrisTimeoff2](#removehristimeoff2) - Remove a timeoff
+* [updateHrisTimeoff2](#updatehristimeoff2) - Update a timeoff
 
-## createHrisTimeoff
+## createHrisTimeoff2
 
 Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="php" operationID="createHrisTimeoff2" method="post" path="/hris/{connection_id}/timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -33,14 +33,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisTimeoffRequest(
+$request = new Operations\CreateHrisTimeoff2Request(
     hrisTimeoff: new Shared\HrisTimeoff(
         userId: '<id>',
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->timeoff->createHrisTimeoff(
+$response = $sdk->timeoff->createHrisTimeoff2(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->hrisTimeoff !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateHrisTimeoffRequest](../../Models/Operations/CreateHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisTimeoff2Request](../../Models/Operations/CreateHrisTimeoff2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateHrisTimeoffResponse](../../Models/Operations/CreateHrisTimeoffResponse.md)**
+**[?Operations\CreateHrisTimeoff2Response](../../Models/Operations/CreateHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->hrisTimeoff !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisTimeoff
+## getHrisTimeoff2
 
 Retrieve a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisTimeoff2" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisTimeoffRequest(
+$request = new Operations\GetHrisTimeoff2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->timeoff->getHrisTimeoff(
+$response = $sdk->timeoff->getHrisTimeoff2(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->hrisTimeoff !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetHrisTimeoffRequest](../../Models/Operations/GetHrisTimeoffRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisTimeoff2Request](../../Models/Operations/GetHrisTimeoff2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetHrisTimeoffResponse](../../Models/Operations/GetHrisTimeoffResponse.md)**
+**[?Operations\GetHrisTimeoff2Response](../../Models/Operations/GetHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->hrisTimeoff !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisTimeoffs
+## listHrisTimeoffs2
 
 List all timeoffs
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="php" operationID="listHrisTimeoffs2" method="get" path="/hris/{connection_id}/timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -137,11 +137,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisTimeoffsRequest(
+$request = new Operations\ListHrisTimeoffs2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->timeoff->listHrisTimeoffs(
+$response = $sdk->timeoff->listHrisTimeoffs2(
     request: $request
 );
 
@@ -152,13 +152,13 @@ if ($response->hrisTimeoffs !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListHrisTimeoffsRequest](../../Models/Operations/ListHrisTimeoffsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisTimeoffs2Request](../../Models/Operations/ListHrisTimeoffs2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListHrisTimeoffsResponse](../../Models/Operations/ListHrisTimeoffsResponse.md)**
+**[?Operations\ListHrisTimeoffs2Response](../../Models/Operations/ListHrisTimeoffs2Response.md)**
 
 ### Errors
 
@@ -166,13 +166,13 @@ if ($response->hrisTimeoffs !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisTimeoff
+## patchHrisTimeoff2
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisTimeoff2" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -188,7 +188,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisTimeoffRequest(
+$request = new Operations\PatchHrisTimeoff2Request(
     hrisTimeoff: new Shared\HrisTimeoff(
         userId: '<id>',
     ),
@@ -196,7 +196,7 @@ $request = new Operations\PatchHrisTimeoffRequest(
     id: '<id>',
 );
 
-$response = $sdk->timeoff->patchHrisTimeoff(
+$response = $sdk->timeoff->patchHrisTimeoff2(
     request: $request
 );
 
@@ -207,13 +207,13 @@ if ($response->hrisTimeoff !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchHrisTimeoffRequest](../../Models/Operations/PatchHrisTimeoffRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisTimeoff2Request](../../Models/Operations/PatchHrisTimeoff2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchHrisTimeoffResponse](../../Models/Operations/PatchHrisTimeoffResponse.md)**
+**[?Operations\PatchHrisTimeoff2Response](../../Models/Operations/PatchHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -221,13 +221,13 @@ if ($response->hrisTimeoff !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeHrisTimeoff
+## removeHrisTimeoff2
 
 Remove a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeHrisTimeoff" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeHrisTimeoff2" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -242,12 +242,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveHrisTimeoffRequest(
+$request = new Operations\RemoveHrisTimeoff2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->timeoff->removeHrisTimeoff(
+$response = $sdk->timeoff->removeHrisTimeoff2(
     request: $request
 );
 
@@ -258,13 +258,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveHrisTimeoffRequest](../../Models/Operations/RemoveHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisTimeoff2Request](../../Models/Operations/RemoveHrisTimeoff2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveHrisTimeoffResponse](../../Models/Operations/RemoveHrisTimeoffResponse.md)**
+**[?Operations\RemoveHrisTimeoff2Response](../../Models/Operations/RemoveHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -272,13 +272,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisTimeoff
+## updateHrisTimeoff2
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisTimeoff2" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -294,7 +294,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisTimeoffRequest(
+$request = new Operations\UpdateHrisTimeoff2Request(
     hrisTimeoff: new Shared\HrisTimeoff(
         userId: '<id>',
     ),
@@ -302,7 +302,7 @@ $request = new Operations\UpdateHrisTimeoffRequest(
     id: '<id>',
 );
 
-$response = $sdk->timeoff->updateHrisTimeoff(
+$response = $sdk->timeoff->updateHrisTimeoff2(
     request: $request
 );
 
@@ -313,13 +313,13 @@ if ($response->hrisTimeoff !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateHrisTimeoffRequest](../../Models/Operations/UpdateHrisTimeoffRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisTimeoff2Request](../../Models/Operations/UpdateHrisTimeoff2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateHrisTimeoffResponse](../../Models/Operations/UpdateHrisTimeoffResponse.md)**
+**[?Operations\UpdateHrisTimeoff2Response](../../Models/Operations/UpdateHrisTimeoff2Response.md)**
 
 ### Errors
 

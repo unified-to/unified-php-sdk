@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCrmDeal](#createcrmdeal) - Create a deal
-* [getCrmDeal](#getcrmdeal) - Retrieve a deal
-* [listCrmDeals](#listcrmdeals) - List all deals
-* [patchCrmDeal](#patchcrmdeal) - Update a deal
-* [removeCrmDeal](#removecrmdeal) - Remove a deal
-* [updateCrmDeal](#updatecrmdeal) - Update a deal
+* [createCrmDeal2](#createcrmdeal2) - Create a deal
+* [getCrmDeal2](#getcrmdeal2) - Retrieve a deal
+* [listCrmDeals2](#listcrmdeals2) - List all deals
+* [patchCrmDeal2](#patchcrmdeal2) - Update a deal
+* [removeCrmDeal2](#removecrmdeal2) - Remove a deal
+* [updateCrmDeal2](#updatecrmdeal2) - Update a deal
 
-## createCrmDeal
+## createCrmDeal2
 
 Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="php" operationID="createCrmDeal2" method="post" path="/crm/{connection_id}/deal" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCrmDealRequest(
+$request = new Operations\CreateCrmDeal2Request(
     crmDeal: new Shared\CrmDeal(),
     connectionId: '<id>',
 );
 
-$response = $sdk->deal->createCrmDeal(
+$response = $sdk->deal->createCrmDeal2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->crmDeal !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\CreateCrmDealRequest](../../Models/Operations/CreateCrmDealRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateCrmDeal2Request](../../Models/Operations/CreateCrmDeal2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\CreateCrmDealResponse](../../Models/Operations/CreateCrmDealResponse.md)**
+**[?Operations\CreateCrmDeal2Response](../../Models/Operations/CreateCrmDeal2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->crmDeal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCrmDeal
+## getCrmDeal2
 
 Retrieve a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCrmDeal2" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCrmDealRequest(
+$request = new Operations\GetCrmDeal2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deal->getCrmDeal(
+$response = $sdk->deal->getCrmDeal2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->crmDeal !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\GetCrmDealRequest](../../Models/Operations/GetCrmDealRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetCrmDeal2Request](../../Models/Operations/GetCrmDeal2Request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\GetCrmDealResponse](../../Models/Operations/GetCrmDealResponse.md)**
+**[?Operations\GetCrmDeal2Response](../../Models/Operations/GetCrmDeal2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->crmDeal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCrmDeals
+## listCrmDeals2
 
 List all deals
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="php" operationID="listCrmDeals2" method="get" path="/crm/{connection_id}/deal" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCrmDealsRequest(
+$request = new Operations\ListCrmDeals2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->deal->listCrmDeals(
+$response = $sdk->deal->listCrmDeals2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->crmDeals !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\ListCrmDealsRequest](../../Models/Operations/ListCrmDealsRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListCrmDeals2Request](../../Models/Operations/ListCrmDeals2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\ListCrmDealsResponse](../../Models/Operations/ListCrmDealsResponse.md)**
+**[?Operations\ListCrmDeals2Response](../../Models/Operations/ListCrmDeals2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->crmDeals !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCrmDeal
+## patchCrmDeal2
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmDeal2" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCrmDealRequest(
+$request = new Operations\PatchCrmDeal2Request(
     crmDeal: new Shared\CrmDeal(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deal->patchCrmDeal(
+$response = $sdk->deal->patchCrmDeal2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->crmDeal !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\PatchCrmDealRequest](../../Models/Operations/PatchCrmDealRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchCrmDeal2Request](../../Models/Operations/PatchCrmDeal2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\PatchCrmDealResponse](../../Models/Operations/PatchCrmDealResponse.md)**
+**[?Operations\PatchCrmDeal2Response](../../Models/Operations/PatchCrmDeal2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->crmDeal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCrmDeal
+## removeCrmDeal2
 
 Remove a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCrmDeal2" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCrmDealRequest(
+$request = new Operations\RemoveCrmDeal2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deal->removeCrmDeal(
+$response = $sdk->deal->removeCrmDeal2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\RemoveCrmDealRequest](../../Models/Operations/RemoveCrmDealRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveCrmDeal2Request](../../Models/Operations/RemoveCrmDeal2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\RemoveCrmDealResponse](../../Models/Operations/RemoveCrmDealResponse.md)**
+**[?Operations\RemoveCrmDeal2Response](../../Models/Operations/RemoveCrmDeal2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCrmDeal
+## updateCrmDeal2
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmDeal2" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCrmDealRequest(
+$request = new Operations\UpdateCrmDeal2Request(
     crmDeal: new Shared\CrmDeal(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->deal->updateCrmDeal(
+$response = $sdk->deal->updateCrmDeal2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->crmDeal !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\UpdateCrmDealRequest](../../Models/Operations/UpdateCrmDealRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateCrmDeal2Request](../../Models/Operations/UpdateCrmDeal2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\UpdateCrmDealResponse](../../Models/Operations/UpdateCrmDealResponse.md)**
+**[?Operations\UpdateCrmDeal2Response](../../Models/Operations/UpdateCrmDeal2Response.md)**
 
 ### Errors
 

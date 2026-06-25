@@ -16,9 +16,9 @@ enum CreativeType: string
     case Expandable = 'EXPANDABLE';
     case Video = 'VIDEO';
     case Native = 'NATIVE';
-    case Image = 'IMAGE';
     case Audio = 'AUDIO';
-    case Document = 'DOCUMENT';
     case PublisherHosted = 'PUBLISHER_HOSTED';
     case AssetBased = 'ASSET_BASED';
+    case Image = 'IMAGE';
+    case Document = 'DOCUMENT';
 }

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAtsInterview](#createatsinterview) - Create an interview
-* [getAtsInterview](#getatsinterview) - Retrieve an interview
-* [listAtsInterviews](#listatsinterviews) - List all interviews
-* [patchAtsInterview](#patchatsinterview) - Update an interview
-* [removeAtsInterview](#removeatsinterview) - Remove an interview
-* [updateAtsInterview](#updateatsinterview) - Update an interview
+* [createAtsInterview2](#createatsinterview2) - Create an interview
+* [getAtsInterview2](#getatsinterview2) - Retrieve an interview
+* [listAtsInterviews2](#listatsinterviews2) - List all interviews
+* [patchAtsInterview2](#patchatsinterview2) - Update an interview
+* [removeAtsInterview2](#removeatsinterview2) - Remove an interview
+* [updateAtsInterview2](#updateatsinterview2) - Update an interview
 
-## createAtsInterview
+## createAtsInterview2
 
 Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="createAtsInterview2" method="post" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsInterviewRequest(
+$request = new Operations\CreateAtsInterview2Request(
     atsInterview: new Shared\AtsInterview(),
     connectionId: '<id>',
 );
 
-$response = $sdk->interview->createAtsInterview(
+$response = $sdk->interview->createAtsInterview2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsInterviewRequest](../../Models/Operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateAtsInterview2Request](../../Models/Operations/CreateAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateAtsInterviewResponse](../../Models/Operations/CreateAtsInterviewResponse.md)**
+**[?Operations\CreateAtsInterview2Response](../../Models/Operations/CreateAtsInterview2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->atsInterview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsInterview
+## getAtsInterview2
 
 Retrieve an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAtsInterview2" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsInterviewRequest(
+$request = new Operations\GetAtsInterview2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->interview->getAtsInterview(
+$response = $sdk->interview->getAtsInterview2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsInterviewRequest](../../Models/Operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetAtsInterview2Request](../../Models/Operations/GetAtsInterview2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetAtsInterviewResponse](../../Models/Operations/GetAtsInterviewResponse.md)**
+**[?Operations\GetAtsInterview2Response](../../Models/Operations/GetAtsInterview2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->atsInterview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsInterviews
+## listAtsInterviews2
 
 List all interviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="listAtsInterviews2" method="get" path="/ats/{connection_id}/interview" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsInterviewsRequest(
+$request = new Operations\ListAtsInterviews2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->interview->listAtsInterviews(
+$response = $sdk->interview->listAtsInterviews2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->atsInterviews !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsInterviewsRequest](../../Models/Operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAtsInterviews2Request](../../Models/Operations/ListAtsInterviews2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListAtsInterviewsResponse](../../Models/Operations/ListAtsInterviewsResponse.md)**
+**[?Operations\ListAtsInterviews2Response](../../Models/Operations/ListAtsInterviews2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->atsInterviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsInterview
+## patchAtsInterview2
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsInterview2" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsInterviewRequest(
+$request = new Operations\PatchAtsInterview2Request(
     atsInterview: new Shared\AtsInterview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->interview->patchAtsInterview(
+$response = $sdk->interview->patchAtsInterview2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsInterviewRequest](../../Models/Operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchAtsInterview2Request](../../Models/Operations/PatchAtsInterview2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchAtsInterviewResponse](../../Models/Operations/PatchAtsInterviewResponse.md)**
+**[?Operations\PatchAtsInterview2Response](../../Models/Operations/PatchAtsInterview2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->atsInterview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsInterview
+## removeAtsInterview2
 
 Remove an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsInterview2" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsInterviewRequest(
+$request = new Operations\RemoveAtsInterview2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->interview->removeAtsInterview(
+$response = $sdk->interview->removeAtsInterview2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsInterviewRequest](../../Models/Operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveAtsInterview2Request](../../Models/Operations/RemoveAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveAtsInterviewResponse](../../Models/Operations/RemoveAtsInterviewResponse.md)**
+**[?Operations\RemoveAtsInterview2Response](../../Models/Operations/RemoveAtsInterview2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsInterview
+## updateAtsInterview2
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsInterview2" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsInterviewRequest(
+$request = new Operations\UpdateAtsInterview2Request(
     atsInterview: new Shared\AtsInterview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->interview->updateAtsInterview(
+$response = $sdk->interview->updateAtsInterview2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->atsInterview !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsInterviewRequest](../../Models/Operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateAtsInterview2Request](../../Models/Operations/UpdateAtsInterview2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateAtsInterviewResponse](../../Models/Operations/UpdateAtsInterviewResponse.md)**
+**[?Operations\UpdateAtsInterview2Response](../../Models/Operations/UpdateAtsInterview2Response.md)**
 
 ### Errors
 

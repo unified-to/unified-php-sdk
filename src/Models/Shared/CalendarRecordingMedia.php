@@ -55,6 +55,22 @@ class CalendarRecordingMedia
 
     /**
      *
+     * @var ?string $summary
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('summary')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $summary = null;
+
+    /**
+     *
+     * @var ?string $summaryDownloadUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('summary_download_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $summaryDownloadUrl = null;
+
+    /**
+     *
      * @var ?string $transcriptDownloadUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('transcript_download_url')]
@@ -77,17 +93,21 @@ class CalendarRecordingMedia
      * @param  ?string  $language
      * @param  ?string  $recordingDownloadUrl
      * @param  ?\DateTime  $startAt
+     * @param  ?string  $summary
+     * @param  ?string  $summaryDownloadUrl
      * @param  ?string  $transcriptDownloadUrl
      * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarRecordingTranscript>  $transcripts
      * @phpstan-pure
      */
-    public function __construct(?array $attendees = null, ?\DateTime $endAt = null, ?string $language = null, ?string $recordingDownloadUrl = null, ?\DateTime $startAt = null, ?string $transcriptDownloadUrl = null, ?array $transcripts = null)
+    public function __construct(?array $attendees = null, ?\DateTime $endAt = null, ?string $language = null, ?string $recordingDownloadUrl = null, ?\DateTime $startAt = null, ?string $summary = null, ?string $summaryDownloadUrl = null, ?string $transcriptDownloadUrl = null, ?array $transcripts = null)
     {
         $this->attendees = $attendees;
         $this->endAt = $endAt;
         $this->language = $language;
         $this->recordingDownloadUrl = $recordingDownloadUrl;
         $this->startAt = $startAt;
+        $this->summary = $summary;
+        $this->summaryDownloadUrl = $summaryDownloadUrl;
         $this->transcriptDownloadUrl = $transcriptDownloadUrl;
         $this->transcripts = $transcripts;
     }

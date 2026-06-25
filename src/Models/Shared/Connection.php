@@ -49,38 +49,6 @@ class Connection
 
     /**
      *
-     * @var ?string $authAwsArn
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('auth_aws_arn')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $authAwsArn = null;
-
-    /**
-     *
-     * @var ?string $authAzureKeyvaultId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('auth_azure_keyvault_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $authAzureKeyvaultId = null;
-
-    /**
-     *
-     * @var ?string $authGcpSecretName
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('auth_gcp_secret_name')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $authGcpSecretName = null;
-
-    /**
-     *
-     * @var ?string $authHashiVaultPath
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('auth_hashi_vault_path')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $authHashiVaultPath = null;
-
-    /**
-     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -180,10 +148,6 @@ class Connection
      * @param  string  $integrationType
      * @param  array<\Unified\Unified_to\Models\Shared\PropertyConnectionPermissions>  $permissions
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyConnectionAuth  $auth
-     * @param  ?string  $authAwsArn
-     * @param  ?string  $authAzureKeyvaultId
-     * @param  ?string  $authGcpSecretName
-     * @param  ?string  $authHashiVaultPath
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $environment
      * @param  ?string  $externalXref
@@ -198,16 +162,12 @@ class Connection
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?string $authAwsArn = null, ?string $authAzureKeyvaultId = null, ?string $authGcpSecretName = null, ?string $authHashiVaultPath = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?string $secretsmanagerId = null, ?string $secretsmanagerKey = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?string $secretsmanagerId = null, ?string $secretsmanagerKey = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;
         $this->permissions = $permissions;
         $this->auth = $auth;
-        $this->authAwsArn = $authAwsArn;
-        $this->authAzureKeyvaultId = $authAzureKeyvaultId;
-        $this->authGcpSecretName = $authGcpSecretName;
-        $this->authHashiVaultPath = $authHashiVaultPath;
         $this->createdAt = $createdAt;
         $this->externalXref = $externalXref;
         $this->id = $id;

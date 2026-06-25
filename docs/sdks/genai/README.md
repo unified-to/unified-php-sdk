@@ -4,18 +4,18 @@
 
 ### Available Operations
 
-* [createGenaiEmbedding](#creategenaiembedding) - Create an embedding
-* [createGenaiPrompt](#creategenaiprompt) - Create a prompt
-* [getGenaiModel](#getgenaimodel) - Retrieve a model
-* [listGenaiModels](#listgenaimodels) - List all models
+* [createGenaiEmbedding2](#creategenaiembedding2) - Create an embedding
+* [createGenaiPrompt2](#creategenaiprompt2) - Create a prompt
+* [getGenaiModel2](#getgenaimodel2) - Retrieve a model
+* [listGenaiModels2](#listgenaimodels2) - List all models
 
-## createGenaiEmbedding
+## createGenaiEmbedding2
 
 Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="php" operationID="createGenaiEmbedding2" method="post" path="/genai/{connection_id}/embedding" -->
 ```php
 declare(strict_types=1);
 
@@ -31,12 +31,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateGenaiEmbeddingRequest(
+$request = new Operations\CreateGenaiEmbedding2Request(
     genaiEmbedding: new Shared\GenaiEmbedding(),
     connectionId: '<id>',
 );
 
-$response = $sdk->genai->createGenaiEmbedding(
+$response = $sdk->genai->createGenaiEmbedding2(
     request: $request
 );
 
@@ -47,13 +47,13 @@ if ($response->genaiEmbedding !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateGenaiEmbeddingRequest](../../Models/Operations/CreateGenaiEmbeddingRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateGenaiEmbedding2Request](../../Models/Operations/CreateGenaiEmbedding2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateGenaiEmbeddingResponse](../../Models/Operations/CreateGenaiEmbeddingResponse.md)**
+**[?Operations\CreateGenaiEmbedding2Response](../../Models/Operations/CreateGenaiEmbedding2Response.md)**
 
 ### Errors
 
@@ -61,13 +61,13 @@ if ($response->genaiEmbedding !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createGenaiPrompt
+## createGenaiPrompt2
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="php" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
 ```php
 declare(strict_types=1);
 
@@ -83,12 +83,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateGenaiPromptRequest(
+$request = new Operations\CreateGenaiPrompt2Request(
     genaiPrompt: new Shared\GenaiPrompt(),
     connectionId: '<id>',
 );
 
-$response = $sdk->genai->createGenaiPrompt(
+$response = $sdk->genai->createGenaiPrompt2(
     request: $request
 );
 
@@ -99,13 +99,13 @@ if ($response->genaiPrompt !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateGenaiPromptRequest](../../Models/Operations/CreateGenaiPromptRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateGenaiPrompt2Request](../../Models/Operations/CreateGenaiPrompt2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateGenaiPromptResponse](../../Models/Operations/CreateGenaiPromptResponse.md)**
+**[?Operations\CreateGenaiPrompt2Response](../../Models/Operations/CreateGenaiPrompt2Response.md)**
 
 ### Errors
 
@@ -113,13 +113,13 @@ if ($response->genaiPrompt !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getGenaiModel
+## getGenaiModel2
 
 Retrieve a model
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getGenaiModel" method="get" path="/genai/{connection_id}/model/{id}" -->
+<!-- UsageSnippet language="php" operationID="getGenaiModel2" method="get" path="/genai/{connection_id}/model/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -134,12 +134,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetGenaiModelRequest(
+$request = new Operations\GetGenaiModel2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->genai->getGenaiModel(
+$response = $sdk->genai->getGenaiModel2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->genaiModel !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetGenaiModelRequest](../../Models/Operations/GetGenaiModelRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetGenaiModel2Request](../../Models/Operations/GetGenaiModel2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetGenaiModelResponse](../../Models/Operations/GetGenaiModelResponse.md)**
+**[?Operations\GetGenaiModel2Response](../../Models/Operations/GetGenaiModel2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->genaiModel !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listGenaiModels
+## listGenaiModels2
 
 List all models
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
+<!-- UsageSnippet language="php" operationID="listGenaiModels2" method="get" path="/genai/{connection_id}/model" -->
 ```php
 declare(strict_types=1);
 
@@ -185,11 +185,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListGenaiModelsRequest(
+$request = new Operations\ListGenaiModels2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->genai->listGenaiModels(
+$response = $sdk->genai->listGenaiModels2(
     request: $request
 );
 
@@ -200,13 +200,13 @@ if ($response->genaiModels !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListGenaiModelsRequest](../../Models/Operations/ListGenaiModelsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListGenaiModels2Request](../../Models/Operations/ListGenaiModels2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListGenaiModelsResponse](../../Models/Operations/ListGenaiModelsResponse.md)**
+**[?Operations\ListGenaiModels2Response](../../Models/Operations/ListGenaiModels2Response.md)**
 
 ### Errors
 

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
-* [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
-* [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
-* [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
-* [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
-* [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
+* [createAccountingTaxrate2](#createaccountingtaxrate2) - Create a taxrate
+* [getAccountingTaxrate2](#getaccountingtaxrate2) - Retrieve a taxrate
+* [listAccountingTaxrates2](#listaccountingtaxrates2) - List all taxrates
+* [patchAccountingTaxrate2](#patchaccountingtaxrate2) - Update a taxrate
+* [removeAccountingTaxrate2](#removeaccountingtaxrate2) - Remove a taxrate
+* [updateAccountingTaxrate2](#updateaccountingtaxrate2) - Update a taxrate
 
-## createAccountingTaxrate
+## createAccountingTaxrate2
 
 Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTaxrate2" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingTaxrateRequest(
+$request = new Operations\CreateAccountingTaxrate2Request(
     accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
 );
 
-$response = $sdk->taxrate->createAccountingTaxrate(
+$response = $sdk->taxrate->createAccountingTaxrate2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateAccountingTaxrateRequest](../../Models/Operations/CreateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateAccountingTaxrate2Request](../../Models/Operations/CreateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateAccountingTaxrateResponse](../../Models/Operations/CreateAccountingTaxrateResponse.md)**
+**[?Operations\CreateAccountingTaxrate2Response](../../Models/Operations/CreateAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingTaxrate
+## getAccountingTaxrate2
 
 Retrieve a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTaxrate2" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTaxrateRequest(
+$request = new Operations\GetAccountingTaxrate2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->taxrate->getAccountingTaxrate(
+$response = $sdk->taxrate->getAccountingTaxrate2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetAccountingTaxrateRequest](../../Models/Operations/GetAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAccountingTaxrate2Request](../../Models/Operations/GetAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetAccountingTaxrateResponse](../../Models/Operations/GetAccountingTaxrateResponse.md)**
+**[?Operations\GetAccountingTaxrate2Response](../../Models/Operations/GetAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTaxrates
+## listAccountingTaxrates2
 
 List all taxrates
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTaxrates2" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTaxratesRequest(
+$request = new Operations\ListAccountingTaxrates2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->taxrate->listAccountingTaxrates(
+$response = $sdk->taxrate->listAccountingTaxrates2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingTaxrates !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListAccountingTaxratesRequest](../../Models/Operations/ListAccountingTaxratesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAccountingTaxrates2Request](../../Models/Operations/ListAccountingTaxrates2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListAccountingTaxratesResponse](../../Models/Operations/ListAccountingTaxratesResponse.md)**
+**[?Operations\ListAccountingTaxrates2Response](../../Models/Operations/ListAccountingTaxrates2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingTaxrates !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingTaxrate
+## patchAccountingTaxrate2
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate2" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingTaxrateRequest(
+$request = new Operations\PatchAccountingTaxrate2Request(
     accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->taxrate->patchAccountingTaxrate(
+$response = $sdk->taxrate->patchAccountingTaxrate2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchAccountingTaxrateRequest](../../Models/Operations/PatchAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchAccountingTaxrate2Request](../../Models/Operations/PatchAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingTaxrateResponse](../../Models/Operations/PatchAccountingTaxrateResponse.md)**
+**[?Operations\PatchAccountingTaxrate2Response](../../Models/Operations/PatchAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingTaxrate
+## removeAccountingTaxrate2
 
 Remove a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingTaxrate2" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingTaxrateRequest(
+$request = new Operations\RemoveAccountingTaxrate2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->taxrate->removeAccountingTaxrate(
+$response = $sdk->taxrate->removeAccountingTaxrate2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveAccountingTaxrateRequest](../../Models/Operations/RemoveAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveAccountingTaxrate2Request](../../Models/Operations/RemoveAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\RemoveAccountingTaxrateResponse](../../Models/Operations/RemoveAccountingTaxrateResponse.md)**
+**[?Operations\RemoveAccountingTaxrate2Response](../../Models/Operations/RemoveAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingTaxrate
+## updateAccountingTaxrate2
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate2" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingTaxrateRequest(
+$request = new Operations\UpdateAccountingTaxrate2Request(
     accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->taxrate->updateAccountingTaxrate(
+$response = $sdk->taxrate->updateAccountingTaxrate2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateAccountingTaxrateRequest](../../Models/Operations/UpdateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\UpdateAccountingTaxrate2Request](../../Models/Operations/UpdateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\UpdateAccountingTaxrateResponse](../../Models/Operations/UpdateAccountingTaxrateResponse.md)**
+**[?Operations\UpdateAccountingTaxrate2Response](../../Models/Operations/UpdateAccountingTaxrate2Response.md)**
 
 ### Errors
 

@@ -17,4 +17,5 @@ enum DbType: string
     case Mssql = 'mssql';
     case Mariadb = 'mariadb';
     case Supabase = 'supabase';
+    case Snowflake = 'snowflake';
 }

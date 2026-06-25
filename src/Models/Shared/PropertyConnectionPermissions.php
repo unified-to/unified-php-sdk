@@ -237,6 +237,14 @@ enum PropertyConnectionPermissions: string
     case AdsInsertionorderWrite = 'ads_insertionorder_write';
     case AdsTargetRead = 'ads_target_read';
     case AdsPromotedRead = 'ads_promoted_read';
+    case AnalyticsPropertyRead = 'analytics_property_read';
+    case AnalyticsPropertyWrite = 'analytics_property_write';
+    case AnalyticsEventRead = 'analytics_event_read';
+    case AnalyticsEventWrite = 'analytics_event_write';
+    case AnalyticsSessionRead = 'analytics_session_read';
+    case AnalyticsVisitorRead = 'analytics_visitor_read';
+    case AnalyticsVisitorWrite = 'analytics_visitor_write';
+    case AnalyticsReportRead = 'analytics_report_read';
     case FormsFormRead = 'forms_form_read';
     case FormsFormWrite = 'forms_form_write';
     case FormsSubmissionRead = 'forms_submission_read';
@@ -263,4 +271,12 @@ enum PropertyConnectionPermissions: string
     case ClubsLocationWrite = 'clubs_location_write';
     case ClubsEventRead = 'clubs_event_read';
     case ClubsEventWrite = 'clubs_event_write';
+    case DatastoreDatabaseRead = 'datastore_database_read';
+    case DatastoreDatabaseWrite = 'datastore_database_write';
+    case DatastoreTableRead = 'datastore_table_read';
+    case DatastoreTableWrite = 'datastore_table_write';
+    case DatastoreRecordRead = 'datastore_record_read';
+    case DatastoreRecordWrite = 'datastore_record_write';
+    case DatastoreQueryRead = 'datastore_query_read';
+    case DatastoreQueryWrite = 'datastore_query_write';
 }

@@ -4,44 +4,44 @@
 
 ### Available Operations
 
-* [createRepoBranch](#createrepobranch) - Create a branch
-* [createRepoCommit](#createrepocommit) - Create a commit
-* [createRepoOrganization](#createrepoorganization) - Create an organization
-* [createRepoPullrequest](#createrepopullrequest) - Create a pullrequest
-* [createRepoRepository](#createreporepository) - Create a repository
-* [getRepoBranch](#getrepobranch) - Retrieve a branch
-* [getRepoCommit](#getrepocommit) - Retrieve a commit
-* [getRepoOrganization](#getrepoorganization) - Retrieve an organization
-* [getRepoPullrequest](#getrepopullrequest) - Retrieve a pullrequest
-* [getRepoRepository](#getreporepository) - Retrieve a repository
-* [listRepoBranches](#listrepobranches) - List all branches
-* [listRepoCommits](#listrepocommits) - List all commits
-* [listRepoOrganizations](#listrepoorganizations) - List all organizations
-* [listRepoPullrequests](#listrepopullrequests) - List all pullrequests
-* [listRepoRepositories](#listreporepositories) - List all repositories
-* [patchRepoBranch](#patchrepobranch) - Update a branch
-* [patchRepoCommit](#patchrepocommit) - Update a commit
-* [patchRepoOrganization](#patchrepoorganization) - Update an organization
-* [patchRepoPullrequest](#patchrepopullrequest) - Update a pullrequest
-* [patchRepoRepository](#patchreporepository) - Update a repository
-* [removeRepoBranch](#removerepobranch) - Remove a branch
-* [removeRepoCommit](#removerepocommit) - Remove a commit
-* [removeRepoOrganization](#removerepoorganization) - Remove an organization
-* [removeRepoPullrequest](#removerepopullrequest) - Remove a pullrequest
-* [removeRepoRepository](#removereporepository) - Remove a repository
-* [updateRepoBranch](#updaterepobranch) - Update a branch
-* [updateRepoCommit](#updaterepocommit) - Update a commit
-* [updateRepoOrganization](#updaterepoorganization) - Update an organization
-* [updateRepoPullrequest](#updaterepopullrequest) - Update a pullrequest
-* [updateRepoRepository](#updatereporepository) - Update a repository
+* [createRepoBranch2](#createrepobranch2) - Create a branch
+* [createRepoCommit2](#createrepocommit2) - Create a commit
+* [createRepoOrganization2](#createrepoorganization2) - Create an organization
+* [createRepoPullrequest2](#createrepopullrequest2) - Create a pullrequest
+* [createRepoRepository2](#createreporepository2) - Create a repository
+* [getRepoBranch2](#getrepobranch2) - Retrieve a branch
+* [getRepoCommit2](#getrepocommit2) - Retrieve a commit
+* [getRepoOrganization2](#getrepoorganization2) - Retrieve an organization
+* [getRepoPullrequest2](#getrepopullrequest2) - Retrieve a pullrequest
+* [getRepoRepository2](#getreporepository2) - Retrieve a repository
+* [listRepoBranches2](#listrepobranches2) - List all branches
+* [listRepoCommits2](#listrepocommits2) - List all commits
+* [listRepoOrganizations2](#listrepoorganizations2) - List all organizations
+* [listRepoPullrequests2](#listrepopullrequests2) - List all pullrequests
+* [listRepoRepositories2](#listreporepositories2) - List all repositories
+* [patchRepoBranch2](#patchrepobranch2) - Update a branch
+* [patchRepoCommit2](#patchrepocommit2) - Update a commit
+* [patchRepoOrganization2](#patchrepoorganization2) - Update an organization
+* [patchRepoPullrequest2](#patchrepopullrequest2) - Update a pullrequest
+* [patchRepoRepository2](#patchreporepository2) - Update a repository
+* [removeRepoBranch2](#removerepobranch2) - Remove a branch
+* [removeRepoCommit2](#removerepocommit2) - Remove a commit
+* [removeRepoOrganization2](#removerepoorganization2) - Remove an organization
+* [removeRepoPullrequest2](#removerepopullrequest2) - Remove a pullrequest
+* [removeRepoRepository2](#removereporepository2) - Remove a repository
+* [updateRepoBranch2](#updaterepobranch2) - Update a branch
+* [updateRepoCommit2](#updaterepocommit2) - Update a commit
+* [updateRepoOrganization2](#updaterepoorganization2) - Update an organization
+* [updateRepoPullrequest2](#updaterepopullrequest2) - Update a pullrequest
+* [updateRepoRepository2](#updatereporepository2) - Update a repository
 
-## createRepoBranch
+## createRepoBranch2
 
 Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="createRepoBranch2" method="post" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -57,7 +57,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateRepoBranchRequest(
+$request = new Operations\CreateRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -65,478 +65,11 @@ $request = new Operations\CreateRepoBranchRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->createRepoBranch(
+$response = $sdk->repo->createRepoBranch2(
     request: $request
 );
 
 if ($response->repoBranch !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateRepoBranchRequest](../../Models/Operations/CreateRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\CreateRepoBranchResponse](../../Models/Operations/CreateRepoBranchResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createRepoCommit
-
-Create a commit
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateRepoCommitRequest(
-    repoCommit: new Shared\RepoCommit(
-        repoId: '<id>',
-    ),
-    connectionId: '<id>',
-);
-
-$response = $sdk->repo->createRepoCommit(
-    request: $request
-);
-
-if ($response->repoCommit !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateRepoCommitRequest](../../Models/Operations/CreateRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\CreateRepoCommitResponse](../../Models/Operations/CreateRepoCommitResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createRepoOrganization
-
-Create an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->repo->createRepoOrganization(
-    request: $request
-);
-
-if ($response->repoOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateRepoOrganizationRequest](../../Models/Operations/CreateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\CreateRepoOrganizationResponse](../../Models/Operations/CreateRepoOrganizationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createRepoPullrequest
-
-Create a pullrequest
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->repo->createRepoPullrequest(
-    request: $request
-);
-
-if ($response->repoPullrequest !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateRepoPullrequestRequest](../../Models/Operations/CreateRepoPullrequestRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\CreateRepoPullrequestResponse](../../Models/Operations/CreateRepoPullrequestResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createRepoRepository
-
-Create a repository
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateRepoRepositoryRequest(
-    repoRepository: new Shared\RepoRepository(
-        name: '<value>',
-    ),
-    connectionId: '<id>',
-);
-
-$response = $sdk->repo->createRepoRepository(
-    request: $request
-);
-
-if ($response->repoRepository !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateRepoRepositoryRequest](../../Models/Operations/CreateRepoRepositoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\CreateRepoRepositoryResponse](../../Models/Operations/CreateRepoRepositoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getRepoBranch
-
-Retrieve a branch
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetRepoBranchRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->getRepoBranch(
-    request: $request
-);
-
-if ($response->repoBranch !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetRepoBranchRequest](../../Models/Operations/GetRepoBranchRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-### Response
-
-**[?Operations\GetRepoBranchResponse](../../Models/Operations/GetRepoBranchResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getRepoCommit
-
-Retrieve a commit
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetRepoCommitRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->getRepoCommit(
-    request: $request
-);
-
-if ($response->repoCommit !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetRepoCommitRequest](../../Models/Operations/GetRepoCommitRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-### Response
-
-**[?Operations\GetRepoCommitResponse](../../Models/Operations/GetRepoCommitResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getRepoOrganization
-
-Retrieve an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetRepoOrganizationRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->getRepoOrganization(
-    request: $request
-);
-
-if ($response->repoOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetRepoOrganizationRequest](../../Models/Operations/GetRepoOrganizationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\GetRepoOrganizationResponse](../../Models/Operations/GetRepoOrganizationResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getRepoPullrequest
-
-Retrieve a pullrequest
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetRepoPullrequestRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->getRepoPullrequest(
-    request: $request
-);
-
-if ($response->repoPullrequest !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetRepoPullrequestRequest](../../Models/Operations/GetRepoPullrequestRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\GetRepoPullrequestResponse](../../Models/Operations/GetRepoPullrequestResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getRepoRepository
-
-Retrieve a repository
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetRepoRepositoryRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->getRepoRepository(
-    request: $request
-);
-
-if ($response->repoRepository !== null) {
     // handle response
 }
 ```
@@ -545,11 +78,11 @@ if ($response->repoRepository !== null) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetRepoRepositoryRequest](../../Models/Operations/GetRepoRepositoryRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\CreateRepoBranch2Request](../../Models/Operations/CreateRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetRepoRepositoryResponse](../../Models/Operations/GetRepoRepositoryResponse.md)**
+**[?Operations\CreateRepoBranch2Response](../../Models/Operations/CreateRepoBranch2Response.md)**
 
 ### Errors
 
@@ -557,13 +90,225 @@ if ($response->repoRepository !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoBranches
+## createRepoCommit2
 
-List all branches
+Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="createRepoCommit2" method="post" path="/repo/{connection_id}/commit" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateRepoCommit2Request(
+    repoCommit: new Shared\RepoCommit(
+        repoId: '<id>',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->repo->createRepoCommit2(
+    request: $request
+);
+
+if ($response->repoCommit !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateRepoCommit2Request](../../Models/Operations/CreateRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreateRepoCommit2Response](../../Models/Operations/CreateRepoCommit2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createRepoOrganization2
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createRepoOrganization2" method="post" path="/repo/{connection_id}/organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateRepoOrganization2Request(
+    repoOrganization: new Shared\RepoOrganization(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->repo->createRepoOrganization2(
+    request: $request
+);
+
+if ($response->repoOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateRepoOrganization2Request](../../Models/Operations/CreateRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\CreateRepoOrganization2Response](../../Models/Operations/CreateRepoOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createRepoPullrequest2
+
+Create a pullrequest
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createRepoPullrequest2" method="post" path="/repo/{connection_id}/pullrequest" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateRepoPullrequest2Request(
+    repoPullrequest: new Shared\RepoPullrequest(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->repo->createRepoPullrequest2(
+    request: $request
+);
+
+if ($response->repoPullrequest !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateRepoPullrequest2Request](../../Models/Operations/CreateRepoPullrequest2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\CreateRepoPullrequest2Response](../../Models/Operations/CreateRepoPullrequest2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createRepoRepository2
+
+Create a repository
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createRepoRepository2" method="post" path="/repo/{connection_id}/repository" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateRepoRepository2Request(
+    repoRepository: new Shared\RepoRepository(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->repo->createRepoRepository2(
+    request: $request
+);
+
+if ($response->repoRepository !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateRepoRepository2Request](../../Models/Operations/CreateRepoRepository2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateRepoRepository2Response](../../Models/Operations/CreateRepoRepository2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getRepoBranch2
+
+Retrieve a branch
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getRepoBranch2" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -578,11 +323,266 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoBranchesRequest(
+$request = new Operations\GetRepoBranch2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->getRepoBranch2(
+    request: $request
+);
+
+if ($response->repoBranch !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetRepoBranch2Request](../../Models/Operations/GetRepoBranch2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetRepoBranch2Response](../../Models/Operations/GetRepoBranch2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getRepoCommit2
+
+Retrieve a commit
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getRepoCommit2" method="get" path="/repo/{connection_id}/commit/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetRepoCommit2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->getRepoCommit2(
+    request: $request
+);
+
+if ($response->repoCommit !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetRepoCommit2Request](../../Models/Operations/GetRepoCommit2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetRepoCommit2Response](../../Models/Operations/GetRepoCommit2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getRepoOrganization2
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getRepoOrganization2" method="get" path="/repo/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetRepoOrganization2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->getRepoOrganization2(
+    request: $request
+);
+
+if ($response->repoOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetRepoOrganization2Request](../../Models/Operations/GetRepoOrganization2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetRepoOrganization2Response](../../Models/Operations/GetRepoOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getRepoPullrequest2
+
+Retrieve a pullrequest
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getRepoPullrequest2" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetRepoPullrequest2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->getRepoPullrequest2(
+    request: $request
+);
+
+if ($response->repoPullrequest !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetRepoPullrequest2Request](../../Models/Operations/GetRepoPullrequest2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetRepoPullrequest2Response](../../Models/Operations/GetRepoPullrequest2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getRepoRepository2
+
+Retrieve a repository
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getRepoRepository2" method="get" path="/repo/{connection_id}/repository/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetRepoRepository2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->getRepoRepository2(
+    request: $request
+);
+
+if ($response->repoRepository !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetRepoRepository2Request](../../Models/Operations/GetRepoRepository2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetRepoRepository2Response](../../Models/Operations/GetRepoRepository2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listRepoBranches2
+
+List all branches
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listRepoBranches2" method="get" path="/repo/{connection_id}/branch" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListRepoBranches2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->listRepoBranches(
+$response = $sdk->repo->listRepoBranches2(
     request: $request
 );
 
@@ -593,13 +593,13 @@ if ($response->repoBranches !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListRepoBranchesRequest](../../Models/Operations/ListRepoBranchesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListRepoBranches2Request](../../Models/Operations/ListRepoBranches2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListRepoBranchesResponse](../../Models/Operations/ListRepoBranchesResponse.md)**
+**[?Operations\ListRepoBranches2Response](../../Models/Operations/ListRepoBranches2Response.md)**
 
 ### Errors
 
@@ -607,13 +607,13 @@ if ($response->repoBranches !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoCommits
+## listRepoCommits2
 
 List all commits
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="php" operationID="listRepoCommits2" method="get" path="/repo/{connection_id}/commit" -->
 ```php
 declare(strict_types=1);
 
@@ -628,11 +628,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoCommitsRequest(
+$request = new Operations\ListRepoCommits2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->listRepoCommits(
+$response = $sdk->repo->listRepoCommits2(
     request: $request
 );
 
@@ -643,13 +643,13 @@ if ($response->repoCommits !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListRepoCommitsRequest](../../Models/Operations/ListRepoCommitsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListRepoCommits2Request](../../Models/Operations/ListRepoCommits2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListRepoCommitsResponse](../../Models/Operations/ListRepoCommitsResponse.md)**
+**[?Operations\ListRepoCommits2Response](../../Models/Operations/ListRepoCommits2Response.md)**
 
 ### Errors
 
@@ -657,13 +657,13 @@ if ($response->repoCommits !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoOrganizations
+## listRepoOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listRepoOrganizations2" method="get" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -678,11 +678,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoOrganizationsRequest(
+$request = new Operations\ListRepoOrganizations2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->listRepoOrganizations(
+$response = $sdk->repo->listRepoOrganizations2(
     request: $request
 );
 
@@ -693,13 +693,13 @@ if ($response->repoOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListRepoOrganizationsRequest](../../Models/Operations/ListRepoOrganizationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListRepoOrganizations2Request](../../Models/Operations/ListRepoOrganizations2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListRepoOrganizationsResponse](../../Models/Operations/ListRepoOrganizationsResponse.md)**
+**[?Operations\ListRepoOrganizations2Response](../../Models/Operations/ListRepoOrganizations2Response.md)**
 
 ### Errors
 
@@ -707,13 +707,13 @@ if ($response->repoOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoPullrequests
+## listRepoPullrequests2
 
 List all pullrequests
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="php" operationID="listRepoPullrequests2" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -728,11 +728,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoPullrequestsRequest(
+$request = new Operations\ListRepoPullrequests2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->listRepoPullrequests(
+$response = $sdk->repo->listRepoPullrequests2(
     request: $request
 );
 
@@ -743,13 +743,13 @@ if ($response->repoPullrequests !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListRepoPullrequestsRequest](../../Models/Operations/ListRepoPullrequestsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListRepoPullrequests2Request](../../Models/Operations/ListRepoPullrequests2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListRepoPullrequestsResponse](../../Models/Operations/ListRepoPullrequestsResponse.md)**
+**[?Operations\ListRepoPullrequests2Response](../../Models/Operations/ListRepoPullrequests2Response.md)**
 
 ### Errors
 
@@ -757,13 +757,13 @@ if ($response->repoPullrequests !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoRepositories
+## listRepoRepositories2
 
 List all repositories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="php" operationID="listRepoRepositories2" method="get" path="/repo/{connection_id}/repository" -->
 ```php
 declare(strict_types=1);
 
@@ -778,11 +778,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoRepositoriesRequest(
+$request = new Operations\ListRepoRepositories2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->repo->listRepoRepositories(
+$response = $sdk->repo->listRepoRepositories2(
     request: $request
 );
 
@@ -793,13 +793,13 @@ if ($response->repoRepositories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListRepoRepositoriesRequest](../../Models/Operations/ListRepoRepositoriesRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListRepoRepositories2Request](../../Models/Operations/ListRepoRepositories2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListRepoRepositoriesResponse](../../Models/Operations/ListRepoRepositoriesResponse.md)**
+**[?Operations\ListRepoRepositories2Response](../../Models/Operations/ListRepoRepositories2Response.md)**
 
 ### Errors
 
@@ -807,13 +807,13 @@ if ($response->repoRepositories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoBranch
+## patchRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoBranch2" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -829,7 +829,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoBranchRequest(
+$request = new Operations\PatchRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -838,7 +838,7 @@ $request = new Operations\PatchRepoBranchRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->patchRepoBranch(
+$response = $sdk->repo->patchRepoBranch2(
     request: $request
 );
 
@@ -849,13 +849,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchRepoBranchRequest](../../Models/Operations/PatchRepoBranchRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchRepoBranch2Request](../../Models/Operations/PatchRepoBranch2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchRepoBranchResponse](../../Models/Operations/PatchRepoBranchResponse.md)**
+**[?Operations\PatchRepoBranch2Response](../../Models/Operations/PatchRepoBranch2Response.md)**
 
 ### Errors
 
@@ -863,13 +863,13 @@ if ($response->repoBranch !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoCommit
+## patchRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoCommit2" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -885,7 +885,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoCommitRequest(
+$request = new Operations\PatchRepoCommit2Request(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
     ),
@@ -893,7 +893,7 @@ $request = new Operations\PatchRepoCommitRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->patchRepoCommit(
+$response = $sdk->repo->patchRepoCommit2(
     request: $request
 );
 
@@ -904,13 +904,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchRepoCommitRequest](../../Models/Operations/PatchRepoCommitRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchRepoCommit2Request](../../Models/Operations/PatchRepoCommit2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchRepoCommitResponse](../../Models/Operations/PatchRepoCommitResponse.md)**
+**[?Operations\PatchRepoCommit2Response](../../Models/Operations/PatchRepoCommit2Response.md)**
 
 ### Errors
 
@@ -918,13 +918,13 @@ if ($response->repoCommit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoOrganization
+## patchRepoOrganization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization2" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -940,13 +940,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoOrganizationRequest(
+$request = new Operations\PatchRepoOrganization2Request(
     repoOrganization: new Shared\RepoOrganization(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->patchRepoOrganization(
+$response = $sdk->repo->patchRepoOrganization2(
     request: $request
 );
 
@@ -957,13 +957,13 @@ if ($response->repoOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchRepoOrganizationRequest](../../Models/Operations/PatchRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchRepoOrganization2Request](../../Models/Operations/PatchRepoOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchRepoOrganizationResponse](../../Models/Operations/PatchRepoOrganizationResponse.md)**
+**[?Operations\PatchRepoOrganization2Response](../../Models/Operations/PatchRepoOrganization2Response.md)**
 
 ### Errors
 
@@ -971,13 +971,13 @@ if ($response->repoOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoPullrequest
+## patchRepoPullrequest2
 
 Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoPullrequest2" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -993,13 +993,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoPullrequestRequest(
+$request = new Operations\PatchRepoPullrequest2Request(
     repoPullrequest: new Shared\RepoPullrequest(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->patchRepoPullrequest(
+$response = $sdk->repo->patchRepoPullrequest2(
     request: $request
 );
 
@@ -1010,13 +1010,13 @@ if ($response->repoPullrequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchRepoPullrequestRequest](../../Models/Operations/PatchRepoPullrequestRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchRepoPullrequest2Request](../../Models/Operations/PatchRepoPullrequest2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchRepoPullrequestResponse](../../Models/Operations/PatchRepoPullrequestResponse.md)**
+**[?Operations\PatchRepoPullrequest2Response](../../Models/Operations/PatchRepoPullrequest2Response.md)**
 
 ### Errors
 
@@ -1024,13 +1024,13 @@ if ($response->repoPullrequest !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoRepository
+## patchRepoRepository2
 
 Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoRepository2" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1046,7 +1046,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoRepositoryRequest(
+$request = new Operations\PatchRepoRepository2Request(
     repoRepository: new Shared\RepoRepository(
         name: '<value>',
     ),
@@ -1054,7 +1054,7 @@ $request = new Operations\PatchRepoRepositoryRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->patchRepoRepository(
+$response = $sdk->repo->patchRepoRepository2(
     request: $request
 );
 
@@ -1065,13 +1065,13 @@ if ($response->repoRepository !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchRepoRepositoryRequest](../../Models/Operations/PatchRepoRepositoryRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchRepoRepository2Request](../../Models/Operations/PatchRepoRepository2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchRepoRepositoryResponse](../../Models/Operations/PatchRepoRepositoryResponse.md)**
+**[?Operations\PatchRepoRepository2Response](../../Models/Operations/PatchRepoRepository2Response.md)**
 
 ### Errors
 
@@ -1079,13 +1079,13 @@ if ($response->repoRepository !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoBranch
+## removeRepoBranch2
 
 Remove a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoBranch2" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1100,12 +1100,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoBranchRequest(
+$request = new Operations\RemoveRepoBranch2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->removeRepoBranch(
+$response = $sdk->repo->removeRepoBranch2(
     request: $request
 );
 
@@ -1116,13 +1116,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveRepoBranchRequest](../../Models/Operations/RemoveRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveRepoBranch2Request](../../Models/Operations/RemoveRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveRepoBranchResponse](../../Models/Operations/RemoveRepoBranchResponse.md)**
+**[?Operations\RemoveRepoBranch2Response](../../Models/Operations/RemoveRepoBranch2Response.md)**
 
 ### Errors
 
@@ -1130,13 +1130,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoCommit
+## removeRepoCommit2
 
 Remove a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoCommit2" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1151,12 +1151,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoCommitRequest(
+$request = new Operations\RemoveRepoCommit2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->removeRepoCommit(
+$response = $sdk->repo->removeRepoCommit2(
     request: $request
 );
 
@@ -1167,13 +1167,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveRepoCommitRequest](../../Models/Operations/RemoveRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveRepoCommit2Request](../../Models/Operations/RemoveRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveRepoCommitResponse](../../Models/Operations/RemoveRepoCommitResponse.md)**
+**[?Operations\RemoveRepoCommit2Response](../../Models/Operations/RemoveRepoCommit2Response.md)**
 
 ### Errors
 
@@ -1181,13 +1181,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoOrganization
+## removeRepoOrganization2
 
 Remove an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoOrganization2" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1202,12 +1202,63 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoOrganizationRequest(
+$request = new Operations\RemoveRepoOrganization2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->removeRepoOrganization(
+$response = $sdk->repo->removeRepoOrganization2(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveRepoOrganization2Request](../../Models/Operations/RemoveRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveRepoOrganization2Response](../../Models/Operations/RemoveRepoOrganization2Response.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeRepoPullrequest2
+
+Remove a pullrequest
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeRepoPullrequest2" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveRepoPullrequest2Request(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->repo->removeRepoPullrequest2(
     request: $request
 );
 
@@ -1220,11 +1271,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveRepoOrganizationRequest](../../Models/Operations/RemoveRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\RemoveRepoPullrequest2Request](../../Models/Operations/RemoveRepoPullrequest2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\RemoveRepoOrganizationResponse](../../Models/Operations/RemoveRepoOrganizationResponse.md)**
+**[?Operations\RemoveRepoPullrequest2Response](../../Models/Operations/RemoveRepoPullrequest2Response.md)**
 
 ### Errors
 
@@ -1232,13 +1283,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoPullrequest
+## removeRepoRepository2
 
-Remove a pullrequest
+Remove a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoRepository2" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1253,12 +1304,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoPullrequestRequest(
+$request = new Operations\RemoveRepoRepository2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->removeRepoPullrequest(
+$response = $sdk->repo->removeRepoRepository2(
     request: $request
 );
 
@@ -1271,11 +1322,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveRepoPullrequestRequest](../../Models/Operations/RemoveRepoPullrequestRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\RemoveRepoRepository2Request](../../Models/Operations/RemoveRepoRepository2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveRepoPullrequestResponse](../../Models/Operations/RemoveRepoPullrequestResponse.md)**
+**[?Operations\RemoveRepoRepository2Response](../../Models/Operations/RemoveRepoRepository2Response.md)**
 
 ### Errors
 
@@ -1283,64 +1334,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoRepository
-
-Remove a repository
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveRepoRepositoryRequest(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->repo->removeRepoRepository(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveRepoRepositoryRequest](../../Models/Operations/RemoveRepoRepositoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\RemoveRepoRepositoryResponse](../../Models/Operations/RemoveRepoRepositoryResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateRepoBranch
+## updateRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoBranch2" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1356,7 +1356,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoBranchRequest(
+$request = new Operations\UpdateRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -1365,7 +1365,7 @@ $request = new Operations\UpdateRepoBranchRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->updateRepoBranch(
+$response = $sdk->repo->updateRepoBranch2(
     request: $request
 );
 
@@ -1376,13 +1376,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateRepoBranchRequest](../../Models/Operations/UpdateRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateRepoBranch2Request](../../Models/Operations/UpdateRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateRepoBranchResponse](../../Models/Operations/UpdateRepoBranchResponse.md)**
+**[?Operations\UpdateRepoBranch2Response](../../Models/Operations/UpdateRepoBranch2Response.md)**
 
 ### Errors
 
@@ -1390,13 +1390,13 @@ if ($response->repoBranch !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoCommit
+## updateRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoCommit2" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1412,7 +1412,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoCommitRequest(
+$request = new Operations\UpdateRepoCommit2Request(
     repoCommit: new Shared\RepoCommit(
         repoId: '<id>',
     ),
@@ -1420,7 +1420,7 @@ $request = new Operations\UpdateRepoCommitRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->updateRepoCommit(
+$response = $sdk->repo->updateRepoCommit2(
     request: $request
 );
 
@@ -1431,13 +1431,13 @@ if ($response->repoCommit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateRepoCommitRequest](../../Models/Operations/UpdateRepoCommitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateRepoCommit2Request](../../Models/Operations/UpdateRepoCommit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateRepoCommitResponse](../../Models/Operations/UpdateRepoCommitResponse.md)**
+**[?Operations\UpdateRepoCommit2Response](../../Models/Operations/UpdateRepoCommit2Response.md)**
 
 ### Errors
 
@@ -1445,13 +1445,13 @@ if ($response->repoCommit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoOrganization
+## updateRepoOrganization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization2" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1467,13 +1467,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoOrganizationRequest(
+$request = new Operations\UpdateRepoOrganization2Request(
     repoOrganization: new Shared\RepoOrganization(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->updateRepoOrganization(
+$response = $sdk->repo->updateRepoOrganization2(
     request: $request
 );
 
@@ -1484,13 +1484,13 @@ if ($response->repoOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateRepoOrganizationRequest](../../Models/Operations/UpdateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateRepoOrganization2Request](../../Models/Operations/UpdateRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateRepoOrganizationResponse](../../Models/Operations/UpdateRepoOrganizationResponse.md)**
+**[?Operations\UpdateRepoOrganization2Response](../../Models/Operations/UpdateRepoOrganization2Response.md)**
 
 ### Errors
 
@@ -1498,13 +1498,13 @@ if ($response->repoOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoPullrequest
+## updateRepoPullrequest2
 
 Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoPullrequest2" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1520,13 +1520,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoPullrequestRequest(
+$request = new Operations\UpdateRepoPullrequest2Request(
     repoPullrequest: new Shared\RepoPullrequest(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->repo->updateRepoPullrequest(
+$response = $sdk->repo->updateRepoPullrequest2(
     request: $request
 );
 
@@ -1537,13 +1537,13 @@ if ($response->repoPullrequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateRepoPullrequestRequest](../../Models/Operations/UpdateRepoPullrequestRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateRepoPullrequest2Request](../../Models/Operations/UpdateRepoPullrequest2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateRepoPullrequestResponse](../../Models/Operations/UpdateRepoPullrequestResponse.md)**
+**[?Operations\UpdateRepoPullrequest2Response](../../Models/Operations/UpdateRepoPullrequest2Response.md)**
 
 ### Errors
 
@@ -1551,13 +1551,13 @@ if ($response->repoPullrequest !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoRepository
+## updateRepoRepository2
 
 Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoRepository2" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1573,7 +1573,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoRepositoryRequest(
+$request = new Operations\UpdateRepoRepository2Request(
     repoRepository: new Shared\RepoRepository(
         name: '<value>',
     ),
@@ -1581,7 +1581,7 @@ $request = new Operations\UpdateRepoRepositoryRequest(
     id: '<id>',
 );
 
-$response = $sdk->repo->updateRepoRepository(
+$response = $sdk->repo->updateRepoRepository2(
     request: $request
 );
 
@@ -1592,13 +1592,13 @@ if ($response->repoRepository !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateRepoRepositoryRequest](../../Models/Operations/UpdateRepoRepositoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateRepoRepository2Request](../../Models/Operations/UpdateRepoRepository2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateRepoRepositoryResponse](../../Models/Operations/UpdateRepoRepositoryResponse.md)**
+**[?Operations\UpdateRepoRepository2Response](../../Models/Operations/UpdateRepoRepository2Response.md)**
 
 ### Errors
 

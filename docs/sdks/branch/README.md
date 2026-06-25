@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createRepoBranch](#createrepobranch) - Create a branch
-* [getRepoBranch](#getrepobranch) - Retrieve a branch
-* [listRepoBranches](#listrepobranches) - List all branches
-* [patchRepoBranch](#patchrepobranch) - Update a branch
-* [removeRepoBranch](#removerepobranch) - Remove a branch
-* [updateRepoBranch](#updaterepobranch) - Update a branch
+* [createRepoBranch2](#createrepobranch2) - Create a branch
+* [getRepoBranch2](#getrepobranch2) - Retrieve a branch
+* [listRepoBranches2](#listrepobranches2) - List all branches
+* [patchRepoBranch2](#patchrepobranch2) - Update a branch
+* [removeRepoBranch2](#removerepobranch2) - Remove a branch
+* [updateRepoBranch2](#updaterepobranch2) - Update a branch
 
-## createRepoBranch
+## createRepoBranch2
 
 Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="createRepoBranch2" method="post" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -33,7 +33,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateRepoBranchRequest(
+$request = new Operations\CreateRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -41,7 +41,7 @@ $request = new Operations\CreateRepoBranchRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->branch->createRepoBranch(
+$response = $sdk->branch->createRepoBranch2(
     request: $request
 );
 
@@ -52,13 +52,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateRepoBranchRequest](../../Models/Operations/CreateRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateRepoBranch2Request](../../Models/Operations/CreateRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateRepoBranchResponse](../../Models/Operations/CreateRepoBranchResponse.md)**
+**[?Operations\CreateRepoBranch2Response](../../Models/Operations/CreateRepoBranch2Response.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ if ($response->repoBranch !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getRepoBranch
+## getRepoBranch2
 
 Retrieve a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="getRepoBranch2" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -87,12 +87,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetRepoBranchRequest(
+$request = new Operations\GetRepoBranch2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->branch->getRepoBranch(
+$response = $sdk->branch->getRepoBranch2(
     request: $request
 );
 
@@ -103,13 +103,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetRepoBranchRequest](../../Models/Operations/GetRepoBranchRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetRepoBranch2Request](../../Models/Operations/GetRepoBranch2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetRepoBranchResponse](../../Models/Operations/GetRepoBranchResponse.md)**
+**[?Operations\GetRepoBranch2Response](../../Models/Operations/GetRepoBranch2Response.md)**
 
 ### Errors
 
@@ -117,13 +117,13 @@ if ($response->repoBranch !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoBranches
+## listRepoBranches2
 
 List all branches
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="listRepoBranches2" method="get" path="/repo/{connection_id}/branch" -->
 ```php
 declare(strict_types=1);
 
@@ -138,11 +138,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoBranchesRequest(
+$request = new Operations\ListRepoBranches2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->branch->listRepoBranches(
+$response = $sdk->branch->listRepoBranches2(
     request: $request
 );
 
@@ -153,13 +153,13 @@ if ($response->repoBranches !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListRepoBranchesRequest](../../Models/Operations/ListRepoBranchesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListRepoBranches2Request](../../Models/Operations/ListRepoBranches2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListRepoBranchesResponse](../../Models/Operations/ListRepoBranchesResponse.md)**
+**[?Operations\ListRepoBranches2Response](../../Models/Operations/ListRepoBranches2Response.md)**
 
 ### Errors
 
@@ -167,13 +167,13 @@ if ($response->repoBranches !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoBranch
+## patchRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoBranch2" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -189,7 +189,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoBranchRequest(
+$request = new Operations\PatchRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -198,7 +198,7 @@ $request = new Operations\PatchRepoBranchRequest(
     id: '<id>',
 );
 
-$response = $sdk->branch->patchRepoBranch(
+$response = $sdk->branch->patchRepoBranch2(
     request: $request
 );
 
@@ -209,13 +209,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchRepoBranchRequest](../../Models/Operations/PatchRepoBranchRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchRepoBranch2Request](../../Models/Operations/PatchRepoBranch2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchRepoBranchResponse](../../Models/Operations/PatchRepoBranchResponse.md)**
+**[?Operations\PatchRepoBranch2Response](../../Models/Operations/PatchRepoBranch2Response.md)**
 
 ### Errors
 
@@ -223,13 +223,13 @@ if ($response->repoBranch !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeRepoBranch
+## removeRepoBranch2
 
 Remove a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeRepoBranch2" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -244,12 +244,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveRepoBranchRequest(
+$request = new Operations\RemoveRepoBranch2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->branch->removeRepoBranch(
+$response = $sdk->branch->removeRepoBranch2(
     request: $request
 );
 
@@ -260,13 +260,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveRepoBranchRequest](../../Models/Operations/RemoveRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveRepoBranch2Request](../../Models/Operations/RemoveRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveRepoBranchResponse](../../Models/Operations/RemoveRepoBranchResponse.md)**
+**[?Operations\RemoveRepoBranch2Response](../../Models/Operations/RemoveRepoBranch2Response.md)**
 
 ### Errors
 
@@ -274,13 +274,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateRepoBranch
+## updateRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoBranch2" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -296,7 +296,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateRepoBranchRequest(
+$request = new Operations\UpdateRepoBranch2Request(
     repoBranch: new Shared\RepoBranch(
         name: '<value>',
         repoId: '<id>',
@@ -305,7 +305,7 @@ $request = new Operations\UpdateRepoBranchRequest(
     id: '<id>',
 );
 
-$response = $sdk->branch->updateRepoBranch(
+$response = $sdk->branch->updateRepoBranch2(
     request: $request
 );
 
@@ -316,13 +316,13 @@ if ($response->repoBranch !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateRepoBranchRequest](../../Models/Operations/UpdateRepoBranchRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateRepoBranch2Request](../../Models/Operations/UpdateRepoBranch2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateRepoBranchResponse](../../Models/Operations/UpdateRepoBranchResponse.md)**
+**[?Operations\UpdateRepoBranch2Response](../../Models/Operations/UpdateRepoBranch2Response.md)**
 
 ### Errors
 

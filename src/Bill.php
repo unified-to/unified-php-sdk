@@ -47,14 +47,14 @@ class Bill
     /**
      * Create a bill
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBillRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBill2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingBill2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingBill(Operations\CreateAccountingBillRequest $request, ?Options $options = null): Operations\CreateAccountingBillResponse
+    public function createAccountingBill2(Operations\CreateAccountingBill2Request $request, ?Options $options = null): Operations\CreateAccountingBill2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill', Operations\CreateAccountingBillRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill', Operations\CreateAccountingBill2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingBill', 'json');
@@ -63,11 +63,11 @@ class Bill
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingBillRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingBill2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingBill', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingBill2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Bill
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingBill', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingBillResponse(
+                $response = new Operations\CreateAccountingBill2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Bill
     /**
      * Retrieve a bill
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBillRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBill2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBill2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingBill(Operations\GetAccountingBillRequest $request, ?Options $options = null): Operations\GetAccountingBillResponse
+    public function getAccountingBill2(Operations\GetAccountingBill2Request $request, ?Options $options = null): Operations\GetAccountingBill2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\GetAccountingBillRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\GetAccountingBill2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingBillRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingBill2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingBill', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingBill2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Bill
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingBill', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingBillResponse(
+                $response = new Operations\GetAccountingBill2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Bill
     /**
      * List all bills
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBillsRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingBillsResponse
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBills2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBills2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingBills(Operations\ListAccountingBillsRequest $request, ?Options $options = null): Operations\ListAccountingBillsResponse
+    public function listAccountingBills2(Operations\ListAccountingBills2Request $request, ?Options $options = null): Operations\ListAccountingBills2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill', Operations\ListAccountingBillsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill', Operations\ListAccountingBills2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingBillsRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingBills2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingBills', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingBills2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Bill
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingBill>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingBillsResponse(
+                $response = new Operations\ListAccountingBills2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Bill
     /**
      * Update a bill
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBillRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBill2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingBill2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingBill(Operations\PatchAccountingBillRequest $request, ?Options $options = null): Operations\PatchAccountingBillResponse
+    public function patchAccountingBill2(Operations\PatchAccountingBill2Request $request, ?Options $options = null): Operations\PatchAccountingBill2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\PatchAccountingBillRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\PatchAccountingBill2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingBill', 'json');
@@ -257,11 +257,11 @@ class Bill
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingBillRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingBill2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingBill', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingBill2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Bill
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingBill', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingBillResponse(
+                $response = new Operations\PatchAccountingBill2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Bill
     /**
      * Remove a bill
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBillRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBill2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBill2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingBill(Operations\RemoveAccountingBillRequest $request, ?Options $options = null): Operations\RemoveAccountingBillResponse
+    public function removeAccountingBill2(Operations\RemoveAccountingBill2Request $request, ?Options $options = null): Operations\RemoveAccountingBill2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\RemoveAccountingBillRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\RemoveAccountingBill2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingBill', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingBill2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Bill
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingBillResponse(
+            return new Operations\RemoveAccountingBill2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Bill
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingBillResponse(
+            return new Operations\RemoveAccountingBill2Response(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Bill
     /**
      * Update a bill
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBillRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBillResponse
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBill2Request  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBill2Response
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingBill(Operations\UpdateAccountingBillRequest $request, ?Options $options = null): Operations\UpdateAccountingBillResponse
+    public function updateAccountingBill2(Operations\UpdateAccountingBill2Request $request, ?Options $options = null): Operations\UpdateAccountingBill2Response
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\UpdateAccountingBillRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/bill/{id}', Operations\UpdateAccountingBill2Request::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingBill', 'json');
@@ -382,11 +382,11 @@ class Bill
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingBillRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingBill2Request::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingBill', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingBill2', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Bill
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingBill', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingBillResponse(
+                $response = new Operations\UpdateAccountingBill2Response(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createPaymentSubscription](#createpaymentsubscription) - Create a subscription
-* [getPaymentSubscription](#getpaymentsubscription) - Retrieve a subscription
-* [listPaymentSubscriptions](#listpaymentsubscriptions) - List all subscriptions
-* [patchPaymentSubscription](#patchpaymentsubscription) - Update a subscription
-* [removePaymentSubscription](#removepaymentsubscription) - Remove a subscription
-* [updatePaymentSubscription](#updatepaymentsubscription) - Update a subscription
+* [createPaymentSubscription2](#createpaymentsubscription2) - Create a subscription
+* [getPaymentSubscription2](#getpaymentsubscription2) - Retrieve a subscription
+* [listPaymentSubscriptions2](#listpaymentsubscriptions2) - List all subscriptions
+* [patchPaymentSubscription2](#patchpaymentsubscription2) - Update a subscription
+* [removePaymentSubscription2](#removepaymentsubscription2) - Remove a subscription
+* [updatePaymentSubscription2](#updatepaymentsubscription2) - Update a subscription
 
-## createPaymentSubscription
+## createPaymentSubscription2
 
 Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="php" operationID="createPaymentSubscription2" method="post" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreatePaymentSubscriptionRequest(
+$request = new Operations\CreatePaymentSubscription2Request(
     paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
 );
 
-$response = $sdk->subscription->createPaymentSubscription(
+$response = $sdk->subscription->createPaymentSubscription2(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->paymentSubscription !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\CreatePaymentSubscriptionRequest](../../Models/Operations/CreatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\CreatePaymentSubscription2Request](../../Models/Operations/CreatePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\CreatePaymentSubscriptionResponse](../../Models/Operations/CreatePaymentSubscriptionResponse.md)**
+**[?Operations\CreatePaymentSubscription2Response](../../Models/Operations/CreatePaymentSubscription2Response.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->paymentSubscription !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getPaymentSubscription
+## getPaymentSubscription2
 
 Retrieve a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="getPaymentSubscription2" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetPaymentSubscriptionRequest(
+$request = new Operations\GetPaymentSubscription2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->subscription->getPaymentSubscription(
+$response = $sdk->subscription->getPaymentSubscription2(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->paymentSubscription !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\GetPaymentSubscriptionRequest](../../Models/Operations/GetPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetPaymentSubscription2Request](../../Models/Operations/GetPaymentSubscription2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetPaymentSubscriptionResponse](../../Models/Operations/GetPaymentSubscriptionResponse.md)**
+**[?Operations\GetPaymentSubscription2Response](../../Models/Operations/GetPaymentSubscription2Response.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->paymentSubscription !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listPaymentSubscriptions
+## listPaymentSubscriptions2
 
 List all subscriptions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="php" operationID="listPaymentSubscriptions2" method="get" path="/payment/{connection_id}/subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListPaymentSubscriptionsRequest(
+$request = new Operations\ListPaymentSubscriptions2Request(
     connectionId: '<id>',
 );
 
-$response = $sdk->subscription->listPaymentSubscriptions(
+$response = $sdk->subscription->listPaymentSubscriptions2(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->paymentSubscriptions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListPaymentSubscriptionsRequest](../../Models/Operations/ListPaymentSubscriptionsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\ListPaymentSubscriptions2Request](../../Models/Operations/ListPaymentSubscriptions2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\ListPaymentSubscriptionsResponse](../../Models/Operations/ListPaymentSubscriptionsResponse.md)**
+**[?Operations\ListPaymentSubscriptions2Response](../../Models/Operations/ListPaymentSubscriptions2Response.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->paymentSubscriptions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchPaymentSubscription
+## patchPaymentSubscription2
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchPaymentSubscription2" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchPaymentSubscriptionRequest(
+$request = new Operations\PatchPaymentSubscription2Request(
     paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->subscription->patchPaymentSubscription(
+$response = $sdk->subscription->patchPaymentSubscription2(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->paymentSubscription !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\PatchPaymentSubscriptionRequest](../../Models/Operations/PatchPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\PatchPaymentSubscription2Request](../../Models/Operations/PatchPaymentSubscription2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\PatchPaymentSubscriptionResponse](../../Models/Operations/PatchPaymentSubscriptionResponse.md)**
+**[?Operations\PatchPaymentSubscription2Response](../../Models/Operations/PatchPaymentSubscription2Response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->paymentSubscription !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removePaymentSubscription
+## removePaymentSubscription2
 
 Remove a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="removePaymentSubscription2" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemovePaymentSubscriptionRequest(
+$request = new Operations\RemovePaymentSubscription2Request(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->subscription->removePaymentSubscription(
+$response = $sdk->subscription->removePaymentSubscription2(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\RemovePaymentSubscriptionRequest](../../Models/Operations/RemovePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\RemovePaymentSubscription2Request](../../Models/Operations/RemovePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\RemovePaymentSubscriptionResponse](../../Models/Operations/RemovePaymentSubscriptionResponse.md)**
+**[?Operations\RemovePaymentSubscription2Response](../../Models/Operations/RemovePaymentSubscription2Response.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updatePaymentSubscription
+## updatePaymentSubscription2
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="updatePaymentSubscription2" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdatePaymentSubscriptionRequest(
+$request = new Operations\UpdatePaymentSubscription2Request(
     paymentSubscription: new Shared\PaymentSubscription(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->subscription->updatePaymentSubscription(
+$response = $sdk->subscription->updatePaymentSubscription2(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->paymentSubscription !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\UpdatePaymentSubscriptionRequest](../../Models/Operations/UpdatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\UpdatePaymentSubscription2Request](../../Models/Operations/UpdatePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\UpdatePaymentSubscriptionResponse](../../Models/Operations/UpdatePaymentSubscriptionResponse.md)**
+**[?Operations\UpdatePaymentSubscription2Response](../../Models/Operations/UpdatePaymentSubscription2Response.md)**
 
 ### Errors
 
