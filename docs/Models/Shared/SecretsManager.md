@@ -1,0 +1,15 @@
+# SecretsManager
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `auth`                                                                 | array<string, *string*>                                                | :heavy_check_mark:                                                     | secrets-manager specific authentication values                         |
+| `createdAt`                                                            | [\DateTime](https://www.php.net/manual/en/class.datetime.php)          | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `dcs`                                                                  | array<*string*>                                                        | :heavy_minus_sign:                                                     | data-regions                                                           |
+| `id`                                                                   | *?string*                                                              | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `name`                                                                 | *string*                                                               | :heavy_check_mark:                                                     | N/A                                                                    |
+| `type`                                                                 | [Shared\SecretsManagerType](../../Models/Shared/SecretsManagerType.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `updatedAt`                                                            | [\DateTime](https://www.php.net/manual/en/class.datetime.php)          | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `workspaceId`                                                          | *?string*                                                              | :heavy_minus_sign:                                                     | N/A                                                                    |

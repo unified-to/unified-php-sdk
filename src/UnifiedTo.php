@@ -320,6 +320,8 @@ class UnifiedTo
 
     public Webhook $webhook;
 
+    public Secretsmanager $secretsmanager;
+
     public Verification $verification;
 
     public Request $request;
@@ -486,6 +488,7 @@ class UnifiedTo
         $this->login = new Login($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
+        $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);
         $this->verification = new Verification($this->sdkConfiguration);
         $this->request = new Request($this->sdkConfiguration);
         $this->initHooks();
