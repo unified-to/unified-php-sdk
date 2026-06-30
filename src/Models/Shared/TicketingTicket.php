@@ -13,14 +13,6 @@ class TicketingTicket
 {
     /**
      *
-     * @var ?string $category
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('category')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $category = null;
-
-    /**
-     *
      * @var ?string $categoryId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('category_id')]
@@ -58,6 +50,14 @@ class TicketingTicket
     #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $description = null;
+
+    /**
+     *
+     * @var ?\DateTime $dueAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('due_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $dueAt = null;
 
     /**
      *
@@ -153,12 +153,12 @@ class TicketingTicket
     public ?string $userId = null;
 
     /**
-     * @param  ?string  $category
      * @param  ?string  $categoryId
      * @param  ?\DateTime  $closedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $customerId
      * @param  ?string  $description
+     * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
      * @param  ?string  $priority
      * @param  ?array<string, mixed>  $raw
@@ -172,14 +172,14 @@ class TicketingTicket
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $category = null, ?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
+    public function __construct(?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {
-        $this->category = $category;
         $this->categoryId = $categoryId;
         $this->closedAt = $closedAt;
         $this->createdAt = $createdAt;
         $this->customerId = $customerId;
         $this->description = $description;
+        $this->dueAt = $dueAt;
         $this->id = $id;
         $this->priority = $priority;
         $this->raw = $raw;

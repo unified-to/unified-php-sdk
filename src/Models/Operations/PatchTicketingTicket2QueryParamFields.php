@@ -21,11 +21,11 @@ enum PatchTicketingTicket2QueryParamFields: string
     case ClosedAt = 'closed_at';
     case Priority = 'priority';
     case CategoryId = 'category_id';
-    case Category = 'category';
     case Source = 'source';
     case SourceRef = 'source_ref';
     case Tags = 'tags';
     case UserId = 'user_id';
     case Url = 'url';
+    case DueAt = 'due_at';
     case Raw = 'raw';
 }

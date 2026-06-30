@@ -17,6 +17,7 @@ enum GetMartechMember2QueryParamFields: string
     case Name = 'name';
     case FirstName = 'first_name';
     case LastName = 'last_name';
+    case Company = 'company';
     case Emails = 'emails';
     case ListIds = 'list_ids';
     case Tags = 'tags';
