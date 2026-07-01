@@ -49,22 +49,21 @@ class AdsReportMetrics
 
     /**
      *
-     * @var float|string|null $value
+     * @var ?float $value
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('value')]
-    #[\Speakeasy\Serializer\Annotation\Type('float|string|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public float|string|null $value = null;
+    public ?float $value = null;
 
     /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAd  $ad
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaign  $campaign
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup  $group
      * @param  ?\Unified\Unified_to\Models\Shared\AdsReportMetricsType  $type
-     * @param  float|string|null  $value
+     * @param  ?float  $value
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsAd $ad = null, ?PropertyAdsReportMetricsCampaign $campaign = null, ?PropertyAdsReportMetricsGroup $group = null, ?AdsReportMetricsType $type = null, float|string|null $value = null)
+    public function __construct(?PropertyAdsReportMetricsAd $ad = null, ?PropertyAdsReportMetricsCampaign $campaign = null, ?PropertyAdsReportMetricsGroup $group = null, ?AdsReportMetricsType $type = null, ?float $value = null)
     {
         $this->ad = $ad;
         $this->campaign = $campaign;

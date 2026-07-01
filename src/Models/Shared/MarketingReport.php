@@ -85,6 +85,30 @@ class MarketingReport
 
     /**
      *
+     * @var ?float $humanOpenRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('human_open_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $humanOpenRate = null;
+
+    /**
+     *
+     * @var ?float $humanOpensTotal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('human_opens_total')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $humanOpensTotal = null;
+
+    /**
+     *
+     * @var ?float $humanUniqueOpens
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('human_unique_opens')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $humanUniqueOpens = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -225,6 +249,9 @@ class MarketingReport
      * @param  ?float  $forwardsCount
      * @param  ?float  $forwardsOpens
      * @param  ?float  $hardBounces
+     * @param  ?float  $humanOpenRate
+     * @param  ?float  $humanOpensTotal
+     * @param  ?float  $humanUniqueOpens
      * @param  ?string  $id
      * @param  ?\DateTime  $lastClickAt
      * @param  ?\DateTime  $lastOpenAt
@@ -243,7 +270,7 @@ class MarketingReport
      * @param  ?float  $unsubscribed
      * @phpstan-pure
      */
-    public function __construct(?float $abuseReports = null, ?string $campaignId = null, ?float $clickRate = null, ?float $clicksTotal = null, ?float $emailsSent = null, ?\DateTime $endAt = null, ?float $forwardsCount = null, ?float $forwardsOpens = null, ?float $hardBounces = null, ?string $id = null, ?\DateTime $lastClickAt = null, ?\DateTime $lastOpenAt = null, ?array $links = null, ?string $listId = null, ?float $openRate = null, ?float $opensTotal = null, ?array $raw = null, ?\DateTime $sentAt = null, ?float $softBounces = null, ?\DateTime $startAt = null, ?float $syntaxErrors = null, ?float $uniqueClicks = null, ?float $uniqueOpens = null, ?float $uniqueSubscriberClicks = null, ?float $unsubscribed = null)
+    public function __construct(?float $abuseReports = null, ?string $campaignId = null, ?float $clickRate = null, ?float $clicksTotal = null, ?float $emailsSent = null, ?\DateTime $endAt = null, ?float $forwardsCount = null, ?float $forwardsOpens = null, ?float $hardBounces = null, ?float $humanOpenRate = null, ?float $humanOpensTotal = null, ?float $humanUniqueOpens = null, ?string $id = null, ?\DateTime $lastClickAt = null, ?\DateTime $lastOpenAt = null, ?array $links = null, ?string $listId = null, ?float $openRate = null, ?float $opensTotal = null, ?array $raw = null, ?\DateTime $sentAt = null, ?float $softBounces = null, ?\DateTime $startAt = null, ?float $syntaxErrors = null, ?float $uniqueClicks = null, ?float $uniqueOpens = null, ?float $uniqueSubscriberClicks = null, ?float $unsubscribed = null)
     {
         $this->abuseReports = $abuseReports;
         $this->campaignId = $campaignId;
@@ -254,6 +281,9 @@ class MarketingReport
         $this->forwardsCount = $forwardsCount;
         $this->forwardsOpens = $forwardsOpens;
         $this->hardBounces = $hardBounces;
+        $this->humanOpenRate = $humanOpenRate;
+        $this->humanOpensTotal = $humanOpensTotal;
+        $this->humanUniqueOpens = $humanUniqueOpens;
         $this->id = $id;
         $this->lastClickAt = $lastClickAt;
         $this->lastOpenAt = $lastOpenAt;

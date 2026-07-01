@@ -93,6 +93,8 @@ enum AdsReportMetricsType: string
     case CrossDeviceConversions = 'CROSS_DEVICE_CONVERSIONS';
     case AbsoluteTopImpressionShare = 'ABSOLUTE_TOP_IMPRESSION_SHARE';
     case TopImpressionShare = 'TOP_IMPRESSION_SHARE';
+    case AbsoluteTopImpressionRatePercent = 'ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT';
+    case TopImpressionRatePercent = 'TOP_IMPRESSION_RATE_PERCENT';
     case VideoFullscreens = 'VIDEO_FULLSCREENS';
     case VideoPauses = 'VIDEO_PAUSES';
     case VideoMutes = 'VIDEO_MUTES';
@@ -126,9 +128,6 @@ enum AdsReportMetricsType: string
     case ActiveViewVisible10S = 'ACTIVE_VIEW_VISIBLE_10S';
     case NotMeasurableImpressions = 'NOT_MEASURABLE_IMPRESSIONS';
     case NotViewableImpressions = 'NOT_VIEWABLE_IMPRESSIONS';
-    case PublisherPlatform = 'PUBLISHER_PLATFORM';
-    case PlatformPosition = 'PLATFORM_POSITION';
-    case ImpressionDevice = 'IMPRESSION_DEVICE';
     case OneDVIEW = '1D_VIEW';
     case OneDCLICK = '1D_CLICK';
     case SevenDVIEW = '7D_VIEW';

@@ -746,6 +746,7 @@ if ($response->accountingAccount !== null) {
 * [listCrmDeals2](docs/sdks/crm/README.md#listcrmdeals2) - List all deals
 * [listCrmEvents2](docs/sdks/crm/README.md#listcrmevents2) - List all events
 * [listCrmLeads2](docs/sdks/crm/README.md#listcrmleads2) - List all leads
+* [listCrmPicklists2](docs/sdks/crm/README.md#listcrmpicklists2) - List all picklists
 * [listCrmPipelines2](docs/sdks/crm/README.md#listcrmpipelines2) - List all pipelines
 * [patchCrmCompany2](docs/sdks/crm/README.md#patchcrmcompany2) - Update a company
 * [patchCrmContact2](docs/sdks/crm/README.md#patchcrmcontact2) - Update a contact
@@ -1423,6 +1424,10 @@ if ($response->accountingAccount !== null) {
 ### [Person](docs/sdks/person/README.md)
 
 * [listEnrichPeople2](docs/sdks/person/README.md#listenrichpeople2) - Retrieve enrichment information for a person
+
+### [Picklist](docs/sdks/picklist/README.md)
+
+* [listCrmPicklists2](docs/sdks/picklist/README.md#listcrmpicklists2) - List all picklists
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 

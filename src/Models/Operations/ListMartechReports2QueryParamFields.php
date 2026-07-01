@@ -35,5 +35,8 @@ enum ListMartechReports2QueryParamFields: string
     case ClickRate = 'click_rate';
     case LastClickAt = 'last_click_at';
     case Links = 'links';
+    case HumanOpensTotal = 'human_opens_total';
+    case HumanUniqueOpens = 'human_unique_opens';
+    case HumanOpenRate = 'human_open_rate';
     case Raw = 'raw';
 }

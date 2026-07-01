@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListHrisTimeoffs2Request
+class ListCrmPicklists2Request
 {
     /**
      * ID of the connection
@@ -20,25 +20,9 @@ class ListHrisTimeoffs2Request
     public string $connectionId;
 
     /**
-     * The company ID to filter by (reference to HrisCompany)
-     *
-     * @var ?string $companyId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=company_id')]
-    public ?string $companyId = null;
-
-    /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     *
-     * @var ?string $endLt
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
-    public ?string $endLt = null;
-
-    /**
      * Fields to return
      *
-     * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeoffs2QueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmPicklists2QueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,14 +72,6 @@ class ListHrisTimeoffs2Request
     public ?string $sort = null;
 
     /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     *
-     * @var ?string $startGte
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
-    public ?string $startGte = null;
-
-    /**
      *
      * @var ?string $type
      */
@@ -111,35 +87,21 @@ class ListHrisTimeoffs2Request
     public ?string $updatedGte = null;
 
     /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     *
-     * @var ?string $userId
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
-    public ?string $userId = null;
-
-    /**
      * @param  string  $connectionId
-     * @param  ?string  $companyId
-     * @param  ?string  $endLt
-     * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisTimeoffs2QueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmPicklists2QueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
-     * @param  ?string  $startGte
      * @param  ?string  $type
      * @param  ?string  $updatedGte
-     * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
-        $this->companyId = $companyId;
-        $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
@@ -147,9 +109,7 @@ class ListHrisTimeoffs2Request
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
-        $this->startGte = $startGte;
         $this->type = $type;
         $this->updatedGte = $updatedGte;
-        $this->userId = $userId;
     }
 }

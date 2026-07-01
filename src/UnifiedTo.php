@@ -158,6 +158,8 @@ class UnifiedTo
 
     public Lead $lead;
 
+    public Picklist $picklist;
+
     public Pipeline $pipeline;
 
     public Datastore $datastore;
@@ -407,6 +409,7 @@ class UnifiedTo
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);
+        $this->picklist = new Picklist($this->sdkConfiguration);
         $this->pipeline = new Pipeline($this->sdkConfiguration);
         $this->datastore = new Datastore($this->sdkConfiguration);
         $this->database = new Database($this->sdkConfiguration);
