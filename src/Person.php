@@ -47,22 +47,22 @@ class Person
     /**
      * Retrieve enrichment information for a person
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeople2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListEnrichPeople2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichPeopleRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichPeopleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichPeople2(Operations\ListEnrichPeople2Request $request, ?Options $options = null): Operations\ListEnrichPeople2Response
+    public function listEnrichPeople(Operations\ListEnrichPeopleRequest $request, ?Options $options = null): Operations\ListEnrichPeopleResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', Operations\ListEnrichPeople2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/person', Operations\ListEnrichPeopleRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListEnrichPeople2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListEnrichPeopleRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listEnrichPeople2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listEnrichPeople', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Person
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\EnrichPerson', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListEnrichPeople2Response(
+                $response = new Operations\ListEnrichPeopleResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

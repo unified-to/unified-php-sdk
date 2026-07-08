@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createFormsForm2](#createformsform2) - Create a form
-* [getFormsForm2](#getformsform2) - Retrieve a form
-* [getFormsSubmission2](#getformssubmission2) - Retrieve a submission
-* [listFormsForms2](#listformsforms2) - List all forms
-* [listFormsSubmissions2](#listformssubmissions2) - List all submissions
-* [patchFormsForm2](#patchformsform2) - Update a form
-* [removeFormsForm2](#removeformsform2) - Remove a form
-* [updateFormsForm2](#updateformsform2) - Update a form
+* [createFormsForm](#createformsform) - Create a form
+* [getFormsForm](#getformsform) - Retrieve a form
+* [getFormsSubmission](#getformssubmission) - Retrieve a submission
+* [listFormsForms](#listformsforms) - List all forms
+* [listFormsSubmissions](#listformssubmissions) - List all submissions
+* [patchFormsForm](#patchformsform) - Update a form
+* [removeFormsForm](#removeformsform) - Remove a form
+* [updateFormsForm](#updateformsform) - Update a form
 
-## createFormsForm2
+## createFormsForm
 
 Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createFormsForm2" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="php" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
 ```php
 declare(strict_types=1);
 
@@ -35,12 +35,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateFormsForm2Request(
+$request = new Operations\CreateFormsFormRequest(
     formsForm: new Shared\FormsForm(),
     connectionId: '<id>',
 );
 
-$response = $sdk->forms->createFormsForm2(
+$response = $sdk->forms->createFormsForm(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->formsForm !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateFormsForm2Request](../../Models/Operations/CreateFormsForm2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateFormsFormRequest](../../Models/Operations/CreateFormsFormRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateFormsForm2Response](../../Models/Operations/CreateFormsForm2Response.md)**
+**[?Operations\CreateFormsFormResponse](../../Models/Operations/CreateFormsFormResponse.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->formsForm !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getFormsForm2
+## getFormsForm
 
 Retrieve a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getFormsForm2" method="get" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="php" operationID="getFormsForm" method="get" path="/forms/{connection_id}/form/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetFormsForm2Request(
+$request = new Operations\GetFormsFormRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->forms->getFormsForm2(
+$response = $sdk->forms->getFormsForm(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->formsForm !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetFormsForm2Request](../../Models/Operations/GetFormsForm2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetFormsFormRequest](../../Models/Operations/GetFormsFormRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetFormsForm2Response](../../Models/Operations/GetFormsForm2Response.md)**
+**[?Operations\GetFormsFormResponse](../../Models/Operations/GetFormsFormResponse.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->formsForm !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getFormsSubmission2
+## getFormsSubmission
 
 Retrieve a submission
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getFormsSubmission2" method="get" path="/forms/{connection_id}/submission/{id}" -->
+<!-- UsageSnippet language="php" operationID="getFormsSubmission" method="get" path="/forms/{connection_id}/submission/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -137,12 +137,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetFormsSubmission2Request(
+$request = new Operations\GetFormsSubmissionRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->forms->getFormsSubmission2(
+$response = $sdk->forms->getFormsSubmission(
     request: $request
 );
 
@@ -153,13 +153,13 @@ if ($response->formsSubmission !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetFormsSubmission2Request](../../Models/Operations/GetFormsSubmission2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetFormsSubmissionRequest](../../Models/Operations/GetFormsSubmissionRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetFormsSubmission2Response](../../Models/Operations/GetFormsSubmission2Response.md)**
+**[?Operations\GetFormsSubmissionResponse](../../Models/Operations/GetFormsSubmissionResponse.md)**
 
 ### Errors
 
@@ -167,13 +167,13 @@ if ($response->formsSubmission !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listFormsForms2
+## listFormsForms
 
 List all forms
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listFormsForms2" method="get" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="php" operationID="listFormsForms" method="get" path="/forms/{connection_id}/form" -->
 ```php
 declare(strict_types=1);
 
@@ -188,11 +188,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListFormsForms2Request(
+$request = new Operations\ListFormsFormsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->forms->listFormsForms2(
+$response = $sdk->forms->listFormsForms(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->formsForms !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListFormsForms2Request](../../Models/Operations/ListFormsForms2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListFormsFormsRequest](../../Models/Operations/ListFormsFormsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListFormsForms2Response](../../Models/Operations/ListFormsForms2Response.md)**
+**[?Operations\ListFormsFormsResponse](../../Models/Operations/ListFormsFormsResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->formsForms !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listFormsSubmissions2
+## listFormsSubmissions
 
 List all submissions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listFormsSubmissions2" method="get" path="/forms/{connection_id}/submission" -->
+<!-- UsageSnippet language="php" operationID="listFormsSubmissions" method="get" path="/forms/{connection_id}/submission" -->
 ```php
 declare(strict_types=1);
 
@@ -238,11 +238,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListFormsSubmissions2Request(
+$request = new Operations\ListFormsSubmissionsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->forms->listFormsSubmissions2(
+$response = $sdk->forms->listFormsSubmissions(
     request: $request
 );
 
@@ -253,13 +253,13 @@ if ($response->formsSubmissions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListFormsSubmissions2Request](../../Models/Operations/ListFormsSubmissions2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListFormsSubmissionsRequest](../../Models/Operations/ListFormsSubmissionsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListFormsSubmissions2Response](../../Models/Operations/ListFormsSubmissions2Response.md)**
+**[?Operations\ListFormsSubmissionsResponse](../../Models/Operations/ListFormsSubmissionsResponse.md)**
 
 ### Errors
 
@@ -267,13 +267,13 @@ if ($response->formsSubmissions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchFormsForm2
+## patchFormsForm
 
 Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchFormsForm2" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -289,13 +289,117 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchFormsForm2Request(
+$request = new Operations\PatchFormsFormRequest(
     formsForm: new Shared\FormsForm(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->forms->patchFormsForm2(
+$response = $sdk->forms->patchFormsForm(
+    request: $request
+);
+
+if ($response->formsForm !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchFormsFormRequest](../../Models/Operations/PatchFormsFormRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\PatchFormsFormResponse](../../Models/Operations/PatchFormsFormResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeFormsForm
+
+Remove a form
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeFormsForm" method="delete" path="/forms/{connection_id}/form/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveFormsFormRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->forms->removeFormsForm(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveFormsFormRequest](../../Models/Operations/RemoveFormsFormRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\RemoveFormsFormResponse](../../Models/Operations/RemoveFormsFormResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateFormsForm
+
+Update a form
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateFormsFormRequest(
+    formsForm: new Shared\FormsForm(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->forms->updateFormsForm(
     request: $request
 );
 
@@ -308,115 +412,11 @@ if ($response->formsForm !== null) {
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchFormsForm2Request](../../Models/Operations/PatchFormsForm2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `$request`                                                                             | [Operations\UpdateFormsFormRequest](../../Models/Operations/UpdateFormsFormRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\PatchFormsForm2Response](../../Models/Operations/PatchFormsForm2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeFormsForm2
-
-Remove a form
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeFormsForm2" method="delete" path="/forms/{connection_id}/form/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveFormsForm2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->forms->removeFormsForm2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveFormsForm2Request](../../Models/Operations/RemoveFormsForm2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\RemoveFormsForm2Response](../../Models/Operations/RemoveFormsForm2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateFormsForm2
-
-Update a form
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateFormsForm2" method="put" path="/forms/{connection_id}/form/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateFormsForm2Request(
-    formsForm: new Shared\FormsForm(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->forms->updateFormsForm2(
-    request: $request
-);
-
-if ($response->formsForm !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateFormsForm2Request](../../Models/Operations/UpdateFormsForm2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\UpdateFormsForm2Response](../../Models/Operations/UpdateFormsForm2Response.md)**
+**[?Operations\UpdateFormsFormResponse](../../Models/Operations/UpdateFormsFormResponse.md)**
 
 ### Errors
 

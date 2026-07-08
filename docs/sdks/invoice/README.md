@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingInvoice2](#createaccountinginvoice2) - Create an invoice
-* [getAccountingInvoice2](#getaccountinginvoice2) - Retrieve an invoice
-* [listAccountingInvoices2](#listaccountinginvoices2) - List all invoices
-* [patchAccountingInvoice2](#patchaccountinginvoice2) - Update an invoice
-* [removeAccountingInvoice2](#removeaccountinginvoice2) - Remove an invoice
-* [updateAccountingInvoice2](#updateaccountinginvoice2) - Update an invoice
+* [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
+* [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
+* [listAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
+* [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
+* [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 
-## createAccountingInvoice2
+## createAccountingInvoice
 
 Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingInvoice2" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingInvoice2Request(
+$request = new Operations\CreateAccountingInvoiceRequest(
     accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
 );
 
-$response = $sdk->invoice->createAccountingInvoice2(
+$response = $sdk->invoice->createAccountingInvoice(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingInvoice2Request](../../Models/Operations/CreateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingInvoiceRequest](../../Models/Operations/CreateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingInvoice2Response](../../Models/Operations/CreateAccountingInvoice2Response.md)**
+**[?Operations\CreateAccountingInvoiceResponse](../../Models/Operations/CreateAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingInvoice2
+## getAccountingInvoice
 
 Retrieve an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingInvoice2" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingInvoice2Request(
+$request = new Operations\GetAccountingInvoiceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->invoice->getAccountingInvoice2(
+$response = $sdk->invoice->getAccountingInvoice(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingInvoice2Request](../../Models/Operations/GetAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingInvoiceRequest](../../Models/Operations/GetAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingInvoice2Response](../../Models/Operations/GetAccountingInvoice2Response.md)**
+**[?Operations\GetAccountingInvoiceResponse](../../Models/Operations/GetAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingInvoices2
+## listAccountingInvoices
 
 List all invoices
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingInvoices2" method="get" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingInvoices2Request(
+$request = new Operations\ListAccountingInvoicesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->invoice->listAccountingInvoices2(
+$response = $sdk->invoice->listAccountingInvoices(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingInvoices !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingInvoices2Request](../../Models/Operations/ListAccountingInvoices2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingInvoicesRequest](../../Models/Operations/ListAccountingInvoicesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingInvoices2Response](../../Models/Operations/ListAccountingInvoices2Response.md)**
+**[?Operations\ListAccountingInvoicesResponse](../../Models/Operations/ListAccountingInvoicesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingInvoices !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingInvoice2
+## patchAccountingInvoice
 
 Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingInvoice2" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingInvoice2Request(
+$request = new Operations\PatchAccountingInvoiceRequest(
     accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->invoice->patchAccountingInvoice2(
+$response = $sdk->invoice->patchAccountingInvoice(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingInvoice2Request](../../Models/Operations/PatchAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingInvoiceRequest](../../Models/Operations/PatchAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchAccountingInvoice2Response](../../Models/Operations/PatchAccountingInvoice2Response.md)**
+**[?Operations\PatchAccountingInvoiceResponse](../../Models/Operations/PatchAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingInvoice2
+## removeAccountingInvoice
 
 Remove an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingInvoice2" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingInvoice2Request(
+$request = new Operations\RemoveAccountingInvoiceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->invoice->removeAccountingInvoice2(
+$response = $sdk->invoice->removeAccountingInvoice(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingInvoice2Request](../../Models/Operations/RemoveAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingInvoiceRequest](../../Models/Operations/RemoveAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveAccountingInvoice2Response](../../Models/Operations/RemoveAccountingInvoice2Response.md)**
+**[?Operations\RemoveAccountingInvoiceResponse](../../Models/Operations/RemoveAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingInvoice2
+## updateAccountingInvoice
 
 Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingInvoice2" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingInvoice2Request(
+$request = new Operations\UpdateAccountingInvoiceRequest(
     accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->invoice->updateAccountingInvoice2(
+$response = $sdk->invoice->updateAccountingInvoice(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingInvoice2Request](../../Models/Operations/UpdateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateAccountingInvoiceRequest](../../Models/Operations/UpdateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateAccountingInvoice2Response](../../Models/Operations/UpdateAccountingInvoice2Response.md)**
+**[?Operations\UpdateAccountingInvoiceResponse](../../Models/Operations/UpdateAccountingInvoiceResponse.md)**
 
 ### Errors
 

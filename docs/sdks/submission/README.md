@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getFormsSubmission2](#getformssubmission2) - Retrieve a submission
-* [listFormsSubmissions2](#listformssubmissions2) - List all submissions
+* [getFormsSubmission](#getformssubmission) - Retrieve a submission
+* [listFormsSubmissions](#listformssubmissions) - List all submissions
 
-## getFormsSubmission2
+## getFormsSubmission
 
 Retrieve a submission
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getFormsSubmission2" method="get" path="/forms/{connection_id}/submission/{id}" -->
+<!-- UsageSnippet language="php" operationID="getFormsSubmission" method="get" path="/forms/{connection_id}/submission/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetFormsSubmission2Request(
+$request = new Operations\GetFormsSubmissionRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->submission->getFormsSubmission2(
+$response = $sdk->submission->getFormsSubmission(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->formsSubmission !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetFormsSubmission2Request](../../Models/Operations/GetFormsSubmission2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetFormsSubmissionRequest](../../Models/Operations/GetFormsSubmissionRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetFormsSubmission2Response](../../Models/Operations/GetFormsSubmission2Response.md)**
+**[?Operations\GetFormsSubmissionResponse](../../Models/Operations/GetFormsSubmissionResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->formsSubmission !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listFormsSubmissions2
+## listFormsSubmissions
 
 List all submissions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listFormsSubmissions2" method="get" path="/forms/{connection_id}/submission" -->
+<!-- UsageSnippet language="php" operationID="listFormsSubmissions" method="get" path="/forms/{connection_id}/submission" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListFormsSubmissions2Request(
+$request = new Operations\ListFormsSubmissionsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->submission->listFormsSubmissions2(
+$response = $sdk->submission->listFormsSubmissions(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->formsSubmissions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListFormsSubmissions2Request](../../Models/Operations/ListFormsSubmissions2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListFormsSubmissionsRequest](../../Models/Operations/ListFormsSubmissionsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListFormsSubmissions2Response](../../Models/Operations/ListFormsSubmissions2Response.md)**
+**[?Operations\ListFormsSubmissionsResponse](../../Models/Operations/ListFormsSubmissionsResponse.md)**
 
 ### Errors
 

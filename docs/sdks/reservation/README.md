@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceReservation2](#createcommercereservation2) - Create a reservation
-* [getCommerceReservation2](#getcommercereservation2) - Retrieve a reservation
-* [listCommerceReservations2](#listcommercereservations2) - List all reservations
-* [patchCommerceReservation2](#patchcommercereservation2) - Update a reservation
-* [removeCommerceReservation2](#removecommercereservation2) - Remove a reservation
-* [updateCommerceReservation2](#updatecommercereservation2) - Update a reservation
+* [createCommerceReservation](#createcommercereservation) - Create a reservation
+* [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
+* [listCommerceReservations](#listcommercereservations) - List all reservations
+* [patchCommerceReservation](#patchcommercereservation) - Update a reservation
+* [removeCommerceReservation](#removecommercereservation) - Remove a reservation
+* [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 
-## createCommerceReservation2
+## createCommerceReservation
 
 Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceReservation2" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceReservation2Request(
+$request = new Operations\CreateCommerceReservationRequest(
     commerceReservation: new Shared\CommerceReservation(),
     connectionId: '<id>',
 );
 
-$response = $sdk->reservation->createCommerceReservation2(
+$response = $sdk->reservation->createCommerceReservation(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceReservation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateCommerceReservation2Request](../../Models/Operations/CreateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceReservationRequest](../../Models/Operations/CreateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\CreateCommerceReservation2Response](../../Models/Operations/CreateCommerceReservation2Response.md)**
+**[?Operations\CreateCommerceReservationResponse](../../Models/Operations/CreateCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceReservation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceReservation2
+## getCommerceReservation
 
 Retrieve a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceReservation2" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceReservation2Request(
+$request = new Operations\GetCommerceReservationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->reservation->getCommerceReservation2(
+$response = $sdk->reservation->getCommerceReservation(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceReservation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetCommerceReservation2Request](../../Models/Operations/GetCommerceReservation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceReservationRequest](../../Models/Operations/GetCommerceReservationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetCommerceReservation2Response](../../Models/Operations/GetCommerceReservation2Response.md)**
+**[?Operations\GetCommerceReservationResponse](../../Models/Operations/GetCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceReservation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceReservations2
+## listCommerceReservations
 
 List all reservations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceReservations2" method="get" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="php" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceReservations2Request(
+$request = new Operations\ListCommerceReservationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->reservation->listCommerceReservations2(
+$response = $sdk->reservation->listCommerceReservations(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceReservations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListCommerceReservations2Request](../../Models/Operations/ListCommerceReservations2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceReservationsRequest](../../Models/Operations/ListCommerceReservationsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceReservations2Response](../../Models/Operations/ListCommerceReservations2Response.md)**
+**[?Operations\ListCommerceReservationsResponse](../../Models/Operations/ListCommerceReservationsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceReservations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceReservation2
+## patchCommerceReservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReservation2" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceReservation2Request(
+$request = new Operations\PatchCommerceReservationRequest(
     commerceReservation: new Shared\CommerceReservation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->reservation->patchCommerceReservation2(
+$response = $sdk->reservation->patchCommerceReservation(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceReservation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchCommerceReservation2Request](../../Models/Operations/PatchCommerceReservation2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchCommerceReservationRequest](../../Models/Operations/PatchCommerceReservationRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\PatchCommerceReservation2Response](../../Models/Operations/PatchCommerceReservation2Response.md)**
+**[?Operations\PatchCommerceReservationResponse](../../Models/Operations/PatchCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceReservation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceReservation2
+## removeCommerceReservation
 
 Remove a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceReservation2" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceReservation2Request(
+$request = new Operations\RemoveCommerceReservationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->reservation->removeCommerceReservation2(
+$response = $sdk->reservation->removeCommerceReservation(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveCommerceReservation2Request](../../Models/Operations/RemoveCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceReservationRequest](../../Models/Operations/RemoveCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\RemoveCommerceReservation2Response](../../Models/Operations/RemoveCommerceReservation2Response.md)**
+**[?Operations\RemoveCommerceReservationResponse](../../Models/Operations/RemoveCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceReservation2
+## updateCommerceReservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceReservation2" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceReservation2Request(
+$request = new Operations\UpdateCommerceReservationRequest(
     commerceReservation: new Shared\CommerceReservation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->reservation->updateCommerceReservation2(
+$response = $sdk->reservation->updateCommerceReservation(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceReservation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateCommerceReservation2Request](../../Models/Operations/UpdateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateCommerceReservationRequest](../../Models/Operations/UpdateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\UpdateCommerceReservation2Response](../../Models/Operations/UpdateCommerceReservation2Response.md)**
+**[?Operations\UpdateCommerceReservationResponse](../../Models/Operations/UpdateCommerceReservationResponse.md)**
 
 ### Errors
 

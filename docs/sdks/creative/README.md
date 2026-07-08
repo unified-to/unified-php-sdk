@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAdsCreative2](#createadscreative2) - Create a creative
-* [getAdsCreative2](#getadscreative2) - Retrieve a creative
-* [listAdsCreatives2](#listadscreatives2) - List all creatives
-* [patchAdsCreative2](#patchadscreative2) - Update a creative
-* [removeAdsCreative2](#removeadscreative2) - Remove a creative
-* [updateAdsCreative2](#updateadscreative2) - Update a creative
+* [createAdsCreative](#createadscreative) - Create a creative
+* [getAdsCreative](#getadscreative) - Retrieve a creative
+* [listAdsCreatives](#listadscreatives) - List all creatives
+* [patchAdsCreative](#patchadscreative) - Update a creative
+* [removeAdsCreative](#removeadscreative) - Remove a creative
+* [updateAdsCreative](#updateadscreative) - Update a creative
 
-## createAdsCreative2
+## createAdsCreative
 
 Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsCreative2Request(
+$request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(),
     connectionId: '<id>',
 );
 
-$response = $sdk->creative->createAdsCreative2(
+$response = $sdk->creative->createAdsCreative(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAdsCreative2Request](../../Models/Operations/CreateAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateAdsCreativeRequest](../../Models/Operations/CreateAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateAdsCreative2Response](../../Models/Operations/CreateAdsCreative2Response.md)**
+**[?Operations\CreateAdsCreativeResponse](../../Models/Operations/CreateAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->adsCreative !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsCreative2
+## getAdsCreative
 
 Retrieve a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsCreative2Request(
+$request = new Operations\GetAdsCreativeRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->creative->getAdsCreative2(
+$response = $sdk->creative->getAdsCreative(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAdsCreative2Request](../../Models/Operations/GetAdsCreative2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetAdsCreativeRequest](../../Models/Operations/GetAdsCreativeRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetAdsCreative2Response](../../Models/Operations/GetAdsCreative2Response.md)**
+**[?Operations\GetAdsCreativeResponse](../../Models/Operations/GetAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->adsCreative !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsCreatives2
+## listAdsCreatives
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="php" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsCreatives2Request(
+$request = new Operations\ListAdsCreativesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->creative->listAdsCreatives2(
+$response = $sdk->creative->listAdsCreatives(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->adsCreatives !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAdsCreatives2Request](../../Models/Operations/ListAdsCreatives2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListAdsCreativesRequest](../../Models/Operations/ListAdsCreativesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListAdsCreatives2Response](../../Models/Operations/ListAdsCreatives2Response.md)**
+**[?Operations\ListAdsCreativesResponse](../../Models/Operations/ListAdsCreativesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->adsCreatives !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsCreative2
+## patchAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsCreative2Request(
+$request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->creative->patchAdsCreative2(
+$response = $sdk->creative->patchAdsCreative(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAdsCreative2Request](../../Models/Operations/PatchAdsCreative2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchAdsCreativeRequest](../../Models/Operations/PatchAdsCreativeRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchAdsCreative2Response](../../Models/Operations/PatchAdsCreative2Response.md)**
+**[?Operations\PatchAdsCreativeResponse](../../Models/Operations/PatchAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->adsCreative !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAdsCreative2
+## removeAdsCreative
 
 Remove a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAdsCreative2Request(
+$request = new Operations\RemoveAdsCreativeRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->creative->removeAdsCreative2(
+$response = $sdk->creative->removeAdsCreative(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAdsCreative2Request](../../Models/Operations/RemoveAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveAdsCreativeRequest](../../Models/Operations/RemoveAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveAdsCreative2Response](../../Models/Operations/RemoveAdsCreative2Response.md)**
+**[?Operations\RemoveAdsCreativeResponse](../../Models/Operations/RemoveAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsCreative2
+## updateAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsCreative2Request(
+$request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->creative->updateAdsCreative2(
+$response = $sdk->creative->updateAdsCreative(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->adsCreative !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAdsCreative2Request](../../Models/Operations/UpdateAdsCreative2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateAdsCreativeRequest](../../Models/Operations/UpdateAdsCreativeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateAdsCreative2Response](../../Models/Operations/UpdateAdsCreative2Response.md)**
+**[?Operations\UpdateAdsCreativeResponse](../../Models/Operations/UpdateAdsCreativeResponse.md)**
 
 ### Errors
 

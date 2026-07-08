@@ -47,14 +47,14 @@ class Itemvariant
     /**
      * Create an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceItemvariant2(Operations\CreateCommerceItemvariant2Request $request, ?Options $options = null): Operations\CreateCommerceItemvariant2Response
+    public function createCommerceItemvariant(Operations\CreateCommerceItemvariantRequest $request, ?Options $options = null): Operations\CreateCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\CreateCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\CreateCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -63,11 +63,11 @@ class Itemvariant
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Itemvariant
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceItemvariant2Response(
+                $response = new Operations\CreateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Itemvariant
     /**
      * Retrieve an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceItemvariant2(Operations\GetCommerceItemvariant2Request $request, ?Options $options = null): Operations\GetCommerceItemvariant2Response
+    public function getCommerceItemvariant(Operations\GetCommerceItemvariantRequest $request, ?Options $options = null): Operations\GetCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\GetCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\GetCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Itemvariant
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceItemvariant2Response(
+                $response = new Operations\GetCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Itemvariant
     /**
      * List all itemvariants
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariants2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariants2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceItemvariants2(Operations\ListCommerceItemvariants2Request $request, ?Options $options = null): Operations\ListCommerceItemvariants2Response
+    public function listCommerceItemvariants(Operations\ListCommerceItemvariantsRequest $request, ?Options $options = null): Operations\ListCommerceItemvariantsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\ListCommerceItemvariants2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\ListCommerceItemvariantsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItemvariants2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItemvariantsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItemvariants2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItemvariants', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Itemvariant
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceItemvariants2Response(
+                $response = new Operations\ListCommerceItemvariantsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Itemvariant
     /**
      * Update an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceItemvariant2(Operations\PatchCommerceItemvariant2Request $request, ?Options $options = null): Operations\PatchCommerceItemvariant2Response
+    public function patchCommerceItemvariant(Operations\PatchCommerceItemvariantRequest $request, ?Options $options = null): Operations\PatchCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\PatchCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\PatchCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -257,11 +257,11 @@ class Itemvariant
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Itemvariant
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceItemvariant2Response(
+                $response = new Operations\PatchCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Itemvariant
     /**
      * Remove an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceItemvariant2(Operations\RemoveCommerceItemvariant2Request $request, ?Options $options = null): Operations\RemoveCommerceItemvariant2Response
+    public function removeCommerceItemvariant(Operations\RemoveCommerceItemvariantRequest $request, ?Options $options = null): Operations\RemoveCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\RemoveCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\RemoveCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Itemvariant
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItemvariant2Response(
+            return new Operations\RemoveCommerceItemvariantResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Itemvariant
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItemvariant2Response(
+            return new Operations\RemoveCommerceItemvariantResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Itemvariant
     /**
      * Update an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceItemvariant2(Operations\UpdateCommerceItemvariant2Request $request, ?Options $options = null): Operations\UpdateCommerceItemvariant2Response
+    public function updateCommerceItemvariant(Operations\UpdateCommerceItemvariantRequest $request, ?Options $options = null): Operations\UpdateCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\UpdateCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\UpdateCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -382,11 +382,11 @@ class Itemvariant
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Itemvariant
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceItemvariant2Response(
+                $response = new Operations\UpdateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

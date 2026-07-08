@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getUcCall2](#getuccall2) - Retrieve a call
-* [listUcCalls2](#listuccalls2) - List all calls
+* [getUcCall](#getuccall) - Retrieve a call
+* [listUcCalls](#listuccalls) - List all calls
 
-## getUcCall2
+## getUcCall
 
 Retrieve a call
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcCall2" method="get" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcCall" method="get" path="/uc/{connection_id}/call/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcCall2Request(
+$request = new Operations\GetUcCallRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->call->getUcCall2(
+$response = $sdk->call->getUcCall(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->ucCall !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\GetUcCall2Request](../../Models/Operations/GetUcCall2Request.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Operations\GetUcCallRequest](../../Models/Operations/GetUcCallRequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 ### Response
 
-**[?Operations\GetUcCall2Response](../../Models/Operations/GetUcCall2Response.md)**
+**[?Operations\GetUcCallResponse](../../Models/Operations/GetUcCallResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->ucCall !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcCalls2
+## listUcCalls
 
 List all calls
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcCalls2" method="get" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="php" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcCalls2Request(
+$request = new Operations\ListUcCallsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->call->listUcCalls2(
+$response = $sdk->call->listUcCalls(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->ucCalls !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\ListUcCalls2Request](../../Models/Operations/ListUcCalls2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\ListUcCalls2Response](../../Models/Operations/ListUcCalls2Response.md)**
+**[?Operations\ListUcCallsResponse](../../Models/Operations/ListUcCallsResponse.md)**
 
 ### Errors
 

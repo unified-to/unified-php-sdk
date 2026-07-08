@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [createDatastoreQuery2](#createdatastorequery2) - Create a query
+* [createDatastoreQuery](#createdatastorequery) - Create a query
 
-## createDatastoreQuery2
+## createDatastoreQuery
 
 Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreQuery2" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateDatastoreQuery2Request(
+$request = new Operations\CreateDatastoreQueryRequest(
     datastoreQuery: new Shared\DatastoreQuery(),
     connectionId: '<id>',
 );
 
-$response = $sdk->query->createDatastoreQuery2(
+$response = $sdk->query->createDatastoreQuery(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->datastoreQuery !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateDatastoreQuery2Request](../../Models/Operations/CreateDatastoreQuery2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateDatastoreQueryRequest](../../Models/Operations/CreateDatastoreQueryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateDatastoreQuery2Response](../../Models/Operations/CreateDatastoreQuery2Response.md)**
+**[?Operations\CreateDatastoreQueryResponse](../../Models/Operations/CreateDatastoreQueryResponse.md)**
 
 ### Errors
 

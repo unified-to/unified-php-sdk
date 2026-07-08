@@ -47,22 +47,22 @@ class Balancesheet
     /**
      * Retrieve a balancesheet
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBalancesheet2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingBalancesheet2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingBalancesheet2(Operations\GetAccountingBalancesheet2Request $request, ?Options $options = null): Operations\GetAccountingBalancesheet2Response
+    public function getAccountingBalancesheet(Operations\GetAccountingBalancesheetRequest $request, ?Options $options = null): Operations\GetAccountingBalancesheetResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/balancesheet/{id}', Operations\GetAccountingBalancesheet2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/balancesheet/{id}', Operations\GetAccountingBalancesheetRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingBalancesheet2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingBalancesheetRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingBalancesheet2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingBalancesheet', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Balancesheet
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingBalancesheet', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingBalancesheet2Response(
+                $response = new Operations\GetAccountingBalancesheetResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Balancesheet
     /**
      * List all balancesheets
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBalancesheets2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingBalancesheets2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingBalancesheets2(Operations\ListAccountingBalancesheets2Request $request, ?Options $options = null): Operations\ListAccountingBalancesheets2Response
+    public function listAccountingBalancesheets(Operations\ListAccountingBalancesheetsRequest $request, ?Options $options = null): Operations\ListAccountingBalancesheetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/balancesheet', Operations\ListAccountingBalancesheets2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/balancesheet', Operations\ListAccountingBalancesheetsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingBalancesheets2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingBalancesheetsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingBalancesheets2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingBalancesheets', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Balancesheet
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingBalancesheet>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingBalancesheets2Response(
+                $response = new Operations\ListAccountingBalancesheetsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

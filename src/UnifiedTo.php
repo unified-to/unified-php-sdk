@@ -68,6 +68,8 @@ class UnifiedTo
 
     public Trialbalance $trialbalance;
 
+    public Vendorcredit $vendorcredit;
+
     public Ads $ads;
 
     public Ad $ad;
@@ -364,6 +366,7 @@ class UnifiedTo
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
         $this->trialbalance = new Trialbalance($this->sdkConfiguration);
+        $this->vendorcredit = new Vendorcredit($this->sdkConfiguration);
         $this->ads = new Ads($this->sdkConfiguration);
         $this->ad = new Ad($this->sdkConfiguration);
         $this->campaign = new Campaign($this->sdkConfiguration);

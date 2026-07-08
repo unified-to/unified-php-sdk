@@ -29,6 +29,14 @@ class AtsStatus
 
     /**
      *
+     * @var ?string $jobId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('job_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $jobId = null;
+
+    /**
+     *
      * @var ?string $originalStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('original_status')]
@@ -57,15 +65,17 @@ class AtsStatus
     /**
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?string  $jobId
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\AtsStatusStatus  $status
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, ?string $id = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
+    public function __construct(?string $description = null, ?string $id = null, ?string $jobId = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
     {
         $this->description = $description;
         $this->id = $id;
+        $this->jobId = $jobId;
         $this->originalStatus = $originalStatus;
         $this->raw = $raw;
         $this->status = $status;

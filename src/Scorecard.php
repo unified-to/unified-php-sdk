@@ -47,14 +47,14 @@ class Scorecard
     /**
      * Create a scorecard
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecard2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecard2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsScorecard2(Operations\CreateAtsScorecard2Request $request, ?Options $options = null): Operations\CreateAtsScorecard2Response
+    public function createAtsScorecard(Operations\CreateAtsScorecardRequest $request, ?Options $options = null): Operations\CreateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\CreateAtsScorecard2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\CreateAtsScorecardRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
@@ -63,11 +63,11 @@ class Scorecard
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsScorecard2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsScorecardRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsScorecard2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsScorecard', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Scorecard
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsScorecard', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAtsScorecard2Response(
+                $response = new Operations\CreateAtsScorecardResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Scorecard
     /**
      * Retrieve a scorecard
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecard2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsScorecard2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsScorecard2(Operations\GetAtsScorecard2Request $request, ?Options $options = null): Operations\GetAtsScorecard2Response
+    public function getAtsScorecard(Operations\GetAtsScorecardRequest $request, ?Options $options = null): Operations\GetAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\GetAtsScorecard2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\GetAtsScorecardRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAtsScorecard2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAtsScorecardRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsScorecard2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsScorecard', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Scorecard
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsScorecard', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAtsScorecard2Response(
+                $response = new Operations\GetAtsScorecardResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Scorecard
     /**
      * List all scorecards
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecards2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsScorecards2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsScorecards2(Operations\ListAtsScorecards2Request $request, ?Options $options = null): Operations\ListAtsScorecards2Response
+    public function listAtsScorecards(Operations\ListAtsScorecardsRequest $request, ?Options $options = null): Operations\ListAtsScorecardsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\ListAtsScorecards2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard', Operations\ListAtsScorecardsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAtsScorecards2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAtsScorecardsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsScorecards2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsScorecards', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Scorecard
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AtsScorecard>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAtsScorecards2Response(
+                $response = new Operations\ListAtsScorecardsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Scorecard
     /**
      * Update a scorecard
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecard2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecard2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsScorecard2(Operations\PatchAtsScorecard2Request $request, ?Options $options = null): Operations\PatchAtsScorecard2Response
+    public function patchAtsScorecard(Operations\PatchAtsScorecardRequest $request, ?Options $options = null): Operations\PatchAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\PatchAtsScorecard2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\PatchAtsScorecardRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
@@ -257,11 +257,11 @@ class Scorecard
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsScorecard2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsScorecardRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsScorecard2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsScorecard', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Scorecard
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsScorecard', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAtsScorecard2Response(
+                $response = new Operations\PatchAtsScorecardResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Scorecard
     /**
      * Remove a scorecard
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecard2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecard2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsScorecard2(Operations\RemoveAtsScorecard2Request $request, ?Options $options = null): Operations\RemoveAtsScorecard2Response
+    public function removeAtsScorecard(Operations\RemoveAtsScorecardRequest $request, ?Options $options = null): Operations\RemoveAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\RemoveAtsScorecard2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\RemoveAtsScorecardRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsScorecard2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsScorecard', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Scorecard
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsScorecard2Response(
+            return new Operations\RemoveAtsScorecardResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Scorecard
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsScorecard2Response(
+            return new Operations\RemoveAtsScorecardResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Scorecard
     /**
      * Update a scorecard
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecard2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecard2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsScorecard2(Operations\UpdateAtsScorecard2Request $request, ?Options $options = null): Operations\UpdateAtsScorecard2Response
+    public function updateAtsScorecard(Operations\UpdateAtsScorecardRequest $request, ?Options $options = null): Operations\UpdateAtsScorecardResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\UpdateAtsScorecard2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/scorecard/{id}', Operations\UpdateAtsScorecardRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsScorecard', 'json');
@@ -382,11 +382,11 @@ class Scorecard
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsScorecard2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsScorecardRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsScorecard2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsScorecard', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Scorecard
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsScorecard', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAtsScorecard2Response(
+                $response = new Operations\UpdateAtsScorecardResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

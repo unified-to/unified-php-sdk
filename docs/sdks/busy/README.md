@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [listCalendarBusies2](#listcalendarbusies2) - List all busies
+* [listCalendarBusies](#listcalendarbusies) - List all busies
 
-## listCalendarBusies2
+## listCalendarBusies
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="php" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```php
 declare(strict_types=1);
 
@@ -27,11 +27,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCalendarBusies2Request(
+$request = new Operations\ListCalendarBusiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->busy->listCalendarBusies2(
+$response = $sdk->busy->listCalendarBusies(
     request: $request
 );
 
@@ -42,13 +42,13 @@ if ($response->calendarBusies !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListCalendarBusies2Request](../../Models/Operations/ListCalendarBusies2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListCalendarBusiesRequest](../../Models/Operations/ListCalendarBusiesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListCalendarBusies2Response](../../Models/Operations/ListCalendarBusies2Response.md)**
+**[?Operations\ListCalendarBusiesResponse](../../Models/Operations/ListCalendarBusiesResponse.md)**
 
 ### Errors
 

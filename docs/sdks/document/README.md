@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [createAtsDocument2](#createatsdocument2) - Create a document
-* [createSigningDocument2](#createsigningdocument2) - Create a document
-* [getAtsDocument2](#getatsdocument2) - Retrieve a document
-* [getSigningDocument2](#getsigningdocument2) - Retrieve a document
-* [listAtsDocuments2](#listatsdocuments2) - List all documents
-* [listSigningDocuments2](#listsigningdocuments2) - List all documents
-* [patchAtsDocument2](#patchatsdocument2) - Update a document
-* [patchSigningDocument2](#patchsigningdocument2) - Update a document
-* [removeAtsDocument2](#removeatsdocument2) - Remove a document
-* [removeSigningDocument2](#removesigningdocument2) - Remove a document
-* [updateAtsDocument2](#updateatsdocument2) - Update a document
-* [updateSigningDocument2](#updatesigningdocument2) - Update a document
+* [createAtsDocument](#createatsdocument) - Create a document
+* [createSigningDocument](#createsigningdocument) - Create a document
+* [getAtsDocument](#getatsdocument) - Retrieve a document
+* [getSigningDocument](#getsigningdocument) - Retrieve a document
+* [listAtsDocuments](#listatsdocuments) - List all documents
+* [listSigningDocuments](#listsigningdocuments) - List all documents
+* [patchAtsDocument](#patchatsdocument) - Update a document
+* [patchSigningDocument](#patchsigningdocument) - Update a document
+* [removeAtsDocument](#removeatsdocument) - Remove a document
+* [removeSigningDocument](#removesigningdocument) - Remove a document
+* [updateAtsDocument](#updateatsdocument) - Update a document
+* [updateSigningDocument](#updatesigningdocument) - Update a document
 
-## createAtsDocument2
+## createAtsDocument
 
 Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsDocument2" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -39,16 +39,170 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsDocument2Request(
+$request = new Operations\CreateAtsDocumentRequest(
     atsDocument: new Shared\AtsDocument(),
     connectionId: '<id>',
 );
 
-$response = $sdk->document->createAtsDocument2(
+$response = $sdk->document->createAtsDocument(
     request: $request
 );
 
 if ($response->atsDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateAtsDocumentRequest](../../Models/Operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreateAtsDocumentResponse](../../Models/Operations/CreateAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createSigningDocument
+
+Create a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateSigningDocumentRequest(
+    signingDocument: new Shared\SigningDocument(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->document->createSigningDocument(
+    request: $request
+);
+
+if ($response->signingDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateSigningDocumentRequest](../../Models/Operations/CreateSigningDocumentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateSigningDocumentResponse](../../Models/Operations/CreateSigningDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAtsDocument
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAtsDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->getAtsDocument(
+    request: $request
+);
+
+if ($response->atsDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetAtsDocumentRequest](../../Models/Operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetAtsDocumentResponse](../../Models/Operations/GetAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getSigningDocument
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getSigningDocument" method="get" path="/signing/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetSigningDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->getSigningDocument(
+    request: $request
+);
+
+if ($response->signingDocument !== null) {
     // handle response
 }
 ```
@@ -57,11 +211,11 @@ if ($response->atsDocument !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsDocument2Request](../../Models/Operations/CreateAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\GetSigningDocumentRequest](../../Models/Operations/GetSigningDocumentRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateAtsDocument2Response](../../Models/Operations/CreateAtsDocument2Response.md)**
+**[?Operations\GetSigningDocumentResponse](../../Models/Operations/GetSigningDocumentResponse.md)**
 
 ### Errors
 
@@ -69,167 +223,13 @@ if ($response->atsDocument !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createSigningDocument2
-
-Create a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createSigningDocument2" method="post" path="/signing/{connection_id}/document" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateSigningDocument2Request(
-    signingDocument: new Shared\SigningDocument(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->document->createSigningDocument2(
-    request: $request
-);
-
-if ($response->signingDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateSigningDocument2Request](../../Models/Operations/CreateSigningDocument2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\CreateSigningDocument2Response](../../Models/Operations/CreateSigningDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAtsDocument2
-
-Retrieve a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAtsDocument2" method="get" path="/ats/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAtsDocument2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->getAtsDocument2(
-    request: $request
-);
-
-if ($response->atsDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsDocument2Request](../../Models/Operations/GetAtsDocument2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\GetAtsDocument2Response](../../Models/Operations/GetAtsDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getSigningDocument2
-
-Retrieve a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getSigningDocument2" method="get" path="/signing/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetSigningDocument2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->getSigningDocument2(
-    request: $request
-);
-
-if ($response->signingDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetSigningDocument2Request](../../Models/Operations/GetSigningDocument2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\GetSigningDocument2Response](../../Models/Operations/GetSigningDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## listAtsDocuments2
+## listAtsDocuments
 
 List all documents
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsDocuments2" method="get" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -244,11 +244,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsDocuments2Request(
+$request = new Operations\ListAtsDocumentsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->document->listAtsDocuments2(
+$response = $sdk->document->listAtsDocuments(
     request: $request
 );
 
@@ -259,13 +259,13 @@ if ($response->atsDocuments !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListAtsDocuments2Request](../../Models/Operations/ListAtsDocuments2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListAtsDocumentsRequest](../../Models/Operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListAtsDocuments2Response](../../Models/Operations/ListAtsDocuments2Response.md)**
+**[?Operations\ListAtsDocumentsResponse](../../Models/Operations/ListAtsDocumentsResponse.md)**
 
 ### Errors
 
@@ -273,13 +273,13 @@ if ($response->atsDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listSigningDocuments2
+## listSigningDocuments
 
 List all documents
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listSigningDocuments2" method="get" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="listSigningDocuments" method="get" path="/signing/{connection_id}/document" -->
 ```php
 declare(strict_types=1);
 
@@ -294,11 +294,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListSigningDocuments2Request(
+$request = new Operations\ListSigningDocumentsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->document->listSigningDocuments2(
+$response = $sdk->document->listSigningDocuments(
     request: $request
 );
 
@@ -309,13 +309,13 @@ if ($response->signingDocuments !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListSigningDocuments2Request](../../Models/Operations/ListSigningDocuments2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListSigningDocumentsRequest](../../Models/Operations/ListSigningDocumentsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListSigningDocuments2Response](../../Models/Operations/ListSigningDocuments2Response.md)**
+**[?Operations\ListSigningDocumentsResponse](../../Models/Operations/ListSigningDocumentsResponse.md)**
 
 ### Errors
 
@@ -323,13 +323,13 @@ if ($response->signingDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsDocument2
+## patchAtsDocument
 
 Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsDocument2" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -345,13 +345,221 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsDocument2Request(
+$request = new Operations\PatchAtsDocumentRequest(
     atsDocument: new Shared\AtsDocument(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->document->patchAtsDocument2(
+$response = $sdk->document->patchAtsDocument(
+    request: $request
+);
+
+if ($response->atsDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchAtsDocumentRequest](../../Models/Operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchAtsDocumentResponse](../../Models/Operations/PatchAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchSigningDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchSigningDocumentRequest(
+    signingDocument: new Shared\SigningDocument(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->patchSigningDocument(
+    request: $request
+);
+
+if ($response->signingDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchSigningDocumentRequest](../../Models/Operations/PatchSigningDocumentRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchSigningDocumentResponse](../../Models/Operations/PatchSigningDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsDocument
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->removeAtsDocument(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveAtsDocumentRequest](../../Models/Operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveAtsDocumentResponse](../../Models/Operations/RemoveAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeSigningDocument
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeSigningDocument" method="delete" path="/signing/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveSigningDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->removeSigningDocument(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveSigningDocumentRequest](../../Models/Operations/RemoveSigningDocumentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveSigningDocumentResponse](../../Models/Operations/RemoveSigningDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAtsDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAtsDocumentRequest(
+    atsDocument: new Shared\AtsDocument(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->updateAtsDocument(
     request: $request
 );
 
@@ -364,11 +572,11 @@ if ($response->atsDocument !== null) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsDocument2Request](../../Models/Operations/PatchAtsDocument2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\UpdateAtsDocumentRequest](../../Models/Operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchAtsDocument2Response](../../Models/Operations/PatchAtsDocument2Response.md)**
+**[?Operations\UpdateAtsDocumentResponse](../../Models/Operations/UpdateAtsDocumentResponse.md)**
 
 ### Errors
 
@@ -376,13 +584,13 @@ if ($response->atsDocument !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchSigningDocument2
+## updateSigningDocument
 
 Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchSigningDocument2" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -398,13 +606,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchSigningDocument2Request(
+$request = new Operations\UpdateSigningDocumentRequest(
     signingDocument: new Shared\SigningDocument(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->document->patchSigningDocument2(
+$response = $sdk->document->updateSigningDocument(
     request: $request
 );
 
@@ -417,219 +625,11 @@ if ($response->signingDocument !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchSigningDocument2Request](../../Models/Operations/PatchSigningDocument2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\UpdateSigningDocumentRequest](../../Models/Operations/UpdateSigningDocumentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchSigningDocument2Response](../../Models/Operations/PatchSigningDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsDocument2
-
-Remove a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsDocument2" method="delete" path="/ats/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsDocument2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->removeAtsDocument2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsDocument2Request](../../Models/Operations/RemoveAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\RemoveAtsDocument2Response](../../Models/Operations/RemoveAtsDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeSigningDocument2
-
-Remove a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeSigningDocument2" method="delete" path="/signing/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveSigningDocument2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->removeSigningDocument2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveSigningDocument2Request](../../Models/Operations/RemoveSigningDocument2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\RemoveSigningDocument2Response](../../Models/Operations/RemoveSigningDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAtsDocument2
-
-Update a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAtsDocument2" method="put" path="/ats/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAtsDocument2Request(
-    atsDocument: new Shared\AtsDocument(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->updateAtsDocument2(
-    request: $request
-);
-
-if ($response->atsDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsDocument2Request](../../Models/Operations/UpdateAtsDocument2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\UpdateAtsDocument2Response](../../Models/Operations/UpdateAtsDocument2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateSigningDocument2
-
-Update a document
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateSigningDocument2" method="put" path="/signing/{connection_id}/document/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateSigningDocument2Request(
-    signingDocument: new Shared\SigningDocument(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->document->updateSigningDocument2(
-    request: $request
-);
-
-if ($response->signingDocument !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateSigningDocument2Request](../../Models/Operations/UpdateSigningDocument2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\UpdateSigningDocument2Response](../../Models/Operations/UpdateSigningDocument2Response.md)**
+**[?Operations\UpdateSigningDocumentResponse](../../Models/Operations/UpdateSigningDocumentResponse.md)**
 
 ### Errors
 

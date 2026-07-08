@@ -47,14 +47,14 @@ class Category
     /**
      * Create a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingCategory2(Operations\CreateAccountingCategory2Request $request, ?Options $options = null): Operations\CreateAccountingCategory2Response
+    public function createAccountingCategory(Operations\CreateAccountingCategoryRequest $request, ?Options $options = null): Operations\CreateAccountingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category', Operations\CreateAccountingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category', Operations\CreateAccountingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCategory', 'json');
@@ -63,11 +63,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingCategory2Response(
+                $response = new Operations\CreateAccountingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Category
     /**
      * Create a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTicketingCategory2(Operations\CreateTicketingCategory2Request $request, ?Options $options = null): Operations\CreateTicketingCategory2Response
+    public function createTicketingCategory(Operations\CreateTicketingCategoryRequest $request, ?Options $options = null): Operations\CreateTicketingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category', Operations\CreateTicketingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category', Operations\CreateTicketingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCategory', 'json');
@@ -131,11 +131,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTicketingCategory2Response(
+                $response = new Operations\CreateTicketingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,22 +183,22 @@ class Category
     /**
      * Retrieve a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingCategory2(Operations\GetAccountingCategory2Request $request, ?Options $options = null): Operations\GetAccountingCategory2Response
+    public function getAccountingCategory(Operations\GetAccountingCategoryRequest $request, ?Options $options = null): Operations\GetAccountingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\GetAccountingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\GetAccountingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -224,7 +224,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingCategory2Response(
+                $response = new Operations\GetAccountingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -246,22 +246,22 @@ class Category
     /**
      * Retrieve a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTicketingCategory2(Operations\GetTicketingCategory2Request $request, ?Options $options = null): Operations\GetTicketingCategory2Response
+    public function getTicketingCategory(Operations\GetTicketingCategoryRequest $request, ?Options $options = null): Operations\GetTicketingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\GetTicketingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\GetTicketingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTicketingCategory2Response(
+                $response = new Operations\GetTicketingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,22 +309,22 @@ class Category
     /**
      * List all categories
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategories2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingCategories2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingCategories2(Operations\ListAccountingCategories2Request $request, ?Options $options = null): Operations\ListAccountingCategories2Response
+    public function listAccountingCategories(Operations\ListAccountingCategoriesRequest $request, ?Options $options = null): Operations\ListAccountingCategoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category', Operations\ListAccountingCategories2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category', Operations\ListAccountingCategoriesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCategories2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCategoriesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCategories2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCategories', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -350,7 +350,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingCategory>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingCategories2Response(
+                $response = new Operations\ListAccountingCategoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -372,22 +372,22 @@ class Category
     /**
      * List all categories
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategories2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingCategories2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTicketingCategories2(Operations\ListTicketingCategories2Request $request, ?Options $options = null): Operations\ListTicketingCategories2Response
+    public function listTicketingCategories(Operations\ListTicketingCategoriesRequest $request, ?Options $options = null): Operations\ListTicketingCategoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category', Operations\ListTicketingCategories2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category', Operations\ListTicketingCategoriesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingCategories2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingCategoriesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingCategories2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingCategories', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TicketingCategory>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTicketingCategories2Response(
+                $response = new Operations\ListTicketingCategoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,14 +435,14 @@ class Category
     /**
      * Update a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingCategory2(Operations\PatchAccountingCategory2Request $request, ?Options $options = null): Operations\PatchAccountingCategory2Response
+    public function patchAccountingCategory(Operations\PatchAccountingCategoryRequest $request, ?Options $options = null): Operations\PatchAccountingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\PatchAccountingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\PatchAccountingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCategory', 'json');
@@ -451,11 +451,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingCategory2Response(
+                $response = new Operations\PatchAccountingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,14 +503,14 @@ class Category
     /**
      * Update a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTicketingCategory2(Operations\PatchTicketingCategory2Request $request, ?Options $options = null): Operations\PatchTicketingCategory2Response
+    public function patchTicketingCategory(Operations\PatchTicketingCategoryRequest $request, ?Options $options = null): Operations\PatchTicketingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\PatchTicketingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\PatchTicketingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCategory', 'json');
@@ -519,11 +519,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -549,7 +549,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTicketingCategory2Response(
+                $response = new Operations\PatchTicketingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -571,20 +571,20 @@ class Category
     /**
      * Remove a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingCategory2(Operations\RemoveAccountingCategory2Request $request, ?Options $options = null): Operations\RemoveAccountingCategory2Response
+    public function removeAccountingCategory(Operations\RemoveAccountingCategoryRequest $request, ?Options $options = null): Operations\RemoveAccountingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\RemoveAccountingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\RemoveAccountingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -605,7 +605,7 @@ class Category
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingCategory2Response(
+            return new Operations\RemoveAccountingCategoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -617,7 +617,7 @@ class Category
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingCategory2Response(
+            return new Operations\RemoveAccountingCategoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -628,20 +628,20 @@ class Category
     /**
      * Remove a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTicketingCategory2(Operations\RemoveTicketingCategory2Request $request, ?Options $options = null): Operations\RemoveTicketingCategory2Response
+    public function removeTicketingCategory(Operations\RemoveTicketingCategoryRequest $request, ?Options $options = null): Operations\RemoveTicketingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\RemoveTicketingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\RemoveTicketingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -662,7 +662,7 @@ class Category
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingCategory2Response(
+            return new Operations\RemoveTicketingCategoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -674,7 +674,7 @@ class Category
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingCategory2Response(
+            return new Operations\RemoveTicketingCategoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -685,14 +685,14 @@ class Category
     /**
      * Update a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingCategory2(Operations\UpdateAccountingCategory2Request $request, ?Options $options = null): Operations\UpdateAccountingCategory2Response
+    public function updateAccountingCategory(Operations\UpdateAccountingCategoryRequest $request, ?Options $options = null): Operations\UpdateAccountingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\UpdateAccountingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/category/{id}', Operations\UpdateAccountingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCategory', 'json');
@@ -701,11 +701,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -731,7 +731,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingCategory2Response(
+                $response = new Operations\UpdateAccountingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -753,14 +753,14 @@ class Category
     /**
      * Update a category
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategory2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTicketingCategory2(Operations\UpdateTicketingCategory2Request $request, ?Options $options = null): Operations\UpdateTicketingCategory2Response
+    public function updateTicketingCategory(Operations\UpdateTicketingCategoryRequest $request, ?Options $options = null): Operations\UpdateTicketingCategoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\UpdateTicketingCategory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/category/{id}', Operations\UpdateTicketingCategoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingCategory', 'json');
@@ -769,11 +769,11 @@ class Category
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingCategory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingCategoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingCategory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingCategory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -799,7 +799,7 @@ class Category
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingCategory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTicketingCategory2Response(
+                $response = new Operations\UpdateTicketingCategoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

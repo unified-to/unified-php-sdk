@@ -47,22 +47,22 @@ class Submission
     /**
      * Retrieve a submission
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmission2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmission2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmissionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetFormsSubmissionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getFormsSubmission2(Operations\GetFormsSubmission2Request $request, ?Options $options = null): Operations\GetFormsSubmission2Response
+    public function getFormsSubmission(Operations\GetFormsSubmissionRequest $request, ?Options $options = null): Operations\GetFormsSubmissionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission/{id}', Operations\GetFormsSubmission2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission/{id}', Operations\GetFormsSubmissionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetFormsSubmission2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetFormsSubmissionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsSubmission2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getFormsSubmission', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Submission
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\FormsSubmission', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetFormsSubmission2Response(
+                $response = new Operations\GetFormsSubmissionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Submission
     /**
      * List all submissions
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissions2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissions2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listFormsSubmissions2(Operations\ListFormsSubmissions2Request $request, ?Options $options = null): Operations\ListFormsSubmissions2Response
+    public function listFormsSubmissions(Operations\ListFormsSubmissionsRequest $request, ?Options $options = null): Operations\ListFormsSubmissionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission', Operations\ListFormsSubmissions2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/forms/{connection_id}/submission', Operations\ListFormsSubmissionsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListFormsSubmissions2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListFormsSubmissionsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsSubmissions2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listFormsSubmissions', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Submission
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\FormsSubmission>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListFormsSubmissions2Response(
+                $response = new Operations\ListFormsSubmissionsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

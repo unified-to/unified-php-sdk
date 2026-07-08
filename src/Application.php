@@ -47,14 +47,14 @@ class Application
     /**
      * Create an application
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplication2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsApplication2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsApplication2(Operations\CreateAtsApplication2Request $request, ?Options $options = null): Operations\CreateAtsApplication2Response
+    public function createAtsApplication(Operations\CreateAtsApplicationRequest $request, ?Options $options = null): Operations\CreateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\CreateAtsApplication2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\CreateAtsApplicationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
@@ -63,11 +63,11 @@ class Application
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsApplication2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsApplicationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsApplication2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsApplication', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Application
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsApplication', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAtsApplication2Response(
+                $response = new Operations\CreateAtsApplicationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Application
     /**
      * Retrieve an application
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsApplication2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsApplication2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsApplication2(Operations\GetAtsApplication2Request $request, ?Options $options = null): Operations\GetAtsApplication2Response
+    public function getAtsApplication(Operations\GetAtsApplicationRequest $request, ?Options $options = null): Operations\GetAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\GetAtsApplication2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\GetAtsApplicationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAtsApplication2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAtsApplicationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsApplication2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsApplication', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Application
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsApplication', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAtsApplication2Response(
+                $response = new Operations\GetAtsApplicationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Application
     /**
      * List all applications
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplications2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsApplications2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplications2(Operations\ListAtsApplications2Request $request, ?Options $options = null): Operations\ListAtsApplications2Response
+    public function listAtsApplications(Operations\ListAtsApplicationsRequest $request, ?Options $options = null): Operations\ListAtsApplicationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\ListAtsApplications2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application', Operations\ListAtsApplicationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAtsApplications2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAtsApplicationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsApplications2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsApplications', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Application
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AtsApplication>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAtsApplications2Response(
+                $response = new Operations\ListAtsApplicationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Application
     /**
      * Update an application
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplication2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsApplication2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsApplication2(Operations\PatchAtsApplication2Request $request, ?Options $options = null): Operations\PatchAtsApplication2Response
+    public function patchAtsApplication(Operations\PatchAtsApplicationRequest $request, ?Options $options = null): Operations\PatchAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\PatchAtsApplication2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\PatchAtsApplicationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
@@ -257,11 +257,11 @@ class Application
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsApplication2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsApplicationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsApplication2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsApplication', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Application
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsApplication', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAtsApplication2Response(
+                $response = new Operations\PatchAtsApplicationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Application
     /**
      * Remove an application
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplication2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplication2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsApplication2(Operations\RemoveAtsApplication2Request $request, ?Options $options = null): Operations\RemoveAtsApplication2Response
+    public function removeAtsApplication(Operations\RemoveAtsApplicationRequest $request, ?Options $options = null): Operations\RemoveAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\RemoveAtsApplication2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\RemoveAtsApplicationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsApplication2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsApplication', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Application
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsApplication2Response(
+            return new Operations\RemoveAtsApplicationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Application
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsApplication2Response(
+            return new Operations\RemoveAtsApplicationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Application
     /**
      * Update an application
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplication2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplication2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsApplication2(Operations\UpdateAtsApplication2Request $request, ?Options $options = null): Operations\UpdateAtsApplication2Response
+    public function updateAtsApplication(Operations\UpdateAtsApplicationRequest $request, ?Options $options = null): Operations\UpdateAtsApplicationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\UpdateAtsApplication2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/application/{id}', Operations\UpdateAtsApplicationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsApplication', 'json');
@@ -382,11 +382,11 @@ class Application
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsApplication2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsApplicationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsApplication2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsApplication', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Application
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsApplication', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAtsApplication2Response(
+                $response = new Operations\UpdateAtsApplicationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

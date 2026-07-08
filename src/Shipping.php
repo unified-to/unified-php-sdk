@@ -47,14 +47,14 @@ class Shipping
     /**
      * Create a label
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateShippingLabel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateShippingLabel2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createShippingLabel2(Operations\CreateShippingLabel2Request $request, ?Options $options = null): Operations\CreateShippingLabel2Response
+    public function createShippingLabel(Operations\CreateShippingLabelRequest $request, ?Options $options = null): Operations\CreateShippingLabelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label', Operations\CreateShippingLabel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label', Operations\CreateShippingLabelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingLabel', 'json');
@@ -63,11 +63,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingLabel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingLabelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingLabel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingLabel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingLabel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateShippingLabel2Response(
+                $response = new Operations\CreateShippingLabelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Shipping
     /**
      * Create a rate
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateShippingRate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateShippingRate2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingRateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingRateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createShippingRate2(Operations\CreateShippingRate2Request $request, ?Options $options = null): Operations\CreateShippingRate2Response
+    public function createShippingRate(Operations\CreateShippingRateRequest $request, ?Options $options = null): Operations\CreateShippingRateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/rate', Operations\CreateShippingRate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/rate', Operations\CreateShippingRateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingRate', 'json');
@@ -131,11 +131,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingRate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingRateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingRate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingRate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingRate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateShippingRate2Response(
+                $response = new Operations\CreateShippingRateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Shipping
     /**
      * Create a shipment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateShippingShipment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateShippingShipment2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createShippingShipment2(Operations\CreateShippingShipment2Request $request, ?Options $options = null): Operations\CreateShippingShipment2Response
+    public function createShippingShipment(Operations\CreateShippingShipmentRequest $request, ?Options $options = null): Operations\CreateShippingShipmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment', Operations\CreateShippingShipment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment', Operations\CreateShippingShipmentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingShipment', 'json');
@@ -199,11 +199,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingShipment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateShippingShipmentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingShipment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createShippingShipment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingShipment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateShippingShipment2Response(
+                $response = new Operations\CreateShippingShipmentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Shipping
     /**
      * Retrieve a carrier
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrier2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingCarrier2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrierRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingCarrierResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingCarrier2(Operations\GetShippingCarrier2Request $request, ?Options $options = null): Operations\GetShippingCarrier2Response
+    public function getShippingCarrier(Operations\GetShippingCarrierRequest $request, ?Options $options = null): Operations\GetShippingCarrierResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier/{id}', Operations\GetShippingCarrier2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier/{id}', Operations\GetShippingCarrierRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingCarrier2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingCarrierRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingCarrier2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingCarrier', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingCarrier', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingCarrier2Response(
+                $response = new Operations\GetShippingCarrierResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Shipping
     /**
      * Retrieve a label
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingLabel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingLabel2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingLabel2(Operations\GetShippingLabel2Request $request, ?Options $options = null): Operations\GetShippingLabel2Response
+    public function getShippingLabel(Operations\GetShippingLabelRequest $request, ?Options $options = null): Operations\GetShippingLabelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\GetShippingLabel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\GetShippingLabelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingLabel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingLabelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingLabel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingLabel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingLabel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingLabel2Response(
+                $response = new Operations\GetShippingLabelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Shipping
     /**
      * Retrieve a shipment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingShipment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingShipment2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingShipment2(Operations\GetShippingShipment2Request $request, ?Options $options = null): Operations\GetShippingShipment2Response
+    public function getShippingShipment(Operations\GetShippingShipmentRequest $request, ?Options $options = null): Operations\GetShippingShipmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\GetShippingShipment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\GetShippingShipmentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingShipment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingShipmentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingShipment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingShipment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingShipment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingShipment2Response(
+                $response = new Operations\GetShippingShipmentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Shipping
     /**
      * Retrieve a tracking
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingTracking2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingTracking2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingTrackingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingTrackingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingTracking2(Operations\GetShippingTracking2Request $request, ?Options $options = null): Operations\GetShippingTracking2Response
+    public function getShippingTracking(Operations\GetShippingTrackingRequest $request, ?Options $options = null): Operations\GetShippingTrackingResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking/{id}', Operations\GetShippingTracking2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking/{id}', Operations\GetShippingTrackingRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingTracking2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingTrackingRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingTracking2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingTracking', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingTracking', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingTracking2Response(
+                $response = new Operations\GetShippingTrackingResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Shipping
     /**
      * List all carriers
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriers2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingCarriers2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingCarriersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingCarriers2(Operations\ListShippingCarriers2Request $request, ?Options $options = null): Operations\ListShippingCarriers2Response
+    public function listShippingCarriers(Operations\ListShippingCarriersRequest $request, ?Options $options = null): Operations\ListShippingCarriersResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier', Operations\ListShippingCarriers2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/carrier', Operations\ListShippingCarriersRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingCarriers2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingCarriersRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingCarriers2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingCarriers', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingCarrier>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingCarriers2Response(
+                $response = new Operations\ListShippingCarriersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Shipping
     /**
      * List all labels
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingLabels2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingLabels2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingLabelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingLabelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingLabels2(Operations\ListShippingLabels2Request $request, ?Options $options = null): Operations\ListShippingLabels2Response
+    public function listShippingLabels(Operations\ListShippingLabelsRequest $request, ?Options $options = null): Operations\ListShippingLabelsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label', Operations\ListShippingLabels2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label', Operations\ListShippingLabelsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingLabels2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingLabelsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingLabels2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingLabels', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingLabel>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingLabels2Response(
+                $response = new Operations\ListShippingLabelsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,22 +629,22 @@ class Shipping
     /**
      * List all shipments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingShipments2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingShipments2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingShipmentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingShipmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingShipments2(Operations\ListShippingShipments2Request $request, ?Options $options = null): Operations\ListShippingShipments2Response
+    public function listShippingShipments(Operations\ListShippingShipmentsRequest $request, ?Options $options = null): Operations\ListShippingShipmentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment', Operations\ListShippingShipments2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment', Operations\ListShippingShipmentsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingShipments2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingShipmentsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingShipments2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingShipments', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -670,7 +670,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingShipment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingShipments2Response(
+                $response = new Operations\ListShippingShipmentsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -692,22 +692,22 @@ class Shipping
     /**
      * List all trackings
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingTrackings2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingTrackings2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingTrackingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingTrackingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingTrackings2(Operations\ListShippingTrackings2Request $request, ?Options $options = null): Operations\ListShippingTrackings2Response
+    public function listShippingTrackings(Operations\ListShippingTrackingsRequest $request, ?Options $options = null): Operations\ListShippingTrackingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking', Operations\ListShippingTrackings2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking', Operations\ListShippingTrackingsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingTrackings2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingTrackingsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingTrackings2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingTrackings', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -733,7 +733,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingTracking>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingTrackings2Response(
+                $response = new Operations\ListShippingTrackingsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -755,14 +755,14 @@ class Shipping
     /**
      * Update a label
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchShippingLabel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchShippingLabel2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchShippingLabel2(Operations\PatchShippingLabel2Request $request, ?Options $options = null): Operations\PatchShippingLabel2Response
+    public function patchShippingLabel(Operations\PatchShippingLabelRequest $request, ?Options $options = null): Operations\PatchShippingLabelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\PatchShippingLabel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\PatchShippingLabelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingLabel', 'json');
@@ -771,11 +771,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchShippingLabel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchShippingLabelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchShippingLabel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchShippingLabel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -801,7 +801,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingLabel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchShippingLabel2Response(
+                $response = new Operations\PatchShippingLabelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -823,14 +823,14 @@ class Shipping
     /**
      * Update a shipment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchShippingShipment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchShippingShipment2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchShippingShipment2(Operations\PatchShippingShipment2Request $request, ?Options $options = null): Operations\PatchShippingShipment2Response
+    public function patchShippingShipment(Operations\PatchShippingShipmentRequest $request, ?Options $options = null): Operations\PatchShippingShipmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\PatchShippingShipment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\PatchShippingShipmentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingShipment', 'json');
@@ -839,11 +839,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchShippingShipment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchShippingShipmentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchShippingShipment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchShippingShipment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -869,7 +869,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingShipment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchShippingShipment2Response(
+                $response = new Operations\PatchShippingShipmentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -891,20 +891,20 @@ class Shipping
     /**
      * Remove a label
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingLabel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveShippingLabel2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeShippingLabel2(Operations\RemoveShippingLabel2Request $request, ?Options $options = null): Operations\RemoveShippingLabel2Response
+    public function removeShippingLabel(Operations\RemoveShippingLabelRequest $request, ?Options $options = null): Operations\RemoveShippingLabelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\RemoveShippingLabel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\RemoveShippingLabelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeShippingLabel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeShippingLabel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -925,7 +925,7 @@ class Shipping
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveShippingLabel2Response(
+            return new Operations\RemoveShippingLabelResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -937,7 +937,7 @@ class Shipping
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveShippingLabel2Response(
+            return new Operations\RemoveShippingLabelResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -948,20 +948,20 @@ class Shipping
     /**
      * Remove a shipment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingShipment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveShippingShipment2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeShippingShipment2(Operations\RemoveShippingShipment2Request $request, ?Options $options = null): Operations\RemoveShippingShipment2Response
+    public function removeShippingShipment(Operations\RemoveShippingShipmentRequest $request, ?Options $options = null): Operations\RemoveShippingShipmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\RemoveShippingShipment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\RemoveShippingShipmentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeShippingShipment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeShippingShipment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -982,7 +982,7 @@ class Shipping
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveShippingShipment2Response(
+            return new Operations\RemoveShippingShipmentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -994,7 +994,7 @@ class Shipping
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveShippingShipment2Response(
+            return new Operations\RemoveShippingShipmentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1005,14 +1005,14 @@ class Shipping
     /**
      * Update a label
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingLabel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateShippingLabel2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingLabelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateShippingLabel2(Operations\UpdateShippingLabel2Request $request, ?Options $options = null): Operations\UpdateShippingLabel2Response
+    public function updateShippingLabel(Operations\UpdateShippingLabelRequest $request, ?Options $options = null): Operations\UpdateShippingLabelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\UpdateShippingLabel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/label/{id}', Operations\UpdateShippingLabelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingLabel', 'json');
@@ -1021,11 +1021,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateShippingLabel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateShippingLabelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateShippingLabel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateShippingLabel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1051,7 +1051,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingLabel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateShippingLabel2Response(
+                $response = new Operations\UpdateShippingLabelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1073,14 +1073,14 @@ class Shipping
     /**
      * Update a shipment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingShipment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateShippingShipment2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateShippingShipmentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateShippingShipment2(Operations\UpdateShippingShipment2Request $request, ?Options $options = null): Operations\UpdateShippingShipment2Response
+    public function updateShippingShipment(Operations\UpdateShippingShipmentRequest $request, ?Options $options = null): Operations\UpdateShippingShipmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\UpdateShippingShipment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/shipment/{id}', Operations\UpdateShippingShipmentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'shippingShipment', 'json');
@@ -1089,11 +1089,11 @@ class Shipping
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateShippingShipment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateShippingShipmentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateShippingShipment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateShippingShipment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1119,7 +1119,7 @@ class Shipping
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingShipment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateShippingShipment2Response(
+                $response = new Operations\UpdateShippingShipmentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

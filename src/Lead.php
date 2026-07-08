@@ -47,14 +47,14 @@ class Lead
     /**
      * Create a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLead2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmLead2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmLead2(Operations\CreateCrmLead2Request $request, ?Options $options = null): Operations\CreateCrmLead2Response
+    public function createCrmLead(Operations\CreateCrmLeadRequest $request, ?Options $options = null): Operations\CreateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLead2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\CreateCrmLeadRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -63,11 +63,11 @@ class Lead
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmLead2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmLeadRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmLead2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmLead', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Lead
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmLead2Response(
+                $response = new Operations\CreateCrmLeadResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Lead
     /**
      * Retrieve a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmLead2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmLead2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmLead2(Operations\GetCrmLead2Request $request, ?Options $options = null): Operations\GetCrmLead2Response
+    public function getCrmLead(Operations\GetCrmLeadRequest $request, ?Options $options = null): Operations\GetCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLead2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\GetCrmLeadRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmLead2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmLeadRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmLead2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmLead', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Lead
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmLead2Response(
+                $response = new Operations\GetCrmLeadResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Lead
     /**
      * List all leads
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeads2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmLeads2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmLeads2(Operations\ListCrmLeads2Request $request, ?Options $options = null): Operations\ListCrmLeads2Response
+    public function listCrmLeads(Operations\ListCrmLeadsRequest $request, ?Options $options = null): Operations\ListCrmLeadsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeads2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead', Operations\ListCrmLeadsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmLeads2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmLeadsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmLeads2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmLeads', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Lead
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmLead>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmLeads2Response(
+                $response = new Operations\ListCrmLeadsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Lead
     /**
      * Update a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLead2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmLead2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmLead2(Operations\PatchCrmLead2Request $request, ?Options $options = null): Operations\PatchCrmLead2Response
+    public function patchCrmLead(Operations\PatchCrmLeadRequest $request, ?Options $options = null): Operations\PatchCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLead2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\PatchCrmLeadRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -257,11 +257,11 @@ class Lead
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmLead2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmLeadRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmLead2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmLead', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Lead
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmLead2Response(
+                $response = new Operations\PatchCrmLeadResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Lead
     /**
      * Remove a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLead2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLead2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmLead2(Operations\RemoveCrmLead2Request $request, ?Options $options = null): Operations\RemoveCrmLead2Response
+    public function removeCrmLead(Operations\RemoveCrmLeadRequest $request, ?Options $options = null): Operations\RemoveCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLead2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\RemoveCrmLeadRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmLead2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmLead', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Lead
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmLead2Response(
+            return new Operations\RemoveCrmLeadResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Lead
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmLead2Response(
+            return new Operations\RemoveCrmLeadResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Lead
     /**
      * Update a lead
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLead2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLead2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmLead2(Operations\UpdateCrmLead2Request $request, ?Options $options = null): Operations\UpdateCrmLead2Response
+    public function updateCrmLead(Operations\UpdateCrmLeadRequest $request, ?Options $options = null): Operations\UpdateCrmLeadResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLead2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/lead/{id}', Operations\UpdateCrmLeadRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmLead', 'json');
@@ -382,11 +382,11 @@ class Lead
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmLead2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmLeadRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmLead2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmLead', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Lead
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmLead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmLead2Response(
+                $response = new Operations\UpdateCrmLeadResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

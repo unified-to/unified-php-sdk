@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [createAdsGroup2](#createadsgroup2) - Create a group
-* [createHrisGroup2](#createhrisgroup2) - Create a group
+* [createAdsGroup](#createadsgroup) - Create a group
+* [createHrisGroup](#createhrisgroup) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
-* [getAdsGroup2](#getadsgroup2) - Retrieve a group
-* [getClubsGroup2](#getclubsgroup2) - Retrieve a group
-* [getHrisGroup2](#gethrisgroup2) - Retrieve a group
+* [getAdsGroup](#getadsgroup) - Retrieve a group
+* [getClubsGroup](#getclubsgroup) - Retrieve a group
+* [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
-* [listAdsGroups2](#listadsgroups2) - List all groups
-* [listClubsGroups2](#listclubsgroups2) - List all groups
-* [listHrisGroups2](#listhrisgroups2) - List all groups
+* [listAdsGroups](#listadsgroups) - List all groups
+* [listClubsGroups](#listclubsgroups) - List all groups
+* [listHrisGroups](#listhrisgroups) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
-* [patchAdsGroup2](#patchadsgroup2) - Update a group
-* [patchHrisGroup2](#patchhrisgroup2) - Update a group
+* [patchAdsGroup](#patchadsgroup) - Update a group
+* [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchScimGroups](#patchscimgroups) - Update group
-* [removeAdsGroup2](#removeadsgroup2) - Remove a group
-* [removeHrisGroup2](#removehrisgroup2) - Remove a group
+* [removeAdsGroup](#removeadsgroup) - Remove a group
+* [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeScimGroups](#removescimgroups) - Delete group
-* [updateAdsGroup2](#updateadsgroup2) - Update a group
-* [updateHrisGroup2](#updatehrisgroup2) - Update a group
+* [updateAdsGroup](#updateadsgroup) - Update a group
+* [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateScimGroups](#updatescimgroups) - Update group
 
-## createAdsGroup2
+## createAdsGroup
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -47,12 +47,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsGroup2Request(
+$request = new Operations\CreateAdsGroupRequest(
     adsGroup: new Shared\AdsGroup(),
     connectionId: '<id>',
 );
 
-$response = $sdk->group->createAdsGroup2(
+$response = $sdk->group->createAdsGroup(
     request: $request
 );
 
@@ -63,13 +63,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\CreateAdsGroup2Request](../../Models/Operations/CreateAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateAdsGroupRequest](../../Models/Operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\CreateAdsGroup2Response](../../Models/Operations/CreateAdsGroup2Response.md)**
+**[?Operations\CreateAdsGroupResponse](../../Models/Operations/CreateAdsGroupResponse.md)**
 
 ### Errors
 
@@ -77,13 +77,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createHrisGroup2
+## createHrisGroup
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisGroup2" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -99,12 +99,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisGroup2Request(
+$request = new Operations\CreateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
 );
 
-$response = $sdk->group->createHrisGroup2(
+$response = $sdk->group->createHrisGroup(
     request: $request
 );
 
@@ -115,13 +115,13 @@ if ($response->hrisGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateHrisGroup2Request](../../Models/Operations/CreateHrisGroup2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateHrisGroupRequest](../../Models/Operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateHrisGroup2Response](../../Models/Operations/CreateHrisGroup2Response.md)**
+**[?Operations\CreateHrisGroupResponse](../../Models/Operations/CreateHrisGroupResponse.md)**
 
 ### Errors
 
@@ -183,13 +183,13 @@ if ($response->scimGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsGroup2
+## getAdsGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -204,12 +204,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsGroup2Request(
+$request = new Operations\GetAdsGroupRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->getAdsGroup2(
+$response = $sdk->group->getAdsGroup(
     request: $request
 );
 
@@ -220,13 +220,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\GetAdsGroup2Request](../../Models/Operations/GetAdsGroup2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetAdsGroupRequest](../../Models/Operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\GetAdsGroup2Response](../../Models/Operations/GetAdsGroup2Response.md)**
+**[?Operations\GetAdsGroupResponse](../../Models/Operations/GetAdsGroupResponse.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsGroup2
+## getClubsGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -255,12 +255,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsGroup2Request(
+$request = new Operations\GetClubsGroupRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->getClubsGroup2(
+$response = $sdk->group->getClubsGroup(
     request: $request
 );
 
@@ -271,13 +271,13 @@ if ($response->clubsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetClubsGroup2Request](../../Models/Operations/GetClubsGroup2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetClubsGroupRequest](../../Models/Operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetClubsGroup2Response](../../Models/Operations/GetClubsGroup2Response.md)**
+**[?Operations\GetClubsGroupResponse](../../Models/Operations/GetClubsGroupResponse.md)**
 
 ### Errors
 
@@ -285,13 +285,13 @@ if ($response->clubsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisGroup2
+## getHrisGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisGroup2" method="get" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -306,12 +306,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisGroup2Request(
+$request = new Operations\GetHrisGroupRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->getHrisGroup2(
+$response = $sdk->group->getHrisGroup(
     request: $request
 );
 
@@ -322,13 +322,13 @@ if ($response->hrisGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetHrisGroup2Request](../../Models/Operations/GetHrisGroup2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetHrisGroupRequest](../../Models/Operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetHrisGroup2Response](../../Models/Operations/GetHrisGroup2Response.md)**
+**[?Operations\GetHrisGroupResponse](../../Models/Operations/GetHrisGroupResponse.md)**
 
 ### Errors
 
@@ -387,13 +387,13 @@ if ($response->scimGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsGroups2
+## listAdsGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -408,11 +408,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsGroups2Request(
+$request = new Operations\ListAdsGroupsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->group->listAdsGroups2(
+$response = $sdk->group->listAdsGroups(
     request: $request
 );
 
@@ -423,13 +423,13 @@ if ($response->adsGroups !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListAdsGroups2Request](../../Models/Operations/ListAdsGroups2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListAdsGroupsRequest](../../Models/Operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\ListAdsGroups2Response](../../Models/Operations/ListAdsGroups2Response.md)**
+**[?Operations\ListAdsGroupsResponse](../../Models/Operations/ListAdsGroupsResponse.md)**
 
 ### Errors
 
@@ -437,13 +437,13 @@ if ($response->adsGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsGroups2
+## listClubsGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -458,11 +458,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsGroups2Request(
+$request = new Operations\ListClubsGroupsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->group->listClubsGroups2(
+$response = $sdk->group->listClubsGroups(
     request: $request
 );
 
@@ -473,13 +473,13 @@ if ($response->clubsGroups !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListClubsGroups2Request](../../Models/Operations/ListClubsGroups2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListClubsGroupsRequest](../../Models/Operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListClubsGroups2Response](../../Models/Operations/ListClubsGroups2Response.md)**
+**[?Operations\ListClubsGroupsResponse](../../Models/Operations/ListClubsGroupsResponse.md)**
 
 ### Errors
 
@@ -487,13 +487,13 @@ if ($response->clubsGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisGroups2
+## listHrisGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisGroups2" method="get" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -508,11 +508,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisGroups2Request(
+$request = new Operations\ListHrisGroupsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->group->listHrisGroups2(
+$response = $sdk->group->listHrisGroups(
     request: $request
 );
 
@@ -523,13 +523,13 @@ if ($response->hrisGroups !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListHrisGroups2Request](../../Models/Operations/ListHrisGroups2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListHrisGroupsRequest](../../Models/Operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListHrisGroups2Response](../../Models/Operations/ListHrisGroups2Response.md)**
+**[?Operations\ListHrisGroupsResponse](../../Models/Operations/ListHrisGroupsResponse.md)**
 
 ### Errors
 
@@ -587,13 +587,13 @@ if ($response->scimGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsGroup2
+## patchAdsGroup
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -609,13 +609,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsGroup2Request(
+$request = new Operations\PatchAdsGroupRequest(
     adsGroup: new Shared\AdsGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->patchAdsGroup2(
+$response = $sdk->group->patchAdsGroup(
     request: $request
 );
 
@@ -626,13 +626,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\PatchAdsGroup2Request](../../Models/Operations/PatchAdsGroup2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchAdsGroupRequest](../../Models/Operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\PatchAdsGroup2Response](../../Models/Operations/PatchAdsGroup2Response.md)**
+**[?Operations\PatchAdsGroupResponse](../../Models/Operations/PatchAdsGroupResponse.md)**
 
 ### Errors
 
@@ -640,13 +640,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisGroup2
+## patchHrisGroup
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisGroup2" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -662,13 +662,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisGroup2Request(
+$request = new Operations\PatchHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->patchHrisGroup2(
+$response = $sdk->group->patchHrisGroup(
     request: $request
 );
 
@@ -679,13 +679,13 @@ if ($response->hrisGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchHrisGroup2Request](../../Models/Operations/PatchHrisGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchHrisGroupRequest](../../Models/Operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchHrisGroup2Response](../../Models/Operations/PatchHrisGroup2Response.md)**
+**[?Operations\PatchHrisGroupResponse](../../Models/Operations/PatchHrisGroupResponse.md)**
 
 ### Errors
 
@@ -748,13 +748,13 @@ if ($response->scimGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAdsGroup2
+## removeAdsGroup
 
 Remove a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -769,12 +769,63 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAdsGroup2Request(
+$request = new Operations\RemoveAdsGroupRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->removeAdsGroup2(
+$response = $sdk->group->removeAdsGroup(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveAdsGroupRequest](../../Models/Operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\RemoveAdsGroupResponse](../../Models/Operations/RemoveAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisGroup
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisGroupRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->group->removeHrisGroup(
     request: $request
 );
 
@@ -787,62 +838,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\RemoveAdsGroup2Request](../../Models/Operations/RemoveAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `$request`                                                                             | [Operations\RemoveHrisGroupRequest](../../Models/Operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\RemoveAdsGroup2Response](../../Models/Operations/RemoveAdsGroup2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeHrisGroup2
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeHrisGroup2" method="delete" path="/hris/{connection_id}/group/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveHrisGroup2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->group->removeHrisGroup2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveHrisGroup2Request](../../Models/Operations/RemoveHrisGroup2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\RemoveHrisGroup2Response](../../Models/Operations/RemoveHrisGroup2Response.md)**
+**[?Operations\RemoveHrisGroupResponse](../../Models/Operations/RemoveHrisGroupResponse.md)**
 
 ### Errors
 
@@ -901,13 +901,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAdsGroup2
+## updateAdsGroup
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -923,13 +923,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAdsGroup2Request(
+$request = new Operations\UpdateAdsGroupRequest(
     adsGroup: new Shared\AdsGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->updateAdsGroup2(
+$response = $sdk->group->updateAdsGroup(
     request: $request
 );
 
@@ -940,13 +940,13 @@ if ($response->adsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\UpdateAdsGroup2Request](../../Models/Operations/UpdateAdsGroup2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateAdsGroupRequest](../../Models/Operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\UpdateAdsGroup2Response](../../Models/Operations/UpdateAdsGroup2Response.md)**
+**[?Operations\UpdateAdsGroupResponse](../../Models/Operations/UpdateAdsGroupResponse.md)**
 
 ### Errors
 
@@ -954,13 +954,13 @@ if ($response->adsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisGroup2
+## updateHrisGroup
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisGroup2" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -976,13 +976,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisGroup2Request(
+$request = new Operations\UpdateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->group->updateHrisGroup2(
+$response = $sdk->group->updateHrisGroup(
     request: $request
 );
 
@@ -993,13 +993,13 @@ if ($response->hrisGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateHrisGroup2Request](../../Models/Operations/UpdateHrisGroup2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateHrisGroupRequest](../../Models/Operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\UpdateHrisGroup2Response](../../Models/Operations/UpdateHrisGroup2Response.md)**
+**[?Operations\UpdateHrisGroupResponse](../../Models/Operations/UpdateHrisGroupResponse.md)**
 
 ### Errors
 

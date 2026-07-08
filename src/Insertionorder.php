@@ -47,14 +47,14 @@ class Insertionorder
     /**
      * Create an insertionorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorder2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorder2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAdsInsertionorder2(Operations\CreateAdsInsertionorder2Request $request, ?Options $options = null): Operations\CreateAdsInsertionorder2Response
+    public function createAdsInsertionorder(Operations\CreateAdsInsertionorderRequest $request, ?Options $options = null): Operations\CreateAdsInsertionorderResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder', Operations\CreateAdsInsertionorder2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder', Operations\CreateAdsInsertionorderRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsInsertionorder', 'json');
@@ -63,11 +63,11 @@ class Insertionorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsInsertionorder2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsInsertionorderRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsInsertionorder2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsInsertionorder', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Insertionorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsInsertionorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAdsInsertionorder2Response(
+                $response = new Operations\CreateAdsInsertionorderResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Insertionorder
     /**
      * Retrieve an insertionorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorder2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorder2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAdsInsertionorder2(Operations\GetAdsInsertionorder2Request $request, ?Options $options = null): Operations\GetAdsInsertionorder2Response
+    public function getAdsInsertionorder(Operations\GetAdsInsertionorderRequest $request, ?Options $options = null): Operations\GetAdsInsertionorderResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\GetAdsInsertionorder2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\GetAdsInsertionorderRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAdsInsertionorder2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAdsInsertionorderRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsInsertionorder2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsInsertionorder', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Insertionorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsInsertionorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAdsInsertionorder2Response(
+                $response = new Operations\GetAdsInsertionorderResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Insertionorder
     /**
      * List all insertionorders
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionorders2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionorders2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionordersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAdsInsertionorders2(Operations\ListAdsInsertionorders2Request $request, ?Options $options = null): Operations\ListAdsInsertionorders2Response
+    public function listAdsInsertionorders(Operations\ListAdsInsertionordersRequest $request, ?Options $options = null): Operations\ListAdsInsertionordersResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder', Operations\ListAdsInsertionorders2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder', Operations\ListAdsInsertionordersRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAdsInsertionorders2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAdsInsertionordersRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsInsertionorders2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsInsertionorders', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Insertionorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AdsInsertionorder>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAdsInsertionorders2Response(
+                $response = new Operations\ListAdsInsertionordersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Insertionorder
     /**
      * Update an insertionorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorder2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorder2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAdsInsertionorder2(Operations\PatchAdsInsertionorder2Request $request, ?Options $options = null): Operations\PatchAdsInsertionorder2Response
+    public function patchAdsInsertionorder(Operations\PatchAdsInsertionorderRequest $request, ?Options $options = null): Operations\PatchAdsInsertionorderResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\PatchAdsInsertionorder2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\PatchAdsInsertionorderRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsInsertionorder', 'json');
@@ -257,11 +257,11 @@ class Insertionorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsInsertionorder2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsInsertionorderRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsInsertionorder2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsInsertionorder', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Insertionorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsInsertionorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAdsInsertionorder2Response(
+                $response = new Operations\PatchAdsInsertionorderResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Insertionorder
     /**
      * Remove an insertionorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorder2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorder2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAdsInsertionorder2(Operations\RemoveAdsInsertionorder2Request $request, ?Options $options = null): Operations\RemoveAdsInsertionorder2Response
+    public function removeAdsInsertionorder(Operations\RemoveAdsInsertionorderRequest $request, ?Options $options = null): Operations\RemoveAdsInsertionorderResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\RemoveAdsInsertionorder2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\RemoveAdsInsertionorderRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsInsertionorder2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsInsertionorder', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Insertionorder
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsInsertionorder2Response(
+            return new Operations\RemoveAdsInsertionorderResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Insertionorder
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsInsertionorder2Response(
+            return new Operations\RemoveAdsInsertionorderResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Insertionorder
     /**
      * Update an insertionorder
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorder2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorder2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAdsInsertionorder2(Operations\UpdateAdsInsertionorder2Request $request, ?Options $options = null): Operations\UpdateAdsInsertionorder2Response
+    public function updateAdsInsertionorder(Operations\UpdateAdsInsertionorderRequest $request, ?Options $options = null): Operations\UpdateAdsInsertionorderResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\UpdateAdsInsertionorder2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/insertionorder/{id}', Operations\UpdateAdsInsertionorderRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsInsertionorder', 'json');
@@ -382,11 +382,11 @@ class Insertionorder
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsInsertionorder2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsInsertionorderRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsInsertionorder2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsInsertionorder', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Insertionorder
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsInsertionorder', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAdsInsertionorder2Response(
+                $response = new Operations\UpdateAdsInsertionorderResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [listEnrichCompanies2](#listenrichcompanies2) - Retrieve enrichment information for a company
-* [listEnrichPeople2](#listenrichpeople2) - Retrieve enrichment information for a person
+* [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [listEnrichPeople](#listenrichpeople) - Retrieve enrichment information for a person
 
-## listEnrichCompanies2
+## listEnrichCompanies
 
 Retrieve enrichment information for a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listEnrichCompanies2" method="get" path="/enrich/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```php
 declare(strict_types=1);
 
@@ -28,11 +28,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListEnrichCompanies2Request(
+$request = new Operations\ListEnrichCompaniesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->enrich->listEnrichCompanies2(
+$response = $sdk->enrich->listEnrichCompanies(
     request: $request
 );
 
@@ -43,13 +43,13 @@ if ($response->enrichCompany !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListEnrichCompanies2Request](../../Models/Operations/ListEnrichCompanies2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListEnrichCompaniesRequest](../../Models/Operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListEnrichCompanies2Response](../../Models/Operations/ListEnrichCompanies2Response.md)**
+**[?Operations\ListEnrichCompaniesResponse](../../Models/Operations/ListEnrichCompaniesResponse.md)**
 
 ### Errors
 
@@ -57,13 +57,13 @@ if ($response->enrichCompany !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listEnrichPeople2
+## listEnrichPeople
 
 Retrieve enrichment information for a person
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listEnrichPeople2" method="get" path="/enrich/{connection_id}/person" -->
+<!-- UsageSnippet language="php" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```php
 declare(strict_types=1);
 
@@ -78,11 +78,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListEnrichPeople2Request(
+$request = new Operations\ListEnrichPeopleRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->enrich->listEnrichPeople2(
+$response = $sdk->enrich->listEnrichPeople(
     request: $request
 );
 
@@ -93,13 +93,13 @@ if ($response->enrichPerson !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListEnrichPeople2Request](../../Models/Operations/ListEnrichPeople2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListEnrichPeopleRequest](../../Models/Operations/ListEnrichPeopleRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListEnrichPeople2Response](../../Models/Operations/ListEnrichPeople2Response.md)**
+**[?Operations\ListEnrichPeopleResponse](../../Models/Operations/ListEnrichPeopleResponse.md)**
 
 ### Errors
 

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceSaleschannel2](#createcommercesaleschannel2) - Create a saleschannel
-* [getCommerceSaleschannel2](#getcommercesaleschannel2) - Retrieve a saleschannel
-* [listCommerceSaleschannels2](#listcommercesaleschannels2) - List all saleschannels
-* [patchCommerceSaleschannel2](#patchcommercesaleschannel2) - Update a saleschannel
-* [removeCommerceSaleschannel2](#removecommercesaleschannel2) - Remove a saleschannel
-* [updateCommerceSaleschannel2](#updatecommercesaleschannel2) - Update a saleschannel
+* [createCommerceSaleschannel](#createcommercesaleschannel) - Create a saleschannel
+* [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
+* [patchCommerceSaleschannel](#patchcommercesaleschannel) - Update a saleschannel
+* [removeCommerceSaleschannel](#removecommercesaleschannel) - Remove a saleschannel
+* [updateCommerceSaleschannel](#updatecommercesaleschannel) - Update a saleschannel
 
-## createCommerceSaleschannel2
+## createCommerceSaleschannel
 
 Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel2" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceSaleschannel2Request(
+$request = new Operations\CreateCommerceSaleschannelRequest(
     commerceSaleschannel: new Shared\CommerceSaleschannel(),
     connectionId: '<id>',
 );
 
-$response = $sdk->saleschannel->createCommerceSaleschannel2(
+$response = $sdk->saleschannel->createCommerceSaleschannel(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceSaleschannel !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\CreateCommerceSaleschannel2Request](../../Models/Operations/CreateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\CreateCommerceSaleschannelRequest](../../Models/Operations/CreateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\CreateCommerceSaleschannel2Response](../../Models/Operations/CreateCommerceSaleschannel2Response.md)**
+**[?Operations\CreateCommerceSaleschannelResponse](../../Models/Operations/CreateCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceSaleschannel !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceSaleschannel2
+## getCommerceSaleschannel
 
 Retrieve a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceSaleschannel2" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceSaleschannel" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceSaleschannel2Request(
+$request = new Operations\GetCommerceSaleschannelRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->saleschannel->getCommerceSaleschannel2(
+$response = $sdk->saleschannel->getCommerceSaleschannel(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceSaleschannel !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetCommerceSaleschannel2Request](../../Models/Operations/GetCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetCommerceSaleschannelRequest](../../Models/Operations/GetCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetCommerceSaleschannel2Response](../../Models/Operations/GetCommerceSaleschannel2Response.md)**
+**[?Operations\GetCommerceSaleschannelResponse](../../Models/Operations/GetCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceSaleschannel !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceSaleschannels2
+## listCommerceSaleschannels
 
 List all saleschannels
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceSaleschannels2" method="get" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="php" operationID="listCommerceSaleschannels" method="get" path="/commerce/{connection_id}/saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceSaleschannels2Request(
+$request = new Operations\ListCommerceSaleschannelsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->saleschannel->listCommerceSaleschannels2(
+$response = $sdk->saleschannel->listCommerceSaleschannels(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceSaleschannels !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListCommerceSaleschannels2Request](../../Models/Operations/ListCommerceSaleschannels2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\ListCommerceSaleschannelsRequest](../../Models/Operations/ListCommerceSaleschannelsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\ListCommerceSaleschannels2Response](../../Models/Operations/ListCommerceSaleschannels2Response.md)**
+**[?Operations\ListCommerceSaleschannelsResponse](../../Models/Operations/ListCommerceSaleschannelsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceSaleschannels !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceSaleschannel2
+## patchCommerceSaleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel2" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceSaleschannel2Request(
+$request = new Operations\PatchCommerceSaleschannelRequest(
     commerceSaleschannel: new Shared\CommerceSaleschannel(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->saleschannel->patchCommerceSaleschannel2(
+$response = $sdk->saleschannel->patchCommerceSaleschannel(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceSaleschannel !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\PatchCommerceSaleschannel2Request](../../Models/Operations/PatchCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\PatchCommerceSaleschannelRequest](../../Models/Operations/PatchCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\PatchCommerceSaleschannel2Response](../../Models/Operations/PatchCommerceSaleschannel2Response.md)**
+**[?Operations\PatchCommerceSaleschannelResponse](../../Models/Operations/PatchCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceSaleschannel !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceSaleschannel2
+## removeCommerceSaleschannel
 
 Remove a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceSaleschannel2" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceSaleschannel" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceSaleschannel2Request(
+$request = new Operations\RemoveCommerceSaleschannelRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->saleschannel->removeCommerceSaleschannel2(
+$response = $sdk->saleschannel->removeCommerceSaleschannel(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\RemoveCommerceSaleschannel2Request](../../Models/Operations/RemoveCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\RemoveCommerceSaleschannelRequest](../../Models/Operations/RemoveCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\RemoveCommerceSaleschannel2Response](../../Models/Operations/RemoveCommerceSaleschannel2Response.md)**
+**[?Operations\RemoveCommerceSaleschannelResponse](../../Models/Operations/RemoveCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceSaleschannel2
+## updateCommerceSaleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel2" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceSaleschannel2Request(
+$request = new Operations\UpdateCommerceSaleschannelRequest(
     commerceSaleschannel: new Shared\CommerceSaleschannel(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->saleschannel->updateCommerceSaleschannel2(
+$response = $sdk->saleschannel->updateCommerceSaleschannel(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceSaleschannel !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\UpdateCommerceSaleschannel2Request](../../Models/Operations/UpdateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\UpdateCommerceSaleschannelRequest](../../Models/Operations/UpdateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\UpdateCommerceSaleschannel2Response](../../Models/Operations/UpdateCommerceSaleschannel2Response.md)**
+**[?Operations\UpdateCommerceSaleschannelResponse](../../Models/Operations/UpdateCommerceSaleschannelResponse.md)**
 
 ### Errors
 

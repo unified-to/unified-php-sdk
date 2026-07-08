@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getAnalyticsSession2](#getanalyticssession2) - Retrieve a session
-* [listAnalyticsSessions2](#listanalyticssessions2) - List all sessions
+* [getAnalyticsSession](#getanalyticssession) - Retrieve a session
+* [listAnalyticsSessions](#listanalyticssessions) - List all sessions
 
-## getAnalyticsSession2
+## getAnalyticsSession
 
 Retrieve a session
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAnalyticsSession2" method="get" path="/analytics/{connection_id}/session/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAnalyticsSession" method="get" path="/analytics/{connection_id}/session/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAnalyticsSession2Request(
+$request = new Operations\GetAnalyticsSessionRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->session->getAnalyticsSession2(
+$response = $sdk->session->getAnalyticsSession(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->analyticsSession !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetAnalyticsSession2Request](../../Models/Operations/GetAnalyticsSession2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetAnalyticsSessionRequest](../../Models/Operations/GetAnalyticsSessionRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetAnalyticsSession2Response](../../Models/Operations/GetAnalyticsSession2Response.md)**
+**[?Operations\GetAnalyticsSessionResponse](../../Models/Operations/GetAnalyticsSessionResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->analyticsSession !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAnalyticsSessions2
+## listAnalyticsSessions
 
 List all sessions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAnalyticsSessions2" method="get" path="/analytics/{connection_id}/session" -->
+<!-- UsageSnippet language="php" operationID="listAnalyticsSessions" method="get" path="/analytics/{connection_id}/session" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAnalyticsSessions2Request(
+$request = new Operations\ListAnalyticsSessionsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->session->listAnalyticsSessions2(
+$response = $sdk->session->listAnalyticsSessions(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->analyticsSessions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListAnalyticsSessions2Request](../../Models/Operations/ListAnalyticsSessions2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListAnalyticsSessionsRequest](../../Models/Operations/ListAnalyticsSessionsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListAnalyticsSessions2Response](../../Models/Operations/ListAnalyticsSessions2Response.md)**
+**[?Operations\ListAnalyticsSessionsResponse](../../Models/Operations/ListAnalyticsSessionsResponse.md)**
 
 ### Errors
 

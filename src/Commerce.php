@@ -47,14 +47,14 @@ class Commerce
     /**
      * Create a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollection2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollection2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceCollection2(Operations\CreateCommerceCollection2Request $request, ?Options $options = null): Operations\CreateCommerceCollection2Response
+    public function createCommerceCollection(Operations\CreateCommerceCollectionRequest $request, ?Options $options = null): Operations\CreateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollection2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\CreateCommerceCollectionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -63,11 +63,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceCollection2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceCollectionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceCollection2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceCollection', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceCollection2Response(
+                $response = new Operations\CreateCommerceCollectionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Commerce
     /**
      * Create an inventory
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventory2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceInventory2(Operations\CreateCommerceInventory2Request $request, ?Options $options = null): Operations\CreateCommerceInventory2Response
+    public function createCommerceInventory(Operations\CreateCommerceInventoryRequest $request, ?Options $options = null): Operations\CreateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\CreateCommerceInventory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\CreateCommerceInventoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
@@ -131,11 +131,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceInventory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceInventoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceInventory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceInventory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceInventory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceInventory2Response(
+                $response = new Operations\CreateCommerceInventoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Commerce
     /**
      * Create an item
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItem2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItem2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceItem2(Operations\CreateCommerceItem2Request $request, ?Options $options = null): Operations\CreateCommerceItem2Response
+    public function createCommerceItem(Operations\CreateCommerceItemRequest $request, ?Options $options = null): Operations\CreateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', Operations\CreateCommerceItem2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', Operations\CreateCommerceItemRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
@@ -199,11 +199,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItem2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItemRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItem2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItem', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItem', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceItem2Response(
+                $response = new Operations\CreateCommerceItemResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,14 +251,14 @@ class Commerce
     /**
      * Create an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceItemvariant2(Operations\CreateCommerceItemvariant2Request $request, ?Options $options = null): Operations\CreateCommerceItemvariant2Response
+    public function createCommerceItemvariant(Operations\CreateCommerceItemvariantRequest $request, ?Options $options = null): Operations\CreateCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\CreateCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\CreateCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -267,11 +267,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -297,7 +297,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceItemvariant2Response(
+                $response = new Operations\CreateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -319,14 +319,14 @@ class Commerce
     /**
      * Create a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceLocation2(Operations\CreateCommerceLocation2Request $request, ?Options $options = null): Operations\CreateCommerceLocation2Response
+    public function createCommerceLocation(Operations\CreateCommerceLocationRequest $request, ?Options $options = null): Operations\CreateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\CreateCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\CreateCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -335,11 +335,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -365,7 +365,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceLocation2Response(
+                $response = new Operations\CreateCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -387,14 +387,14 @@ class Commerce
     /**
      * Create a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservation2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceReservation2(Operations\CreateCommerceReservation2Request $request, ?Options $options = null): Operations\CreateCommerceReservation2Response
+    public function createCommerceReservation(Operations\CreateCommerceReservationRequest $request, ?Options $options = null): Operations\CreateCommerceReservationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\CreateCommerceReservation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\CreateCommerceReservationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -403,11 +403,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReservation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReservationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReservation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReservation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -433,7 +433,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceReservation2Response(
+                $response = new Operations\CreateCommerceReservationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -455,14 +455,14 @@ class Commerce
     /**
      * Create a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceReview2(Operations\CreateCommerceReview2Request $request, ?Options $options = null): Operations\CreateCommerceReview2Response
+    public function createCommerceReview(Operations\CreateCommerceReviewRequest $request, ?Options $options = null): Operations\CreateCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\CreateCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\CreateCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -471,11 +471,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -501,7 +501,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceReview2Response(
+                $response = new Operations\CreateCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -523,14 +523,14 @@ class Commerce
     /**
      * Create a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannel2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceSaleschannel2(Operations\CreateCommerceSaleschannel2Request $request, ?Options $options = null): Operations\CreateCommerceSaleschannel2Response
+    public function createCommerceSaleschannel(Operations\CreateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\CreateCommerceSaleschannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\CreateCommerceSaleschannel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\CreateCommerceSaleschannelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -539,11 +539,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceSaleschannel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceSaleschannelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -569,7 +569,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceSaleschannel2Response(
+                $response = new Operations\CreateCommerceSaleschannelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -591,22 +591,22 @@ class Commerce
     /**
      * Retrieve a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollection2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollection2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceCollection2(Operations\GetCommerceCollection2Request $request, ?Options $options = null): Operations\GetCommerceCollection2Response
+    public function getCommerceCollection(Operations\GetCommerceCollectionRequest $request, ?Options $options = null): Operations\GetCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollection2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\GetCommerceCollectionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceCollection2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceCollectionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceCollection2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceCollection', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -632,7 +632,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceCollection2Response(
+                $response = new Operations\GetCommerceCollectionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -654,22 +654,22 @@ class Commerce
     /**
      * Retrieve an inventory
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceInventory2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceInventory2(Operations\GetCommerceInventory2Request $request, ?Options $options = null): Operations\GetCommerceInventory2Response
+    public function getCommerceInventory(Operations\GetCommerceInventoryRequest $request, ?Options $options = null): Operations\GetCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\GetCommerceInventory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\GetCommerceInventoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceInventory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceInventoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceInventory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceInventory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -695,7 +695,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceInventory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceInventory2Response(
+                $response = new Operations\GetCommerceInventoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -717,22 +717,22 @@ class Commerce
     /**
      * Retrieve an item
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItem2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceItem2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceItem2(Operations\GetCommerceItem2Request $request, ?Options $options = null): Operations\GetCommerceItem2Response
+    public function getCommerceItem(Operations\GetCommerceItemRequest $request, ?Options $options = null): Operations\GetCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\GetCommerceItem2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\GetCommerceItemRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItem2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItemRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItem2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItem', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -758,7 +758,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItem', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceItem2Response(
+                $response = new Operations\GetCommerceItemResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -780,22 +780,22 @@ class Commerce
     /**
      * Retrieve an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceItemvariant2(Operations\GetCommerceItemvariant2Request $request, ?Options $options = null): Operations\GetCommerceItemvariant2Response
+    public function getCommerceItemvariant(Operations\GetCommerceItemvariantRequest $request, ?Options $options = null): Operations\GetCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\GetCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\GetCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -821,7 +821,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceItemvariant2Response(
+                $response = new Operations\GetCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -843,22 +843,22 @@ class Commerce
     /**
      * Retrieve a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceLocation2(Operations\GetCommerceLocation2Request $request, ?Options $options = null): Operations\GetCommerceLocation2Response
+    public function getCommerceLocation(Operations\GetCommerceLocationRequest $request, ?Options $options = null): Operations\GetCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\GetCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\GetCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -884,7 +884,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceLocation2Response(
+                $response = new Operations\GetCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -906,22 +906,22 @@ class Commerce
     /**
      * Retrieve a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservation2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceReservation2(Operations\GetCommerceReservation2Request $request, ?Options $options = null): Operations\GetCommerceReservation2Response
+    public function getCommerceReservation(Operations\GetCommerceReservationRequest $request, ?Options $options = null): Operations\GetCommerceReservationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\GetCommerceReservation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\GetCommerceReservationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReservation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReservationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReservation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReservation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -947,7 +947,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceReservation2Response(
+                $response = new Operations\GetCommerceReservationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -969,22 +969,22 @@ class Commerce
     /**
      * Retrieve a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceReview2(Operations\GetCommerceReview2Request $request, ?Options $options = null): Operations\GetCommerceReview2Response
+    public function getCommerceReview(Operations\GetCommerceReviewRequest $request, ?Options $options = null): Operations\GetCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\GetCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\GetCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1010,7 +1010,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceReview2Response(
+                $response = new Operations\GetCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1032,22 +1032,22 @@ class Commerce
     /**
      * Retrieve a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannel2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceSaleschannel2(Operations\GetCommerceSaleschannel2Request $request, ?Options $options = null): Operations\GetCommerceSaleschannel2Response
+    public function getCommerceSaleschannel(Operations\GetCommerceSaleschannelRequest $request, ?Options $options = null): Operations\GetCommerceSaleschannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\GetCommerceSaleschannel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\GetCommerceSaleschannelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceSaleschannel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceSaleschannelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1073,7 +1073,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceSaleschannel2Response(
+                $response = new Operations\GetCommerceSaleschannelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1095,22 +1095,22 @@ class Commerce
     /**
      * List all availabilities
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilities2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilities2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceAvailabilities2(Operations\ListCommerceAvailabilities2Request $request, ?Options $options = null): Operations\ListCommerceAvailabilities2Response
+    public function listCommerceAvailabilities(Operations\ListCommerceAvailabilitiesRequest $request, ?Options $options = null): Operations\ListCommerceAvailabilitiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/availability', Operations\ListCommerceAvailabilities2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/availability', Operations\ListCommerceAvailabilitiesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceAvailabilities2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceAvailabilitiesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceAvailabilities2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceAvailabilities', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1136,7 +1136,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceAvailability>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceAvailabilities2Response(
+                $response = new Operations\ListCommerceAvailabilitiesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1158,22 +1158,22 @@ class Commerce
     /**
      * List all collections
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollections2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollections2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceCollections2(Operations\ListCommerceCollections2Request $request, ?Options $options = null): Operations\ListCommerceCollections2Response
+    public function listCommerceCollections(Operations\ListCommerceCollectionsRequest $request, ?Options $options = null): Operations\ListCommerceCollectionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollections2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection', Operations\ListCommerceCollectionsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceCollections2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceCollectionsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceCollections2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceCollections', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1199,7 +1199,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceCollection>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceCollections2Response(
+                $response = new Operations\ListCommerceCollectionsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1221,22 +1221,22 @@ class Commerce
     /**
      * List all inventories
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventories2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceInventories2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceInventories2(Operations\ListCommerceInventories2Request $request, ?Options $options = null): Operations\ListCommerceInventories2Response
+    public function listCommerceInventories(Operations\ListCommerceInventoriesRequest $request, ?Options $options = null): Operations\ListCommerceInventoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\ListCommerceInventories2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory', Operations\ListCommerceInventoriesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceInventories2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceInventoriesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceInventories2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceInventories', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1262,7 +1262,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceInventory>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceInventories2Response(
+                $response = new Operations\ListCommerceInventoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1284,22 +1284,22 @@ class Commerce
     /**
      * List all items
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItems2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceItems2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceItems2(Operations\ListCommerceItems2Request $request, ?Options $options = null): Operations\ListCommerceItems2Response
+    public function listCommerceItems(Operations\ListCommerceItemsRequest $request, ?Options $options = null): Operations\ListCommerceItemsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', Operations\ListCommerceItems2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item', Operations\ListCommerceItemsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItems2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItemsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItems2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItems', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1325,7 +1325,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceItem>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceItems2Response(
+                $response = new Operations\ListCommerceItemsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1347,22 +1347,22 @@ class Commerce
     /**
      * List all itemvariants
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariants2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariants2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceItemvariants2(Operations\ListCommerceItemvariants2Request $request, ?Options $options = null): Operations\ListCommerceItemvariants2Response
+    public function listCommerceItemvariants(Operations\ListCommerceItemvariantsRequest $request, ?Options $options = null): Operations\ListCommerceItemvariantsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\ListCommerceItemvariants2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant', Operations\ListCommerceItemvariantsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItemvariants2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceItemvariantsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItemvariants2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceItemvariants', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1388,7 +1388,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceItemvariants2Response(
+                $response = new Operations\ListCommerceItemvariantsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1410,22 +1410,22 @@ class Commerce
     /**
      * List all locations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceLocations2(Operations\ListCommerceLocations2Request $request, ?Options $options = null): Operations\ListCommerceLocations2Response
+    public function listCommerceLocations(Operations\ListCommerceLocationsRequest $request, ?Options $options = null): Operations\ListCommerceLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\ListCommerceLocations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\ListCommerceLocationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceLocations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceLocationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceLocations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceLocations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1451,7 +1451,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceLocation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceLocations2Response(
+                $response = new Operations\ListCommerceLocationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1473,22 +1473,22 @@ class Commerce
     /**
      * List all reservations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReservationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceReservations2(Operations\ListCommerceReservations2Request $request, ?Options $options = null): Operations\ListCommerceReservations2Response
+    public function listCommerceReservations(Operations\ListCommerceReservationsRequest $request, ?Options $options = null): Operations\ListCommerceReservationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\ListCommerceReservations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation', Operations\ListCommerceReservationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReservations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReservationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReservations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReservations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1514,7 +1514,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceReservation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceReservations2Response(
+                $response = new Operations\ListCommerceReservationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1536,22 +1536,22 @@ class Commerce
     /**
      * List all reviews
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviews2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviews2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceReviews2(Operations\ListCommerceReviews2Request $request, ?Options $options = null): Operations\ListCommerceReviews2Response
+    public function listCommerceReviews(Operations\ListCommerceReviewsRequest $request, ?Options $options = null): Operations\ListCommerceReviewsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\ListCommerceReviews2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\ListCommerceReviewsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReviews2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReviewsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReviews2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReviews', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1577,7 +1577,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceReview>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceReviews2Response(
+                $response = new Operations\ListCommerceReviewsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1599,22 +1599,22 @@ class Commerce
     /**
      * List all saleschannels
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannels2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannels2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceSaleschannels2(Operations\ListCommerceSaleschannels2Request $request, ?Options $options = null): Operations\ListCommerceSaleschannels2Response
+    public function listCommerceSaleschannels(Operations\ListCommerceSaleschannelsRequest $request, ?Options $options = null): Operations\ListCommerceSaleschannelsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\ListCommerceSaleschannels2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel', Operations\ListCommerceSaleschannelsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceSaleschannels2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceSaleschannelsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceSaleschannels2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceSaleschannels', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1640,7 +1640,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceSaleschannel>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceSaleschannels2Response(
+                $response = new Operations\ListCommerceSaleschannelsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1662,14 +1662,14 @@ class Commerce
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollection2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollection2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceCollection2(Operations\PatchCommerceCollection2Request $request, ?Options $options = null): Operations\PatchCommerceCollection2Response
+    public function patchCommerceCollection(Operations\PatchCommerceCollectionRequest $request, ?Options $options = null): Operations\PatchCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollection2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\PatchCommerceCollectionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -1678,11 +1678,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceCollection2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceCollectionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceCollection2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceCollection', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1708,7 +1708,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceCollection2Response(
+                $response = new Operations\PatchCommerceCollectionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1730,14 +1730,14 @@ class Commerce
     /**
      * Update an inventory
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventory2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceInventory2(Operations\PatchCommerceInventory2Request $request, ?Options $options = null): Operations\PatchCommerceInventory2Response
+    public function patchCommerceInventory(Operations\PatchCommerceInventoryRequest $request, ?Options $options = null): Operations\PatchCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\PatchCommerceInventory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\PatchCommerceInventoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
@@ -1746,11 +1746,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceInventory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceInventoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceInventory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceInventory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1776,7 +1776,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceInventory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceInventory2Response(
+                $response = new Operations\PatchCommerceInventoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1798,14 +1798,14 @@ class Commerce
     /**
      * Update an item
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItem2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItem2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceItem2(Operations\PatchCommerceItem2Request $request, ?Options $options = null): Operations\PatchCommerceItem2Response
+    public function patchCommerceItem(Operations\PatchCommerceItemRequest $request, ?Options $options = null): Operations\PatchCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\PatchCommerceItem2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\PatchCommerceItemRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
@@ -1814,11 +1814,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItem2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItemRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItem2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItem', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1844,7 +1844,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItem', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceItem2Response(
+                $response = new Operations\PatchCommerceItemResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1866,14 +1866,14 @@ class Commerce
     /**
      * Update an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceItemvariant2(Operations\PatchCommerceItemvariant2Request $request, ?Options $options = null): Operations\PatchCommerceItemvariant2Response
+    public function patchCommerceItemvariant(Operations\PatchCommerceItemvariantRequest $request, ?Options $options = null): Operations\PatchCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\PatchCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\PatchCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -1882,11 +1882,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1912,7 +1912,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceItemvariant2Response(
+                $response = new Operations\PatchCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1934,14 +1934,14 @@ class Commerce
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceLocation2(Operations\PatchCommerceLocation2Request $request, ?Options $options = null): Operations\PatchCommerceLocation2Response
+    public function patchCommerceLocation(Operations\PatchCommerceLocationRequest $request, ?Options $options = null): Operations\PatchCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\PatchCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\PatchCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -1950,11 +1950,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1980,7 +1980,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceLocation2Response(
+                $response = new Operations\PatchCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2002,14 +2002,14 @@ class Commerce
     /**
      * Update a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservation2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceReservation2(Operations\PatchCommerceReservation2Request $request, ?Options $options = null): Operations\PatchCommerceReservation2Response
+    public function patchCommerceReservation(Operations\PatchCommerceReservationRequest $request, ?Options $options = null): Operations\PatchCommerceReservationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\PatchCommerceReservation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\PatchCommerceReservationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -2018,11 +2018,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReservation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReservationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReservation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReservation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2048,7 +2048,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceReservation2Response(
+                $response = new Operations\PatchCommerceReservationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2070,14 +2070,14 @@ class Commerce
     /**
      * Update a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceReview2(Operations\PatchCommerceReview2Request $request, ?Options $options = null): Operations\PatchCommerceReview2Response
+    public function patchCommerceReview(Operations\PatchCommerceReviewRequest $request, ?Options $options = null): Operations\PatchCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\PatchCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\PatchCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -2086,11 +2086,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2116,7 +2116,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceReview2Response(
+                $response = new Operations\PatchCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2138,14 +2138,14 @@ class Commerce
     /**
      * Update a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannel2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceSaleschannel2(Operations\PatchCommerceSaleschannel2Request $request, ?Options $options = null): Operations\PatchCommerceSaleschannel2Response
+    public function patchCommerceSaleschannel(Operations\PatchCommerceSaleschannelRequest $request, ?Options $options = null): Operations\PatchCommerceSaleschannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\PatchCommerceSaleschannel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\PatchCommerceSaleschannelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -2154,11 +2154,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceSaleschannel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceSaleschannelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2184,7 +2184,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceSaleschannel2Response(
+                $response = new Operations\PatchCommerceSaleschannelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2206,20 +2206,20 @@ class Commerce
     /**
      * Remove a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollection2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollection2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceCollection2(Operations\RemoveCommerceCollection2Request $request, ?Options $options = null): Operations\RemoveCommerceCollection2Response
+    public function removeCommerceCollection(Operations\RemoveCommerceCollectionRequest $request, ?Options $options = null): Operations\RemoveCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollection2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\RemoveCommerceCollectionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceCollection2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceCollection', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2240,7 +2240,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceCollection2Response(
+            return new Operations\RemoveCommerceCollectionResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2252,7 +2252,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceCollection2Response(
+            return new Operations\RemoveCommerceCollectionResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2263,20 +2263,20 @@ class Commerce
     /**
      * Remove an inventory
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventory2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceInventory2(Operations\RemoveCommerceInventory2Request $request, ?Options $options = null): Operations\RemoveCommerceInventory2Response
+    public function removeCommerceInventory(Operations\RemoveCommerceInventoryRequest $request, ?Options $options = null): Operations\RemoveCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\RemoveCommerceInventory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\RemoveCommerceInventoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceInventory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceInventory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2297,7 +2297,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceInventory2Response(
+            return new Operations\RemoveCommerceInventoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2309,7 +2309,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceInventory2Response(
+            return new Operations\RemoveCommerceInventoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2320,20 +2320,20 @@ class Commerce
     /**
      * Remove an item
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItem2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItem2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceItem2(Operations\RemoveCommerceItem2Request $request, ?Options $options = null): Operations\RemoveCommerceItem2Response
+    public function removeCommerceItem(Operations\RemoveCommerceItemRequest $request, ?Options $options = null): Operations\RemoveCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\RemoveCommerceItem2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\RemoveCommerceItemRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItem2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItem', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2354,7 +2354,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItem2Response(
+            return new Operations\RemoveCommerceItemResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2366,7 +2366,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItem2Response(
+            return new Operations\RemoveCommerceItemResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2377,20 +2377,20 @@ class Commerce
     /**
      * Remove an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceItemvariant2(Operations\RemoveCommerceItemvariant2Request $request, ?Options $options = null): Operations\RemoveCommerceItemvariant2Response
+    public function removeCommerceItemvariant(Operations\RemoveCommerceItemvariantRequest $request, ?Options $options = null): Operations\RemoveCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\RemoveCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\RemoveCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2411,7 +2411,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItemvariant2Response(
+            return new Operations\RemoveCommerceItemvariantResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2423,7 +2423,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceItemvariant2Response(
+            return new Operations\RemoveCommerceItemvariantResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2434,20 +2434,20 @@ class Commerce
     /**
      * Remove a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceLocation2(Operations\RemoveCommerceLocation2Request $request, ?Options $options = null): Operations\RemoveCommerceLocation2Response
+    public function removeCommerceLocation(Operations\RemoveCommerceLocationRequest $request, ?Options $options = null): Operations\RemoveCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\RemoveCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\RemoveCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2468,7 +2468,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceLocation2Response(
+            return new Operations\RemoveCommerceLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2480,7 +2480,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceLocation2Response(
+            return new Operations\RemoveCommerceLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2491,20 +2491,20 @@ class Commerce
     /**
      * Remove a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservation2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceReservation2(Operations\RemoveCommerceReservation2Request $request, ?Options $options = null): Operations\RemoveCommerceReservation2Response
+    public function removeCommerceReservation(Operations\RemoveCommerceReservationRequest $request, ?Options $options = null): Operations\RemoveCommerceReservationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\RemoveCommerceReservation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\RemoveCommerceReservationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReservation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReservation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2525,7 +2525,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReservation2Response(
+            return new Operations\RemoveCommerceReservationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2537,7 +2537,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReservation2Response(
+            return new Operations\RemoveCommerceReservationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2548,20 +2548,20 @@ class Commerce
     /**
      * Remove a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceReview2(Operations\RemoveCommerceReview2Request $request, ?Options $options = null): Operations\RemoveCommerceReview2Response
+    public function removeCommerceReview(Operations\RemoveCommerceReviewRequest $request, ?Options $options = null): Operations\RemoveCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\RemoveCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\RemoveCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2582,7 +2582,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReview2Response(
+            return new Operations\RemoveCommerceReviewResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2594,7 +2594,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReview2Response(
+            return new Operations\RemoveCommerceReviewResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2605,20 +2605,20 @@ class Commerce
     /**
      * Remove a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannel2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceSaleschannel2(Operations\RemoveCommerceSaleschannel2Request $request, ?Options $options = null): Operations\RemoveCommerceSaleschannel2Response
+    public function removeCommerceSaleschannel(Operations\RemoveCommerceSaleschannelRequest $request, ?Options $options = null): Operations\RemoveCommerceSaleschannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\RemoveCommerceSaleschannel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\RemoveCommerceSaleschannelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -2639,7 +2639,7 @@ class Commerce
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceSaleschannel2Response(
+            return new Operations\RemoveCommerceSaleschannelResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2651,7 +2651,7 @@ class Commerce
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceSaleschannel2Response(
+            return new Operations\RemoveCommerceSaleschannelResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -2662,14 +2662,14 @@ class Commerce
     /**
      * Update a collection
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollection2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollection2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceCollection2(Operations\UpdateCommerceCollection2Request $request, ?Options $options = null): Operations\UpdateCommerceCollection2Response
+    public function updateCommerceCollection(Operations\UpdateCommerceCollectionRequest $request, ?Options $options = null): Operations\UpdateCommerceCollectionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollection2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/collection/{id}', Operations\UpdateCommerceCollectionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceCollection', 'json');
@@ -2678,11 +2678,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceCollection2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceCollectionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceCollection2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceCollection', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2708,7 +2708,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceCollection', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceCollection2Response(
+                $response = new Operations\UpdateCommerceCollectionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2730,14 +2730,14 @@ class Commerce
     /**
      * Update an inventory
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventory2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceInventory2(Operations\UpdateCommerceInventory2Request $request, ?Options $options = null): Operations\UpdateCommerceInventory2Response
+    public function updateCommerceInventory(Operations\UpdateCommerceInventoryRequest $request, ?Options $options = null): Operations\UpdateCommerceInventoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\UpdateCommerceInventory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/inventory/{id}', Operations\UpdateCommerceInventoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceInventory', 'json');
@@ -2746,11 +2746,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceInventory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceInventoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceInventory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceInventory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2776,7 +2776,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceInventory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceInventory2Response(
+                $response = new Operations\UpdateCommerceInventoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2798,14 +2798,14 @@ class Commerce
     /**
      * Update an item
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItem2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItem2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceItem2(Operations\UpdateCommerceItem2Request $request, ?Options $options = null): Operations\UpdateCommerceItem2Response
+    public function updateCommerceItem(Operations\UpdateCommerceItemRequest $request, ?Options $options = null): Operations\UpdateCommerceItemResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\UpdateCommerceItem2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/item/{id}', Operations\UpdateCommerceItemRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItem', 'json');
@@ -2814,11 +2814,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItem2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItemRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItem2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItem', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2844,7 +2844,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItem', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceItem2Response(
+                $response = new Operations\UpdateCommerceItemResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2866,14 +2866,14 @@ class Commerce
     /**
      * Update an itemvariant
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariant2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariant2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceItemvariant2(Operations\UpdateCommerceItemvariant2Request $request, ?Options $options = null): Operations\UpdateCommerceItemvariant2Response
+    public function updateCommerceItemvariant(Operations\UpdateCommerceItemvariantRequest $request, ?Options $options = null): Operations\UpdateCommerceItemvariantResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\UpdateCommerceItemvariant2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/itemvariant/{id}', Operations\UpdateCommerceItemvariantRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceItemvariant', 'json');
@@ -2882,11 +2882,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItemvariant2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceItemvariantRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItemvariant2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceItemvariant', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2912,7 +2912,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceItemvariant', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceItemvariant2Response(
+                $response = new Operations\UpdateCommerceItemvariantResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -2934,14 +2934,14 @@ class Commerce
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceLocation2(Operations\UpdateCommerceLocation2Request $request, ?Options $options = null): Operations\UpdateCommerceLocation2Response
+    public function updateCommerceLocation(Operations\UpdateCommerceLocationRequest $request, ?Options $options = null): Operations\UpdateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\UpdateCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\UpdateCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -2950,11 +2950,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -2980,7 +2980,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceLocation2Response(
+                $response = new Operations\UpdateCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -3002,14 +3002,14 @@ class Commerce
     /**
      * Update a reservation
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservation2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceReservation2(Operations\UpdateCommerceReservation2Request $request, ?Options $options = null): Operations\UpdateCommerceReservation2Response
+    public function updateCommerceReservation(Operations\UpdateCommerceReservationRequest $request, ?Options $options = null): Operations\UpdateCommerceReservationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\UpdateCommerceReservation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/reservation/{id}', Operations\UpdateCommerceReservationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReservation', 'json');
@@ -3018,11 +3018,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReservation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReservationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReservation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReservation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -3048,7 +3048,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReservation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceReservation2Response(
+                $response = new Operations\UpdateCommerceReservationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -3070,14 +3070,14 @@ class Commerce
     /**
      * Update a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceReview2(Operations\UpdateCommerceReview2Request $request, ?Options $options = null): Operations\UpdateCommerceReview2Response
+    public function updateCommerceReview(Operations\UpdateCommerceReviewRequest $request, ?Options $options = null): Operations\UpdateCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\UpdateCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\UpdateCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -3086,11 +3086,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -3116,7 +3116,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceReview2Response(
+                $response = new Operations\UpdateCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -3138,14 +3138,14 @@ class Commerce
     /**
      * Update a saleschannel
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannel2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceSaleschannel2(Operations\UpdateCommerceSaleschannel2Request $request, ?Options $options = null): Operations\UpdateCommerceSaleschannel2Response
+    public function updateCommerceSaleschannel(Operations\UpdateCommerceSaleschannelRequest $request, ?Options $options = null): Operations\UpdateCommerceSaleschannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\UpdateCommerceSaleschannel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/saleschannel/{id}', Operations\UpdateCommerceSaleschannelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceSaleschannel', 'json');
@@ -3154,11 +3154,11 @@ class Commerce
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceSaleschannel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceSaleschannelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceSaleschannel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceSaleschannel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -3184,7 +3184,7 @@ class Commerce
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceSaleschannel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceSaleschannel2Response(
+                $response = new Operations\UpdateCommerceSaleschannelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

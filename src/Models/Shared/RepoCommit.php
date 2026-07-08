@@ -44,6 +44,30 @@ class RepoCommit
 
     /**
      *
+     * @var ?float $linesAdded
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lines_added')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $linesAdded = null;
+
+    /**
+     *
+     * @var ?float $linesChanged
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lines_changed')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $linesChanged = null;
+
+    /**
+     *
+     * @var ?float $linesDeleted
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lines_deleted')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $linesDeleted = null;
+
+    /**
+     *
      * @var ?string $message
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('message')]
@@ -81,18 +105,24 @@ class RepoCommit
      * @param  ?string  $branchId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?float  $linesAdded
+     * @param  ?float  $linesChanged
+     * @param  ?float  $linesDeleted
      * @param  ?string  $message
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $repoId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $message = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $repoId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?float $linesAdded = null, ?float $linesChanged = null, ?float $linesDeleted = null, ?string $message = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->repoId = $repoId;
         $this->branchId = $branchId;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->linesAdded = $linesAdded;
+        $this->linesChanged = $linesChanged;
+        $this->linesDeleted = $linesDeleted;
         $this->message = $message;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

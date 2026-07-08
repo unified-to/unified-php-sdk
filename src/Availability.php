@@ -47,22 +47,22 @@ class Availability
     /**
      * List all availabilities
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilities2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilities2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceAvailabilities2(Operations\ListCommerceAvailabilities2Request $request, ?Options $options = null): Operations\ListCommerceAvailabilities2Response
+    public function listCommerceAvailabilities(Operations\ListCommerceAvailabilitiesRequest $request, ?Options $options = null): Operations\ListCommerceAvailabilitiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/availability', Operations\ListCommerceAvailabilities2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/availability', Operations\ListCommerceAvailabilitiesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceAvailabilities2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceAvailabilitiesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceAvailabilities2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceAvailabilities', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Availability
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceAvailability>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceAvailabilities2Response(
+                $response = new Operations\ListCommerceAvailabilitiesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

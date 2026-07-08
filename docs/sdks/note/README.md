@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createTicketingNote2](#createticketingnote2) - Create a note
-* [getTicketingNote2](#getticketingnote2) - Retrieve a note
-* [listTicketingNotes2](#listticketingnotes2) - List all notes
-* [patchTicketingNote2](#patchticketingnote2) - Update a note
-* [removeTicketingNote2](#removeticketingnote2) - Remove a note
-* [updateTicketingNote2](#updateticketingnote2) - Update a note
+* [createTicketingNote](#createticketingnote) - Create a note
+* [getTicketingNote](#getticketingnote) - Retrieve a note
+* [listTicketingNotes](#listticketingnotes) - List all notes
+* [patchTicketingNote](#patchticketingnote) - Update a note
+* [removeTicketingNote](#removeticketingnote) - Remove a note
+* [updateTicketingNote](#updateticketingnote) - Update a note
 
-## createTicketingNote2
+## createTicketingNote
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="php" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTicketingNote2Request(
+$request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
 );
 
-$response = $sdk->note->createTicketingNote2(
+$response = $sdk->note->createTicketingNote(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->ticketingNote !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateTicketingNote2Request](../../Models/Operations/CreateTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateTicketingNoteRequest](../../Models/Operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateTicketingNote2Response](../../Models/Operations/CreateTicketingNote2Response.md)**
+**[?Operations\CreateTicketingNoteResponse](../../Models/Operations/CreateTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->ticketingNote !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getTicketingNote2
+## getTicketingNote
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetTicketingNote2Request(
+$request = new Operations\GetTicketingNoteRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->note->getTicketingNote2(
+$response = $sdk->note->getTicketingNote(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->ticketingNote !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetTicketingNote2Request](../../Models/Operations/GetTicketingNote2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetTicketingNoteRequest](../../Models/Operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetTicketingNote2Response](../../Models/Operations/GetTicketingNote2Response.md)**
+**[?Operations\GetTicketingNoteResponse](../../Models/Operations/GetTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->ticketingNote !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingNotes2
+## listTicketingNotes
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="php" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingNotes2Request(
+$request = new Operations\ListTicketingNotesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->note->listTicketingNotes2(
+$response = $sdk->note->listTicketingNotes(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->ticketingNotes !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListTicketingNotes2Request](../../Models/Operations/ListTicketingNotes2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListTicketingNotesRequest](../../Models/Operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListTicketingNotes2Response](../../Models/Operations/ListTicketingNotes2Response.md)**
+**[?Operations\ListTicketingNotesResponse](../../Models/Operations/ListTicketingNotesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->ticketingNotes !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingNote2
+## patchTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingNote2Request(
+$request = new Operations\PatchTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->note->patchTicketingNote2(
+$response = $sdk->note->patchTicketingNote(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->ticketingNote !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchTicketingNote2Request](../../Models/Operations/PatchTicketingNote2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchTicketingNoteRequest](../../Models/Operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchTicketingNote2Response](../../Models/Operations/PatchTicketingNote2Response.md)**
+**[?Operations\PatchTicketingNoteResponse](../../Models/Operations/PatchTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->ticketingNote !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeTicketingNote2
+## removeTicketingNote
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveTicketingNote2Request(
+$request = new Operations\RemoveTicketingNoteRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->note->removeTicketingNote2(
+$response = $sdk->note->removeTicketingNote(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveTicketingNote2Request](../../Models/Operations/RemoveTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveTicketingNoteRequest](../../Models/Operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveTicketingNote2Response](../../Models/Operations/RemoveTicketingNote2Response.md)**
+**[?Operations\RemoveTicketingNoteResponse](../../Models/Operations/RemoveTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateTicketingNote2
+## updateTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTicketingNote2Request(
+$request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->note->updateTicketingNote2(
+$response = $sdk->note->updateTicketingNote(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->ticketingNote !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateTicketingNote2Request](../../Models/Operations/UpdateTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateTicketingNoteRequest](../../Models/Operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateTicketingNote2Response](../../Models/Operations/UpdateTicketingNote2Response.md)**
+**[?Operations\UpdateTicketingNoteResponse](../../Models/Operations/UpdateTicketingNoteResponse.md)**
 
 ### Errors
 

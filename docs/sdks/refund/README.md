@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getPaymentRefund2](#getpaymentrefund2) - Retrieve a refund
-* [listPaymentRefunds2](#listpaymentrefunds2) - List all refunds
+* [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [listPaymentRefunds](#listpaymentrefunds) - List all refunds
 
-## getPaymentRefund2
+## getPaymentRefund
 
 Retrieve a refund
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getPaymentRefund2" method="get" path="/payment/{connection_id}/refund/{id}" -->
+<!-- UsageSnippet language="php" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetPaymentRefund2Request(
+$request = new Operations\GetPaymentRefundRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->refund->getPaymentRefund2(
+$response = $sdk->refund->getPaymentRefund(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->paymentRefund !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetPaymentRefund2Request](../../Models/Operations/GetPaymentRefund2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetPaymentRefundRequest](../../Models/Operations/GetPaymentRefundRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetPaymentRefund2Response](../../Models/Operations/GetPaymentRefund2Response.md)**
+**[?Operations\GetPaymentRefundResponse](../../Models/Operations/GetPaymentRefundResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->paymentRefund !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listPaymentRefunds2
+## listPaymentRefunds
 
 List all refunds
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listPaymentRefunds2" method="get" path="/payment/{connection_id}/refund" -->
+<!-- UsageSnippet language="php" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListPaymentRefunds2Request(
+$request = new Operations\ListPaymentRefundsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->refund->listPaymentRefunds2(
+$response = $sdk->refund->listPaymentRefunds(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->paymentRefunds !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListPaymentRefunds2Request](../../Models/Operations/ListPaymentRefunds2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListPaymentRefundsRequest](../../Models/Operations/ListPaymentRefundsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListPaymentRefunds2Response](../../Models/Operations/ListPaymentRefunds2Response.md)**
+**[?Operations\ListPaymentRefundsResponse](../../Models/Operations/ListPaymentRefundsResponse.md)**
 
 ### Errors
 

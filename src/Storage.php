@@ -47,14 +47,14 @@ class Storage
     /**
      * Create a file
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateStorageFile2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateStorageFile2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createStorageFile2(Operations\CreateStorageFile2Request $request, ?Options $options = null): Operations\CreateStorageFile2Response
+    public function createStorageFile(Operations\CreateStorageFileRequest $request, ?Options $options = null): Operations\CreateStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\CreateStorageFile2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\CreateStorageFileRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'storageFile', 'json');
@@ -63,11 +63,11 @@ class Storage
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateStorageFile2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateStorageFileRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createStorageFile2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createStorageFile', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Storage
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\StorageFile', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateStorageFile2Response(
+                $response = new Operations\CreateStorageFileResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Storage
     /**
      * Retrieve a file
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetStorageFile2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetStorageFile2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getStorageFile2(Operations\GetStorageFile2Request $request, ?Options $options = null): Operations\GetStorageFile2Response
+    public function getStorageFile(Operations\GetStorageFileRequest $request, ?Options $options = null): Operations\GetStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\GetStorageFile2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\GetStorageFileRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetStorageFile2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetStorageFileRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getStorageFile2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getStorageFile', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Storage
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\StorageFile', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetStorageFile2Response(
+                $response = new Operations\GetStorageFileResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Storage
     /**
      * List all files
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListStorageFiles2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListStorageFiles2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListStorageFilesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListStorageFilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listStorageFiles2(Operations\ListStorageFiles2Request $request, ?Options $options = null): Operations\ListStorageFiles2Response
+    public function listStorageFiles(Operations\ListStorageFilesRequest $request, ?Options $options = null): Operations\ListStorageFilesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\ListStorageFiles2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file', Operations\ListStorageFilesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListStorageFiles2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListStorageFilesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listStorageFiles2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listStorageFiles', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Storage
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\StorageFile>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListStorageFiles2Response(
+                $response = new Operations\ListStorageFilesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Storage
     /**
      * Update a file
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchStorageFile2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchStorageFile2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchStorageFile2(Operations\PatchStorageFile2Request $request, ?Options $options = null): Operations\PatchStorageFile2Response
+    public function patchStorageFile(Operations\PatchStorageFileRequest $request, ?Options $options = null): Operations\PatchStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\PatchStorageFile2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\PatchStorageFileRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'storageFile', 'json');
@@ -257,11 +257,11 @@ class Storage
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchStorageFile2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchStorageFileRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchStorageFile2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchStorageFile', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Storage
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\StorageFile', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchStorageFile2Response(
+                $response = new Operations\PatchStorageFileResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Storage
     /**
      * Remove a file
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveStorageFile2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveStorageFile2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeStorageFile2(Operations\RemoveStorageFile2Request $request, ?Options $options = null): Operations\RemoveStorageFile2Response
+    public function removeStorageFile(Operations\RemoveStorageFileRequest $request, ?Options $options = null): Operations\RemoveStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\RemoveStorageFile2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\RemoveStorageFileRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeStorageFile2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeStorageFile', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Storage
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveStorageFile2Response(
+            return new Operations\RemoveStorageFileResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Storage
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveStorageFile2Response(
+            return new Operations\RemoveStorageFileResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Storage
     /**
      * Update a file
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateStorageFile2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateStorageFile2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateStorageFileRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateStorageFile2(Operations\UpdateStorageFile2Request $request, ?Options $options = null): Operations\UpdateStorageFile2Response
+    public function updateStorageFile(Operations\UpdateStorageFileRequest $request, ?Options $options = null): Operations\UpdateStorageFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\UpdateStorageFile2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/storage/{connection_id}/file/{id}', Operations\UpdateStorageFileRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'storageFile', 'json');
@@ -382,11 +382,11 @@ class Storage
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateStorageFile2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateStorageFileRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateStorageFile2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateStorageFile', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Storage
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\StorageFile', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateStorageFile2Response(
+                $response = new Operations\UpdateStorageFileResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

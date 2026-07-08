@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createKmsSpace2](#createkmsspace2) - Create a space
-* [getKmsSpace2](#getkmsspace2) - Retrieve a space
-* [listKmsSpaces2](#listkmsspaces2) - List all spaces
-* [patchKmsSpace2](#patchkmsspace2) - Update a space
-* [removeKmsSpace2](#removekmsspace2) - Remove a space
-* [updateKmsSpace2](#updatekmsspace2) - Update a space
+* [createKmsSpace](#createkmsspace) - Create a space
+* [getKmsSpace](#getkmsspace) - Retrieve a space
+* [listKmsSpaces](#listkmsspaces) - List all spaces
+* [patchKmsSpace](#patchkmsspace) - Update a space
+* [removeKmsSpace](#removekmsspace) - Remove a space
+* [updateKmsSpace](#updatekmsspace) - Update a space
 
-## createKmsSpace2
+## createKmsSpace
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateKmsSpace2Request(
+$request = new Operations\CreateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
 );
 
-$response = $sdk->space->createKmsSpace2(
+$response = $sdk->space->createKmsSpace(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->kmsSpace !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\CreateKmsSpace2Request](../../Models/Operations/CreateKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateKmsSpaceRequest](../../Models/Operations/CreateKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\CreateKmsSpace2Response](../../Models/Operations/CreateKmsSpace2Response.md)**
+**[?Operations\CreateKmsSpaceResponse](../../Models/Operations/CreateKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getKmsSpace2
+## getKmsSpace
 
 Retrieve a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetKmsSpace2Request(
+$request = new Operations\GetKmsSpaceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->space->getKmsSpace2(
+$response = $sdk->space->getKmsSpace(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->kmsSpace !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\GetKmsSpace2Request](../../Models/Operations/GetKmsSpace2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetKmsSpaceRequest](../../Models/Operations/GetKmsSpaceRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\GetKmsSpace2Response](../../Models/Operations/GetKmsSpace2Response.md)**
+**[?Operations\GetKmsSpaceResponse](../../Models/Operations/GetKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listKmsSpaces2
+## listKmsSpaces
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="php" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListKmsSpaces2Request(
+$request = new Operations\ListKmsSpacesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->space->listKmsSpaces2(
+$response = $sdk->space->listKmsSpaces(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->kmsSpaces !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListKmsSpaces2Request](../../Models/Operations/ListKmsSpaces2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListKmsSpacesRequest](../../Models/Operations/ListKmsSpacesRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\ListKmsSpaces2Response](../../Models/Operations/ListKmsSpaces2Response.md)**
+**[?Operations\ListKmsSpacesResponse](../../Models/Operations/ListKmsSpacesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->kmsSpaces !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchKmsSpace2
+## patchKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchKmsSpace2Request(
+$request = new Operations\PatchKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->space->patchKmsSpace2(
+$response = $sdk->space->patchKmsSpace(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->kmsSpace !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\PatchKmsSpace2Request](../../Models/Operations/PatchKmsSpace2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchKmsSpaceRequest](../../Models/Operations/PatchKmsSpaceRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\PatchKmsSpace2Response](../../Models/Operations/PatchKmsSpace2Response.md)**
+**[?Operations\PatchKmsSpaceResponse](../../Models/Operations/PatchKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeKmsSpace2
+## removeKmsSpace
 
 Remove a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveKmsSpace2Request(
+$request = new Operations\RemoveKmsSpaceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->space->removeKmsSpace2(
+$response = $sdk->space->removeKmsSpace(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\RemoveKmsSpace2Request](../../Models/Operations/RemoveKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveKmsSpaceRequest](../../Models/Operations/RemoveKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\RemoveKmsSpace2Response](../../Models/Operations/RemoveKmsSpace2Response.md)**
+**[?Operations\RemoveKmsSpaceResponse](../../Models/Operations/RemoveKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateKmsSpace2
+## updateKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateKmsSpace2Request(
+$request = new Operations\UpdateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->space->updateKmsSpace2(
+$response = $sdk->space->updateKmsSpace(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->kmsSpace !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\UpdateKmsSpace2Request](../../Models/Operations/UpdateKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateKmsSpaceRequest](../../Models/Operations/UpdateKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\UpdateKmsSpace2Response](../../Models/Operations/UpdateKmsSpace2Response.md)**
+**[?Operations\UpdateKmsSpaceResponse](../../Models/Operations/UpdateKmsSpaceResponse.md)**
 
 ### Errors
 

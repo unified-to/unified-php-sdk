@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createHrisBenefit2](#createhrisbenefit2) - Create a benefit
-* [getHrisBenefit2](#gethrisbenefit2) - Retrieve a benefit
-* [listHrisBenefits2](#listhrisbenefits2) - List all benefits
-* [patchHrisBenefit2](#patchhrisbenefit2) - Update a benefit
-* [removeHrisBenefit2](#removehrisbenefit2) - Remove a benefit
-* [updateHrisBenefit2](#updatehrisbenefit2) - Update a benefit
+* [createHrisBenefit](#createhrisbenefit) - Create a benefit
+* [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
+* [listHrisBenefits](#listhrisbenefits) - List all benefits
+* [patchHrisBenefit](#patchhrisbenefit) - Update a benefit
+* [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
+* [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
 
-## createHrisBenefit2
+## createHrisBenefit
 
 Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisBenefit2" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="php" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisBenefit2Request(
+$request = new Operations\CreateHrisBenefitRequest(
     hrisBenefit: new Shared\HrisBenefit(),
     connectionId: '<id>',
 );
 
-$response = $sdk->benefit->createHrisBenefit2(
+$response = $sdk->benefit->createHrisBenefit(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->hrisBenefit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateHrisBenefit2Request](../../Models/Operations/CreateHrisBenefit2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateHrisBenefitRequest](../../Models/Operations/CreateHrisBenefitRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateHrisBenefit2Response](../../Models/Operations/CreateHrisBenefit2Response.md)**
+**[?Operations\CreateHrisBenefitResponse](../../Models/Operations/CreateHrisBenefitResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->hrisBenefit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisBenefit2
+## getHrisBenefit
 
 Retrieve a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisBenefit2" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisBenefit2Request(
+$request = new Operations\GetHrisBenefitRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->benefit->getHrisBenefit2(
+$response = $sdk->benefit->getHrisBenefit(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->hrisBenefit !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetHrisBenefit2Request](../../Models/Operations/GetHrisBenefit2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisBenefitRequest](../../Models/Operations/GetHrisBenefitRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetHrisBenefit2Response](../../Models/Operations/GetHrisBenefit2Response.md)**
+**[?Operations\GetHrisBenefitResponse](../../Models/Operations/GetHrisBenefitResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->hrisBenefit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisBenefits2
+## listHrisBenefits
 
 List all benefits
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisBenefits2" method="get" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="php" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisBenefits2Request(
+$request = new Operations\ListHrisBenefitsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->benefit->listHrisBenefits2(
+$response = $sdk->benefit->listHrisBenefits(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->hrisBenefits !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListHrisBenefits2Request](../../Models/Operations/ListHrisBenefits2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisBenefitsRequest](../../Models/Operations/ListHrisBenefitsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListHrisBenefits2Response](../../Models/Operations/ListHrisBenefits2Response.md)**
+**[?Operations\ListHrisBenefitsResponse](../../Models/Operations/ListHrisBenefitsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->hrisBenefits !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisBenefit2
+## patchHrisBenefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisBenefit2" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisBenefit2Request(
+$request = new Operations\PatchHrisBenefitRequest(
     hrisBenefit: new Shared\HrisBenefit(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->benefit->patchHrisBenefit2(
+$response = $sdk->benefit->patchHrisBenefit(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->hrisBenefit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchHrisBenefit2Request](../../Models/Operations/PatchHrisBenefit2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchHrisBenefitRequest](../../Models/Operations/PatchHrisBenefitRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchHrisBenefit2Response](../../Models/Operations/PatchHrisBenefit2Response.md)**
+**[?Operations\PatchHrisBenefitResponse](../../Models/Operations/PatchHrisBenefitResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->hrisBenefit !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeHrisBenefit2
+## removeHrisBenefit
 
 Remove a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeHrisBenefit2" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveHrisBenefit2Request(
+$request = new Operations\RemoveHrisBenefitRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->benefit->removeHrisBenefit2(
+$response = $sdk->benefit->removeHrisBenefit(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveHrisBenefit2Request](../../Models/Operations/RemoveHrisBenefit2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveHrisBenefitRequest](../../Models/Operations/RemoveHrisBenefitRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveHrisBenefit2Response](../../Models/Operations/RemoveHrisBenefit2Response.md)**
+**[?Operations\RemoveHrisBenefitResponse](../../Models/Operations/RemoveHrisBenefitResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisBenefit2
+## updateHrisBenefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisBenefit2" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisBenefit2Request(
+$request = new Operations\UpdateHrisBenefitRequest(
     hrisBenefit: new Shared\HrisBenefit(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->benefit->updateHrisBenefit2(
+$response = $sdk->benefit->updateHrisBenefit(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->hrisBenefit !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateHrisBenefit2Request](../../Models/Operations/UpdateHrisBenefit2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateHrisBenefitRequest](../../Models/Operations/UpdateHrisBenefitRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateHrisBenefit2Response](../../Models/Operations/UpdateHrisBenefit2Response.md)**
+**[?Operations\UpdateHrisBenefitResponse](../../Models/Operations/UpdateHrisBenefitResponse.md)**
 
 ### Errors
 

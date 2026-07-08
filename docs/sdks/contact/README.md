@@ -4,32 +4,32 @@
 
 ### Available Operations
 
-* [createAccountingContact2](#createaccountingcontact2) - Create a contact
-* [createCrmContact2](#createcrmcontact2) - Create a contact
-* [createUcContact2](#createuccontact2) - Create a contact
-* [getAccountingContact2](#getaccountingcontact2) - Retrieve a contact
-* [getCrmContact2](#getcrmcontact2) - Retrieve a contact
-* [getUcContact2](#getuccontact2) - Retrieve a contact
-* [listAccountingContacts2](#listaccountingcontacts2) - List all contacts
-* [listCrmContacts2](#listcrmcontacts2) - List all contacts
-* [listUcContacts2](#listuccontacts2) - List all contacts
-* [patchAccountingContact2](#patchaccountingcontact2) - Update a contact
-* [patchCrmContact2](#patchcrmcontact2) - Update a contact
-* [patchUcContact2](#patchuccontact2) - Update a contact
-* [removeAccountingContact2](#removeaccountingcontact2) - Remove a contact
-* [removeCrmContact2](#removecrmcontact2) - Remove a contact
-* [removeUcContact2](#removeuccontact2) - Remove a contact
-* [updateAccountingContact2](#updateaccountingcontact2) - Update a contact
-* [updateCrmContact2](#updatecrmcontact2) - Update a contact
-* [updateUcContact2](#updateuccontact2) - Update a contact
+* [createAccountingContact](#createaccountingcontact) - Create a contact
+* [createCrmContact](#createcrmcontact) - Create a contact
+* [createUcContact](#createuccontact) - Create a contact
+* [getAccountingContact](#getaccountingcontact) - Retrieve a contact
+* [getCrmContact](#getcrmcontact) - Retrieve a contact
+* [getUcContact](#getuccontact) - Retrieve a contact
+* [listAccountingContacts](#listaccountingcontacts) - List all contacts
+* [listCrmContacts](#listcrmcontacts) - List all contacts
+* [listUcContacts](#listuccontacts) - List all contacts
+* [patchAccountingContact](#patchaccountingcontact) - Update a contact
+* [patchCrmContact](#patchcrmcontact) - Update a contact
+* [patchUcContact](#patchuccontact) - Update a contact
+* [removeAccountingContact](#removeaccountingcontact) - Remove a contact
+* [removeCrmContact](#removecrmcontact) - Remove a contact
+* [removeUcContact](#removeuccontact) - Remove a contact
+* [updateAccountingContact](#updateaccountingcontact) - Update a contact
+* [updateCrmContact](#updatecrmcontact) - Update a contact
+* [updateUcContact](#updateuccontact) - Update a contact
 
-## createAccountingContact2
+## createAccountingContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingContact2" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -45,12 +45,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingContact2Request(
+$request = new Operations\CreateAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
 );
 
-$response = $sdk->contact->createAccountingContact2(
+$response = $sdk->contact->createAccountingContact(
     request: $request
 );
 
@@ -61,13 +61,13 @@ if ($response->accountingContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingContact2Request](../../Models/Operations/CreateAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingContactRequest](../../Models/Operations/CreateAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingContact2Response](../../Models/Operations/CreateAccountingContact2Response.md)**
+**[?Operations\CreateAccountingContactResponse](../../Models/Operations/CreateAccountingContactResponse.md)**
 
 ### Errors
 
@@ -75,13 +75,13 @@ if ($response->accountingContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCrmContact2
+## createCrmContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmContact2" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -97,68 +97,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCrmContact2Request(
+$request = new Operations\CreateCrmContactRequest(
     crmContact: new Shared\CrmContact(),
     connectionId: '<id>',
 );
 
-$response = $sdk->contact->createCrmContact2(
+$response = $sdk->contact->createCrmContact(
     request: $request
 );
 
 if ($response->crmContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateCrmContact2Request](../../Models/Operations/CreateCrmContact2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\CreateCrmContact2Response](../../Models/Operations/CreateCrmContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createUcContact2
-
-Create a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateUcContact2Request(
-    ucContact: new Shared\UcContact(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->contact->createUcContact2(
-    request: $request
-);
-
-if ($response->ucContact !== null) {
     // handle response
 }
 ```
@@ -167,11 +115,11 @@ if ($response->ucContact !== null) {
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateUcContact2Request](../../Models/Operations/CreateUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `$request`                                                                               | [Operations\CreateCrmContactRequest](../../Models/Operations/CreateCrmContactRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\CreateUcContact2Response](../../Models/Operations/CreateUcContact2Response.md)**
+**[?Operations\CreateCrmContactResponse](../../Models/Operations/CreateCrmContactResponse.md)**
 
 ### Errors
 
@@ -179,13 +127,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingContact2
+## createUcContact
 
-Retrieve a contact
+Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingContact2" method="get" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -193,6 +141,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -200,114 +149,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingContact2Request(
+$request = new Operations\CreateUcContactRequest(
+    ucContact: new Shared\UcContact(),
     connectionId: '<id>',
-    id: '<id>',
 );
 
-$response = $sdk->contact->getAccountingContact2(
-    request: $request
-);
-
-if ($response->accountingContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingContact2Request](../../Models/Operations/GetAccountingContact2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\GetAccountingContact2Response](../../Models/Operations/GetAccountingContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCrmContact2
-
-Retrieve a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCrmContact2" method="get" path="/crm/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCrmContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->getCrmContact2(
-    request: $request
-);
-
-if ($response->crmContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetCrmContact2Request](../../Models/Operations/GetCrmContact2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\GetCrmContact2Response](../../Models/Operations/GetCrmContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getUcContact2
-
-Retrieve a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetUcContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->getUcContact2(
+$response = $sdk->contact->createUcContact(
     request: $request
 );
 
@@ -318,13 +165,13 @@ if ($response->ucContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetUcContact2Request](../../Models/Operations/GetUcContact2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateUcContactRequest](../../Models/Operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetUcContact2Response](../../Models/Operations/GetUcContact2Response.md)**
+**[?Operations\CreateUcContactResponse](../../Models/Operations/CreateUcContactResponse.md)**
 
 ### Errors
 
@@ -332,13 +179,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingContacts2
+## getAccountingContact
 
-List all contacts
+Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingContacts2" method="get" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -353,11 +200,164 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingContacts2Request(
+$request = new Operations\GetAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->getAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingContactRequest](../../Models/Operations/GetAccountingContactRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetAccountingContactResponse](../../Models/Operations/GetAccountingContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCrmContact
+
+Retrieve a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->getCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetCrmContactRequest](../../Models/Operations/GetCrmContactRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetCrmContactResponse](../../Models/Operations/GetCrmContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getUcContact
+
+Retrieve a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->getUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetUcContactRequest](../../Models/Operations/GetUcContactRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\GetUcContactResponse](../../Models/Operations/GetUcContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAccountingContacts
+
+List all contacts
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingContactsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->contact->listAccountingContacts2(
+$response = $sdk->contact->listAccountingContacts(
     request: $request
 );
 
@@ -368,13 +368,13 @@ if ($response->accountingContacts !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingContacts2Request](../../Models/Operations/ListAccountingContacts2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingContactsRequest](../../Models/Operations/ListAccountingContactsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingContacts2Response](../../Models/Operations/ListAccountingContacts2Response.md)**
+**[?Operations\ListAccountingContactsResponse](../../Models/Operations/ListAccountingContactsResponse.md)**
 
 ### Errors
 
@@ -382,13 +382,13 @@ if ($response->accountingContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCrmContacts2
+## listCrmContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCrmContacts2" method="get" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -403,11 +403,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCrmContacts2Request(
+$request = new Operations\ListCrmContactsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->contact->listCrmContacts2(
+$response = $sdk->contact->listCrmContacts(
     request: $request
 );
 
@@ -418,13 +418,13 @@ if ($response->crmContacts !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListCrmContacts2Request](../../Models/Operations/ListCrmContacts2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListCrmContactsRequest](../../Models/Operations/ListCrmContactsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListCrmContacts2Response](../../Models/Operations/ListCrmContacts2Response.md)**
+**[?Operations\ListCrmContactsResponse](../../Models/Operations/ListCrmContactsResponse.md)**
 
 ### Errors
 
@@ -432,13 +432,13 @@ if ($response->crmContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcContacts2
+## listUcContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -453,11 +453,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcContacts2Request(
+$request = new Operations\ListUcContactsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->contact->listUcContacts2(
+$response = $sdk->contact->listUcContacts(
     request: $request
 );
 
@@ -468,13 +468,13 @@ if ($response->ucContacts !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListUcContacts2Request](../../Models/Operations/ListUcContacts2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListUcContactsRequest](../../Models/Operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListUcContacts2Response](../../Models/Operations/ListUcContacts2Response.md)**
+**[?Operations\ListUcContactsResponse](../../Models/Operations/ListUcContactsResponse.md)**
 
 ### Errors
 
@@ -482,13 +482,13 @@ if ($response->ucContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingContact2
+## patchAccountingContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingContact2" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -504,13 +504,325 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingContact2Request(
+$request = new Operations\PatchAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->contact->patchAccountingContact2(
+$response = $sdk->contact->patchAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingContactRequest](../../Models/Operations/PatchAccountingContactRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingContactResponse](../../Models/Operations/PatchAccountingContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCrmContact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCrmContactRequest(
+    crmContact: new Shared\CrmContact(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->patchCrmContact(
+    request: $request
+);
+
+if ($response->crmContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchCrmContactRequest](../../Models/Operations/PatchCrmContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchCrmContactResponse](../../Models/Operations/PatchCrmContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchUcContact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchUcContactRequest(
+    ucContact: new Shared\UcContact(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->patchUcContact(
+    request: $request
+);
+
+if ($response->ucContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchUcContactRequest](../../Models/Operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\PatchUcContactResponse](../../Models/Operations/PatchUcContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingContact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->removeAccountingContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingContactRequest](../../Models/Operations/RemoveAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingContactResponse](../../Models/Operations/RemoveAccountingContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCrmContact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCrmContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->removeCrmContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveCrmContactRequest](../../Models/Operations/RemoveCrmContactRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveCrmContactResponse](../../Models/Operations/RemoveCrmContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeUcContact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUcContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->removeUcContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveUcContactRequest](../../Models/Operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\RemoveUcContactResponse](../../Models/Operations/RemoveUcContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingContact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingContactRequest(
+    accountingContact: new Shared\AccountingContact(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->contact->updateAccountingContact(
     request: $request
 );
 
@@ -523,11 +835,11 @@ if ($response->accountingContact !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingContact2Request](../../Models/Operations/PatchAccountingContact2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingContactRequest](../../Models/Operations/UpdateAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingContact2Response](../../Models/Operations/PatchAccountingContact2Response.md)**
+**[?Operations\UpdateAccountingContactResponse](../../Models/Operations/UpdateAccountingContactResponse.md)**
 
 ### Errors
 
@@ -535,13 +847,13 @@ if ($response->accountingContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCrmContact2
+## updateCrmContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmContact2" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -557,13 +869,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCrmContact2Request(
+$request = new Operations\UpdateCrmContactRequest(
     crmContact: new Shared\CrmContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->contact->patchCrmContact2(
+$response = $sdk->contact->updateCrmContact(
     request: $request
 );
 
@@ -576,11 +888,11 @@ if ($response->crmContact !== null) {
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchCrmContact2Request](../../Models/Operations/PatchCrmContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `$request`                                                                               | [Operations\UpdateCrmContactRequest](../../Models/Operations/UpdateCrmContactRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchCrmContact2Response](../../Models/Operations/PatchCrmContact2Response.md)**
+**[?Operations\UpdateCrmContactResponse](../../Models/Operations/UpdateCrmContactResponse.md)**
 
 ### Errors
 
@@ -588,13 +900,13 @@ if ($response->crmContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchUcContact2
+## updateUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -610,13 +922,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchUcContact2Request(
+$request = new Operations\UpdateUcContactRequest(
     ucContact: new Shared\UcContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->contact->patchUcContact2(
+$response = $sdk->contact->updateUcContact(
     request: $request
 );
 
@@ -629,323 +941,11 @@ if ($response->ucContact !== null) {
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchUcContact2Request](../../Models/Operations/PatchUcContact2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `$request`                                                                             | [Operations\UpdateUcContactRequest](../../Models/Operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\PatchUcContact2Response](../../Models/Operations/PatchUcContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingContact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingContact2" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->removeAccountingContact2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingContact2Request](../../Models/Operations/RemoveAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingContact2Response](../../Models/Operations/RemoveAccountingContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCrmContact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCrmContact2" method="delete" path="/crm/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCrmContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->removeCrmContact2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveCrmContact2Request](../../Models/Operations/RemoveCrmContact2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveCrmContact2Response](../../Models/Operations/RemoveCrmContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeUcContact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveUcContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->removeUcContact2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveUcContact2Request](../../Models/Operations/RemoveUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\RemoveUcContact2Response](../../Models/Operations/RemoveUcContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingContact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingContact2" method="put" path="/accounting/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingContact2Request(
-    accountingContact: new Shared\AccountingContact(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->updateAccountingContact2(
-    request: $request
-);
-
-if ($response->accountingContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingContact2Request](../../Models/Operations/UpdateAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingContact2Response](../../Models/Operations/UpdateAccountingContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCrmContact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCrmContact2" method="put" path="/crm/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCrmContact2Request(
-    crmContact: new Shared\CrmContact(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->updateCrmContact2(
-    request: $request
-);
-
-if ($response->crmContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateCrmContact2Request](../../Models/Operations/UpdateCrmContact2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\UpdateCrmContact2Response](../../Models/Operations/UpdateCrmContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateUcContact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateUcContact2Request(
-    ucContact: new Shared\UcContact(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->contact->updateUcContact2(
-    request: $request
-);
-
-if ($response->ucContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateUcContact2Request](../../Models/Operations/UpdateUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\UpdateUcContact2Response](../../Models/Operations/UpdateUcContact2Response.md)**
+**[?Operations\UpdateUcContactResponse](../../Models/Operations/UpdateUcContactResponse.md)**
 
 ### Errors
 

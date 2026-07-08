@@ -47,14 +47,14 @@ class Record
     /**
      * Create a record
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreRecord2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateDatastoreRecord2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreRecordRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createDatastoreRecord2(Operations\CreateDatastoreRecord2Request $request, ?Options $options = null): Operations\CreateDatastoreRecord2Response
+    public function createDatastoreRecord(Operations\CreateDatastoreRecordRequest $request, ?Options $options = null): Operations\CreateDatastoreRecordResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record', Operations\CreateDatastoreRecord2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record', Operations\CreateDatastoreRecordRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'datastoreRecord', 'json');
@@ -63,11 +63,11 @@ class Record
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateDatastoreRecord2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateDatastoreRecordRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createDatastoreRecord2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createDatastoreRecord', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Record
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\DatastoreRecord', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateDatastoreRecord2Response(
+                $response = new Operations\CreateDatastoreRecordResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Record
     /**
      * Retrieve a record
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetDatastoreRecord2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetDatastoreRecord2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetDatastoreRecordRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getDatastoreRecord2(Operations\GetDatastoreRecord2Request $request, ?Options $options = null): Operations\GetDatastoreRecord2Response
+    public function getDatastoreRecord(Operations\GetDatastoreRecordRequest $request, ?Options $options = null): Operations\GetDatastoreRecordResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\GetDatastoreRecord2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\GetDatastoreRecordRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetDatastoreRecord2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetDatastoreRecordRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getDatastoreRecord2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getDatastoreRecord', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Record
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\DatastoreRecord', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetDatastoreRecord2Response(
+                $response = new Operations\GetDatastoreRecordResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Record
     /**
      * List all records
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListDatastoreRecords2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListDatastoreRecords2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListDatastoreRecordsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListDatastoreRecordsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listDatastoreRecords2(Operations\ListDatastoreRecords2Request $request, ?Options $options = null): Operations\ListDatastoreRecords2Response
+    public function listDatastoreRecords(Operations\ListDatastoreRecordsRequest $request, ?Options $options = null): Operations\ListDatastoreRecordsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record', Operations\ListDatastoreRecords2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record', Operations\ListDatastoreRecordsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListDatastoreRecords2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListDatastoreRecordsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listDatastoreRecords2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listDatastoreRecords', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Record
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\DatastoreRecord>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListDatastoreRecords2Response(
+                $response = new Operations\ListDatastoreRecordsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Record
     /**
      * Update a record
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreRecord2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchDatastoreRecord2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreRecordRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchDatastoreRecord2(Operations\PatchDatastoreRecord2Request $request, ?Options $options = null): Operations\PatchDatastoreRecord2Response
+    public function patchDatastoreRecord(Operations\PatchDatastoreRecordRequest $request, ?Options $options = null): Operations\PatchDatastoreRecordResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\PatchDatastoreRecord2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\PatchDatastoreRecordRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'datastoreRecord', 'json');
@@ -257,11 +257,11 @@ class Record
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchDatastoreRecord2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchDatastoreRecordRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchDatastoreRecord2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchDatastoreRecord', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Record
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\DatastoreRecord', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchDatastoreRecord2Response(
+                $response = new Operations\PatchDatastoreRecordResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Record
     /**
      * Remove a record
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreRecord2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreRecord2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeDatastoreRecord2(Operations\RemoveDatastoreRecord2Request $request, ?Options $options = null): Operations\RemoveDatastoreRecord2Response
+    public function removeDatastoreRecord(Operations\RemoveDatastoreRecordRequest $request, ?Options $options = null): Operations\RemoveDatastoreRecordResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\RemoveDatastoreRecord2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\RemoveDatastoreRecordRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeDatastoreRecord2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeDatastoreRecord', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Record
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveDatastoreRecord2Response(
+            return new Operations\RemoveDatastoreRecordResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Record
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveDatastoreRecord2Response(
+            return new Operations\RemoveDatastoreRecordResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Record
     /**
      * Update a record
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreRecord2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreRecord2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateDatastoreRecord2(Operations\UpdateDatastoreRecord2Request $request, ?Options $options = null): Operations\UpdateDatastoreRecord2Response
+    public function updateDatastoreRecord(Operations\UpdateDatastoreRecordRequest $request, ?Options $options = null): Operations\UpdateDatastoreRecordResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\UpdateDatastoreRecord2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/record/{id}', Operations\UpdateDatastoreRecordRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'datastoreRecord', 'json');
@@ -382,11 +382,11 @@ class Record
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateDatastoreRecord2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateDatastoreRecordRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateDatastoreRecord2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateDatastoreRecord', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Record
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\DatastoreRecord', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateDatastoreRecord2Response(
+                $response = new Operations\UpdateDatastoreRecordResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

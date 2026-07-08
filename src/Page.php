@@ -47,14 +47,14 @@ class Page
     /**
      * Create a page
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateKmsPage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateKmsPage2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createKmsPage2(Operations\CreateKmsPage2Request $request, ?Options $options = null): Operations\CreateKmsPage2Response
+    public function createKmsPage(Operations\CreateKmsPageRequest $request, ?Options $options = null): Operations\CreateKmsPageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\CreateKmsPage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\CreateKmsPageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsPage', 'json');
@@ -63,11 +63,11 @@ class Page
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateKmsPage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateKmsPageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createKmsPage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createKmsPage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Page
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsPage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateKmsPage2Response(
+                $response = new Operations\CreateKmsPageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Page
     /**
      * Retrieve a page
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetKmsPage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetKmsPage2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getKmsPage2(Operations\GetKmsPage2Request $request, ?Options $options = null): Operations\GetKmsPage2Response
+    public function getKmsPage(Operations\GetKmsPageRequest $request, ?Options $options = null): Operations\GetKmsPageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\GetKmsPage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\GetKmsPageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetKmsPage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetKmsPageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getKmsPage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getKmsPage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Page
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsPage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetKmsPage2Response(
+                $response = new Operations\GetKmsPageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Page
     /**
      * List all pages
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListKmsPages2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListKmsPages2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListKmsPagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listKmsPages2(Operations\ListKmsPages2Request $request, ?Options $options = null): Operations\ListKmsPages2Response
+    public function listKmsPages(Operations\ListKmsPagesRequest $request, ?Options $options = null): Operations\ListKmsPagesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\ListKmsPages2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page', Operations\ListKmsPagesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListKmsPages2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListKmsPagesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listKmsPages2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listKmsPages', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Page
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\KmsPage>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListKmsPages2Response(
+                $response = new Operations\ListKmsPagesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Page
     /**
      * Update a page
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchKmsPage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchKmsPage2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchKmsPage2(Operations\PatchKmsPage2Request $request, ?Options $options = null): Operations\PatchKmsPage2Response
+    public function patchKmsPage(Operations\PatchKmsPageRequest $request, ?Options $options = null): Operations\PatchKmsPageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\PatchKmsPage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\PatchKmsPageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsPage', 'json');
@@ -257,11 +257,11 @@ class Page
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchKmsPage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchKmsPageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchKmsPage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchKmsPage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Page
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsPage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchKmsPage2Response(
+                $response = new Operations\PatchKmsPageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Page
     /**
      * Remove a page
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveKmsPage2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeKmsPage2(Operations\RemoveKmsPage2Request $request, ?Options $options = null): Operations\RemoveKmsPage2Response
+    public function removeKmsPage(Operations\RemoveKmsPageRequest $request, ?Options $options = null): Operations\RemoveKmsPageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\RemoveKmsPage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\RemoveKmsPageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeKmsPage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeKmsPage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Page
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveKmsPage2Response(
+            return new Operations\RemoveKmsPageResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Page
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveKmsPage2Response(
+            return new Operations\RemoveKmsPageResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Page
     /**
      * Update a page
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateKmsPage2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateKmsPage2(Operations\UpdateKmsPage2Request $request, ?Options $options = null): Operations\UpdateKmsPage2Response
+    public function updateKmsPage(Operations\UpdateKmsPageRequest $request, ?Options $options = null): Operations\UpdateKmsPageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\UpdateKmsPage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/kms/{connection_id}/page/{id}', Operations\UpdateKmsPageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'kmsPage', 'json');
@@ -382,11 +382,11 @@ class Page
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateKmsPage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateKmsPageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateKmsPage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateKmsPage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Page
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\KmsPage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateKmsPage2Response(
+                $response = new Operations\UpdateKmsPageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

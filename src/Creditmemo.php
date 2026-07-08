@@ -47,14 +47,14 @@ class Creditmemo
     /**
      * Create a creditmemo
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemo2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemo2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingCreditmemo2(Operations\CreateAccountingCreditmemo2Request $request, ?Options $options = null): Operations\CreateAccountingCreditmemo2Response
+    public function createAccountingCreditmemo(Operations\CreateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\CreateAccountingCreditmemoResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo', Operations\CreateAccountingCreditmemo2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo', Operations\CreateAccountingCreditmemoRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCreditmemo', 'json');
@@ -63,11 +63,11 @@ class Creditmemo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingCreditmemo2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingCreditmemoRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingCreditmemo2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingCreditmemo', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Creditmemo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCreditmemo', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingCreditmemo2Response(
+                $response = new Operations\CreateAccountingCreditmemoResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Creditmemo
     /**
      * Retrieve a creditmemo
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemo2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemo2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingCreditmemo2(Operations\GetAccountingCreditmemo2Request $request, ?Options $options = null): Operations\GetAccountingCreditmemo2Response
+    public function getAccountingCreditmemo(Operations\GetAccountingCreditmemoRequest $request, ?Options $options = null): Operations\GetAccountingCreditmemoResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\GetAccountingCreditmemo2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\GetAccountingCreditmemoRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCreditmemo2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingCreditmemoRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCreditmemo2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingCreditmemo', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Creditmemo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCreditmemo', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingCreditmemo2Response(
+                $response = new Operations\GetAccountingCreditmemoResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Creditmemo
     /**
      * List all creditmemoes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoes2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoes2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingCreditmemoes2(Operations\ListAccountingCreditmemoes2Request $request, ?Options $options = null): Operations\ListAccountingCreditmemoes2Response
+    public function listAccountingCreditmemoes(Operations\ListAccountingCreditmemoesRequest $request, ?Options $options = null): Operations\ListAccountingCreditmemoesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo', Operations\ListAccountingCreditmemoes2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo', Operations\ListAccountingCreditmemoesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCreditmemoes2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingCreditmemoesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCreditmemoes2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingCreditmemoes', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Creditmemo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingCreditmemo>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingCreditmemoes2Response(
+                $response = new Operations\ListAccountingCreditmemoesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Creditmemo
     /**
      * Update a creditmemo
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemo2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemo2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingCreditmemo2(Operations\PatchAccountingCreditmemo2Request $request, ?Options $options = null): Operations\PatchAccountingCreditmemo2Response
+    public function patchAccountingCreditmemo(Operations\PatchAccountingCreditmemoRequest $request, ?Options $options = null): Operations\PatchAccountingCreditmemoResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\PatchAccountingCreditmemo2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\PatchAccountingCreditmemoRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCreditmemo', 'json');
@@ -257,11 +257,11 @@ class Creditmemo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingCreditmemo2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingCreditmemoRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingCreditmemo2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingCreditmemo', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Creditmemo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCreditmemo', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingCreditmemo2Response(
+                $response = new Operations\PatchAccountingCreditmemoResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Creditmemo
     /**
      * Remove a creditmemo
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemo2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemo2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingCreditmemo2(Operations\RemoveAccountingCreditmemo2Request $request, ?Options $options = null): Operations\RemoveAccountingCreditmemo2Response
+    public function removeAccountingCreditmemo(Operations\RemoveAccountingCreditmemoRequest $request, ?Options $options = null): Operations\RemoveAccountingCreditmemoResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\RemoveAccountingCreditmemo2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\RemoveAccountingCreditmemoRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingCreditmemo2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingCreditmemo', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Creditmemo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingCreditmemo2Response(
+            return new Operations\RemoveAccountingCreditmemoResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Creditmemo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingCreditmemo2Response(
+            return new Operations\RemoveAccountingCreditmemoResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Creditmemo
     /**
      * Update a creditmemo
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemo2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemo2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingCreditmemo2(Operations\UpdateAccountingCreditmemo2Request $request, ?Options $options = null): Operations\UpdateAccountingCreditmemo2Response
+    public function updateAccountingCreditmemo(Operations\UpdateAccountingCreditmemoRequest $request, ?Options $options = null): Operations\UpdateAccountingCreditmemoResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\UpdateAccountingCreditmemo2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/creditmemo/{id}', Operations\UpdateAccountingCreditmemoRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingCreditmemo', 'json');
@@ -382,11 +382,11 @@ class Creditmemo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingCreditmemo2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingCreditmemoRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingCreditmemo2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingCreditmemo', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Creditmemo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingCreditmemo', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingCreditmemo2Response(
+                $response = new Operations\UpdateAccountingCreditmemoResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

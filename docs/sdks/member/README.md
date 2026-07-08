@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createMartechMember2](#createmartechmember2) - Create a member
-* [getClubsMember2](#getclubsmember2) - Retrieve a member
-* [getMartechMember2](#getmartechmember2) - Retrieve a member
-* [listClubsMembers2](#listclubsmembers2) - List all members
-* [listMartechMembers2](#listmartechmembers2) - List all members
-* [patchMartechMember2](#patchmartechmember2) - Update a member
-* [removeMartechMember2](#removemartechmember2) - Remove a member
-* [updateMartechMember2](#updatemartechmember2) - Update a member
+* [createMartechMember](#createmartechmember) - Create a member
+* [getClubsMember](#getclubsmember) - Retrieve a member
+* [getMartechMember](#getmartechmember) - Retrieve a member
+* [listClubsMembers](#listclubsmembers) - List all members
+* [listMartechMembers](#listmartechmembers) - List all members
+* [patchMartechMember](#patchmartechmember) - Update a member
+* [removeMartechMember](#removemartechmember) - Remove a member
+* [updateMartechMember](#updatemartechmember) - Update a member
 
-## createMartechMember2
+## createMartechMember
 
 Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMartechMember2" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="php" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```php
 declare(strict_types=1);
 
@@ -35,12 +35,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateMartechMember2Request(
+$request = new Operations\CreateMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(),
     connectionId: '<id>',
 );
 
-$response = $sdk->member->createMartechMember2(
+$response = $sdk->member->createMartechMember(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->marketingMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateMartechMember2Request](../../Models/Operations/CreateMartechMember2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateMartechMemberRequest](../../Models/Operations/CreateMartechMemberRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\CreateMartechMember2Response](../../Models/Operations/CreateMartechMember2Response.md)**
+**[?Operations\CreateMartechMemberResponse](../../Models/Operations/CreateMartechMemberResponse.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->marketingMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsMember2
+## getClubsMember
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsMember2Request(
+$request = new Operations\GetClubsMemberRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->member->getClubsMember2(
+$response = $sdk->member->getClubsMember(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->clubsMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetClubsMember2Request](../../Models/Operations/GetClubsMember2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetClubsMemberRequest](../../Models/Operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetClubsMember2Response](../../Models/Operations/GetClubsMember2Response.md)**
+**[?Operations\GetClubsMemberResponse](../../Models/Operations/GetClubsMemberResponse.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->clubsMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getMartechMember2
+## getMartechMember
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getMartechMember2" method="get" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -137,12 +137,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetMartechMember2Request(
+$request = new Operations\GetMartechMemberRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->member->getMartechMember2(
+$response = $sdk->member->getMartechMember(
     request: $request
 );
 
@@ -153,13 +153,13 @@ if ($response->marketingMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetMartechMember2Request](../../Models/Operations/GetMartechMember2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetMartechMemberRequest](../../Models/Operations/GetMartechMemberRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetMartechMember2Response](../../Models/Operations/GetMartechMember2Response.md)**
+**[?Operations\GetMartechMemberResponse](../../Models/Operations/GetMartechMemberResponse.md)**
 
 ### Errors
 
@@ -167,13 +167,13 @@ if ($response->marketingMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsMembers2
+## listClubsMembers
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="php" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
 ```php
 declare(strict_types=1);
 
@@ -188,11 +188,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsMembers2Request(
+$request = new Operations\ListClubsMembersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->member->listClubsMembers2(
+$response = $sdk->member->listClubsMembers(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->clubsMembers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListClubsMembers2Request](../../Models/Operations/ListClubsMembers2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListClubsMembersRequest](../../Models/Operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListClubsMembers2Response](../../Models/Operations/ListClubsMembers2Response.md)**
+**[?Operations\ListClubsMembersResponse](../../Models/Operations/ListClubsMembersResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->clubsMembers !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listMartechMembers2
+## listMartechMembers
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listMartechMembers2" method="get" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="php" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```php
 declare(strict_types=1);
 
@@ -238,11 +238,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListMartechMembers2Request(
+$request = new Operations\ListMartechMembersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->member->listMartechMembers2(
+$response = $sdk->member->listMartechMembers(
     request: $request
 );
 
@@ -253,13 +253,13 @@ if ($response->marketingMembers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListMartechMembers2Request](../../Models/Operations/ListMartechMembers2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListMartechMembersRequest](../../Models/Operations/ListMartechMembersRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListMartechMembers2Response](../../Models/Operations/ListMartechMembers2Response.md)**
+**[?Operations\ListMartechMembersResponse](../../Models/Operations/ListMartechMembersResponse.md)**
 
 ### Errors
 
@@ -267,13 +267,13 @@ if ($response->marketingMembers !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchMartechMember2
+## patchMartechMember
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMartechMember2" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -289,13 +289,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchMartechMember2Request(
+$request = new Operations\PatchMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->member->patchMartechMember2(
+$response = $sdk->member->patchMartechMember(
     request: $request
 );
 
@@ -306,13 +306,13 @@ if ($response->marketingMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchMartechMember2Request](../../Models/Operations/PatchMartechMember2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchMartechMemberRequest](../../Models/Operations/PatchMartechMemberRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchMartechMember2Response](../../Models/Operations/PatchMartechMember2Response.md)**
+**[?Operations\PatchMartechMemberResponse](../../Models/Operations/PatchMartechMemberResponse.md)**
 
 ### Errors
 
@@ -320,13 +320,13 @@ if ($response->marketingMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeMartechMember2
+## removeMartechMember
 
 Remove a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeMartechMember2" method="delete" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -341,12 +341,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveMartechMember2Request(
+$request = new Operations\RemoveMartechMemberRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->member->removeMartechMember2(
+$response = $sdk->member->removeMartechMember(
     request: $request
 );
 
@@ -357,13 +357,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveMartechMember2Request](../../Models/Operations/RemoveMartechMember2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveMartechMemberRequest](../../Models/Operations/RemoveMartechMemberRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\RemoveMartechMember2Response](../../Models/Operations/RemoveMartechMember2Response.md)**
+**[?Operations\RemoveMartechMemberResponse](../../Models/Operations/RemoveMartechMemberResponse.md)**
 
 ### Errors
 
@@ -371,13 +371,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMartechMember2
+## updateMartechMember
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechMember2" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -393,13 +393,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMartechMember2Request(
+$request = new Operations\UpdateMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->member->updateMartechMember2(
+$response = $sdk->member->updateMartechMember(
     request: $request
 );
 
@@ -410,13 +410,13 @@ if ($response->marketingMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateMartechMember2Request](../../Models/Operations/UpdateMartechMember2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateMartechMemberRequest](../../Models/Operations/UpdateMartechMemberRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\UpdateMartechMember2Response](../../Models/Operations/UpdateMartechMember2Response.md)**
+**[?Operations\UpdateMartechMemberResponse](../../Models/Operations/UpdateMartechMemberResponse.md)**
 
 ### Errors
 

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingJournal2](#createaccountingjournal2) - Create a journal
-* [getAccountingJournal2](#getaccountingjournal2) - Retrieve a journal
-* [listAccountingJournals2](#listaccountingjournals2) - List all journals
-* [patchAccountingJournal2](#patchaccountingjournal2) - Update a journal
-* [removeAccountingJournal2](#removeaccountingjournal2) - Remove a journal
-* [updateAccountingJournal2](#updateaccountingjournal2) - Update a journal
+* [createAccountingJournal](#createaccountingjournal) - Create a journal
+* [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
+* [listAccountingJournals](#listaccountingjournals) - List all journals
+* [patchAccountingJournal](#patchaccountingjournal) - Update a journal
+* [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
+* [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 
-## createAccountingJournal2
+## createAccountingJournal
 
 Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingJournal2" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingJournal2Request(
+$request = new Operations\CreateAccountingJournalRequest(
     accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
 );
 
-$response = $sdk->journal->createAccountingJournal2(
+$response = $sdk->journal->createAccountingJournal(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingJournal2Request](../../Models/Operations/CreateAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingJournalRequest](../../Models/Operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingJournal2Response](../../Models/Operations/CreateAccountingJournal2Response.md)**
+**[?Operations\CreateAccountingJournalResponse](../../Models/Operations/CreateAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingJournal2
+## getAccountingJournal
 
 Retrieve a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingJournal2" method="get" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingJournal2Request(
+$request = new Operations\GetAccountingJournalRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->journal->getAccountingJournal2(
+$response = $sdk->journal->getAccountingJournal(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingJournal2Request](../../Models/Operations/GetAccountingJournal2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingJournalRequest](../../Models/Operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingJournal2Response](../../Models/Operations/GetAccountingJournal2Response.md)**
+**[?Operations\GetAccountingJournalResponse](../../Models/Operations/GetAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingJournals2
+## listAccountingJournals
 
 List all journals
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingJournals2" method="get" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingJournals2Request(
+$request = new Operations\ListAccountingJournalsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->journal->listAccountingJournals2(
+$response = $sdk->journal->listAccountingJournals(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingJournals !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingJournals2Request](../../Models/Operations/ListAccountingJournals2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingJournalsRequest](../../Models/Operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingJournals2Response](../../Models/Operations/ListAccountingJournals2Response.md)**
+**[?Operations\ListAccountingJournalsResponse](../../Models/Operations/ListAccountingJournalsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingJournals !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingJournal2
+## patchAccountingJournal
 
 Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingJournal2" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingJournal2Request(
+$request = new Operations\PatchAccountingJournalRequest(
     accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->journal->patchAccountingJournal2(
+$response = $sdk->journal->patchAccountingJournal(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingJournal2Request](../../Models/Operations/PatchAccountingJournal2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingJournalRequest](../../Models/Operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchAccountingJournal2Response](../../Models/Operations/PatchAccountingJournal2Response.md)**
+**[?Operations\PatchAccountingJournalResponse](../../Models/Operations/PatchAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingJournal2
+## removeAccountingJournal
 
 Remove a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingJournal2" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingJournal2Request(
+$request = new Operations\RemoveAccountingJournalRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->journal->removeAccountingJournal2(
+$response = $sdk->journal->removeAccountingJournal(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingJournal2Request](../../Models/Operations/RemoveAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingJournalRequest](../../Models/Operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveAccountingJournal2Response](../../Models/Operations/RemoveAccountingJournal2Response.md)**
+**[?Operations\RemoveAccountingJournalResponse](../../Models/Operations/RemoveAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingJournal2
+## updateAccountingJournal
 
 Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingJournal2" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingJournal2Request(
+$request = new Operations\UpdateAccountingJournalRequest(
     accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->journal->updateAccountingJournal2(
+$response = $sdk->journal->updateAccountingJournal(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingJournal2Request](../../Models/Operations/UpdateAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateAccountingJournalRequest](../../Models/Operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateAccountingJournal2Response](../../Models/Operations/UpdateAccountingJournal2Response.md)**
+**[?Operations\UpdateAccountingJournalResponse](../../Models/Operations/UpdateAccountingJournalResponse.md)**
 
 ### Errors
 

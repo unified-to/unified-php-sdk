@@ -4,63 +4,63 @@
 
 ### Available Operations
 
-* [createCommerceCollection2](#createcommercecollection2) - Create a collection
-* [createCommerceInventory2](#createcommerceinventory2) - Create an inventory
-* [createCommerceItem2](#createcommerceitem2) - Create an item
-* [createCommerceItemvariant2](#createcommerceitemvariant2) - Create an itemvariant
-* [createCommerceLocation2](#createcommercelocation2) - Create a location
-* [createCommerceReservation2](#createcommercereservation2) - Create a reservation
-* [createCommerceReview2](#createcommercereview2) - Create a review
-* [createCommerceSaleschannel2](#createcommercesaleschannel2) - Create a saleschannel
-* [getCommerceCollection2](#getcommercecollection2) - Retrieve a collection
-* [getCommerceInventory2](#getcommerceinventory2) - Retrieve an inventory
-* [getCommerceItem2](#getcommerceitem2) - Retrieve an item
-* [getCommerceItemvariant2](#getcommerceitemvariant2) - Retrieve an itemvariant
-* [getCommerceLocation2](#getcommercelocation2) - Retrieve a location
-* [getCommerceReservation2](#getcommercereservation2) - Retrieve a reservation
-* [getCommerceReview2](#getcommercereview2) - Retrieve a review
-* [getCommerceSaleschannel2](#getcommercesaleschannel2) - Retrieve a saleschannel
-* [listCommerceAvailabilities2](#listcommerceavailabilities2) - List all availabilities
-* [listCommerceCollections2](#listcommercecollections2) - List all collections
-* [listCommerceInventories2](#listcommerceinventories2) - List all inventories
-* [listCommerceItems2](#listcommerceitems2) - List all items
-* [listCommerceItemvariants2](#listcommerceitemvariants2) - List all itemvariants
-* [listCommerceLocations2](#listcommercelocations2) - List all locations
-* [listCommerceReservations2](#listcommercereservations2) - List all reservations
-* [listCommerceReviews2](#listcommercereviews2) - List all reviews
-* [listCommerceSaleschannels2](#listcommercesaleschannels2) - List all saleschannels
-* [patchCommerceCollection2](#patchcommercecollection2) - Update a collection
-* [patchCommerceInventory2](#patchcommerceinventory2) - Update an inventory
-* [patchCommerceItem2](#patchcommerceitem2) - Update an item
-* [patchCommerceItemvariant2](#patchcommerceitemvariant2) - Update an itemvariant
-* [patchCommerceLocation2](#patchcommercelocation2) - Update a location
-* [patchCommerceReservation2](#patchcommercereservation2) - Update a reservation
-* [patchCommerceReview2](#patchcommercereview2) - Update a review
-* [patchCommerceSaleschannel2](#patchcommercesaleschannel2) - Update a saleschannel
-* [removeCommerceCollection2](#removecommercecollection2) - Remove a collection
-* [removeCommerceInventory2](#removecommerceinventory2) - Remove an inventory
-* [removeCommerceItem2](#removecommerceitem2) - Remove an item
-* [removeCommerceItemvariant2](#removecommerceitemvariant2) - Remove an itemvariant
-* [removeCommerceLocation2](#removecommercelocation2) - Remove a location
-* [removeCommerceReservation2](#removecommercereservation2) - Remove a reservation
-* [removeCommerceReview2](#removecommercereview2) - Remove a review
-* [removeCommerceSaleschannel2](#removecommercesaleschannel2) - Remove a saleschannel
-* [updateCommerceCollection2](#updatecommercecollection2) - Update a collection
-* [updateCommerceInventory2](#updatecommerceinventory2) - Update an inventory
-* [updateCommerceItem2](#updatecommerceitem2) - Update an item
-* [updateCommerceItemvariant2](#updatecommerceitemvariant2) - Update an itemvariant
-* [updateCommerceLocation2](#updatecommercelocation2) - Update a location
-* [updateCommerceReservation2](#updatecommercereservation2) - Update a reservation
-* [updateCommerceReview2](#updatecommercereview2) - Update a review
-* [updateCommerceSaleschannel2](#updatecommercesaleschannel2) - Update a saleschannel
+* [createCommerceCollection](#createcommercecollection) - Create a collection
+* [createCommerceInventory](#createcommerceinventory) - Create an inventory
+* [createCommerceItem](#createcommerceitem) - Create an item
+* [createCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
+* [createCommerceLocation](#createcommercelocation) - Create a location
+* [createCommerceReservation](#createcommercereservation) - Create a reservation
+* [createCommerceReview](#createcommercereview) - Create a review
+* [createCommerceSaleschannel](#createcommercesaleschannel) - Create a saleschannel
+* [getCommerceCollection](#getcommercecollection) - Retrieve a collection
+* [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
+* [getCommerceItem](#getcommerceitem) - Retrieve an item
+* [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
+* [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
+* [getCommerceReview](#getcommercereview) - Retrieve a review
+* [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceAvailabilities](#listcommerceavailabilities) - List all availabilities
+* [listCommerceCollections](#listcommercecollections) - List all collections
+* [listCommerceInventories](#listcommerceinventories) - List all inventories
+* [listCommerceItems](#listcommerceitems) - List all items
+* [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
+* [listCommerceLocations](#listcommercelocations) - List all locations
+* [listCommerceReservations](#listcommercereservations) - List all reservations
+* [listCommerceReviews](#listcommercereviews) - List all reviews
+* [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
+* [patchCommerceCollection](#patchcommercecollection) - Update a collection
+* [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
+* [patchCommerceItem](#patchcommerceitem) - Update an item
+* [patchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
+* [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchCommerceReservation](#patchcommercereservation) - Update a reservation
+* [patchCommerceReview](#patchcommercereview) - Update a review
+* [patchCommerceSaleschannel](#patchcommercesaleschannel) - Update a saleschannel
+* [removeCommerceCollection](#removecommercecollection) - Remove a collection
+* [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
+* [removeCommerceItem](#removecommerceitem) - Remove an item
+* [removeCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
+* [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeCommerceReservation](#removecommercereservation) - Remove a reservation
+* [removeCommerceReview](#removecommercereview) - Remove a review
+* [removeCommerceSaleschannel](#removecommercesaleschannel) - Remove a saleschannel
+* [updateCommerceCollection](#updatecommercecollection) - Update a collection
+* [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
+* [updateCommerceItem](#updatecommerceitem) - Update an item
+* [updateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
+* [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateCommerceReservation](#updatecommercereservation) - Update a reservation
+* [updateCommerceReview](#updatecommercereview) - Update a review
+* [updateCommerceSaleschannel](#updatecommercesaleschannel) - Update a saleschannel
 
-## createCommerceCollection2
+## createCommerceCollection
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceCollection2" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -76,70 +76,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceCollection2Request(
+$request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         name: '<value>',
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->createCommerceCollection2(
+$response = $sdk->commerce->createCommerceCollection(
     request: $request
 );
 
 if ($response->commerceCollection !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\CreateCommerceCollection2Request](../../Models/Operations/CreateCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-### Response
-
-**[?Operations\CreateCommerceCollection2Response](../../Models/Operations/CreateCommerceCollection2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceInventory2
-
-Create an inventory
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceInventory2" method="post" path="/commerce/{connection_id}/inventory" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceInventory2Request(
-    commerceInventory: new Shared\CommerceInventory(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceInventory2(
-    request: $request
-);
-
-if ($response->commerceInventory !== null) {
     // handle response
 }
 ```
@@ -148,11 +96,11 @@ if ($response->commerceInventory !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateCommerceInventory2Request](../../Models/Operations/CreateCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\CreateCommerceCollectionRequest](../../Models/Operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateCommerceInventory2Response](../../Models/Operations/CreateCommerceInventory2Response.md)**
+**[?Operations\CreateCommerceCollectionResponse](../../Models/Operations/CreateCommerceCollectionResponse.md)**
 
 ### Errors
 
@@ -160,13 +108,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createCommerceItem2
+## createCommerceInventory
 
-Create an item
+Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceItem2" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -182,374 +130,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceItem2Request(
-    commerceItem: new Shared\CommerceItem(),
+$request = new Operations\CreateCommerceInventoryRequest(
+    commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->createCommerceItem2(
-    request: $request
-);
-
-if ($response->commerceItem !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateCommerceItem2Request](../../Models/Operations/CreateCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\CreateCommerceItem2Response](../../Models/Operations/CreateCommerceItem2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceItemvariant2
-
-Create an itemvariant
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceItemvariant2Request(
-    commerceItemvariant: new Shared\CommerceItemvariant(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceItemvariant2(
-    request: $request
-);
-
-if ($response->commerceItemvariant !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateCommerceItemvariant2Request](../../Models/Operations/CreateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\CreateCommerceItemvariant2Response](../../Models/Operations/CreateCommerceItemvariant2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceLocation2
-
-Create a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceLocation2" method="post" path="/commerce/{connection_id}/location" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceLocation2Request(
-    commerceLocation: new Shared\CommerceLocation(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceLocation2(
-    request: $request
-);
-
-if ($response->commerceLocation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateCommerceLocation2Request](../../Models/Operations/CreateCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\CreateCommerceLocation2Response](../../Models/Operations/CreateCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceReservation2
-
-Create a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceReservation2" method="post" path="/commerce/{connection_id}/reservation" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceReservation2Request(
-    commerceReservation: new Shared\CommerceReservation(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceReservation2(
-    request: $request
-);
-
-if ($response->commerceReservation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateCommerceReservation2Request](../../Models/Operations/CreateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\CreateCommerceReservation2Response](../../Models/Operations/CreateCommerceReservation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceReview2
-
-Create a review
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceReview2" method="post" path="/commerce/{connection_id}/review" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceReview2Request(
-    commerceReview: new Shared\CommerceReview(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceReview2(
-    request: $request
-);
-
-if ($response->commerceReview !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateCommerceReview2Request](../../Models/Operations/CreateCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\CreateCommerceReview2Response](../../Models/Operations/CreateCommerceReview2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createCommerceSaleschannel2
-
-Create a saleschannel
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel2" method="post" path="/commerce/{connection_id}/saleschannel" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateCommerceSaleschannel2Request(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->commerce->createCommerceSaleschannel2(
-    request: $request
-);
-
-if ($response->commerceSaleschannel !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\CreateCommerceSaleschannel2Request](../../Models/Operations/CreateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\CreateCommerceSaleschannel2Response](../../Models/Operations/CreateCommerceSaleschannel2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceCollection2
-
-Retrieve a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceCollection2" method="get" path="/commerce/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceCollection2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceCollection2(
-    request: $request
-);
-
-if ($response->commerceCollection !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\GetCommerceCollection2Request](../../Models/Operations/GetCommerceCollection2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\GetCommerceCollection2Response](../../Models/Operations/GetCommerceCollection2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceInventory2
-
-Retrieve an inventory
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceInventory2" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceInventory2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceInventory2(
+$response = $sdk->commerce->createCommerceInventory(
     request: $request
 );
 
@@ -560,13 +146,13 @@ if ($response->commerceInventory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetCommerceInventory2Request](../../Models/Operations/GetCommerceInventory2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateCommerceInventoryRequest](../../Models/Operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetCommerceInventory2Response](../../Models/Operations/GetCommerceInventory2Response.md)**
+**[?Operations\CreateCommerceInventoryResponse](../../Models/Operations/CreateCommerceInventoryResponse.md)**
 
 ### Errors
 
@@ -574,13 +160,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceItem2
+## createCommerceItem
 
-Retrieve an item
+Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceItem2" method="get" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -588,6 +174,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -595,220 +182,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceItem2Request(
+$request = new Operations\CreateCommerceItemRequest(
+    commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
-    id: '<id>',
 );
 
-$response = $sdk->commerce->getCommerceItem2(
+$response = $sdk->commerce->createCommerceItem(
     request: $request
 );
 
 if ($response->commerceItem !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetCommerceItem2Request](../../Models/Operations/GetCommerceItem2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\GetCommerceItem2Response](../../Models/Operations/GetCommerceItem2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceItemvariant2
-
-Retrieve an itemvariant
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceItemvariant2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceItemvariant2(
-    request: $request
-);
-
-if ($response->commerceItemvariant !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetCommerceItemvariant2Request](../../Models/Operations/GetCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\GetCommerceItemvariant2Response](../../Models/Operations/GetCommerceItemvariant2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceLocation2
-
-Retrieve a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceLocation2" method="get" path="/commerce/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceLocation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceLocation2(
-    request: $request
-);
-
-if ($response->commerceLocation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetCommerceLocation2Request](../../Models/Operations/GetCommerceLocation2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\GetCommerceLocation2Response](../../Models/Operations/GetCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceReservation2
-
-Retrieve a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceReservation2" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceReservation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceReservation2(
-    request: $request
-);
-
-if ($response->commerceReservation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetCommerceReservation2Request](../../Models/Operations/GetCommerceReservation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\GetCommerceReservation2Response](../../Models/Operations/GetCommerceReservation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getCommerceReview2
-
-Retrieve a review
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getCommerceReview2" method="get" path="/commerce/{connection_id}/review/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetCommerceReview2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->getCommerceReview2(
-    request: $request
-);
-
-if ($response->commerceReview !== null) {
     // handle response
 }
 ```
@@ -817,11 +200,11 @@ if ($response->commerceReview !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetCommerceReview2Request](../../Models/Operations/GetCommerceReview2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\CreateCommerceItemRequest](../../Models/Operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetCommerceReview2Response](../../Models/Operations/GetCommerceReview2Response.md)**
+**[?Operations\CreateCommerceItemResponse](../../Models/Operations/CreateCommerceItemResponse.md)**
 
 ### Errors
 
@@ -829,13 +212,13 @@ if ($response->commerceReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceSaleschannel2
+## createCommerceItemvariant
 
-Retrieve a saleschannel
+Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceSaleschannel2" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -843,6 +226,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -850,12 +234,220 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceSaleschannel2Request(
+$request = new Operations\CreateCommerceItemvariantRequest(
+    commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
-    id: '<id>',
 );
 
-$response = $sdk->commerce->getCommerceSaleschannel2(
+$response = $sdk->commerce->createCommerceItemvariant(
+    request: $request
+);
+
+if ($response->commerceItemvariant !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceItemvariantRequest](../../Models/Operations/CreateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreateCommerceItemvariantResponse](../../Models/Operations/CreateCommerceItemvariantResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCommerceLocation
+
+Create a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->createCommerceLocation(
+    request: $request
+);
+
+if ($response->commerceLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCommerceReservation
+
+Create a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCommerceReservationRequest(
+    commerceReservation: new Shared\CommerceReservation(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->createCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceReservationRequest](../../Models/Operations/CreateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreateCommerceReservationResponse](../../Models/Operations/CreateCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCommerceReview
+
+Create a review
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCommerceReviewRequest(
+    commerceReview: new Shared\CommerceReview(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->createCommerceReview(
+    request: $request
+);
+
+if ($response->commerceReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateCommerceReviewRequest](../../Models/Operations/CreateCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\CreateCommerceReviewResponse](../../Models/Operations/CreateCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCommerceSaleschannel
+
+Create a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCommerceSaleschannelRequest(
+    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->commerce->createCommerceSaleschannel(
     request: $request
 );
 
@@ -866,13 +458,13 @@ if ($response->commerceSaleschannel !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetCommerceSaleschannel2Request](../../Models/Operations/GetCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\CreateCommerceSaleschannelRequest](../../Models/Operations/CreateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\GetCommerceSaleschannel2Response](../../Models/Operations/GetCommerceSaleschannel2Response.md)**
+**[?Operations\CreateCommerceSaleschannelResponse](../../Models/Operations/CreateCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -880,13 +472,13 @@ if ($response->commerceSaleschannel !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceAvailabilities2
+## getCommerceCollection
 
-List all availabilities
+Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceAvailabilities2" method="get" path="/commerce/{connection_id}/availability" -->
+<!-- UsageSnippet language="php" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -901,11 +493,419 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceAvailabilities2Request(
+$request = new Operations\GetCommerceCollectionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceCollection(
+    request: $request
+);
+
+if ($response->commerceCollection !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetCommerceCollectionRequest](../../Models/Operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetCommerceCollectionResponse](../../Models/Operations/GetCommerceCollectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceInventory
+
+Retrieve an inventory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceInventoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceInventory(
+    request: $request
+);
+
+if ($response->commerceInventory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetCommerceInventoryRequest](../../Models/Operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetCommerceInventoryResponse](../../Models/Operations/GetCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceItem
+
+Retrieve an item
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetCommerceItemRequest](../../Models/Operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetCommerceItemResponse](../../Models/Operations/GetCommerceItemResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceItemvariant
+
+Retrieve an itemvariant
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceItemvariantRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceItemvariant(
+    request: $request
+);
+
+if ($response->commerceItemvariant !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceItemvariantRequest](../../Models/Operations/GetCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetCommerceItemvariantResponse](../../Models/Operations/GetCommerceItemvariantResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceLocation(
+    request: $request
+);
+
+if ($response->commerceLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetCommerceLocationResponse](../../Models/Operations/GetCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceReservation
+
+Retrieve a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceReservationRequest](../../Models/Operations/GetCommerceReservationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetCommerceReservationResponse](../../Models/Operations/GetCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceReview
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceReviewRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceReview(
+    request: $request
+);
+
+if ($response->commerceReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetCommerceReviewRequest](../../Models/Operations/GetCommerceReviewRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\GetCommerceReviewResponse](../../Models/Operations/GetCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceSaleschannel
+
+Retrieve a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceSaleschannel" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceSaleschannelRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->getCommerceSaleschannel(
+    request: $request
+);
+
+if ($response->commerceSaleschannel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetCommerceSaleschannelRequest](../../Models/Operations/GetCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\GetCommerceSaleschannelResponse](../../Models/Operations/GetCommerceSaleschannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCommerceAvailabilities
+
+List all availabilities
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCommerceAvailabilitiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceAvailabilities2(
+$response = $sdk->commerce->listCommerceAvailabilities(
     request: $request
 );
 
@@ -916,13 +916,13 @@ if ($response->commerceAvailabilities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\ListCommerceAvailabilities2Request](../../Models/Operations/ListCommerceAvailabilities2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListCommerceAvailabilitiesRequest](../../Models/Operations/ListCommerceAvailabilitiesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\ListCommerceAvailabilities2Response](../../Models/Operations/ListCommerceAvailabilities2Response.md)**
+**[?Operations\ListCommerceAvailabilitiesResponse](../../Models/Operations/ListCommerceAvailabilitiesResponse.md)**
 
 ### Errors
 
@@ -930,13 +930,13 @@ if ($response->commerceAvailabilities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceCollections2
+## listCommerceCollections
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceCollections2" method="get" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```php
 declare(strict_types=1);
 
@@ -951,11 +951,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceCollections2Request(
+$request = new Operations\ListCommerceCollectionsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceCollections2(
+$response = $sdk->commerce->listCommerceCollections(
     request: $request
 );
 
@@ -966,13 +966,13 @@ if ($response->commerceCollections !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListCommerceCollections2Request](../../Models/Operations/ListCommerceCollections2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListCommerceCollectionsRequest](../../Models/Operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListCommerceCollections2Response](../../Models/Operations/ListCommerceCollections2Response.md)**
+**[?Operations\ListCommerceCollectionsResponse](../../Models/Operations/ListCommerceCollectionsResponse.md)**
 
 ### Errors
 
@@ -980,13 +980,13 @@ if ($response->commerceCollections !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceInventories2
+## listCommerceInventories
 
 List all inventories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceInventories2" method="get" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="php" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -1001,11 +1001,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceInventories2Request(
+$request = new Operations\ListCommerceInventoriesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceInventories2(
+$response = $sdk->commerce->listCommerceInventories(
     request: $request
 );
 
@@ -1016,13 +1016,13 @@ if ($response->commerceInventories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListCommerceInventories2Request](../../Models/Operations/ListCommerceInventories2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListCommerceInventoriesRequest](../../Models/Operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListCommerceInventories2Response](../../Models/Operations/ListCommerceInventories2Response.md)**
+**[?Operations\ListCommerceInventoriesResponse](../../Models/Operations/ListCommerceInventoriesResponse.md)**
 
 ### Errors
 
@@ -1030,13 +1030,13 @@ if ($response->commerceInventories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceItems2
+## listCommerceItems
 
 List all items
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceItems2" method="get" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="php" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -1051,11 +1051,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceItems2Request(
+$request = new Operations\ListCommerceItemsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceItems2(
+$response = $sdk->commerce->listCommerceItems(
     request: $request
 );
 
@@ -1066,13 +1066,13 @@ if ($response->commerceItems !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListCommerceItems2Request](../../Models/Operations/ListCommerceItems2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListCommerceItemsRequest](../../Models/Operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListCommerceItems2Response](../../Models/Operations/ListCommerceItems2Response.md)**
+**[?Operations\ListCommerceItemsResponse](../../Models/Operations/ListCommerceItemsResponse.md)**
 
 ### Errors
 
@@ -1080,13 +1080,13 @@ if ($response->commerceItems !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceItemvariants2
+## listCommerceItemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="php" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -1101,11 +1101,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceItemvariants2Request(
+$request = new Operations\ListCommerceItemvariantsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceItemvariants2(
+$response = $sdk->commerce->listCommerceItemvariants(
     request: $request
 );
 
@@ -1116,13 +1116,13 @@ if ($response->commerceItemvariants !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListCommerceItemvariants2Request](../../Models/Operations/ListCommerceItemvariants2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceItemvariantsRequest](../../Models/Operations/ListCommerceItemvariantsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceItemvariants2Response](../../Models/Operations/ListCommerceItemvariants2Response.md)**
+**[?Operations\ListCommerceItemvariantsResponse](../../Models/Operations/ListCommerceItemvariantsResponse.md)**
 
 ### Errors
 
@@ -1130,13 +1130,13 @@ if ($response->commerceItemvariants !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceLocations2
+## listCommerceLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceLocations2" method="get" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -1151,11 +1151,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceLocations2Request(
+$request = new Operations\ListCommerceLocationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceLocations2(
+$response = $sdk->commerce->listCommerceLocations(
     request: $request
 );
 
@@ -1166,13 +1166,13 @@ if ($response->commerceLocations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListCommerceLocations2Request](../../Models/Operations/ListCommerceLocations2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListCommerceLocations2Response](../../Models/Operations/ListCommerceLocations2Response.md)**
+**[?Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
 
 ### Errors
 
@@ -1180,13 +1180,13 @@ if ($response->commerceLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceReservations2
+## listCommerceReservations
 
 List all reservations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceReservations2" method="get" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="php" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -1201,11 +1201,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceReservations2Request(
+$request = new Operations\ListCommerceReservationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceReservations2(
+$response = $sdk->commerce->listCommerceReservations(
     request: $request
 );
 
@@ -1216,13 +1216,13 @@ if ($response->commerceReservations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListCommerceReservations2Request](../../Models/Operations/ListCommerceReservations2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceReservationsRequest](../../Models/Operations/ListCommerceReservationsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceReservations2Response](../../Models/Operations/ListCommerceReservations2Response.md)**
+**[?Operations\ListCommerceReservationsResponse](../../Models/Operations/ListCommerceReservationsResponse.md)**
 
 ### Errors
 
@@ -1230,13 +1230,13 @@ if ($response->commerceReservations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceReviews2
+## listCommerceReviews
 
 List all reviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceReviews2" method="get" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="php" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```php
 declare(strict_types=1);
 
@@ -1251,11 +1251,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceReviews2Request(
+$request = new Operations\ListCommerceReviewsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceReviews2(
+$response = $sdk->commerce->listCommerceReviews(
     request: $request
 );
 
@@ -1266,13 +1266,13 @@ if ($response->commerceReviews !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListCommerceReviews2Request](../../Models/Operations/ListCommerceReviews2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListCommerceReviewsRequest](../../Models/Operations/ListCommerceReviewsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListCommerceReviews2Response](../../Models/Operations/ListCommerceReviews2Response.md)**
+**[?Operations\ListCommerceReviewsResponse](../../Models/Operations/ListCommerceReviewsResponse.md)**
 
 ### Errors
 
@@ -1280,13 +1280,13 @@ if ($response->commerceReviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceSaleschannels2
+## listCommerceSaleschannels
 
 List all saleschannels
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceSaleschannels2" method="get" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="php" operationID="listCommerceSaleschannels" method="get" path="/commerce/{connection_id}/saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -1301,11 +1301,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceSaleschannels2Request(
+$request = new Operations\ListCommerceSaleschannelsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->commerce->listCommerceSaleschannels2(
+$response = $sdk->commerce->listCommerceSaleschannels(
     request: $request
 );
 
@@ -1316,13 +1316,13 @@ if ($response->commerceSaleschannels !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListCommerceSaleschannels2Request](../../Models/Operations/ListCommerceSaleschannels2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\ListCommerceSaleschannelsRequest](../../Models/Operations/ListCommerceSaleschannelsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\ListCommerceSaleschannels2Response](../../Models/Operations/ListCommerceSaleschannels2Response.md)**
+**[?Operations\ListCommerceSaleschannelsResponse](../../Models/Operations/ListCommerceSaleschannelsResponse.md)**
 
 ### Errors
 
@@ -1330,13 +1330,13 @@ if ($response->commerceSaleschannels !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceCollection2
+## patchCommerceCollection
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceCollection2" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1352,7 +1352,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceCollection2Request(
+$request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         name: '<value>',
     ),
@@ -1360,7 +1360,841 @@ $request = new Operations\PatchCommerceCollection2Request(
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceCollection2(
+$response = $sdk->commerce->patchCommerceCollection(
+    request: $request
+);
+
+if ($response->commerceCollection !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchCommerceCollectionRequest](../../Models/Operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\PatchCommerceCollectionResponse](../../Models/Operations/PatchCommerceCollectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceInventory
+
+Update an inventory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceInventoryRequest(
+    commerceInventory: new Shared\CommerceInventory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceInventory(
+    request: $request
+);
+
+if ($response->commerceInventory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchCommerceInventoryRequest](../../Models/Operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchCommerceInventoryResponse](../../Models/Operations/PatchCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceItem
+
+Update an item
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceItemRequest(
+    commerceItem: new Shared\CommerceItem(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceItem(
+    request: $request
+);
+
+if ($response->commerceItem !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchCommerceItemRequest](../../Models/Operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\PatchCommerceItemResponse](../../Models/Operations/PatchCommerceItemResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceItemvariant
+
+Update an itemvariant
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceItemvariantRequest(
+    commerceItemvariant: new Shared\CommerceItemvariant(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceItemvariant(
+    request: $request
+);
+
+if ($response->commerceItemvariant !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchCommerceItemvariantRequest](../../Models/Operations/PatchCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\PatchCommerceItemvariantResponse](../../Models/Operations/PatchCommerceItemvariantResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceLocation
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceLocation(
+    request: $request
+);
+
+if ($response->commerceLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\PatchCommerceLocationResponse](../../Models/Operations/PatchCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceReservation
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceReservationRequest(
+    commerceReservation: new Shared\CommerceReservation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceReservation(
+    request: $request
+);
+
+if ($response->commerceReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchCommerceReservationRequest](../../Models/Operations/PatchCommerceReservationRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\PatchCommerceReservationResponse](../../Models/Operations/PatchCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceReview
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceReviewRequest(
+    commerceReview: new Shared\CommerceReview(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceReview(
+    request: $request
+);
+
+if ($response->commerceReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchCommerceReviewRequest](../../Models/Operations/PatchCommerceReviewRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\PatchCommerceReviewResponse](../../Models/Operations/PatchCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCommerceSaleschannel
+
+Update a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCommerceSaleschannelRequest(
+    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->patchCommerceSaleschannel(
+    request: $request
+);
+
+if ($response->commerceSaleschannel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\PatchCommerceSaleschannelRequest](../../Models/Operations/PatchCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\PatchCommerceSaleschannelResponse](../../Models/Operations/PatchCommerceSaleschannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceCollection
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceCollectionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceCollection(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveCommerceCollectionRequest](../../Models/Operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveCommerceCollectionResponse](../../Models/Operations/RemoveCommerceCollectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceInventory
+
+Remove an inventory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceInventoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceInventory(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveCommerceInventoryRequest](../../Models/Operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveCommerceInventoryResponse](../../Models/Operations/RemoveCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceItem
+
+Remove an item
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceItemRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceItem(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveCommerceItemRequest](../../Models/Operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveCommerceItemResponse](../../Models/Operations/RemoveCommerceItemResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceItemvariant
+
+Remove an itemvariant
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceItemvariantRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceItemvariant(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceItemvariantRequest](../../Models/Operations/RemoveCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemoveCommerceItemvariantResponse](../../Models/Operations/RemoveCommerceItemvariantResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceLocation
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceLocation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\RemoveCommerceLocationResponse](../../Models/Operations/RemoveCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceReservation
+
+Remove a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceReservation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceReservationRequest](../../Models/Operations/RemoveCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemoveCommerceReservationResponse](../../Models/Operations/RemoveCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceReview
+
+Remove a review
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceReviewRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceReview(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveCommerceReviewRequest](../../Models/Operations/RemoveCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\RemoveCommerceReviewResponse](../../Models/Operations/RemoveCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceSaleschannel
+
+Remove a saleschannel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceSaleschannel" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceSaleschannelRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->removeCommerceSaleschannel(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\RemoveCommerceSaleschannelRequest](../../Models/Operations/RemoveCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\RemoveCommerceSaleschannelResponse](../../Models/Operations/RemoveCommerceSaleschannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCommerceCollection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCommerceCollectionRequest(
+    commerceCollection: new Shared\CommerceCollection(
+        name: '<value>',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->commerce->updateCommerceCollection(
     request: $request
 );
 
@@ -1373,11 +2207,11 @@ if ($response->commerceCollection !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\PatchCommerceCollection2Request](../../Models/Operations/PatchCommerceCollection2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\UpdateCommerceCollectionRequest](../../Models/Operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\PatchCommerceCollection2Response](../../Models/Operations/PatchCommerceCollection2Response.md)**
+**[?Operations\UpdateCommerceCollectionResponse](../../Models/Operations/UpdateCommerceCollectionResponse.md)**
 
 ### Errors
 
@@ -1385,13 +2219,13 @@ if ($response->commerceCollection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceInventory2
+## updateCommerceInventory
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceInventory2" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1407,13 +2241,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceInventory2Request(
+$request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceInventory2(
+$response = $sdk->commerce->updateCommerceInventory(
     request: $request
 );
 
@@ -1426,11 +2260,11 @@ if ($response->commerceInventory !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchCommerceInventory2Request](../../Models/Operations/PatchCommerceInventory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateCommerceInventoryRequest](../../Models/Operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchCommerceInventory2Response](../../Models/Operations/PatchCommerceInventory2Response.md)**
+**[?Operations\UpdateCommerceInventoryResponse](../../Models/Operations/UpdateCommerceInventoryResponse.md)**
 
 ### Errors
 
@@ -1438,13 +2272,13 @@ if ($response->commerceInventory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceItem2
+## updateCommerceItem
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItem2" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1460,13 +2294,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceItem2Request(
+$request = new Operations\UpdateCommerceItemRequest(
     commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceItem2(
+$response = $sdk->commerce->updateCommerceItem(
     request: $request
 );
 
@@ -1479,11 +2313,11 @@ if ($response->commerceItem !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchCommerceItem2Request](../../Models/Operations/PatchCommerceItem2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\UpdateCommerceItemRequest](../../Models/Operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchCommerceItem2Response](../../Models/Operations/PatchCommerceItem2Response.md)**
+**[?Operations\UpdateCommerceItemResponse](../../Models/Operations/UpdateCommerceItemResponse.md)**
 
 ### Errors
 
@@ -1491,13 +2325,13 @@ if ($response->commerceItem !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceItemvariant2
+## updateCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1513,13 +2347,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceItemvariant2Request(
+$request = new Operations\UpdateCommerceItemvariantRequest(
     commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceItemvariant2(
+$response = $sdk->commerce->updateCommerceItemvariant(
     request: $request
 );
 
@@ -1532,11 +2366,11 @@ if ($response->commerceItemvariant !== null) {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchCommerceItemvariant2Request](../../Models/Operations/PatchCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [Operations\UpdateCommerceItemvariantRequest](../../Models/Operations/UpdateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\PatchCommerceItemvariant2Response](../../Models/Operations/PatchCommerceItemvariant2Response.md)**
+**[?Operations\UpdateCommerceItemvariantResponse](../../Models/Operations/UpdateCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -1544,13 +2378,13 @@ if ($response->commerceItemvariant !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceLocation2
+## updateCommerceLocation
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceLocation2" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1566,13 +2400,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceLocation2Request(
+$request = new Operations\UpdateCommerceLocationRequest(
     commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceLocation2(
+$response = $sdk->commerce->updateCommerceLocation(
     request: $request
 );
 
@@ -1585,11 +2419,11 @@ if ($response->commerceLocation !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchCommerceLocation2Request](../../Models/Operations/PatchCommerceLocation2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchCommerceLocation2Response](../../Models/Operations/PatchCommerceLocation2Response.md)**
+**[?Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -1597,13 +2431,13 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceReservation2
+## updateCommerceReservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReservation2" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1619,13 +2453,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceReservation2Request(
+$request = new Operations\UpdateCommerceReservationRequest(
     commerceReservation: new Shared\CommerceReservation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceReservation2(
+$response = $sdk->commerce->updateCommerceReservation(
     request: $request
 );
 
@@ -1638,11 +2472,11 @@ if ($response->commerceReservation !== null) {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchCommerceReservation2Request](../../Models/Operations/PatchCommerceReservation2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [Operations\UpdateCommerceReservationRequest](../../Models/Operations/UpdateCommerceReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\PatchCommerceReservation2Response](../../Models/Operations/PatchCommerceReservation2Response.md)**
+**[?Operations\UpdateCommerceReservationResponse](../../Models/Operations/UpdateCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -1650,13 +2484,13 @@ if ($response->commerceReservation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceReview2
+## updateCommerceReview
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReview2" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1672,13 +2506,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceReview2Request(
+$request = new Operations\UpdateCommerceReviewRequest(
     commerceReview: new Shared\CommerceReview(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceReview2(
+$response = $sdk->commerce->updateCommerceReview(
     request: $request
 );
 
@@ -1691,11 +2525,11 @@ if ($response->commerceReview !== null) {
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchCommerceReview2Request](../../Models/Operations/PatchCommerceReview2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `$request`                                                                                       | [Operations\UpdateCommerceReviewRequest](../../Models/Operations/UpdateCommerceReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchCommerceReview2Response](../../Models/Operations/PatchCommerceReview2Response.md)**
+**[?Operations\UpdateCommerceReviewResponse](../../Models/Operations/UpdateCommerceReviewResponse.md)**
 
 ### Errors
 
@@ -1703,13 +2537,13 @@ if ($response->commerceReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceSaleschannel2
+## updateCommerceSaleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel2" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1725,13 +2559,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceSaleschannel2Request(
+$request = new Operations\UpdateCommerceSaleschannelRequest(
     commerceSaleschannel: new Shared\CommerceSaleschannel(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->commerce->patchCommerceSaleschannel2(
+$response = $sdk->commerce->updateCommerceSaleschannel(
     request: $request
 );
 
@@ -1744,845 +2578,11 @@ if ($response->commerceSaleschannel !== null) {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\PatchCommerceSaleschannel2Request](../../Models/Operations/PatchCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [Operations\UpdateCommerceSaleschannelRequest](../../Models/Operations/UpdateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\PatchCommerceSaleschannel2Response](../../Models/Operations/PatchCommerceSaleschannel2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceCollection2
-
-Remove a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceCollection2" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceCollection2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceCollection2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\RemoveCommerceCollection2Request](../../Models/Operations/RemoveCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-### Response
-
-**[?Operations\RemoveCommerceCollection2Response](../../Models/Operations/RemoveCommerceCollection2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceInventory2
-
-Remove an inventory
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceInventory2" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceInventory2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceInventory2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveCommerceInventory2Request](../../Models/Operations/RemoveCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveCommerceInventory2Response](../../Models/Operations/RemoveCommerceInventory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceItem2
-
-Remove an item
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceItem2" method="delete" path="/commerce/{connection_id}/item/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceItem2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceItem2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveCommerceItem2Request](../../Models/Operations/RemoveCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\RemoveCommerceItem2Response](../../Models/Operations/RemoveCommerceItem2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceItemvariant2
-
-Remove an itemvariant
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceItemvariant2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceItemvariant2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveCommerceItemvariant2Request](../../Models/Operations/RemoveCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\RemoveCommerceItemvariant2Response](../../Models/Operations/RemoveCommerceItemvariant2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceLocation2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceLocation2" method="delete" path="/commerce/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceLocation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceLocation2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveCommerceLocation2Request](../../Models/Operations/RemoveCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\RemoveCommerceLocation2Response](../../Models/Operations/RemoveCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceReservation2
-
-Remove a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceReservation2" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceReservation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceReservation2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveCommerceReservation2Request](../../Models/Operations/RemoveCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\RemoveCommerceReservation2Response](../../Models/Operations/RemoveCommerceReservation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceReview2
-
-Remove a review
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceReview2" method="delete" path="/commerce/{connection_id}/review/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceReview2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceReview2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveCommerceReview2Request](../../Models/Operations/RemoveCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\RemoveCommerceReview2Response](../../Models/Operations/RemoveCommerceReview2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceSaleschannel2
-
-Remove a saleschannel
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceSaleschannel2" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceSaleschannel2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->removeCommerceSaleschannel2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\RemoveCommerceSaleschannel2Request](../../Models/Operations/RemoveCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\RemoveCommerceSaleschannel2Response](../../Models/Operations/RemoveCommerceSaleschannel2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceCollection2
-
-Update a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceCollection2" method="put" path="/commerce/{connection_id}/collection/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceCollection2Request(
-    commerceCollection: new Shared\CommerceCollection(
-        name: '<value>',
-    ),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceCollection2(
-    request: $request
-);
-
-if ($response->commerceCollection !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\UpdateCommerceCollection2Request](../../Models/Operations/UpdateCommerceCollection2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-### Response
-
-**[?Operations\UpdateCommerceCollection2Response](../../Models/Operations/UpdateCommerceCollection2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceInventory2
-
-Update an inventory
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceInventory2" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceInventory2Request(
-    commerceInventory: new Shared\CommerceInventory(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceInventory2(
-    request: $request
-);
-
-if ($response->commerceInventory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateCommerceInventory2Request](../../Models/Operations/UpdateCommerceInventory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateCommerceInventory2Response](../../Models/Operations/UpdateCommerceInventory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceItem2
-
-Update an item
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceItem2" method="put" path="/commerce/{connection_id}/item/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceItem2Request(
-    commerceItem: new Shared\CommerceItem(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceItem2(
-    request: $request
-);
-
-if ($response->commerceItem !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateCommerceItem2Request](../../Models/Operations/UpdateCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\UpdateCommerceItem2Response](../../Models/Operations/UpdateCommerceItem2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceItemvariant2
-
-Update an itemvariant
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceItemvariant2Request(
-    commerceItemvariant: new Shared\CommerceItemvariant(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceItemvariant2(
-    request: $request
-);
-
-if ($response->commerceItemvariant !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateCommerceItemvariant2Request](../../Models/Operations/UpdateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\UpdateCommerceItemvariant2Response](../../Models/Operations/UpdateCommerceItemvariant2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceLocation2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceLocation2" method="put" path="/commerce/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceLocation2Request(
-    commerceLocation: new Shared\CommerceLocation(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceLocation2(
-    request: $request
-);
-
-if ($response->commerceLocation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateCommerceLocation2Request](../../Models/Operations/UpdateCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\UpdateCommerceLocation2Response](../../Models/Operations/UpdateCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceReservation2
-
-Update a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceReservation2" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceReservation2Request(
-    commerceReservation: new Shared\CommerceReservation(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceReservation2(
-    request: $request
-);
-
-if ($response->commerceReservation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateCommerceReservation2Request](../../Models/Operations/UpdateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-### Response
-
-**[?Operations\UpdateCommerceReservation2Response](../../Models/Operations/UpdateCommerceReservation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceReview2
-
-Update a review
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceReview2" method="put" path="/commerce/{connection_id}/review/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceReview2Request(
-    commerceReview: new Shared\CommerceReview(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceReview2(
-    request: $request
-);
-
-if ($response->commerceReview !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateCommerceReview2Request](../../Models/Operations/UpdateCommerceReview2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\UpdateCommerceReview2Response](../../Models/Operations/UpdateCommerceReview2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceSaleschannel2
-
-Update a saleschannel
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel2" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceSaleschannel2Request(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->commerce->updateCommerceSaleschannel2(
-    request: $request
-);
-
-if ($response->commerceSaleschannel !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\UpdateCommerceSaleschannel2Request](../../Models/Operations/UpdateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\UpdateCommerceSaleschannel2Response](../../Models/Operations/UpdateCommerceSaleschannel2Response.md)**
+**[?Operations\UpdateCommerceSaleschannelResponse](../../Models/Operations/UpdateCommerceSaleschannelResponse.md)**
 
 ### Errors
 

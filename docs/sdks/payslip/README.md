@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getHrisPayslip2](#gethrispayslip2) - Retrieve a payslip
-* [listHrisPayslips2](#listhrispayslips2) - List all payslips
+* [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [listHrisPayslips](#listhrispayslips) - List all payslips
 
-## getHrisPayslip2
+## getHrisPayslip
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisPayslip2Request(
+$request = new Operations\GetHrisPayslipRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->payslip->getHrisPayslip2(
+$response = $sdk->payslip->getHrisPayslip(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->hrisPayslip !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetHrisPayslip2Request](../../Models/Operations/GetHrisPayslip2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisPayslipRequest](../../Models/Operations/GetHrisPayslipRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetHrisPayslip2Response](../../Models/Operations/GetHrisPayslip2Response.md)**
+**[?Operations\GetHrisPayslipResponse](../../Models/Operations/GetHrisPayslipResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->hrisPayslip !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisPayslips2
+## listHrisPayslips
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="php" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisPayslips2Request(
+$request = new Operations\ListHrisPayslipsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->payslip->listHrisPayslips2(
+$response = $sdk->payslip->listHrisPayslips(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->hrisPayslips !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListHrisPayslips2Request](../../Models/Operations/ListHrisPayslips2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisPayslipsRequest](../../Models/Operations/ListHrisPayslipsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListHrisPayslips2Response](../../Models/Operations/ListHrisPayslips2Response.md)**
+**[?Operations\ListHrisPayslipsResponse](../../Models/Operations/ListHrisPayslipsResponse.md)**
 
 ### Errors
 

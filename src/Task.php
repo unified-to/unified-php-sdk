@@ -47,14 +47,14 @@ class Task
     /**
      * Create a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskComment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskComment2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTaskComment2(Operations\CreateTaskComment2Request $request, ?Options $options = null): Operations\CreateTaskComment2Response
+    public function createTaskComment(Operations\CreateTaskCommentRequest $request, ?Options $options = null): Operations\CreateTaskCommentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\CreateTaskComment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\CreateTaskCommentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -63,11 +63,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskComment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskCommentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskComment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskComment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTaskComment2Response(
+                $response = new Operations\CreateTaskCommentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Task
     /**
      * Create a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskProject2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskProject2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTaskProject2(Operations\CreateTaskProject2Request $request, ?Options $options = null): Operations\CreateTaskProject2Response
+    public function createTaskProject(Operations\CreateTaskProjectRequest $request, ?Options $options = null): Operations\CreateTaskProjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\CreateTaskProject2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\CreateTaskProjectRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
@@ -131,11 +131,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskProject2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskProjectRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskProject2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskProject', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTaskProject2Response(
+                $response = new Operations\CreateTaskProjectResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Task
     /**
      * Create a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTaskTask2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTaskTask2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateTaskTaskRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTaskTask2(Operations\CreateTaskTask2Request $request, ?Options $options = null): Operations\CreateTaskTask2Response
+    public function createTaskTask(Operations\CreateTaskTaskRequest $request, ?Options $options = null): Operations\CreateTaskTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\CreateTaskTask2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\CreateTaskTaskRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
@@ -199,11 +199,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskTask2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTaskTaskRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskTask2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTaskTask', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTaskTask2Response(
+                $response = new Operations\CreateTaskTaskResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Task
     /**
      * Retrieve a change
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskChange2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskChange2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskChangeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskChangeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskChange2(Operations\GetTaskChange2Request $request, ?Options $options = null): Operations\GetTaskChange2Response
+    public function getTaskChange(Operations\GetTaskChangeRequest $request, ?Options $options = null): Operations\GetTaskChangeResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change/{id}', Operations\GetTaskChange2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change/{id}', Operations\GetTaskChangeRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskChange2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskChangeRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskChange2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskChange', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskChange', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskChange2Response(
+                $response = new Operations\GetTaskChangeResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Task
     /**
      * Retrieve a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskComment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskComment2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskComment2(Operations\GetTaskComment2Request $request, ?Options $options = null): Operations\GetTaskComment2Response
+    public function getTaskComment(Operations\GetTaskCommentRequest $request, ?Options $options = null): Operations\GetTaskCommentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\GetTaskComment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\GetTaskCommentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskComment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskCommentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskComment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskComment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskComment2Response(
+                $response = new Operations\GetTaskCommentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Task
     /**
      * Retrieve a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskProject2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskProject2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskProject2(Operations\GetTaskProject2Request $request, ?Options $options = null): Operations\GetTaskProject2Response
+    public function getTaskProject(Operations\GetTaskProjectRequest $request, ?Options $options = null): Operations\GetTaskProjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\GetTaskProject2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\GetTaskProjectRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskProject2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskProjectRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskProject2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskProject', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskProject2Response(
+                $response = new Operations\GetTaskProjectResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Task
     /**
      * Retrieve a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskTask2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskTask2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskTaskRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskTask2(Operations\GetTaskTask2Request $request, ?Options $options = null): Operations\GetTaskTask2Response
+    public function getTaskTask(Operations\GetTaskTaskRequest $request, ?Options $options = null): Operations\GetTaskTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\GetTaskTask2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\GetTaskTaskRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskTask2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskTaskRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskTask2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskTask', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskTask2Response(
+                $response = new Operations\GetTaskTaskResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Task
     /**
      * List all changes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskChanges2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskChanges2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskChangesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskChangesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskChanges2(Operations\ListTaskChanges2Request $request, ?Options $options = null): Operations\ListTaskChanges2Response
+    public function listTaskChanges(Operations\ListTaskChangesRequest $request, ?Options $options = null): Operations\ListTaskChangesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change', Operations\ListTaskChanges2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change', Operations\ListTaskChangesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskChanges2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskChangesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskChanges2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskChanges', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskChange>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskChanges2Response(
+                $response = new Operations\ListTaskChangesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Task
     /**
      * List all comments
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskComments2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskComments2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskCommentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskComments2(Operations\ListTaskComments2Request $request, ?Options $options = null): Operations\ListTaskComments2Response
+    public function listTaskComments(Operations\ListTaskCommentsRequest $request, ?Options $options = null): Operations\ListTaskCommentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\ListTaskComments2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment', Operations\ListTaskCommentsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskComments2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskCommentsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskComments2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskComments', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskComment>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskComments2Response(
+                $response = new Operations\ListTaskCommentsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,22 +629,22 @@ class Task
     /**
      * List all projects
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskProjects2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskProjects2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskProjects2(Operations\ListTaskProjects2Request $request, ?Options $options = null): Operations\ListTaskProjects2Response
+    public function listTaskProjects(Operations\ListTaskProjectsRequest $request, ?Options $options = null): Operations\ListTaskProjectsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\ListTaskProjects2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project', Operations\ListTaskProjectsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskProjects2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskProjectsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskProjects2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskProjects', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -670,7 +670,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskProject>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskProjects2Response(
+                $response = new Operations\ListTaskProjectsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -692,22 +692,22 @@ class Task
     /**
      * List all tasks
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskTasks2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskTasks2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskTasksRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskTasksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskTasks2(Operations\ListTaskTasks2Request $request, ?Options $options = null): Operations\ListTaskTasks2Response
+    public function listTaskTasks(Operations\ListTaskTasksRequest $request, ?Options $options = null): Operations\ListTaskTasksResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\ListTaskTasks2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task', Operations\ListTaskTasksRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskTasks2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskTasksRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskTasks2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskTasks', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -733,7 +733,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskTask>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskTasks2Response(
+                $response = new Operations\ListTaskTasksResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -755,14 +755,14 @@ class Task
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskComment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskComment2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTaskComment2(Operations\PatchTaskComment2Request $request, ?Options $options = null): Operations\PatchTaskComment2Response
+    public function patchTaskComment(Operations\PatchTaskCommentRequest $request, ?Options $options = null): Operations\PatchTaskCommentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\PatchTaskComment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\PatchTaskCommentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -771,11 +771,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskComment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskCommentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskComment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskComment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -801,7 +801,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTaskComment2Response(
+                $response = new Operations\PatchTaskCommentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -823,14 +823,14 @@ class Task
     /**
      * Update a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskProject2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskProject2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTaskProject2(Operations\PatchTaskProject2Request $request, ?Options $options = null): Operations\PatchTaskProject2Response
+    public function patchTaskProject(Operations\PatchTaskProjectRequest $request, ?Options $options = null): Operations\PatchTaskProjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\PatchTaskProject2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\PatchTaskProjectRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
@@ -839,11 +839,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskProject2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskProjectRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskProject2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskProject', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -869,7 +869,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTaskProject2Response(
+                $response = new Operations\PatchTaskProjectResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -891,14 +891,14 @@ class Task
     /**
      * Update a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTaskTask2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTaskTask2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchTaskTaskRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTaskTask2(Operations\PatchTaskTask2Request $request, ?Options $options = null): Operations\PatchTaskTask2Response
+    public function patchTaskTask(Operations\PatchTaskTaskRequest $request, ?Options $options = null): Operations\PatchTaskTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\PatchTaskTask2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\PatchTaskTaskRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
@@ -907,11 +907,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskTask2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTaskTaskRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskTask2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTaskTask', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -937,7 +937,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTaskTask2Response(
+                $response = new Operations\PatchTaskTaskResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -959,20 +959,20 @@ class Task
     /**
      * Remove a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskComment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskComment2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTaskComment2(Operations\RemoveTaskComment2Request $request, ?Options $options = null): Operations\RemoveTaskComment2Response
+    public function removeTaskComment(Operations\RemoveTaskCommentRequest $request, ?Options $options = null): Operations\RemoveTaskCommentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\RemoveTaskComment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\RemoveTaskCommentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskComment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskComment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -993,7 +993,7 @@ class Task
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskComment2Response(
+            return new Operations\RemoveTaskCommentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1005,7 +1005,7 @@ class Task
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskComment2Response(
+            return new Operations\RemoveTaskCommentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1016,20 +1016,20 @@ class Task
     /**
      * Remove a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProject2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskProject2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTaskProject2(Operations\RemoveTaskProject2Request $request, ?Options $options = null): Operations\RemoveTaskProject2Response
+    public function removeTaskProject(Operations\RemoveTaskProjectRequest $request, ?Options $options = null): Operations\RemoveTaskProjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\RemoveTaskProject2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\RemoveTaskProjectRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskProject2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskProject', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1050,7 +1050,7 @@ class Task
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskProject2Response(
+            return new Operations\RemoveTaskProjectResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1062,7 +1062,7 @@ class Task
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskProject2Response(
+            return new Operations\RemoveTaskProjectResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1073,20 +1073,20 @@ class Task
     /**
      * Remove a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskTask2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTaskTask2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTaskTaskRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTaskTask2(Operations\RemoveTaskTask2Request $request, ?Options $options = null): Operations\RemoveTaskTask2Response
+    public function removeTaskTask(Operations\RemoveTaskTaskRequest $request, ?Options $options = null): Operations\RemoveTaskTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\RemoveTaskTask2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\RemoveTaskTaskRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskTask2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTaskTask', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1107,7 +1107,7 @@ class Task
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskTask2Response(
+            return new Operations\RemoveTaskTaskResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1119,7 +1119,7 @@ class Task
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTaskTask2Response(
+            return new Operations\RemoveTaskTaskResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1130,14 +1130,14 @@ class Task
     /**
      * Update a comment
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskComment2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskComment2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskCommentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTaskComment2(Operations\UpdateTaskComment2Request $request, ?Options $options = null): Operations\UpdateTaskComment2Response
+    public function updateTaskComment(Operations\UpdateTaskCommentRequest $request, ?Options $options = null): Operations\UpdateTaskCommentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\UpdateTaskComment2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/comment/{id}', Operations\UpdateTaskCommentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskComment', 'json');
@@ -1146,11 +1146,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskComment2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskCommentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskComment2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskComment', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1176,7 +1176,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskComment', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTaskComment2Response(
+                $response = new Operations\UpdateTaskCommentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1198,14 +1198,14 @@ class Task
     /**
      * Update a project
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProject2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskProject2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTaskProject2(Operations\UpdateTaskProject2Request $request, ?Options $options = null): Operations\UpdateTaskProject2Response
+    public function updateTaskProject(Operations\UpdateTaskProjectRequest $request, ?Options $options = null): Operations\UpdateTaskProjectResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\UpdateTaskProject2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/project/{id}', Operations\UpdateTaskProjectRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskProject', 'json');
@@ -1214,11 +1214,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskProject2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskProjectRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskProject2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskProject', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1244,7 +1244,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskProject', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTaskProject2Response(
+                $response = new Operations\UpdateTaskProjectResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1266,14 +1266,14 @@ class Task
     /**
      * Update a task
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskTask2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTaskTask2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTaskTaskRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTaskTask2(Operations\UpdateTaskTask2Request $request, ?Options $options = null): Operations\UpdateTaskTask2Response
+    public function updateTaskTask(Operations\UpdateTaskTaskRequest $request, ?Options $options = null): Operations\UpdateTaskTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\UpdateTaskTask2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/task/{id}', Operations\UpdateTaskTaskRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'taskTask', 'json');
@@ -1282,11 +1282,11 @@ class Task
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskTask2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTaskTaskRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskTask2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTaskTask', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1312,7 +1312,7 @@ class Task
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskTask', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTaskTask2Response(
+                $response = new Operations\UpdateTaskTaskResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

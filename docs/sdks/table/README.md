@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createDatastoreTable2](#createdatastoretable2) - Create a table
-* [getDatastoreTable2](#getdatastoretable2) - Retrieve a table
-* [listDatastoreTables2](#listdatastoretables2) - List all tables
-* [patchDatastoreTable2](#patchdatastoretable2) - Update a table
-* [removeDatastoreTable2](#removedatastoretable2) - Remove a table
-* [updateDatastoreTable2](#updatedatastoretable2) - Update a table
+* [createDatastoreTable](#createdatastoretable) - Create a table
+* [getDatastoreTable](#getdatastoretable) - Retrieve a table
+* [listDatastoreTables](#listdatastoretables) - List all tables
+* [patchDatastoreTable](#patchdatastoretable) - Update a table
+* [removeDatastoreTable](#removedatastoretable) - Remove a table
+* [updateDatastoreTable](#updatedatastoretable) - Update a table
 
-## createDatastoreTable2
+## createDatastoreTable
 
 Create a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreTable2" method="post" path="/datastore/{connection_id}/table" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreTable" method="post" path="/datastore/{connection_id}/table" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateDatastoreTable2Request(
+$request = new Operations\CreateDatastoreTableRequest(
     datastoreTable: new Shared\DatastoreTable(),
     connectionId: '<id>',
 );
 
-$response = $sdk->table->createDatastoreTable2(
+$response = $sdk->table->createDatastoreTable(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->datastoreTable !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateDatastoreTable2Request](../../Models/Operations/CreateDatastoreTable2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateDatastoreTableRequest](../../Models/Operations/CreateDatastoreTableRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateDatastoreTable2Response](../../Models/Operations/CreateDatastoreTable2Response.md)**
+**[?Operations\CreateDatastoreTableResponse](../../Models/Operations/CreateDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->datastoreTable !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getDatastoreTable2
+## getDatastoreTable
 
 Retrieve a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getDatastoreTable2" method="get" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="php" operationID="getDatastoreTable" method="get" path="/datastore/{connection_id}/table/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetDatastoreTable2Request(
+$request = new Operations\GetDatastoreTableRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->table->getDatastoreTable2(
+$response = $sdk->table->getDatastoreTable(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->datastoreTable !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetDatastoreTable2Request](../../Models/Operations/GetDatastoreTable2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetDatastoreTableRequest](../../Models/Operations/GetDatastoreTableRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetDatastoreTable2Response](../../Models/Operations/GetDatastoreTable2Response.md)**
+**[?Operations\GetDatastoreTableResponse](../../Models/Operations/GetDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->datastoreTable !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listDatastoreTables2
+## listDatastoreTables
 
 List all tables
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listDatastoreTables2" method="get" path="/datastore/{connection_id}/table" -->
+<!-- UsageSnippet language="php" operationID="listDatastoreTables" method="get" path="/datastore/{connection_id}/table" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListDatastoreTables2Request(
+$request = new Operations\ListDatastoreTablesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->table->listDatastoreTables2(
+$response = $sdk->table->listDatastoreTables(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->datastoreTables !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListDatastoreTables2Request](../../Models/Operations/ListDatastoreTables2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListDatastoreTablesRequest](../../Models/Operations/ListDatastoreTablesRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListDatastoreTables2Response](../../Models/Operations/ListDatastoreTables2Response.md)**
+**[?Operations\ListDatastoreTablesResponse](../../Models/Operations/ListDatastoreTablesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->datastoreTables !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchDatastoreTable2
+## patchDatastoreTable
 
 Update a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchDatastoreTable2" method="patch" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchDatastoreTable" method="patch" path="/datastore/{connection_id}/table/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchDatastoreTable2Request(
+$request = new Operations\PatchDatastoreTableRequest(
     datastoreTable: new Shared\DatastoreTable(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->table->patchDatastoreTable2(
+$response = $sdk->table->patchDatastoreTable(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->datastoreTable !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchDatastoreTable2Request](../../Models/Operations/PatchDatastoreTable2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchDatastoreTableRequest](../../Models/Operations/PatchDatastoreTableRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchDatastoreTable2Response](../../Models/Operations/PatchDatastoreTable2Response.md)**
+**[?Operations\PatchDatastoreTableResponse](../../Models/Operations/PatchDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->datastoreTable !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeDatastoreTable2
+## removeDatastoreTable
 
 Remove a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeDatastoreTable2" method="delete" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeDatastoreTable" method="delete" path="/datastore/{connection_id}/table/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveDatastoreTable2Request(
+$request = new Operations\RemoveDatastoreTableRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->table->removeDatastoreTable2(
+$response = $sdk->table->removeDatastoreTable(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveDatastoreTable2Request](../../Models/Operations/RemoveDatastoreTable2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveDatastoreTableRequest](../../Models/Operations/RemoveDatastoreTableRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\RemoveDatastoreTable2Response](../../Models/Operations/RemoveDatastoreTable2Response.md)**
+**[?Operations\RemoveDatastoreTableResponse](../../Models/Operations/RemoveDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateDatastoreTable2
+## updateDatastoreTable
 
 Update a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateDatastoreTable2" method="put" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateDatastoreTable" method="put" path="/datastore/{connection_id}/table/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateDatastoreTable2Request(
+$request = new Operations\UpdateDatastoreTableRequest(
     datastoreTable: new Shared\DatastoreTable(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->table->updateDatastoreTable2(
+$response = $sdk->table->updateDatastoreTable(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->datastoreTable !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateDatastoreTable2Request](../../Models/Operations/UpdateDatastoreTable2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateDatastoreTableRequest](../../Models/Operations/UpdateDatastoreTableRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateDatastoreTable2Response](../../Models/Operations/UpdateDatastoreTable2Response.md)**
+**[?Operations\UpdateDatastoreTableResponse](../../Models/Operations/UpdateDatastoreTableResponse.md)**
 
 ### Errors
 

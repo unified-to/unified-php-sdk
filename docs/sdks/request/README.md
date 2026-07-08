@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createVerificationRequest2](#createverificationrequest2) - Create a request
-* [getVerificationRequest2](#getverificationrequest2) - Retrieve a request
-* [listVerificationRequests2](#listverificationrequests2) - List all requests
-* [patchVerificationRequest2](#patchverificationrequest2) - Update a request
-* [removeVerificationRequest2](#removeverificationrequest2) - Remove a request
-* [updateVerificationRequest2](#updateverificationrequest2) - Update a request
+* [createVerificationRequest](#createverificationrequest) - Create a request
+* [getVerificationRequest](#getverificationrequest) - Retrieve a request
+* [listVerificationRequests](#listverificationrequests) - List all requests
+* [patchVerificationRequest](#patchverificationrequest) - Update a request
+* [removeVerificationRequest](#removeverificationrequest) - Remove a request
+* [updateVerificationRequest](#updateverificationrequest) - Update a request
 
-## createVerificationRequest2
+## createVerificationRequest
 
 Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createVerificationRequest2" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="php" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateVerificationRequest2Request(
+$request = new Operations\CreateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(),
     connectionId: '<id>',
 );
 
-$response = $sdk->request->createVerificationRequest2(
+$response = $sdk->request->createVerificationRequest(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->verificationRequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateVerificationRequest2Request](../../Models/Operations/CreateVerificationRequest2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateVerificationRequestRequest](../../Models/Operations/CreateVerificationRequestRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\CreateVerificationRequest2Response](../../Models/Operations/CreateVerificationRequest2Response.md)**
+**[?Operations\CreateVerificationRequestResponse](../../Models/Operations/CreateVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->verificationRequest !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getVerificationRequest2
+## getVerificationRequest
 
 Retrieve a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getVerificationRequest2" method="get" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="getVerificationRequest" method="get" path="/verification/{connection_id}/request/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetVerificationRequest2Request(
+$request = new Operations\GetVerificationRequestRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->request->getVerificationRequest2(
+$response = $sdk->request->getVerificationRequest(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->verificationRequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetVerificationRequest2Request](../../Models/Operations/GetVerificationRequest2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetVerificationRequestRequest](../../Models/Operations/GetVerificationRequestRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetVerificationRequest2Response](../../Models/Operations/GetVerificationRequest2Response.md)**
+**[?Operations\GetVerificationRequestResponse](../../Models/Operations/GetVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->verificationRequest !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listVerificationRequests2
+## listVerificationRequests
 
 List all requests
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listVerificationRequests2" method="get" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="php" operationID="listVerificationRequests" method="get" path="/verification/{connection_id}/request" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListVerificationRequests2Request(
+$request = new Operations\ListVerificationRequestsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->request->listVerificationRequests2(
+$response = $sdk->request->listVerificationRequests(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->verificationRequests !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListVerificationRequests2Request](../../Models/Operations/ListVerificationRequests2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListVerificationRequestsRequest](../../Models/Operations/ListVerificationRequestsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListVerificationRequests2Response](../../Models/Operations/ListVerificationRequests2Response.md)**
+**[?Operations\ListVerificationRequestsResponse](../../Models/Operations/ListVerificationRequestsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->verificationRequests !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchVerificationRequest2
+## patchVerificationRequest
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchVerificationRequest2" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchVerificationRequest2Request(
+$request = new Operations\PatchVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->request->patchVerificationRequest2(
+$response = $sdk->request->patchVerificationRequest(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->verificationRequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchVerificationRequest2Request](../../Models/Operations/PatchVerificationRequest2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchVerificationRequestRequest](../../Models/Operations/PatchVerificationRequestRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\PatchVerificationRequest2Response](../../Models/Operations/PatchVerificationRequest2Response.md)**
+**[?Operations\PatchVerificationRequestResponse](../../Models/Operations/PatchVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->verificationRequest !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeVerificationRequest2
+## removeVerificationRequest
 
 Remove a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeVerificationRequest2" method="delete" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeVerificationRequest" method="delete" path="/verification/{connection_id}/request/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveVerificationRequest2Request(
+$request = new Operations\RemoveVerificationRequestRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->request->removeVerificationRequest2(
+$response = $sdk->request->removeVerificationRequest(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveVerificationRequest2Request](../../Models/Operations/RemoveVerificationRequest2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveVerificationRequestRequest](../../Models/Operations/RemoveVerificationRequestRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\RemoveVerificationRequest2Response](../../Models/Operations/RemoveVerificationRequest2Response.md)**
+**[?Operations\RemoveVerificationRequestResponse](../../Models/Operations/RemoveVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateVerificationRequest2
+## updateVerificationRequest
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateVerificationRequest2" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateVerificationRequest2Request(
+$request = new Operations\UpdateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->request->updateVerificationRequest2(
+$response = $sdk->request->updateVerificationRequest(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->verificationRequest !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateVerificationRequest2Request](../../Models/Operations/UpdateVerificationRequest2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateVerificationRequestRequest](../../Models/Operations/UpdateVerificationRequestRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\UpdateVerificationRequest2Response](../../Models/Operations/UpdateVerificationRequest2Response.md)**
+**[?Operations\UpdateVerificationRequestResponse](../../Models/Operations/UpdateVerificationRequestResponse.md)**
 
 ### Errors
 

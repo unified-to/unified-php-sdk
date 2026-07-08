@@ -47,14 +47,14 @@ class Event
     /**
      * Create an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAnalyticsEvent2(Operations\CreateAnalyticsEvent2Request $request, ?Options $options = null): Operations\CreateAnalyticsEvent2Response
+    public function createAnalyticsEvent(Operations\CreateAnalyticsEventRequest $request, ?Options $options = null): Operations\CreateAnalyticsEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event', Operations\CreateAnalyticsEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event', Operations\CreateAnalyticsEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsEvent', 'json');
@@ -63,11 +63,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAnalyticsEvent2Response(
+                $response = new Operations\CreateAnalyticsEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Event
     /**
      * Create an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCalendarEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCalendarEvent2(Operations\CreateCalendarEvent2Request $request, ?Options $options = null): Operations\CreateCalendarEvent2Response
+    public function createCalendarEvent(Operations\CreateCalendarEventRequest $request, ?Options $options = null): Operations\CreateCalendarEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event', Operations\CreateCalendarEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event', Operations\CreateCalendarEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'calendarEvent', 'json');
@@ -131,11 +131,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCalendarEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCalendarEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCalendarEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCalendarEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CalendarEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCalendarEvent2Response(
+                $response = new Operations\CreateCalendarEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Event
     /**
      * Create an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmEvent2(Operations\CreateCrmEvent2Request $request, ?Options $options = null): Operations\CreateCrmEvent2Response
+    public function createCrmEvent(Operations\CreateCrmEventRequest $request, ?Options $options = null): Operations\CreateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\CreateCrmEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -199,11 +199,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmEvent2Response(
+                $response = new Operations\CreateCrmEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAnalyticsEvent2(Operations\GetAnalyticsEvent2Request $request, ?Options $options = null): Operations\GetAnalyticsEvent2Response
+    public function getAnalyticsEvent(Operations\GetAnalyticsEventRequest $request, ?Options $options = null): Operations\GetAnalyticsEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event/{id}', Operations\GetAnalyticsEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event/{id}', Operations\GetAnalyticsEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAnalyticsEvent2Response(
+                $response = new Operations\GetAnalyticsEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCalendarEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCalendarEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCalendarEvent2(Operations\GetCalendarEvent2Request $request, ?Options $options = null): Operations\GetCalendarEvent2Response
+    public function getCalendarEvent(Operations\GetCalendarEventRequest $request, ?Options $options = null): Operations\GetCalendarEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\GetCalendarEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\GetCalendarEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCalendarEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCalendarEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCalendarEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCalendarEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CalendarEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCalendarEvent2Response(
+                $response = new Operations\GetCalendarEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsEvent2(Operations\GetClubsEvent2Request $request, ?Options $options = null): Operations\GetClubsEvent2Response
+    public function getClubsEvent(Operations\GetClubsEventRequest $request, ?Options $options = null): Operations\GetClubsEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event/{id}', Operations\GetClubsEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event/{id}', Operations\GetClubsEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsEvent2Response(
+                $response = new Operations\GetClubsEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Event
     /**
      * Retrieve an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmEvent2(Operations\GetCrmEvent2Request $request, ?Options $options = null): Operations\GetCrmEvent2Response
+    public function getCrmEvent(Operations\GetCrmEventRequest $request, ?Options $options = null): Operations\GetCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\GetCrmEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmEvent2Response(
+                $response = new Operations\GetCrmEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Event
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsEvents2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsEvents2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAnalyticsEvents2(Operations\ListAnalyticsEvents2Request $request, ?Options $options = null): Operations\ListAnalyticsEvents2Response
+    public function listAnalyticsEvents(Operations\ListAnalyticsEventsRequest $request, ?Options $options = null): Operations\ListAnalyticsEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event', Operations\ListAnalyticsEvents2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/event', Operations\ListAnalyticsEventsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsEvents2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsEventsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsEvents2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsEvents', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AnalyticsEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAnalyticsEvents2Response(
+                $response = new Operations\ListAnalyticsEventsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Event
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCalendarEvents2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCalendarEvents2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCalendarEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCalendarEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCalendarEvents2(Operations\ListCalendarEvents2Request $request, ?Options $options = null): Operations\ListCalendarEvents2Response
+    public function listCalendarEvents(Operations\ListCalendarEventsRequest $request, ?Options $options = null): Operations\ListCalendarEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event', Operations\ListCalendarEvents2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event', Operations\ListCalendarEventsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarEvents2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCalendarEventsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarEvents2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCalendarEvents', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CalendarEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCalendarEvents2Response(
+                $response = new Operations\ListCalendarEventsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,22 +629,22 @@ class Event
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsEvents2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsEvents2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsEvents2(Operations\ListClubsEvents2Request $request, ?Options $options = null): Operations\ListClubsEvents2Response
+    public function listClubsEvents(Operations\ListClubsEventsRequest $request, ?Options $options = null): Operations\ListClubsEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event', Operations\ListClubsEvents2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/event', Operations\ListClubsEventsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsEvents2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsEventsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsEvents2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsEvents', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -670,7 +670,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsEvents2Response(
+                $response = new Operations\ListClubsEventsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -692,22 +692,22 @@ class Event
     /**
      * List all events
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmEvents2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmEvents2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmEvents2(Operations\ListCrmEvents2Request $request, ?Options $options = null): Operations\ListCrmEvents2Response
+    public function listCrmEvents(Operations\ListCrmEventsRequest $request, ?Options $options = null): Operations\ListCrmEventsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEvents2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event', Operations\ListCrmEventsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmEvents2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmEventsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmEvents2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmEvents', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -733,7 +733,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmEvent>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmEvents2Response(
+                $response = new Operations\ListCrmEventsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -755,14 +755,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCalendarEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCalendarEvent2(Operations\PatchCalendarEvent2Request $request, ?Options $options = null): Operations\PatchCalendarEvent2Response
+    public function patchCalendarEvent(Operations\PatchCalendarEventRequest $request, ?Options $options = null): Operations\PatchCalendarEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\PatchCalendarEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\PatchCalendarEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'calendarEvent', 'json');
@@ -771,11 +771,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCalendarEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCalendarEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCalendarEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCalendarEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -801,7 +801,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CalendarEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCalendarEvent2Response(
+                $response = new Operations\PatchCalendarEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -823,14 +823,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmEvent2(Operations\PatchCrmEvent2Request $request, ?Options $options = null): Operations\PatchCrmEvent2Response
+    public function patchCrmEvent(Operations\PatchCrmEventRequest $request, ?Options $options = null): Operations\PatchCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\PatchCrmEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -839,11 +839,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -869,7 +869,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmEvent2Response(
+                $response = new Operations\PatchCrmEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -891,14 +891,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchMessagingEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMessagingEvent2(Operations\PatchMessagingEvent2Request $request, ?Options $options = null): Operations\PatchMessagingEvent2Response
+    public function patchMessagingEvent(Operations\PatchMessagingEventRequest $request, ?Options $options = null): Operations\PatchMessagingEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/event/{id}', Operations\PatchMessagingEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/event/{id}', Operations\PatchMessagingEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'messagingEvent', 'json');
@@ -907,11 +907,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchMessagingEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchMessagingEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMessagingEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMessagingEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -937,7 +937,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchMessagingEvent2Response(
+                $response = new Operations\PatchMessagingEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -959,20 +959,20 @@ class Event
     /**
      * Remove an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCalendarEvent2(Operations\RemoveCalendarEvent2Request $request, ?Options $options = null): Operations\RemoveCalendarEvent2Response
+    public function removeCalendarEvent(Operations\RemoveCalendarEventRequest $request, ?Options $options = null): Operations\RemoveCalendarEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\RemoveCalendarEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\RemoveCalendarEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCalendarEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCalendarEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -993,7 +993,7 @@ class Event
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCalendarEvent2Response(
+            return new Operations\RemoveCalendarEventResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1005,7 +1005,7 @@ class Event
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCalendarEvent2Response(
+            return new Operations\RemoveCalendarEventResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1016,20 +1016,20 @@ class Event
     /**
      * Remove an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmEvent2(Operations\RemoveCrmEvent2Request $request, ?Options $options = null): Operations\RemoveCrmEvent2Response
+    public function removeCrmEvent(Operations\RemoveCrmEventRequest $request, ?Options $options = null): Operations\RemoveCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\RemoveCrmEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1050,7 +1050,7 @@ class Event
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmEvent2Response(
+            return new Operations\RemoveCrmEventResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1062,7 +1062,7 @@ class Event
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmEvent2Response(
+            return new Operations\RemoveCrmEventResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1073,14 +1073,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCalendarEvent2(Operations\UpdateCalendarEvent2Request $request, ?Options $options = null): Operations\UpdateCalendarEvent2Response
+    public function updateCalendarEvent(Operations\UpdateCalendarEventRequest $request, ?Options $options = null): Operations\UpdateCalendarEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\UpdateCalendarEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/calendar/{connection_id}/event/{id}', Operations\UpdateCalendarEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'calendarEvent', 'json');
@@ -1089,11 +1089,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCalendarEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCalendarEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCalendarEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCalendarEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1119,7 +1119,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CalendarEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCalendarEvent2Response(
+                $response = new Operations\UpdateCalendarEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1141,14 +1141,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmEvent2(Operations\UpdateCrmEvent2Request $request, ?Options $options = null): Operations\UpdateCrmEvent2Response
+    public function updateCrmEvent(Operations\UpdateCrmEventRequest $request, ?Options $options = null): Operations\UpdateCrmEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/event/{id}', Operations\UpdateCrmEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmEvent', 'json');
@@ -1157,11 +1157,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1187,7 +1187,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmEvent2Response(
+                $response = new Operations\UpdateCrmEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1209,14 +1209,14 @@ class Event
     /**
      * Update an event
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingEvent2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingEvent2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingEventRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMessagingEvent2(Operations\UpdateMessagingEvent2Request $request, ?Options $options = null): Operations\UpdateMessagingEvent2Response
+    public function updateMessagingEvent(Operations\UpdateMessagingEventRequest $request, ?Options $options = null): Operations\UpdateMessagingEventResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/event/{id}', Operations\UpdateMessagingEvent2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/event/{id}', Operations\UpdateMessagingEventRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'messagingEvent', 'json');
@@ -1225,11 +1225,11 @@ class Event
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateMessagingEvent2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateMessagingEventRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMessagingEvent2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMessagingEvent', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1255,7 +1255,7 @@ class Event
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingEvent', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateMessagingEvent2Response(
+                $response = new Operations\UpdateMessagingEventResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAnalyticsProperty2](#createanalyticsproperty2) - Create a property
-* [getAnalyticsProperty2](#getanalyticsproperty2) - Retrieve a property
-* [listAnalyticsProperties2](#listanalyticsproperties2) - List all properties
-* [patchAnalyticsProperty2](#patchanalyticsproperty2) - Update a property
-* [removeAnalyticsProperty2](#removeanalyticsproperty2) - Remove a property
-* [updateAnalyticsProperty2](#updateanalyticsproperty2) - Update a property
+* [createAnalyticsProperty](#createanalyticsproperty) - Create a property
+* [getAnalyticsProperty](#getanalyticsproperty) - Retrieve a property
+* [listAnalyticsProperties](#listanalyticsproperties) - List all properties
+* [patchAnalyticsProperty](#patchanalyticsproperty) - Update a property
+* [removeAnalyticsProperty](#removeanalyticsproperty) - Remove a property
+* [updateAnalyticsProperty](#updateanalyticsproperty) - Update a property
 
-## createAnalyticsProperty2
+## createAnalyticsProperty
 
 Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsProperty2" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
 ```php
 declare(strict_types=1);
 
@@ -33,166 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAnalyticsProperty2Request(
+$request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(),
     connectionId: '<id>',
 );
 
-$response = $sdk->property->createAnalyticsProperty2(
-    request: $request
-);
-
-if ($response->analyticsProperty !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAnalyticsProperty2Request](../../Models/Operations/CreateAnalyticsProperty2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\CreateAnalyticsProperty2Response](../../Models/Operations/CreateAnalyticsProperty2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getAnalyticsProperty2
-
-Retrieve a property
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getAnalyticsProperty2" method="get" path="/analytics/{connection_id}/property/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetAnalyticsProperty2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->property->getAnalyticsProperty2(
-    request: $request
-);
-
-if ($response->analyticsProperty !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAnalyticsProperty2Request](../../Models/Operations/GetAnalyticsProperty2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\GetAnalyticsProperty2Response](../../Models/Operations/GetAnalyticsProperty2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## listAnalyticsProperties2
-
-List all properties
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="listAnalyticsProperties2" method="get" path="/analytics/{connection_id}/property" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\ListAnalyticsProperties2Request(
-    connectionId: '<id>',
-);
-
-$response = $sdk->property->listAnalyticsProperties2(
-    request: $request
-);
-
-if ($response->analyticsProperties !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListAnalyticsProperties2Request](../../Models/Operations/ListAnalyticsProperties2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\ListAnalyticsProperties2Response](../../Models/Operations/ListAnalyticsProperties2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## patchAnalyticsProperty2
-
-Update a property
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty2" method="patch" path="/analytics/{connection_id}/property/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\PatchAnalyticsProperty2Request(
-    analyticsProperty: new Shared\AnalyticsProperty(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->property->patchAnalyticsProperty2(
+$response = $sdk->property->createAnalyticsProperty(
     request: $request
 );
 
@@ -205,11 +51,11 @@ if ($response->analyticsProperty !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAnalyticsProperty2Request](../../Models/Operations/PatchAnalyticsProperty2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\CreateAnalyticsPropertyRequest](../../Models/Operations/CreateAnalyticsPropertyRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAnalyticsProperty2Response](../../Models/Operations/PatchAnalyticsProperty2Response.md)**
+**[?Operations\CreateAnalyticsPropertyResponse](../../Models/Operations/CreateAnalyticsPropertyResponse.md)**
 
 ### Errors
 
@@ -217,13 +63,13 @@ if ($response->analyticsProperty !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAnalyticsProperty2
+## getAnalyticsProperty
 
-Remove a property
+Retrieve a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAnalyticsProperty2" method="delete" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAnalyticsProperty" method="get" path="/analytics/{connection_id}/property/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,29 +84,29 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAnalyticsProperty2Request(
+$request = new Operations\GetAnalyticsPropertyRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->property->removeAnalyticsProperty2(
+$response = $sdk->property->getAnalyticsProperty(
     request: $request
 );
 
-if ($response->statusCode === 200) {
+if ($response->analyticsProperty !== null) {
     // handle response
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAnalyticsProperty2Request](../../Models/Operations/RemoveAnalyticsProperty2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAnalyticsPropertyRequest](../../Models/Operations/GetAnalyticsPropertyRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\RemoveAnalyticsProperty2Response](../../Models/Operations/RemoveAnalyticsProperty2Response.md)**
+**[?Operations\GetAnalyticsPropertyResponse](../../Models/Operations/GetAnalyticsPropertyResponse.md)**
 
 ### Errors
 
@@ -268,13 +114,63 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAnalyticsProperty2
+## listAnalyticsProperties
+
+List all properties
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAnalyticsProperties" method="get" path="/analytics/{connection_id}/property" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAnalyticsPropertiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->property->listAnalyticsProperties(
+    request: $request
+);
+
+if ($response->analyticsProperties !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAnalyticsPropertiesRequest](../../Models/Operations/ListAnalyticsPropertiesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListAnalyticsPropertiesResponse](../../Models/Operations/ListAnalyticsPropertiesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAnalyticsProperty
 
 Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty2" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAnalyticsProperty2Request(
+$request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->property->updateAnalyticsProperty2(
+$response = $sdk->property->patchAnalyticsProperty(
     request: $request
 );
 
@@ -307,13 +203,117 @@ if ($response->analyticsProperty !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAnalyticsProperty2Request](../../Models/Operations/UpdateAnalyticsProperty2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAnalyticsPropertyRequest](../../Models/Operations/PatchAnalyticsPropertyRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateAnalyticsProperty2Response](../../Models/Operations/UpdateAnalyticsProperty2Response.md)**
+**[?Operations\PatchAnalyticsPropertyResponse](../../Models/Operations/PatchAnalyticsPropertyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAnalyticsProperty
+
+Remove a property
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAnalyticsProperty" method="delete" path="/analytics/{connection_id}/property/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAnalyticsPropertyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->property->removeAnalyticsProperty(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAnalyticsPropertyRequest](../../Models/Operations/RemoveAnalyticsPropertyRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAnalyticsPropertyResponse](../../Models/Operations/RemoveAnalyticsPropertyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAnalyticsProperty
+
+Update a property
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAnalyticsPropertyRequest(
+    analyticsProperty: new Shared\AnalyticsProperty(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->property->updateAnalyticsProperty(
+    request: $request
+);
+
+if ($response->analyticsProperty !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateAnalyticsPropertyRequest](../../Models/Operations/UpdateAnalyticsPropertyRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\UpdateAnalyticsPropertyResponse](../../Models/Operations/UpdateAnalyticsPropertyResponse.md)**
 
 ### Errors
 

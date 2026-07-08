@@ -4,28 +4,28 @@
 
 ### Available Operations
 
-* [createCommerceLocation2](#createcommercelocation2) - Create a location
-* [createHrisLocation2](#createhrislocation2) - Create a location
-* [getClubsLocation2](#getclubslocation2) - Retrieve a location
-* [getCommerceLocation2](#getcommercelocation2) - Retrieve a location
-* [getHrisLocation2](#gethrislocation2) - Retrieve a location
-* [listClubsLocations2](#listclubslocations2) - List all locations
-* [listCommerceLocations2](#listcommercelocations2) - List all locations
-* [listHrisLocations2](#listhrislocations2) - List all locations
-* [patchCommerceLocation2](#patchcommercelocation2) - Update a location
-* [patchHrisLocation2](#patchhrislocation2) - Update a location
-* [removeCommerceLocation2](#removecommercelocation2) - Remove a location
-* [removeHrisLocation2](#removehrislocation2) - Remove a location
-* [updateCommerceLocation2](#updatecommercelocation2) - Update a location
-* [updateHrisLocation2](#updatehrislocation2) - Update a location
+* [createCommerceLocation](#createcommercelocation) - Create a location
+* [createHrisLocation](#createhrislocation) - Create a location
+* [getClubsLocation](#getclubslocation) - Retrieve a location
+* [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listClubsLocations](#listclubslocations) - List all locations
+* [listCommerceLocations](#listcommercelocations) - List all locations
+* [listHrisLocations](#listhrislocations) - List all locations
+* [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchHrisLocation](#patchhrislocation) - Update a location
+* [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeHrisLocation](#removehrislocation) - Remove a location
+* [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateHrisLocation](#updatehrislocation) - Update a location
 
-## createCommerceLocation2
+## createCommerceLocation
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceLocation2" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -41,12 +41,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceLocation2Request(
+$request = new Operations\CreateCommerceLocationRequest(
     commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
 );
 
-$response = $sdk->location->createCommerceLocation2(
+$response = $sdk->location->createCommerceLocation(
     request: $request
 );
 
@@ -57,13 +57,13 @@ if ($response->commerceLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateCommerceLocation2Request](../../Models/Operations/CreateCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateCommerceLocationRequest](../../Models/Operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateCommerceLocation2Response](../../Models/Operations/CreateCommerceLocation2Response.md)**
+**[?Operations\CreateCommerceLocationResponse](../../Models/Operations/CreateCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -71,13 +71,13 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createHrisLocation2
+## createHrisLocation
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisLocation2" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -93,12 +93,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisLocation2Request(
+$request = new Operations\CreateHrisLocationRequest(
     hrisLocation: new Shared\HrisLocation(),
     connectionId: '<id>',
 );
 
-$response = $sdk->location->createHrisLocation2(
+$response = $sdk->location->createHrisLocation(
     request: $request
 );
 
@@ -109,13 +109,13 @@ if ($response->hrisLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateHrisLocation2Request](../../Models/Operations/CreateHrisLocation2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisLocationRequest](../../Models/Operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateHrisLocation2Response](../../Models/Operations/CreateHrisLocation2Response.md)**
+**[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
 
 ### Errors
 
@@ -123,13 +123,13 @@ if ($response->hrisLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsLocation2
+## getClubsLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -144,12 +144,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsLocation2Request(
+$request = new Operations\GetClubsLocationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->location->getClubsLocation2(
+$response = $sdk->location->getClubsLocation(
     request: $request
 );
 
@@ -160,13 +160,13 @@ if ($response->clubsLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetClubsLocation2Request](../../Models/Operations/GetClubsLocation2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsLocationRequest](../../Models/Operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetClubsLocation2Response](../../Models/Operations/GetClubsLocation2Response.md)**
+**[?Operations\GetClubsLocationResponse](../../Models/Operations/GetClubsLocationResponse.md)**
 
 ### Errors
 
@@ -174,13 +174,13 @@ if ($response->clubsLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceLocation2
+## getCommerceLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceLocation2" method="get" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -195,12 +195,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceLocation2Request(
+$request = new Operations\GetCommerceLocationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->location->getCommerceLocation2(
+$response = $sdk->location->getCommerceLocation(
     request: $request
 );
 
@@ -211,13 +211,13 @@ if ($response->commerceLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetCommerceLocation2Request](../../Models/Operations/GetCommerceLocation2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetCommerceLocationRequest](../../Models/Operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetCommerceLocation2Response](../../Models/Operations/GetCommerceLocation2Response.md)**
+**[?Operations\GetCommerceLocationResponse](../../Models/Operations/GetCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -225,13 +225,13 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisLocation2
+## getHrisLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisLocation2" method="get" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -246,12 +246,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisLocation2Request(
+$request = new Operations\GetHrisLocationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->location->getHrisLocation2(
+$response = $sdk->location->getHrisLocation(
     request: $request
 );
 
@@ -262,13 +262,13 @@ if ($response->hrisLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetHrisLocation2Request](../../Models/Operations/GetHrisLocation2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisLocationRequest](../../Models/Operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetHrisLocation2Response](../../Models/Operations/GetHrisLocation2Response.md)**
+**[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ if ($response->hrisLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsLocations2
+## listClubsLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -297,11 +297,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsLocations2Request(
+$request = new Operations\ListClubsLocationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->location->listClubsLocations2(
+$response = $sdk->location->listClubsLocations(
     request: $request
 );
 
@@ -312,13 +312,13 @@ if ($response->clubsLocations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListClubsLocations2Request](../../Models/Operations/ListClubsLocations2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListClubsLocationsRequest](../../Models/Operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListClubsLocations2Response](../../Models/Operations/ListClubsLocations2Response.md)**
+**[?Operations\ListClubsLocationsResponse](../../Models/Operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 
@@ -326,13 +326,13 @@ if ($response->clubsLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceLocations2
+## listCommerceLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceLocations2" method="get" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -347,11 +347,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceLocations2Request(
+$request = new Operations\ListCommerceLocationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->location->listCommerceLocations2(
+$response = $sdk->location->listCommerceLocations(
     request: $request
 );
 
@@ -362,13 +362,13 @@ if ($response->commerceLocations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListCommerceLocations2Request](../../Models/Operations/ListCommerceLocations2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListCommerceLocationsRequest](../../Models/Operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListCommerceLocations2Response](../../Models/Operations/ListCommerceLocations2Response.md)**
+**[?Operations\ListCommerceLocationsResponse](../../Models/Operations/ListCommerceLocationsResponse.md)**
 
 ### Errors
 
@@ -376,13 +376,13 @@ if ($response->commerceLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisLocations2
+## listHrisLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisLocations2" method="get" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -397,11 +397,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisLocations2Request(
+$request = new Operations\ListHrisLocationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->location->listHrisLocations2(
+$response = $sdk->location->listHrisLocations(
     request: $request
 );
 
@@ -412,13 +412,13 @@ if ($response->hrisLocations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListHrisLocations2Request](../../Models/Operations/ListHrisLocations2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisLocationsRequest](../../Models/Operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListHrisLocations2Response](../../Models/Operations/ListHrisLocations2Response.md)**
+**[?Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
 
 ### Errors
 
@@ -426,13 +426,13 @@ if ($response->hrisLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceLocation2
+## patchCommerceLocation
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceLocation2" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -448,13 +448,221 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceLocation2Request(
+$request = new Operations\PatchCommerceLocationRequest(
     commerceLocation: new Shared\CommerceLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->location->patchCommerceLocation2(
+$response = $sdk->location->patchCommerceLocation(
+    request: $request
+);
+
+if ($response->commerceLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchCommerceLocationRequest](../../Models/Operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\PatchCommerceLocationResponse](../../Models/Operations/PatchCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisLocation
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisLocationRequest(
+    hrisLocation: new Shared\HrisLocation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->patchHrisLocation(
+    request: $request
+);
+
+if ($response->hrisLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisLocationRequest](../../Models/Operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeCommerceLocation
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCommerceLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->removeCommerceLocation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveCommerceLocationRequest](../../Models/Operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\RemoveCommerceLocationResponse](../../Models/Operations/RemoveCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisLocation
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->removeHrisLocation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisLocationRequest](../../Models/Operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveHrisLocationResponse](../../Models/Operations/RemoveHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCommerceLocation
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCommerceLocationRequest(
+    commerceLocation: new Shared\CommerceLocation(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->updateCommerceLocation(
     request: $request
 );
 
@@ -467,11 +675,11 @@ if ($response->commerceLocation !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchCommerceLocation2Request](../../Models/Operations/PatchCommerceLocation2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\UpdateCommerceLocationRequest](../../Models/Operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchCommerceLocation2Response](../../Models/Operations/PatchCommerceLocation2Response.md)**
+**[?Operations\UpdateCommerceLocationResponse](../../Models/Operations/UpdateCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -479,13 +687,13 @@ if ($response->commerceLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisLocation2
+## updateHrisLocation
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisLocation2" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -501,13 +709,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisLocation2Request(
+$request = new Operations\UpdateHrisLocationRequest(
     hrisLocation: new Shared\HrisLocation(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->location->patchHrisLocation2(
+$response = $sdk->location->updateHrisLocation(
     request: $request
 );
 
@@ -520,219 +728,11 @@ if ($response->hrisLocation !== null) {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchHrisLocation2Request](../../Models/Operations/PatchHrisLocation2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [Operations\UpdateHrisLocationRequest](../../Models/Operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\PatchHrisLocation2Response](../../Models/Operations/PatchHrisLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeCommerceLocation2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeCommerceLocation2" method="delete" path="/commerce/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveCommerceLocation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->location->removeCommerceLocation2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveCommerceLocation2Request](../../Models/Operations/RemoveCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\RemoveCommerceLocation2Response](../../Models/Operations/RemoveCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeHrisLocation2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeHrisLocation2" method="delete" path="/hris/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveHrisLocation2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->location->removeHrisLocation2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveHrisLocation2Request](../../Models/Operations/RemoveHrisLocation2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\RemoveHrisLocation2Response](../../Models/Operations/RemoveHrisLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateCommerceLocation2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateCommerceLocation2" method="put" path="/commerce/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateCommerceLocation2Request(
-    commerceLocation: new Shared\CommerceLocation(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->location->updateCommerceLocation2(
-    request: $request
-);
-
-if ($response->commerceLocation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateCommerceLocation2Request](../../Models/Operations/UpdateCommerceLocation2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\UpdateCommerceLocation2Response](../../Models/Operations/UpdateCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateHrisLocation2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateHrisLocation2" method="put" path="/hris/{connection_id}/location/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateHrisLocation2Request(
-    hrisLocation: new Shared\HrisLocation(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->location->updateHrisLocation2(
-    request: $request
-);
-
-if ($response->hrisLocation !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateHrisLocation2Request](../../Models/Operations/UpdateHrisLocation2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-### Response
-
-**[?Operations\UpdateHrisLocation2Response](../../Models/Operations/UpdateHrisLocation2Response.md)**
+**[?Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
 
 ### Errors
 

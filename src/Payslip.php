@@ -47,22 +47,22 @@ class Payslip
     /**
      * Retrieve a payslip
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslip2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisPayslip2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisPayslip2(Operations\GetHrisPayslip2Request $request, ?Options $options = null): Operations\GetHrisPayslip2Response
+    public function getHrisPayslip(Operations\GetHrisPayslipRequest $request, ?Options $options = null): Operations\GetHrisPayslipResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', Operations\GetHrisPayslip2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip/{id}', Operations\GetHrisPayslipRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisPayslip2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisPayslipRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisPayslip2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisPayslip', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Payslip
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisPayslip', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisPayslip2Response(
+                $response = new Operations\GetHrisPayslipResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Payslip
     /**
      * List all payslips
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslips2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisPayslips2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisPayslips2(Operations\ListHrisPayslips2Request $request, ?Options $options = null): Operations\ListHrisPayslips2Response
+    public function listHrisPayslips(Operations\ListHrisPayslipsRequest $request, ?Options $options = null): Operations\ListHrisPayslipsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', Operations\ListHrisPayslips2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/payslip', Operations\ListHrisPayslipsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisPayslips2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisPayslipsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisPayslips2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisPayslips', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Payslip
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisPayslip>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisPayslips2Response(
+                $response = new Operations\ListHrisPayslipsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

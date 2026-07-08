@@ -47,22 +47,22 @@ class Tracking
     /**
      * Retrieve a tracking
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetShippingTracking2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetShippingTracking2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetShippingTrackingRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetShippingTrackingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getShippingTracking2(Operations\GetShippingTracking2Request $request, ?Options $options = null): Operations\GetShippingTracking2Response
+    public function getShippingTracking(Operations\GetShippingTrackingRequest $request, ?Options $options = null): Operations\GetShippingTrackingResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking/{id}', Operations\GetShippingTracking2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking/{id}', Operations\GetShippingTrackingRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetShippingTracking2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetShippingTrackingRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingTracking2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getShippingTracking', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Tracking
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ShippingTracking', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetShippingTracking2Response(
+                $response = new Operations\GetShippingTrackingResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Tracking
     /**
      * List all trackings
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListShippingTrackings2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListShippingTrackings2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListShippingTrackingsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListShippingTrackingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listShippingTrackings2(Operations\ListShippingTrackings2Request $request, ?Options $options = null): Operations\ListShippingTrackings2Response
+    public function listShippingTrackings(Operations\ListShippingTrackingsRequest $request, ?Options $options = null): Operations\ListShippingTrackingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking', Operations\ListShippingTrackings2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/shipping/{connection_id}/tracking', Operations\ListShippingTrackingsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListShippingTrackings2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListShippingTrackingsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingTrackings2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listShippingTrackings', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Tracking
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ShippingTracking>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListShippingTrackings2Response(
+                $response = new Operations\ListShippingTrackingsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

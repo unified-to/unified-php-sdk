@@ -47,14 +47,14 @@ class Query
     /**
      * Create a query
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreQuery2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateDatastoreQuery2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreQueryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateDatastoreQueryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createDatastoreQuery2(Operations\CreateDatastoreQuery2Request $request, ?Options $options = null): Operations\CreateDatastoreQuery2Response
+    public function createDatastoreQuery(Operations\CreateDatastoreQueryRequest $request, ?Options $options = null): Operations\CreateDatastoreQueryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/query', Operations\CreateDatastoreQuery2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/datastore/{connection_id}/query', Operations\CreateDatastoreQueryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'datastoreQuery', 'json');
@@ -63,11 +63,11 @@ class Query
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateDatastoreQuery2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateDatastoreQueryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createDatastoreQuery2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createDatastoreQuery', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Query
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\DatastoreQuery', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateDatastoreQuery2Response(
+                $response = new Operations\CreateDatastoreQueryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

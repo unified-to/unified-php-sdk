@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingBill2](#createaccountingbill2) - Create a bill
-* [getAccountingBill2](#getaccountingbill2) - Retrieve a bill
-* [listAccountingBills2](#listaccountingbills2) - List all bills
-* [patchAccountingBill2](#patchaccountingbill2) - Update a bill
-* [removeAccountingBill2](#removeaccountingbill2) - Remove a bill
-* [updateAccountingBill2](#updateaccountingbill2) - Update a bill
+* [createAccountingBill](#createaccountingbill) - Create a bill
+* [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [listAccountingBills](#listaccountingbills) - List all bills
+* [patchAccountingBill](#patchaccountingbill) - Update a bill
+* [removeAccountingBill](#removeaccountingbill) - Remove a bill
+* [updateAccountingBill](#updateaccountingbill) - Update a bill
 
-## createAccountingBill2
+## createAccountingBill
 
 Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBill2" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingBill2Request(
+$request = new Operations\CreateAccountingBillRequest(
     accountingBill: new Shared\AccountingBill(),
     connectionId: '<id>',
 );
 
-$response = $sdk->bill->createAccountingBill2(
+$response = $sdk->bill->createAccountingBill(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateAccountingBill2Request](../../Models/Operations/CreateAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateAccountingBillRequest](../../Models/Operations/CreateAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateAccountingBill2Response](../../Models/Operations/CreateAccountingBill2Response.md)**
+**[?Operations\CreateAccountingBillResponse](../../Models/Operations/CreateAccountingBillResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingBill2
+## getAccountingBill
 
 Retrieve a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingBill2" method="get" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingBill2Request(
+$request = new Operations\GetAccountingBillRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->bill->getAccountingBill2(
+$response = $sdk->bill->getAccountingBill(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetAccountingBill2Request](../../Models/Operations/GetAccountingBill2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetAccountingBillRequest](../../Models/Operations/GetAccountingBillRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingBill2Response](../../Models/Operations/GetAccountingBill2Response.md)**
+**[?Operations\GetAccountingBillResponse](../../Models/Operations/GetAccountingBillResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingBills2
+## listAccountingBills
 
 List all bills
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingBills2" method="get" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingBills2Request(
+$request = new Operations\ListAccountingBillsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->bill->listAccountingBills2(
+$response = $sdk->bill->listAccountingBills(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingBills !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListAccountingBills2Request](../../Models/Operations/ListAccountingBills2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListAccountingBillsRequest](../../Models/Operations/ListAccountingBillsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingBills2Response](../../Models/Operations/ListAccountingBills2Response.md)**
+**[?Operations\ListAccountingBillsResponse](../../Models/Operations/ListAccountingBillsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingBills !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingBill2
+## patchAccountingBill
 
 Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBill2" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingBill2Request(
+$request = new Operations\PatchAccountingBillRequest(
     accountingBill: new Shared\AccountingBill(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->bill->patchAccountingBill2(
+$response = $sdk->bill->patchAccountingBill(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchAccountingBill2Request](../../Models/Operations/PatchAccountingBill2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchAccountingBillRequest](../../Models/Operations/PatchAccountingBillRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchAccountingBill2Response](../../Models/Operations/PatchAccountingBill2Response.md)**
+**[?Operations\PatchAccountingBillResponse](../../Models/Operations/PatchAccountingBillResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingBill2
+## removeAccountingBill
 
 Remove a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingBill2" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingBill2Request(
+$request = new Operations\RemoveAccountingBillRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->bill->removeAccountingBill2(
+$response = $sdk->bill->removeAccountingBill(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveAccountingBill2Request](../../Models/Operations/RemoveAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveAccountingBillRequest](../../Models/Operations/RemoveAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\RemoveAccountingBill2Response](../../Models/Operations/RemoveAccountingBill2Response.md)**
+**[?Operations\RemoveAccountingBillResponse](../../Models/Operations/RemoveAccountingBillResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingBill2
+## updateAccountingBill
 
 Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBill2" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingBill2Request(
+$request = new Operations\UpdateAccountingBillRequest(
     accountingBill: new Shared\AccountingBill(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->bill->updateAccountingBill2(
+$response = $sdk->bill->updateAccountingBill(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateAccountingBill2Request](../../Models/Operations/UpdateAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdateAccountingBillRequest](../../Models/Operations/UpdateAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\UpdateAccountingBill2Response](../../Models/Operations/UpdateAccountingBill2Response.md)**
+**[?Operations\UpdateAccountingBillResponse](../../Models/Operations/UpdateAccountingBillResponse.md)**
 
 ### Errors
 

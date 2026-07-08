@@ -4,28 +4,28 @@
 
 ### Available Operations
 
-* [createAdsOrganization2](#createadsorganization2) - Create an organization
-* [createRepoOrganization2](#createrepoorganization2) - Create an organization
-* [getAccountingOrganization2](#getaccountingorganization2) - Retrieve an organization
-* [getAdsOrganization2](#getadsorganization2) - Retrieve an organization
-* [getRepoOrganization2](#getrepoorganization2) - Retrieve an organization
-* [listAccountingOrganizations2](#listaccountingorganizations2) - List all organizations
-* [listAdsOrganizations2](#listadsorganizations2) - List all organizations
-* [listRepoOrganizations2](#listrepoorganizations2) - List all organizations
-* [patchAdsOrganization2](#patchadsorganization2) - Update an organization
-* [patchRepoOrganization2](#patchrepoorganization2) - Update an organization
-* [removeAdsOrganization2](#removeadsorganization2) - Remove an organization
-* [removeRepoOrganization2](#removerepoorganization2) - Remove an organization
-* [updateAdsOrganization2](#updateadsorganization2) - Update an organization
-* [updateRepoOrganization2](#updaterepoorganization2) - Update an organization
+* [createAdsOrganization](#createadsorganization) - Create an organization
+* [createRepoOrganization](#createrepoorganization) - Create an organization
+* [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAdsOrganization](#getadsorganization) - Retrieve an organization
+* [getRepoOrganization](#getrepoorganization) - Retrieve an organization
+* [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAdsOrganizations](#listadsorganizations) - List all organizations
+* [listRepoOrganizations](#listrepoorganizations) - List all organizations
+* [patchAdsOrganization](#patchadsorganization) - Update an organization
+* [patchRepoOrganization](#patchrepoorganization) - Update an organization
+* [removeAdsOrganization](#removeadsorganization) - Remove an organization
+* [removeRepoOrganization](#removerepoorganization) - Remove an organization
+* [updateAdsOrganization](#updateadsorganization) - Update an organization
+* [updateRepoOrganization](#updaterepoorganization) - Update an organization
 
-## createAdsOrganization2
+## createAdsOrganization
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -41,12 +41,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAdsOrganization2Request(
+$request = new Operations\CreateAdsOrganizationRequest(
     adsOrganization: new Shared\AdsOrganization(),
     connectionId: '<id>',
 );
 
-$response = $sdk->organization->createAdsOrganization2(
+$response = $sdk->organization->createAdsOrganization(
     request: $request
 );
 
@@ -57,13 +57,13 @@ if ($response->adsOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateAdsOrganization2Request](../../Models/Operations/CreateAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAdsOrganizationRequest](../../Models/Operations/CreateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateAdsOrganization2Response](../../Models/Operations/CreateAdsOrganization2Response.md)**
+**[?Operations\CreateAdsOrganizationResponse](../../Models/Operations/CreateAdsOrganizationResponse.md)**
 
 ### Errors
 
@@ -71,13 +71,13 @@ if ($response->adsOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createRepoOrganization2
+## createRepoOrganization
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoOrganization2" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -93,12 +93,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateRepoOrganization2Request(
+$request = new Operations\CreateRepoOrganizationRequest(
     repoOrganization: new Shared\RepoOrganization(),
     connectionId: '<id>',
 );
 
-$response = $sdk->organization->createRepoOrganization2(
+$response = $sdk->organization->createRepoOrganization(
     request: $request
 );
 
@@ -109,13 +109,13 @@ if ($response->repoOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateRepoOrganization2Request](../../Models/Operations/CreateRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateRepoOrganizationRequest](../../Models/Operations/CreateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateRepoOrganization2Response](../../Models/Operations/CreateRepoOrganization2Response.md)**
+**[?Operations\CreateRepoOrganizationResponse](../../Models/Operations/CreateRepoOrganizationResponse.md)**
 
 ### Errors
 
@@ -123,13 +123,13 @@ if ($response->repoOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrganization2
+## getAccountingOrganization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingOrganization2" method="get" path="/accounting/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -144,12 +144,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingOrganization2Request(
+$request = new Operations\GetAccountingOrganizationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->organization->getAccountingOrganization2(
+$response = $sdk->organization->getAccountingOrganization(
     request: $request
 );
 
@@ -160,13 +160,13 @@ if ($response->accountingOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingOrganization2Request](../../Models/Operations/GetAccountingOrganization2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingOrganizationRequest](../../Models/Operations/GetAccountingOrganizationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingOrganization2Response](../../Models/Operations/GetAccountingOrganization2Response.md)**
+**[?Operations\GetAccountingOrganizationResponse](../../Models/Operations/GetAccountingOrganizationResponse.md)**
 
 ### Errors
 
@@ -174,13 +174,13 @@ if ($response->accountingOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAdsOrganization2
+## getAdsOrganization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -195,12 +195,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAdsOrganization2Request(
+$request = new Operations\GetAdsOrganizationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->organization->getAdsOrganization2(
+$response = $sdk->organization->getAdsOrganization(
     request: $request
 );
 
@@ -211,13 +211,13 @@ if ($response->adsOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetAdsOrganization2Request](../../Models/Operations/GetAdsOrganization2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAdsOrganizationRequest](../../Models/Operations/GetAdsOrganizationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetAdsOrganization2Response](../../Models/Operations/GetAdsOrganization2Response.md)**
+**[?Operations\GetAdsOrganizationResponse](../../Models/Operations/GetAdsOrganizationResponse.md)**
 
 ### Errors
 
@@ -225,13 +225,13 @@ if ($response->adsOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getRepoOrganization2
+## getRepoOrganization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getRepoOrganization2" method="get" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -246,12 +246,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetRepoOrganization2Request(
+$request = new Operations\GetRepoOrganizationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->organization->getRepoOrganization2(
+$response = $sdk->organization->getRepoOrganization(
     request: $request
 );
 
@@ -262,13 +262,13 @@ if ($response->repoOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetRepoOrganization2Request](../../Models/Operations/GetRepoOrganization2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetRepoOrganizationRequest](../../Models/Operations/GetRepoOrganizationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetRepoOrganization2Response](../../Models/Operations/GetRepoOrganization2Response.md)**
+**[?Operations\GetRepoOrganizationResponse](../../Models/Operations/GetRepoOrganizationResponse.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ if ($response->repoOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrganizations2
+## listAccountingOrganizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingOrganizations2" method="get" path="/accounting/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -297,11 +297,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingOrganizations2Request(
+$request = new Operations\ListAccountingOrganizationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->organization->listAccountingOrganizations2(
+$response = $sdk->organization->listAccountingOrganizations(
     request: $request
 );
 
@@ -312,13 +312,13 @@ if ($response->accountingOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingOrganizations2Request](../../Models/Operations/ListAccountingOrganizations2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingOrganizationsRequest](../../Models/Operations/ListAccountingOrganizationsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingOrganizations2Response](../../Models/Operations/ListAccountingOrganizations2Response.md)**
+**[?Operations\ListAccountingOrganizationsResponse](../../Models/Operations/ListAccountingOrganizationsResponse.md)**
 
 ### Errors
 
@@ -326,13 +326,13 @@ if ($response->accountingOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAdsOrganizations2
+## listAdsOrganizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -347,11 +347,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAdsOrganizations2Request(
+$request = new Operations\ListAdsOrganizationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->organization->listAdsOrganizations2(
+$response = $sdk->organization->listAdsOrganizations(
     request: $request
 );
 
@@ -362,13 +362,13 @@ if ($response->adsOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListAdsOrganizations2Request](../../Models/Operations/ListAdsOrganizations2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAdsOrganizationsRequest](../../Models/Operations/ListAdsOrganizationsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListAdsOrganizations2Response](../../Models/Operations/ListAdsOrganizations2Response.md)**
+**[?Operations\ListAdsOrganizationsResponse](../../Models/Operations/ListAdsOrganizationsResponse.md)**
 
 ### Errors
 
@@ -376,13 +376,13 @@ if ($response->adsOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listRepoOrganizations2
+## listRepoOrganizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listRepoOrganizations2" method="get" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -397,11 +397,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListRepoOrganizations2Request(
+$request = new Operations\ListRepoOrganizationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->organization->listRepoOrganizations2(
+$response = $sdk->organization->listRepoOrganizations(
     request: $request
 );
 
@@ -412,13 +412,13 @@ if ($response->repoOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListRepoOrganizations2Request](../../Models/Operations/ListRepoOrganizations2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListRepoOrganizationsRequest](../../Models/Operations/ListRepoOrganizationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListRepoOrganizations2Response](../../Models/Operations/ListRepoOrganizations2Response.md)**
+**[?Operations\ListRepoOrganizationsResponse](../../Models/Operations/ListRepoOrganizationsResponse.md)**
 
 ### Errors
 
@@ -426,13 +426,13 @@ if ($response->repoOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAdsOrganization2
+## patchAdsOrganization
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -448,13 +448,221 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAdsOrganization2Request(
+$request = new Operations\PatchAdsOrganizationRequest(
     adsOrganization: new Shared\AdsOrganization(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->organization->patchAdsOrganization2(
+$response = $sdk->organization->patchAdsOrganization(
+    request: $request
+);
+
+if ($response->adsOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAdsOrganizationRequest](../../Models/Operations/PatchAdsOrganizationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchAdsOrganizationResponse](../../Models/Operations/PatchAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchRepoOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchRepoOrganizationRequest(
+    repoOrganization: new Shared\RepoOrganization(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->patchRepoOrganization(
+    request: $request
+);
+
+if ($response->repoOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchRepoOrganizationRequest](../../Models/Operations/PatchRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\PatchRepoOrganizationResponse](../../Models/Operations/PatchRepoOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAdsOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAdsOrganizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->removeAdsOrganization(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveAdsOrganizationRequest](../../Models/Operations/RemoveAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveAdsOrganizationResponse](../../Models/Operations/RemoveAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeRepoOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveRepoOrganizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->removeRepoOrganization(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveRepoOrganizationRequest](../../Models/Operations/RemoveRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\RemoveRepoOrganizationResponse](../../Models/Operations/RemoveRepoOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAdsOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAdsOrganizationRequest(
+    adsOrganization: new Shared\AdsOrganization(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->updateAdsOrganization(
     request: $request
 );
 
@@ -467,11 +675,11 @@ if ($response->adsOrganization !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchAdsOrganization2Request](../../Models/Operations/PatchAdsOrganization2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\UpdateAdsOrganizationRequest](../../Models/Operations/UpdateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchAdsOrganization2Response](../../Models/Operations/PatchAdsOrganization2Response.md)**
+**[?Operations\UpdateAdsOrganizationResponse](../../Models/Operations/UpdateAdsOrganizationResponse.md)**
 
 ### Errors
 
@@ -479,13 +687,13 @@ if ($response->adsOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchRepoOrganization2
+## updateRepoOrganization
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoOrganization2" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -501,13 +709,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchRepoOrganization2Request(
+$request = new Operations\UpdateRepoOrganizationRequest(
     repoOrganization: new Shared\RepoOrganization(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->organization->patchRepoOrganization2(
+$response = $sdk->organization->updateRepoOrganization(
     request: $request
 );
 
@@ -520,219 +728,11 @@ if ($response->repoOrganization !== null) {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchRepoOrganization2Request](../../Models/Operations/PatchRepoOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [Operations\UpdateRepoOrganizationRequest](../../Models/Operations/UpdateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchRepoOrganization2Response](../../Models/Operations/PatchRepoOrganization2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAdsOrganization2
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAdsOrganization2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->organization->removeAdsOrganization2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveAdsOrganization2Request](../../Models/Operations/RemoveAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\RemoveAdsOrganization2Response](../../Models/Operations/RemoveAdsOrganization2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeRepoOrganization2
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeRepoOrganization2" method="delete" path="/repo/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveRepoOrganization2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->organization->removeRepoOrganization2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveRepoOrganization2Request](../../Models/Operations/RemoveRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\RemoveRepoOrganization2Response](../../Models/Operations/RemoveRepoOrganization2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAdsOrganization2
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAdsOrganization2Request(
-    adsOrganization: new Shared\AdsOrganization(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->organization->updateAdsOrganization2(
-    request: $request
-);
-
-if ($response->adsOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateAdsOrganization2Request](../../Models/Operations/UpdateAdsOrganization2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\UpdateAdsOrganization2Response](../../Models/Operations/UpdateAdsOrganization2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateRepoOrganization2
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateRepoOrganization2" method="put" path="/repo/{connection_id}/organization/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateRepoOrganization2Request(
-    repoOrganization: new Shared\RepoOrganization(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->organization->updateRepoOrganization2(
-    request: $request
-);
-
-if ($response->repoOrganization !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateRepoOrganization2Request](../../Models/Operations/UpdateRepoOrganization2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-### Response
-
-**[?Operations\UpdateRepoOrganization2Response](../../Models/Operations/UpdateRepoOrganization2Response.md)**
+**[?Operations\UpdateRepoOrganizationResponse](../../Models/Operations/UpdateRepoOrganizationResponse.md)**
 
 ### Errors
 

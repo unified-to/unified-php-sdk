@@ -47,14 +47,14 @@ class Device
     /**
      * Create a device
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDevice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisDevice2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisDevice2(Operations\CreateHrisDevice2Request $request, ?Options $options = null): Operations\CreateHrisDevice2Response
+    public function createHrisDevice(Operations\CreateHrisDeviceRequest $request, ?Options $options = null): Operations\CreateHrisDeviceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device', Operations\CreateHrisDevice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device', Operations\CreateHrisDeviceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDevice', 'json');
@@ -63,11 +63,11 @@ class Device
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisDevice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisDeviceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisDevice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisDevice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Device
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDevice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisDevice2Response(
+                $response = new Operations\CreateHrisDeviceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Device
     /**
      * Retrieve a device
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisDevice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisDevice2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisDevice2(Operations\GetHrisDevice2Request $request, ?Options $options = null): Operations\GetHrisDevice2Response
+    public function getHrisDevice(Operations\GetHrisDeviceRequest $request, ?Options $options = null): Operations\GetHrisDeviceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\GetHrisDevice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\GetHrisDeviceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisDevice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisDeviceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisDevice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisDevice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Device
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDevice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisDevice2Response(
+                $response = new Operations\GetHrisDeviceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Device
     /**
      * List all devices
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisDevices2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisDevices2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDevicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDevicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisDevices2(Operations\ListHrisDevices2Request $request, ?Options $options = null): Operations\ListHrisDevices2Response
+    public function listHrisDevices(Operations\ListHrisDevicesRequest $request, ?Options $options = null): Operations\ListHrisDevicesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device', Operations\ListHrisDevices2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device', Operations\ListHrisDevicesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisDevices2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisDevicesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisDevices2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisDevices', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Device
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisDevice>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisDevices2Response(
+                $response = new Operations\ListHrisDevicesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Device
     /**
      * Update a device
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDevice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisDevice2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisDevice2(Operations\PatchHrisDevice2Request $request, ?Options $options = null): Operations\PatchHrisDevice2Response
+    public function patchHrisDevice(Operations\PatchHrisDeviceRequest $request, ?Options $options = null): Operations\PatchHrisDeviceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\PatchHrisDevice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\PatchHrisDeviceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDevice', 'json');
@@ -257,11 +257,11 @@ class Device
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisDevice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisDeviceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisDevice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisDevice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Device
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDevice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisDevice2Response(
+                $response = new Operations\PatchHrisDeviceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Device
     /**
      * Remove a device
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDevice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDevice2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisDevice2(Operations\RemoveHrisDevice2Request $request, ?Options $options = null): Operations\RemoveHrisDevice2Response
+    public function removeHrisDevice(Operations\RemoveHrisDeviceRequest $request, ?Options $options = null): Operations\RemoveHrisDeviceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\RemoveHrisDevice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\RemoveHrisDeviceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisDevice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisDevice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Device
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisDevice2Response(
+            return new Operations\RemoveHrisDeviceResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Device
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisDevice2Response(
+            return new Operations\RemoveHrisDeviceResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Device
     /**
      * Update a device
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDevice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDevice2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeviceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisDevice2(Operations\UpdateHrisDevice2Request $request, ?Options $options = null): Operations\UpdateHrisDevice2Response
+    public function updateHrisDevice(Operations\UpdateHrisDeviceRequest $request, ?Options $options = null): Operations\UpdateHrisDeviceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\UpdateHrisDevice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/device/{id}', Operations\UpdateHrisDeviceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDevice', 'json');
@@ -382,11 +382,11 @@ class Device
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisDevice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisDeviceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisDevice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisDevice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Device
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDevice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisDevice2Response(
+                $response = new Operations\UpdateHrisDeviceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

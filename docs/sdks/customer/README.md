@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createTicketingCustomer2](#createticketingcustomer2) - Create a customer
-* [getTicketingCustomer2](#getticketingcustomer2) - Retrieve a customer
-* [listTicketingCustomers2](#listticketingcustomers2) - List all customers
-* [patchTicketingCustomer2](#patchticketingcustomer2) - Update a customer
-* [removeTicketingCustomer2](#removeticketingcustomer2) - Remove a customer
-* [updateTicketingCustomer2](#updateticketingcustomer2) - Update a customer
+* [createTicketingCustomer](#createticketingcustomer) - Create a customer
+* [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
+* [listTicketingCustomers](#listticketingcustomers) - List all customers
+* [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
+* [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
+* [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
 
-## createTicketingCustomer2
+## createTicketingCustomer
 
 Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingCustomer2" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="php" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTicketingCustomer2Request(
+$request = new Operations\CreateTicketingCustomerRequest(
     ticketingCustomer: new Shared\TicketingCustomer(),
     connectionId: '<id>',
 );
 
-$response = $sdk->customer->createTicketingCustomer2(
+$response = $sdk->customer->createTicketingCustomer(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->ticketingCustomer !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateTicketingCustomer2Request](../../Models/Operations/CreateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateTicketingCustomerRequest](../../Models/Operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateTicketingCustomer2Response](../../Models/Operations/CreateTicketingCustomer2Response.md)**
+**[?Operations\CreateTicketingCustomerResponse](../../Models/Operations/CreateTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->ticketingCustomer !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getTicketingCustomer2
+## getTicketingCustomer
 
 Retrieve a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getTicketingCustomer2" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetTicketingCustomer2Request(
+$request = new Operations\GetTicketingCustomerRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->customer->getTicketingCustomer2(
+$response = $sdk->customer->getTicketingCustomer(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->ticketingCustomer !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetTicketingCustomer2Request](../../Models/Operations/GetTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetTicketingCustomerRequest](../../Models/Operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetTicketingCustomer2Response](../../Models/Operations/GetTicketingCustomer2Response.md)**
+**[?Operations\GetTicketingCustomerResponse](../../Models/Operations/GetTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->ticketingCustomer !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingCustomers2
+## listTicketingCustomers
 
 List all customers
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingCustomers2" method="get" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="php" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingCustomers2Request(
+$request = new Operations\ListTicketingCustomersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->customer->listTicketingCustomers2(
+$response = $sdk->customer->listTicketingCustomers(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->ticketingCustomers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListTicketingCustomers2Request](../../Models/Operations/ListTicketingCustomers2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListTicketingCustomersRequest](../../Models/Operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListTicketingCustomers2Response](../../Models/Operations/ListTicketingCustomers2Response.md)**
+**[?Operations\ListTicketingCustomersResponse](../../Models/Operations/ListTicketingCustomersResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->ticketingCustomers !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingCustomer2
+## patchTicketingCustomer
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingCustomer2" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingCustomer2Request(
+$request = new Operations\PatchTicketingCustomerRequest(
     ticketingCustomer: new Shared\TicketingCustomer(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->customer->patchTicketingCustomer2(
+$response = $sdk->customer->patchTicketingCustomer(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->ticketingCustomer !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchTicketingCustomer2Request](../../Models/Operations/PatchTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchTicketingCustomerRequest](../../Models/Operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchTicketingCustomer2Response](../../Models/Operations/PatchTicketingCustomer2Response.md)**
+**[?Operations\PatchTicketingCustomerResponse](../../Models/Operations/PatchTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->ticketingCustomer !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeTicketingCustomer2
+## removeTicketingCustomer
 
 Remove a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeTicketingCustomer2" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveTicketingCustomer2Request(
+$request = new Operations\RemoveTicketingCustomerRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->customer->removeTicketingCustomer2(
+$response = $sdk->customer->removeTicketingCustomer(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveTicketingCustomer2Request](../../Models/Operations/RemoveTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveTicketingCustomerRequest](../../Models/Operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveTicketingCustomer2Response](../../Models/Operations/RemoveTicketingCustomer2Response.md)**
+**[?Operations\RemoveTicketingCustomerResponse](../../Models/Operations/RemoveTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateTicketingCustomer2
+## updateTicketingCustomer
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingCustomer2" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateTicketingCustomer2Request(
+$request = new Operations\UpdateTicketingCustomerRequest(
     ticketingCustomer: new Shared\TicketingCustomer(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->customer->updateTicketingCustomer2(
+$response = $sdk->customer->updateTicketingCustomer(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->ticketingCustomer !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateTicketingCustomer2Request](../../Models/Operations/UpdateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateTicketingCustomerRequest](../../Models/Operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateTicketingCustomer2Response](../../Models/Operations/UpdateTicketingCustomer2Response.md)**
+**[?Operations\UpdateTicketingCustomerResponse](../../Models/Operations/UpdateTicketingCustomerResponse.md)**
 
 ### Errors
 

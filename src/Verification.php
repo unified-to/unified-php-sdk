@@ -47,14 +47,14 @@ class Verification
     /**
      * Create a request
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateVerificationRequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateVerificationRequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createVerificationRequest2(Operations\CreateVerificationRequest2Request $request, ?Options $options = null): Operations\CreateVerificationRequest2Response
+    public function createVerificationRequest(Operations\CreateVerificationRequestRequest $request, ?Options $options = null): Operations\CreateVerificationRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request', Operations\CreateVerificationRequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request', Operations\CreateVerificationRequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'verificationRequest', 'json');
@@ -63,11 +63,11 @@ class Verification
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateVerificationRequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateVerificationRequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createVerificationRequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createVerificationRequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\VerificationRequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateVerificationRequest2Response(
+                $response = new Operations\CreateVerificationRequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Verification
     /**
      * Retrieve a package
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetVerificationPackage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetVerificationPackage2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetVerificationPackageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetVerificationPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getVerificationPackage2(Operations\GetVerificationPackage2Request $request, ?Options $options = null): Operations\GetVerificationPackage2Response
+    public function getVerificationPackage(Operations\GetVerificationPackageRequest $request, ?Options $options = null): Operations\GetVerificationPackageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/package/{id}', Operations\GetVerificationPackage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/package/{id}', Operations\GetVerificationPackageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetVerificationPackage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetVerificationPackageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getVerificationPackage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getVerificationPackage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\VerificationPackage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetVerificationPackage2Response(
+                $response = new Operations\GetVerificationPackageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Verification
     /**
      * Retrieve a request
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetVerificationRequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetVerificationRequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getVerificationRequest2(Operations\GetVerificationRequest2Request $request, ?Options $options = null): Operations\GetVerificationRequest2Response
+    public function getVerificationRequest(Operations\GetVerificationRequestRequest $request, ?Options $options = null): Operations\GetVerificationRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\GetVerificationRequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\GetVerificationRequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetVerificationRequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetVerificationRequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getVerificationRequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getVerificationRequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\VerificationRequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetVerificationRequest2Response(
+                $response = new Operations\GetVerificationRequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,22 +241,22 @@ class Verification
     /**
      * List all packages
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListVerificationPackages2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListVerificationPackages2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListVerificationPackagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListVerificationPackagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listVerificationPackages2(Operations\ListVerificationPackages2Request $request, ?Options $options = null): Operations\ListVerificationPackages2Response
+    public function listVerificationPackages(Operations\ListVerificationPackagesRequest $request, ?Options $options = null): Operations\ListVerificationPackagesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/package', Operations\ListVerificationPackages2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/package', Operations\ListVerificationPackagesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListVerificationPackages2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListVerificationPackagesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listVerificationPackages2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listVerificationPackages', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -282,7 +282,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\VerificationPackage>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListVerificationPackages2Response(
+                $response = new Operations\ListVerificationPackagesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -304,22 +304,22 @@ class Verification
     /**
      * List all requests
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListVerificationRequests2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListVerificationRequests2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListVerificationRequestsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListVerificationRequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listVerificationRequests2(Operations\ListVerificationRequests2Request $request, ?Options $options = null): Operations\ListVerificationRequests2Response
+    public function listVerificationRequests(Operations\ListVerificationRequestsRequest $request, ?Options $options = null): Operations\ListVerificationRequestsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request', Operations\ListVerificationRequests2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request', Operations\ListVerificationRequestsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListVerificationRequests2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListVerificationRequestsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listVerificationRequests2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listVerificationRequests', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -345,7 +345,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\VerificationRequest>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListVerificationRequests2Response(
+                $response = new Operations\ListVerificationRequestsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -367,14 +367,14 @@ class Verification
     /**
      * Update a request
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchVerificationRequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchVerificationRequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchVerificationRequest2(Operations\PatchVerificationRequest2Request $request, ?Options $options = null): Operations\PatchVerificationRequest2Response
+    public function patchVerificationRequest(Operations\PatchVerificationRequestRequest $request, ?Options $options = null): Operations\PatchVerificationRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\PatchVerificationRequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\PatchVerificationRequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'verificationRequest', 'json');
@@ -383,11 +383,11 @@ class Verification
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchVerificationRequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchVerificationRequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchVerificationRequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchVerificationRequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\VerificationRequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchVerificationRequest2Response(
+                $response = new Operations\PatchVerificationRequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,20 +435,20 @@ class Verification
     /**
      * Remove a request
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveVerificationRequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveVerificationRequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeVerificationRequest2(Operations\RemoveVerificationRequest2Request $request, ?Options $options = null): Operations\RemoveVerificationRequest2Response
+    public function removeVerificationRequest(Operations\RemoveVerificationRequestRequest $request, ?Options $options = null): Operations\RemoveVerificationRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\RemoveVerificationRequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\RemoveVerificationRequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeVerificationRequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeVerificationRequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -469,7 +469,7 @@ class Verification
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveVerificationRequest2Response(
+            return new Operations\RemoveVerificationRequestResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -481,7 +481,7 @@ class Verification
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveVerificationRequest2Response(
+            return new Operations\RemoveVerificationRequestResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -492,14 +492,14 @@ class Verification
     /**
      * Update a request
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateVerificationRequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateVerificationRequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateVerificationRequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateVerificationRequest2(Operations\UpdateVerificationRequest2Request $request, ?Options $options = null): Operations\UpdateVerificationRequest2Response
+    public function updateVerificationRequest(Operations\UpdateVerificationRequestRequest $request, ?Options $options = null): Operations\UpdateVerificationRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\UpdateVerificationRequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/verification/{connection_id}/request/{id}', Operations\UpdateVerificationRequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'verificationRequest', 'json');
@@ -508,11 +508,11 @@ class Verification
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateVerificationRequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateVerificationRequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateVerificationRequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateVerificationRequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -538,7 +538,7 @@ class Verification
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\VerificationRequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateVerificationRequest2Response(
+                $response = new Operations\UpdateVerificationRequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

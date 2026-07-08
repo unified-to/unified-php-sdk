@@ -47,14 +47,14 @@ class Deal
     /**
      * Create a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDeal2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmDeal2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmDeal2(Operations\CreateCrmDeal2Request $request, ?Options $options = null): Operations\CreateCrmDeal2Response
+    public function createCrmDeal(Operations\CreateCrmDealRequest $request, ?Options $options = null): Operations\CreateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDeal2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\CreateCrmDealRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -63,11 +63,11 @@ class Deal
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmDeal2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmDealRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmDeal2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmDeal', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Deal
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmDeal2Response(
+                $response = new Operations\CreateCrmDealResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Deal
     /**
      * Retrieve a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmDeal2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmDeal2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmDeal2(Operations\GetCrmDeal2Request $request, ?Options $options = null): Operations\GetCrmDeal2Response
+    public function getCrmDeal(Operations\GetCrmDealRequest $request, ?Options $options = null): Operations\GetCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDeal2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\GetCrmDealRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmDeal2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmDealRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmDeal2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmDeal', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Deal
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmDeal2Response(
+                $response = new Operations\GetCrmDealResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Deal
     /**
      * List all deals
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmDeals2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmDeals2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmDeals2(Operations\ListCrmDeals2Request $request, ?Options $options = null): Operations\ListCrmDeals2Response
+    public function listCrmDeals(Operations\ListCrmDealsRequest $request, ?Options $options = null): Operations\ListCrmDealsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDeals2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal', Operations\ListCrmDealsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmDeals2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmDealsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmDeals2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmDeals', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Deal
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmDeal>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmDeals2Response(
+                $response = new Operations\ListCrmDealsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Deal
     /**
      * Update a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDeal2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmDeal2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmDeal2(Operations\PatchCrmDeal2Request $request, ?Options $options = null): Operations\PatchCrmDeal2Response
+    public function patchCrmDeal(Operations\PatchCrmDealRequest $request, ?Options $options = null): Operations\PatchCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDeal2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\PatchCrmDealRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -257,11 +257,11 @@ class Deal
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmDeal2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmDealRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmDeal2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmDeal', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Deal
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmDeal2Response(
+                $response = new Operations\PatchCrmDealResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Deal
     /**
      * Remove a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDeal2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDeal2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmDeal2(Operations\RemoveCrmDeal2Request $request, ?Options $options = null): Operations\RemoveCrmDeal2Response
+    public function removeCrmDeal(Operations\RemoveCrmDealRequest $request, ?Options $options = null): Operations\RemoveCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDeal2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\RemoveCrmDealRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmDeal2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmDeal', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Deal
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmDeal2Response(
+            return new Operations\RemoveCrmDealResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Deal
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmDeal2Response(
+            return new Operations\RemoveCrmDealResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Deal
     /**
      * Update a deal
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDeal2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDeal2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmDeal2(Operations\UpdateCrmDeal2Request $request, ?Options $options = null): Operations\UpdateCrmDeal2Response
+    public function updateCrmDeal(Operations\UpdateCrmDealRequest $request, ?Options $options = null): Operations\UpdateCrmDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDeal2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/deal/{id}', Operations\UpdateCrmDealRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmDeal', 'json');
@@ -382,11 +382,11 @@ class Deal
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmDeal2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmDealRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmDeal2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmDeal', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Deal
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmDeal', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmDeal2Response(
+                $response = new Operations\UpdateCrmDealResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

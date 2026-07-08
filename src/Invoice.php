@@ -47,14 +47,14 @@ class Invoice
     /**
      * Create an invoice
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoice2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingInvoice2(Operations\CreateAccountingInvoice2Request $request, ?Options $options = null): Operations\CreateAccountingInvoice2Response
+    public function createAccountingInvoice(Operations\CreateAccountingInvoiceRequest $request, ?Options $options = null): Operations\CreateAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\CreateAccountingInvoice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\CreateAccountingInvoiceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingInvoice', 'json');
@@ -63,11 +63,11 @@ class Invoice
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingInvoice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingInvoiceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingInvoice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingInvoice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Invoice
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingInvoice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingInvoice2Response(
+                $response = new Operations\CreateAccountingInvoiceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Invoice
     /**
      * Retrieve an invoice
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoice2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingInvoice2(Operations\GetAccountingInvoice2Request $request, ?Options $options = null): Operations\GetAccountingInvoice2Response
+    public function getAccountingInvoice(Operations\GetAccountingInvoiceRequest $request, ?Options $options = null): Operations\GetAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\GetAccountingInvoice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\GetAccountingInvoiceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingInvoice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingInvoiceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingInvoice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingInvoice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Invoice
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingInvoice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingInvoice2Response(
+                $response = new Operations\GetAccountingInvoiceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Invoice
     /**
      * List all invoices
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoices2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoices2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingInvoices2(Operations\ListAccountingInvoices2Request $request, ?Options $options = null): Operations\ListAccountingInvoices2Response
+    public function listAccountingInvoices(Operations\ListAccountingInvoicesRequest $request, ?Options $options = null): Operations\ListAccountingInvoicesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\ListAccountingInvoices2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice', Operations\ListAccountingInvoicesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingInvoices2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingInvoicesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingInvoices2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingInvoices', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Invoice
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingInvoice>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingInvoices2Response(
+                $response = new Operations\ListAccountingInvoicesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Invoice
     /**
      * Update an invoice
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoice2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingInvoice2(Operations\PatchAccountingInvoice2Request $request, ?Options $options = null): Operations\PatchAccountingInvoice2Response
+    public function patchAccountingInvoice(Operations\PatchAccountingInvoiceRequest $request, ?Options $options = null): Operations\PatchAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\PatchAccountingInvoice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\PatchAccountingInvoiceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingInvoice', 'json');
@@ -257,11 +257,11 @@ class Invoice
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingInvoice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingInvoiceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingInvoice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingInvoice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Invoice
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingInvoice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingInvoice2Response(
+                $response = new Operations\PatchAccountingInvoiceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Invoice
     /**
      * Remove an invoice
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoice2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingInvoice2(Operations\RemoveAccountingInvoice2Request $request, ?Options $options = null): Operations\RemoveAccountingInvoice2Response
+    public function removeAccountingInvoice(Operations\RemoveAccountingInvoiceRequest $request, ?Options $options = null): Operations\RemoveAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\RemoveAccountingInvoice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\RemoveAccountingInvoiceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingInvoice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingInvoice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Invoice
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingInvoice2Response(
+            return new Operations\RemoveAccountingInvoiceResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Invoice
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingInvoice2Response(
+            return new Operations\RemoveAccountingInvoiceResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Invoice
     /**
      * Update an invoice
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoice2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoice2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingInvoice2(Operations\UpdateAccountingInvoice2Request $request, ?Options $options = null): Operations\UpdateAccountingInvoice2Response
+    public function updateAccountingInvoice(Operations\UpdateAccountingInvoiceRequest $request, ?Options $options = null): Operations\UpdateAccountingInvoiceResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\UpdateAccountingInvoice2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/invoice/{id}', Operations\UpdateAccountingInvoiceRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingInvoice', 'json');
@@ -382,11 +382,11 @@ class Invoice
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingInvoice2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingInvoiceRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingInvoice2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingInvoice', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Invoice
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingInvoice', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingInvoice2Response(
+                $response = new Operations\UpdateAccountingInvoiceResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

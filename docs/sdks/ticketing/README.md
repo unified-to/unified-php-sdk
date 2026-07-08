@@ -4,38 +4,38 @@
 
 ### Available Operations
 
-* [createTicketingCategory2](#createticketingcategory2) - Create a category
-* [createTicketingCustomer2](#createticketingcustomer2) - Create a customer
-* [createTicketingNote2](#createticketingnote2) - Create a note
-* [createTicketingTicket2](#createticketingticket2) - Create a ticket
-* [getTicketingCategory2](#getticketingcategory2) - Retrieve a category
-* [getTicketingCustomer2](#getticketingcustomer2) - Retrieve a customer
-* [getTicketingNote2](#getticketingnote2) - Retrieve a note
-* [getTicketingTicket2](#getticketingticket2) - Retrieve a ticket
-* [listTicketingCategories2](#listticketingcategories2) - List all categories
-* [listTicketingCustomers2](#listticketingcustomers2) - List all customers
-* [listTicketingNotes2](#listticketingnotes2) - List all notes
-* [listTicketingTickets2](#listticketingtickets2) - List all tickets
-* [patchTicketingCategory2](#patchticketingcategory2) - Update a category
-* [patchTicketingCustomer2](#patchticketingcustomer2) - Update a customer
-* [patchTicketingNote2](#patchticketingnote2) - Update a note
-* [patchTicketingTicket2](#patchticketingticket2) - Update a ticket
-* [removeTicketingCategory2](#removeticketingcategory2) - Remove a category
-* [removeTicketingCustomer2](#removeticketingcustomer2) - Remove a customer
-* [removeTicketingNote2](#removeticketingnote2) - Remove a note
-* [removeTicketingTicket2](#removeticketingticket2) - Remove a ticket
-* [updateTicketingCategory2](#updateticketingcategory2) - Update a category
-* [updateTicketingCustomer2](#updateticketingcustomer2) - Update a customer
-* [updateTicketingNote2](#updateticketingnote2) - Update a note
-* [updateTicketingTicket2](#updateticketingticket2) - Update a ticket
+* [createTicketingCategory](#createticketingcategory) - Create a category
+* [createTicketingCustomer](#createticketingcustomer) - Create a customer
+* [createTicketingNote](#createticketingnote) - Create a note
+* [createTicketingTicket](#createticketingticket) - Create a ticket
+* [getTicketingCategory](#getticketingcategory) - Retrieve a category
+* [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
+* [getTicketingNote](#getticketingnote) - Retrieve a note
+* [getTicketingTicket](#getticketingticket) - Retrieve a ticket
+* [listTicketingCategories](#listticketingcategories) - List all categories
+* [listTicketingCustomers](#listticketingcustomers) - List all customers
+* [listTicketingNotes](#listticketingnotes) - List all notes
+* [listTicketingTickets](#listticketingtickets) - List all tickets
+* [patchTicketingCategory](#patchticketingcategory) - Update a category
+* [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
+* [patchTicketingNote](#patchticketingnote) - Update a note
+* [patchTicketingTicket](#patchticketingticket) - Update a ticket
+* [removeTicketingCategory](#removeticketingcategory) - Remove a category
+* [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
+* [removeTicketingNote](#removeticketingnote) - Remove a note
+* [removeTicketingTicket](#removeticketingticket) - Remove a ticket
+* [updateTicketingCategory](#updateticketingcategory) - Update a category
+* [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
+* [updateTicketingNote](#updateticketingnote) - Update a note
+* [updateTicketingTicket](#updateticketingticket) - Update a ticket
 
-## createTicketingCategory2
+## createTicketingCategory
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -51,12 +51,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTicketingCategory2Request(
+$request = new Operations\CreateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->createTicketingCategory2(
+$response = $sdk->ticketing->createTicketingCategory(
     request: $request
 );
 
@@ -67,13 +67,13 @@ if ($response->ticketingCategory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateTicketingCategory2Request](../../Models/Operations/CreateTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateTicketingCategoryRequest](../../Models/Operations/CreateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateTicketingCategory2Response](../../Models/Operations/CreateTicketingCategory2Response.md)**
+**[?Operations\CreateTicketingCategoryResponse](../../Models/Operations/CreateTicketingCategoryResponse.md)**
 
 ### Errors
 
@@ -81,13 +81,13 @@ if ($response->ticketingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createTicketingCustomer2
+## createTicketingCustomer
 
 Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingCustomer2" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="php" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -103,12 +103,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTicketingCustomer2Request(
+$request = new Operations\CreateTicketingCustomerRequest(
     ticketingCustomer: new Shared\TicketingCustomer(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->createTicketingCustomer2(
+$response = $sdk->ticketing->createTicketingCustomer(
     request: $request
 );
 
@@ -119,13 +119,13 @@ if ($response->ticketingCustomer !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateTicketingCustomer2Request](../../Models/Operations/CreateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateTicketingCustomerRequest](../../Models/Operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateTicketingCustomer2Response](../../Models/Operations/CreateTicketingCustomer2Response.md)**
+**[?Operations\CreateTicketingCustomerResponse](../../Models/Operations/CreateTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -133,13 +133,13 @@ if ($response->ticketingCustomer !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createTicketingNote2
+## createTicketingNote
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="php" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```php
 declare(strict_types=1);
 
@@ -155,272 +155,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateTicketingNote2Request(
+$request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->createTicketingNote2(
+$response = $sdk->ticketing->createTicketingNote(
     request: $request
 );
 
 if ($response->ticketingNote !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\CreateTicketingNote2Request](../../Models/Operations/CreateTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\CreateTicketingNote2Response](../../Models/Operations/CreateTicketingNote2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createTicketingTicket2
-
-Create a ticket
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createTicketingTicket2" method="post" path="/ticketing/{connection_id}/ticket" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\CreateTicketingTicket2Request(
-    ticketingTicket: new Shared\TicketingTicket(),
-    connectionId: '<id>',
-);
-
-$response = $sdk->ticketing->createTicketingTicket2(
-    request: $request
-);
-
-if ($response->ticketingTicket !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateTicketingTicket2Request](../../Models/Operations/CreateTicketingTicket2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\CreateTicketingTicket2Response](../../Models/Operations/CreateTicketingTicket2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getTicketingCategory2
-
-Retrieve a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetTicketingCategory2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->getTicketingCategory2(
-    request: $request
-);
-
-if ($response->ticketingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetTicketingCategory2Request](../../Models/Operations/GetTicketingCategory2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\GetTicketingCategory2Response](../../Models/Operations/GetTicketingCategory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getTicketingCustomer2
-
-Retrieve a customer
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getTicketingCustomer2" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetTicketingCustomer2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->getTicketingCustomer2(
-    request: $request
-);
-
-if ($response->ticketingCustomer !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetTicketingCustomer2Request](../../Models/Operations/GetTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\GetTicketingCustomer2Response](../../Models/Operations/GetTicketingCustomer2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getTicketingNote2
-
-Retrieve a note
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetTicketingNote2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->getTicketingNote2(
-    request: $request
-);
-
-if ($response->ticketingNote !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetTicketingNote2Request](../../Models/Operations/GetTicketingNote2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\GetTicketingNote2Response](../../Models/Operations/GetTicketingNote2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getTicketingTicket2
-
-Retrieve a ticket
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getTicketingTicket2" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetTicketingTicket2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->getTicketingTicket2(
-    request: $request
-);
-
-if ($response->ticketingTicket !== null) {
     // handle response
 }
 ```
@@ -429,11 +173,11 @@ if ($response->ticketingTicket !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetTicketingTicket2Request](../../Models/Operations/GetTicketingTicket2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\CreateTicketingNoteRequest](../../Models/Operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetTicketingTicket2Response](../../Models/Operations/GetTicketingTicket2Response.md)**
+**[?Operations\CreateTicketingNoteResponse](../../Models/Operations/CreateTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -441,13 +185,65 @@ if ($response->ticketingTicket !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingCategories2
+## createTicketingTicket
 
-List all categories
+Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateTicketingTicketRequest(
+    ticketingTicket: new Shared\TicketingTicket(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ticketing->createTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateTicketingTicketRequest](../../Models/Operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateTicketingTicketResponse](../../Models/Operations/CreateTicketingTicketResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getTicketingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -462,11 +258,215 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingCategories2Request(
+$request = new Operations\GetTicketingCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->getTicketingCategory(
+    request: $request
+);
+
+if ($response->ticketingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetTicketingCategoryRequest](../../Models/Operations/GetTicketingCategoryRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetTicketingCategoryResponse](../../Models/Operations/GetTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getTicketingCustomer
+
+Retrieve a customer
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->getTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetTicketingCustomerRequest](../../Models/Operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetTicketingCustomerResponse](../../Models/Operations/GetTicketingCustomerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getTicketingNote
+
+Retrieve a note
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->getTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetTicketingNoteRequest](../../Models/Operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetTicketingNoteResponse](../../Models/Operations/GetTicketingNoteResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getTicketingTicket
+
+Retrieve a ticket
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->getTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetTicketingTicketRequest](../../Models/Operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetTicketingTicketResponse](../../Models/Operations/GetTicketingTicketResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listTicketingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListTicketingCategoriesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->listTicketingCategories2(
+$response = $sdk->ticketing->listTicketingCategories(
     request: $request
 );
 
@@ -477,13 +477,13 @@ if ($response->ticketingCategories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListTicketingCategories2Request](../../Models/Operations/ListTicketingCategories2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListTicketingCategoriesRequest](../../Models/Operations/ListTicketingCategoriesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListTicketingCategories2Response](../../Models/Operations/ListTicketingCategories2Response.md)**
+**[?Operations\ListTicketingCategoriesResponse](../../Models/Operations/ListTicketingCategoriesResponse.md)**
 
 ### Errors
 
@@ -491,13 +491,13 @@ if ($response->ticketingCategories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingCustomers2
+## listTicketingCustomers
 
 List all customers
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingCustomers2" method="get" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="php" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```php
 declare(strict_types=1);
 
@@ -512,11 +512,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingCustomers2Request(
+$request = new Operations\ListTicketingCustomersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->listTicketingCustomers2(
+$response = $sdk->ticketing->listTicketingCustomers(
     request: $request
 );
 
@@ -527,13 +527,13 @@ if ($response->ticketingCustomers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListTicketingCustomers2Request](../../Models/Operations/ListTicketingCustomers2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListTicketingCustomersRequest](../../Models/Operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListTicketingCustomers2Response](../../Models/Operations/ListTicketingCustomers2Response.md)**
+**[?Operations\ListTicketingCustomersResponse](../../Models/Operations/ListTicketingCustomersResponse.md)**
 
 ### Errors
 
@@ -541,13 +541,13 @@ if ($response->ticketingCustomers !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingNotes2
+## listTicketingNotes
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="php" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```php
 declare(strict_types=1);
 
@@ -562,11 +562,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingNotes2Request(
+$request = new Operations\ListTicketingNotesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->listTicketingNotes2(
+$response = $sdk->ticketing->listTicketingNotes(
     request: $request
 );
 
@@ -577,13 +577,13 @@ if ($response->ticketingNotes !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListTicketingNotes2Request](../../Models/Operations/ListTicketingNotes2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListTicketingNotesRequest](../../Models/Operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListTicketingNotes2Response](../../Models/Operations/ListTicketingNotes2Response.md)**
+**[?Operations\ListTicketingNotesResponse](../../Models/Operations/ListTicketingNotesResponse.md)**
 
 ### Errors
 
@@ -591,13 +591,13 @@ if ($response->ticketingNotes !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listTicketingTickets2
+## listTicketingTickets
 
 List all tickets
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listTicketingTickets2" method="get" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="php" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```php
 declare(strict_types=1);
 
@@ -612,11 +612,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListTicketingTickets2Request(
+$request = new Operations\ListTicketingTicketsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->ticketing->listTicketingTickets2(
+$response = $sdk->ticketing->listTicketingTickets(
     request: $request
 );
 
@@ -627,13 +627,13 @@ if ($response->ticketingTickets !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListTicketingTickets2Request](../../Models/Operations/ListTicketingTickets2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListTicketingTicketsRequest](../../Models/Operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListTicketingTickets2Response](../../Models/Operations/ListTicketingTickets2Response.md)**
+**[?Operations\ListTicketingTicketsResponse](../../Models/Operations/ListTicketingTicketsResponse.md)**
 
 ### Errors
 
@@ -641,13 +641,13 @@ if ($response->ticketingTickets !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingCategory2
+## patchTicketingCategory
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -663,13 +663,429 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingCategory2Request(
+$request = new Operations\PatchTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ticketing->patchTicketingCategory2(
+$response = $sdk->ticketing->patchTicketingCategory(
+    request: $request
+);
+
+if ($response->ticketingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchTicketingCategoryRequest](../../Models/Operations/PatchTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchTicketingCategoryResponse](../../Models/Operations/PatchTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchTicketingCustomer
+
+Update a customer
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchTicketingCustomerRequest(
+    ticketingCustomer: new Shared\TicketingCustomer(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->patchTicketingCustomer(
+    request: $request
+);
+
+if ($response->ticketingCustomer !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchTicketingCustomerRequest](../../Models/Operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchTicketingCustomerResponse](../../Models/Operations/PatchTicketingCustomerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchTicketingNote
+
+Update a note
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchTicketingNoteRequest(
+    ticketingNote: new Shared\TicketingNote(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->patchTicketingNote(
+    request: $request
+);
+
+if ($response->ticketingNote !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchTicketingNoteRequest](../../Models/Operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchTicketingNoteResponse](../../Models/Operations/PatchTicketingNoteResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchTicketingTicket
+
+Update a ticket
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchTicketingTicketRequest(
+    ticketingTicket: new Shared\TicketingTicket(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->patchTicketingTicket(
+    request: $request
+);
+
+if ($response->ticketingTicket !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchTicketingTicketRequest](../../Models/Operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchTicketingTicketResponse](../../Models/Operations/PatchTicketingTicketResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeTicketingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveTicketingCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->removeTicketingCategory(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveTicketingCategoryRequest](../../Models/Operations/RemoveTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveTicketingCategoryResponse](../../Models/Operations/RemoveTicketingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeTicketingCustomer
+
+Remove a customer
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveTicketingCustomerRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->removeTicketingCustomer(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveTicketingCustomerRequest](../../Models/Operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveTicketingCustomerResponse](../../Models/Operations/RemoveTicketingCustomerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeTicketingNote
+
+Remove a note
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveTicketingNoteRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->removeTicketingNote(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveTicketingNoteRequest](../../Models/Operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemoveTicketingNoteResponse](../../Models/Operations/RemoveTicketingNoteResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeTicketingTicket
+
+Remove a ticket
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveTicketingTicketRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->removeTicketingTicket(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveTicketingTicketRequest](../../Models/Operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveTicketingTicketResponse](../../Models/Operations/RemoveTicketingTicketResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateTicketingCategoryRequest(
+    ticketingCategory: new Shared\TicketingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ticketing->updateTicketingCategory(
     request: $request
 );
 
@@ -682,11 +1098,11 @@ if ($response->ticketingCategory !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchTicketingCategory2Request](../../Models/Operations/PatchTicketingCategory2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateTicketingCategoryRequest](../../Models/Operations/UpdateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchTicketingCategory2Response](../../Models/Operations/PatchTicketingCategory2Response.md)**
+**[?Operations\UpdateTicketingCategoryResponse](../../Models/Operations/UpdateTicketingCategoryResponse.md)**
 
 ### Errors
 
@@ -694,13 +1110,13 @@ if ($response->ticketingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingCustomer2
+## updateTicketingCustomer
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingCustomer2" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -716,13 +1132,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingCustomer2Request(
+$request = new Operations\UpdateTicketingCustomerRequest(
     ticketingCustomer: new Shared\TicketingCustomer(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ticketing->patchTicketingCustomer2(
+$response = $sdk->ticketing->updateTicketingCustomer(
     request: $request
 );
 
@@ -735,11 +1151,11 @@ if ($response->ticketingCustomer !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchTicketingCustomer2Request](../../Models/Operations/PatchTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateTicketingCustomerRequest](../../Models/Operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchTicketingCustomer2Response](../../Models/Operations/PatchTicketingCustomer2Response.md)**
+**[?Operations\UpdateTicketingCustomerResponse](../../Models/Operations/UpdateTicketingCustomerResponse.md)**
 
 ### Errors
 
@@ -747,13 +1163,13 @@ if ($response->ticketingCustomer !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingNote2
+## updateTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -769,13 +1185,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingNote2Request(
+$request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ticketing->patchTicketingNote2(
+$response = $sdk->ticketing->updateTicketingNote(
     request: $request
 );
 
@@ -788,11 +1204,11 @@ if ($response->ticketingNote !== null) {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\PatchTicketingNote2Request](../../Models/Operations/PatchTicketingNote2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [Operations\UpdateTicketingNoteRequest](../../Models/Operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\PatchTicketingNote2Response](../../Models/Operations/PatchTicketingNote2Response.md)**
+**[?Operations\UpdateTicketingNoteResponse](../../Models/Operations/UpdateTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -800,13 +1216,13 @@ if ($response->ticketingNote !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchTicketingTicket2
+## updateTicketingTicket
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingTicket2" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -822,13 +1238,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchTicketingTicket2Request(
+$request = new Operations\UpdateTicketingTicketRequest(
     ticketingTicket: new Shared\TicketingTicket(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->ticketing->patchTicketingTicket2(
+$response = $sdk->ticketing->updateTicketingTicket(
     request: $request
 );
 
@@ -841,427 +1257,11 @@ if ($response->ticketingTicket !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchTicketingTicket2Request](../../Models/Operations/PatchTicketingTicket2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\UpdateTicketingTicketRequest](../../Models/Operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchTicketingTicket2Response](../../Models/Operations/PatchTicketingTicket2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeTicketingCategory2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveTicketingCategory2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->removeTicketingCategory2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveTicketingCategory2Request](../../Models/Operations/RemoveTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveTicketingCategory2Response](../../Models/Operations/RemoveTicketingCategory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeTicketingCustomer2
-
-Remove a customer
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeTicketingCustomer2" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveTicketingCustomer2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->removeTicketingCustomer2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveTicketingCustomer2Request](../../Models/Operations/RemoveTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveTicketingCustomer2Response](../../Models/Operations/RemoveTicketingCustomer2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeTicketingNote2
-
-Remove a note
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveTicketingNote2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->removeTicketingNote2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\RemoveTicketingNote2Request](../../Models/Operations/RemoveTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\RemoveTicketingNote2Response](../../Models/Operations/RemoveTicketingNote2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeTicketingTicket2
-
-Remove a ticket
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeTicketingTicket2" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveTicketingTicket2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->removeTicketingTicket2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveTicketingTicket2Request](../../Models/Operations/RemoveTicketingTicket2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\RemoveTicketingTicket2Response](../../Models/Operations/RemoveTicketingTicket2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateTicketingCategory2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateTicketingCategory2Request(
-    ticketingCategory: new Shared\TicketingCategory(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->updateTicketingCategory2(
-    request: $request
-);
-
-if ($response->ticketingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateTicketingCategory2Request](../../Models/Operations/UpdateTicketingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateTicketingCategory2Response](../../Models/Operations/UpdateTicketingCategory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateTicketingCustomer2
-
-Update a customer
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateTicketingCustomer2" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateTicketingCustomer2Request(
-    ticketingCustomer: new Shared\TicketingCustomer(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->updateTicketingCustomer2(
-    request: $request
-);
-
-if ($response->ticketingCustomer !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateTicketingCustomer2Request](../../Models/Operations/UpdateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateTicketingCustomer2Response](../../Models/Operations/UpdateTicketingCustomer2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateTicketingNote2
-
-Update a note
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateTicketingNote2Request(
-    ticketingNote: new Shared\TicketingNote(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->updateTicketingNote2(
-    request: $request
-);
-
-if ($response->ticketingNote !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\UpdateTicketingNote2Request](../../Models/Operations/UpdateTicketingNote2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-### Response
-
-**[?Operations\UpdateTicketingNote2Response](../../Models/Operations/UpdateTicketingNote2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateTicketingTicket2
-
-Update a ticket
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateTicketingTicket2" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateTicketingTicket2Request(
-    ticketingTicket: new Shared\TicketingTicket(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->ticketing->updateTicketingTicket2(
-    request: $request
-);
-
-if ($response->ticketingTicket !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateTicketingTicket2Request](../../Models/Operations/UpdateTicketingTicket2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\UpdateTicketingTicket2Response](../../Models/Operations/UpdateTicketingTicket2Response.md)**
+**[?Operations\UpdateTicketingTicketResponse](../../Models/Operations/UpdateTicketingTicketResponse.md)**
 
 ### Errors
 

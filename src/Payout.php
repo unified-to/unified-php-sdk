@@ -47,22 +47,22 @@ class Payout
     /**
      * Retrieve a payout
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetPaymentPayout2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetPaymentPayout2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getPaymentPayout2(Operations\GetPaymentPayout2Request $request, ?Options $options = null): Operations\GetPaymentPayout2Response
+    public function getPaymentPayout(Operations\GetPaymentPayoutRequest $request, ?Options $options = null): Operations\GetPaymentPayoutResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout/{id}', Operations\GetPaymentPayout2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout/{id}', Operations\GetPaymentPayoutRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetPaymentPayout2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetPaymentPayoutRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getPaymentPayout2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getPaymentPayout', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Payout
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\PaymentPayout', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetPaymentPayout2Response(
+                $response = new Operations\GetPaymentPayoutResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Payout
     /**
      * List all payouts
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListPaymentPayouts2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListPaymentPayouts2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listPaymentPayouts2(Operations\ListPaymentPayouts2Request $request, ?Options $options = null): Operations\ListPaymentPayouts2Response
+    public function listPaymentPayouts(Operations\ListPaymentPayoutsRequest $request, ?Options $options = null): Operations\ListPaymentPayoutsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout', Operations\ListPaymentPayouts2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/payment/{connection_id}/payout', Operations\ListPaymentPayoutsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListPaymentPayouts2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListPaymentPayoutsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPaymentPayouts2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listPaymentPayouts', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Payout
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\PaymentPayout>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListPaymentPayouts2Response(
+                $response = new Operations\ListPaymentPayoutsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

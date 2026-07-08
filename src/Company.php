@@ -47,14 +47,14 @@ class Company
     /**
      * Create a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAtsCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAtsCompany2(Operations\CreateAtsCompany2Request $request, ?Options $options = null): Operations\CreateAtsCompany2Response
+    public function createAtsCompany(Operations\CreateAtsCompanyRequest $request, ?Options $options = null): Operations\CreateAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\CreateAtsCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\CreateAtsCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsCompany', 'json');
@@ -63,11 +63,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAtsCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAtsCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAtsCompany2Response(
+                $response = new Operations\CreateAtsCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Company
     /**
      * Create a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCrmCompany2(Operations\CreateCrmCompany2Request $request, ?Options $options = null): Operations\CreateCrmCompany2Response
+    public function createCrmCompany(Operations\CreateCrmCompanyRequest $request, ?Options $options = null): Operations\CreateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\CreateCrmCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -131,11 +131,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCrmCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCrmCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCrmCompany2Response(
+                $response = new Operations\CreateCrmCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Company
     /**
      * Create a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisCompany2(Operations\CreateHrisCompany2Request $request, ?Options $options = null): Operations\CreateHrisCompany2Response
+    public function createHrisCompany(Operations\CreateHrisCompanyRequest $request, ?Options $options = null): Operations\CreateHrisCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\CreateHrisCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\CreateHrisCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
@@ -199,11 +199,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisCompany2Response(
+                $response = new Operations\CreateHrisCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,22 +251,22 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAtsCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAtsCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAtsCompany2(Operations\GetAtsCompany2Request $request, ?Options $options = null): Operations\GetAtsCompany2Response
+    public function getAtsCompany(Operations\GetAtsCompanyRequest $request, ?Options $options = null): Operations\GetAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\GetAtsCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\GetAtsCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAtsCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAtsCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAtsCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -292,7 +292,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAtsCompany2Response(
+                $response = new Operations\GetAtsCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -314,22 +314,22 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCrmCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCrmCompany2(Operations\GetCrmCompany2Request $request, ?Options $options = null): Operations\GetCrmCompany2Response
+    public function getCrmCompany(Operations\GetCrmCompanyRequest $request, ?Options $options = null): Operations\GetCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\GetCrmCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCrmCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCrmCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCrmCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -355,7 +355,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCrmCompany2Response(
+                $response = new Operations\GetCrmCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -377,22 +377,22 @@ class Company
     /**
      * Retrieve a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisCompany2(Operations\GetHrisCompany2Request $request, ?Options $options = null): Operations\GetHrisCompany2Response
+    public function getHrisCompany(Operations\GetHrisCompanyRequest $request, ?Options $options = null): Operations\GetHrisCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\GetHrisCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\GetHrisCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -418,7 +418,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisCompany2Response(
+                $response = new Operations\GetHrisCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -440,22 +440,22 @@ class Company
     /**
      * List all companies
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsCompanies2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsCompanies2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsCompanies2(Operations\ListAtsCompanies2Request $request, ?Options $options = null): Operations\ListAtsCompanies2Response
+    public function listAtsCompanies(Operations\ListAtsCompaniesRequest $request, ?Options $options = null): Operations\ListAtsCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\ListAtsCompanies2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company', Operations\ListAtsCompaniesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAtsCompanies2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAtsCompaniesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsCompanies2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsCompanies', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -481,7 +481,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AtsCompany>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAtsCompanies2Response(
+                $response = new Operations\ListAtsCompaniesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -503,22 +503,22 @@ class Company
     /**
      * List all companies
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompanies2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmCompanies2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmCompanies2(Operations\ListCrmCompanies2Request $request, ?Options $options = null): Operations\ListCrmCompanies2Response
+    public function listCrmCompanies(Operations\ListCrmCompaniesRequest $request, ?Options $options = null): Operations\ListCrmCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompanies2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company', Operations\ListCrmCompaniesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmCompanies2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmCompaniesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmCompanies2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmCompanies', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -544,7 +544,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmCompany>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmCompanies2Response(
+                $response = new Operations\ListCrmCompaniesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -566,22 +566,22 @@ class Company
     /**
      * Retrieve enrichment information for a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompanies2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListEnrichCompanies2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListEnrichCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListEnrichCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listEnrichCompanies2(Operations\ListEnrichCompanies2Request $request, ?Options $options = null): Operations\ListEnrichCompanies2Response
+    public function listEnrichCompanies(Operations\ListEnrichCompaniesRequest $request, ?Options $options = null): Operations\ListEnrichCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', Operations\ListEnrichCompanies2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/enrich/{connection_id}/company', Operations\ListEnrichCompaniesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListEnrichCompanies2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListEnrichCompaniesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listEnrichCompanies2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listEnrichCompanies', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\EnrichCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListEnrichCompanies2Response(
+                $response = new Operations\ListEnrichCompaniesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,22 +629,22 @@ class Company
     /**
      * List all companies
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisCompanies2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisCompanies2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisCompanies2(Operations\ListHrisCompanies2Request $request, ?Options $options = null): Operations\ListHrisCompanies2Response
+    public function listHrisCompanies(Operations\ListHrisCompaniesRequest $request, ?Options $options = null): Operations\ListHrisCompaniesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\ListHrisCompanies2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company', Operations\ListHrisCompaniesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisCompanies2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisCompaniesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisCompanies2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisCompanies', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -670,7 +670,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisCompany>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisCompanies2Response(
+                $response = new Operations\ListHrisCompaniesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -692,14 +692,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAtsCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAtsCompany2(Operations\PatchAtsCompany2Request $request, ?Options $options = null): Operations\PatchAtsCompany2Response
+    public function patchAtsCompany(Operations\PatchAtsCompanyRequest $request, ?Options $options = null): Operations\PatchAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\PatchAtsCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\PatchAtsCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsCompany', 'json');
@@ -708,11 +708,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAtsCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAtsCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -738,7 +738,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAtsCompany2Response(
+                $response = new Operations\PatchAtsCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -760,14 +760,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCrmCompany2(Operations\PatchCrmCompany2Request $request, ?Options $options = null): Operations\PatchCrmCompany2Response
+    public function patchCrmCompany(Operations\PatchCrmCompanyRequest $request, ?Options $options = null): Operations\PatchCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\PatchCrmCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -776,11 +776,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCrmCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCrmCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -806,7 +806,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCrmCompany2Response(
+                $response = new Operations\PatchCrmCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -828,14 +828,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisCompany2(Operations\PatchHrisCompany2Request $request, ?Options $options = null): Operations\PatchHrisCompany2Response
+    public function patchHrisCompany(Operations\PatchHrisCompanyRequest $request, ?Options $options = null): Operations\PatchHrisCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\PatchHrisCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\PatchHrisCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
@@ -844,11 +844,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -874,7 +874,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisCompany2Response(
+                $response = new Operations\PatchHrisCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -896,20 +896,20 @@ class Company
     /**
      * Remove a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAtsCompany2(Operations\RemoveAtsCompany2Request $request, ?Options $options = null): Operations\RemoveAtsCompany2Response
+    public function removeAtsCompany(Operations\RemoveAtsCompanyRequest $request, ?Options $options = null): Operations\RemoveAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\RemoveAtsCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\RemoveAtsCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAtsCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -930,7 +930,7 @@ class Company
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsCompany2Response(
+            return new Operations\RemoveAtsCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -942,7 +942,7 @@ class Company
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAtsCompany2Response(
+            return new Operations\RemoveAtsCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -953,20 +953,20 @@ class Company
     /**
      * Remove a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCrmCompany2(Operations\RemoveCrmCompany2Request $request, ?Options $options = null): Operations\RemoveCrmCompany2Response
+    public function removeCrmCompany(Operations\RemoveCrmCompanyRequest $request, ?Options $options = null): Operations\RemoveCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\RemoveCrmCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCrmCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -987,7 +987,7 @@ class Company
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmCompany2Response(
+            return new Operations\RemoveCrmCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -999,7 +999,7 @@ class Company
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCrmCompany2Response(
+            return new Operations\RemoveCrmCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1010,20 +1010,20 @@ class Company
     /**
      * Remove a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisCompany2(Operations\RemoveHrisCompany2Request $request, ?Options $options = null): Operations\RemoveHrisCompany2Response
+    public function removeHrisCompany(Operations\RemoveHrisCompanyRequest $request, ?Options $options = null): Operations\RemoveHrisCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\RemoveHrisCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\RemoveHrisCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1044,7 +1044,7 @@ class Company
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisCompany2Response(
+            return new Operations\RemoveHrisCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1056,7 +1056,7 @@ class Company
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisCompany2Response(
+            return new Operations\RemoveHrisCompanyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1067,14 +1067,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAtsCompany2(Operations\UpdateAtsCompany2Request $request, ?Options $options = null): Operations\UpdateAtsCompany2Response
+    public function updateAtsCompany(Operations\UpdateAtsCompanyRequest $request, ?Options $options = null): Operations\UpdateAtsCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\UpdateAtsCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/company/{id}', Operations\UpdateAtsCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'atsCompany', 'json');
@@ -1083,11 +1083,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAtsCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAtsCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1113,7 +1113,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AtsCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAtsCompany2Response(
+                $response = new Operations\UpdateAtsCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1135,14 +1135,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCrmCompany2(Operations\UpdateCrmCompany2Request $request, ?Options $options = null): Operations\UpdateCrmCompany2Response
+    public function updateCrmCompany(Operations\UpdateCrmCompanyRequest $request, ?Options $options = null): Operations\UpdateCrmCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/company/{id}', Operations\UpdateCrmCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'crmCompany', 'json');
@@ -1151,11 +1151,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCrmCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCrmCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1181,7 +1181,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CrmCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCrmCompany2Response(
+                $response = new Operations\UpdateCrmCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1203,14 +1203,14 @@ class Company
     /**
      * Update a company
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompany2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompany2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisCompany2(Operations\UpdateHrisCompany2Request $request, ?Options $options = null): Operations\UpdateHrisCompany2Response
+    public function updateHrisCompany(Operations\UpdateHrisCompanyRequest $request, ?Options $options = null): Operations\UpdateHrisCompanyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\UpdateHrisCompany2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/company/{id}', Operations\UpdateHrisCompanyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisCompany', 'json');
@@ -1219,11 +1219,11 @@ class Company
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisCompany2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisCompanyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisCompany2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisCompany', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1249,7 +1249,7 @@ class Company
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisCompany', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisCompany2Response(
+                $response = new Operations\UpdateHrisCompanyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

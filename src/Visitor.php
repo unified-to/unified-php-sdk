@@ -47,14 +47,14 @@ class Visitor
     /**
      * Create a visitor
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitor2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitor2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAnalyticsVisitor2(Operations\CreateAnalyticsVisitor2Request $request, ?Options $options = null): Operations\CreateAnalyticsVisitor2Response
+    public function createAnalyticsVisitor(Operations\CreateAnalyticsVisitorRequest $request, ?Options $options = null): Operations\CreateAnalyticsVisitorResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor', Operations\CreateAnalyticsVisitor2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor', Operations\CreateAnalyticsVisitorRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsVisitor', 'json');
@@ -63,11 +63,11 @@ class Visitor
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsVisitor2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsVisitorRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsVisitor2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsVisitor', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Visitor
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsVisitor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAnalyticsVisitor2Response(
+                $response = new Operations\CreateAnalyticsVisitorResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Visitor
     /**
      * Retrieve a visitor
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsVisitor2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsVisitor2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAnalyticsVisitor2(Operations\GetAnalyticsVisitor2Request $request, ?Options $options = null): Operations\GetAnalyticsVisitor2Response
+    public function getAnalyticsVisitor(Operations\GetAnalyticsVisitorRequest $request, ?Options $options = null): Operations\GetAnalyticsVisitorResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\GetAnalyticsVisitor2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\GetAnalyticsVisitorRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsVisitor2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsVisitorRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsVisitor2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsVisitor', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Visitor
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsVisitor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAnalyticsVisitor2Response(
+                $response = new Operations\GetAnalyticsVisitorResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Visitor
     /**
      * List all visitors
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsVisitors2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsVisitors2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAnalyticsVisitors2(Operations\ListAnalyticsVisitors2Request $request, ?Options $options = null): Operations\ListAnalyticsVisitors2Response
+    public function listAnalyticsVisitors(Operations\ListAnalyticsVisitorsRequest $request, ?Options $options = null): Operations\ListAnalyticsVisitorsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor', Operations\ListAnalyticsVisitors2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor', Operations\ListAnalyticsVisitorsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsVisitors2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsVisitorsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsVisitors2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsVisitors', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Visitor
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AnalyticsVisitor>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAnalyticsVisitors2Response(
+                $response = new Operations\ListAnalyticsVisitorsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Visitor
     /**
      * Update a visitor
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitor2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitor2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAnalyticsVisitor2(Operations\PatchAnalyticsVisitor2Request $request, ?Options $options = null): Operations\PatchAnalyticsVisitor2Response
+    public function patchAnalyticsVisitor(Operations\PatchAnalyticsVisitorRequest $request, ?Options $options = null): Operations\PatchAnalyticsVisitorResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\PatchAnalyticsVisitor2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\PatchAnalyticsVisitorRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsVisitor', 'json');
@@ -257,11 +257,11 @@ class Visitor
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAnalyticsVisitor2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAnalyticsVisitorRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAnalyticsVisitor2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAnalyticsVisitor', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Visitor
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsVisitor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAnalyticsVisitor2Response(
+                $response = new Operations\PatchAnalyticsVisitorResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Visitor
     /**
      * Remove a visitor
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitor2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitor2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAnalyticsVisitor2(Operations\RemoveAnalyticsVisitor2Request $request, ?Options $options = null): Operations\RemoveAnalyticsVisitor2Response
+    public function removeAnalyticsVisitor(Operations\RemoveAnalyticsVisitorRequest $request, ?Options $options = null): Operations\RemoveAnalyticsVisitorResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\RemoveAnalyticsVisitor2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\RemoveAnalyticsVisitorRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAnalyticsVisitor2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAnalyticsVisitor', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Visitor
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAnalyticsVisitor2Response(
+            return new Operations\RemoveAnalyticsVisitorResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Visitor
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAnalyticsVisitor2Response(
+            return new Operations\RemoveAnalyticsVisitorResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Visitor
     /**
      * Update a visitor
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitor2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitor2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAnalyticsVisitor2(Operations\UpdateAnalyticsVisitor2Request $request, ?Options $options = null): Operations\UpdateAnalyticsVisitor2Response
+    public function updateAnalyticsVisitor(Operations\UpdateAnalyticsVisitorRequest $request, ?Options $options = null): Operations\UpdateAnalyticsVisitorResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\UpdateAnalyticsVisitor2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/visitor/{id}', Operations\UpdateAnalyticsVisitorRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsVisitor', 'json');
@@ -382,11 +382,11 @@ class Visitor
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAnalyticsVisitor2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAnalyticsVisitorRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAnalyticsVisitor2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAnalyticsVisitor', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Visitor
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsVisitor', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAnalyticsVisitor2Response(
+                $response = new Operations\UpdateAnalyticsVisitorResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -47,14 +47,14 @@ class Group
     /**
      * Create a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAdsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAdsGroup2(Operations\CreateAdsGroup2Request $request, ?Options $options = null): Operations\CreateAdsGroup2Response
+    public function createAdsGroup(Operations\CreateAdsGroupRequest $request, ?Options $options = null): Operations\CreateAdsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group', Operations\CreateAdsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group', Operations\CreateAdsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsGroup', 'json');
@@ -63,11 +63,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAdsGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAdsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAdsGroup2Response(
+                $response = new Operations\CreateAdsGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Group
     /**
      * Create a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisGroup2(Operations\CreateHrisGroup2Request $request, ?Options $options = null): Operations\CreateHrisGroup2Response
+    public function createHrisGroup(Operations\CreateHrisGroupRequest $request, ?Options $options = null): Operations\CreateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', Operations\CreateHrisGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', Operations\CreateHrisGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
@@ -131,11 +131,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisGroup2Response(
+                $response = new Operations\CreateHrisGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -248,22 +248,22 @@ class Group
     /**
      * Retrieve a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAdsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAdsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAdsGroup2(Operations\GetAdsGroup2Request $request, ?Options $options = null): Operations\GetAdsGroup2Response
+    public function getAdsGroup(Operations\GetAdsGroupRequest $request, ?Options $options = null): Operations\GetAdsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\GetAdsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\GetAdsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAdsGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAdsGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAdsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -289,7 +289,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAdsGroup2Response(
+                $response = new Operations\GetAdsGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -311,22 +311,22 @@ class Group
     /**
      * Retrieve a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsGroup2(Operations\GetClubsGroup2Request $request, ?Options $options = null): Operations\GetClubsGroup2Response
+    public function getClubsGroup(Operations\GetClubsGroupRequest $request, ?Options $options = null): Operations\GetClubsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group/{id}', Operations\GetClubsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group/{id}', Operations\GetClubsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -352,7 +352,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsGroup2Response(
+                $response = new Operations\GetClubsGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -374,22 +374,22 @@ class Group
     /**
      * Retrieve a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisGroup2(Operations\GetHrisGroup2Request $request, ?Options $options = null): Operations\GetHrisGroup2Response
+    public function getHrisGroup(Operations\GetHrisGroupRequest $request, ?Options $options = null): Operations\GetHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\GetHrisGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\GetHrisGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -415,7 +415,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisGroup2Response(
+                $response = new Operations\GetHrisGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -497,22 +497,22 @@ class Group
     /**
      * List all groups
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAdsGroups2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAdsGroups2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAdsGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAdsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAdsGroups2(Operations\ListAdsGroups2Request $request, ?Options $options = null): Operations\ListAdsGroups2Response
+    public function listAdsGroups(Operations\ListAdsGroupsRequest $request, ?Options $options = null): Operations\ListAdsGroupsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group', Operations\ListAdsGroups2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group', Operations\ListAdsGroupsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAdsGroups2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAdsGroupsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsGroups2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAdsGroups', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -538,7 +538,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AdsGroup>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAdsGroups2Response(
+                $response = new Operations\ListAdsGroupsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -560,22 +560,22 @@ class Group
     /**
      * List all groups
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsGroups2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsGroups2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsGroups2(Operations\ListClubsGroups2Request $request, ?Options $options = null): Operations\ListClubsGroups2Response
+    public function listClubsGroups(Operations\ListClubsGroupsRequest $request, ?Options $options = null): Operations\ListClubsGroupsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group', Operations\ListClubsGroups2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/group', Operations\ListClubsGroupsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsGroups2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsGroupsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsGroups2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsGroups', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -601,7 +601,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsGroup>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsGroups2Response(
+                $response = new Operations\ListClubsGroupsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -623,22 +623,22 @@ class Group
     /**
      * List all groups
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisGroups2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisGroups2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisGroups2(Operations\ListHrisGroups2Request $request, ?Options $options = null): Operations\ListHrisGroups2Response
+    public function listHrisGroups(Operations\ListHrisGroupsRequest $request, ?Options $options = null): Operations\ListHrisGroupsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', Operations\ListHrisGroups2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group', Operations\ListHrisGroupsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisGroups2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisGroupsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisGroups2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisGroups', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -664,7 +664,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisGroup>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisGroups2Response(
+                $response = new Operations\ListHrisGroupsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -749,14 +749,14 @@ class Group
     /**
      * Update a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAdsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAdsGroup2(Operations\PatchAdsGroup2Request $request, ?Options $options = null): Operations\PatchAdsGroup2Response
+    public function patchAdsGroup(Operations\PatchAdsGroupRequest $request, ?Options $options = null): Operations\PatchAdsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\PatchAdsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\PatchAdsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsGroup', 'json');
@@ -765,11 +765,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAdsGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAdsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -795,7 +795,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAdsGroup2Response(
+                $response = new Operations\PatchAdsGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -817,14 +817,14 @@ class Group
     /**
      * Update a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisGroup2(Operations\PatchHrisGroup2Request $request, ?Options $options = null): Operations\PatchHrisGroup2Response
+    public function patchHrisGroup(Operations\PatchHrisGroupRequest $request, ?Options $options = null): Operations\PatchHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\PatchHrisGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\PatchHrisGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
@@ -833,11 +833,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -863,7 +863,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisGroup2Response(
+                $response = new Operations\PatchHrisGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -950,20 +950,20 @@ class Group
     /**
      * Remove a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAdsGroup2(Operations\RemoveAdsGroup2Request $request, ?Options $options = null): Operations\RemoveAdsGroup2Response
+    public function removeAdsGroup(Operations\RemoveAdsGroupRequest $request, ?Options $options = null): Operations\RemoveAdsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\RemoveAdsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\RemoveAdsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAdsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -984,7 +984,7 @@ class Group
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsGroup2Response(
+            return new Operations\RemoveAdsGroupResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -996,7 +996,7 @@ class Group
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAdsGroup2Response(
+            return new Operations\RemoveAdsGroupResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1007,20 +1007,20 @@ class Group
     /**
      * Remove a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisGroup2(Operations\RemoveHrisGroup2Request $request, ?Options $options = null): Operations\RemoveHrisGroup2Response
+    public function removeHrisGroup(Operations\RemoveHrisGroupRequest $request, ?Options $options = null): Operations\RemoveHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\RemoveHrisGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\RemoveHrisGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1041,7 +1041,7 @@ class Group
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisGroup2Response(
+            return new Operations\RemoveHrisGroupResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1053,7 +1053,7 @@ class Group
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisGroup2Response(
+            return new Operations\RemoveHrisGroupResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1121,14 +1121,14 @@ class Group
     /**
      * Update a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAdsGroup2(Operations\UpdateAdsGroup2Request $request, ?Options $options = null): Operations\UpdateAdsGroup2Response
+    public function updateAdsGroup(Operations\UpdateAdsGroupRequest $request, ?Options $options = null): Operations\UpdateAdsGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\UpdateAdsGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ads/{connection_id}/group/{id}', Operations\UpdateAdsGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'adsGroup', 'json');
@@ -1137,11 +1137,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAdsGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAdsGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1167,7 +1167,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AdsGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAdsGroup2Response(
+                $response = new Operations\UpdateAdsGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1189,14 +1189,14 @@ class Group
     /**
      * Update a group
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroup2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroup2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisGroup2(Operations\UpdateHrisGroup2Request $request, ?Options $options = null): Operations\UpdateHrisGroup2Response
+    public function updateHrisGroup(Operations\UpdateHrisGroupRequest $request, ?Options $options = null): Operations\UpdateHrisGroupResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\UpdateHrisGroup2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/group/{id}', Operations\UpdateHrisGroupRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisGroup', 'json');
@@ -1205,11 +1205,11 @@ class Group
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisGroup2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisGroupRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisGroup2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisGroup', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1235,7 +1235,7 @@ class Group
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisGroup', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisGroup2Response(
+                $response = new Operations\UpdateHrisGroupResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

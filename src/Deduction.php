@@ -47,14 +47,14 @@ class Deduction
     /**
      * Create a deduction
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeduction2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeduction2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisDeduction2(Operations\CreateHrisDeduction2Request $request, ?Options $options = null): Operations\CreateHrisDeduction2Response
+    public function createHrisDeduction(Operations\CreateHrisDeductionRequest $request, ?Options $options = null): Operations\CreateHrisDeductionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction', Operations\CreateHrisDeduction2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction', Operations\CreateHrisDeductionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDeduction', 'json');
@@ -63,11 +63,11 @@ class Deduction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisDeduction2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisDeductionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisDeduction2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisDeduction', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Deduction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDeduction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisDeduction2Response(
+                $response = new Operations\CreateHrisDeductionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Deduction
     /**
      * Retrieve a deduction
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeduction2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisDeduction2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisDeduction2(Operations\GetHrisDeduction2Request $request, ?Options $options = null): Operations\GetHrisDeduction2Response
+    public function getHrisDeduction(Operations\GetHrisDeductionRequest $request, ?Options $options = null): Operations\GetHrisDeductionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\GetHrisDeduction2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\GetHrisDeductionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisDeduction2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisDeductionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisDeduction2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisDeduction', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Deduction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDeduction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisDeduction2Response(
+                $response = new Operations\GetHrisDeductionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Deduction
     /**
      * List all deductions
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductions2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisDeductions2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductionsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisDeductionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisDeductions2(Operations\ListHrisDeductions2Request $request, ?Options $options = null): Operations\ListHrisDeductions2Response
+    public function listHrisDeductions(Operations\ListHrisDeductionsRequest $request, ?Options $options = null): Operations\ListHrisDeductionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction', Operations\ListHrisDeductions2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction', Operations\ListHrisDeductionsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisDeductions2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisDeductionsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisDeductions2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisDeductions', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Deduction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisDeduction>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisDeductions2Response(
+                $response = new Operations\ListHrisDeductionsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Deduction
     /**
      * Update a deduction
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeduction2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeduction2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisDeduction2(Operations\PatchHrisDeduction2Request $request, ?Options $options = null): Operations\PatchHrisDeduction2Response
+    public function patchHrisDeduction(Operations\PatchHrisDeductionRequest $request, ?Options $options = null): Operations\PatchHrisDeductionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\PatchHrisDeduction2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\PatchHrisDeductionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDeduction', 'json');
@@ -257,11 +257,11 @@ class Deduction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisDeduction2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisDeductionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisDeduction2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisDeduction', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Deduction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDeduction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisDeduction2Response(
+                $response = new Operations\PatchHrisDeductionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Deduction
     /**
      * Remove a deduction
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeduction2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeduction2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisDeduction2(Operations\RemoveHrisDeduction2Request $request, ?Options $options = null): Operations\RemoveHrisDeduction2Response
+    public function removeHrisDeduction(Operations\RemoveHrisDeductionRequest $request, ?Options $options = null): Operations\RemoveHrisDeductionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\RemoveHrisDeduction2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\RemoveHrisDeductionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisDeduction2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisDeduction', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Deduction
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisDeduction2Response(
+            return new Operations\RemoveHrisDeductionResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Deduction
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisDeduction2Response(
+            return new Operations\RemoveHrisDeductionResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Deduction
     /**
      * Update a deduction
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeduction2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeduction2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeductionRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisDeduction2(Operations\UpdateHrisDeduction2Request $request, ?Options $options = null): Operations\UpdateHrisDeduction2Response
+    public function updateHrisDeduction(Operations\UpdateHrisDeductionRequest $request, ?Options $options = null): Operations\UpdateHrisDeductionResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\UpdateHrisDeduction2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/deduction/{id}', Operations\UpdateHrisDeductionRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisDeduction', 'json');
@@ -382,11 +382,11 @@ class Deduction
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisDeduction2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisDeductionRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisDeduction2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisDeduction', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Deduction
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisDeduction', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisDeduction2Response(
+                $response = new Operations\UpdateHrisDeductionResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

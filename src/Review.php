@@ -47,14 +47,14 @@ class Review
     /**
      * Create a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceReview2(Operations\CreateCommerceReview2Request $request, ?Options $options = null): Operations\CreateCommerceReview2Response
+    public function createCommerceReview(Operations\CreateCommerceReviewRequest $request, ?Options $options = null): Operations\CreateCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\CreateCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\CreateCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -63,11 +63,11 @@ class Review
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Review
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceReview2Response(
+                $response = new Operations\CreateCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Review
     /**
      * Retrieve a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceReview2(Operations\GetCommerceReview2Request $request, ?Options $options = null): Operations\GetCommerceReview2Response
+    public function getCommerceReview(Operations\GetCommerceReviewRequest $request, ?Options $options = null): Operations\GetCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\GetCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\GetCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Review
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceReview2Response(
+                $response = new Operations\GetCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Review
     /**
      * List all reviews
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviews2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviews2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceReviews2(Operations\ListCommerceReviews2Request $request, ?Options $options = null): Operations\ListCommerceReviews2Response
+    public function listCommerceReviews(Operations\ListCommerceReviewsRequest $request, ?Options $options = null): Operations\ListCommerceReviewsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\ListCommerceReviews2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review', Operations\ListCommerceReviewsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReviews2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceReviewsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReviews2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceReviews', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Review
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceReview>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceReviews2Response(
+                $response = new Operations\ListCommerceReviewsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Review
     /**
      * Update a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceReview2(Operations\PatchCommerceReview2Request $request, ?Options $options = null): Operations\PatchCommerceReview2Response
+    public function patchCommerceReview(Operations\PatchCommerceReviewRequest $request, ?Options $options = null): Operations\PatchCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\PatchCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\PatchCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -257,11 +257,11 @@ class Review
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Review
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceReview2Response(
+                $response = new Operations\PatchCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Review
     /**
      * Remove a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceReview2(Operations\RemoveCommerceReview2Request $request, ?Options $options = null): Operations\RemoveCommerceReview2Response
+    public function removeCommerceReview(Operations\RemoveCommerceReviewRequest $request, ?Options $options = null): Operations\RemoveCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\RemoveCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\RemoveCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Review
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReview2Response(
+            return new Operations\RemoveCommerceReviewResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Review
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceReview2Response(
+            return new Operations\RemoveCommerceReviewResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Review
     /**
      * Update a review
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReview2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReview2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceReview2(Operations\UpdateCommerceReview2Request $request, ?Options $options = null): Operations\UpdateCommerceReview2Response
+    public function updateCommerceReview(Operations\UpdateCommerceReviewRequest $request, ?Options $options = null): Operations\UpdateCommerceReviewResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\UpdateCommerceReview2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/review/{id}', Operations\UpdateCommerceReviewRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceReview', 'json');
@@ -382,11 +382,11 @@ class Review
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReview2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceReviewRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReview2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceReview', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Review
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceReview', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceReview2Response(
+                $response = new Operations\UpdateCommerceReviewResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

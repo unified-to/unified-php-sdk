@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createAccountingOrder2](#createaccountingorder2) - Create an order
-* [getAccountingOrder2](#getaccountingorder2) - Retrieve an order
-* [listAccountingOrders2](#listaccountingorders2) - List all orders
-* [patchAccountingOrder2](#patchaccountingorder2) - Update an order
-* [patchAssessmentOrder2](#patchassessmentorder2) - Update an order
-* [removeAccountingOrder2](#removeaccountingorder2) - Remove an order
-* [updateAccountingOrder2](#updateaccountingorder2) - Update an order
-* [updateAssessmentOrder2](#updateassessmentorder2) - Update an order
+* [createAccountingOrder](#createaccountingorder) - Create an order
+* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [listAccountingOrders](#listaccountingorders) - List all orders
+* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAssessmentOrder](#patchassessmentorder) - Update an order
+* [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAssessmentOrder](#updateassessmentorder) - Update an order
 
-## createAccountingOrder2
+## createAccountingOrder
 
 Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingOrder2" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -35,12 +35,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingOrder2Request(
+$request = new Operations\CreateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->order->createAccountingOrder2(
+$response = $sdk->order->createAccountingOrder(
     request: $request
 );
 
@@ -51,13 +51,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateAccountingOrder2Request](../../Models/Operations/CreateAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAccountingOrderRequest](../../Models/Operations/CreateAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateAccountingOrder2Response](../../Models/Operations/CreateAccountingOrder2Response.md)**
+**[?Operations\CreateAccountingOrderResponse](../../Models/Operations/CreateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -65,13 +65,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrder2
+## getAccountingOrder
 
 Retrieve an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingOrder2" method="get" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -86,12 +86,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingOrder2Request(
+$request = new Operations\GetAccountingOrderRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->order->getAccountingOrder2(
+$response = $sdk->order->getAccountingOrder(
     request: $request
 );
 
@@ -102,13 +102,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetAccountingOrder2Request](../../Models/Operations/GetAccountingOrder2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAccountingOrderRequest](../../Models/Operations/GetAccountingOrderRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetAccountingOrder2Response](../../Models/Operations/GetAccountingOrder2Response.md)**
+**[?Operations\GetAccountingOrderResponse](../../Models/Operations/GetAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrders2
+## listAccountingOrders
 
 List all orders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingOrders2" method="get" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -137,11 +137,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingOrders2Request(
+$request = new Operations\ListAccountingOrdersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->order->listAccountingOrders2(
+$response = $sdk->order->listAccountingOrders(
     request: $request
 );
 
@@ -152,13 +152,13 @@ if ($response->accountingOrders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListAccountingOrders2Request](../../Models/Operations/ListAccountingOrders2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAccountingOrdersRequest](../../Models/Operations/ListAccountingOrdersRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListAccountingOrders2Response](../../Models/Operations/ListAccountingOrders2Response.md)**
+**[?Operations\ListAccountingOrdersResponse](../../Models/Operations/ListAccountingOrdersResponse.md)**
 
 ### Errors
 
@@ -166,13 +166,13 @@ if ($response->accountingOrders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingOrder2
+## patchAccountingOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingOrder2" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -188,13 +188,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingOrder2Request(
+$request = new Operations\PatchAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->order->patchAccountingOrder2(
+$response = $sdk->order->patchAccountingOrder(
     request: $request
 );
 
@@ -205,13 +205,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchAccountingOrder2Request](../../Models/Operations/PatchAccountingOrder2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAccountingOrderRequest](../../Models/Operations/PatchAccountingOrderRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchAccountingOrder2Response](../../Models/Operations/PatchAccountingOrder2Response.md)**
+**[?Operations\PatchAccountingOrderResponse](../../Models/Operations/PatchAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -219,13 +219,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAssessmentOrder2
+## patchAssessmentOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAssessmentOrder2" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -241,7 +241,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAssessmentOrder2Request(
+$request = new Operations\PatchAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         workspaceId: '<id>',
@@ -250,7 +250,7 @@ $request = new Operations\PatchAssessmentOrder2Request(
     id: '<id>',
 );
 
-$response = $sdk->order->patchAssessmentOrder2(
+$response = $sdk->order->patchAssessmentOrder(
     request: $request
 );
 
@@ -261,13 +261,13 @@ if ($response->assessmentOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchAssessmentOrder2Request](../../Models/Operations/PatchAssessmentOrder2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAssessmentOrderRequest](../../Models/Operations/PatchAssessmentOrderRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchAssessmentOrder2Response](../../Models/Operations/PatchAssessmentOrder2Response.md)**
+**[?Operations\PatchAssessmentOrderResponse](../../Models/Operations/PatchAssessmentOrderResponse.md)**
 
 ### Errors
 
@@ -275,13 +275,13 @@ if ($response->assessmentOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingOrder2
+## removeAccountingOrder
 
 Remove an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingOrder2" method="delete" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -296,12 +296,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingOrder2Request(
+$request = new Operations\RemoveAccountingOrderRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->order->removeAccountingOrder2(
+$response = $sdk->order->removeAccountingOrder(
     request: $request
 );
 
@@ -312,13 +312,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveAccountingOrder2Request](../../Models/Operations/RemoveAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveAccountingOrderRequest](../../Models/Operations/RemoveAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveAccountingOrder2Response](../../Models/Operations/RemoveAccountingOrder2Response.md)**
+**[?Operations\RemoveAccountingOrderResponse](../../Models/Operations/RemoveAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -326,13 +326,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingOrder2
+## updateAccountingOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingOrder2" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -348,13 +348,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingOrder2Request(
+$request = new Operations\UpdateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->order->updateAccountingOrder2(
+$response = $sdk->order->updateAccountingOrder(
     request: $request
 );
 
@@ -365,13 +365,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateAccountingOrder2Request](../../Models/Operations/UpdateAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateAccountingOrderRequest](../../Models/Operations/UpdateAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateAccountingOrder2Response](../../Models/Operations/UpdateAccountingOrder2Response.md)**
+**[?Operations\UpdateAccountingOrderResponse](../../Models/Operations/UpdateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -379,13 +379,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAssessmentOrder2
+## updateAssessmentOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAssessmentOrder2" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -401,7 +401,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAssessmentOrder2Request(
+$request = new Operations\UpdateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         workspaceId: '<id>',
@@ -410,7 +410,7 @@ $request = new Operations\UpdateAssessmentOrder2Request(
     id: '<id>',
 );
 
-$response = $sdk->order->updateAssessmentOrder2(
+$response = $sdk->order->updateAssessmentOrder(
     request: $request
 );
 
@@ -421,13 +421,13 @@ if ($response->assessmentOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateAssessmentOrder2Request](../../Models/Operations/UpdateAssessmentOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateAssessmentOrderRequest](../../Models/Operations/UpdateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateAssessmentOrder2Response](../../Models/Operations/UpdateAssessmentOrder2Response.md)**
+**[?Operations\UpdateAssessmentOrderResponse](../../Models/Operations/UpdateAssessmentOrderResponse.md)**
 
 ### Errors
 

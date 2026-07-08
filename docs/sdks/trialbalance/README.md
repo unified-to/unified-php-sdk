@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getAccountingTrialbalance2](#getaccountingtrialbalance2) - Retrieve a trialbalance
-* [listAccountingTrialbalances2](#listaccountingtrialbalances2) - List all trialbalances
+* [getAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
+* [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 
-## getAccountingTrialbalance2
+## getAccountingTrialbalance
 
 Retrieve a trialbalance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance2" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTrialbalance2Request(
+$request = new Operations\GetAccountingTrialbalanceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->trialbalance->getAccountingTrialbalance2(
+$response = $sdk->trialbalance->getAccountingTrialbalance(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->accountingTrialbalance !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingTrialbalance2Request](../../Models/Operations/GetAccountingTrialbalance2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingTrialbalanceRequest](../../Models/Operations/GetAccountingTrialbalanceRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingTrialbalance2Response](../../Models/Operations/GetAccountingTrialbalance2Response.md)**
+**[?Operations\GetAccountingTrialbalanceResponse](../../Models/Operations/GetAccountingTrialbalanceResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->accountingTrialbalance !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTrialbalances2
+## listAccountingTrialbalances
 
 List all trialbalances
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances2" method="get" path="/accounting/{connection_id}/trialbalance" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTrialbalances2Request(
+$request = new Operations\ListAccountingTrialbalancesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->trialbalance->listAccountingTrialbalances2(
+$response = $sdk->trialbalance->listAccountingTrialbalances(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->accountingTrialbalances !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingTrialbalances2Request](../../Models/Operations/ListAccountingTrialbalances2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingTrialbalancesRequest](../../Models/Operations/ListAccountingTrialbalancesRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingTrialbalances2Response](../../Models/Operations/ListAccountingTrialbalances2Response.md)**
+**[?Operations\ListAccountingTrialbalancesResponse](../../Models/Operations/ListAccountingTrialbalancesResponse.md)**
 
 ### Errors
 

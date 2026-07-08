@@ -4,28 +4,28 @@
 
 ### Available Operations
 
-* [createAtsActivity2](#createatsactivity2) - Create an activity
-* [createLmsActivity2](#createlmsactivity2) - Create an activity
-* [getAtsActivity2](#getatsactivity2) - Retrieve an activity
-* [getClubsActivity2](#getclubsactivity2) - Retrieve an activity
-* [getLmsActivity2](#getlmsactivity2) - Retrieve an activity
-* [listAtsActivities2](#listatsactivities2) - List all activities
-* [listClubsActivities2](#listclubsactivities2) - List all activities
-* [listLmsActivities2](#listlmsactivities2) - List all activities
-* [patchAtsActivity2](#patchatsactivity2) - Update an activity
-* [patchLmsActivity2](#patchlmsactivity2) - Update an activity
-* [removeAtsActivity2](#removeatsactivity2) - Remove an activity
-* [removeLmsActivity2](#removelmsactivity2) - Remove an activity
-* [updateAtsActivity2](#updateatsactivity2) - Update an activity
-* [updateLmsActivity2](#updatelmsactivity2) - Update an activity
+* [createAtsActivity](#createatsactivity) - Create an activity
+* [createLmsActivity](#createlmsactivity) - Create an activity
+* [getAtsActivity](#getatsactivity) - Retrieve an activity
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
+* [getLmsActivity](#getlmsactivity) - Retrieve an activity
+* [listAtsActivities](#listatsactivities) - List all activities
+* [listClubsActivities](#listclubsactivities) - List all activities
+* [listLmsActivities](#listlmsactivities) - List all activities
+* [patchAtsActivity](#patchatsactivity) - Update an activity
+* [patchLmsActivity](#patchlmsactivity) - Update an activity
+* [removeAtsActivity](#removeatsactivity) - Remove an activity
+* [removeLmsActivity](#removelmsactivity) - Remove an activity
+* [updateAtsActivity](#updateatsactivity) - Update an activity
+* [updateLmsActivity](#updatelmsactivity) - Update an activity
 
-## createAtsActivity2
+## createAtsActivity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsActivity2" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -41,12 +41,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsActivity2Request(
+$request = new Operations\CreateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(),
     connectionId: '<id>',
 );
 
-$response = $sdk->activity->createAtsActivity2(
+$response = $sdk->activity->createAtsActivity(
     request: $request
 );
 
@@ -57,13 +57,13 @@ if ($response->atsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateAtsActivity2Request](../../Models/Operations/CreateAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateAtsActivityRequest](../../Models/Operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateAtsActivity2Response](../../Models/Operations/CreateAtsActivity2Response.md)**
+**[?Operations\CreateAtsActivityResponse](../../Models/Operations/CreateAtsActivityResponse.md)**
 
 ### Errors
 
@@ -71,13 +71,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createLmsActivity2
+## createLmsActivity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsActivity2" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -93,12 +93,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateLmsActivity2Request(
+$request = new Operations\CreateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(),
     connectionId: '<id>',
 );
 
-$response = $sdk->activity->createLmsActivity2(
+$response = $sdk->activity->createLmsActivity(
     request: $request
 );
 
@@ -109,13 +109,13 @@ if ($response->lmsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateLmsActivity2Request](../../Models/Operations/CreateLmsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateLmsActivityRequest](../../Models/Operations/CreateLmsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateLmsActivity2Response](../../Models/Operations/CreateLmsActivity2Response.md)**
+**[?Operations\CreateLmsActivityResponse](../../Models/Operations/CreateLmsActivityResponse.md)**
 
 ### Errors
 
@@ -123,13 +123,13 @@ if ($response->lmsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsActivity2
+## getAtsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsActivity2" method="get" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -144,12 +144,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsActivity2Request(
+$request = new Operations\GetAtsActivityRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->activity->getAtsActivity2(
+$response = $sdk->activity->getAtsActivity(
     request: $request
 );
 
@@ -160,13 +160,13 @@ if ($response->atsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetAtsActivity2Request](../../Models/Operations/GetAtsActivity2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetAtsActivityRequest](../../Models/Operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetAtsActivity2Response](../../Models/Operations/GetAtsActivity2Response.md)**
+**[?Operations\GetAtsActivityResponse](../../Models/Operations/GetAtsActivityResponse.md)**
 
 ### Errors
 
@@ -174,13 +174,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsActivity2
+## getClubsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -195,12 +195,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsActivity2Request(
+$request = new Operations\GetClubsActivityRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->activity->getClubsActivity2(
+$response = $sdk->activity->getClubsActivity(
     request: $request
 );
 
@@ -211,13 +211,13 @@ if ($response->clubsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetClubsActivity2Request](../../Models/Operations/GetClubsActivity2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsActivityRequest](../../Models/Operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetClubsActivity2Response](../../Models/Operations/GetClubsActivity2Response.md)**
+**[?Operations\GetClubsActivityResponse](../../Models/Operations/GetClubsActivityResponse.md)**
 
 ### Errors
 
@@ -225,13 +225,13 @@ if ($response->clubsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getLmsActivity2
+## getLmsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getLmsActivity2" method="get" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -246,12 +246,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetLmsActivity2Request(
+$request = new Operations\GetLmsActivityRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->activity->getLmsActivity2(
+$response = $sdk->activity->getLmsActivity(
     request: $request
 );
 
@@ -262,13 +262,13 @@ if ($response->lmsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetLmsActivity2Request](../../Models/Operations/GetLmsActivity2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetLmsActivityRequest](../../Models/Operations/GetLmsActivityRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetLmsActivity2Response](../../Models/Operations/GetLmsActivity2Response.md)**
+**[?Operations\GetLmsActivityResponse](../../Models/Operations/GetLmsActivityResponse.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ if ($response->lmsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsActivities2
+## listAtsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsActivities2" method="get" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -297,11 +297,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsActivities2Request(
+$request = new Operations\ListAtsActivitiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->activity->listAtsActivities2(
+$response = $sdk->activity->listAtsActivities(
     request: $request
 );
 
@@ -312,13 +312,13 @@ if ($response->atsActivities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListAtsActivities2Request](../../Models/Operations/ListAtsActivities2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListAtsActivitiesRequest](../../Models/Operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListAtsActivities2Response](../../Models/Operations/ListAtsActivities2Response.md)**
+**[?Operations\ListAtsActivitiesResponse](../../Models/Operations/ListAtsActivitiesResponse.md)**
 
 ### Errors
 
@@ -326,13 +326,13 @@ if ($response->atsActivities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsActivities2
+## listClubsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -347,11 +347,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsActivities2Request(
+$request = new Operations\ListClubsActivitiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->activity->listClubsActivities2(
+$response = $sdk->activity->listClubsActivities(
     request: $request
 );
 
@@ -362,13 +362,13 @@ if ($response->clubsActivities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListClubsActivities2Request](../../Models/Operations/ListClubsActivities2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListClubsActivitiesRequest](../../Models/Operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListClubsActivities2Response](../../Models/Operations/ListClubsActivities2Response.md)**
+**[?Operations\ListClubsActivitiesResponse](../../Models/Operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 
@@ -376,13 +376,13 @@ if ($response->clubsActivities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listLmsActivities2
+## listLmsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listLmsActivities2" method="get" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -397,11 +397,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListLmsActivities2Request(
+$request = new Operations\ListLmsActivitiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->activity->listLmsActivities2(
+$response = $sdk->activity->listLmsActivities(
     request: $request
 );
 
@@ -412,13 +412,13 @@ if ($response->lmsActivities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListLmsActivities2Request](../../Models/Operations/ListLmsActivities2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListLmsActivitiesRequest](../../Models/Operations/ListLmsActivitiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListLmsActivities2Response](../../Models/Operations/ListLmsActivities2Response.md)**
+**[?Operations\ListLmsActivitiesResponse](../../Models/Operations/ListLmsActivitiesResponse.md)**
 
 ### Errors
 
@@ -426,13 +426,13 @@ if ($response->lmsActivities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsActivity2
+## patchAtsActivity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsActivity2" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -448,13 +448,221 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsActivity2Request(
+$request = new Operations\PatchAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->activity->patchAtsActivity2(
+$response = $sdk->activity->patchAtsActivity(
+    request: $request
+);
+
+if ($response->atsActivity !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchAtsActivityRequest](../../Models/Operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchAtsActivityResponse](../../Models/Operations/PatchAtsActivityResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchLmsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchLmsActivityRequest(
+    lmsActivity: new Shared\LmsActivity(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->activity->patchLmsActivity(
+    request: $request
+);
+
+if ($response->lmsActivity !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchLmsActivityRequest](../../Models/Operations/PatchLmsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchLmsActivityResponse](../../Models/Operations/PatchLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAtsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAtsActivityRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->activity->removeAtsActivity(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveAtsActivityRequest](../../Models/Operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveAtsActivityResponse](../../Models/Operations/RemoveAtsActivityResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeLmsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveLmsActivityRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->activity->removeLmsActivity(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveLmsActivityRequest](../../Models/Operations/RemoveLmsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveLmsActivityResponse](../../Models/Operations/RemoveLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAtsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAtsActivityRequest(
+    atsActivity: new Shared\AtsActivity(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->activity->updateAtsActivity(
     request: $request
 );
 
@@ -467,11 +675,11 @@ if ($response->atsActivity !== null) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchAtsActivity2Request](../../Models/Operations/PatchAtsActivity2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\UpdateAtsActivityRequest](../../Models/Operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchAtsActivity2Response](../../Models/Operations/PatchAtsActivity2Response.md)**
+**[?Operations\UpdateAtsActivityResponse](../../Models/Operations/UpdateAtsActivityResponse.md)**
 
 ### Errors
 
@@ -479,13 +687,13 @@ if ($response->atsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchLmsActivity2
+## updateLmsActivity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsActivity2" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -501,13 +709,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchLmsActivity2Request(
+$request = new Operations\UpdateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->activity->patchLmsActivity2(
+$response = $sdk->activity->updateLmsActivity(
     request: $request
 );
 
@@ -520,219 +728,11 @@ if ($response->lmsActivity !== null) {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchLmsActivity2Request](../../Models/Operations/PatchLmsActivity2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [Operations\UpdateLmsActivityRequest](../../Models/Operations/UpdateLmsActivityRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchLmsActivity2Response](../../Models/Operations/PatchLmsActivity2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAtsActivity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAtsActivity2" method="delete" path="/ats/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAtsActivity2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->activity->removeAtsActivity2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveAtsActivity2Request](../../Models/Operations/RemoveAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\RemoveAtsActivity2Response](../../Models/Operations/RemoveAtsActivity2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeLmsActivity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeLmsActivity2" method="delete" path="/lms/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveLmsActivity2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->activity->removeLmsActivity2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveLmsActivity2Request](../../Models/Operations/RemoveLmsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\RemoveLmsActivity2Response](../../Models/Operations/RemoveLmsActivity2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAtsActivity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAtsActivity2" method="put" path="/ats/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAtsActivity2Request(
-    atsActivity: new Shared\AtsActivity(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->activity->updateAtsActivity2(
-    request: $request
-);
-
-if ($response->atsActivity !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateAtsActivity2Request](../../Models/Operations/UpdateAtsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\UpdateAtsActivity2Response](../../Models/Operations/UpdateAtsActivity2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateLmsActivity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateLmsActivity2" method="put" path="/lms/{connection_id}/activity/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateLmsActivity2Request(
-    lmsActivity: new Shared\LmsActivity(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->activity->updateLmsActivity2(
-    request: $request
-);
-
-if ($response->lmsActivity !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateLmsActivity2Request](../../Models/Operations/UpdateLmsActivity2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-### Response
-
-**[?Operations\UpdateLmsActivity2Response](../../Models/Operations/UpdateLmsActivity2Response.md)**
+**[?Operations\UpdateLmsActivityResponse](../../Models/Operations/UpdateLmsActivityResponse.md)**
 
 ### Errors
 

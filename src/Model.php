@@ -47,22 +47,22 @@ class Model
     /**
      * Retrieve a model
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetGenaiModel2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetGenaiModel2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetGenaiModelRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetGenaiModelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getGenaiModel2(Operations\GetGenaiModel2Request $request, ?Options $options = null): Operations\GetGenaiModel2Response
+    public function getGenaiModel(Operations\GetGenaiModelRequest $request, ?Options $options = null): Operations\GetGenaiModelResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/model/{id}', Operations\GetGenaiModel2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/model/{id}', Operations\GetGenaiModelRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetGenaiModel2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetGenaiModelRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getGenaiModel2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getGenaiModel', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Model
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\GenaiModel', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetGenaiModel2Response(
+                $response = new Operations\GetGenaiModelResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Model
     /**
      * List all models
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListGenaiModels2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListGenaiModels2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListGenaiModelsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListGenaiModelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listGenaiModels2(Operations\ListGenaiModels2Request $request, ?Options $options = null): Operations\ListGenaiModels2Response
+    public function listGenaiModels(Operations\ListGenaiModelsRequest $request, ?Options $options = null): Operations\ListGenaiModelsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/model', Operations\ListGenaiModels2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/genai/{connection_id}/model', Operations\ListGenaiModelsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListGenaiModels2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListGenaiModelsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listGenaiModels2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listGenaiModels', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Model
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\GenaiModel>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListGenaiModels2Response(
+                $response = new Operations\ListGenaiModelsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

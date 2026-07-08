@@ -47,14 +47,14 @@ class Signing
     /**
      * Create a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateSigningDocument2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateSigningDocument2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateSigningDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createSigningDocument2(Operations\CreateSigningDocument2Request $request, ?Options $options = null): Operations\CreateSigningDocument2Response
+    public function createSigningDocument(Operations\CreateSigningDocumentRequest $request, ?Options $options = null): Operations\CreateSigningDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document', Operations\CreateSigningDocument2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document', Operations\CreateSigningDocumentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingDocument', 'json');
@@ -63,11 +63,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateSigningDocument2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateSigningDocumentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createSigningDocument2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createSigningDocument', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateSigningDocument2Response(
+                $response = new Operations\CreateSigningDocumentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Signing
     /**
      * Create a signatory
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateSigningSignatory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateSigningSignatory2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateSigningSignatoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createSigningSignatory2(Operations\CreateSigningSignatory2Request $request, ?Options $options = null): Operations\CreateSigningSignatory2Response
+    public function createSigningSignatory(Operations\CreateSigningSignatoryRequest $request, ?Options $options = null): Operations\CreateSigningSignatoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory', Operations\CreateSigningSignatory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory', Operations\CreateSigningSignatoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingSignatory', 'json');
@@ -131,11 +131,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateSigningSignatory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateSigningSignatoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createSigningSignatory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createSigningSignatory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningSignatory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateSigningSignatory2Response(
+                $response = new Operations\CreateSigningSignatoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,22 +183,22 @@ class Signing
     /**
      * Retrieve a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetSigningDocument2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetSigningDocument2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetSigningDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getSigningDocument2(Operations\GetSigningDocument2Request $request, ?Options $options = null): Operations\GetSigningDocument2Response
+    public function getSigningDocument(Operations\GetSigningDocumentRequest $request, ?Options $options = null): Operations\GetSigningDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\GetSigningDocument2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\GetSigningDocumentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetSigningDocument2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetSigningDocumentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningDocument2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningDocument', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -224,7 +224,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetSigningDocument2Response(
+                $response = new Operations\GetSigningDocumentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -246,22 +246,22 @@ class Signing
     /**
      * Retrieve a signatory
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetSigningSignatory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetSigningSignatory2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetSigningSignatoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getSigningSignatory2(Operations\GetSigningSignatory2Request $request, ?Options $options = null): Operations\GetSigningSignatory2Response
+    public function getSigningSignatory(Operations\GetSigningSignatoryRequest $request, ?Options $options = null): Operations\GetSigningSignatoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\GetSigningSignatory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\GetSigningSignatoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetSigningSignatory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetSigningSignatoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningSignatory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningSignatory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningSignatory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetSigningSignatory2Response(
+                $response = new Operations\GetSigningSignatoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,22 +309,22 @@ class Signing
     /**
      * Retrieve a template
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetSigningTemplate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetSigningTemplate2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetSigningTemplateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetSigningTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getSigningTemplate2(Operations\GetSigningTemplate2Request $request, ?Options $options = null): Operations\GetSigningTemplate2Response
+    public function getSigningTemplate(Operations\GetSigningTemplateRequest $request, ?Options $options = null): Operations\GetSigningTemplateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/template/{id}', Operations\GetSigningTemplate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/template/{id}', Operations\GetSigningTemplateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetSigningTemplate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetSigningTemplateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningTemplate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getSigningTemplate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -350,7 +350,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningTemplate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetSigningTemplate2Response(
+                $response = new Operations\GetSigningTemplateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -372,22 +372,22 @@ class Signing
     /**
      * List all documents
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListSigningDocuments2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListSigningDocuments2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListSigningDocumentsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListSigningDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listSigningDocuments2(Operations\ListSigningDocuments2Request $request, ?Options $options = null): Operations\ListSigningDocuments2Response
+    public function listSigningDocuments(Operations\ListSigningDocumentsRequest $request, ?Options $options = null): Operations\ListSigningDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document', Operations\ListSigningDocuments2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document', Operations\ListSigningDocumentsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListSigningDocuments2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListSigningDocumentsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningDocuments2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningDocuments', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SigningDocument>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListSigningDocuments2Response(
+                $response = new Operations\ListSigningDocumentsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,22 +435,22 @@ class Signing
     /**
      * List all signatories
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListSigningSignatories2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListSigningSignatories2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListSigningSignatoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListSigningSignatoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listSigningSignatories2(Operations\ListSigningSignatories2Request $request, ?Options $options = null): Operations\ListSigningSignatories2Response
+    public function listSigningSignatories(Operations\ListSigningSignatoriesRequest $request, ?Options $options = null): Operations\ListSigningSignatoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory', Operations\ListSigningSignatories2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory', Operations\ListSigningSignatoriesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListSigningSignatories2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListSigningSignatoriesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningSignatories2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningSignatories', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -476,7 +476,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SigningSignatory>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListSigningSignatories2Response(
+                $response = new Operations\ListSigningSignatoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -498,22 +498,22 @@ class Signing
     /**
      * List all templates
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListSigningTemplates2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListSigningTemplates2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListSigningTemplatesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListSigningTemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listSigningTemplates2(Operations\ListSigningTemplates2Request $request, ?Options $options = null): Operations\ListSigningTemplates2Response
+    public function listSigningTemplates(Operations\ListSigningTemplatesRequest $request, ?Options $options = null): Operations\ListSigningTemplatesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/template', Operations\ListSigningTemplates2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/template', Operations\ListSigningTemplatesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListSigningTemplates2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListSigningTemplatesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningTemplates2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listSigningTemplates', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -539,7 +539,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SigningTemplate>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListSigningTemplates2Response(
+                $response = new Operations\ListSigningTemplatesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -561,14 +561,14 @@ class Signing
     /**
      * Update a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchSigningDocument2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchSigningDocument2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchSigningDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchSigningDocument2(Operations\PatchSigningDocument2Request $request, ?Options $options = null): Operations\PatchSigningDocument2Response
+    public function patchSigningDocument(Operations\PatchSigningDocumentRequest $request, ?Options $options = null): Operations\PatchSigningDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\PatchSigningDocument2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\PatchSigningDocumentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingDocument', 'json');
@@ -577,11 +577,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchSigningDocument2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchSigningDocumentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchSigningDocument2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchSigningDocument', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchSigningDocument2Response(
+                $response = new Operations\PatchSigningDocumentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,14 +629,14 @@ class Signing
     /**
      * Update a signatory
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchSigningSignatory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchSigningSignatory2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchSigningSignatoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchSigningSignatory2(Operations\PatchSigningSignatory2Request $request, ?Options $options = null): Operations\PatchSigningSignatory2Response
+    public function patchSigningSignatory(Operations\PatchSigningSignatoryRequest $request, ?Options $options = null): Operations\PatchSigningSignatoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\PatchSigningSignatory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\PatchSigningSignatoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingSignatory', 'json');
@@ -645,11 +645,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchSigningSignatory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchSigningSignatoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchSigningSignatory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchSigningSignatory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -675,7 +675,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningSignatory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchSigningSignatory2Response(
+                $response = new Operations\PatchSigningSignatoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -697,20 +697,20 @@ class Signing
     /**
      * Remove a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveSigningDocument2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveSigningDocument2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveSigningDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeSigningDocument2(Operations\RemoveSigningDocument2Request $request, ?Options $options = null): Operations\RemoveSigningDocument2Response
+    public function removeSigningDocument(Operations\RemoveSigningDocumentRequest $request, ?Options $options = null): Operations\RemoveSigningDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\RemoveSigningDocument2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\RemoveSigningDocumentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeSigningDocument2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeSigningDocument', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -731,7 +731,7 @@ class Signing
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveSigningDocument2Response(
+            return new Operations\RemoveSigningDocumentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -743,7 +743,7 @@ class Signing
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveSigningDocument2Response(
+            return new Operations\RemoveSigningDocumentResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -754,20 +754,20 @@ class Signing
     /**
      * Remove a signatory
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveSigningSignatory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveSigningSignatory2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeSigningSignatory2(Operations\RemoveSigningSignatory2Request $request, ?Options $options = null): Operations\RemoveSigningSignatory2Response
+    public function removeSigningSignatory(Operations\RemoveSigningSignatoryRequest $request, ?Options $options = null): Operations\RemoveSigningSignatoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\RemoveSigningSignatory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\RemoveSigningSignatoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeSigningSignatory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeSigningSignatory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -788,7 +788,7 @@ class Signing
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveSigningSignatory2Response(
+            return new Operations\RemoveSigningSignatoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -800,7 +800,7 @@ class Signing
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveSigningSignatory2Response(
+            return new Operations\RemoveSigningSignatoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -811,14 +811,14 @@ class Signing
     /**
      * Update a document
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateSigningDocument2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateSigningDocument2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateSigningDocumentRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateSigningDocument2(Operations\UpdateSigningDocument2Request $request, ?Options $options = null): Operations\UpdateSigningDocument2Response
+    public function updateSigningDocument(Operations\UpdateSigningDocumentRequest $request, ?Options $options = null): Operations\UpdateSigningDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\UpdateSigningDocument2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/document/{id}', Operations\UpdateSigningDocumentRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingDocument', 'json');
@@ -827,11 +827,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateSigningDocument2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateSigningDocumentRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateSigningDocument2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateSigningDocument', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -857,7 +857,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningDocument', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateSigningDocument2Response(
+                $response = new Operations\UpdateSigningDocumentResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -879,14 +879,14 @@ class Signing
     /**
      * Update a signatory
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateSigningSignatory2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateSigningSignatory2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateSigningSignatory2(Operations\UpdateSigningSignatory2Request $request, ?Options $options = null): Operations\UpdateSigningSignatory2Response
+    public function updateSigningSignatory(Operations\UpdateSigningSignatoryRequest $request, ?Options $options = null): Operations\UpdateSigningSignatoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\UpdateSigningSignatory2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/signing/{connection_id}/signatory/{id}', Operations\UpdateSigningSignatoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'signingSignatory', 'json');
@@ -895,11 +895,11 @@ class Signing
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateSigningSignatory2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateSigningSignatoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateSigningSignatory2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateSigningSignatory', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -925,7 +925,7 @@ class Signing
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SigningSignatory', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateSigningSignatory2Response(
+                $response = new Operations\UpdateSigningSignatoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

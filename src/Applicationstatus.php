@@ -47,22 +47,22 @@ class Applicationstatus
     /**
      * List all applicationstatuses
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatuses2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatuses2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAtsApplicationstatuses2(Operations\ListAtsApplicationstatuses2Request $request, ?Options $options = null): Operations\ListAtsApplicationstatuses2Response
+    public function listAtsApplicationstatuses(Operations\ListAtsApplicationstatusesRequest $request, ?Options $options = null): Operations\ListAtsApplicationstatusesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/applicationstatus', Operations\ListAtsApplicationstatuses2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ats/{connection_id}/applicationstatus', Operations\ListAtsApplicationstatusesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAtsApplicationstatuses2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAtsApplicationstatusesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsApplicationstatuses2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAtsApplicationstatuses', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Applicationstatus
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AtsStatus>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAtsApplicationstatuses2Response(
+                $response = new Operations\ListAtsApplicationstatusesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

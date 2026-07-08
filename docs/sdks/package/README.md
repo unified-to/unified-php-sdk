@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createAssessmentPackage2](#createassessmentpackage2) - Create an assessment package
-* [getAssessmentPackage2](#getassessmentpackage2) - Get an assessment package
-* [getVerificationPackage2](#getverificationpackage2) - Retrieve a package
-* [listAssessmentPackages2](#listassessmentpackages2) - List assessment packages
-* [listVerificationPackages2](#listverificationpackages2) - List all packages
-* [patchAssessmentPackage2](#patchassessmentpackage2) - Update an assessment package
-* [removeAssessmentPackage2](#removeassessmentpackage2) - Delete an assessment package
-* [updateAssessmentPackage2](#updateassessmentpackage2) - Update an assessment package
+* [createAssessmentPackage](#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](#getassessmentpackage) - Get an assessment package
+* [getVerificationPackage](#getverificationpackage) - Retrieve a package
+* [listAssessmentPackages](#listassessmentpackages) - List assessment packages
+* [listVerificationPackages](#listverificationpackages) - List all packages
+* [patchAssessmentPackage](#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentPackage](#updateassessmentpackage) - Update an assessment package
 
-## createAssessmentPackage2
+## createAssessmentPackage
 
 Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAssessmentPackage2" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="php" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
 ```php
 declare(strict_types=1);
 
@@ -35,14 +35,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAssessmentPackage2Request(
+$request = new Operations\CreateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        type: Shared\AssessmentPackageType::VideoInterview,
+        type: Shared\AssessmentPackageType::ReferenceCheck,
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->package->createAssessmentPackage2(
+$response = $sdk->package->createAssessmentPackage(
     request: $request
 );
 
@@ -53,13 +53,13 @@ if ($response->assessmentPackage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAssessmentPackage2Request](../../Models/Operations/CreateAssessmentPackage2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAssessmentPackageRequest](../../Models/Operations/CreateAssessmentPackageRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAssessmentPackage2Response](../../Models/Operations/CreateAssessmentPackage2Response.md)**
+**[?Operations\CreateAssessmentPackageResponse](../../Models/Operations/CreateAssessmentPackageResponse.md)**
 
 ### Errors
 
@@ -67,13 +67,13 @@ if ($response->assessmentPackage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAssessmentPackage2
+## getAssessmentPackage
 
 Get an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAssessmentPackage2" method="get" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAssessmentPackage" method="get" path="/assessment/{connection_id}/package/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -88,12 +88,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAssessmentPackage2Request(
+$request = new Operations\GetAssessmentPackageRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->package->getAssessmentPackage2(
+$response = $sdk->package->getAssessmentPackage(
     request: $request
 );
 
@@ -104,13 +104,13 @@ if ($response->assessmentPackage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAssessmentPackage2Request](../../Models/Operations/GetAssessmentPackage2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAssessmentPackageRequest](../../Models/Operations/GetAssessmentPackageRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAssessmentPackage2Response](../../Models/Operations/GetAssessmentPackage2Response.md)**
+**[?Operations\GetAssessmentPackageResponse](../../Models/Operations/GetAssessmentPackageResponse.md)**
 
 ### Errors
 
@@ -118,13 +118,13 @@ if ($response->assessmentPackage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getVerificationPackage2
+## getVerificationPackage
 
 Retrieve a package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getVerificationPackage2" method="get" path="/verification/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="php" operationID="getVerificationPackage" method="get" path="/verification/{connection_id}/package/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -139,12 +139,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetVerificationPackage2Request(
+$request = new Operations\GetVerificationPackageRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->package->getVerificationPackage2(
+$response = $sdk->package->getVerificationPackage(
     request: $request
 );
 
@@ -155,13 +155,13 @@ if ($response->verificationPackage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetVerificationPackage2Request](../../Models/Operations/GetVerificationPackage2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetVerificationPackageRequest](../../Models/Operations/GetVerificationPackageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetVerificationPackage2Response](../../Models/Operations/GetVerificationPackage2Response.md)**
+**[?Operations\GetVerificationPackageResponse](../../Models/Operations/GetVerificationPackageResponse.md)**
 
 ### Errors
 
@@ -169,13 +169,13 @@ if ($response->verificationPackage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAssessmentPackages2
+## listAssessmentPackages
 
 List assessment packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAssessmentPackages2" method="get" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="php" operationID="listAssessmentPackages" method="get" path="/assessment/{connection_id}/package" -->
 ```php
 declare(strict_types=1);
 
@@ -190,11 +190,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAssessmentPackages2Request(
+$request = new Operations\ListAssessmentPackagesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->package->listAssessmentPackages2(
+$response = $sdk->package->listAssessmentPackages(
     request: $request
 );
 
@@ -205,13 +205,13 @@ if ($response->assessmentPackages !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAssessmentPackages2Request](../../Models/Operations/ListAssessmentPackages2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAssessmentPackagesRequest](../../Models/Operations/ListAssessmentPackagesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAssessmentPackages2Response](../../Models/Operations/ListAssessmentPackages2Response.md)**
+**[?Operations\ListAssessmentPackagesResponse](../../Models/Operations/ListAssessmentPackagesResponse.md)**
 
 ### Errors
 
@@ -219,13 +219,13 @@ if ($response->assessmentPackages !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listVerificationPackages2
+## listVerificationPackages
 
 List all packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listVerificationPackages2" method="get" path="/verification/{connection_id}/package" -->
+<!-- UsageSnippet language="php" operationID="listVerificationPackages" method="get" path="/verification/{connection_id}/package" -->
 ```php
 declare(strict_types=1);
 
@@ -240,11 +240,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListVerificationPackages2Request(
+$request = new Operations\ListVerificationPackagesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->package->listVerificationPackages2(
+$response = $sdk->package->listVerificationPackages(
     request: $request
 );
 
@@ -255,13 +255,13 @@ if ($response->verificationPackages !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListVerificationPackages2Request](../../Models/Operations/ListVerificationPackages2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListVerificationPackagesRequest](../../Models/Operations/ListVerificationPackagesRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListVerificationPackages2Response](../../Models/Operations/ListVerificationPackages2Response.md)**
+**[?Operations\ListVerificationPackagesResponse](../../Models/Operations/ListVerificationPackagesResponse.md)**
 
 ### Errors
 
@@ -269,13 +269,13 @@ if ($response->verificationPackages !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAssessmentPackage2
+## patchAssessmentPackage
 
 Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAssessmentPackage2" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -291,7 +291,113 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAssessmentPackage2Request(
+$request = new Operations\PatchAssessmentPackageRequest(
+    assessmentPackage: new Shared\AssessmentPackage(
+        type: Shared\AssessmentPackageType::BackgroundCheck,
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->package->patchAssessmentPackage(
+    request: $request
+);
+
+if ($response->assessmentPackage !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAssessmentPackageRequest](../../Models/Operations/PatchAssessmentPackageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAssessmentPackageResponse](../../Models/Operations/PatchAssessmentPackageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAssessmentPackage
+
+Delete an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAssessmentPackage" method="delete" path="/assessment/{connection_id}/package/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAssessmentPackageRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->package->removeAssessmentPackage(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAssessmentPackageRequest](../../Models/Operations/RemoveAssessmentPackageRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAssessmentPackageResponse](../../Models/Operations/RemoveAssessmentPackageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAssessmentPackage
+
+Update an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
         type: Shared\AssessmentPackageType::Other,
     ),
@@ -299,7 +405,7 @@ $request = new Operations\PatchAssessmentPackage2Request(
     id: '<id>',
 );
 
-$response = $sdk->package->patchAssessmentPackage2(
+$response = $sdk->package->updateAssessmentPackage(
     request: $request
 );
 
@@ -312,117 +418,11 @@ if ($response->assessmentPackage !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAssessmentPackage2Request](../../Models/Operations/PatchAssessmentPackage2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAssessmentPackageRequest](../../Models/Operations/UpdateAssessmentPackageRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAssessmentPackage2Response](../../Models/Operations/PatchAssessmentPackage2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAssessmentPackage2
-
-Delete an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAssessmentPackage2" method="delete" path="/assessment/{connection_id}/package/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAssessmentPackage2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->package->removeAssessmentPackage2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAssessmentPackage2Request](../../Models/Operations/RemoveAssessmentPackage2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAssessmentPackage2Response](../../Models/Operations/RemoveAssessmentPackage2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAssessmentPackage2
-
-Update an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAssessmentPackage2" method="put" path="/assessment/{connection_id}/package/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAssessmentPackage2Request(
-    assessmentPackage: new Shared\AssessmentPackage(
-        type: Shared\AssessmentPackageType::Other,
-    ),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->package->updateAssessmentPackage2(
-    request: $request
-);
-
-if ($response->assessmentPackage !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAssessmentPackage2Request](../../Models/Operations/UpdateAssessmentPackage2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAssessmentPackage2Response](../../Models/Operations/UpdateAssessmentPackage2Response.md)**
+**[?Operations\UpdateAssessmentPackageResponse](../../Models/Operations/UpdateAssessmentPackageResponse.md)**
 
 ### Errors
 

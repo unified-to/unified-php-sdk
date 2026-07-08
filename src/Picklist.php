@@ -47,22 +47,22 @@ class Picklist
     /**
      * List all picklists
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCrmPicklists2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCrmPicklists2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCrmPicklistsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCrmPicklistsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCrmPicklists2(Operations\ListCrmPicklists2Request $request, ?Options $options = null): Operations\ListCrmPicklists2Response
+    public function listCrmPicklists(Operations\ListCrmPicklistsRequest $request, ?Options $options = null): Operations\ListCrmPicklistsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/picklist', Operations\ListCrmPicklists2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/crm/{connection_id}/picklist', Operations\ListCrmPicklistsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCrmPicklists2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCrmPicklistsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmPicklists2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCrmPicklists', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Picklist
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CrmPicklist>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCrmPicklists2Response(
+                $response = new Operations\ListCrmPicklistsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [createUcComment2](#createuccomment2) - Create a comment
-* [createUcContact2](#createuccontact2) - Create a contact
-* [createUcRecording2](#createucrecording2) - Create a recording
-* [getUcCall2](#getuccall2) - Retrieve a call
-* [getUcComment2](#getuccomment2) - Retrieve a comment
-* [getUcContact2](#getuccontact2) - Retrieve a contact
-* [getUcRecording2](#getucrecording2) - Retrieve a recording
-* [listUcCalls2](#listuccalls2) - List all calls
-* [listUcComments2](#listuccomments2) - List all comments
-* [listUcContacts2](#listuccontacts2) - List all contacts
-* [listUcRecordings2](#listucrecordings2) - List all recordings
-* [patchUcComment2](#patchuccomment2) - Update a comment
-* [patchUcContact2](#patchuccontact2) - Update a contact
-* [patchUcRecording2](#patchucrecording2) - Update a recording
-* [removeUcComment2](#removeuccomment2) - Remove a comment
-* [removeUcContact2](#removeuccontact2) - Remove a contact
-* [removeUcRecording2](#removeucrecording2) - Remove a recording
-* [updateUcComment2](#updateuccomment2) - Update a comment
-* [updateUcContact2](#updateuccontact2) - Update a contact
-* [updateUcRecording2](#updateucrecording2) - Update a recording
+* [createUcComment](#createuccomment) - Create a comment
+* [createUcContact](#createuccontact) - Create a contact
+* [createUcRecording](#createucrecording) - Create a recording
+* [getUcCall](#getuccall) - Retrieve a call
+* [getUcComment](#getuccomment) - Retrieve a comment
+* [getUcContact](#getuccontact) - Retrieve a contact
+* [getUcRecording](#getucrecording) - Retrieve a recording
+* [listUcCalls](#listuccalls) - List all calls
+* [listUcComments](#listuccomments) - List all comments
+* [listUcContacts](#listuccontacts) - List all contacts
+* [listUcRecordings](#listucrecordings) - List all recordings
+* [patchUcComment](#patchuccomment) - Update a comment
+* [patchUcContact](#patchuccontact) - Update a contact
+* [patchUcRecording](#patchucrecording) - Update a recording
+* [removeUcComment](#removeuccomment) - Remove a comment
+* [removeUcContact](#removeuccontact) - Remove a contact
+* [removeUcRecording](#removeucrecording) - Remove a recording
+* [updateUcComment](#updateuccomment) - Update a comment
+* [updateUcContact](#updateuccontact) - Update a contact
+* [updateUcRecording](#updateucrecording) - Update a recording
 
-## createUcComment2
+## createUcComment
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcComment2" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -47,12 +47,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateUcComment2Request(
+$request = new Operations\CreateUcCommentRequest(
     ucComment: new Shared\UcComment(),
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->createUcComment2(
+$response = $sdk->uc->createUcComment(
     request: $request
 );
 
@@ -63,13 +63,13 @@ if ($response->ucComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateUcComment2Request](../../Models/Operations/CreateUcComment2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateUcCommentRequest](../../Models/Operations/CreateUcCommentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateUcComment2Response](../../Models/Operations/CreateUcComment2Response.md)**
+**[?Operations\CreateUcCommentResponse](../../Models/Operations/CreateUcCommentResponse.md)**
 
 ### Errors
 
@@ -77,13 +77,13 @@ if ($response->ucComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createUcContact2
+## createUcContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -99,12 +99,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateUcContact2Request(
+$request = new Operations\CreateUcContactRequest(
     ucContact: new Shared\UcContact(),
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->createUcContact2(
+$response = $sdk->uc->createUcContact(
     request: $request
 );
 
@@ -115,13 +115,13 @@ if ($response->ucContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\CreateUcContact2Request](../../Models/Operations/CreateUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateUcContactRequest](../../Models/Operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\CreateUcContact2Response](../../Models/Operations/CreateUcContact2Response.md)**
+**[?Operations\CreateUcContactResponse](../../Models/Operations/CreateUcContactResponse.md)**
 
 ### Errors
 
@@ -129,13 +129,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createUcRecording2
+## createUcRecording
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -151,12 +151,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateUcRecording2Request(
+$request = new Operations\CreateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->createUcRecording2(
+$response = $sdk->uc->createUcRecording(
     request: $request
 );
 
@@ -167,13 +167,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\CreateUcRecording2Request](../../Models/Operations/CreateUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateUcRecordingRequest](../../Models/Operations/CreateUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\CreateUcRecording2Response](../../Models/Operations/CreateUcRecording2Response.md)**
+**[?Operations\CreateUcRecordingResponse](../../Models/Operations/CreateUcRecordingResponse.md)**
 
 ### Errors
 
@@ -181,13 +181,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getUcCall2
+## getUcCall
 
 Retrieve a call
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcCall2" method="get" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcCall" method="get" path="/uc/{connection_id}/call/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -202,12 +202,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcCall2Request(
+$request = new Operations\GetUcCallRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->getUcCall2(
+$response = $sdk->uc->getUcCall(
     request: $request
 );
 
@@ -218,13 +218,13 @@ if ($response->ucCall !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\GetUcCall2Request](../../Models/Operations/GetUcCall2Request.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Operations\GetUcCallRequest](../../Models/Operations/GetUcCallRequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 ### Response
 
-**[?Operations\GetUcCall2Response](../../Models/Operations/GetUcCall2Response.md)**
+**[?Operations\GetUcCallResponse](../../Models/Operations/GetUcCallResponse.md)**
 
 ### Errors
 
@@ -232,13 +232,13 @@ if ($response->ucCall !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getUcComment2
+## getUcComment
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcComment2" method="get" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -253,12 +253,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcComment2Request(
+$request = new Operations\GetUcCommentRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->getUcComment2(
+$response = $sdk->uc->getUcComment(
     request: $request
 );
 
@@ -269,13 +269,13 @@ if ($response->ucComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetUcComment2Request](../../Models/Operations/GetUcComment2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetUcCommentRequest](../../Models/Operations/GetUcCommentRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetUcComment2Response](../../Models/Operations/GetUcComment2Response.md)**
+**[?Operations\GetUcCommentResponse](../../Models/Operations/GetUcCommentResponse.md)**
 
 ### Errors
 
@@ -283,13 +283,13 @@ if ($response->ucComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getUcContact2
+## getUcContact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -304,12 +304,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcContact2Request(
+$request = new Operations\GetUcContactRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->getUcContact2(
+$response = $sdk->uc->getUcContact(
     request: $request
 );
 
@@ -320,13 +320,13 @@ if ($response->ucContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\GetUcContact2Request](../../Models/Operations/GetUcContact2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetUcContactRequest](../../Models/Operations/GetUcContactRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\GetUcContact2Response](../../Models/Operations/GetUcContact2Response.md)**
+**[?Operations\GetUcContactResponse](../../Models/Operations/GetUcContactResponse.md)**
 
 ### Errors
 
@@ -334,13 +334,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getUcRecording2
+## getUcRecording
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -355,12 +355,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetUcRecording2Request(
+$request = new Operations\GetUcRecordingRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->getUcRecording2(
+$response = $sdk->uc->getUcRecording(
     request: $request
 );
 
@@ -371,13 +371,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetUcRecording2Request](../../Models/Operations/GetUcRecording2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetUcRecordingRequest](../../Models/Operations/GetUcRecordingRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetUcRecording2Response](../../Models/Operations/GetUcRecording2Response.md)**
+**[?Operations\GetUcRecordingResponse](../../Models/Operations/GetUcRecordingResponse.md)**
 
 ### Errors
 
@@ -385,13 +385,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcCalls2
+## listUcCalls
 
 List all calls
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcCalls2" method="get" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="php" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```php
 declare(strict_types=1);
 
@@ -406,11 +406,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcCalls2Request(
+$request = new Operations\ListUcCallsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->listUcCalls2(
+$response = $sdk->uc->listUcCalls(
     request: $request
 );
 
@@ -421,13 +421,13 @@ if ($response->ucCalls !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\ListUcCalls2Request](../../Models/Operations/ListUcCalls2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListUcCallsRequest](../../Models/Operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\ListUcCalls2Response](../../Models/Operations/ListUcCalls2Response.md)**
+**[?Operations\ListUcCallsResponse](../../Models/Operations/ListUcCallsResponse.md)**
 
 ### Errors
 
@@ -435,13 +435,13 @@ if ($response->ucCalls !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcComments2
+## listUcComments
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcComments2" method="get" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -456,11 +456,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcComments2Request(
+$request = new Operations\ListUcCommentsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->listUcComments2(
+$response = $sdk->uc->listUcComments(
     request: $request
 );
 
@@ -471,13 +471,13 @@ if ($response->ucComments !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListUcComments2Request](../../Models/Operations/ListUcComments2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListUcCommentsRequest](../../Models/Operations/ListUcCommentsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListUcComments2Response](../../Models/Operations/ListUcComments2Response.md)**
+**[?Operations\ListUcCommentsResponse](../../Models/Operations/ListUcCommentsResponse.md)**
 
 ### Errors
 
@@ -485,13 +485,13 @@ if ($response->ucComments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcContacts2
+## listUcContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -506,11 +506,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcContacts2Request(
+$request = new Operations\ListUcContactsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->listUcContacts2(
+$response = $sdk->uc->listUcContacts(
     request: $request
 );
 
@@ -521,13 +521,13 @@ if ($response->ucContacts !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\ListUcContacts2Request](../../Models/Operations/ListUcContacts2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListUcContactsRequest](../../Models/Operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\ListUcContacts2Response](../../Models/Operations/ListUcContacts2Response.md)**
+**[?Operations\ListUcContactsResponse](../../Models/Operations/ListUcContactsResponse.md)**
 
 ### Errors
 
@@ -535,13 +535,13 @@ if ($response->ucContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listUcRecordings2
+## listUcRecordings
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```php
 declare(strict_types=1);
 
@@ -556,11 +556,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListUcRecordings2Request(
+$request = new Operations\ListUcRecordingsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->uc->listUcRecordings2(
+$response = $sdk->uc->listUcRecordings(
     request: $request
 );
 
@@ -571,13 +571,13 @@ if ($response->ucRecordings !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListUcRecordings2Request](../../Models/Operations/ListUcRecordings2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListUcRecordingsRequest](../../Models/Operations/ListUcRecordingsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListUcRecordings2Response](../../Models/Operations/ListUcRecordings2Response.md)**
+**[?Operations\ListUcRecordingsResponse](../../Models/Operations/ListUcRecordingsResponse.md)**
 
 ### Errors
 
@@ -585,13 +585,13 @@ if ($response->ucRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchUcComment2
+## patchUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcComment2" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -607,13 +607,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchUcComment2Request(
+$request = new Operations\PatchUcCommentRequest(
     ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->patchUcComment2(
+$response = $sdk->uc->patchUcComment(
     request: $request
 );
 
@@ -624,13 +624,13 @@ if ($response->ucComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchUcComment2Request](../../Models/Operations/PatchUcComment2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchUcCommentRequest](../../Models/Operations/PatchUcCommentRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchUcComment2Response](../../Models/Operations/PatchUcComment2Response.md)**
+**[?Operations\PatchUcCommentResponse](../../Models/Operations/PatchUcCommentResponse.md)**
 
 ### Errors
 
@@ -638,13 +638,13 @@ if ($response->ucComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchUcContact2
+## patchUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -660,13 +660,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchUcContact2Request(
+$request = new Operations\PatchUcContactRequest(
     ucContact: new Shared\UcContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->patchUcContact2(
+$response = $sdk->uc->patchUcContact(
     request: $request
 );
 
@@ -677,13 +677,13 @@ if ($response->ucContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\PatchUcContact2Request](../../Models/Operations/PatchUcContact2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchUcContactRequest](../../Models/Operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchUcContact2Response](../../Models/Operations/PatchUcContact2Response.md)**
+**[?Operations\PatchUcContactResponse](../../Models/Operations/PatchUcContactResponse.md)**
 
 ### Errors
 
@@ -691,13 +691,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchUcRecording2
+## patchUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -713,13 +713,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchUcRecording2Request(
+$request = new Operations\PatchUcRecordingRequest(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->patchUcRecording2(
+$response = $sdk->uc->patchUcRecording(
     request: $request
 );
 
@@ -730,13 +730,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\PatchUcRecording2Request](../../Models/Operations/PatchUcRecording2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchUcRecordingRequest](../../Models/Operations/PatchUcRecordingRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchUcRecording2Response](../../Models/Operations/PatchUcRecording2Response.md)**
+**[?Operations\PatchUcRecordingResponse](../../Models/Operations/PatchUcRecordingResponse.md)**
 
 ### Errors
 
@@ -744,13 +744,13 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeUcComment2
+## removeUcComment
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeUcComment2" method="delete" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -765,12 +765,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveUcComment2Request(
+$request = new Operations\RemoveUcCommentRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->removeUcComment2(
+$response = $sdk->uc->removeUcComment(
     request: $request
 );
 
@@ -781,13 +781,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveUcComment2Request](../../Models/Operations/RemoveUcComment2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveUcCommentRequest](../../Models/Operations/RemoveUcCommentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\RemoveUcComment2Response](../../Models/Operations/RemoveUcComment2Response.md)**
+**[?Operations\RemoveUcCommentResponse](../../Models/Operations/RemoveUcCommentResponse.md)**
 
 ### Errors
 
@@ -795,13 +795,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeUcContact2
+## removeUcContact
 
 Remove a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -816,12 +816,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveUcContact2Request(
+$request = new Operations\RemoveUcContactRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->removeUcContact2(
+$response = $sdk->uc->removeUcContact(
     request: $request
 );
 
@@ -832,13 +832,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\RemoveUcContact2Request](../../Models/Operations/RemoveUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveUcContactRequest](../../Models/Operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\RemoveUcContact2Response](../../Models/Operations/RemoveUcContact2Response.md)**
+**[?Operations\RemoveUcContactResponse](../../Models/Operations/RemoveUcContactResponse.md)**
 
 ### Errors
 
@@ -846,13 +846,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeUcRecording2
+## removeUcRecording
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -867,12 +867,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveUcRecording2Request(
+$request = new Operations\RemoveUcRecordingRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->removeUcRecording2(
+$response = $sdk->uc->removeUcRecording(
     request: $request
 );
 
@@ -883,13 +883,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\RemoveUcRecording2Request](../../Models/Operations/RemoveUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveUcRecordingRequest](../../Models/Operations/RemoveUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\RemoveUcRecording2Response](../../Models/Operations/RemoveUcRecording2Response.md)**
+**[?Operations\RemoveUcRecordingResponse](../../Models/Operations/RemoveUcRecordingResponse.md)**
 
 ### Errors
 
@@ -897,13 +897,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateUcComment2
+## updateUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcComment2" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -919,13 +919,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateUcComment2Request(
+$request = new Operations\UpdateUcCommentRequest(
     ucComment: new Shared\UcComment(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->updateUcComment2(
+$response = $sdk->uc->updateUcComment(
     request: $request
 );
 
@@ -936,13 +936,13 @@ if ($response->ucComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateUcComment2Request](../../Models/Operations/UpdateUcComment2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateUcCommentRequest](../../Models/Operations/UpdateUcCommentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\UpdateUcComment2Response](../../Models/Operations/UpdateUcComment2Response.md)**
+**[?Operations\UpdateUcCommentResponse](../../Models/Operations/UpdateUcCommentResponse.md)**
 
 ### Errors
 
@@ -950,13 +950,13 @@ if ($response->ucComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateUcContact2
+## updateUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -972,13 +972,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateUcContact2Request(
+$request = new Operations\UpdateUcContactRequest(
     ucContact: new Shared\UcContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->updateUcContact2(
+$response = $sdk->uc->updateUcContact(
     request: $request
 );
 
@@ -989,13 +989,13 @@ if ($response->ucContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\UpdateUcContact2Request](../../Models/Operations/UpdateUcContact2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateUcContactRequest](../../Models/Operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\UpdateUcContact2Response](../../Models/Operations/UpdateUcContact2Response.md)**
+**[?Operations\UpdateUcContactResponse](../../Models/Operations/UpdateUcContactResponse.md)**
 
 ### Errors
 
@@ -1003,13 +1003,13 @@ if ($response->ucContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateUcRecording2
+## updateUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1025,13 +1025,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateUcRecording2Request(
+$request = new Operations\UpdateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->uc->updateUcRecording2(
+$response = $sdk->uc->updateUcRecording(
     request: $request
 );
 
@@ -1042,13 +1042,13 @@ if ($response->ucRecording !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\UpdateUcRecording2Request](../../Models/Operations/UpdateUcRecording2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateUcRecordingRequest](../../Models/Operations/UpdateUcRecordingRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\UpdateUcRecording2Response](../../Models/Operations/UpdateUcRecording2Response.md)**
+**[?Operations\UpdateUcRecordingResponse](../../Models/Operations/UpdateUcRecordingResponse.md)**
 
 ### Errors
 

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceItemvariant2](#createcommerceitemvariant2) - Create an itemvariant
-* [getCommerceItemvariant2](#getcommerceitemvariant2) - Retrieve an itemvariant
-* [listCommerceItemvariants2](#listcommerceitemvariants2) - List all itemvariants
-* [patchCommerceItemvariant2](#patchcommerceitemvariant2) - Update an itemvariant
-* [removeCommerceItemvariant2](#removecommerceitemvariant2) - Remove an itemvariant
-* [updateCommerceItemvariant2](#updatecommerceitemvariant2) - Update an itemvariant
+* [createCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
+* [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
+* [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
+* [patchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
+* [removeCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
+* [updateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
 
-## createCommerceItemvariant2
+## createCommerceItemvariant
 
 Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceItemvariant2Request(
+$request = new Operations\CreateCommerceItemvariantRequest(
     commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
 );
 
-$response = $sdk->itemvariant->createCommerceItemvariant2(
+$response = $sdk->itemvariant->createCommerceItemvariant(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceItemvariant !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\CreateCommerceItemvariant2Request](../../Models/Operations/CreateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreateCommerceItemvariantRequest](../../Models/Operations/CreateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\CreateCommerceItemvariant2Response](../../Models/Operations/CreateCommerceItemvariant2Response.md)**
+**[?Operations\CreateCommerceItemvariantResponse](../../Models/Operations/CreateCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceItemvariant !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceItemvariant2
+## getCommerceItemvariant
 
 Retrieve an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceItemvariant2Request(
+$request = new Operations\GetCommerceItemvariantRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->itemvariant->getCommerceItemvariant2(
+$response = $sdk->itemvariant->getCommerceItemvariant(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceItemvariant !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\GetCommerceItemvariant2Request](../../Models/Operations/GetCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetCommerceItemvariantRequest](../../Models/Operations/GetCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\GetCommerceItemvariant2Response](../../Models/Operations/GetCommerceItemvariant2Response.md)**
+**[?Operations\GetCommerceItemvariantResponse](../../Models/Operations/GetCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceItemvariant !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceItemvariants2
+## listCommerceItemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="php" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceItemvariants2Request(
+$request = new Operations\ListCommerceItemvariantsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->itemvariant->listCommerceItemvariants2(
+$response = $sdk->itemvariant->listCommerceItemvariants(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceItemvariants !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListCommerceItemvariants2Request](../../Models/Operations/ListCommerceItemvariants2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListCommerceItemvariantsRequest](../../Models/Operations/ListCommerceItemvariantsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListCommerceItemvariants2Response](../../Models/Operations/ListCommerceItemvariants2Response.md)**
+**[?Operations\ListCommerceItemvariantsResponse](../../Models/Operations/ListCommerceItemvariantsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceItemvariants !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceItemvariant2
+## patchCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceItemvariant2Request(
+$request = new Operations\PatchCommerceItemvariantRequest(
     commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->itemvariant->patchCommerceItemvariant2(
+$response = $sdk->itemvariant->patchCommerceItemvariant(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceItemvariant !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\PatchCommerceItemvariant2Request](../../Models/Operations/PatchCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchCommerceItemvariantRequest](../../Models/Operations/PatchCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\PatchCommerceItemvariant2Response](../../Models/Operations/PatchCommerceItemvariant2Response.md)**
+**[?Operations\PatchCommerceItemvariantResponse](../../Models/Operations/PatchCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceItemvariant !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceItemvariant2
+## removeCommerceItemvariant
 
 Remove an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceItemvariant2Request(
+$request = new Operations\RemoveCommerceItemvariantRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->itemvariant->removeCommerceItemvariant2(
+$response = $sdk->itemvariant->removeCommerceItemvariant(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\RemoveCommerceItemvariant2Request](../../Models/Operations/RemoveCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemoveCommerceItemvariantRequest](../../Models/Operations/RemoveCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\RemoveCommerceItemvariant2Response](../../Models/Operations/RemoveCommerceItemvariant2Response.md)**
+**[?Operations\RemoveCommerceItemvariantResponse](../../Models/Operations/RemoveCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceItemvariant2
+## updateCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceItemvariant2Request(
+$request = new Operations\UpdateCommerceItemvariantRequest(
     commerceItemvariant: new Shared\CommerceItemvariant(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->itemvariant->updateCommerceItemvariant2(
+$response = $sdk->itemvariant->updateCommerceItemvariant(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceItemvariant !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\UpdateCommerceItemvariant2Request](../../Models/Operations/UpdateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdateCommerceItemvariantRequest](../../Models/Operations/UpdateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\UpdateCommerceItemvariant2Response](../../Models/Operations/UpdateCommerceItemvariant2Response.md)**
+**[?Operations\UpdateCommerceItemvariantResponse](../../Models/Operations/UpdateCommerceItemvariantResponse.md)**
 
 ### Errors
 

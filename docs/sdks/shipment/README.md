@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createShippingShipment2](#createshippingshipment2) - Create a shipment
-* [getShippingShipment2](#getshippingshipment2) - Retrieve a shipment
-* [listShippingShipments2](#listshippingshipments2) - List all shipments
-* [patchShippingShipment2](#patchshippingshipment2) - Update a shipment
-* [removeShippingShipment2](#removeshippingshipment2) - Remove a shipment
-* [updateShippingShipment2](#updateshippingshipment2) - Update a shipment
+* [createShippingShipment](#createshippingshipment) - Create a shipment
+* [getShippingShipment](#getshippingshipment) - Retrieve a shipment
+* [listShippingShipments](#listshippingshipments) - List all shipments
+* [patchShippingShipment](#patchshippingshipment) - Update a shipment
+* [removeShippingShipment](#removeshippingshipment) - Remove a shipment
+* [updateShippingShipment](#updateshippingshipment) - Update a shipment
 
-## createShippingShipment2
+## createShippingShipment
 
 Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingShipment2" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="php" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateShippingShipment2Request(
+$request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(),
     connectionId: '<id>',
 );
 
-$response = $sdk->shipment->createShippingShipment2(
+$response = $sdk->shipment->createShippingShipment(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->shippingShipment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateShippingShipment2Request](../../Models/Operations/CreateShippingShipment2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateShippingShipmentRequest](../../Models/Operations/CreateShippingShipmentRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateShippingShipment2Response](../../Models/Operations/CreateShippingShipment2Response.md)**
+**[?Operations\CreateShippingShipmentResponse](../../Models/Operations/CreateShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->shippingShipment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getShippingShipment2
+## getShippingShipment
 
 Retrieve a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getShippingShipment2" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="getShippingShipment" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetShippingShipment2Request(
+$request = new Operations\GetShippingShipmentRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->shipment->getShippingShipment2(
+$response = $sdk->shipment->getShippingShipment(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->shippingShipment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetShippingShipment2Request](../../Models/Operations/GetShippingShipment2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetShippingShipmentRequest](../../Models/Operations/GetShippingShipmentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetShippingShipment2Response](../../Models/Operations/GetShippingShipment2Response.md)**
+**[?Operations\GetShippingShipmentResponse](../../Models/Operations/GetShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->shippingShipment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listShippingShipments2
+## listShippingShipments
 
 List all shipments
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listShippingShipments2" method="get" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="php" operationID="listShippingShipments" method="get" path="/shipping/{connection_id}/shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListShippingShipments2Request(
+$request = new Operations\ListShippingShipmentsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->shipment->listShippingShipments2(
+$response = $sdk->shipment->listShippingShipments(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->shippingShipments !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListShippingShipments2Request](../../Models/Operations/ListShippingShipments2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListShippingShipmentsRequest](../../Models/Operations/ListShippingShipmentsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListShippingShipments2Response](../../Models/Operations/ListShippingShipments2Response.md)**
+**[?Operations\ListShippingShipmentsResponse](../../Models/Operations/ListShippingShipmentsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->shippingShipments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchShippingShipment2
+## patchShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchShippingShipment2" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchShippingShipment2Request(
+$request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->shipment->patchShippingShipment2(
+$response = $sdk->shipment->patchShippingShipment(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->shippingShipment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchShippingShipment2Request](../../Models/Operations/PatchShippingShipment2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchShippingShipmentRequest](../../Models/Operations/PatchShippingShipmentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchShippingShipment2Response](../../Models/Operations/PatchShippingShipment2Response.md)**
+**[?Operations\PatchShippingShipmentResponse](../../Models/Operations/PatchShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->shippingShipment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeShippingShipment2
+## removeShippingShipment
 
 Remove a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeShippingShipment2" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeShippingShipment" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveShippingShipment2Request(
+$request = new Operations\RemoveShippingShipmentRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->shipment->removeShippingShipment2(
+$response = $sdk->shipment->removeShippingShipment(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveShippingShipment2Request](../../Models/Operations/RemoveShippingShipment2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveShippingShipmentRequest](../../Models/Operations/RemoveShippingShipmentRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\RemoveShippingShipment2Response](../../Models/Operations/RemoveShippingShipment2Response.md)**
+**[?Operations\RemoveShippingShipmentResponse](../../Models/Operations/RemoveShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateShippingShipment2
+## updateShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateShippingShipment2" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateShippingShipment2Request(
+$request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->shipment->updateShippingShipment2(
+$response = $sdk->shipment->updateShippingShipment(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->shippingShipment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateShippingShipment2Request](../../Models/Operations/UpdateShippingShipment2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateShippingShipmentRequest](../../Models/Operations/UpdateShippingShipmentRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateShippingShipment2Response](../../Models/Operations/UpdateShippingShipment2Response.md)**
+**[?Operations\UpdateShippingShipmentResponse](../../Models/Operations/UpdateShippingShipmentResponse.md)**
 
 ### Errors
 

@@ -47,14 +47,14 @@ class Location
     /**
      * Create a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createCommerceLocation2(Operations\CreateCommerceLocation2Request $request, ?Options $options = null): Operations\CreateCommerceLocation2Response
+    public function createCommerceLocation(Operations\CreateCommerceLocationRequest $request, ?Options $options = null): Operations\CreateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\CreateCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\CreateCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -63,11 +63,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateCommerceLocation2Response(
+                $response = new Operations\CreateCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Location
     /**
      * Create a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisLocation2(Operations\CreateHrisLocation2Request $request, ?Options $options = null): Operations\CreateHrisLocation2Response
+    public function createHrisLocation(Operations\CreateHrisLocationRequest $request, ?Options $options = null): Operations\CreateHrisLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\CreateHrisLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\CreateHrisLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
@@ -131,11 +131,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisLocation2Response(
+                $response = new Operations\CreateHrisLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,22 +183,22 @@ class Location
     /**
      * Retrieve a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetClubsLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetClubsLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetClubsLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetClubsLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getClubsLocation2(Operations\GetClubsLocation2Request $request, ?Options $options = null): Operations\GetClubsLocation2Response
+    public function getClubsLocation(Operations\GetClubsLocationRequest $request, ?Options $options = null): Operations\GetClubsLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location/{id}', Operations\GetClubsLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location/{id}', Operations\GetClubsLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetClubsLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetClubsLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getClubsLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -224,7 +224,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\ClubsLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetClubsLocation2Response(
+                $response = new Operations\GetClubsLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -246,22 +246,22 @@ class Location
     /**
      * Retrieve a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getCommerceLocation2(Operations\GetCommerceLocation2Request $request, ?Options $options = null): Operations\GetCommerceLocation2Response
+    public function getCommerceLocation(Operations\GetCommerceLocationRequest $request, ?Options $options = null): Operations\GetCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\GetCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\GetCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetCommerceLocation2Response(
+                $response = new Operations\GetCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,22 +309,22 @@ class Location
     /**
      * Retrieve a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisLocation2(Operations\GetHrisLocation2Request $request, ?Options $options = null): Operations\GetHrisLocation2Response
+    public function getHrisLocation(Operations\GetHrisLocationRequest $request, ?Options $options = null): Operations\GetHrisLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\GetHrisLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\GetHrisLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -350,7 +350,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisLocation2Response(
+                $response = new Operations\GetHrisLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -372,22 +372,22 @@ class Location
     /**
      * List all locations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListClubsLocations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListClubsLocations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListClubsLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListClubsLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listClubsLocations2(Operations\ListClubsLocations2Request $request, ?Options $options = null): Operations\ListClubsLocations2Response
+    public function listClubsLocations(Operations\ListClubsLocationsRequest $request, ?Options $options = null): Operations\ListClubsLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location', Operations\ListClubsLocations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clubs/{connection_id}/location', Operations\ListClubsLocationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListClubsLocations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListClubsLocationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsLocations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listClubsLocations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -413,7 +413,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\ClubsLocation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListClubsLocations2Response(
+                $response = new Operations\ListClubsLocationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -435,22 +435,22 @@ class Location
     /**
      * List all locations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listCommerceLocations2(Operations\ListCommerceLocations2Request $request, ?Options $options = null): Operations\ListCommerceLocations2Response
+    public function listCommerceLocations(Operations\ListCommerceLocationsRequest $request, ?Options $options = null): Operations\ListCommerceLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\ListCommerceLocations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location', Operations\ListCommerceLocationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceLocations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListCommerceLocationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceLocations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listCommerceLocations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -476,7 +476,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\CommerceLocation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListCommerceLocations2Response(
+                $response = new Operations\ListCommerceLocationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -498,22 +498,22 @@ class Location
     /**
      * List all locations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisLocations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisLocations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisLocations2(Operations\ListHrisLocations2Request $request, ?Options $options = null): Operations\ListHrisLocations2Response
+    public function listHrisLocations(Operations\ListHrisLocationsRequest $request, ?Options $options = null): Operations\ListHrisLocationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\ListHrisLocations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location', Operations\ListHrisLocationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisLocations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisLocationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisLocations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisLocations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -539,7 +539,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisLocation>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisLocations2Response(
+                $response = new Operations\ListHrisLocationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -561,14 +561,14 @@ class Location
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchCommerceLocation2(Operations\PatchCommerceLocation2Request $request, ?Options $options = null): Operations\PatchCommerceLocation2Response
+    public function patchCommerceLocation(Operations\PatchCommerceLocationRequest $request, ?Options $options = null): Operations\PatchCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\PatchCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\PatchCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -577,11 +577,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -607,7 +607,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchCommerceLocation2Response(
+                $response = new Operations\PatchCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -629,14 +629,14 @@ class Location
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisLocation2(Operations\PatchHrisLocation2Request $request, ?Options $options = null): Operations\PatchHrisLocation2Response
+    public function patchHrisLocation(Operations\PatchHrisLocationRequest $request, ?Options $options = null): Operations\PatchHrisLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\PatchHrisLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\PatchHrisLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
@@ -645,11 +645,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -675,7 +675,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisLocation2Response(
+                $response = new Operations\PatchHrisLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -697,20 +697,20 @@ class Location
     /**
      * Remove a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeCommerceLocation2(Operations\RemoveCommerceLocation2Request $request, ?Options $options = null): Operations\RemoveCommerceLocation2Response
+    public function removeCommerceLocation(Operations\RemoveCommerceLocationRequest $request, ?Options $options = null): Operations\RemoveCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\RemoveCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\RemoveCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -731,7 +731,7 @@ class Location
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceLocation2Response(
+            return new Operations\RemoveCommerceLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -743,7 +743,7 @@ class Location
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveCommerceLocation2Response(
+            return new Operations\RemoveCommerceLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -754,20 +754,20 @@ class Location
     /**
      * Remove a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisLocation2(Operations\RemoveHrisLocation2Request $request, ?Options $options = null): Operations\RemoveHrisLocation2Response
+    public function removeHrisLocation(Operations\RemoveHrisLocationRequest $request, ?Options $options = null): Operations\RemoveHrisLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\RemoveHrisLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\RemoveHrisLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -788,7 +788,7 @@ class Location
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisLocation2Response(
+            return new Operations\RemoveHrisLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -800,7 +800,7 @@ class Location
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisLocation2Response(
+            return new Operations\RemoveHrisLocationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -811,14 +811,14 @@ class Location
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateCommerceLocation2(Operations\UpdateCommerceLocation2Request $request, ?Options $options = null): Operations\UpdateCommerceLocation2Response
+    public function updateCommerceLocation(Operations\UpdateCommerceLocationRequest $request, ?Options $options = null): Operations\UpdateCommerceLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\UpdateCommerceLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/commerce/{connection_id}/location/{id}', Operations\UpdateCommerceLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'commerceLocation', 'json');
@@ -827,11 +827,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateCommerceLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateCommerceLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -857,7 +857,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\CommerceLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateCommerceLocation2Response(
+                $response = new Operations\UpdateCommerceLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -879,14 +879,14 @@ class Location
     /**
      * Update a location
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocation2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocation2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisLocation2(Operations\UpdateHrisLocation2Request $request, ?Options $options = null): Operations\UpdateHrisLocation2Response
+    public function updateHrisLocation(Operations\UpdateHrisLocationRequest $request, ?Options $options = null): Operations\UpdateHrisLocationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\UpdateHrisLocation2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/location/{id}', Operations\UpdateHrisLocationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisLocation', 'json');
@@ -895,11 +895,11 @@ class Location
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisLocation2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisLocationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisLocation2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisLocation', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -925,7 +925,7 @@ class Location
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisLocation', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisLocation2Response(
+                $response = new Operations\UpdateHrisLocationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -47,14 +47,14 @@ class ListT
     /**
      * Create a list
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateMartechList2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateMartechList2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMartechList2(Operations\CreateMartechList2Request $request, ?Options $options = null): Operations\CreateMartechList2Response
+    public function createMartechList(Operations\CreateMartechListRequest $request, ?Options $options = null): Operations\CreateMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\CreateMartechList2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\CreateMartechListRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'marketingList', 'json');
@@ -63,11 +63,11 @@ class ListT
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateMartechList2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateMartechListRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMartechList2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMartechList', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class ListT
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MarketingList', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateMartechList2Response(
+                $response = new Operations\CreateMartechListResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class ListT
     /**
      * Retrieve a list
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetMartechList2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetMartechList2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMartechList2(Operations\GetMartechList2Request $request, ?Options $options = null): Operations\GetMartechList2Response
+    public function getMartechList(Operations\GetMartechListRequest $request, ?Options $options = null): Operations\GetMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\GetMartechList2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\GetMartechListRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetMartechList2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetMartechListRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMartechList2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMartechList', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class ListT
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MarketingList', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetMartechList2Response(
+                $response = new Operations\GetMartechListResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class ListT
     /**
      * List all lists
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListMartechLists2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListMartechLists2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListMartechListsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMartechLists2(Operations\ListMartechLists2Request $request, ?Options $options = null): Operations\ListMartechLists2Response
+    public function listMartechLists(Operations\ListMartechListsRequest $request, ?Options $options = null): Operations\ListMartechListsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\ListMartechLists2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list', Operations\ListMartechListsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListMartechLists2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListMartechListsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMartechLists2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMartechLists', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class ListT
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\MarketingList>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListMartechLists2Response(
+                $response = new Operations\ListMartechListsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class ListT
     /**
      * Update a list
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchMartechList2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchMartechList2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMartechList2(Operations\PatchMartechList2Request $request, ?Options $options = null): Operations\PatchMartechList2Response
+    public function patchMartechList(Operations\PatchMartechListRequest $request, ?Options $options = null): Operations\PatchMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\PatchMartechList2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\PatchMartechListRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'marketingList', 'json');
@@ -257,11 +257,11 @@ class ListT
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchMartechList2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchMartechListRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMartechList2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMartechList', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class ListT
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MarketingList', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchMartechList2Response(
+                $response = new Operations\PatchMartechListResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class ListT
     /**
      * Remove a list
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechList2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveMartechList2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMartechList2(Operations\RemoveMartechList2Request $request, ?Options $options = null): Operations\RemoveMartechList2Response
+    public function removeMartechList(Operations\RemoveMartechListRequest $request, ?Options $options = null): Operations\RemoveMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\RemoveMartechList2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\RemoveMartechListRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMartechList2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMartechList', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class ListT
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMartechList2Response(
+            return new Operations\RemoveMartechListResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class ListT
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMartechList2Response(
+            return new Operations\RemoveMartechListResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class ListT
     /**
      * Update a list
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechList2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateMartechList2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMartechListRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMartechList2(Operations\UpdateMartechList2Request $request, ?Options $options = null): Operations\UpdateMartechList2Response
+    public function updateMartechList(Operations\UpdateMartechListRequest $request, ?Options $options = null): Operations\UpdateMartechListResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\UpdateMartechList2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/martech/{connection_id}/list/{id}', Operations\UpdateMartechListRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'marketingList', 'json');
@@ -382,11 +382,11 @@ class ListT
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateMartechList2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateMartechListRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMartechList2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMartechList', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class ListT
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MarketingList', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateMartechList2Response(
+                $response = new Operations\UpdateMartechListResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

@@ -4,24 +4,24 @@
 
 ### Available Operations
 
-* [getClubsActivity2](#getclubsactivity2) - Retrieve an activity
-* [getClubsEvent2](#getclubsevent2) - Retrieve an event
-* [getClubsGroup2](#getclubsgroup2) - Retrieve a group
-* [getClubsLocation2](#getclubslocation2) - Retrieve a location
-* [getClubsMember2](#getclubsmember2) - Retrieve a member
-* [listClubsActivities2](#listclubsactivities2) - List all activities
-* [listClubsEvents2](#listclubsevents2) - List all events
-* [listClubsGroups2](#listclubsgroups2) - List all groups
-* [listClubsLocations2](#listclubslocations2) - List all locations
-* [listClubsMembers2](#listclubsmembers2) - List all members
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
+* [getClubsEvent](#getclubsevent) - Retrieve an event
+* [getClubsGroup](#getclubsgroup) - Retrieve a group
+* [getClubsLocation](#getclubslocation) - Retrieve a location
+* [getClubsMember](#getclubsmember) - Retrieve a member
+* [listClubsActivities](#listclubsactivities) - List all activities
+* [listClubsEvents](#listclubsevents) - List all events
+* [listClubsGroups](#listclubsgroups) - List all groups
+* [listClubsLocations](#listclubslocations) - List all locations
+* [listClubsMembers](#listclubsmembers) - List all members
 
-## getClubsActivity2
+## getClubsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -36,12 +36,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsActivity2Request(
+$request = new Operations\GetClubsActivityRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->clubs->getClubsActivity2(
+$response = $sdk->clubs->getClubsActivity(
     request: $request
 );
 
@@ -52,13 +52,13 @@ if ($response->clubsActivity !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetClubsActivity2Request](../../Models/Operations/GetClubsActivity2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsActivityRequest](../../Models/Operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetClubsActivity2Response](../../Models/Operations/GetClubsActivity2Response.md)**
+**[?Operations\GetClubsActivityResponse](../../Models/Operations/GetClubsActivityResponse.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ if ($response->clubsActivity !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsEvent2
+## getClubsEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsEvent2" method="get" path="/clubs/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -87,12 +87,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsEvent2Request(
+$request = new Operations\GetClubsEventRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->clubs->getClubsEvent2(
+$response = $sdk->clubs->getClubsEvent(
     request: $request
 );
 
@@ -103,13 +103,13 @@ if ($response->clubsEvent !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetClubsEvent2Request](../../Models/Operations/GetClubsEvent2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetClubsEventRequest](../../Models/Operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetClubsEvent2Response](../../Models/Operations/GetClubsEvent2Response.md)**
+**[?Operations\GetClubsEventResponse](../../Models/Operations/GetClubsEventResponse.md)**
 
 ### Errors
 
@@ -117,13 +117,13 @@ if ($response->clubsEvent !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsGroup2
+## getClubsGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -138,12 +138,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsGroup2Request(
+$request = new Operations\GetClubsGroupRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->clubs->getClubsGroup2(
+$response = $sdk->clubs->getClubsGroup(
     request: $request
 );
 
@@ -154,13 +154,13 @@ if ($response->clubsGroup !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetClubsGroup2Request](../../Models/Operations/GetClubsGroup2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetClubsGroupRequest](../../Models/Operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetClubsGroup2Response](../../Models/Operations/GetClubsGroup2Response.md)**
+**[?Operations\GetClubsGroupResponse](../../Models/Operations/GetClubsGroupResponse.md)**
 
 ### Errors
 
@@ -168,13 +168,13 @@ if ($response->clubsGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsLocation2
+## getClubsLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -189,12 +189,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsLocation2Request(
+$request = new Operations\GetClubsLocationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->clubs->getClubsLocation2(
+$response = $sdk->clubs->getClubsLocation(
     request: $request
 );
 
@@ -205,13 +205,13 @@ if ($response->clubsLocation !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\GetClubsLocation2Request](../../Models/Operations/GetClubsLocation2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetClubsLocationRequest](../../Models/Operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\GetClubsLocation2Response](../../Models/Operations/GetClubsLocation2Response.md)**
+**[?Operations\GetClubsLocationResponse](../../Models/Operations/GetClubsLocationResponse.md)**
 
 ### Errors
 
@@ -219,13 +219,13 @@ if ($response->clubsLocation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getClubsMember2
+## getClubsMember
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -240,12 +240,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetClubsMember2Request(
+$request = new Operations\GetClubsMemberRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->clubs->getClubsMember2(
+$response = $sdk->clubs->getClubsMember(
     request: $request
 );
 
@@ -256,13 +256,13 @@ if ($response->clubsMember !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\GetClubsMember2Request](../../Models/Operations/GetClubsMember2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetClubsMemberRequest](../../Models/Operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\GetClubsMember2Response](../../Models/Operations/GetClubsMember2Response.md)**
+**[?Operations\GetClubsMemberResponse](../../Models/Operations/GetClubsMemberResponse.md)**
 
 ### Errors
 
@@ -270,13 +270,13 @@ if ($response->clubsMember !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsActivities2
+## listClubsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
 ```php
 declare(strict_types=1);
 
@@ -291,11 +291,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsActivities2Request(
+$request = new Operations\ListClubsActivitiesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->clubs->listClubsActivities2(
+$response = $sdk->clubs->listClubsActivities(
     request: $request
 );
 
@@ -306,13 +306,13 @@ if ($response->clubsActivities !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListClubsActivities2Request](../../Models/Operations/ListClubsActivities2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListClubsActivitiesRequest](../../Models/Operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListClubsActivities2Response](../../Models/Operations/ListClubsActivities2Response.md)**
+**[?Operations\ListClubsActivitiesResponse](../../Models/Operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 
@@ -320,13 +320,13 @@ if ($response->clubsActivities !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsEvents2
+## listClubsEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsEvents2" method="get" path="/clubs/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
 ```php
 declare(strict_types=1);
 
@@ -341,11 +341,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsEvents2Request(
+$request = new Operations\ListClubsEventsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->clubs->listClubsEvents2(
+$response = $sdk->clubs->listClubsEvents(
     request: $request
 );
 
@@ -356,13 +356,13 @@ if ($response->clubsEvents !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListClubsEvents2Request](../../Models/Operations/ListClubsEvents2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListClubsEventsRequest](../../Models/Operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListClubsEvents2Response](../../Models/Operations/ListClubsEvents2Response.md)**
+**[?Operations\ListClubsEventsResponse](../../Models/Operations/ListClubsEventsResponse.md)**
 
 ### Errors
 
@@ -370,13 +370,13 @@ if ($response->clubsEvents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsGroups2
+## listClubsGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
 ```php
 declare(strict_types=1);
 
@@ -391,11 +391,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsGroups2Request(
+$request = new Operations\ListClubsGroupsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->clubs->listClubsGroups2(
+$response = $sdk->clubs->listClubsGroups(
     request: $request
 );
 
@@ -406,13 +406,13 @@ if ($response->clubsGroups !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListClubsGroups2Request](../../Models/Operations/ListClubsGroups2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListClubsGroupsRequest](../../Models/Operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListClubsGroups2Response](../../Models/Operations/ListClubsGroups2Response.md)**
+**[?Operations\ListClubsGroupsResponse](../../Models/Operations/ListClubsGroupsResponse.md)**
 
 ### Errors
 
@@ -420,13 +420,13 @@ if ($response->clubsGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsLocations2
+## listClubsLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
 ```php
 declare(strict_types=1);
 
@@ -441,11 +441,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsLocations2Request(
+$request = new Operations\ListClubsLocationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->clubs->listClubsLocations2(
+$response = $sdk->clubs->listClubsLocations(
     request: $request
 );
 
@@ -456,13 +456,13 @@ if ($response->clubsLocations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\ListClubsLocations2Request](../../Models/Operations/ListClubsLocations2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListClubsLocationsRequest](../../Models/Operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\ListClubsLocations2Response](../../Models/Operations/ListClubsLocations2Response.md)**
+**[?Operations\ListClubsLocationsResponse](../../Models/Operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 
@@ -470,13 +470,13 @@ if ($response->clubsLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listClubsMembers2
+## listClubsMembers
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="php" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
 ```php
 declare(strict_types=1);
 
@@ -491,11 +491,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListClubsMembers2Request(
+$request = new Operations\ListClubsMembersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->clubs->listClubsMembers2(
+$response = $sdk->clubs->listClubsMembers(
     request: $request
 );
 
@@ -506,13 +506,13 @@ if ($response->clubsMembers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListClubsMembers2Request](../../Models/Operations/ListClubsMembers2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListClubsMembersRequest](../../Models/Operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListClubsMembers2Response](../../Models/Operations/ListClubsMembers2Response.md)**
+**[?Operations\ListClubsMembersResponse](../../Models/Operations/ListClubsMembersResponse.md)**
 
 ### Errors
 

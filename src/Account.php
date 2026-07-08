@@ -47,14 +47,14 @@ class Account
     /**
      * Create an account
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingAccount2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccount2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingAccount2(Operations\CreateAccountingAccount2Request $request, ?Options $options = null): Operations\CreateAccountingAccount2Response
+    public function createAccountingAccount(Operations\CreateAccountingAccountRequest $request, ?Options $options = null): Operations\CreateAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\CreateAccountingAccount2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\CreateAccountingAccountRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingAccount', 'json');
@@ -63,11 +63,11 @@ class Account
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingAccount2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingAccountRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingAccount2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingAccount', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Account
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingAccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingAccount2Response(
+                $response = new Operations\CreateAccountingAccountResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Account
     /**
      * Retrieve an account
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingAccount2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingAccount2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingAccount2(Operations\GetAccountingAccount2Request $request, ?Options $options = null): Operations\GetAccountingAccount2Response
+    public function getAccountingAccount(Operations\GetAccountingAccountRequest $request, ?Options $options = null): Operations\GetAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\GetAccountingAccount2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\GetAccountingAccountRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingAccount2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingAccountRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingAccount2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingAccount', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Account
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingAccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingAccount2Response(
+                $response = new Operations\GetAccountingAccountResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Account
     /**
      * List all accounts
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingAccounts2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingAccounts2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingAccounts2(Operations\ListAccountingAccounts2Request $request, ?Options $options = null): Operations\ListAccountingAccounts2Response
+    public function listAccountingAccounts(Operations\ListAccountingAccountsRequest $request, ?Options $options = null): Operations\ListAccountingAccountsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\ListAccountingAccounts2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account', Operations\ListAccountingAccountsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingAccounts2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingAccountsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingAccounts2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingAccounts', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Account
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingAccount>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingAccounts2Response(
+                $response = new Operations\ListAccountingAccountsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Account
     /**
      * Update an account
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingAccount2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccount2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingAccount2(Operations\PatchAccountingAccount2Request $request, ?Options $options = null): Operations\PatchAccountingAccount2Response
+    public function patchAccountingAccount(Operations\PatchAccountingAccountRequest $request, ?Options $options = null): Operations\PatchAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\PatchAccountingAccount2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\PatchAccountingAccountRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingAccount', 'json');
@@ -257,11 +257,11 @@ class Account
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingAccount2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingAccountRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingAccount2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingAccount', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Account
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingAccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingAccount2Response(
+                $response = new Operations\PatchAccountingAccountResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Account
     /**
      * Remove an account
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingAccount2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccount2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingAccount2(Operations\RemoveAccountingAccount2Request $request, ?Options $options = null): Operations\RemoveAccountingAccount2Response
+    public function removeAccountingAccount(Operations\RemoveAccountingAccountRequest $request, ?Options $options = null): Operations\RemoveAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\RemoveAccountingAccount2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\RemoveAccountingAccountRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingAccount2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingAccount', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Account
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingAccount2Response(
+            return new Operations\RemoveAccountingAccountResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Account
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingAccount2Response(
+            return new Operations\RemoveAccountingAccountResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Account
     /**
      * Update an account
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingAccount2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccount2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingAccount2(Operations\UpdateAccountingAccount2Request $request, ?Options $options = null): Operations\UpdateAccountingAccount2Response
+    public function updateAccountingAccount(Operations\UpdateAccountingAccountRequest $request, ?Options $options = null): Operations\UpdateAccountingAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\UpdateAccountingAccount2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/account/{id}', Operations\UpdateAccountingAccountRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingAccount', 'json');
@@ -382,11 +382,11 @@ class Account
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingAccount2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingAccountRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingAccount2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingAccount', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Account
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingAccount', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingAccount2Response(
+                $response = new Operations\UpdateAccountingAccountResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

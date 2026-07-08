@@ -47,22 +47,22 @@ class Call
     /**
      * Retrieve a call
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUcCall2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUcCall2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetUcCallRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUcCallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUcCall2(Operations\GetUcCall2Request $request, ?Options $options = null): Operations\GetUcCall2Response
+    public function getUcCall(Operations\GetUcCallRequest $request, ?Options $options = null): Operations\GetUcCallResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call/{id}', Operations\GetUcCall2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call/{id}', Operations\GetUcCallRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUcCall2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUcCallRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcCall2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUcCall', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Call
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\UcCall', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUcCall2Response(
+                $response = new Operations\GetUcCallResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Call
     /**
      * List all calls
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListUcCalls2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUcCalls2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUcCalls2(Operations\ListUcCalls2Request $request, ?Options $options = null): Operations\ListUcCalls2Response
+    public function listUcCalls(Operations\ListUcCallsRequest $request, ?Options $options = null): Operations\ListUcCallsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCalls2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/uc/{connection_id}/call', Operations\ListUcCallsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListUcCalls2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListUcCallsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcCalls2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUcCalls', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Call
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\UcCall>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUcCalls2Response(
+                $response = new Operations\ListUcCallsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

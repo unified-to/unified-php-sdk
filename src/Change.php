@@ -47,22 +47,22 @@ class Change
     /**
      * Retrieve a change
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTaskChange2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTaskChange2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTaskChangeRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTaskChangeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTaskChange2(Operations\GetTaskChange2Request $request, ?Options $options = null): Operations\GetTaskChange2Response
+    public function getTaskChange(Operations\GetTaskChangeRequest $request, ?Options $options = null): Operations\GetTaskChangeResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change/{id}', Operations\GetTaskChange2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change/{id}', Operations\GetTaskChangeRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTaskChange2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTaskChangeRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskChange2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTaskChange', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Change
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TaskChange', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTaskChange2Response(
+                $response = new Operations\GetTaskChangeResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -110,22 +110,22 @@ class Change
     /**
      * List all changes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTaskChanges2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTaskChanges2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTaskChangesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTaskChangesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTaskChanges2(Operations\ListTaskChanges2Request $request, ?Options $options = null): Operations\ListTaskChanges2Response
+    public function listTaskChanges(Operations\ListTaskChangesRequest $request, ?Options $options = null): Operations\ListTaskChangesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change', Operations\ListTaskChanges2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/task/{connection_id}/change', Operations\ListTaskChangesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTaskChanges2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTaskChangesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskChanges2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTaskChanges', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -151,7 +151,7 @@ class Change
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TaskChange>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTaskChanges2Response(
+                $response = new Operations\ListTaskChangesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

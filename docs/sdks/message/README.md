@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createMessagingMessage2](#createmessagingmessage2) - Create a message
-* [getMessagingMessage2](#getmessagingmessage2) - Retrieve a message
-* [listMessagingMessages2](#listmessagingmessages2) - List all messages
-* [patchMessagingMessage2](#patchmessagingmessage2) - Update a message
-* [removeMessagingMessage2](#removemessagingmessage2) - Remove a message
-* [updateMessagingMessage2](#updatemessagingmessage2) - Update a message
+* [createMessagingMessage](#createmessagingmessage) - Create a message
+* [getMessagingMessage](#getmessagingmessage) - Retrieve a message
+* [listMessagingMessages](#listmessagingmessages) - List all messages
+* [patchMessagingMessage](#patchmessagingmessage) - Update a message
+* [removeMessagingMessage](#removemessagingmessage) - Remove a message
+* [updateMessagingMessage](#updatemessagingmessage) - Update a message
 
-## createMessagingMessage2
+## createMessagingMessage
 
 Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMessagingMessage2" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="php" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateMessagingMessage2Request(
+$request = new Operations\CreateMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(),
     connectionId: '<id>',
 );
 
-$response = $sdk->message->createMessagingMessage2(
+$response = $sdk->message->createMessagingMessage(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->messagingMessage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\CreateMessagingMessage2Request](../../Models/Operations/CreateMessagingMessage2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateMessagingMessageRequest](../../Models/Operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\CreateMessagingMessage2Response](../../Models/Operations/CreateMessagingMessage2Response.md)**
+**[?Operations\CreateMessagingMessageResponse](../../Models/Operations/CreateMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->messagingMessage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getMessagingMessage2
+## getMessagingMessage
 
 Retrieve a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getMessagingMessage2" method="get" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetMessagingMessage2Request(
+$request = new Operations\GetMessagingMessageRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->message->getMessagingMessage2(
+$response = $sdk->message->getMessagingMessage(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->messagingMessage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetMessagingMessage2Request](../../Models/Operations/GetMessagingMessage2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetMessagingMessageRequest](../../Models/Operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetMessagingMessage2Response](../../Models/Operations/GetMessagingMessage2Response.md)**
+**[?Operations\GetMessagingMessageResponse](../../Models/Operations/GetMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->messagingMessage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listMessagingMessages2
+## listMessagingMessages
 
 List all messages
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listMessagingMessages2" method="get" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="php" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListMessagingMessages2Request(
+$request = new Operations\ListMessagingMessagesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->message->listMessagingMessages2(
+$response = $sdk->message->listMessagingMessages(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->messagingMessages !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListMessagingMessages2Request](../../Models/Operations/ListMessagingMessages2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListMessagingMessagesRequest](../../Models/Operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListMessagingMessages2Response](../../Models/Operations/ListMessagingMessages2Response.md)**
+**[?Operations\ListMessagingMessagesResponse](../../Models/Operations/ListMessagingMessagesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->messagingMessages !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchMessagingMessage2
+## patchMessagingMessage
 
 Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMessagingMessage2" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchMessagingMessage2Request(
+$request = new Operations\PatchMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->message->patchMessagingMessage2(
+$response = $sdk->message->patchMessagingMessage(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->messagingMessage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\PatchMessagingMessage2Request](../../Models/Operations/PatchMessagingMessage2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchMessagingMessageRequest](../../Models/Operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchMessagingMessage2Response](../../Models/Operations/PatchMessagingMessage2Response.md)**
+**[?Operations\PatchMessagingMessageResponse](../../Models/Operations/PatchMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->messagingMessage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeMessagingMessage2
+## removeMessagingMessage
 
 Remove a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeMessagingMessage2" method="delete" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveMessagingMessage2Request(
+$request = new Operations\RemoveMessagingMessageRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->message->removeMessagingMessage2(
+$response = $sdk->message->removeMessagingMessage(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\RemoveMessagingMessage2Request](../../Models/Operations/RemoveMessagingMessage2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveMessagingMessageRequest](../../Models/Operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\RemoveMessagingMessage2Response](../../Models/Operations/RemoveMessagingMessage2Response.md)**
+**[?Operations\RemoveMessagingMessageResponse](../../Models/Operations/RemoveMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateMessagingMessage2
+## updateMessagingMessage
 
 Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingMessage2" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateMessagingMessage2Request(
+$request = new Operations\UpdateMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->message->updateMessagingMessage2(
+$response = $sdk->message->updateMessagingMessage(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->messagingMessage !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\UpdateMessagingMessage2Request](../../Models/Operations/UpdateMessagingMessage2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateMessagingMessageRequest](../../Models/Operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\UpdateMessagingMessage2Response](../../Models/Operations/UpdateMessagingMessage2Response.md)**
+**[?Operations\UpdateMessagingMessageResponse](../../Models/Operations/UpdateMessagingMessageResponse.md)**
 
 ### Errors
 

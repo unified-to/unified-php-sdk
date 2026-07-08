@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createHrisDevice2](#createhrisdevice2) - Create a device
-* [getHrisDevice2](#gethrisdevice2) - Retrieve a device
-* [listHrisDevices2](#listhrisdevices2) - List all devices
-* [patchHrisDevice2](#patchhrisdevice2) - Update a device
-* [removeHrisDevice2](#removehrisdevice2) - Remove a device
-* [updateHrisDevice2](#updatehrisdevice2) - Update a device
+* [createHrisDevice](#createhrisdevice) - Create a device
+* [getHrisDevice](#gethrisdevice) - Retrieve a device
+* [listHrisDevices](#listhrisdevices) - List all devices
+* [patchHrisDevice](#patchhrisdevice) - Update a device
+* [removeHrisDevice](#removehrisdevice) - Remove a device
+* [updateHrisDevice](#updatehrisdevice) - Update a device
 
-## createHrisDevice2
+## createHrisDevice
 
 Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDevice2" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisDevice2Request(
+$request = new Operations\CreateHrisDeviceRequest(
     hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
 );
 
-$response = $sdk->device->createHrisDevice2(
+$response = $sdk->device->createHrisDevice(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->hrisDevice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateHrisDevice2Request](../../Models/Operations/CreateHrisDevice2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateHrisDeviceRequest](../../Models/Operations/CreateHrisDeviceRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\CreateHrisDevice2Response](../../Models/Operations/CreateHrisDevice2Response.md)**
+**[?Operations\CreateHrisDeviceResponse](../../Models/Operations/CreateHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->hrisDevice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisDevice2
+## getHrisDevice
 
 Retrieve a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisDevice2" method="get" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisDevice2Request(
+$request = new Operations\GetHrisDeviceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->device->getHrisDevice2(
+$response = $sdk->device->getHrisDevice(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->hrisDevice !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetHrisDevice2Request](../../Models/Operations/GetHrisDevice2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetHrisDeviceRequest](../../Models/Operations/GetHrisDeviceRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetHrisDevice2Response](../../Models/Operations/GetHrisDevice2Response.md)**
+**[?Operations\GetHrisDeviceResponse](../../Models/Operations/GetHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->hrisDevice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisDevices2
+## listHrisDevices
 
 List all devices
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisDevices2" method="get" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="php" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisDevices2Request(
+$request = new Operations\ListHrisDevicesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->device->listHrisDevices2(
+$response = $sdk->device->listHrisDevices(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->hrisDevices !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListHrisDevices2Request](../../Models/Operations/ListHrisDevices2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListHrisDevicesRequest](../../Models/Operations/ListHrisDevicesRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListHrisDevices2Response](../../Models/Operations/ListHrisDevices2Response.md)**
+**[?Operations\ListHrisDevicesResponse](../../Models/Operations/ListHrisDevicesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->hrisDevices !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisDevice2
+## patchHrisDevice
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDevice2" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisDevice2Request(
+$request = new Operations\PatchHrisDeviceRequest(
     hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->device->patchHrisDevice2(
+$response = $sdk->device->patchHrisDevice(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->hrisDevice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchHrisDevice2Request](../../Models/Operations/PatchHrisDevice2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchHrisDeviceRequest](../../Models/Operations/PatchHrisDeviceRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\PatchHrisDevice2Response](../../Models/Operations/PatchHrisDevice2Response.md)**
+**[?Operations\PatchHrisDeviceResponse](../../Models/Operations/PatchHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->hrisDevice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeHrisDevice2
+## removeHrisDevice
 
 Remove a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeHrisDevice2" method="delete" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveHrisDevice2Request(
+$request = new Operations\RemoveHrisDeviceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->device->removeHrisDevice2(
+$response = $sdk->device->removeHrisDevice(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveHrisDevice2Request](../../Models/Operations/RemoveHrisDevice2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveHrisDeviceRequest](../../Models/Operations/RemoveHrisDeviceRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\RemoveHrisDevice2Response](../../Models/Operations/RemoveHrisDevice2Response.md)**
+**[?Operations\RemoveHrisDeviceResponse](../../Models/Operations/RemoveHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisDevice2
+## updateHrisDevice
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDevice2" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisDevice2Request(
+$request = new Operations\UpdateHrisDeviceRequest(
     hrisDevice: new Shared\HrisDevice(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->device->updateHrisDevice2(
+$response = $sdk->device->updateHrisDevice(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->hrisDevice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateHrisDevice2Request](../../Models/Operations/UpdateHrisDevice2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\UpdateHrisDeviceRequest](../../Models/Operations/UpdateHrisDeviceRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\UpdateHrisDevice2Response](../../Models/Operations/UpdateHrisDevice2Response.md)**
+**[?Operations\UpdateHrisDeviceResponse](../../Models/Operations/UpdateHrisDeviceResponse.md)**
 
 ### Errors
 

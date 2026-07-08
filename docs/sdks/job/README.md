@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAtsJob2](#createatsjob2) - Create a job
-* [getAtsJob2](#getatsjob2) - Retrieve a job
-* [listAtsJobs2](#listatsjobs2) - List all jobs
-* [patchAtsJob2](#patchatsjob2) - Update a job
-* [removeAtsJob2](#removeatsjob2) - Remove a job
-* [updateAtsJob2](#updateatsjob2) - Update a job
+* [createAtsJob](#createatsjob) - Create a job
+* [getAtsJob](#getatsjob) - Retrieve a job
+* [listAtsJobs](#listatsjobs) - List all jobs
+* [patchAtsJob](#patchatsjob) - Update a job
+* [removeAtsJob](#removeatsjob) - Remove a job
+* [updateAtsJob](#updateatsjob) - Update a job
 
-## createAtsJob2
+## createAtsJob
 
 Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsJob2" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="php" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAtsJob2Request(
+$request = new Operations\CreateAtsJobRequest(
     atsJob: new Shared\AtsJob(),
     connectionId: '<id>',
 );
 
-$response = $sdk->job->createAtsJob2(
+$response = $sdk->job->createAtsJob(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->atsJob !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\CreateAtsJob2Request](../../Models/Operations/CreateAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\CreateAtsJobRequest](../../Models/Operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\CreateAtsJob2Response](../../Models/Operations/CreateAtsJob2Response.md)**
+**[?Operations\CreateAtsJobResponse](../../Models/Operations/CreateAtsJobResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->atsJob !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAtsJob2
+## getAtsJob
 
 Retrieve a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAtsJob2" method="get" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAtsJob2Request(
+$request = new Operations\GetAtsJobRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->job->getAtsJob2(
+$response = $sdk->job->getAtsJob(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->atsJob !== null) {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `$request`                                                                   | [Operations\GetAtsJob2Request](../../Models/Operations/GetAtsJob2Request.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Operations\GetAtsJobRequest](../../Models/Operations/GetAtsJobRequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 ### Response
 
-**[?Operations\GetAtsJob2Response](../../Models/Operations/GetAtsJob2Response.md)**
+**[?Operations\GetAtsJobResponse](../../Models/Operations/GetAtsJobResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->atsJob !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAtsJobs2
+## listAtsJobs
 
 List all jobs
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAtsJobs2" method="get" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="php" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAtsJobs2Request(
+$request = new Operations\ListAtsJobsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->job->listAtsJobs2(
+$response = $sdk->job->listAtsJobs(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->atsJobs !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\ListAtsJobs2Request](../../Models/Operations/ListAtsJobs2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListAtsJobsRequest](../../Models/Operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\ListAtsJobs2Response](../../Models/Operations/ListAtsJobs2Response.md)**
+**[?Operations\ListAtsJobsResponse](../../Models/Operations/ListAtsJobsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->atsJobs !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAtsJob2
+## patchAtsJob
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsJob2" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAtsJob2Request(
+$request = new Operations\PatchAtsJobRequest(
     atsJob: new Shared\AtsJob(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->job->patchAtsJob2(
+$response = $sdk->job->patchAtsJob(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->atsJob !== null) {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\PatchAtsJob2Request](../../Models/Operations/PatchAtsJob2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\PatchAtsJobRequest](../../Models/Operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\PatchAtsJob2Response](../../Models/Operations/PatchAtsJob2Response.md)**
+**[?Operations\PatchAtsJobResponse](../../Models/Operations/PatchAtsJobResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->atsJob !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAtsJob2
+## removeAtsJob
 
 Remove a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAtsJob2" method="delete" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAtsJob2Request(
+$request = new Operations\RemoveAtsJobRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->job->removeAtsJob2(
+$response = $sdk->job->removeAtsJob(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\RemoveAtsJob2Request](../../Models/Operations/RemoveAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\RemoveAtsJobRequest](../../Models/Operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\RemoveAtsJob2Response](../../Models/Operations/RemoveAtsJob2Response.md)**
+**[?Operations\RemoveAtsJobResponse](../../Models/Operations/RemoveAtsJobResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAtsJob2
+## updateAtsJob
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsJob2" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAtsJob2Request(
+$request = new Operations\UpdateAtsJobRequest(
     atsJob: new Shared\AtsJob(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->job->updateAtsJob2(
+$response = $sdk->job->updateAtsJob(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->atsJob !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\UpdateAtsJob2Request](../../Models/Operations/UpdateAtsJob2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\UpdateAtsJobRequest](../../Models/Operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\UpdateAtsJob2Response](../../Models/Operations/UpdateAtsJob2Response.md)**
+**[?Operations\UpdateAtsJobResponse](../../Models/Operations/UpdateAtsJobResponse.md)**
 
 ### Errors
 

@@ -47,14 +47,14 @@ class Taxrate
     /**
      * Create a taxrate
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrate2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAccountingTaxrate2(Operations\CreateAccountingTaxrate2Request $request, ?Options $options = null): Operations\CreateAccountingTaxrate2Response
+    public function createAccountingTaxrate(Operations\CreateAccountingTaxrateRequest $request, ?Options $options = null): Operations\CreateAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\CreateAccountingTaxrate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\CreateAccountingTaxrateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
@@ -63,11 +63,11 @@ class Taxrate
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingTaxrate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAccountingTaxrateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingTaxrate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAccountingTaxrate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Taxrate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAccountingTaxrate2Response(
+                $response = new Operations\CreateAccountingTaxrateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Taxrate
     /**
      * Retrieve a taxrate
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrate2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAccountingTaxrate2(Operations\GetAccountingTaxrate2Request $request, ?Options $options = null): Operations\GetAccountingTaxrate2Response
+    public function getAccountingTaxrate(Operations\GetAccountingTaxrateRequest $request, ?Options $options = null): Operations\GetAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\GetAccountingTaxrate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\GetAccountingTaxrateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTaxrate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAccountingTaxrateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTaxrate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAccountingTaxrate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Taxrate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAccountingTaxrate2Response(
+                $response = new Operations\GetAccountingTaxrateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Taxrate
     /**
      * List all taxrates
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxrates2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxrates2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAccountingTaxrates2(Operations\ListAccountingTaxrates2Request $request, ?Options $options = null): Operations\ListAccountingTaxrates2Response
+    public function listAccountingTaxrates(Operations\ListAccountingTaxratesRequest $request, ?Options $options = null): Operations\ListAccountingTaxratesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\ListAccountingTaxrates2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate', Operations\ListAccountingTaxratesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTaxrates2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAccountingTaxratesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTaxrates2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAccountingTaxrates', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Taxrate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AccountingTaxrate>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAccountingTaxrates2Response(
+                $response = new Operations\ListAccountingTaxratesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Taxrate
     /**
      * Update a taxrate
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrate2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAccountingTaxrate2(Operations\PatchAccountingTaxrate2Request $request, ?Options $options = null): Operations\PatchAccountingTaxrate2Response
+    public function patchAccountingTaxrate(Operations\PatchAccountingTaxrateRequest $request, ?Options $options = null): Operations\PatchAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\PatchAccountingTaxrate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\PatchAccountingTaxrateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
@@ -257,11 +257,11 @@ class Taxrate
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingTaxrate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAccountingTaxrateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingTaxrate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAccountingTaxrate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Taxrate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAccountingTaxrate2Response(
+                $response = new Operations\PatchAccountingTaxrateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Taxrate
     /**
      * Remove a taxrate
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrate2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAccountingTaxrate2(Operations\RemoveAccountingTaxrate2Request $request, ?Options $options = null): Operations\RemoveAccountingTaxrate2Response
+    public function removeAccountingTaxrate(Operations\RemoveAccountingTaxrateRequest $request, ?Options $options = null): Operations\RemoveAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\RemoveAccountingTaxrate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\RemoveAccountingTaxrateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingTaxrate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAccountingTaxrate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Taxrate
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingTaxrate2Response(
+            return new Operations\RemoveAccountingTaxrateResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Taxrate
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAccountingTaxrate2Response(
+            return new Operations\RemoveAccountingTaxrateResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Taxrate
     /**
      * Update a taxrate
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrate2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrate2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAccountingTaxrate2(Operations\UpdateAccountingTaxrate2Request $request, ?Options $options = null): Operations\UpdateAccountingTaxrate2Response
+    public function updateAccountingTaxrate(Operations\UpdateAccountingTaxrateRequest $request, ?Options $options = null): Operations\UpdateAccountingTaxrateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\UpdateAccountingTaxrate2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/taxrate/{id}', Operations\UpdateAccountingTaxrateRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'accountingTaxrate', 'json');
@@ -382,11 +382,11 @@ class Taxrate
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingTaxrate2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAccountingTaxrateRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingTaxrate2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAccountingTaxrate', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Taxrate
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AccountingTaxrate', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAccountingTaxrate2Response(
+                $response = new Operations\UpdateAccountingTaxrateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

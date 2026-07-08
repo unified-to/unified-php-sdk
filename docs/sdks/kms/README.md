@@ -4,32 +4,32 @@
 
 ### Available Operations
 
-* [createKmsComment2](#createkmscomment2) - Create a comment
-* [createKmsPage2](#createkmspage2) - Create a page
-* [createKmsSpace2](#createkmsspace2) - Create a space
-* [getKmsComment2](#getkmscomment2) - Retrieve a comment
-* [getKmsPage2](#getkmspage2) - Retrieve a page
-* [getKmsSpace2](#getkmsspace2) - Retrieve a space
-* [listKmsComments2](#listkmscomments2) - List all comments
-* [listKmsPages2](#listkmspages2) - List all pages
-* [listKmsSpaces2](#listkmsspaces2) - List all spaces
-* [patchKmsComment2](#patchkmscomment2) - Update a comment
-* [patchKmsPage2](#patchkmspage2) - Update a page
-* [patchKmsSpace2](#patchkmsspace2) - Update a space
-* [removeKmsComment2](#removekmscomment2) - Remove a comment
-* [removeKmsPage2](#removekmspage2) - Remove a page
-* [removeKmsSpace2](#removekmsspace2) - Remove a space
-* [updateKmsComment2](#updatekmscomment2) - Update a comment
-* [updateKmsPage2](#updatekmspage2) - Update a page
-* [updateKmsSpace2](#updatekmsspace2) - Update a space
+* [createKmsComment](#createkmscomment) - Create a comment
+* [createKmsPage](#createkmspage) - Create a page
+* [createKmsSpace](#createkmsspace) - Create a space
+* [getKmsComment](#getkmscomment) - Retrieve a comment
+* [getKmsPage](#getkmspage) - Retrieve a page
+* [getKmsSpace](#getkmsspace) - Retrieve a space
+* [listKmsComments](#listkmscomments) - List all comments
+* [listKmsPages](#listkmspages) - List all pages
+* [listKmsSpaces](#listkmsspaces) - List all spaces
+* [patchKmsComment](#patchkmscomment) - Update a comment
+* [patchKmsPage](#patchkmspage) - Update a page
+* [patchKmsSpace](#patchkmsspace) - Update a space
+* [removeKmsComment](#removekmscomment) - Remove a comment
+* [removeKmsPage](#removekmspage) - Remove a page
+* [removeKmsSpace](#removekmsspace) - Remove a space
+* [updateKmsComment](#updatekmscomment) - Update a comment
+* [updateKmsPage](#updatekmspage) - Update a page
+* [updateKmsSpace](#updatekmsspace) - Update a space
 
-## createKmsComment2
+## createKmsComment
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsComment2" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -45,12 +45,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateKmsComment2Request(
+$request = new Operations\CreateKmsCommentRequest(
     kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->createKmsComment2(
+$response = $sdk->kms->createKmsComment(
     request: $request
 );
 
@@ -61,13 +61,13 @@ if ($response->kmsComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\CreateKmsComment2Request](../../Models/Operations/CreateKmsComment2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\CreateKmsCommentRequest](../../Models/Operations/CreateKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\CreateKmsComment2Response](../../Models/Operations/CreateKmsComment2Response.md)**
+**[?Operations\CreateKmsCommentResponse](../../Models/Operations/CreateKmsCommentResponse.md)**
 
 ### Errors
 
@@ -75,13 +75,13 @@ if ($response->kmsComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createKmsPage2
+## createKmsPage
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```php
 declare(strict_types=1);
 
@@ -97,14 +97,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateKmsPage2Request(
+$request = new Operations\CreateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Other,
+        type: Shared\KmsPageType::Text,
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->createKmsPage2(
+$response = $sdk->kms->createKmsPage(
     request: $request
 );
 
@@ -115,13 +115,13 @@ if ($response->kmsPage !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\CreateKmsPage2Request](../../Models/Operations/CreateKmsPage2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\CreateKmsPageRequest](../../Models/Operations/CreateKmsPageRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\CreateKmsPage2Response](../../Models/Operations/CreateKmsPage2Response.md)**
+**[?Operations\CreateKmsPageResponse](../../Models/Operations/CreateKmsPageResponse.md)**
 
 ### Errors
 
@@ -129,13 +129,13 @@ if ($response->kmsPage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createKmsSpace2
+## createKmsSpace
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -151,12 +151,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateKmsSpace2Request(
+$request = new Operations\CreateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->createKmsSpace2(
+$response = $sdk->kms->createKmsSpace(
     request: $request
 );
 
@@ -167,13 +167,13 @@ if ($response->kmsSpace !== null) {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\CreateKmsSpace2Request](../../Models/Operations/CreateKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateKmsSpaceRequest](../../Models/Operations/CreateKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\CreateKmsSpace2Response](../../Models/Operations/CreateKmsSpace2Response.md)**
+**[?Operations\CreateKmsSpaceResponse](../../Models/Operations/CreateKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -181,13 +181,13 @@ if ($response->kmsSpace !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getKmsComment2
+## getKmsComment
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getKmsComment2" method="get" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -202,12 +202,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetKmsComment2Request(
+$request = new Operations\GetKmsCommentRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->kms->getKmsComment2(
+$response = $sdk->kms->getKmsComment(
     request: $request
 );
 
@@ -218,13 +218,13 @@ if ($response->kmsComment !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\GetKmsComment2Request](../../Models/Operations/GetKmsComment2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetKmsCommentRequest](../../Models/Operations/GetKmsCommentRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\GetKmsComment2Response](../../Models/Operations/GetKmsComment2Response.md)**
+**[?Operations\GetKmsCommentResponse](../../Models/Operations/GetKmsCommentResponse.md)**
 
 ### Errors
 
@@ -232,13 +232,13 @@ if ($response->kmsComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getKmsPage2
+## getKmsPage
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -253,16 +253,67 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetKmsPage2Request(
+$request = new Operations\GetKmsPageRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->kms->getKmsPage2(
+$response = $sdk->kms->getKmsPage(
     request: $request
 );
 
 if ($response->kmsPage !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `$request`                                                                   | [Operations\GetKmsPageRequest](../../Models/Operations/GetKmsPageRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+### Response
+
+**[?Operations\GetKmsPageResponse](../../Models/Operations/GetKmsPageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getKmsSpace
+
+Retrieve a space
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetKmsSpaceRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->getKmsSpace(
+    request: $request
+);
+
+if ($response->kmsSpace !== null) {
     // handle response
 }
 ```
@@ -271,11 +322,11 @@ if ($response->kmsPage !== null) {
 
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `$request`                                                                     | [Operations\GetKmsPage2Request](../../Models/Operations/GetKmsPage2Request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `$request`                                                                     | [Operations\GetKmsSpaceRequest](../../Models/Operations/GetKmsSpaceRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 ### Response
 
-**[?Operations\GetKmsPage2Response](../../Models/Operations/GetKmsPage2Response.md)**
+**[?Operations\GetKmsSpaceResponse](../../Models/Operations/GetKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -283,64 +334,13 @@ if ($response->kmsPage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getKmsSpace2
-
-Retrieve a space
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetKmsSpace2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->getKmsSpace2(
-    request: $request
-);
-
-if ($response->kmsSpace !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [Operations\GetKmsSpace2Request](../../Models/Operations/GetKmsSpace2Request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-### Response
-
-**[?Operations\GetKmsSpace2Response](../../Models/Operations/GetKmsSpace2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## listKmsComments2
+## listKmsComments
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listKmsComments2" method="get" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```php
 declare(strict_types=1);
 
@@ -355,11 +355,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListKmsComments2Request(
+$request = new Operations\ListKmsCommentsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->listKmsComments2(
+$response = $sdk->kms->listKmsComments(
     request: $request
 );
 
@@ -370,13 +370,13 @@ if ($response->kmsComments !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListKmsComments2Request](../../Models/Operations/ListKmsComments2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListKmsCommentsRequest](../../Models/Operations/ListKmsCommentsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\ListKmsComments2Response](../../Models/Operations/ListKmsComments2Response.md)**
+**[?Operations\ListKmsCommentsResponse](../../Models/Operations/ListKmsCommentsResponse.md)**
 
 ### Errors
 
@@ -384,13 +384,13 @@ if ($response->kmsComments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listKmsPages2
+## listKmsPages
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="php" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```php
 declare(strict_types=1);
 
@@ -405,11 +405,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListKmsPages2Request(
+$request = new Operations\ListKmsPagesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->listKmsPages2(
+$response = $sdk->kms->listKmsPages(
     request: $request
 );
 
@@ -420,13 +420,13 @@ if ($response->kmsPages !== null) {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\ListKmsPages2Request](../../Models/Operations/ListKmsPages2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\ListKmsPagesRequest](../../Models/Operations/ListKmsPagesRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 ### Response
 
-**[?Operations\ListKmsPages2Response](../../Models/Operations/ListKmsPages2Response.md)**
+**[?Operations\ListKmsPagesResponse](../../Models/Operations/ListKmsPagesResponse.md)**
 
 ### Errors
 
@@ -434,13 +434,13 @@ if ($response->kmsPages !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listKmsSpaces2
+## listKmsSpaces
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="php" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```php
 declare(strict_types=1);
 
@@ -455,11 +455,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListKmsSpaces2Request(
+$request = new Operations\ListKmsSpacesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->kms->listKmsSpaces2(
+$response = $sdk->kms->listKmsSpaces(
     request: $request
 );
 
@@ -470,13 +470,13 @@ if ($response->kmsSpaces !== null) {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\ListKmsSpaces2Request](../../Models/Operations/ListKmsSpaces2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListKmsSpacesRequest](../../Models/Operations/ListKmsSpacesRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\ListKmsSpaces2Response](../../Models/Operations/ListKmsSpaces2Response.md)**
+**[?Operations\ListKmsSpacesResponse](../../Models/Operations/ListKmsSpacesResponse.md)**
 
 ### Errors
 
@@ -484,13 +484,13 @@ if ($response->kmsSpaces !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchKmsComment2
+## patchKmsComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsComment2" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -506,13 +506,327 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchKmsComment2Request(
+$request = new Operations\PatchKmsCommentRequest(
     kmsComment: new Shared\KmsComment(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->kms->patchKmsComment2(
+$response = $sdk->kms->patchKmsComment(
+    request: $request
+);
+
+if ($response->kmsComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\PatchKmsCommentRequest](../../Models/Operations/PatchKmsCommentRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\PatchKmsCommentResponse](../../Models/Operations/PatchKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchKmsPage
+
+Update a page
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchKmsPageRequest(
+    kmsPage: new Shared\KmsPage(
+        type: Shared\KmsPageType::Other,
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->patchKmsPage(
+    request: $request
+);
+
+if ($response->kmsPage !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\PatchKmsPageRequest](../../Models/Operations/PatchKmsPageRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\PatchKmsPageResponse](../../Models/Operations/PatchKmsPageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchKmsSpace
+
+Update a space
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchKmsSpaceRequest(
+    kmsSpace: new Shared\KmsSpace(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->patchKmsSpace(
+    request: $request
+);
+
+if ($response->kmsSpace !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchKmsSpaceRequest](../../Models/Operations/PatchKmsSpaceRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\PatchKmsSpaceResponse](../../Models/Operations/PatchKmsSpaceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeKmsComment
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveKmsCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->removeKmsComment(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveKmsCommentRequest](../../Models/Operations/RemoveKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveKmsCommentResponse](../../Models/Operations/RemoveKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeKmsPage
+
+Remove a page
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveKmsPageRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->removeKmsPage(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemoveKmsPageRequest](../../Models/Operations/RemoveKmsPageRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\RemoveKmsPageResponse](../../Models/Operations/RemoveKmsPageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeKmsSpace
+
+Remove a space
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveKmsSpaceRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->removeKmsSpace(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveKmsSpaceRequest](../../Models/Operations/RemoveKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\RemoveKmsSpaceResponse](../../Models/Operations/RemoveKmsSpaceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateKmsComment
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateKmsCommentRequest(
+    kmsComment: new Shared\KmsComment(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->kms->updateKmsComment(
     request: $request
 );
 
@@ -525,11 +839,11 @@ if ($response->kmsComment !== null) {
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\PatchKmsComment2Request](../../Models/Operations/PatchKmsComment2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `$request`                                                                               | [Operations\UpdateKmsCommentRequest](../../Models/Operations/UpdateKmsCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\PatchKmsComment2Response](../../Models/Operations/PatchKmsComment2Response.md)**
+**[?Operations\UpdateKmsCommentResponse](../../Models/Operations/UpdateKmsCommentResponse.md)**
 
 ### Errors
 
@@ -537,13 +851,13 @@ if ($response->kmsComment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchKmsPage2
+## updateKmsPage
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -559,7 +873,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchKmsPage2Request(
+$request = new Operations\UpdateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
         type: Shared\KmsPageType::Other,
     ),
@@ -567,7 +881,7 @@ $request = new Operations\PatchKmsPage2Request(
     id: '<id>',
 );
 
-$response = $sdk->kms->patchKmsPage2(
+$response = $sdk->kms->updateKmsPage(
     request: $request
 );
 
@@ -580,11 +894,11 @@ if ($response->kmsPage !== null) {
 
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `$request`                                                                         | [Operations\PatchKmsPage2Request](../../Models/Operations/PatchKmsPage2Request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `$request`                                                                         | [Operations\UpdateKmsPageRequest](../../Models/Operations/UpdateKmsPageRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 ### Response
 
-**[?Operations\PatchKmsPage2Response](../../Models/Operations/PatchKmsPage2Response.md)**
+**[?Operations\UpdateKmsPageResponse](../../Models/Operations/UpdateKmsPageResponse.md)**
 
 ### Errors
 
@@ -592,13 +906,13 @@ if ($response->kmsPage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchKmsSpace2
+## updateKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -614,13 +928,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchKmsSpace2Request(
+$request = new Operations\UpdateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->kms->patchKmsSpace2(
+$response = $sdk->kms->updateKmsSpace(
     request: $request
 );
 
@@ -633,325 +947,11 @@ if ($response->kmsSpace !== null) {
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\PatchKmsSpace2Request](../../Models/Operations/PatchKmsSpace2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `$request`                                                                           | [Operations\UpdateKmsSpaceRequest](../../Models/Operations/UpdateKmsSpaceRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 ### Response
 
-**[?Operations\PatchKmsSpace2Response](../../Models/Operations/PatchKmsSpace2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeKmsComment2
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeKmsComment2" method="delete" path="/kms/{connection_id}/comment/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveKmsComment2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->removeKmsComment2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\RemoveKmsComment2Request](../../Models/Operations/RemoveKmsComment2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\RemoveKmsComment2Response](../../Models/Operations/RemoveKmsComment2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeKmsPage2
-
-Remove a page
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveKmsPage2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->removeKmsPage2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\RemoveKmsPage2Request](../../Models/Operations/RemoveKmsPage2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\RemoveKmsPage2Response](../../Models/Operations/RemoveKmsPage2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeKmsSpace2
-
-Remove a space
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveKmsSpace2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->removeKmsSpace2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\RemoveKmsSpace2Request](../../Models/Operations/RemoveKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\RemoveKmsSpace2Response](../../Models/Operations/RemoveKmsSpace2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateKmsComment2
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateKmsComment2" method="put" path="/kms/{connection_id}/comment/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateKmsComment2Request(
-    kmsComment: new Shared\KmsComment(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->updateKmsComment2(
-    request: $request
-);
-
-if ($response->kmsComment !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\UpdateKmsComment2Request](../../Models/Operations/UpdateKmsComment2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-### Response
-
-**[?Operations\UpdateKmsComment2Response](../../Models/Operations/UpdateKmsComment2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateKmsPage2
-
-Update a page
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateKmsPage2Request(
-    kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Markdown,
-    ),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->updateKmsPage2(
-    request: $request
-);
-
-if ($response->kmsPage !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `$request`                                                                           | [Operations\UpdateKmsPage2Request](../../Models/Operations/UpdateKmsPage2Request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-
-### Response
-
-**[?Operations\UpdateKmsPage2Response](../../Models/Operations/UpdateKmsPage2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateKmsSpace2
-
-Update a space
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateKmsSpace2Request(
-    kmsSpace: new Shared\KmsSpace(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->kms->updateKmsSpace2(
-    request: $request
-);
-
-if ($response->kmsSpace !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `$request`                                                                             | [Operations\UpdateKmsSpace2Request](../../Models/Operations/UpdateKmsSpace2Request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-### Response
-
-**[?Operations\UpdateKmsSpace2Response](../../Models/Operations/UpdateKmsSpace2Response.md)**
+**[?Operations\UpdateKmsSpaceResponse](../../Models/Operations/UpdateKmsSpaceResponse.md)**
 
 ### Errors
 

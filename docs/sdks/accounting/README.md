@@ -4,104 +4,110 @@
 
 ### Available Operations
 
-* [createAccountingAccount2](#createaccountingaccount2) - Create an account
-* [createAccountingBill2](#createaccountingbill2) - Create a bill
-* [createAccountingCategory2](#createaccountingcategory2) - Create a category
-* [createAccountingContact2](#createaccountingcontact2) - Create a contact
-* [createAccountingCreditmemo2](#createaccountingcreditmemo2) - Create a creditmemo
-* [createAccountingExpense2](#createaccountingexpense2) - Create an expense
-* [createAccountingInvoice2](#createaccountinginvoice2) - Create an invoice
-* [createAccountingJournal2](#createaccountingjournal2) - Create a journal
-* [createAccountingOrder2](#createaccountingorder2) - Create an order
-* [createAccountingPurchaseorder2](#createaccountingpurchaseorder2) - Create a purchaseorder
-* [createAccountingSalesorder2](#createaccountingsalesorder2) - Create a salesorder
-* [createAccountingTaxrate2](#createaccountingtaxrate2) - Create a taxrate
-* [createAccountingTransaction2](#createaccountingtransaction2) - Create a transaction
-* [getAccountingAccount2](#getaccountingaccount2) - Retrieve an account
-* [getAccountingBalancesheet2](#getaccountingbalancesheet2) - Retrieve a balancesheet
-* [getAccountingBill2](#getaccountingbill2) - Retrieve a bill
-* [getAccountingCashflow2](#getaccountingcashflow2) - Retrieve a cashflow
-* [getAccountingCategory2](#getaccountingcategory2) - Retrieve a category
-* [getAccountingContact2](#getaccountingcontact2) - Retrieve a contact
-* [getAccountingCreditmemo2](#getaccountingcreditmemo2) - Retrieve a creditmemo
-* [getAccountingExpense2](#getaccountingexpense2) - Retrieve an expense
-* [getAccountingInvoice2](#getaccountinginvoice2) - Retrieve an invoice
-* [getAccountingJournal2](#getaccountingjournal2) - Retrieve a journal
-* [getAccountingOrder2](#getaccountingorder2) - Retrieve an order
-* [getAccountingOrganization2](#getaccountingorganization2) - Retrieve an organization
-* [getAccountingProfitloss2](#getaccountingprofitloss2) - Retrieve a profitloss
-* [getAccountingPurchaseorder2](#getaccountingpurchaseorder2) - Retrieve a purchaseorder
-* [getAccountingReport2](#getaccountingreport2) - Retrieve a report
-* [getAccountingSalesorder2](#getaccountingsalesorder2) - Retrieve a salesorder
-* [getAccountingTaxrate2](#getaccountingtaxrate2) - Retrieve a taxrate
-* [getAccountingTransaction2](#getaccountingtransaction2) - Retrieve a transaction
-* [getAccountingTrialbalance2](#getaccountingtrialbalance2) - Retrieve a trialbalance
-* [listAccountingAccounts2](#listaccountingaccounts2) - List all accounts
-* [listAccountingBalancesheets2](#listaccountingbalancesheets2) - List all balancesheets
-* [listAccountingBills2](#listaccountingbills2) - List all bills
-* [listAccountingCashflows2](#listaccountingcashflows2) - List all cashflows
-* [listAccountingCategories2](#listaccountingcategories2) - List all categories
-* [listAccountingContacts2](#listaccountingcontacts2) - List all contacts
-* [listAccountingCreditmemoes2](#listaccountingcreditmemoes2) - List all creditmemoes
-* [listAccountingExpenses2](#listaccountingexpenses2) - List all expenses
-* [listAccountingInvoices2](#listaccountinginvoices2) - List all invoices
-* [listAccountingJournals2](#listaccountingjournals2) - List all journals
-* [listAccountingOrders2](#listaccountingorders2) - List all orders
-* [listAccountingOrganizations2](#listaccountingorganizations2) - List all organizations
-* [listAccountingProfitlosses2](#listaccountingprofitlosses2) - List all profitlosses
-* [listAccountingPurchaseorders2](#listaccountingpurchaseorders2) - List all purchaseorders
-* [listAccountingReports2](#listaccountingreports2) - List all reports
-* [listAccountingSalesorders2](#listaccountingsalesorders2) - List all salesorders
-* [listAccountingTaxrates2](#listaccountingtaxrates2) - List all taxrates
-* [listAccountingTransactions2](#listaccountingtransactions2) - List all transactions
-* [listAccountingTrialbalances2](#listaccountingtrialbalances2) - List all trialbalances
-* [patchAccountingAccount2](#patchaccountingaccount2) - Update an account
-* [patchAccountingBill2](#patchaccountingbill2) - Update a bill
-* [patchAccountingCategory2](#patchaccountingcategory2) - Update a category
-* [patchAccountingContact2](#patchaccountingcontact2) - Update a contact
-* [patchAccountingCreditmemo2](#patchaccountingcreditmemo2) - Update a creditmemo
-* [patchAccountingExpense2](#patchaccountingexpense2) - Update an expense
-* [patchAccountingInvoice2](#patchaccountinginvoice2) - Update an invoice
-* [patchAccountingJournal2](#patchaccountingjournal2) - Update a journal
-* [patchAccountingOrder2](#patchaccountingorder2) - Update an order
-* [patchAccountingPurchaseorder2](#patchaccountingpurchaseorder2) - Update a purchaseorder
-* [patchAccountingSalesorder2](#patchaccountingsalesorder2) - Update a salesorder
-* [patchAccountingTaxrate2](#patchaccountingtaxrate2) - Update a taxrate
-* [patchAccountingTransaction2](#patchaccountingtransaction2) - Update a transaction
-* [removeAccountingAccount2](#removeaccountingaccount2) - Remove an account
-* [removeAccountingBill2](#removeaccountingbill2) - Remove a bill
-* [removeAccountingCategory2](#removeaccountingcategory2) - Remove a category
-* [removeAccountingContact2](#removeaccountingcontact2) - Remove a contact
-* [removeAccountingCreditmemo2](#removeaccountingcreditmemo2) - Remove a creditmemo
-* [removeAccountingExpense2](#removeaccountingexpense2) - Remove an expense
-* [removeAccountingInvoice2](#removeaccountinginvoice2) - Remove an invoice
-* [removeAccountingJournal2](#removeaccountingjournal2) - Remove a journal
-* [removeAccountingOrder2](#removeaccountingorder2) - Remove an order
-* [removeAccountingPurchaseorder2](#removeaccountingpurchaseorder2) - Remove a purchaseorder
-* [removeAccountingSalesorder2](#removeaccountingsalesorder2) - Remove a salesorder
-* [removeAccountingTaxrate2](#removeaccountingtaxrate2) - Remove a taxrate
-* [removeAccountingTransaction2](#removeaccountingtransaction2) - Remove a transaction
-* [updateAccountingAccount2](#updateaccountingaccount2) - Update an account
-* [updateAccountingBill2](#updateaccountingbill2) - Update a bill
-* [updateAccountingCategory2](#updateaccountingcategory2) - Update a category
-* [updateAccountingContact2](#updateaccountingcontact2) - Update a contact
-* [updateAccountingCreditmemo2](#updateaccountingcreditmemo2) - Update a creditmemo
-* [updateAccountingExpense2](#updateaccountingexpense2) - Update an expense
-* [updateAccountingInvoice2](#updateaccountinginvoice2) - Update an invoice
-* [updateAccountingJournal2](#updateaccountingjournal2) - Update a journal
-* [updateAccountingOrder2](#updateaccountingorder2) - Update an order
-* [updateAccountingPurchaseorder2](#updateaccountingpurchaseorder2) - Update a purchaseorder
-* [updateAccountingSalesorder2](#updateaccountingsalesorder2) - Update a salesorder
-* [updateAccountingTaxrate2](#updateaccountingtaxrate2) - Update a taxrate
-* [updateAccountingTransaction2](#updateaccountingtransaction2) - Update a transaction
+* [createAccountingAccount](#createaccountingaccount) - Create an account
+* [createAccountingBill](#createaccountingbill) - Create a bill
+* [createAccountingCategory](#createaccountingcategory) - Create a category
+* [createAccountingContact](#createaccountingcontact) - Create a contact
+* [createAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
+* [createAccountingExpense](#createaccountingexpense) - Create an expense
+* [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
+* [createAccountingJournal](#createaccountingjournal) - Create a journal
+* [createAccountingOrder](#createaccountingorder) - Create an order
+* [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
+* [createAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
+* [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
+* [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
+* [createAccountingVendorcredit](#createaccountingvendorcredit) - Create a vendorcredit
+* [getAccountingAccount](#getaccountingaccount) - Retrieve an account
+* [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
+* [getAccountingBill](#getaccountingbill) - Retrieve a bill
+* [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
+* [getAccountingCategory](#getaccountingcategory) - Retrieve a category
+* [getAccountingContact](#getaccountingcontact) - Retrieve a contact
+* [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
+* [getAccountingExpense](#getaccountingexpense) - Retrieve an expense
+* [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
+* [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
+* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
+* [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [getAccountingReport](#getaccountingreport) - Retrieve a report
+* [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
+* [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
+* [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
+* [getAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
+* [getAccountingVendorcredit](#getaccountingvendorcredit) - Retrieve a vendorcredit
+* [listAccountingAccounts](#listaccountingaccounts) - List all accounts
+* [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
+* [listAccountingBills](#listaccountingbills) - List all bills
+* [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
+* [listAccountingCategories](#listaccountingcategories) - List all categories
+* [listAccountingContacts](#listaccountingcontacts) - List all contacts
+* [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
+* [listAccountingExpenses](#listaccountingexpenses) - List all expenses
+* [listAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [listAccountingJournals](#listaccountingjournals) - List all journals
+* [listAccountingOrders](#listaccountingorders) - List all orders
+* [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
+* [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
+* [listAccountingReports](#listaccountingreports) - List all reports
+* [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
+* [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
+* [listAccountingTransactions](#listaccountingtransactions) - List all transactions
+* [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
+* [listAccountingVendorcredits](#listaccountingvendorcredits) - List all vendorcredits
+* [patchAccountingAccount](#patchaccountingaccount) - Update an account
+* [patchAccountingBill](#patchaccountingbill) - Update a bill
+* [patchAccountingCategory](#patchaccountingcategory) - Update a category
+* [patchAccountingContact](#patchaccountingcontact) - Update a contact
+* [patchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
+* [patchAccountingExpense](#patchaccountingexpense) - Update an expense
+* [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
+* [patchAccountingJournal](#patchaccountingjournal) - Update a journal
+* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
+* [patchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
+* [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
+* [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
+* [patchAccountingVendorcredit](#patchaccountingvendorcredit) - Update a vendorcredit
+* [removeAccountingAccount](#removeaccountingaccount) - Remove an account
+* [removeAccountingBill](#removeaccountingbill) - Remove a bill
+* [removeAccountingCategory](#removeaccountingcategory) - Remove a category
+* [removeAccountingContact](#removeaccountingcontact) - Remove a contact
+* [removeAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
+* [removeAccountingExpense](#removeaccountingexpense) - Remove an expense
+* [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
+* [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
+* [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
+* [removeAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
+* [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
+* [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
+* [removeAccountingVendorcredit](#removeaccountingvendorcredit) - Remove a vendorcredit
+* [updateAccountingAccount](#updateaccountingaccount) - Update an account
+* [updateAccountingBill](#updateaccountingbill) - Update a bill
+* [updateAccountingCategory](#updateaccountingcategory) - Update a category
+* [updateAccountingContact](#updateaccountingcontact) - Update a contact
+* [updateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
+* [updateAccountingExpense](#updateaccountingexpense) - Update an expense
+* [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
+* [updateAccountingJournal](#updateaccountingjournal) - Update a journal
+* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
+* [updateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
+* [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
+* [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
+* [updateAccountingVendorcredit](#updateaccountingvendorcredit) - Update a vendorcredit
 
-## createAccountingAccount2
+## createAccountingAccount
 
 Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingAccount2" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```php
 declare(strict_types=1);
 
@@ -117,12 +123,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingAccount2Request(
+$request = new Operations\CreateAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingAccount2(
+$response = $sdk->accounting->createAccountingAccount(
     request: $request
 );
 
@@ -133,13 +139,13 @@ if ($response->accountingAccount !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingAccount2Request](../../Models/Operations/CreateAccountingAccount2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingAccountRequest](../../Models/Operations/CreateAccountingAccountRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingAccount2Response](../../Models/Operations/CreateAccountingAccount2Response.md)**
+**[?Operations\CreateAccountingAccountResponse](../../Models/Operations/CreateAccountingAccountResponse.md)**
 
 ### Errors
 
@@ -147,13 +153,13 @@ if ($response->accountingAccount !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingBill2
+## createAccountingBill
 
 Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBill2" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -169,12 +175,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingBill2Request(
+$request = new Operations\CreateAccountingBillRequest(
     accountingBill: new Shared\AccountingBill(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingBill2(
+$response = $sdk->accounting->createAccountingBill(
     request: $request
 );
 
@@ -185,13 +191,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\CreateAccountingBill2Request](../../Models/Operations/CreateAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\CreateAccountingBillRequest](../../Models/Operations/CreateAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\CreateAccountingBill2Response](../../Models/Operations/CreateAccountingBill2Response.md)**
+**[?Operations\CreateAccountingBillResponse](../../Models/Operations/CreateAccountingBillResponse.md)**
 
 ### Errors
 
@@ -199,13 +205,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingCategory2
+## createAccountingCategory
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCategory2" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -221,12 +227,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingCategory2Request(
+$request = new Operations\CreateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingCategory2(
+$response = $sdk->accounting->createAccountingCategory(
     request: $request
 );
 
@@ -237,13 +243,13 @@ if ($response->accountingCategory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\CreateAccountingCategory2Request](../../Models/Operations/CreateAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateAccountingCategoryRequest](../../Models/Operations/CreateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\CreateAccountingCategory2Response](../../Models/Operations/CreateAccountingCategory2Response.md)**
+**[?Operations\CreateAccountingCategoryResponse](../../Models/Operations/CreateAccountingCategoryResponse.md)**
 
 ### Errors
 
@@ -251,13 +257,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingContact2
+## createAccountingContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingContact2" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -273,12 +279,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingContact2Request(
+$request = new Operations\CreateAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingContact2(
+$response = $sdk->accounting->createAccountingContact(
     request: $request
 );
 
@@ -289,13 +295,13 @@ if ($response->accountingContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingContact2Request](../../Models/Operations/CreateAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingContactRequest](../../Models/Operations/CreateAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingContact2Response](../../Models/Operations/CreateAccountingContact2Response.md)**
+**[?Operations\CreateAccountingContactResponse](../../Models/Operations/CreateAccountingContactResponse.md)**
 
 ### Errors
 
@@ -303,13 +309,13 @@ if ($response->accountingContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingCreditmemo2
+## createAccountingCreditmemo
 
 Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCreditmemo2" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -325,12 +331,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingCreditmemo2Request(
+$request = new Operations\CreateAccountingCreditmemoRequest(
     accountingCreditmemo: new Shared\AccountingCreditmemo(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingCreditmemo2(
+$response = $sdk->accounting->createAccountingCreditmemo(
     request: $request
 );
 
@@ -341,13 +347,13 @@ if ($response->accountingCreditmemo !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\CreateAccountingCreditmemo2Request](../../Models/Operations/CreateAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\CreateAccountingCreditmemoRequest](../../Models/Operations/CreateAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\CreateAccountingCreditmemo2Response](../../Models/Operations/CreateAccountingCreditmemo2Response.md)**
+**[?Operations\CreateAccountingCreditmemoResponse](../../Models/Operations/CreateAccountingCreditmemoResponse.md)**
 
 ### Errors
 
@@ -355,13 +361,13 @@ if ($response->accountingCreditmemo !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingExpense2
+## createAccountingExpense
 
 Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingExpense2" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="php" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
 ```php
 declare(strict_types=1);
 
@@ -377,12 +383,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingExpense2Request(
+$request = new Operations\CreateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingExpense2(
+$response = $sdk->accounting->createAccountingExpense(
     request: $request
 );
 
@@ -393,13 +399,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingExpense2Request](../../Models/Operations/CreateAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingExpenseRequest](../../Models/Operations/CreateAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingExpense2Response](../../Models/Operations/CreateAccountingExpense2Response.md)**
+**[?Operations\CreateAccountingExpenseResponse](../../Models/Operations/CreateAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -407,13 +413,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingInvoice2
+## createAccountingInvoice
 
 Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingInvoice2" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -429,12 +435,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingInvoice2Request(
+$request = new Operations\CreateAccountingInvoiceRequest(
     accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingInvoice2(
+$response = $sdk->accounting->createAccountingInvoice(
     request: $request
 );
 
@@ -445,13 +451,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingInvoice2Request](../../Models/Operations/CreateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingInvoiceRequest](../../Models/Operations/CreateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingInvoice2Response](../../Models/Operations/CreateAccountingInvoice2Response.md)**
+**[?Operations\CreateAccountingInvoiceResponse](../../Models/Operations/CreateAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -459,13 +465,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingJournal2
+## createAccountingJournal
 
 Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingJournal2" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -481,12 +487,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingJournal2Request(
+$request = new Operations\CreateAccountingJournalRequest(
     accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingJournal2(
+$response = $sdk->accounting->createAccountingJournal(
     request: $request
 );
 
@@ -497,13 +503,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingJournal2Request](../../Models/Operations/CreateAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingJournalRequest](../../Models/Operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingJournal2Response](../../Models/Operations/CreateAccountingJournal2Response.md)**
+**[?Operations\CreateAccountingJournalResponse](../../Models/Operations/CreateAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -511,13 +517,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingOrder2
+## createAccountingOrder
 
 Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingOrder2" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -533,12 +539,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingOrder2Request(
+$request = new Operations\CreateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingOrder2(
+$response = $sdk->accounting->createAccountingOrder(
     request: $request
 );
 
@@ -549,13 +555,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateAccountingOrder2Request](../../Models/Operations/CreateAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAccountingOrderRequest](../../Models/Operations/CreateAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateAccountingOrder2Response](../../Models/Operations/CreateAccountingOrder2Response.md)**
+**[?Operations\CreateAccountingOrderResponse](../../Models/Operations/CreateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -563,13 +569,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingPurchaseorder2
+## createAccountingPurchaseorder
 
 Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder2" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -585,12 +591,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingPurchaseorder2Request(
+$request = new Operations\CreateAccountingPurchaseorderRequest(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingPurchaseorder2(
+$response = $sdk->accounting->createAccountingPurchaseorder(
     request: $request
 );
 
@@ -601,13 +607,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [Operations\CreateAccountingPurchaseorder2Request](../../Models/Operations/CreateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\CreateAccountingPurchaseorderRequest](../../Models/Operations/CreateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 ### Response
 
-**[?Operations\CreateAccountingPurchaseorder2Response](../../Models/Operations/CreateAccountingPurchaseorder2Response.md)**
+**[?Operations\CreateAccountingPurchaseorderResponse](../../Models/Operations/CreateAccountingPurchaseorderResponse.md)**
 
 ### Errors
 
@@ -615,13 +621,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingSalesorder2
+## createAccountingSalesorder
 
 Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingSalesorder2" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -637,12 +643,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingSalesorder2Request(
+$request = new Operations\CreateAccountingSalesorderRequest(
     accountingSalesorder: new Shared\AccountingSalesorder(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingSalesorder2(
+$response = $sdk->accounting->createAccountingSalesorder(
     request: $request
 );
 
@@ -653,13 +659,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\CreateAccountingSalesorder2Request](../../Models/Operations/CreateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\CreateAccountingSalesorderRequest](../../Models/Operations/CreateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\CreateAccountingSalesorder2Response](../../Models/Operations/CreateAccountingSalesorder2Response.md)**
+**[?Operations\CreateAccountingSalesorderResponse](../../Models/Operations/CreateAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -667,13 +673,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingTaxrate2
+## createAccountingTaxrate
 
 Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTaxrate2" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -689,12 +695,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingTaxrate2Request(
+$request = new Operations\CreateAccountingTaxrateRequest(
     accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingTaxrate2(
+$response = $sdk->accounting->createAccountingTaxrate(
     request: $request
 );
 
@@ -705,13 +711,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingTaxrate2Request](../../Models/Operations/CreateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingTaxrateRequest](../../Models/Operations/CreateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingTaxrate2Response](../../Models/Operations/CreateAccountingTaxrate2Response.md)**
+**[?Operations\CreateAccountingTaxrateResponse](../../Models/Operations/CreateAccountingTaxrateResponse.md)**
 
 ### Errors
 
@@ -719,13 +725,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingTransaction2
+## createAccountingTransaction
 
 Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTransaction2" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -741,12 +747,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingTransaction2Request(
+$request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->createAccountingTransaction2(
+$response = $sdk->accounting->createAccountingTransaction(
     request: $request
 );
 
@@ -757,13 +763,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\CreateAccountingTransaction2Request](../../Models/Operations/CreateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\CreateAccountingTransactionRequest](../../Models/Operations/CreateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\CreateAccountingTransaction2Response](../../Models/Operations/CreateAccountingTransaction2Response.md)**
+**[?Operations\CreateAccountingTransactionResponse](../../Models/Operations/CreateAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -771,13 +777,65 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingAccount2
+## createAccountingVendorcredit
+
+Create a vendorcredit
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAccountingVendorcreditRequest(
+    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->createAccountingVendorcredit(
+    request: $request
+);
+
+if ($response->accountingVendorcredit !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\CreateAccountingVendorcreditRequest](../../Models/Operations/CreateAccountingVendorcreditRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+### Response
+
+**[?Operations\CreateAccountingVendorcreditResponse](../../Models/Operations/CreateAccountingVendorcreditResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAccountingAccount
 
 Retrieve an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingAccount2" method="get" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -792,12 +850,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingAccount2Request(
+$request = new Operations\GetAccountingAccountRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingAccount2(
+$response = $sdk->accounting->getAccountingAccount(
     request: $request
 );
 
@@ -808,13 +866,13 @@ if ($response->accountingAccount !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingAccount2Request](../../Models/Operations/GetAccountingAccount2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingAccountRequest](../../Models/Operations/GetAccountingAccountRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingAccount2Response](../../Models/Operations/GetAccountingAccount2Response.md)**
+**[?Operations\GetAccountingAccountResponse](../../Models/Operations/GetAccountingAccountResponse.md)**
 
 ### Errors
 
@@ -822,13 +880,13 @@ if ($response->accountingAccount !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingBalancesheet2
+## getAccountingBalancesheet
 
 Retrieve a balancesheet
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet2" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -843,12 +901,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingBalancesheet2Request(
+$request = new Operations\GetAccountingBalancesheetRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingBalancesheet2(
+$response = $sdk->accounting->getAccountingBalancesheet(
     request: $request
 );
 
@@ -859,13 +917,13 @@ if ($response->accountingBalancesheet !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingBalancesheet2Request](../../Models/Operations/GetAccountingBalancesheet2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingBalancesheetRequest](../../Models/Operations/GetAccountingBalancesheetRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingBalancesheet2Response](../../Models/Operations/GetAccountingBalancesheet2Response.md)**
+**[?Operations\GetAccountingBalancesheetResponse](../../Models/Operations/GetAccountingBalancesheetResponse.md)**
 
 ### Errors
 
@@ -873,13 +931,13 @@ if ($response->accountingBalancesheet !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingBill2
+## getAccountingBill
 
 Retrieve a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingBill2" method="get" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -894,12 +952,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingBill2Request(
+$request = new Operations\GetAccountingBillRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingBill2(
+$response = $sdk->accounting->getAccountingBill(
     request: $request
 );
 
@@ -910,13 +968,13 @@ if ($response->accountingBill !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\GetAccountingBill2Request](../../Models/Operations/GetAccountingBill2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetAccountingBillRequest](../../Models/Operations/GetAccountingBillRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingBill2Response](../../Models/Operations/GetAccountingBill2Response.md)**
+**[?Operations\GetAccountingBillResponse](../../Models/Operations/GetAccountingBillResponse.md)**
 
 ### Errors
 
@@ -924,13 +982,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingCashflow2
+## getAccountingCashflow
 
 Retrieve a cashflow
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingCashflow2" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -945,12 +1003,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingCashflow2Request(
+$request = new Operations\GetAccountingCashflowRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingCashflow2(
+$response = $sdk->accounting->getAccountingCashflow(
     request: $request
 );
 
@@ -961,13 +1019,13 @@ if ($response->accountingCashflow !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\GetAccountingCashflow2Request](../../Models/Operations/GetAccountingCashflow2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAccountingCashflowRequest](../../Models/Operations/GetAccountingCashflowRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetAccountingCashflow2Response](../../Models/Operations/GetAccountingCashflow2Response.md)**
+**[?Operations\GetAccountingCashflowResponse](../../Models/Operations/GetAccountingCashflowResponse.md)**
 
 ### Errors
 
@@ -975,13 +1033,13 @@ if ($response->accountingCashflow !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingCategory2
+## getAccountingCategory
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingCategory2" method="get" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -996,12 +1054,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingCategory2Request(
+$request = new Operations\GetAccountingCategoryRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingCategory2(
+$response = $sdk->accounting->getAccountingCategory(
     request: $request
 );
 
@@ -1012,13 +1070,13 @@ if ($response->accountingCategory !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\GetAccountingCategory2Request](../../Models/Operations/GetAccountingCategory2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetAccountingCategoryRequest](../../Models/Operations/GetAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\GetAccountingCategory2Response](../../Models/Operations/GetAccountingCategory2Response.md)**
+**[?Operations\GetAccountingCategoryResponse](../../Models/Operations/GetAccountingCategoryResponse.md)**
 
 ### Errors
 
@@ -1026,13 +1084,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingContact2
+## getAccountingContact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingContact2" method="get" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1047,12 +1105,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingContact2Request(
+$request = new Operations\GetAccountingContactRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingContact2(
+$response = $sdk->accounting->getAccountingContact(
     request: $request
 );
 
@@ -1063,13 +1121,13 @@ if ($response->accountingContact !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingContact2Request](../../Models/Operations/GetAccountingContact2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingContactRequest](../../Models/Operations/GetAccountingContactRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingContact2Response](../../Models/Operations/GetAccountingContact2Response.md)**
+**[?Operations\GetAccountingContactResponse](../../Models/Operations/GetAccountingContactResponse.md)**
 
 ### Errors
 
@@ -1077,13 +1135,13 @@ if ($response->accountingContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingCreditmemo2
+## getAccountingCreditmemo
 
 Retrieve a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingCreditmemo2" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1098,12 +1156,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingCreditmemo2Request(
+$request = new Operations\GetAccountingCreditmemoRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingCreditmemo2(
+$response = $sdk->accounting->getAccountingCreditmemo(
     request: $request
 );
 
@@ -1114,13 +1172,13 @@ if ($response->accountingCreditmemo !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetAccountingCreditmemo2Request](../../Models/Operations/GetAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetAccountingCreditmemoRequest](../../Models/Operations/GetAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetAccountingCreditmemo2Response](../../Models/Operations/GetAccountingCreditmemo2Response.md)**
+**[?Operations\GetAccountingCreditmemoResponse](../../Models/Operations/GetAccountingCreditmemoResponse.md)**
 
 ### Errors
 
@@ -1128,13 +1186,13 @@ if ($response->accountingCreditmemo !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingExpense2
+## getAccountingExpense
 
 Retrieve an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingExpense2" method="get" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingExpense" method="get" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1149,12 +1207,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingExpense2Request(
+$request = new Operations\GetAccountingExpenseRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingExpense2(
+$response = $sdk->accounting->getAccountingExpense(
     request: $request
 );
 
@@ -1165,13 +1223,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingExpense2Request](../../Models/Operations/GetAccountingExpense2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingExpenseRequest](../../Models/Operations/GetAccountingExpenseRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingExpense2Response](../../Models/Operations/GetAccountingExpense2Response.md)**
+**[?Operations\GetAccountingExpenseResponse](../../Models/Operations/GetAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -1179,13 +1237,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingInvoice2
+## getAccountingInvoice
 
 Retrieve an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingInvoice2" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1200,12 +1258,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingInvoice2Request(
+$request = new Operations\GetAccountingInvoiceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingInvoice2(
+$response = $sdk->accounting->getAccountingInvoice(
     request: $request
 );
 
@@ -1216,13 +1274,13 @@ if ($response->accountingInvoice !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingInvoice2Request](../../Models/Operations/GetAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingInvoiceRequest](../../Models/Operations/GetAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingInvoice2Response](../../Models/Operations/GetAccountingInvoice2Response.md)**
+**[?Operations\GetAccountingInvoiceResponse](../../Models/Operations/GetAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -1230,13 +1288,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingJournal2
+## getAccountingJournal
 
 Retrieve a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingJournal2" method="get" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1251,12 +1309,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingJournal2Request(
+$request = new Operations\GetAccountingJournalRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingJournal2(
+$response = $sdk->accounting->getAccountingJournal(
     request: $request
 );
 
@@ -1267,13 +1325,13 @@ if ($response->accountingJournal !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingJournal2Request](../../Models/Operations/GetAccountingJournal2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingJournalRequest](../../Models/Operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingJournal2Response](../../Models/Operations/GetAccountingJournal2Response.md)**
+**[?Operations\GetAccountingJournalResponse](../../Models/Operations/GetAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -1281,13 +1339,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrder2
+## getAccountingOrder
 
 Retrieve an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingOrder2" method="get" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1302,12 +1360,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingOrder2Request(
+$request = new Operations\GetAccountingOrderRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingOrder2(
+$response = $sdk->accounting->getAccountingOrder(
     request: $request
 );
 
@@ -1318,13 +1376,13 @@ if ($response->accountingOrder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetAccountingOrder2Request](../../Models/Operations/GetAccountingOrder2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAccountingOrderRequest](../../Models/Operations/GetAccountingOrderRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetAccountingOrder2Response](../../Models/Operations/GetAccountingOrder2Response.md)**
+**[?Operations\GetAccountingOrderResponse](../../Models/Operations/GetAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -1332,13 +1390,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrganization2
+## getAccountingOrganization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingOrganization2" method="get" path="/accounting/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1353,12 +1411,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingOrganization2Request(
+$request = new Operations\GetAccountingOrganizationRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingOrganization2(
+$response = $sdk->accounting->getAccountingOrganization(
     request: $request
 );
 
@@ -1369,13 +1427,13 @@ if ($response->accountingOrganization !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingOrganization2Request](../../Models/Operations/GetAccountingOrganization2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingOrganizationRequest](../../Models/Operations/GetAccountingOrganizationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingOrganization2Response](../../Models/Operations/GetAccountingOrganization2Response.md)**
+**[?Operations\GetAccountingOrganizationResponse](../../Models/Operations/GetAccountingOrganizationResponse.md)**
 
 ### Errors
 
@@ -1383,13 +1441,13 @@ if ($response->accountingOrganization !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingProfitloss2
+## getAccountingProfitloss
 
 Retrieve a profitloss
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingProfitloss2" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1404,12 +1462,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingProfitloss2Request(
+$request = new Operations\GetAccountingProfitlossRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingProfitloss2(
+$response = $sdk->accounting->getAccountingProfitloss(
     request: $request
 );
 
@@ -1420,13 +1478,13 @@ if ($response->accountingProfitloss !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetAccountingProfitloss2Request](../../Models/Operations/GetAccountingProfitloss2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetAccountingProfitlossRequest](../../Models/Operations/GetAccountingProfitlossRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetAccountingProfitloss2Response](../../Models/Operations/GetAccountingProfitloss2Response.md)**
+**[?Operations\GetAccountingProfitlossResponse](../../Models/Operations/GetAccountingProfitlossResponse.md)**
 
 ### Errors
 
@@ -1434,13 +1492,13 @@ if ($response->accountingProfitloss !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingPurchaseorder2
+## getAccountingPurchaseorder
 
 Retrieve a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingPurchaseorder2" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1455,12 +1513,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingPurchaseorder2Request(
+$request = new Operations\GetAccountingPurchaseorderRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingPurchaseorder2(
+$response = $sdk->accounting->getAccountingPurchaseorder(
     request: $request
 );
 
@@ -1471,13 +1529,13 @@ if ($response->accountingPurchaseorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\GetAccountingPurchaseorder2Request](../../Models/Operations/GetAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\GetAccountingPurchaseorderRequest](../../Models/Operations/GetAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\GetAccountingPurchaseorder2Response](../../Models/Operations/GetAccountingPurchaseorder2Response.md)**
+**[?Operations\GetAccountingPurchaseorderResponse](../../Models/Operations/GetAccountingPurchaseorderResponse.md)**
 
 ### Errors
 
@@ -1485,13 +1543,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingReport2
+## getAccountingReport
 
 Retrieve a report
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingReport2" method="get" path="/accounting/{connection_id}/report/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1506,12 +1564,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingReport2Request(
+$request = new Operations\GetAccountingReportRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingReport2(
+$response = $sdk->accounting->getAccountingReport(
     request: $request
 );
 
@@ -1522,13 +1580,13 @@ if ($response->accountingReport !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\GetAccountingReport2Request](../../Models/Operations/GetAccountingReport2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetAccountingReportRequest](../../Models/Operations/GetAccountingReportRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\GetAccountingReport2Response](../../Models/Operations/GetAccountingReport2Response.md)**
+**[?Operations\GetAccountingReportResponse](../../Models/Operations/GetAccountingReportResponse.md)**
 
 ### Errors
 
@@ -1536,13 +1594,13 @@ if ($response->accountingReport !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingSalesorder2
+## getAccountingSalesorder
 
 Retrieve a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingSalesorder2" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1557,12 +1615,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingSalesorder2Request(
+$request = new Operations\GetAccountingSalesorderRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingSalesorder2(
+$response = $sdk->accounting->getAccountingSalesorder(
     request: $request
 );
 
@@ -1573,13 +1631,13 @@ if ($response->accountingSalesorder !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\GetAccountingSalesorder2Request](../../Models/Operations/GetAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\GetAccountingSalesorderRequest](../../Models/Operations/GetAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\GetAccountingSalesorder2Response](../../Models/Operations/GetAccountingSalesorder2Response.md)**
+**[?Operations\GetAccountingSalesorderResponse](../../Models/Operations/GetAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -1587,13 +1645,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingTaxrate2
+## getAccountingTaxrate
 
 Retrieve a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTaxrate2" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1608,12 +1666,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTaxrate2Request(
+$request = new Operations\GetAccountingTaxrateRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingTaxrate2(
+$response = $sdk->accounting->getAccountingTaxrate(
     request: $request
 );
 
@@ -1624,13 +1682,13 @@ if ($response->accountingTaxrate !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingTaxrate2Request](../../Models/Operations/GetAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingTaxrateRequest](../../Models/Operations/GetAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingTaxrate2Response](../../Models/Operations/GetAccountingTaxrate2Response.md)**
+**[?Operations\GetAccountingTaxrateResponse](../../Models/Operations/GetAccountingTaxrateResponse.md)**
 
 ### Errors
 
@@ -1638,13 +1696,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingTransaction2
+## getAccountingTransaction
 
 Retrieve a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTransaction2" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1659,12 +1717,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTransaction2Request(
+$request = new Operations\GetAccountingTransactionRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingTransaction2(
+$response = $sdk->accounting->getAccountingTransaction(
     request: $request
 );
 
@@ -1675,13 +1733,13 @@ if ($response->accountingTransaction !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\GetAccountingTransaction2Request](../../Models/Operations/GetAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\GetAccountingTransactionRequest](../../Models/Operations/GetAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\GetAccountingTransaction2Response](../../Models/Operations/GetAccountingTransaction2Response.md)**
+**[?Operations\GetAccountingTransactionResponse](../../Models/Operations/GetAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -1689,13 +1747,13 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingTrialbalance2
+## getAccountingTrialbalance
 
 Retrieve a trialbalance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance2" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1710,12 +1768,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingTrialbalance2Request(
+$request = new Operations\GetAccountingTrialbalanceRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->getAccountingTrialbalance2(
+$response = $sdk->accounting->getAccountingTrialbalance(
     request: $request
 );
 
@@ -1726,13 +1784,13 @@ if ($response->accountingTrialbalance !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\GetAccountingTrialbalance2Request](../../Models/Operations/GetAccountingTrialbalance2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingTrialbalanceRequest](../../Models/Operations/GetAccountingTrialbalanceRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\GetAccountingTrialbalance2Response](../../Models/Operations/GetAccountingTrialbalance2Response.md)**
+**[?Operations\GetAccountingTrialbalanceResponse](../../Models/Operations/GetAccountingTrialbalanceResponse.md)**
 
 ### Errors
 
@@ -1740,13 +1798,13 @@ if ($response->accountingTrialbalance !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingAccounts2
+## getAccountingVendorcredit
 
-List all accounts
+Retrieve a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingAccounts2" method="get" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="php" operationID="getAccountingVendorcredit" method="get" path="/accounting/{connection_id}/vendorcredit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -1761,11 +1819,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingAccounts2Request(
+$request = new Operations\GetAccountingVendorcreditRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingVendorcredit(
+    request: $request
+);
+
+if ($response->accountingVendorcredit !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetAccountingVendorcreditRequest](../../Models/Operations/GetAccountingVendorcreditRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\GetAccountingVendorcreditResponse](../../Models/Operations/GetAccountingVendorcreditResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAccountingAccounts
+
+List all accounts
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingAccountsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingAccounts2(
+$response = $sdk->accounting->listAccountingAccounts(
     request: $request
 );
 
@@ -1776,13 +1885,13 @@ if ($response->accountingAccounts !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingAccounts2Request](../../Models/Operations/ListAccountingAccounts2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingAccountsRequest](../../Models/Operations/ListAccountingAccountsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingAccounts2Response](../../Models/Operations/ListAccountingAccounts2Response.md)**
+**[?Operations\ListAccountingAccountsResponse](../../Models/Operations/ListAccountingAccountsResponse.md)**
 
 ### Errors
 
@@ -1790,13 +1899,13 @@ if ($response->accountingAccounts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingBalancesheets2
+## listAccountingBalancesheets
 
 List all balancesheets
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets2" method="get" path="/accounting/{connection_id}/balancesheet" -->
+<!-- UsageSnippet language="php" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```php
 declare(strict_types=1);
 
@@ -1811,11 +1920,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingBalancesheets2Request(
+$request = new Operations\ListAccountingBalancesheetsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingBalancesheets2(
+$response = $sdk->accounting->listAccountingBalancesheets(
     request: $request
 );
 
@@ -1826,13 +1935,13 @@ if ($response->accountingBalancesheets !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingBalancesheets2Request](../../Models/Operations/ListAccountingBalancesheets2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingBalancesheetsRequest](../../Models/Operations/ListAccountingBalancesheetsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingBalancesheets2Response](../../Models/Operations/ListAccountingBalancesheets2Response.md)**
+**[?Operations\ListAccountingBalancesheetsResponse](../../Models/Operations/ListAccountingBalancesheetsResponse.md)**
 
 ### Errors
 
@@ -1840,13 +1949,13 @@ if ($response->accountingBalancesheets !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingBills2
+## listAccountingBills
 
 List all bills
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingBills2" method="get" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```php
 declare(strict_types=1);
 
@@ -1861,11 +1970,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingBills2Request(
+$request = new Operations\ListAccountingBillsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingBills2(
+$response = $sdk->accounting->listAccountingBills(
     request: $request
 );
 
@@ -1876,13 +1985,13 @@ if ($response->accountingBills !== null) {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\ListAccountingBills2Request](../../Models/Operations/ListAccountingBills2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListAccountingBillsRequest](../../Models/Operations/ListAccountingBillsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingBills2Response](../../Models/Operations/ListAccountingBills2Response.md)**
+**[?Operations\ListAccountingBillsResponse](../../Models/Operations/ListAccountingBillsResponse.md)**
 
 ### Errors
 
@@ -1890,13 +1999,13 @@ if ($response->accountingBills !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingCashflows2
+## listAccountingCashflows
 
 List all cashflows
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingCashflows2" method="get" path="/accounting/{connection_id}/cashflow" -->
+<!-- UsageSnippet language="php" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
 ```php
 declare(strict_types=1);
 
@@ -1911,11 +2020,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingCashflows2Request(
+$request = new Operations\ListAccountingCashflowsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingCashflows2(
+$response = $sdk->accounting->listAccountingCashflows(
     request: $request
 );
 
@@ -1926,13 +2035,13 @@ if ($response->accountingCashflows !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\ListAccountingCashflows2Request](../../Models/Operations/ListAccountingCashflows2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListAccountingCashflowsRequest](../../Models/Operations/ListAccountingCashflowsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\ListAccountingCashflows2Response](../../Models/Operations/ListAccountingCashflows2Response.md)**
+**[?Operations\ListAccountingCashflowsResponse](../../Models/Operations/ListAccountingCashflowsResponse.md)**
 
 ### Errors
 
@@ -1940,13 +2049,13 @@ if ($response->accountingCashflows !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingCategories2
+## listAccountingCategories
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingCategories2" method="get" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
 ```php
 declare(strict_types=1);
 
@@ -1961,11 +2070,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingCategories2Request(
+$request = new Operations\ListAccountingCategoriesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingCategories2(
+$response = $sdk->accounting->listAccountingCategories(
     request: $request
 );
 
@@ -1976,13 +2085,13 @@ if ($response->accountingCategories !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\ListAccountingCategories2Request](../../Models/Operations/ListAccountingCategories2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListAccountingCategoriesRequest](../../Models/Operations/ListAccountingCategoriesRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\ListAccountingCategories2Response](../../Models/Operations/ListAccountingCategories2Response.md)**
+**[?Operations\ListAccountingCategoriesResponse](../../Models/Operations/ListAccountingCategoriesResponse.md)**
 
 ### Errors
 
@@ -1990,13 +2099,13 @@ if ($response->accountingCategories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingContacts2
+## listAccountingContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingContacts2" method="get" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```php
 declare(strict_types=1);
 
@@ -2011,11 +2120,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingContacts2Request(
+$request = new Operations\ListAccountingContactsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingContacts2(
+$response = $sdk->accounting->listAccountingContacts(
     request: $request
 );
 
@@ -2026,13 +2135,13 @@ if ($response->accountingContacts !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingContacts2Request](../../Models/Operations/ListAccountingContacts2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingContactsRequest](../../Models/Operations/ListAccountingContactsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingContacts2Response](../../Models/Operations/ListAccountingContacts2Response.md)**
+**[?Operations\ListAccountingContactsResponse](../../Models/Operations/ListAccountingContactsResponse.md)**
 
 ### Errors
 
@@ -2040,13 +2149,13 @@ if ($response->accountingContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingCreditmemoes2
+## listAccountingCreditmemoes
 
 List all creditmemoes
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingCreditmemoes2" method="get" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="php" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -2061,11 +2170,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingCreditmemoes2Request(
+$request = new Operations\ListAccountingCreditmemoesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingCreditmemoes2(
+$response = $sdk->accounting->listAccountingCreditmemoes(
     request: $request
 );
 
@@ -2076,13 +2185,13 @@ if ($response->accountingCreditmemoes !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\ListAccountingCreditmemoes2Request](../../Models/Operations/ListAccountingCreditmemoes2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListAccountingCreditmemoesRequest](../../Models/Operations/ListAccountingCreditmemoesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\ListAccountingCreditmemoes2Response](../../Models/Operations/ListAccountingCreditmemoes2Response.md)**
+**[?Operations\ListAccountingCreditmemoesResponse](../../Models/Operations/ListAccountingCreditmemoesResponse.md)**
 
 ### Errors
 
@@ -2090,13 +2199,13 @@ if ($response->accountingCreditmemoes !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingExpenses2
+## listAccountingExpenses
 
 List all expenses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingExpenses2" method="get" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="php" operationID="listAccountingExpenses" method="get" path="/accounting/{connection_id}/expense" -->
 ```php
 declare(strict_types=1);
 
@@ -2111,11 +2220,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingExpenses2Request(
+$request = new Operations\ListAccountingExpensesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingExpenses2(
+$response = $sdk->accounting->listAccountingExpenses(
     request: $request
 );
 
@@ -2126,13 +2235,13 @@ if ($response->accountingExpenses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingExpenses2Request](../../Models/Operations/ListAccountingExpenses2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingExpensesRequest](../../Models/Operations/ListAccountingExpensesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingExpenses2Response](../../Models/Operations/ListAccountingExpenses2Response.md)**
+**[?Operations\ListAccountingExpensesResponse](../../Models/Operations/ListAccountingExpensesResponse.md)**
 
 ### Errors
 
@@ -2140,13 +2249,13 @@ if ($response->accountingExpenses !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingInvoices2
+## listAccountingInvoices
 
 List all invoices
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingInvoices2" method="get" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -2161,11 +2270,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingInvoices2Request(
+$request = new Operations\ListAccountingInvoicesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingInvoices2(
+$response = $sdk->accounting->listAccountingInvoices(
     request: $request
 );
 
@@ -2176,13 +2285,13 @@ if ($response->accountingInvoices !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingInvoices2Request](../../Models/Operations/ListAccountingInvoices2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingInvoicesRequest](../../Models/Operations/ListAccountingInvoicesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingInvoices2Response](../../Models/Operations/ListAccountingInvoices2Response.md)**
+**[?Operations\ListAccountingInvoicesResponse](../../Models/Operations/ListAccountingInvoicesResponse.md)**
 
 ### Errors
 
@@ -2190,13 +2299,13 @@ if ($response->accountingInvoices !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingJournals2
+## listAccountingJournals
 
 List all journals
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingJournals2" method="get" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```php
 declare(strict_types=1);
 
@@ -2211,11 +2320,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingJournals2Request(
+$request = new Operations\ListAccountingJournalsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingJournals2(
+$response = $sdk->accounting->listAccountingJournals(
     request: $request
 );
 
@@ -2226,13 +2335,13 @@ if ($response->accountingJournals !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingJournals2Request](../../Models/Operations/ListAccountingJournals2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingJournalsRequest](../../Models/Operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingJournals2Response](../../Models/Operations/ListAccountingJournals2Response.md)**
+**[?Operations\ListAccountingJournalsResponse](../../Models/Operations/ListAccountingJournalsResponse.md)**
 
 ### Errors
 
@@ -2240,13 +2349,13 @@ if ($response->accountingJournals !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrders2
+## listAccountingOrders
 
 List all orders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingOrders2" method="get" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```php
 declare(strict_types=1);
 
@@ -2261,11 +2370,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingOrders2Request(
+$request = new Operations\ListAccountingOrdersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingOrders2(
+$response = $sdk->accounting->listAccountingOrders(
     request: $request
 );
 
@@ -2276,13 +2385,13 @@ if ($response->accountingOrders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListAccountingOrders2Request](../../Models/Operations/ListAccountingOrders2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListAccountingOrdersRequest](../../Models/Operations/ListAccountingOrdersRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListAccountingOrders2Response](../../Models/Operations/ListAccountingOrders2Response.md)**
+**[?Operations\ListAccountingOrdersResponse](../../Models/Operations/ListAccountingOrdersResponse.md)**
 
 ### Errors
 
@@ -2290,13 +2399,13 @@ if ($response->accountingOrders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrganizations2
+## listAccountingOrganizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingOrganizations2" method="get" path="/accounting/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```php
 declare(strict_types=1);
 
@@ -2311,11 +2420,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingOrganizations2Request(
+$request = new Operations\ListAccountingOrganizationsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingOrganizations2(
+$response = $sdk->accounting->listAccountingOrganizations(
     request: $request
 );
 
@@ -2326,13 +2435,13 @@ if ($response->accountingOrganizations !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingOrganizations2Request](../../Models/Operations/ListAccountingOrganizations2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingOrganizationsRequest](../../Models/Operations/ListAccountingOrganizationsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingOrganizations2Response](../../Models/Operations/ListAccountingOrganizations2Response.md)**
+**[?Operations\ListAccountingOrganizationsResponse](../../Models/Operations/ListAccountingOrganizationsResponse.md)**
 
 ### Errors
 
@@ -2340,13 +2449,13 @@ if ($response->accountingOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingProfitlosses2
+## listAccountingProfitlosses
 
 List all profitlosses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses2" method="get" path="/accounting/{connection_id}/profitloss" -->
+<!-- UsageSnippet language="php" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```php
 declare(strict_types=1);
 
@@ -2361,11 +2470,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingProfitlosses2Request(
+$request = new Operations\ListAccountingProfitlossesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingProfitlosses2(
+$response = $sdk->accounting->listAccountingProfitlosses(
     request: $request
 );
 
@@ -2376,13 +2485,13 @@ if ($response->accountingProfitlosses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\ListAccountingProfitlosses2Request](../../Models/Operations/ListAccountingProfitlosses2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListAccountingProfitlossesRequest](../../Models/Operations/ListAccountingProfitlossesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\ListAccountingProfitlosses2Response](../../Models/Operations/ListAccountingProfitlosses2Response.md)**
+**[?Operations\ListAccountingProfitlossesResponse](../../Models/Operations/ListAccountingProfitlossesResponse.md)**
 
 ### Errors
 
@@ -2390,13 +2499,13 @@ if ($response->accountingProfitlosses !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingPurchaseorders2
+## listAccountingPurchaseorders
 
 List all purchaseorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingPurchaseorders2" method="get" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -2411,11 +2520,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingPurchaseorders2Request(
+$request = new Operations\ListAccountingPurchaseordersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingPurchaseorders2(
+$response = $sdk->accounting->listAccountingPurchaseorders(
     request: $request
 );
 
@@ -2426,13 +2535,13 @@ if ($response->accountingPurchaseorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [Operations\ListAccountingPurchaseorders2Request](../../Models/Operations/ListAccountingPurchaseorders2Request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\ListAccountingPurchaseordersRequest](../../Models/Operations/ListAccountingPurchaseordersRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\ListAccountingPurchaseorders2Response](../../Models/Operations/ListAccountingPurchaseorders2Response.md)**
+**[?Operations\ListAccountingPurchaseordersResponse](../../Models/Operations/ListAccountingPurchaseordersResponse.md)**
 
 ### Errors
 
@@ -2440,13 +2549,13 @@ if ($response->accountingPurchaseorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingReports2
+## listAccountingReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingReports2" method="get" path="/accounting/{connection_id}/report" -->
+<!-- UsageSnippet language="php" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```php
 declare(strict_types=1);
 
@@ -2461,11 +2570,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingReports2Request(
+$request = new Operations\ListAccountingReportsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingReports2(
+$response = $sdk->accounting->listAccountingReports(
     request: $request
 );
 
@@ -2476,13 +2585,13 @@ if ($response->accountingReports !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\ListAccountingReports2Request](../../Models/Operations/ListAccountingReports2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListAccountingReportsRequest](../../Models/Operations/ListAccountingReportsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\ListAccountingReports2Response](../../Models/Operations/ListAccountingReports2Response.md)**
+**[?Operations\ListAccountingReportsResponse](../../Models/Operations/ListAccountingReportsResponse.md)**
 
 ### Errors
 
@@ -2490,13 +2599,13 @@ if ($response->accountingReports !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingSalesorders2
+## listAccountingSalesorders
 
 List all salesorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingSalesorders2" method="get" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -2511,11 +2620,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingSalesorders2Request(
+$request = new Operations\ListAccountingSalesordersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingSalesorders2(
+$response = $sdk->accounting->listAccountingSalesorders(
     request: $request
 );
 
@@ -2526,13 +2635,13 @@ if ($response->accountingSalesorders !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\ListAccountingSalesorders2Request](../../Models/Operations/ListAccountingSalesorders2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\ListAccountingSalesordersRequest](../../Models/Operations/ListAccountingSalesordersRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 ### Response
 
-**[?Operations\ListAccountingSalesorders2Response](../../Models/Operations/ListAccountingSalesorders2Response.md)**
+**[?Operations\ListAccountingSalesordersResponse](../../Models/Operations/ListAccountingSalesordersResponse.md)**
 
 ### Errors
 
@@ -2540,13 +2649,13 @@ if ($response->accountingSalesorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTaxrates2
+## listAccountingTaxrates
 
 List all taxrates
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTaxrates2" method="get" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -2561,11 +2670,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTaxrates2Request(
+$request = new Operations\ListAccountingTaxratesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingTaxrates2(
+$response = $sdk->accounting->listAccountingTaxrates(
     request: $request
 );
 
@@ -2576,13 +2685,13 @@ if ($response->accountingTaxrates !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingTaxrates2Request](../../Models/Operations/ListAccountingTaxrates2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingTaxratesRequest](../../Models/Operations/ListAccountingTaxratesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingTaxrates2Response](../../Models/Operations/ListAccountingTaxrates2Response.md)**
+**[?Operations\ListAccountingTaxratesResponse](../../Models/Operations/ListAccountingTaxratesResponse.md)**
 
 ### Errors
 
@@ -2590,13 +2699,13 @@ if ($response->accountingTaxrates !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTransactions2
+## listAccountingTransactions
 
 List all transactions
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTransactions2" method="get" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -2611,11 +2720,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTransactions2Request(
+$request = new Operations\ListAccountingTransactionsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingTransactions2(
+$response = $sdk->accounting->listAccountingTransactions(
     request: $request
 );
 
@@ -2626,13 +2735,13 @@ if ($response->accountingTransactions !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\ListAccountingTransactions2Request](../../Models/Operations/ListAccountingTransactions2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListAccountingTransactionsRequest](../../Models/Operations/ListAccountingTransactionsRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\ListAccountingTransactions2Response](../../Models/Operations/ListAccountingTransactions2Response.md)**
+**[?Operations\ListAccountingTransactionsResponse](../../Models/Operations/ListAccountingTransactionsResponse.md)**
 
 ### Errors
 
@@ -2640,13 +2749,13 @@ if ($response->accountingTransactions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingTrialbalances2
+## listAccountingTrialbalances
 
 List all trialbalances
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances2" method="get" path="/accounting/{connection_id}/trialbalance" -->
+<!-- UsageSnippet language="php" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```php
 declare(strict_types=1);
 
@@ -2661,11 +2770,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingTrialbalances2Request(
+$request = new Operations\ListAccountingTrialbalancesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->accounting->listAccountingTrialbalances2(
+$response = $sdk->accounting->listAccountingTrialbalances(
     request: $request
 );
 
@@ -2676,13 +2785,13 @@ if ($response->accountingTrialbalances !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\ListAccountingTrialbalances2Request](../../Models/Operations/ListAccountingTrialbalances2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingTrialbalancesRequest](../../Models/Operations/ListAccountingTrialbalancesRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\ListAccountingTrialbalances2Response](../../Models/Operations/ListAccountingTrialbalances2Response.md)**
+**[?Operations\ListAccountingTrialbalancesResponse](../../Models/Operations/ListAccountingTrialbalancesResponse.md)**
 
 ### Errors
 
@@ -2690,13 +2799,63 @@ if ($response->accountingTrialbalances !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingAccount2
+## listAccountingVendorcredits
+
+List all vendorcredits
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingVendorcredits" method="get" path="/accounting/{connection_id}/vendorcredit" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingVendorcreditsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingVendorcredits(
+    request: $request
+);
+
+if ($response->accountingVendorcredits !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\ListAccountingVendorcreditsRequest](../../Models/Operations/ListAccountingVendorcreditsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\ListAccountingVendorcreditsResponse](../../Models/Operations/ListAccountingVendorcreditsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingAccount
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingAccount2" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2712,13 +2871,1469 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingAccount2Request(
+$request = new Operations\PatchAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingAccount2(
+$response = $sdk->accounting->patchAccountingAccount(
+    request: $request
+);
+
+if ($response->accountingAccount !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingAccountRequest](../../Models/Operations/PatchAccountingAccountRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingAccountResponse](../../Models/Operations/PatchAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingBill
+
+Update a bill
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingBillRequest(
+    accountingBill: new Shared\AccountingBill(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingBill(
+    request: $request
+);
+
+if ($response->accountingBill !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchAccountingBillRequest](../../Models/Operations/PatchAccountingBillRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\PatchAccountingBillResponse](../../Models/Operations/PatchAccountingBillResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingCategoryRequest(
+    accountingCategory: new Shared\AccountingCategory(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingCategory(
+    request: $request
+);
+
+if ($response->accountingCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\PatchAccountingCategoryRequest](../../Models/Operations/PatchAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\PatchAccountingCategoryResponse](../../Models/Operations/PatchAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingContact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingContactRequest(
+    accountingContact: new Shared\AccountingContact(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingContact(
+    request: $request
+);
+
+if ($response->accountingContact !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingContactRequest](../../Models/Operations/PatchAccountingContactRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingContactResponse](../../Models/Operations/PatchAccountingContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingCreditmemo
+
+Update a creditmemo
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingCreditmemoRequest(
+    accountingCreditmemo: new Shared\AccountingCreditmemo(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingCreditmemo(
+    request: $request
+);
+
+if ($response->accountingCreditmemo !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\PatchAccountingCreditmemoRequest](../../Models/Operations/PatchAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\PatchAccountingCreditmemoResponse](../../Models/Operations/PatchAccountingCreditmemoResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingExpense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingExpenseRequest(
+    accountingExpense: new Shared\AccountingExpense(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingExpense(
+    request: $request
+);
+
+if ($response->accountingExpense !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingExpenseRequest](../../Models/Operations/PatchAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingExpenseResponse](../../Models/Operations/PatchAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingInvoice
+
+Update an invoice
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingInvoiceRequest(
+    accountingInvoice: new Shared\AccountingInvoice(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingInvoice(
+    request: $request
+);
+
+if ($response->accountingInvoice !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingInvoiceRequest](../../Models/Operations/PatchAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingInvoiceResponse](../../Models/Operations/PatchAccountingInvoiceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingJournal
+
+Update a journal
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingJournalRequest(
+    accountingJournal: new Shared\AccountingJournal(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingJournal(
+    request: $request
+);
+
+if ($response->accountingJournal !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingJournalRequest](../../Models/Operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingJournalResponse](../../Models/Operations/PatchAccountingJournalResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingOrder
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingOrderRequest(
+    accountingOrder: new Shared\AccountingOrder(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingOrder(
+    request: $request
+);
+
+if ($response->accountingOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchAccountingOrderRequest](../../Models/Operations/PatchAccountingOrderRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchAccountingOrderResponse](../../Models/Operations/PatchAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingPurchaseorder
+
+Update a purchaseorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingPurchaseorderRequest(
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingPurchaseorder(
+    request: $request
+);
+
+if ($response->accountingPurchaseorder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\PatchAccountingPurchaseorderRequest](../../Models/Operations/PatchAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+### Response
+
+**[?Operations\PatchAccountingPurchaseorderResponse](../../Models/Operations/PatchAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingSalesorder
+
+Update a salesorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingSalesorderRequest(
+    accountingSalesorder: new Shared\AccountingSalesorder(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingSalesorder(
+    request: $request
+);
+
+if ($response->accountingSalesorder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\PatchAccountingSalesorderRequest](../../Models/Operations/PatchAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\PatchAccountingSalesorderResponse](../../Models/Operations/PatchAccountingSalesorderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingTaxrate
+
+Update a taxrate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingTaxrateRequest(
+    accountingTaxrate: new Shared\AccountingTaxrate(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingTaxrate(
+    request: $request
+);
+
+if ($response->accountingTaxrate !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingTaxrateRequest](../../Models/Operations/PatchAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingTaxrateResponse](../../Models/Operations/PatchAccountingTaxrateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingTransaction
+
+Update a transaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingTransactionRequest(
+    accountingTransaction: new Shared\AccountingTransaction(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingTransaction(
+    request: $request
+);
+
+if ($response->accountingTransaction !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchAccountingTransactionRequest](../../Models/Operations/PatchAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\PatchAccountingTransactionResponse](../../Models/Operations/PatchAccountingTransactionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingVendorcredit
+
+Update a vendorcredit
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingVendorcreditRequest(
+    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingVendorcredit(
+    request: $request
+);
+
+if ($response->accountingVendorcredit !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\PatchAccountingVendorcreditRequest](../../Models/Operations/PatchAccountingVendorcreditRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\PatchAccountingVendorcreditResponse](../../Models/Operations/PatchAccountingVendorcreditResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingAccount
+
+Remove an account
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingAccountRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingAccount(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingAccountRequest](../../Models/Operations/RemoveAccountingAccountRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingAccountResponse](../../Models/Operations/RemoveAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingBill
+
+Remove a bill
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingBillRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingBill(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\RemoveAccountingBillRequest](../../Models/Operations/RemoveAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\RemoveAccountingBillResponse](../../Models/Operations/RemoveAccountingBillResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingCategory(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\RemoveAccountingCategoryRequest](../../Models/Operations/RemoveAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\RemoveAccountingCategoryResponse](../../Models/Operations/RemoveAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingContact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingContactRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingContact(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingContactRequest](../../Models/Operations/RemoveAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingContactResponse](../../Models/Operations/RemoveAccountingContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingCreditmemo
+
+Remove a creditmemo
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingCreditmemoRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingCreditmemo(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\RemoveAccountingCreditmemoRequest](../../Models/Operations/RemoveAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\RemoveAccountingCreditmemoResponse](../../Models/Operations/RemoveAccountingCreditmemoResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingExpense
+
+Remove an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingExpense" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingExpenseRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingExpense(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingExpenseRequest](../../Models/Operations/RemoveAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingExpenseResponse](../../Models/Operations/RemoveAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingInvoice
+
+Remove an invoice
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingInvoiceRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingInvoice(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingInvoiceRequest](../../Models/Operations/RemoveAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingInvoiceResponse](../../Models/Operations/RemoveAccountingInvoiceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingJournal
+
+Remove a journal
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingJournalRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingJournal(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingJournalRequest](../../Models/Operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingJournalResponse](../../Models/Operations/RemoveAccountingJournalResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingOrder
+
+Remove an order
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingOrderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingOrder(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveAccountingOrderRequest](../../Models/Operations/RemoveAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\RemoveAccountingOrderResponse](../../Models/Operations/RemoveAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingPurchaseorder
+
+Remove a purchaseorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingPurchaseorderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingPurchaseorder(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\RemoveAccountingPurchaseorderRequest](../../Models/Operations/RemoveAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+### Response
+
+**[?Operations\RemoveAccountingPurchaseorderResponse](../../Models/Operations/RemoveAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingSalesorder
+
+Remove a salesorder
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingSalesorderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingSalesorder(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\RemoveAccountingSalesorderRequest](../../Models/Operations/RemoveAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\RemoveAccountingSalesorderResponse](../../Models/Operations/RemoveAccountingSalesorderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingTaxrate
+
+Remove a taxrate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingTaxrateRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingTaxrate(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingTaxrateRequest](../../Models/Operations/RemoveAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingTaxrateResponse](../../Models/Operations/RemoveAccountingTaxrateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingTransaction
+
+Remove a transaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingTransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingTransaction(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\RemoveAccountingTransactionRequest](../../Models/Operations/RemoveAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\RemoveAccountingTransactionResponse](../../Models/Operations/RemoveAccountingTransactionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingVendorcredit
+
+Remove a vendorcredit
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingVendorcredit" method="delete" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingVendorcreditRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingVendorcredit(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\RemoveAccountingVendorcreditRequest](../../Models/Operations/RemoveAccountingVendorcreditRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+### Response
+
+**[?Operations\RemoveAccountingVendorcreditResponse](../../Models/Operations/RemoveAccountingVendorcreditResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingAccount
+
+Update an account
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingAccountRequest(
+    accountingAccount: new Shared\AccountingAccount(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->updateAccountingAccount(
     request: $request
 );
 
@@ -2731,11 +4346,11 @@ if ($response->accountingAccount !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingAccount2Request](../../Models/Operations/PatchAccountingAccount2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingAccountRequest](../../Models/Operations/UpdateAccountingAccountRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingAccount2Response](../../Models/Operations/PatchAccountingAccount2Response.md)**
+**[?Operations\UpdateAccountingAccountResponse](../../Models/Operations/UpdateAccountingAccountResponse.md)**
 
 ### Errors
 
@@ -2743,13 +4358,13 @@ if ($response->accountingAccount !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingBill2
+## updateAccountingBill
 
 Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBill2" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2765,13 +4380,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingBill2Request(
+$request = new Operations\UpdateAccountingBillRequest(
     accountingBill: new Shared\AccountingBill(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingBill2(
+$response = $sdk->accounting->updateAccountingBill(
     request: $request
 );
 
@@ -2784,11 +4399,11 @@ if ($response->accountingBill !== null) {
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [Operations\PatchAccountingBill2Request](../../Models/Operations/PatchAccountingBill2Request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `$request`                                                                                       | [Operations\UpdateAccountingBillRequest](../../Models/Operations/UpdateAccountingBillRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchAccountingBill2Response](../../Models/Operations/PatchAccountingBill2Response.md)**
+**[?Operations\UpdateAccountingBillResponse](../../Models/Operations/UpdateAccountingBillResponse.md)**
 
 ### Errors
 
@@ -2796,13 +4411,13 @@ if ($response->accountingBill !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingCategory2
+## updateAccountingCategory
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingCategory2" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2818,13 +4433,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingCategory2Request(
+$request = new Operations\UpdateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingCategory2(
+$response = $sdk->accounting->updateAccountingCategory(
     request: $request
 );
 
@@ -2837,11 +4452,11 @@ if ($response->accountingCategory !== null) {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\PatchAccountingCategory2Request](../../Models/Operations/PatchAccountingCategory2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [Operations\UpdateAccountingCategoryRequest](../../Models/Operations/UpdateAccountingCategoryRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 ### Response
 
-**[?Operations\PatchAccountingCategory2Response](../../Models/Operations/PatchAccountingCategory2Response.md)**
+**[?Operations\UpdateAccountingCategoryResponse](../../Models/Operations/UpdateAccountingCategoryResponse.md)**
 
 ### Errors
 
@@ -2849,13 +4464,13 @@ if ($response->accountingCategory !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingContact2
+## updateAccountingContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingContact2" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2871,13 +4486,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingContact2Request(
+$request = new Operations\UpdateAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingContact2(
+$response = $sdk->accounting->updateAccountingContact(
     request: $request
 );
 
@@ -2890,11 +4505,11 @@ if ($response->accountingContact !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingContact2Request](../../Models/Operations/PatchAccountingContact2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingContactRequest](../../Models/Operations/UpdateAccountingContactRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingContact2Response](../../Models/Operations/PatchAccountingContact2Response.md)**
+**[?Operations\UpdateAccountingContactResponse](../../Models/Operations/UpdateAccountingContactResponse.md)**
 
 ### Errors
 
@@ -2902,13 +4517,13 @@ if ($response->accountingContact !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingCreditmemo2
+## updateAccountingCreditmemo
 
 Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingCreditmemo2" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2924,13 +4539,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingCreditmemo2Request(
+$request = new Operations\UpdateAccountingCreditmemoRequest(
     accountingCreditmemo: new Shared\AccountingCreditmemo(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingCreditmemo2(
+$response = $sdk->accounting->updateAccountingCreditmemo(
     request: $request
 );
 
@@ -2943,11 +4558,11 @@ if ($response->accountingCreditmemo !== null) {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\PatchAccountingCreditmemo2Request](../../Models/Operations/PatchAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [Operations\UpdateAccountingCreditmemoRequest](../../Models/Operations/UpdateAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\PatchAccountingCreditmemo2Response](../../Models/Operations/PatchAccountingCreditmemo2Response.md)**
+**[?Operations\UpdateAccountingCreditmemoResponse](../../Models/Operations/UpdateAccountingCreditmemoResponse.md)**
 
 ### Errors
 
@@ -2955,13 +4570,13 @@ if ($response->accountingCreditmemo !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingExpense2
+## updateAccountingExpense
 
 Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingExpense2" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -2977,13 +4592,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingExpense2Request(
+$request = new Operations\UpdateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingExpense2(
+$response = $sdk->accounting->updateAccountingExpense(
     request: $request
 );
 
@@ -2996,11 +4611,11 @@ if ($response->accountingExpense !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingExpense2Request](../../Models/Operations/PatchAccountingExpense2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingExpenseRequest](../../Models/Operations/UpdateAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingExpense2Response](../../Models/Operations/PatchAccountingExpense2Response.md)**
+**[?Operations\UpdateAccountingExpenseResponse](../../Models/Operations/UpdateAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -3008,13 +4623,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingInvoice2
+## updateAccountingInvoice
 
 Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingInvoice2" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3030,13 +4645,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingInvoice2Request(
+$request = new Operations\UpdateAccountingInvoiceRequest(
     accountingInvoice: new Shared\AccountingInvoice(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingInvoice2(
+$response = $sdk->accounting->updateAccountingInvoice(
     request: $request
 );
 
@@ -3049,11 +4664,11 @@ if ($response->accountingInvoice !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingInvoice2Request](../../Models/Operations/PatchAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingInvoiceRequest](../../Models/Operations/UpdateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingInvoice2Response](../../Models/Operations/PatchAccountingInvoice2Response.md)**
+**[?Operations\UpdateAccountingInvoiceResponse](../../Models/Operations/UpdateAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -3061,13 +4676,13 @@ if ($response->accountingInvoice !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingJournal2
+## updateAccountingJournal
 
 Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingJournal2" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3083,13 +4698,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingJournal2Request(
+$request = new Operations\UpdateAccountingJournalRequest(
     accountingJournal: new Shared\AccountingJournal(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingJournal2(
+$response = $sdk->accounting->updateAccountingJournal(
     request: $request
 );
 
@@ -3102,11 +4717,11 @@ if ($response->accountingJournal !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingJournal2Request](../../Models/Operations/PatchAccountingJournal2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingJournalRequest](../../Models/Operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingJournal2Response](../../Models/Operations/PatchAccountingJournal2Response.md)**
+**[?Operations\UpdateAccountingJournalResponse](../../Models/Operations/UpdateAccountingJournalResponse.md)**
 
 ### Errors
 
@@ -3114,13 +4729,13 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingOrder2
+## updateAccountingOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingOrder2" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3136,13 +4751,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingOrder2Request(
+$request = new Operations\UpdateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingOrder2(
+$response = $sdk->accounting->updateAccountingOrder(
     request: $request
 );
 
@@ -3155,11 +4770,11 @@ if ($response->accountingOrder !== null) {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchAccountingOrder2Request](../../Models/Operations/PatchAccountingOrder2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [Operations\UpdateAccountingOrderRequest](../../Models/Operations/UpdateAccountingOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\PatchAccountingOrder2Response](../../Models/Operations/PatchAccountingOrder2Response.md)**
+**[?Operations\UpdateAccountingOrderResponse](../../Models/Operations/UpdateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -3167,13 +4782,13 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingPurchaseorder2
+## updateAccountingPurchaseorder
 
 Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder2" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3189,13 +4804,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingPurchaseorder2Request(
+$request = new Operations\UpdateAccountingPurchaseorderRequest(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingPurchaseorder2(
+$response = $sdk->accounting->updateAccountingPurchaseorder(
     request: $request
 );
 
@@ -3208,11 +4823,11 @@ if ($response->accountingPurchaseorder !== null) {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [Operations\PatchAccountingPurchaseorder2Request](../../Models/Operations/PatchAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [Operations\UpdateAccountingPurchaseorderRequest](../../Models/Operations/UpdateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 ### Response
 
-**[?Operations\PatchAccountingPurchaseorder2Response](../../Models/Operations/PatchAccountingPurchaseorder2Response.md)**
+**[?Operations\UpdateAccountingPurchaseorderResponse](../../Models/Operations/UpdateAccountingPurchaseorderResponse.md)**
 
 ### Errors
 
@@ -3220,13 +4835,13 @@ if ($response->accountingPurchaseorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingSalesorder2
+## updateAccountingSalesorder
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder2" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3242,13 +4857,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingSalesorder2Request(
+$request = new Operations\UpdateAccountingSalesorderRequest(
     accountingSalesorder: new Shared\AccountingSalesorder(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingSalesorder2(
+$response = $sdk->accounting->updateAccountingSalesorder(
     request: $request
 );
 
@@ -3261,11 +4876,11 @@ if ($response->accountingSalesorder !== null) {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [Operations\PatchAccountingSalesorder2Request](../../Models/Operations/PatchAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [Operations\UpdateAccountingSalesorderRequest](../../Models/Operations/UpdateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 ### Response
 
-**[?Operations\PatchAccountingSalesorder2Response](../../Models/Operations/PatchAccountingSalesorder2Response.md)**
+**[?Operations\UpdateAccountingSalesorderResponse](../../Models/Operations/UpdateAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -3273,13 +4888,13 @@ if ($response->accountingSalesorder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingTaxrate2
+## updateAccountingTaxrate
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate2" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3295,13 +4910,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingTaxrate2Request(
+$request = new Operations\UpdateAccountingTaxrateRequest(
     accountingTaxrate: new Shared\AccountingTaxrate(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingTaxrate2(
+$response = $sdk->accounting->updateAccountingTaxrate(
     request: $request
 );
 
@@ -3314,11 +4929,11 @@ if ($response->accountingTaxrate !== null) {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingTaxrate2Request](../../Models/Operations/PatchAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [Operations\UpdateAccountingTaxrateRequest](../../Models/Operations/UpdateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\PatchAccountingTaxrate2Response](../../Models/Operations/PatchAccountingTaxrate2Response.md)**
+**[?Operations\UpdateAccountingTaxrateResponse](../../Models/Operations/UpdateAccountingTaxrateResponse.md)**
 
 ### Errors
 
@@ -3326,13 +4941,13 @@ if ($response->accountingTaxrate !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingTransaction2
+## updateAccountingTransaction
 
 Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTransaction2" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3348,13 +4963,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingTransaction2Request(
+$request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->patchAccountingTransaction2(
+$response = $sdk->accounting->updateAccountingTransaction(
     request: $request
 );
 
@@ -3367,11 +4982,11 @@ if ($response->accountingTransaction !== null) {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\PatchAccountingTransaction2Request](../../Models/Operations/PatchAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [Operations\UpdateAccountingTransactionRequest](../../Models/Operations/UpdateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 ### Response
 
-**[?Operations\PatchAccountingTransaction2Response](../../Models/Operations/PatchAccountingTransaction2Response.md)**
+**[?Operations\UpdateAccountingTransactionResponse](../../Models/Operations/UpdateAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -3379,13 +4994,13 @@ if ($response->accountingTransaction !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingAccount2
+## updateAccountingVendorcredit
 
-Remove an account
+Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingAccount2" method="delete" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -3393,6 +5008,7 @@ require 'vendor/autoload.php';
 
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3400,628 +5016,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingAccount2Request(
+$request = new Operations\UpdateAccountingVendorcreditRequest(
+    accountingVendorcredit: new Shared\AccountingVendorcredit(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->accounting->removeAccountingAccount2(
+$response = $sdk->accounting->updateAccountingVendorcredit(
     request: $request
 );
 
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingAccount2Request](../../Models/Operations/RemoveAccountingAccount2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingAccount2Response](../../Models/Operations/RemoveAccountingAccount2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingBill2
-
-Remove a bill
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingBill2" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingBill2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingBill2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\RemoveAccountingBill2Request](../../Models/Operations/RemoveAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\RemoveAccountingBill2Response](../../Models/Operations/RemoveAccountingBill2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingCategory2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingCategory2" method="delete" path="/accounting/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingCategory2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingCategory2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\RemoveAccountingCategory2Request](../../Models/Operations/RemoveAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-### Response
-
-**[?Operations\RemoveAccountingCategory2Response](../../Models/Operations/RemoveAccountingCategory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingContact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingContact2" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingContact2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingContact2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingContact2Request](../../Models/Operations/RemoveAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingContact2Response](../../Models/Operations/RemoveAccountingContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingCreditmemo2
-
-Remove a creditmemo
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingCreditmemo2" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingCreditmemo2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingCreditmemo2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\RemoveAccountingCreditmemo2Request](../../Models/Operations/RemoveAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\RemoveAccountingCreditmemo2Response](../../Models/Operations/RemoveAccountingCreditmemo2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingExpense2
-
-Remove an expense
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingExpense2" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingExpense2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingExpense2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingExpense2Request](../../Models/Operations/RemoveAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingExpense2Response](../../Models/Operations/RemoveAccountingExpense2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingInvoice2
-
-Remove an invoice
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingInvoice2" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingInvoice2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingInvoice2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingInvoice2Request](../../Models/Operations/RemoveAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingInvoice2Response](../../Models/Operations/RemoveAccountingInvoice2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingJournal2
-
-Remove a journal
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingJournal2" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingJournal2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingJournal2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingJournal2Request](../../Models/Operations/RemoveAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingJournal2Response](../../Models/Operations/RemoveAccountingJournal2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingOrder2
-
-Remove an order
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingOrder2" method="delete" path="/accounting/{connection_id}/order/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingOrder2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingOrder2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveAccountingOrder2Request](../../Models/Operations/RemoveAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\RemoveAccountingOrder2Response](../../Models/Operations/RemoveAccountingOrder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingPurchaseorder2
-
-Remove a purchaseorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingPurchaseorder2" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingPurchaseorder2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingPurchaseorder2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [Operations\RemoveAccountingPurchaseorder2Request](../../Models/Operations/RemoveAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-### Response
-
-**[?Operations\RemoveAccountingPurchaseorder2Response](../../Models/Operations/RemoveAccountingPurchaseorder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingSalesorder2
-
-Remove a salesorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingSalesorder2" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingSalesorder2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingSalesorder2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\RemoveAccountingSalesorder2Request](../../Models/Operations/RemoveAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\RemoveAccountingSalesorder2Response](../../Models/Operations/RemoveAccountingSalesorder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingTaxrate2
-
-Remove a taxrate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingTaxrate2" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingTaxrate2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingTaxrate2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingTaxrate2Request](../../Models/Operations/RemoveAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\RemoveAccountingTaxrate2Response](../../Models/Operations/RemoveAccountingTaxrate2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeAccountingTransaction2
-
-Remove a transaction
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeAccountingTransaction2" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveAccountingTransaction2Request(
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->removeAccountingTransaction2(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
+if ($response->accountingVendorcredit !== null) {
     // handle response
 }
 ```
@@ -4030,700 +5035,11 @@ if ($response->statusCode === 200) {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\RemoveAccountingTransaction2Request](../../Models/Operations/RemoveAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [Operations\UpdateAccountingVendorcreditRequest](../../Models/Operations/UpdateAccountingVendorcreditRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 ### Response
 
-**[?Operations\RemoveAccountingTransaction2Response](../../Models/Operations/RemoveAccountingTransaction2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingAccount2
-
-Update an account
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingAccount2" method="put" path="/accounting/{connection_id}/account/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingAccount2Request(
-    accountingAccount: new Shared\AccountingAccount(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingAccount2(
-    request: $request
-);
-
-if ($response->accountingAccount !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingAccount2Request](../../Models/Operations/UpdateAccountingAccount2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingAccount2Response](../../Models/Operations/UpdateAccountingAccount2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingBill2
-
-Update a bill
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingBill2" method="put" path="/accounting/{connection_id}/bill/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingBill2Request(
-    accountingBill: new Shared\AccountingBill(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingBill2(
-    request: $request
-);
-
-if ($response->accountingBill !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\UpdateAccountingBill2Request](../../Models/Operations/UpdateAccountingBill2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-### Response
-
-**[?Operations\UpdateAccountingBill2Response](../../Models/Operations/UpdateAccountingBill2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingCategory2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingCategory2" method="put" path="/accounting/{connection_id}/category/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingCategory2Request(
-    accountingCategory: new Shared\AccountingCategory(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingCategory2(
-    request: $request
-);
-
-if ($response->accountingCategory !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [Operations\UpdateAccountingCategory2Request](../../Models/Operations/UpdateAccountingCategory2Request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-### Response
-
-**[?Operations\UpdateAccountingCategory2Response](../../Models/Operations/UpdateAccountingCategory2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingContact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingContact2" method="put" path="/accounting/{connection_id}/contact/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingContact2Request(
-    accountingContact: new Shared\AccountingContact(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingContact2(
-    request: $request
-);
-
-if ($response->accountingContact !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingContact2Request](../../Models/Operations/UpdateAccountingContact2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingContact2Response](../../Models/Operations/UpdateAccountingContact2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingCreditmemo2
-
-Update a creditmemo
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingCreditmemo2" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingCreditmemo2Request(
-    accountingCreditmemo: new Shared\AccountingCreditmemo(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingCreditmemo2(
-    request: $request
-);
-
-if ($response->accountingCreditmemo !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\UpdateAccountingCreditmemo2Request](../../Models/Operations/UpdateAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\UpdateAccountingCreditmemo2Response](../../Models/Operations/UpdateAccountingCreditmemo2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingExpense2
-
-Update an expense
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingExpense2" method="put" path="/accounting/{connection_id}/expense/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingExpense2Request(
-    accountingExpense: new Shared\AccountingExpense(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingExpense2(
-    request: $request
-);
-
-if ($response->accountingExpense !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingExpense2Request](../../Models/Operations/UpdateAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingExpense2Response](../../Models/Operations/UpdateAccountingExpense2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingInvoice2
-
-Update an invoice
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingInvoice2" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingInvoice2Request(
-    accountingInvoice: new Shared\AccountingInvoice(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingInvoice2(
-    request: $request
-);
-
-if ($response->accountingInvoice !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingInvoice2Request](../../Models/Operations/UpdateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingInvoice2Response](../../Models/Operations/UpdateAccountingInvoice2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingJournal2
-
-Update a journal
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingJournal2" method="put" path="/accounting/{connection_id}/journal/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingJournal2Request(
-    accountingJournal: new Shared\AccountingJournal(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingJournal2(
-    request: $request
-);
-
-if ($response->accountingJournal !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingJournal2Request](../../Models/Operations/UpdateAccountingJournal2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingJournal2Response](../../Models/Operations/UpdateAccountingJournal2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingOrder2
-
-Update an order
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingOrder2" method="put" path="/accounting/{connection_id}/order/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingOrder2Request(
-    accountingOrder: new Shared\AccountingOrder(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingOrder2(
-    request: $request
-);
-
-if ($response->accountingOrder !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateAccountingOrder2Request](../../Models/Operations/UpdateAccountingOrder2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-### Response
-
-**[?Operations\UpdateAccountingOrder2Response](../../Models/Operations/UpdateAccountingOrder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingPurchaseorder2
-
-Update a purchaseorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder2" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingPurchaseorder2Request(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingPurchaseorder2(
-    request: $request
-);
-
-if ($response->accountingPurchaseorder !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [Operations\UpdateAccountingPurchaseorder2Request](../../Models/Operations/UpdateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-### Response
-
-**[?Operations\UpdateAccountingPurchaseorder2Response](../../Models/Operations/UpdateAccountingPurchaseorder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingSalesorder2
-
-Update a salesorder
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder2" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingSalesorder2Request(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingSalesorder2(
-    request: $request
-);
-
-if ($response->accountingSalesorder !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [Operations\UpdateAccountingSalesorder2Request](../../Models/Operations/UpdateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-### Response
-
-**[?Operations\UpdateAccountingSalesorder2Response](../../Models/Operations/UpdateAccountingSalesorder2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingTaxrate2
-
-Update a taxrate
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate2" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingTaxrate2Request(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingTaxrate2(
-    request: $request
-);
-
-if ($response->accountingTaxrate !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingTaxrate2Request](../../Models/Operations/UpdateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-### Response
-
-**[?Operations\UpdateAccountingTaxrate2Response](../../Models/Operations/UpdateAccountingTaxrate2Response.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## updateAccountingTransaction2
-
-Update a transaction
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="updateAccountingTransaction2" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\UpdateAccountingTransaction2Request(
-    accountingTransaction: new Shared\AccountingTransaction(),
-    connectionId: '<id>',
-    id: '<id>',
-);
-
-$response = $sdk->accounting->updateAccountingTransaction2(
-    request: $request
-);
-
-if ($response->accountingTransaction !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [Operations\UpdateAccountingTransaction2Request](../../Models/Operations/UpdateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-### Response
-
-**[?Operations\UpdateAccountingTransaction2Response](../../Models/Operations/UpdateAccountingTransaction2Response.md)**
+**[?Operations\UpdateAccountingVendorcreditResponse](../../Models/Operations/UpdateAccountingVendorcreditResponse.md)**
 
 ### Errors
 

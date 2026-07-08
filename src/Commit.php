@@ -47,14 +47,14 @@ class Commit
     /**
      * Create a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoCommit2(Operations\CreateRepoCommit2Request $request, ?Options $options = null): Operations\CreateRepoCommit2Response
+    public function createRepoCommit(Operations\CreateRepoCommitRequest $request, ?Options $options = null): Operations\CreateRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\CreateRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\CreateRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -63,11 +63,11 @@ class Commit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Commit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoCommit2Response(
+                $response = new Operations\CreateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Commit
     /**
      * Retrieve a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoCommit2(Operations\GetRepoCommit2Request $request, ?Options $options = null): Operations\GetRepoCommit2Response
+    public function getRepoCommit(Operations\GetRepoCommitRequest $request, ?Options $options = null): Operations\GetRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\GetRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\GetRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Commit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoCommit2Response(
+                $response = new Operations\GetRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Commit
     /**
      * List all commits
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommits2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoCommits2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoCommits2(Operations\ListRepoCommits2Request $request, ?Options $options = null): Operations\ListRepoCommits2Response
+    public function listRepoCommits(Operations\ListRepoCommitsRequest $request, ?Options $options = null): Operations\ListRepoCommitsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\ListRepoCommits2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\ListRepoCommitsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoCommits2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoCommitsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoCommits2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoCommits', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Commit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoCommit>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoCommits2Response(
+                $response = new Operations\ListRepoCommitsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Commit
     /**
      * Update a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoCommit2(Operations\PatchRepoCommit2Request $request, ?Options $options = null): Operations\PatchRepoCommit2Response
+    public function patchRepoCommit(Operations\PatchRepoCommitRequest $request, ?Options $options = null): Operations\PatchRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\PatchRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\PatchRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -257,11 +257,11 @@ class Commit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Commit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoCommit2Response(
+                $response = new Operations\PatchRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Commit
     /**
      * Remove a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoCommit2(Operations\RemoveRepoCommit2Request $request, ?Options $options = null): Operations\RemoveRepoCommit2Response
+    public function removeRepoCommit(Operations\RemoveRepoCommitRequest $request, ?Options $options = null): Operations\RemoveRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\RemoveRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\RemoveRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Commit
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoCommit2Response(
+            return new Operations\RemoveRepoCommitResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Commit
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoCommit2Response(
+            return new Operations\RemoveRepoCommitResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Commit
     /**
      * Update a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoCommit2(Operations\UpdateRepoCommit2Request $request, ?Options $options = null): Operations\UpdateRepoCommit2Response
+    public function updateRepoCommit(Operations\UpdateRepoCommitRequest $request, ?Options $options = null): Operations\UpdateRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\UpdateRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\UpdateRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -382,11 +382,11 @@ class Commit
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Commit
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoCommit2Response(
+                $response = new Operations\UpdateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

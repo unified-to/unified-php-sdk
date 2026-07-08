@@ -47,14 +47,14 @@ class Message
     /**
      * Create a message
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateMessagingMessage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateMessagingMessage2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createMessagingMessage2(Operations\CreateMessagingMessage2Request $request, ?Options $options = null): Operations\CreateMessagingMessage2Response
+    public function createMessagingMessage(Operations\CreateMessagingMessageRequest $request, ?Options $options = null): Operations\CreateMessagingMessageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\CreateMessagingMessage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\CreateMessagingMessageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'messagingMessage', 'json');
@@ -63,11 +63,11 @@ class Message
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateMessagingMessage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateMessagingMessageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMessagingMessage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createMessagingMessage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Message
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingMessage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateMessagingMessage2Response(
+                $response = new Operations\CreateMessagingMessageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Message
     /**
      * Retrieve a message
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetMessagingMessage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetMessagingMessage2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getMessagingMessage2(Operations\GetMessagingMessage2Request $request, ?Options $options = null): Operations\GetMessagingMessage2Response
+    public function getMessagingMessage(Operations\GetMessagingMessageRequest $request, ?Options $options = null): Operations\GetMessagingMessageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\GetMessagingMessage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\GetMessagingMessageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetMessagingMessage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetMessagingMessageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMessagingMessage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getMessagingMessage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Message
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingMessage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetMessagingMessage2Response(
+                $response = new Operations\GetMessagingMessageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Message
     /**
      * List all messages
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListMessagingMessages2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListMessagingMessages2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListMessagingMessagesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListMessagingMessagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listMessagingMessages2(Operations\ListMessagingMessages2Request $request, ?Options $options = null): Operations\ListMessagingMessages2Response
+    public function listMessagingMessages(Operations\ListMessagingMessagesRequest $request, ?Options $options = null): Operations\ListMessagingMessagesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\ListMessagingMessages2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message', Operations\ListMessagingMessagesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListMessagingMessages2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListMessagingMessagesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMessagingMessages2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listMessagingMessages', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Message
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\MessagingMessage>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListMessagingMessages2Response(
+                $response = new Operations\ListMessagingMessagesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Message
     /**
      * Update a message
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingMessage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchMessagingMessage2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchMessagingMessage2(Operations\PatchMessagingMessage2Request $request, ?Options $options = null): Operations\PatchMessagingMessage2Response
+    public function patchMessagingMessage(Operations\PatchMessagingMessageRequest $request, ?Options $options = null): Operations\PatchMessagingMessageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\PatchMessagingMessage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\PatchMessagingMessageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'messagingMessage', 'json');
@@ -257,11 +257,11 @@ class Message
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchMessagingMessage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchMessagingMessageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMessagingMessage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchMessagingMessage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Message
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingMessage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchMessagingMessage2Response(
+                $response = new Operations\PatchMessagingMessageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Message
     /**
      * Remove a message
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveMessagingMessage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveMessagingMessage2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeMessagingMessage2(Operations\RemoveMessagingMessage2Request $request, ?Options $options = null): Operations\RemoveMessagingMessage2Response
+    public function removeMessagingMessage(Operations\RemoveMessagingMessageRequest $request, ?Options $options = null): Operations\RemoveMessagingMessageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\RemoveMessagingMessage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\RemoveMessagingMessageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMessagingMessage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeMessagingMessage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Message
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMessagingMessage2Response(
+            return new Operations\RemoveMessagingMessageResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Message
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveMessagingMessage2Response(
+            return new Operations\RemoveMessagingMessageResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Message
     /**
      * Update a message
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingMessage2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingMessage2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingMessageRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateMessagingMessageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateMessagingMessage2(Operations\UpdateMessagingMessage2Request $request, ?Options $options = null): Operations\UpdateMessagingMessage2Response
+    public function updateMessagingMessage(Operations\UpdateMessagingMessageRequest $request, ?Options $options = null): Operations\UpdateMessagingMessageResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\UpdateMessagingMessage2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/messaging/{connection_id}/message/{id}', Operations\UpdateMessagingMessageRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'messagingMessage', 'json');
@@ -382,11 +382,11 @@ class Message
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateMessagingMessage2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateMessagingMessageRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMessagingMessage2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateMessagingMessage', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Message
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\MessagingMessage', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateMessagingMessage2Response(
+                $response = new Operations\UpdateMessagingMessageResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

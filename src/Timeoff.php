@@ -47,14 +47,14 @@ class Timeoff
     /**
      * Create a timeoff
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeoff2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeoff2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createHrisTimeoff2(Operations\CreateHrisTimeoff2Request $request, ?Options $options = null): Operations\CreateHrisTimeoff2Response
+    public function createHrisTimeoff(Operations\CreateHrisTimeoffRequest $request, ?Options $options = null): Operations\CreateHrisTimeoffResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', Operations\CreateHrisTimeoff2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', Operations\CreateHrisTimeoffRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisTimeoff', 'json');
@@ -63,11 +63,11 @@ class Timeoff
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisTimeoff2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateHrisTimeoffRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisTimeoff2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createHrisTimeoff', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Timeoff
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTimeoff', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateHrisTimeoff2Response(
+                $response = new Operations\CreateHrisTimeoffResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Timeoff
     /**
      * Retrieve a timeoff
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoff2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoff2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getHrisTimeoff2(Operations\GetHrisTimeoff2Request $request, ?Options $options = null): Operations\GetHrisTimeoff2Response
+    public function getHrisTimeoff(Operations\GetHrisTimeoffRequest $request, ?Options $options = null): Operations\GetHrisTimeoffResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\GetHrisTimeoff2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\GetHrisTimeoffRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetHrisTimeoff2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetHrisTimeoffRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisTimeoff2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getHrisTimeoff', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Timeoff
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTimeoff', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetHrisTimeoff2Response(
+                $response = new Operations\GetHrisTimeoffResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Timeoff
     /**
      * List all timeoffs
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffs2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffs2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listHrisTimeoffs2(Operations\ListHrisTimeoffs2Request $request, ?Options $options = null): Operations\ListHrisTimeoffs2Response
+    public function listHrisTimeoffs(Operations\ListHrisTimeoffsRequest $request, ?Options $options = null): Operations\ListHrisTimeoffsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', Operations\ListHrisTimeoffs2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff', Operations\ListHrisTimeoffsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListHrisTimeoffs2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListHrisTimeoffsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisTimeoffs2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listHrisTimeoffs', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Timeoff
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\HrisTimeoff>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListHrisTimeoffs2Response(
+                $response = new Operations\ListHrisTimeoffsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Timeoff
     /**
      * Update a timeoff
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeoff2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeoff2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchHrisTimeoff2(Operations\PatchHrisTimeoff2Request $request, ?Options $options = null): Operations\PatchHrisTimeoff2Response
+    public function patchHrisTimeoff(Operations\PatchHrisTimeoffRequest $request, ?Options $options = null): Operations\PatchHrisTimeoffResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\PatchHrisTimeoff2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\PatchHrisTimeoffRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisTimeoff', 'json');
@@ -257,11 +257,11 @@ class Timeoff
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisTimeoff2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisTimeoffRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisTimeoff2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisTimeoff', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Timeoff
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTimeoff', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchHrisTimeoff2Response(
+                $response = new Operations\PatchHrisTimeoffResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Timeoff
     /**
      * Remove a timeoff
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeoff2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeoff2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeHrisTimeoff2(Operations\RemoveHrisTimeoff2Request $request, ?Options $options = null): Operations\RemoveHrisTimeoff2Response
+    public function removeHrisTimeoff(Operations\RemoveHrisTimeoffRequest $request, ?Options $options = null): Operations\RemoveHrisTimeoffResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\RemoveHrisTimeoff2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\RemoveHrisTimeoffRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisTimeoff2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisTimeoff', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Timeoff
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisTimeoff2Response(
+            return new Operations\RemoveHrisTimeoffResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Timeoff
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveHrisTimeoff2Response(
+            return new Operations\RemoveHrisTimeoffResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Timeoff
     /**
      * Update a timeoff
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeoff2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeoff2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateHrisTimeoff2(Operations\UpdateHrisTimeoff2Request $request, ?Options $options = null): Operations\UpdateHrisTimeoff2Response
+    public function updateHrisTimeoff(Operations\UpdateHrisTimeoffRequest $request, ?Options $options = null): Operations\UpdateHrisTimeoffResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\UpdateHrisTimeoff2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/timeoff/{id}', Operations\UpdateHrisTimeoffRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'hrisTimeoff', 'json');
@@ -382,11 +382,11 @@ class Timeoff
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisTimeoff2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisTimeoffRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisTimeoff2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisTimeoff', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Timeoff
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTimeoff', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateHrisTimeoff2Response(
+                $response = new Operations\UpdateHrisTimeoffResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

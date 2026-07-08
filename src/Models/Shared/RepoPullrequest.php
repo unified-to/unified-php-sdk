@@ -56,6 +56,14 @@ class RepoPullrequest
     public ?array $labels = null;
 
     /**
+     *
+     * @var ?string $notes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $notes = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -75,12 +83,36 @@ class RepoPullrequest
 
     /**
      *
+     * @var ?string $sourceBranchId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('source_branch_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $sourceBranchId = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\RepoPullrequestStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\RepoPullrequestStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?RepoPullrequestStatus $status = null;
+
+    /**
+     *
+     * @var ?string $targetBranchId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('target_branch_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $targetBranchId = null;
+
+    /**
+     *
+     * @var ?string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $title = null;
 
     /**
      *
@@ -106,23 +138,31 @@ class RepoPullrequest
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<string>  $labels
+     * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $repoId
+     * @param  ?string  $sourceBranchId
      * @param  ?\Unified\Unified_to\Models\Shared\RepoPullrequestStatus  $status
+     * @param  ?string  $targetBranchId
+     * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $closedAt = null, ?array $commitIds = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $labels = null, ?array $raw = null, ?string $repoId = null, ?RepoPullrequestStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?\DateTime $closedAt = null, ?array $commitIds = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $labels = null, ?string $notes = null, ?array $raw = null, ?string $repoId = null, ?string $sourceBranchId = null, ?RepoPullrequestStatus $status = null, ?string $targetBranchId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->closedAt = $closedAt;
         $this->commitIds = $commitIds;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->labels = $labels;
+        $this->notes = $notes;
         $this->raw = $raw;
         $this->repoId = $repoId;
+        $this->sourceBranchId = $sourceBranchId;
         $this->status = $status;
+        $this->targetBranchId = $targetBranchId;
+        $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userIds = $userIds;
     }

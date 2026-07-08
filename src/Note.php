@@ -47,14 +47,14 @@ class Note
     /**
      * Create a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNote2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateTicketingNote2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createTicketingNote2(Operations\CreateTicketingNote2Request $request, ?Options $options = null): Operations\CreateTicketingNote2Response
+    public function createTicketingNote(Operations\CreateTicketingNoteRequest $request, ?Options $options = null): Operations\CreateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\CreateTicketingNote2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\CreateTicketingNoteRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
@@ -63,11 +63,11 @@ class Note
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingNote2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateTicketingNoteRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingNote2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createTicketingNote', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Note
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateTicketingNote2Response(
+                $response = new Operations\CreateTicketingNoteResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Note
     /**
      * Retrieve a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetTicketingNote2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetTicketingNote2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getTicketingNote2(Operations\GetTicketingNote2Request $request, ?Options $options = null): Operations\GetTicketingNote2Response
+    public function getTicketingNote(Operations\GetTicketingNoteRequest $request, ?Options $options = null): Operations\GetTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\GetTicketingNote2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\GetTicketingNoteRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingNote2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetTicketingNoteRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingNote2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getTicketingNote', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Note
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetTicketingNote2Response(
+                $response = new Operations\GetTicketingNoteResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Note
     /**
      * List all notes
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotes2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListTicketingNotes2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listTicketingNotes2(Operations\ListTicketingNotes2Request $request, ?Options $options = null): Operations\ListTicketingNotes2Response
+    public function listTicketingNotes(Operations\ListTicketingNotesRequest $request, ?Options $options = null): Operations\ListTicketingNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\ListTicketingNotes2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note', Operations\ListTicketingNotesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingNotes2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListTicketingNotesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingNotes2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listTicketingNotes', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Note
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\TicketingNote>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListTicketingNotes2Response(
+                $response = new Operations\ListTicketingNotesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Note
     /**
      * Update a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNote2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchTicketingNote2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchTicketingNote2(Operations\PatchTicketingNote2Request $request, ?Options $options = null): Operations\PatchTicketingNote2Response
+    public function patchTicketingNote(Operations\PatchTicketingNoteRequest $request, ?Options $options = null): Operations\PatchTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\PatchTicketingNote2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\PatchTicketingNoteRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
@@ -257,11 +257,11 @@ class Note
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingNote2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchTicketingNoteRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingNote2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchTicketingNote', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Note
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchTicketingNote2Response(
+                $response = new Operations\PatchTicketingNoteResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Note
     /**
      * Remove a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNote2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNote2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeTicketingNote2(Operations\RemoveTicketingNote2Request $request, ?Options $options = null): Operations\RemoveTicketingNote2Response
+    public function removeTicketingNote(Operations\RemoveTicketingNoteRequest $request, ?Options $options = null): Operations\RemoveTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\RemoveTicketingNote2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\RemoveTicketingNoteRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingNote2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeTicketingNote', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Note
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingNote2Response(
+            return new Operations\RemoveTicketingNoteResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Note
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveTicketingNote2Response(
+            return new Operations\RemoveTicketingNoteResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Note
     /**
      * Update a note
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNote2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNote2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateTicketingNote2(Operations\UpdateTicketingNote2Request $request, ?Options $options = null): Operations\UpdateTicketingNote2Response
+    public function updateTicketingNote(Operations\UpdateTicketingNoteRequest $request, ?Options $options = null): Operations\UpdateTicketingNoteResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\UpdateTicketingNote2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/ticketing/{connection_id}/note/{id}', Operations\UpdateTicketingNoteRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'ticketingNote', 'json');
@@ -382,11 +382,11 @@ class Note
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingNote2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateTicketingNoteRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingNote2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateTicketingNote', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Note
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\TicketingNote', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateTicketingNote2Response(
+                $response = new Operations\UpdateTicketingNoteResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

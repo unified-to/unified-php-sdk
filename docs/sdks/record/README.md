@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createDatastoreRecord2](#createdatastorerecord2) - Create a record
-* [getDatastoreRecord2](#getdatastorerecord2) - Retrieve a record
-* [listDatastoreRecords2](#listdatastorerecords2) - List all records
-* [patchDatastoreRecord2](#patchdatastorerecord2) - Update a record
-* [removeDatastoreRecord2](#removedatastorerecord2) - Remove a record
-* [updateDatastoreRecord2](#updatedatastorerecord2) - Update a record
+* [createDatastoreRecord](#createdatastorerecord) - Create a record
+* [getDatastoreRecord](#getdatastorerecord) - Retrieve a record
+* [listDatastoreRecords](#listdatastorerecords) - List all records
+* [patchDatastoreRecord](#patchdatastorerecord) - Update a record
+* [removeDatastoreRecord](#removedatastorerecord) - Remove a record
+* [updateDatastoreRecord](#updatedatastorerecord) - Update a record
 
-## createDatastoreRecord2
+## createDatastoreRecord
 
 Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreRecord2" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
 ```php
 declare(strict_types=1);
 
@@ -33,16 +33,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateDatastoreRecord2Request(
+$request = new Operations\CreateDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
         fields: [
-            'key' => new Shared\DatastoreFieldValue(),
+
         ],
     ),
     connectionId: '<id>',
 );
 
-$response = $sdk->record->createDatastoreRecord2(
+$response = $sdk->record->createDatastoreRecord(
     request: $request
 );
 
@@ -53,13 +53,13 @@ if ($response->datastoreRecord !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\CreateDatastoreRecord2Request](../../Models/Operations/CreateDatastoreRecord2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateDatastoreRecordRequest](../../Models/Operations/CreateDatastoreRecordRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\CreateDatastoreRecord2Response](../../Models/Operations/CreateDatastoreRecord2Response.md)**
+**[?Operations\CreateDatastoreRecordResponse](../../Models/Operations/CreateDatastoreRecordResponse.md)**
 
 ### Errors
 
@@ -67,13 +67,13 @@ if ($response->datastoreRecord !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getDatastoreRecord2
+## getDatastoreRecord
 
 Retrieve a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getDatastoreRecord2" method="get" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="getDatastoreRecord" method="get" path="/datastore/{connection_id}/record/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -88,12 +88,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetDatastoreRecord2Request(
+$request = new Operations\GetDatastoreRecordRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->record->getDatastoreRecord2(
+$response = $sdk->record->getDatastoreRecord(
     request: $request
 );
 
@@ -104,13 +104,13 @@ if ($response->datastoreRecord !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetDatastoreRecord2Request](../../Models/Operations/GetDatastoreRecord2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetDatastoreRecordRequest](../../Models/Operations/GetDatastoreRecordRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetDatastoreRecord2Response](../../Models/Operations/GetDatastoreRecord2Response.md)**
+**[?Operations\GetDatastoreRecordResponse](../../Models/Operations/GetDatastoreRecordResponse.md)**
 
 ### Errors
 
@@ -118,13 +118,13 @@ if ($response->datastoreRecord !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listDatastoreRecords2
+## listDatastoreRecords
 
 List all records
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listDatastoreRecords2" method="get" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="php" operationID="listDatastoreRecords" method="get" path="/datastore/{connection_id}/record" -->
 ```php
 declare(strict_types=1);
 
@@ -139,11 +139,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListDatastoreRecords2Request(
+$request = new Operations\ListDatastoreRecordsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->record->listDatastoreRecords2(
+$response = $sdk->record->listDatastoreRecords(
     request: $request
 );
 
@@ -154,13 +154,13 @@ if ($response->datastoreRecords !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListDatastoreRecords2Request](../../Models/Operations/ListDatastoreRecords2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListDatastoreRecordsRequest](../../Models/Operations/ListDatastoreRecordsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListDatastoreRecords2Response](../../Models/Operations/ListDatastoreRecords2Response.md)**
+**[?Operations\ListDatastoreRecordsResponse](../../Models/Operations/ListDatastoreRecordsResponse.md)**
 
 ### Errors
 
@@ -168,13 +168,13 @@ if ($response->datastoreRecords !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchDatastoreRecord2
+## patchDatastoreRecord
 
 Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchDatastoreRecord2" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -190,17 +190,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchDatastoreRecord2Request(
+$request = new Operations\PatchDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
         fields: [
-            'key' => new Shared\DatastoreFieldValue(),
+
         ],
     ),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->record->patchDatastoreRecord2(
+$response = $sdk->record->patchDatastoreRecord(
     request: $request
 );
 
@@ -211,13 +211,13 @@ if ($response->datastoreRecord !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\PatchDatastoreRecord2Request](../../Models/Operations/PatchDatastoreRecord2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchDatastoreRecordRequest](../../Models/Operations/PatchDatastoreRecordRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\PatchDatastoreRecord2Response](../../Models/Operations/PatchDatastoreRecord2Response.md)**
+**[?Operations\PatchDatastoreRecordResponse](../../Models/Operations/PatchDatastoreRecordResponse.md)**
 
 ### Errors
 
@@ -225,13 +225,13 @@ if ($response->datastoreRecord !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeDatastoreRecord2
+## removeDatastoreRecord
 
 Remove a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeDatastoreRecord2" method="delete" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeDatastoreRecord" method="delete" path="/datastore/{connection_id}/record/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -246,12 +246,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveDatastoreRecord2Request(
+$request = new Operations\RemoveDatastoreRecordRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->record->removeDatastoreRecord2(
+$response = $sdk->record->removeDatastoreRecord(
     request: $request
 );
 
@@ -262,13 +262,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\RemoveDatastoreRecord2Request](../../Models/Operations/RemoveDatastoreRecord2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\RemoveDatastoreRecordRequest](../../Models/Operations/RemoveDatastoreRecordRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\RemoveDatastoreRecord2Response](../../Models/Operations/RemoveDatastoreRecord2Response.md)**
+**[?Operations\RemoveDatastoreRecordResponse](../../Models/Operations/RemoveDatastoreRecordResponse.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateDatastoreRecord2
+## updateDatastoreRecord
 
 Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateDatastoreRecord2" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -298,7 +298,7 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateDatastoreRecord2Request(
+$request = new Operations\UpdateDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
         fields: [
 
@@ -308,7 +308,7 @@ $request = new Operations\UpdateDatastoreRecord2Request(
     id: '<id>',
 );
 
-$response = $sdk->record->updateDatastoreRecord2(
+$response = $sdk->record->updateDatastoreRecord(
     request: $request
 );
 
@@ -319,13 +319,13 @@ if ($response->datastoreRecord !== null) {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [Operations\UpdateDatastoreRecord2Request](../../Models/Operations/UpdateDatastoreRecord2Request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateDatastoreRecordRequest](../../Models/Operations/UpdateDatastoreRecordRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 ### Response
 
-**[?Operations\UpdateDatastoreRecord2Response](../../Models/Operations/UpdateDatastoreRecord2Response.md)**
+**[?Operations\UpdateDatastoreRecordResponse](../../Models/Operations/UpdateDatastoreRecordResponse.md)**
 
 ### Errors
 

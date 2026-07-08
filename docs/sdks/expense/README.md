@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createAccountingExpense2](#createaccountingexpense2) - Create an expense
-* [getAccountingExpense2](#getaccountingexpense2) - Retrieve an expense
-* [listAccountingExpenses2](#listaccountingexpenses2) - List all expenses
-* [patchAccountingExpense2](#patchaccountingexpense2) - Update an expense
-* [removeAccountingExpense2](#removeaccountingexpense2) - Remove an expense
-* [updateAccountingExpense2](#updateaccountingexpense2) - Update an expense
+* [createAccountingExpense](#createaccountingexpense) - Create an expense
+* [getAccountingExpense](#getaccountingexpense) - Retrieve an expense
+* [listAccountingExpenses](#listaccountingexpenses) - List all expenses
+* [patchAccountingExpense](#patchaccountingexpense) - Update an expense
+* [removeAccountingExpense](#removeaccountingexpense) - Remove an expense
+* [updateAccountingExpense](#updateaccountingexpense) - Update an expense
 
-## createAccountingExpense2
+## createAccountingExpense
 
 Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingExpense2" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="php" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateAccountingExpense2Request(
+$request = new Operations\CreateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(),
     connectionId: '<id>',
 );
 
-$response = $sdk->expense->createAccountingExpense2(
+$response = $sdk->expense->createAccountingExpense(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateAccountingExpense2Request](../../Models/Operations/CreateAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateAccountingExpenseRequest](../../Models/Operations/CreateAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateAccountingExpense2Response](../../Models/Operations/CreateAccountingExpense2Response.md)**
+**[?Operations\CreateAccountingExpenseResponse](../../Models/Operations/CreateAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingExpense2
+## getAccountingExpense
 
 Retrieve an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getAccountingExpense2" method="get" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="getAccountingExpense" method="get" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetAccountingExpense2Request(
+$request = new Operations\GetAccountingExpenseRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->expense->getAccountingExpense2(
+$response = $sdk->expense->getAccountingExpense(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetAccountingExpense2Request](../../Models/Operations/GetAccountingExpense2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetAccountingExpenseRequest](../../Models/Operations/GetAccountingExpenseRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetAccountingExpense2Response](../../Models/Operations/GetAccountingExpense2Response.md)**
+**[?Operations\GetAccountingExpenseResponse](../../Models/Operations/GetAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingExpenses2
+## listAccountingExpenses
 
 List all expenses
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listAccountingExpenses2" method="get" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="php" operationID="listAccountingExpenses" method="get" path="/accounting/{connection_id}/expense" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListAccountingExpenses2Request(
+$request = new Operations\ListAccountingExpensesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->expense->listAccountingExpenses2(
+$response = $sdk->expense->listAccountingExpenses(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->accountingExpenses !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListAccountingExpenses2Request](../../Models/Operations/ListAccountingExpenses2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListAccountingExpensesRequest](../../Models/Operations/ListAccountingExpensesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListAccountingExpenses2Response](../../Models/Operations/ListAccountingExpenses2Response.md)**
+**[?Operations\ListAccountingExpensesResponse](../../Models/Operations/ListAccountingExpensesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->accountingExpenses !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingExpense2
+## patchAccountingExpense
 
 Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingExpense2" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchAccountingExpense2Request(
+$request = new Operations\PatchAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->expense->patchAccountingExpense2(
+$response = $sdk->expense->patchAccountingExpense(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchAccountingExpense2Request](../../Models/Operations/PatchAccountingExpense2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchAccountingExpenseRequest](../../Models/Operations/PatchAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchAccountingExpense2Response](../../Models/Operations/PatchAccountingExpense2Response.md)**
+**[?Operations\PatchAccountingExpenseResponse](../../Models/Operations/PatchAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->accountingExpense !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingExpense2
+## removeAccountingExpense
 
 Remove an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeAccountingExpense2" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeAccountingExpense" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveAccountingExpense2Request(
+$request = new Operations\RemoveAccountingExpenseRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->expense->removeAccountingExpense2(
+$response = $sdk->expense->removeAccountingExpense(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveAccountingExpense2Request](../../Models/Operations/RemoveAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveAccountingExpenseRequest](../../Models/Operations/RemoveAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveAccountingExpense2Response](../../Models/Operations/RemoveAccountingExpense2Response.md)**
+**[?Operations\RemoveAccountingExpenseResponse](../../Models/Operations/RemoveAccountingExpenseResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingExpense2
+## updateAccountingExpense
 
 Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingExpense2" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateAccountingExpense2Request(
+$request = new Operations\UpdateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->expense->updateAccountingExpense2(
+$response = $sdk->expense->updateAccountingExpense(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->accountingExpense !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateAccountingExpense2Request](../../Models/Operations/UpdateAccountingExpense2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateAccountingExpenseRequest](../../Models/Operations/UpdateAccountingExpenseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateAccountingExpense2Response](../../Models/Operations/UpdateAccountingExpense2Response.md)**
+**[?Operations\UpdateAccountingExpenseResponse](../../Models/Operations/UpdateAccountingExpenseResponse.md)**
 
 ### Errors
 

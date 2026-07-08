@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [listCrmPicklists2](#listcrmpicklists2) - List all picklists
+* [listCrmPicklists](#listcrmpicklists) - List all picklists
 
-## listCrmPicklists2
+## listCrmPicklists
 
 List all picklists
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCrmPicklists2" method="get" path="/crm/{connection_id}/picklist" -->
+<!-- UsageSnippet language="php" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
 ```php
 declare(strict_types=1);
 
@@ -27,11 +27,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCrmPicklists2Request(
+$request = new Operations\ListCrmPicklistsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->picklist->listCrmPicklists2(
+$response = $sdk->picklist->listCrmPicklists(
     request: $request
 );
 
@@ -42,13 +42,13 @@ if ($response->crmPicklists !== null) {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [Operations\ListCrmPicklists2Request](../../Models/Operations/ListCrmPicklists2Request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListCrmPicklistsRequest](../../Models/Operations/ListCrmPicklistsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 ### Response
 
-**[?Operations\ListCrmPicklists2Response](../../Models/Operations/ListCrmPicklists2Response.md)**
+**[?Operations\ListCrmPicklistsResponse](../../Models/Operations/ListCrmPicklistsResponse.md)**
 
 ### Errors
 

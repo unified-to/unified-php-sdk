@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createDatastoreDatabase2](#createdatastoredatabase2) - Create a database
-* [getDatastoreDatabase2](#getdatastoredatabase2) - Retrieve a database
-* [listDatastoreDatabases2](#listdatastoredatabases2) - List all databases
-* [patchDatastoreDatabase2](#patchdatastoredatabase2) - Update a database
-* [removeDatastoreDatabase2](#removedatastoredatabase2) - Remove a database
-* [updateDatastoreDatabase2](#updatedatastoredatabase2) - Update a database
+* [createDatastoreDatabase](#createdatastoredatabase) - Create a database
+* [getDatastoreDatabase](#getdatastoredatabase) - Retrieve a database
+* [listDatastoreDatabases](#listdatastoredatabases) - List all databases
+* [patchDatastoreDatabase](#patchdatastoredatabase) - Update a database
+* [removeDatastoreDatabase](#removedatastoredatabase) - Remove a database
+* [updateDatastoreDatabase](#updatedatastoredatabase) - Update a database
 
-## createDatastoreDatabase2
+## createDatastoreDatabase
 
 Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreDatabase2" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateDatastoreDatabase2Request(
+$request = new Operations\CreateDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(),
     connectionId: '<id>',
 );
 
-$response = $sdk->database->createDatastoreDatabase2(
+$response = $sdk->database->createDatastoreDatabase(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->datastoreDatabase !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\CreateDatastoreDatabase2Request](../../Models/Operations/CreateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateDatastoreDatabaseRequest](../../Models/Operations/CreateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\CreateDatastoreDatabase2Response](../../Models/Operations/CreateDatastoreDatabase2Response.md)**
+**[?Operations\CreateDatastoreDatabaseResponse](../../Models/Operations/CreateDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->datastoreDatabase !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getDatastoreDatabase2
+## getDatastoreDatabase
 
 Retrieve a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getDatastoreDatabase2" method="get" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="getDatastoreDatabase" method="get" path="/datastore/{connection_id}/database/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetDatastoreDatabase2Request(
+$request = new Operations\GetDatastoreDatabaseRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->database->getDatastoreDatabase2(
+$response = $sdk->database->getDatastoreDatabase(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->datastoreDatabase !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\GetDatastoreDatabase2Request](../../Models/Operations/GetDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetDatastoreDatabaseRequest](../../Models/Operations/GetDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\GetDatastoreDatabase2Response](../../Models/Operations/GetDatastoreDatabase2Response.md)**
+**[?Operations\GetDatastoreDatabaseResponse](../../Models/Operations/GetDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->datastoreDatabase !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listDatastoreDatabases2
+## listDatastoreDatabases
 
 List all databases
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listDatastoreDatabases2" method="get" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="php" operationID="listDatastoreDatabases" method="get" path="/datastore/{connection_id}/database" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListDatastoreDatabases2Request(
+$request = new Operations\ListDatastoreDatabasesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->database->listDatastoreDatabases2(
+$response = $sdk->database->listDatastoreDatabases(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->datastoreDatabases !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\ListDatastoreDatabases2Request](../../Models/Operations/ListDatastoreDatabases2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListDatastoreDatabasesRequest](../../Models/Operations/ListDatastoreDatabasesRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\ListDatastoreDatabases2Response](../../Models/Operations/ListDatastoreDatabases2Response.md)**
+**[?Operations\ListDatastoreDatabasesResponse](../../Models/Operations/ListDatastoreDatabasesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->datastoreDatabases !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchDatastoreDatabase2
+## patchDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchDatastoreDatabase2" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchDatastoreDatabase2Request(
+$request = new Operations\PatchDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->database->patchDatastoreDatabase2(
+$response = $sdk->database->patchDatastoreDatabase(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->datastoreDatabase !== null) {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [Operations\PatchDatastoreDatabase2Request](../../Models/Operations/PatchDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchDatastoreDatabaseRequest](../../Models/Operations/PatchDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 ### Response
 
-**[?Operations\PatchDatastoreDatabase2Response](../../Models/Operations/PatchDatastoreDatabase2Response.md)**
+**[?Operations\PatchDatastoreDatabaseResponse](../../Models/Operations/PatchDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->datastoreDatabase !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeDatastoreDatabase2
+## removeDatastoreDatabase
 
 Remove a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeDatastoreDatabase2" method="delete" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeDatastoreDatabase" method="delete" path="/datastore/{connection_id}/database/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveDatastoreDatabase2Request(
+$request = new Operations\RemoveDatastoreDatabaseRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->database->removeDatastoreDatabase2(
+$response = $sdk->database->removeDatastoreDatabase(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\RemoveDatastoreDatabase2Request](../../Models/Operations/RemoveDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveDatastoreDatabaseRequest](../../Models/Operations/RemoveDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\RemoveDatastoreDatabase2Response](../../Models/Operations/RemoveDatastoreDatabase2Response.md)**
+**[?Operations\RemoveDatastoreDatabaseResponse](../../Models/Operations/RemoveDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateDatastoreDatabase2
+## updateDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateDatastoreDatabase2" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateDatastoreDatabase2Request(
+$request = new Operations\UpdateDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->database->updateDatastoreDatabase2(
+$response = $sdk->database->updateDatastoreDatabase(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->datastoreDatabase !== null) {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [Operations\UpdateDatastoreDatabase2Request](../../Models/Operations/UpdateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateDatastoreDatabaseRequest](../../Models/Operations/UpdateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 ### Response
 
-**[?Operations\UpdateDatastoreDatabase2Response](../../Models/Operations/UpdateDatastoreDatabase2Response.md)**
+**[?Operations\UpdateDatastoreDatabaseResponse](../../Models/Operations/UpdateDatastoreDatabaseResponse.md)**
 
 ### Errors
 

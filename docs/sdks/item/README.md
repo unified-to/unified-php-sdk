@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createCommerceItem2](#createcommerceitem2) - Create an item
-* [getCommerceItem2](#getcommerceitem2) - Retrieve an item
-* [listCommerceItems2](#listcommerceitems2) - List all items
-* [patchCommerceItem2](#patchcommerceitem2) - Update an item
-* [removeCommerceItem2](#removecommerceitem2) - Remove an item
-* [updateCommerceItem2](#updatecommerceitem2) - Update an item
+* [createCommerceItem](#createcommerceitem) - Create an item
+* [getCommerceItem](#getcommerceitem) - Retrieve an item
+* [listCommerceItems](#listcommerceitems) - List all items
+* [patchCommerceItem](#patchcommerceitem) - Update an item
+* [removeCommerceItem](#removecommerceitem) - Remove an item
+* [updateCommerceItem](#updatecommerceitem) - Update an item
 
-## createCommerceItem2
+## createCommerceItem
 
 Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceItem2" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateCommerceItem2Request(
+$request = new Operations\CreateCommerceItemRequest(
     commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
 );
 
-$response = $sdk->item->createCommerceItem2(
+$response = $sdk->item->createCommerceItem(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->commerceItem !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateCommerceItem2Request](../../Models/Operations/CreateCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateCommerceItemRequest](../../Models/Operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateCommerceItem2Response](../../Models/Operations/CreateCommerceItem2Response.md)**
+**[?Operations\CreateCommerceItemResponse](../../Models/Operations/CreateCommerceItemResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->commerceItem !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getCommerceItem2
+## getCommerceItem
 
 Retrieve an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getCommerceItem2" method="get" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetCommerceItem2Request(
+$request = new Operations\GetCommerceItemRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->item->getCommerceItem2(
+$response = $sdk->item->getCommerceItem(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->commerceItem !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetCommerceItem2Request](../../Models/Operations/GetCommerceItem2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetCommerceItemRequest](../../Models/Operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetCommerceItem2Response](../../Models/Operations/GetCommerceItem2Response.md)**
+**[?Operations\GetCommerceItemResponse](../../Models/Operations/GetCommerceItemResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->commerceItem !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCommerceItems2
+## listCommerceItems
 
 List all items
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listCommerceItems2" method="get" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="php" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListCommerceItems2Request(
+$request = new Operations\ListCommerceItemsRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->item->listCommerceItems2(
+$response = $sdk->item->listCommerceItems(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->commerceItems !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListCommerceItems2Request](../../Models/Operations/ListCommerceItems2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListCommerceItemsRequest](../../Models/Operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListCommerceItems2Response](../../Models/Operations/ListCommerceItems2Response.md)**
+**[?Operations\ListCommerceItemsResponse](../../Models/Operations/ListCommerceItemsResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->commerceItems !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchCommerceItem2
+## patchCommerceItem
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItem2" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchCommerceItem2Request(
+$request = new Operations\PatchCommerceItemRequest(
     commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->item->patchCommerceItem2(
+$response = $sdk->item->patchCommerceItem(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->commerceItem !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchCommerceItem2Request](../../Models/Operations/PatchCommerceItem2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchCommerceItemRequest](../../Models/Operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchCommerceItem2Response](../../Models/Operations/PatchCommerceItem2Response.md)**
+**[?Operations\PatchCommerceItemResponse](../../Models/Operations/PatchCommerceItemResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->commerceItem !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeCommerceItem2
+## removeCommerceItem
 
 Remove an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeCommerceItem2" method="delete" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveCommerceItem2Request(
+$request = new Operations\RemoveCommerceItemRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->item->removeCommerceItem2(
+$response = $sdk->item->removeCommerceItem(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveCommerceItem2Request](../../Models/Operations/RemoveCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveCommerceItemRequest](../../Models/Operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveCommerceItem2Response](../../Models/Operations/RemoveCommerceItem2Response.md)**
+**[?Operations\RemoveCommerceItemResponse](../../Models/Operations/RemoveCommerceItemResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateCommerceItem2
+## updateCommerceItem
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceItem2" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateCommerceItem2Request(
+$request = new Operations\UpdateCommerceItemRequest(
     commerceItem: new Shared\CommerceItem(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->item->updateCommerceItem2(
+$response = $sdk->item->updateCommerceItem(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->commerceItem !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateCommerceItem2Request](../../Models/Operations/UpdateCommerceItem2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateCommerceItemRequest](../../Models/Operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateCommerceItem2Response](../../Models/Operations/UpdateCommerceItem2Response.md)**
+**[?Operations\UpdateCommerceItemResponse](../../Models/Operations/UpdateCommerceItemResponse.md)**
 
 ### Errors
 

@@ -47,14 +47,14 @@ class Repo
     /**
      * Create a branch
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranch2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoBranch2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoBranch2(Operations\CreateRepoBranch2Request $request, ?Options $options = null): Operations\CreateRepoBranch2Response
+    public function createRepoBranch(Operations\CreateRepoBranchRequest $request, ?Options $options = null): Operations\CreateRepoBranchResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\CreateRepoBranch2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\CreateRepoBranchRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
@@ -63,11 +63,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoBranch2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoBranchRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoBranch2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoBranch', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoBranch2Response(
+                $response = new Operations\CreateRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,14 +115,14 @@ class Repo
     /**
      * Create a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoCommit2(Operations\CreateRepoCommit2Request $request, ?Options $options = null): Operations\CreateRepoCommit2Response
+    public function createRepoCommit(Operations\CreateRepoCommitRequest $request, ?Options $options = null): Operations\CreateRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\CreateRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\CreateRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -131,11 +131,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -161,7 +161,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoCommit2Response(
+                $response = new Operations\CreateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -183,14 +183,14 @@ class Repo
     /**
      * Create an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganization2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganization2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoOrganization2(Operations\CreateRepoOrganization2Request $request, ?Options $options = null): Operations\CreateRepoOrganization2Response
+    public function createRepoOrganization(Operations\CreateRepoOrganizationRequest $request, ?Options $options = null): Operations\CreateRepoOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\CreateRepoOrganization2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\CreateRepoOrganizationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -199,11 +199,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoOrganization2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoOrganizationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoOrganization2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoOrganization', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -229,7 +229,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoOrganization2Response(
+                $response = new Operations\CreateRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -251,14 +251,14 @@ class Repo
     /**
      * Create a pullrequest
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoPullrequest2(Operations\CreateRepoPullrequest2Request $request, ?Options $options = null): Operations\CreateRepoPullrequest2Response
+    public function createRepoPullrequest(Operations\CreateRepoPullrequestRequest $request, ?Options $options = null): Operations\CreateRepoPullrequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\CreateRepoPullrequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\CreateRepoPullrequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
@@ -267,11 +267,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoPullrequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoPullrequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoPullrequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoPullrequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -297,7 +297,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoPullrequest2Response(
+                $response = new Operations\CreateRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -319,14 +319,14 @@ class Repo
     /**
      * Create a repository
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepository2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateRepoRepository2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createRepoRepository2(Operations\CreateRepoRepository2Request $request, ?Options $options = null): Operations\CreateRepoRepository2Response
+    public function createRepoRepository(Operations\CreateRepoRepositoryRequest $request, ?Options $options = null): Operations\CreateRepoRepositoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\CreateRepoRepository2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\CreateRepoRepositoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
@@ -335,11 +335,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoRepository2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateRepoRepositoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoRepository2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createRepoRepository', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -365,7 +365,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateRepoRepository2Response(
+                $response = new Operations\CreateRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -387,22 +387,22 @@ class Repo
     /**
      * Retrieve a branch
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoBranch2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoBranch2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoBranch2(Operations\GetRepoBranch2Request $request, ?Options $options = null): Operations\GetRepoBranch2Response
+    public function getRepoBranch(Operations\GetRepoBranchRequest $request, ?Options $options = null): Operations\GetRepoBranchResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\GetRepoBranch2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\GetRepoBranchRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoBranch2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoBranchRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoBranch2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoBranch', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -428,7 +428,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoBranch2Response(
+                $response = new Operations\GetRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -450,22 +450,22 @@ class Repo
     /**
      * Retrieve a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoCommit2(Operations\GetRepoCommit2Request $request, ?Options $options = null): Operations\GetRepoCommit2Response
+    public function getRepoCommit(Operations\GetRepoCommitRequest $request, ?Options $options = null): Operations\GetRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\GetRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\GetRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -491,7 +491,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoCommit2Response(
+                $response = new Operations\GetRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -513,22 +513,22 @@ class Repo
     /**
      * Retrieve an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganization2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganization2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoOrganization2(Operations\GetRepoOrganization2Request $request, ?Options $options = null): Operations\GetRepoOrganization2Response
+    public function getRepoOrganization(Operations\GetRepoOrganizationRequest $request, ?Options $options = null): Operations\GetRepoOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\GetRepoOrganization2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\GetRepoOrganizationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoOrganization2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoOrganizationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoOrganization2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoOrganization', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -554,7 +554,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoOrganization2Response(
+                $response = new Operations\GetRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -576,22 +576,22 @@ class Repo
     /**
      * Retrieve a pullrequest
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoPullrequest2(Operations\GetRepoPullrequest2Request $request, ?Options $options = null): Operations\GetRepoPullrequest2Response
+    public function getRepoPullrequest(Operations\GetRepoPullrequestRequest $request, ?Options $options = null): Operations\GetRepoPullrequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\GetRepoPullrequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\GetRepoPullrequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoPullrequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoPullrequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoPullrequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoPullrequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -617,7 +617,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoPullrequest2Response(
+                $response = new Operations\GetRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -639,22 +639,22 @@ class Repo
     /**
      * Retrieve a repository
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetRepoRepository2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetRepoRepository2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getRepoRepository2(Operations\GetRepoRepository2Request $request, ?Options $options = null): Operations\GetRepoRepository2Response
+    public function getRepoRepository(Operations\GetRepoRepositoryRequest $request, ?Options $options = null): Operations\GetRepoRepositoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\GetRepoRepository2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\GetRepoRepositoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetRepoRepository2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetRepoRepositoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoRepository2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getRepoRepository', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -680,7 +680,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetRepoRepository2Response(
+                $response = new Operations\GetRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -702,22 +702,22 @@ class Repo
     /**
      * List all branches
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoBranches2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoBranches2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoBranchesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoBranchesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoBranches2(Operations\ListRepoBranches2Request $request, ?Options $options = null): Operations\ListRepoBranches2Response
+    public function listRepoBranches(Operations\ListRepoBranchesRequest $request, ?Options $options = null): Operations\ListRepoBranchesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\ListRepoBranches2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch', Operations\ListRepoBranchesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoBranches2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoBranchesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoBranches2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoBranches', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -743,7 +743,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoBranch>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoBranches2Response(
+                $response = new Operations\ListRepoBranchesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -765,22 +765,22 @@ class Repo
     /**
      * List all commits
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommits2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoCommits2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoCommits2(Operations\ListRepoCommits2Request $request, ?Options $options = null): Operations\ListRepoCommits2Response
+    public function listRepoCommits(Operations\ListRepoCommitsRequest $request, ?Options $options = null): Operations\ListRepoCommitsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\ListRepoCommits2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit', Operations\ListRepoCommitsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoCommits2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoCommitsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoCommits2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoCommits', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -806,7 +806,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoCommit>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoCommits2Response(
+                $response = new Operations\ListRepoCommitsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -828,22 +828,22 @@ class Repo
     /**
      * List all organizations
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizations2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizations2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoOrganizations2(Operations\ListRepoOrganizations2Request $request, ?Options $options = null): Operations\ListRepoOrganizations2Response
+    public function listRepoOrganizations(Operations\ListRepoOrganizationsRequest $request, ?Options $options = null): Operations\ListRepoOrganizationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\ListRepoOrganizations2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization', Operations\ListRepoOrganizationsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoOrganizations2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoOrganizationsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoOrganizations2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoOrganizations', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -869,7 +869,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoOrganization>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoOrganizations2Response(
+                $response = new Operations\ListRepoOrganizationsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -891,22 +891,22 @@ class Repo
     /**
      * List all pullrequests
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequests2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequests2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequestsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoPullrequests2(Operations\ListRepoPullrequests2Request $request, ?Options $options = null): Operations\ListRepoPullrequests2Response
+    public function listRepoPullrequests(Operations\ListRepoPullrequestsRequest $request, ?Options $options = null): Operations\ListRepoPullrequestsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\ListRepoPullrequests2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest', Operations\ListRepoPullrequestsRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoPullrequests2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoPullrequestsRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoPullrequests2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoPullrequests', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -932,7 +932,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoPullrequest>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoPullrequests2Response(
+                $response = new Operations\ListRepoPullrequestsResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -954,22 +954,22 @@ class Repo
     /**
      * List all repositories
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositories2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListRepoRepositories2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositoriesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListRepoRepositoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listRepoRepositories2(Operations\ListRepoRepositories2Request $request, ?Options $options = null): Operations\ListRepoRepositories2Response
+    public function listRepoRepositories(Operations\ListRepoRepositoriesRequest $request, ?Options $options = null): Operations\ListRepoRepositoriesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\ListRepoRepositories2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository', Operations\ListRepoRepositoriesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListRepoRepositories2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListRepoRepositoriesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoRepositories2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listRepoRepositories', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -995,7 +995,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\RepoRepository>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListRepoRepositories2Response(
+                $response = new Operations\ListRepoRepositoriesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1017,14 +1017,14 @@ class Repo
     /**
      * Update a branch
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranch2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoBranch2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoBranch2(Operations\PatchRepoBranch2Request $request, ?Options $options = null): Operations\PatchRepoBranch2Response
+    public function patchRepoBranch(Operations\PatchRepoBranchRequest $request, ?Options $options = null): Operations\PatchRepoBranchResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\PatchRepoBranch2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\PatchRepoBranchRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
@@ -1033,11 +1033,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoBranch2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoBranchRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoBranch2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoBranch', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1063,7 +1063,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoBranch2Response(
+                $response = new Operations\PatchRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1085,14 +1085,14 @@ class Repo
     /**
      * Update a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoCommit2(Operations\PatchRepoCommit2Request $request, ?Options $options = null): Operations\PatchRepoCommit2Response
+    public function patchRepoCommit(Operations\PatchRepoCommitRequest $request, ?Options $options = null): Operations\PatchRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\PatchRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\PatchRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -1101,11 +1101,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1131,7 +1131,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoCommit2Response(
+                $response = new Operations\PatchRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1153,14 +1153,14 @@ class Repo
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganization2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganization2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoOrganization2(Operations\PatchRepoOrganization2Request $request, ?Options $options = null): Operations\PatchRepoOrganization2Response
+    public function patchRepoOrganization(Operations\PatchRepoOrganizationRequest $request, ?Options $options = null): Operations\PatchRepoOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\PatchRepoOrganization2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\PatchRepoOrganizationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -1169,11 +1169,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoOrganization2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoOrganizationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoOrganization2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoOrganization', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1199,7 +1199,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoOrganization2Response(
+                $response = new Operations\PatchRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1221,14 +1221,14 @@ class Repo
     /**
      * Update a pullrequest
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoPullrequest2(Operations\PatchRepoPullrequest2Request $request, ?Options $options = null): Operations\PatchRepoPullrequest2Response
+    public function patchRepoPullrequest(Operations\PatchRepoPullrequestRequest $request, ?Options $options = null): Operations\PatchRepoPullrequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\PatchRepoPullrequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\PatchRepoPullrequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
@@ -1237,11 +1237,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoPullrequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoPullrequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoPullrequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoPullrequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1267,7 +1267,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoPullrequest2Response(
+                $response = new Operations\PatchRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1289,14 +1289,14 @@ class Repo
     /**
      * Update a repository
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepository2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchRepoRepository2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchRepoRepository2(Operations\PatchRepoRepository2Request $request, ?Options $options = null): Operations\PatchRepoRepository2Response
+    public function patchRepoRepository(Operations\PatchRepoRepositoryRequest $request, ?Options $options = null): Operations\PatchRepoRepositoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\PatchRepoRepository2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\PatchRepoRepositoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
@@ -1305,11 +1305,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoRepository2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchRepoRepositoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoRepository2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchRepoRepository', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1335,7 +1335,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchRepoRepository2Response(
+                $response = new Operations\PatchRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1357,20 +1357,20 @@ class Repo
     /**
      * Remove a branch
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranch2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranch2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoBranch2(Operations\RemoveRepoBranch2Request $request, ?Options $options = null): Operations\RemoveRepoBranch2Response
+    public function removeRepoBranch(Operations\RemoveRepoBranchRequest $request, ?Options $options = null): Operations\RemoveRepoBranchResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\RemoveRepoBranch2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\RemoveRepoBranchRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoBranch2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoBranch', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1391,7 +1391,7 @@ class Repo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoBranch2Response(
+            return new Operations\RemoveRepoBranchResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1403,7 +1403,7 @@ class Repo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoBranch2Response(
+            return new Operations\RemoveRepoBranchResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1414,20 +1414,20 @@ class Repo
     /**
      * Remove a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoCommit2(Operations\RemoveRepoCommit2Request $request, ?Options $options = null): Operations\RemoveRepoCommit2Response
+    public function removeRepoCommit(Operations\RemoveRepoCommitRequest $request, ?Options $options = null): Operations\RemoveRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\RemoveRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\RemoveRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1448,7 +1448,7 @@ class Repo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoCommit2Response(
+            return new Operations\RemoveRepoCommitResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1460,7 +1460,7 @@ class Repo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoCommit2Response(
+            return new Operations\RemoveRepoCommitResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1471,20 +1471,20 @@ class Repo
     /**
      * Remove an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganization2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganization2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoOrganization2(Operations\RemoveRepoOrganization2Request $request, ?Options $options = null): Operations\RemoveRepoOrganization2Response
+    public function removeRepoOrganization(Operations\RemoveRepoOrganizationRequest $request, ?Options $options = null): Operations\RemoveRepoOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\RemoveRepoOrganization2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\RemoveRepoOrganizationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoOrganization2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoOrganization', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1505,7 +1505,7 @@ class Repo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoOrganization2Response(
+            return new Operations\RemoveRepoOrganizationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1517,7 +1517,7 @@ class Repo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoOrganization2Response(
+            return new Operations\RemoveRepoOrganizationResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1528,20 +1528,20 @@ class Repo
     /**
      * Remove a pullrequest
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoPullrequest2(Operations\RemoveRepoPullrequest2Request $request, ?Options $options = null): Operations\RemoveRepoPullrequest2Response
+    public function removeRepoPullrequest(Operations\RemoveRepoPullrequestRequest $request, ?Options $options = null): Operations\RemoveRepoPullrequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\RemoveRepoPullrequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\RemoveRepoPullrequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoPullrequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoPullrequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1562,7 +1562,7 @@ class Repo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoPullrequest2Response(
+            return new Operations\RemoveRepoPullrequestResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1574,7 +1574,7 @@ class Repo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoPullrequest2Response(
+            return new Operations\RemoveRepoPullrequestResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1585,20 +1585,20 @@ class Repo
     /**
      * Remove a repository
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepository2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepository2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeRepoRepository2(Operations\RemoveRepoRepository2Request $request, ?Options $options = null): Operations\RemoveRepoRepository2Response
+    public function removeRepoRepository(Operations\RemoveRepoRepositoryRequest $request, ?Options $options = null): Operations\RemoveRepoRepositoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\RemoveRepoRepository2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\RemoveRepoRepositoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoRepository2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeRepoRepository', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -1619,7 +1619,7 @@ class Repo
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoRepository2Response(
+            return new Operations\RemoveRepoRepositoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1631,7 +1631,7 @@ class Repo
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveRepoRepository2Response(
+            return new Operations\RemoveRepoRepositoryResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -1642,14 +1642,14 @@ class Repo
     /**
      * Update a branch
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranch2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranch2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranchRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoBranch2(Operations\UpdateRepoBranch2Request $request, ?Options $options = null): Operations\UpdateRepoBranch2Response
+    public function updateRepoBranch(Operations\UpdateRepoBranchRequest $request, ?Options $options = null): Operations\UpdateRepoBranchResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\UpdateRepoBranch2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/branch/{id}', Operations\UpdateRepoBranchRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoBranch', 'json');
@@ -1658,11 +1658,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoBranch2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoBranchRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoBranch2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoBranch', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1688,7 +1688,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoBranch', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoBranch2Response(
+                $response = new Operations\UpdateRepoBranchResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1710,14 +1710,14 @@ class Repo
     /**
      * Update a commit
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommit2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommit2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoCommit2(Operations\UpdateRepoCommit2Request $request, ?Options $options = null): Operations\UpdateRepoCommit2Response
+    public function updateRepoCommit(Operations\UpdateRepoCommitRequest $request, ?Options $options = null): Operations\UpdateRepoCommitResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\UpdateRepoCommit2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/commit/{id}', Operations\UpdateRepoCommitRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoCommit', 'json');
@@ -1726,11 +1726,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoCommit2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoCommitRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoCommit2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoCommit', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1756,7 +1756,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoCommit', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoCommit2Response(
+                $response = new Operations\UpdateRepoCommitResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1778,14 +1778,14 @@ class Repo
     /**
      * Update an organization
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganization2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganization2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoOrganization2(Operations\UpdateRepoOrganization2Request $request, ?Options $options = null): Operations\UpdateRepoOrganization2Response
+    public function updateRepoOrganization(Operations\UpdateRepoOrganizationRequest $request, ?Options $options = null): Operations\UpdateRepoOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\UpdateRepoOrganization2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/organization/{id}', Operations\UpdateRepoOrganizationRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoOrganization', 'json');
@@ -1794,11 +1794,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoOrganization2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoOrganizationRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoOrganization2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoOrganization', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1824,7 +1824,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoOrganization', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoOrganization2Response(
+                $response = new Operations\UpdateRepoOrganizationResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1846,14 +1846,14 @@ class Repo
     /**
      * Update a pullrequest
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequest2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequest2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoPullrequest2(Operations\UpdateRepoPullrequest2Request $request, ?Options $options = null): Operations\UpdateRepoPullrequest2Response
+    public function updateRepoPullrequest(Operations\UpdateRepoPullrequestRequest $request, ?Options $options = null): Operations\UpdateRepoPullrequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\UpdateRepoPullrequest2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/pullrequest/{id}', Operations\UpdateRepoPullrequestRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoPullrequest', 'json');
@@ -1862,11 +1862,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoPullrequest2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoPullrequestRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoPullrequest2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoPullrequest', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1892,7 +1892,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoPullrequest', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoPullrequest2Response(
+                $response = new Operations\UpdateRepoPullrequestResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -1914,14 +1914,14 @@ class Repo
     /**
      * Update a repository
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepository2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepository2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateRepoRepository2(Operations\UpdateRepoRepository2Request $request, ?Options $options = null): Operations\UpdateRepoRepository2Response
+    public function updateRepoRepository(Operations\UpdateRepoRepositoryRequest $request, ?Options $options = null): Operations\UpdateRepoRepositoryResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\UpdateRepoRepository2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repo/{connection_id}/repository/{id}', Operations\UpdateRepoRepositoryRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'repoRepository', 'json');
@@ -1930,11 +1930,11 @@ class Repo
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoRepository2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateRepoRepositoryRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoRepository2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateRepoRepository', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -1960,7 +1960,7 @@ class Repo
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\RepoRepository', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateRepoRepository2Response(
+                $response = new Operations\UpdateRepoRepositoryResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

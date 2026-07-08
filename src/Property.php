@@ -47,14 +47,14 @@ class Property
     /**
      * Create a property
      *
-     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsProperty2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsProperty2Response
+     * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createAnalyticsProperty2(Operations\CreateAnalyticsProperty2Request $request, ?Options $options = null): Operations\CreateAnalyticsProperty2Response
+    public function createAnalyticsProperty(Operations\CreateAnalyticsPropertyRequest $request, ?Options $options = null): Operations\CreateAnalyticsPropertyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property', Operations\CreateAnalyticsProperty2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property', Operations\CreateAnalyticsPropertyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsProperty', 'json');
@@ -63,11 +63,11 @@ class Property
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsProperty2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\CreateAnalyticsPropertyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsProperty2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createAnalyticsProperty', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -93,7 +93,7 @@ class Property
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsProperty', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateAnalyticsProperty2Response(
+                $response = new Operations\CreateAnalyticsPropertyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -115,22 +115,22 @@ class Property
     /**
      * Retrieve a property
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsProperty2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsProperty2Response
+     * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getAnalyticsProperty2(Operations\GetAnalyticsProperty2Request $request, ?Options $options = null): Operations\GetAnalyticsProperty2Response
+    public function getAnalyticsProperty(Operations\GetAnalyticsPropertyRequest $request, ?Options $options = null): Operations\GetAnalyticsPropertyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\GetAnalyticsProperty2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\GetAnalyticsPropertyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsProperty2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetAnalyticsPropertyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsProperty2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getAnalyticsProperty', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -156,7 +156,7 @@ class Property
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsProperty', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetAnalyticsProperty2Response(
+                $response = new Operations\GetAnalyticsPropertyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -178,22 +178,22 @@ class Property
     /**
      * List all properties
      *
-     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsProperties2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsProperties2Response
+     * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listAnalyticsProperties2(Operations\ListAnalyticsProperties2Request $request, ?Options $options = null): Operations\ListAnalyticsProperties2Response
+    public function listAnalyticsProperties(Operations\ListAnalyticsPropertiesRequest $request, ?Options $options = null): Operations\ListAnalyticsPropertiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property', Operations\ListAnalyticsProperties2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property', Operations\ListAnalyticsPropertiesRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsProperties2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\ListAnalyticsPropertiesRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsProperties2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listAnalyticsProperties', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -219,7 +219,7 @@ class Property
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\AnalyticsProperty>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListAnalyticsProperties2Response(
+                $response = new Operations\ListAnalyticsPropertiesResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -241,14 +241,14 @@ class Property
     /**
      * Update a property
      *
-     * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsProperty2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsProperty2Response
+     * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function patchAnalyticsProperty2(Operations\PatchAnalyticsProperty2Request $request, ?Options $options = null): Operations\PatchAnalyticsProperty2Response
+    public function patchAnalyticsProperty(Operations\PatchAnalyticsPropertyRequest $request, ?Options $options = null): Operations\PatchAnalyticsPropertyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\PatchAnalyticsProperty2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\PatchAnalyticsPropertyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsProperty', 'json');
@@ -257,11 +257,11 @@ class Property
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\PatchAnalyticsProperty2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\PatchAnalyticsPropertyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAnalyticsProperty2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchAnalyticsProperty', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -287,7 +287,7 @@ class Property
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsProperty', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\PatchAnalyticsProperty2Response(
+                $response = new Operations\PatchAnalyticsPropertyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -309,20 +309,20 @@ class Property
     /**
      * Remove a property
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsProperty2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsProperty2Response
+     * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeAnalyticsProperty2(Operations\RemoveAnalyticsProperty2Request $request, ?Options $options = null): Operations\RemoveAnalyticsProperty2Response
+    public function removeAnalyticsProperty(Operations\RemoveAnalyticsPropertyRequest $request, ?Options $options = null): Operations\RemoveAnalyticsPropertyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\RemoveAnalyticsProperty2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\RemoveAnalyticsPropertyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAnalyticsProperty2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeAnalyticsProperty', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -343,7 +343,7 @@ class Property
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAnalyticsProperty2Response(
+            return new Operations\RemoveAnalyticsPropertyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -355,7 +355,7 @@ class Property
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveAnalyticsProperty2Response(
+            return new Operations\RemoveAnalyticsPropertyResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -366,14 +366,14 @@ class Property
     /**
      * Update a property
      *
-     * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsProperty2Request  $request
-     * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsProperty2Response
+     * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function updateAnalyticsProperty2(Operations\UpdateAnalyticsProperty2Request $request, ?Options $options = null): Operations\UpdateAnalyticsProperty2Response
+    public function updateAnalyticsProperty(Operations\UpdateAnalyticsPropertyRequest $request, ?Options $options = null): Operations\UpdateAnalyticsPropertyResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\UpdateAnalyticsProperty2Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/analytics/{connection_id}/property/{id}', Operations\UpdateAnalyticsPropertyRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'analyticsProperty', 'json');
@@ -382,11 +382,11 @@ class Property
         }
         $httpOptions = array_merge_recursive($httpOptions, $body);
 
-        $qp = Utils\Utils::getQueryParams(Operations\UpdateAnalyticsProperty2Request::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateAnalyticsPropertyRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAnalyticsProperty2', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateAnalyticsProperty', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -412,7 +412,7 @@ class Property
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\AnalyticsProperty', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\UpdateAnalyticsProperty2Response(
+                $response = new Operations\UpdateAnalyticsPropertyResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,

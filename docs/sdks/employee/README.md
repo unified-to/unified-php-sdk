@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [createHrisEmployee2](#createhrisemployee2) - Create an employee
-* [getHrisEmployee2](#gethrisemployee2) - Retrieve an employee
-* [listHrisEmployees2](#listhrisemployees2) - List all employees
-* [patchHrisEmployee2](#patchhrisemployee2) - Update an employee
-* [removeHrisEmployee2](#removehrisemployee2) - Remove an employee
-* [updateHrisEmployee2](#updatehrisemployee2) - Update an employee
+* [createHrisEmployee](#createhrisemployee) - Create an employee
+* [getHrisEmployee](#gethrisemployee) - Retrieve an employee
+* [listHrisEmployees](#listhrisemployees) - List all employees
+* [patchHrisEmployee](#patchhrisemployee) - Update an employee
+* [removeHrisEmployee](#removehrisemployee) - Remove an employee
+* [updateHrisEmployee](#updatehrisemployee) - Update an employee
 
-## createHrisEmployee2
+## createHrisEmployee
 
 Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisEmployee2" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -33,12 +33,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\CreateHrisEmployee2Request(
+$request = new Operations\CreateHrisEmployeeRequest(
     hrisEmployee: new Shared\HrisEmployee(),
     connectionId: '<id>',
 );
 
-$response = $sdk->employee->createHrisEmployee2(
+$response = $sdk->employee->createHrisEmployee(
     request: $request
 );
 
@@ -49,13 +49,13 @@ if ($response->hrisEmployee !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\CreateHrisEmployee2Request](../../Models/Operations/CreateHrisEmployee2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisEmployeeRequest](../../Models/Operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\CreateHrisEmployee2Response](../../Models/Operations/CreateHrisEmployee2Response.md)**
+**[?Operations\CreateHrisEmployeeResponse](../../Models/Operations/CreateHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -63,13 +63,13 @@ if ($response->hrisEmployee !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getHrisEmployee2
+## getHrisEmployee
 
 Retrieve an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getHrisEmployee2" method="get" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -84,12 +84,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetHrisEmployee2Request(
+$request = new Operations\GetHrisEmployeeRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->employee->getHrisEmployee2(
+$response = $sdk->employee->getHrisEmployee(
     request: $request
 );
 
@@ -100,13 +100,13 @@ if ($response->hrisEmployee !== null) {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\GetHrisEmployee2Request](../../Models/Operations/GetHrisEmployee2Request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisEmployeeRequest](../../Models/Operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 ### Response
 
-**[?Operations\GetHrisEmployee2Response](../../Models/Operations/GetHrisEmployee2Response.md)**
+**[?Operations\GetHrisEmployeeResponse](../../Models/Operations/GetHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -114,13 +114,13 @@ if ($response->hrisEmployee !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listHrisEmployees2
+## listHrisEmployees
 
 List all employees
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listHrisEmployees2" method="get" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="php" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```php
 declare(strict_types=1);
 
@@ -135,11 +135,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListHrisEmployees2Request(
+$request = new Operations\ListHrisEmployeesRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->employee->listHrisEmployees2(
+$response = $sdk->employee->listHrisEmployees(
     request: $request
 );
 
@@ -150,13 +150,13 @@ if ($response->hrisEmployees !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\ListHrisEmployees2Request](../../Models/Operations/ListHrisEmployees2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListHrisEmployeesRequest](../../Models/Operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\ListHrisEmployees2Response](../../Models/Operations/ListHrisEmployees2Response.md)**
+**[?Operations\ListHrisEmployeesResponse](../../Models/Operations/ListHrisEmployeesResponse.md)**
 
 ### Errors
 
@@ -164,13 +164,13 @@ if ($response->hrisEmployees !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchHrisEmployee2
+## patchHrisEmployee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisEmployee2" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -186,13 +186,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\PatchHrisEmployee2Request(
+$request = new Operations\PatchHrisEmployeeRequest(
     hrisEmployee: new Shared\HrisEmployee(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->employee->patchHrisEmployee2(
+$response = $sdk->employee->patchHrisEmployee(
     request: $request
 );
 
@@ -203,13 +203,13 @@ if ($response->hrisEmployee !== null) {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [Operations\PatchHrisEmployee2Request](../../Models/Operations/PatchHrisEmployee2Request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisEmployeeRequest](../../Models/Operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 ### Response
 
-**[?Operations\PatchHrisEmployee2Response](../../Models/Operations/PatchHrisEmployee2Response.md)**
+**[?Operations\PatchHrisEmployeeResponse](../../Models/Operations/PatchHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ if ($response->hrisEmployee !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeHrisEmployee2
+## removeHrisEmployee
 
 Remove an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="removeHrisEmployee2" method="delete" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -238,12 +238,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\RemoveHrisEmployee2Request(
+$request = new Operations\RemoveHrisEmployeeRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->employee->removeHrisEmployee2(
+$response = $sdk->employee->removeHrisEmployee(
     request: $request
 );
 
@@ -254,13 +254,13 @@ if ($response->statusCode === 200) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\RemoveHrisEmployee2Request](../../Models/Operations/RemoveHrisEmployee2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisEmployeeRequest](../../Models/Operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\RemoveHrisEmployee2Response](../../Models/Operations/RemoveHrisEmployee2Response.md)**
+**[?Operations\RemoveHrisEmployeeResponse](../../Models/Operations/RemoveHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -268,13 +268,13 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateHrisEmployee2
+## updateHrisEmployee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisEmployee2" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -290,13 +290,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\UpdateHrisEmployee2Request(
+$request = new Operations\UpdateHrisEmployeeRequest(
     hrisEmployee: new Shared\HrisEmployee(),
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->employee->updateHrisEmployee2(
+$response = $sdk->employee->updateHrisEmployee(
     request: $request
 );
 
@@ -307,13 +307,13 @@ if ($response->hrisEmployee !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\UpdateHrisEmployee2Request](../../Models/Operations/UpdateHrisEmployee2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisEmployeeRequest](../../Models/Operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\UpdateHrisEmployee2Response](../../Models/Operations/UpdateHrisEmployee2Response.md)**
+**[?Operations\UpdateHrisEmployeeResponse](../../Models/Operations/UpdateHrisEmployeeResponse.md)**
 
 ### Errors
 

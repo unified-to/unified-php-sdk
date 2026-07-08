@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [getShippingCarrier2](#getshippingcarrier2) - Retrieve a carrier
-* [listShippingCarriers2](#listshippingcarriers2) - List all carriers
+* [getShippingCarrier](#getshippingcarrier) - Retrieve a carrier
+* [listShippingCarriers](#listshippingcarriers) - List all carriers
 
-## getShippingCarrier2
+## getShippingCarrier
 
 Retrieve a carrier
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="getShippingCarrier2" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
+<!-- UsageSnippet language="php" operationID="getShippingCarrier" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
 ```php
 declare(strict_types=1);
 
@@ -28,12 +28,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\GetShippingCarrier2Request(
+$request = new Operations\GetShippingCarrierRequest(
     connectionId: '<id>',
     id: '<id>',
 );
 
-$response = $sdk->carrier->getShippingCarrier2(
+$response = $sdk->carrier->getShippingCarrier(
     request: $request
 );
 
@@ -44,13 +44,13 @@ if ($response->shippingCarrier !== null) {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [Operations\GetShippingCarrier2Request](../../Models/Operations/GetShippingCarrier2Request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetShippingCarrierRequest](../../Models/Operations/GetShippingCarrierRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 ### Response
 
-**[?Operations\GetShippingCarrier2Response](../../Models/Operations/GetShippingCarrier2Response.md)**
+**[?Operations\GetShippingCarrierResponse](../../Models/Operations/GetShippingCarrierResponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ if ($response->shippingCarrier !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listShippingCarriers2
+## listShippingCarriers
 
 List all carriers
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="listShippingCarriers2" method="get" path="/shipping/{connection_id}/carrier" -->
+<!-- UsageSnippet language="php" operationID="listShippingCarriers" method="get" path="/shipping/{connection_id}/carrier" -->
 ```php
 declare(strict_types=1);
 
@@ -79,11 +79,11 @@ $sdk = Unified_to\UnifiedTo::builder()
     )
     ->build();
 
-$request = new Operations\ListShippingCarriers2Request(
+$request = new Operations\ListShippingCarriersRequest(
     connectionId: '<id>',
 );
 
-$response = $sdk->carrier->listShippingCarriers2(
+$response = $sdk->carrier->listShippingCarriers(
     request: $request
 );
 
@@ -94,13 +94,13 @@ if ($response->shippingCarriers !== null) {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [Operations\ListShippingCarriers2Request](../../Models/Operations/ListShippingCarriers2Request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListShippingCarriersRequest](../../Models/Operations/ListShippingCarriersRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 ### Response
 
-**[?Operations\ListShippingCarriers2Response](../../Models/Operations/ListShippingCarriers2Response.md)**
+**[?Operations\ListShippingCarriersResponse](../../Models/Operations/ListShippingCarriersResponse.md)**
 
 ### Errors
 
