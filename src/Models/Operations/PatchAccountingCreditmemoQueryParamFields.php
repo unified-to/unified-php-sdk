@@ -27,6 +27,7 @@ enum PatchAccountingCreditmemoQueryParamFields: string
     case BalanceAmount = 'balance_amount';
     case CreditmemoNumber = 'creditmemo_number';
     case ContactId = 'contact_id';
+    case InvoiceId = 'invoice_id';
     case Currency = 'currency';
     case Notes = 'notes';
     case RefundReason = 'refund_reason';

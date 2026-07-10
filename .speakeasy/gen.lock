@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 36db861f05f44b7805fc4b06dc0cb471
+  docChecksum: d678a2007a56718bfb29f419fb284e0a
   docVersion: "1.0"
-  speakeasyVersion: 1.789.0
-  generationVersion: 2.916.2
-  releaseVersion: 1.6.80
-  configChecksum: a2946b4c212962099fbe81d8f11fbd7c
+  speakeasyVersion: 1.789.1
+  generationVersion: 2.916.4
+  releaseVersion: 1.6.81
+  configChecksum: 5f1736cdc15106d79d73ec277de480d1
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 407880d5-118d-4110-ae3c-19cc0b5b633e
-  pristine_commit_hash: da011c22daf0a6fe38d06e18dbc897e843036676
-  pristine_tree_hash: 7cd67b515729c89ed3f46e4f6e61e77dcde435ca
+  generation_id: 151f9ff8-a54f-4a23-a678-8202385780ab
+  pristine_commit_hash: 6518319e5e4411c351304bbdf8aa649d99132844
+  pristine_tree_hash: 082edec46337e3365ad8d4ac5a8de7a7f4592d88
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -53,8 +53,8 @@ trackedFiles:
     pristine_git_object: e85f6ff2949d77b3dd57c985b3dad5baffee4354
   docs/Models/Operations/CreateAccountingBillQueryParamFields.md:
     id: 00c53d42960e
-    last_write_checksum: sha1:158e162d0abc4f347776f84f39b8f3290c7e82e2
-    pristine_git_object: 25d5968e68659420a8da6df49f246450e026af57
+    last_write_checksum: sha1:83ff60ee2805da576b80f76f94e7768502aa2cd2
+    pristine_git_object: c88b05598fa80fede66b833016d13db677641b13
   docs/Models/Operations/CreateAccountingBillRequest.md:
     id: d0f6b3491e2e
     last_write_checksum: sha1:846ba09542d5663b7794c10da77a4729729c5ef0
@@ -89,8 +89,8 @@ trackedFiles:
     pristine_git_object: 6fd596e01cb452341fe866c64333f8bc17e216e1
   docs/Models/Operations/CreateAccountingCreditmemoQueryParamFields.md:
     id: 7025b8bd12d5
-    last_write_checksum: sha1:eae0f4b8eb4bcad5190be1edfd4f3f4a9773163f
-    pristine_git_object: 13cba221c412533718460c2791a237a112223dbc
+    last_write_checksum: sha1:51631c31071233733edeb662f0216486acf0cab3
+    pristine_git_object: eca50084aa849229832d0a06d4f3237cd3341093
   docs/Models/Operations/CreateAccountingCreditmemoRequest.md:
     id: 890ac0c16b0b
     last_write_checksum: sha1:08f1bdc9c2b78718b81eb21d0d654ae3255a5060
@@ -325,8 +325,8 @@ trackedFiles:
     pristine_git_object: ac20365616ede1069bd3fa26e7f9be77ca781e0a
   docs/Models/Operations/CreateAtsActivityQueryParamFields.md:
     id: 2a9a7f7f5a32
-    last_write_checksum: sha1:31857a6e7ff2f8694a83d9dfe5dd54f7567df1c0
-    pristine_git_object: bd026b2622ab7d84abb6b79a1fd892d89c6d2ca2
+    last_write_checksum: sha1:fb89c3b9521fc77e9415b3e90c717e97385c4a66
+    pristine_git_object: 10415d187a6e267a4e6017a375dfce2dccd97168
   docs/Models/Operations/CreateAtsActivityRequest.md:
     id: 8b1106817d2a
     last_write_checksum: sha1:29395011dc9a9cc05022731e3fe31e0157cabf6b
@@ -1397,8 +1397,8 @@ trackedFiles:
     pristine_git_object: 15a7eaaa1e82944831fa268f987e350950540f7d
   docs/Models/Operations/GetAccountingBillQueryParamFields.md:
     id: 254207f5a442
-    last_write_checksum: sha1:e6d169dc29da486d214ac28e7f662f2955de7146
-    pristine_git_object: 5991d319ee37a26e0d12a5c44df71bf49d2cd5c1
+    last_write_checksum: sha1:bd43b559bbc0238c2c1eede4edfffde771547bd6
+    pristine_git_object: 599a313e5fafe61811c2044528c97355b8fc179d
   docs/Models/Operations/GetAccountingBillRequest.md:
     id: 61ea693ff040
     last_write_checksum: sha1:3846577bb920a1e8a6bc0d7e0448551b19b67551
@@ -1445,8 +1445,8 @@ trackedFiles:
     pristine_git_object: e294e2172348dd4e2e058d4ea21391a4b80186fd
   docs/Models/Operations/GetAccountingCreditmemoQueryParamFields.md:
     id: a931fcade48d
-    last_write_checksum: sha1:0786a011b0174d737bfb8d409b1ff46e3ebf4749
-    pristine_git_object: f80db32df9de6c2ce96d86c17bcb7daf535daca6
+    last_write_checksum: sha1:41f50faf6282153e73559b1e28a3f58e06ca7724
+    pristine_git_object: 37af02adff8656b51b4cdb619bbce25219abf551
   docs/Models/Operations/GetAccountingCreditmemoRequest.md:
     id: 18b1f6a9e910
     last_write_checksum: sha1:f5f56784fea02999b9c30872dcea14988dd56308
@@ -1765,8 +1765,8 @@ trackedFiles:
     pristine_git_object: f404eb782139260acd14dd7baf91c9f7295e6ca9
   docs/Models/Operations/GetAtsActivityQueryParamFields.md:
     id: 26142b8ac0a8
-    last_write_checksum: sha1:88c0b9e520b04c1ec893e79b2bf76a87b9a876ec
-    pristine_git_object: 796e9bbea56d558a468add2f634db703fbef5ad9
+    last_write_checksum: sha1:6ee4432dce545f10c9fc82704402e6c728e55632
+    pristine_git_object: 282ff41f63e1edf45abef1030ee7417f3c318524
   docs/Models/Operations/GetAtsActivityRequest.md:
     id: cd234d565bee
     last_write_checksum: sha1:f682dab9d78b2acc9216476e3f0e7a07df5663d1
@@ -3025,8 +3025,8 @@ trackedFiles:
     pristine_git_object: 1a4cc3dd44376879c03268f94e543a9823974115
   docs/Models/Operations/ListAccountingBillsQueryParamFields.md:
     id: 7689914dfbc1
-    last_write_checksum: sha1:6415169a365bbda8057fbd85acdfae5218aceec9
-    pristine_git_object: 8bea9aa142c706859d85a6f29f431edba25bde28
+    last_write_checksum: sha1:de737c897284d3ac2095f65d1077a0ab14f49314
+    pristine_git_object: 72c27ca6ab1545ae40f6c6647ad8a6787fc77cf3
   docs/Models/Operations/ListAccountingBillsRequest.md:
     id: 118ffda137dc
     last_write_checksum: sha1:18ead4c4256b35a9368a18140141be22e54377d0
@@ -3073,8 +3073,8 @@ trackedFiles:
     pristine_git_object: d772d1a2a4afce9dddf1c49b1e2ff579799b0b48
   docs/Models/Operations/ListAccountingCreditmemoesQueryParamFields.md:
     id: 64492e7ea6ca
-    last_write_checksum: sha1:a8f5137f4e021efb2ca2f6ef5fa4d04aa9335fcb
-    pristine_git_object: 50267f1140a28901da0ca97d3631b24a57b8af4e
+    last_write_checksum: sha1:0d89da6b507aa6d5177bf822d636733843893fda
+    pristine_git_object: 12144e55cc63eb8cdc1baee32025b76d87ac7ca9
   docs/Models/Operations/ListAccountingCreditmemoesRequest.md:
     id: e13defe4738e
     last_write_checksum: sha1:d63a1896668881b608257c7422620e4227283696
@@ -3417,8 +3417,8 @@ trackedFiles:
     pristine_git_object: 55510a6396a6e3d8f0663d5df55f68d09d421ab9
   docs/Models/Operations/ListAtsActivitiesQueryParamFields.md:
     id: ffe0924f3755
-    last_write_checksum: sha1:56cd0c349ba7a63e72fffd578cc7d0282d81ca54
-    pristine_git_object: c4da71e6291f2cb973fc9ac16cb6ef653b9a74cd
+    last_write_checksum: sha1:68df0847f891d0b007a84e0241ae71e5acfae7a5
+    pristine_git_object: 72406b0db6a1a7020647bca3470a92de90b77b11
   docs/Models/Operations/ListAtsActivitiesRequest.md:
     id: 188507ab5db6
     last_write_checksum: sha1:02a3f251b3131460e65163744340ae82df70ead8
@@ -4757,8 +4757,8 @@ trackedFiles:
     pristine_git_object: ca74916f3f04124be7ed869886c1ac4c4ef57352
   docs/Models/Operations/PatchAccountingBillQueryParamFields.md:
     id: 5a05e3b25a6b
-    last_write_checksum: sha1:22b23f9c65f669556bd9ff7b720bd776547ae368
-    pristine_git_object: 61d2c98d2ccc63308436f9d51fb8eb7fea524dd5
+    last_write_checksum: sha1:74accde9eaabf7194ed76eeb09461adbf9339edd
+    pristine_git_object: 21efc00d29d63939eb971a7a52a65c2c5ba94660
   docs/Models/Operations/PatchAccountingBillRequest.md:
     id: d5a7bc4a0dd7
     last_write_checksum: sha1:539b5813c71145f69ce61659169cb4ea4feab5c1
@@ -4793,8 +4793,8 @@ trackedFiles:
     pristine_git_object: a1cd53897173cd4397a30945ed5e19f293f2811e
   docs/Models/Operations/PatchAccountingCreditmemoQueryParamFields.md:
     id: 167a81a3fc97
-    last_write_checksum: sha1:b98a25cbadbfb572aa88ae1b6f8669bd8eb33e26
-    pristine_git_object: 73f1165be327c844a5873c60f5648fa3db3a8a18
+    last_write_checksum: sha1:22e97a365382e6ae102d424803053b26405f5f9f
+    pristine_git_object: 21a0604c774f34c8bd00cc872ed8f90737d4b7e1
   docs/Models/Operations/PatchAccountingCreditmemoRequest.md:
     id: f663a6c2a412
     last_write_checksum: sha1:1fcfbb3aa7282015ef0da09b6682c732c020f9b5
@@ -5029,8 +5029,8 @@ trackedFiles:
     pristine_git_object: 89b49967c0d8b3ce2d32ae094703aac265bf5279
   docs/Models/Operations/PatchAtsActivityQueryParamFields.md:
     id: 139caf3f895a
-    last_write_checksum: sha1:3054b9272530fe854175f653dfdc28ae15ab2b17
-    pristine_git_object: bf04497f639f591e3b798225cd5b0f21aa15926b
+    last_write_checksum: sha1:d604b3c0150fe22ebbda41f05d02981c5b0b4b53
+    pristine_git_object: 3110956b0600e0f5e6c089647e63e31ae15b6484
   docs/Models/Operations/PatchAtsActivityRequest.md:
     id: 8f5f661d8537
     last_write_checksum: sha1:d0a0eb74a306501f038bdb74bc11ed3aef226106
@@ -6937,8 +6937,8 @@ trackedFiles:
     pristine_git_object: 797313ef6a89674561a89424a827e395f5191976
   docs/Models/Operations/UpdateAccountingBillQueryParamFields.md:
     id: fa817ac60184
-    last_write_checksum: sha1:68575e2867fc06565ed290184a2f5f68a92e1ffc
-    pristine_git_object: dc570961043ec06e206a5162338b464f491ef6cf
+    last_write_checksum: sha1:1bd325627d3ed00755e2073c74a75225767e25e3
+    pristine_git_object: b1d44994dfd10588739d16a267eb54ca00a00236
   docs/Models/Operations/UpdateAccountingBillRequest.md:
     id: 8f401a5a7681
     last_write_checksum: sha1:111ade72f565e3aaf48ca48660638b311338e901
@@ -6973,8 +6973,8 @@ trackedFiles:
     pristine_git_object: 97529adb77ed43789d599495e049657cb1bd09c0
   docs/Models/Operations/UpdateAccountingCreditmemoQueryParamFields.md:
     id: 6dccc232de6b
-    last_write_checksum: sha1:b7a50a7b9614f7fc6eee5cda00033b063b20cffe
-    pristine_git_object: 420f66a0d6838c7b56606ed2ab180c8888f43955
+    last_write_checksum: sha1:9b765bc651bcfbeae89dd1699a2b49a14d21f5ae
+    pristine_git_object: 28504c4a74d7f97dd50c65184c303302368e2747
   docs/Models/Operations/UpdateAccountingCreditmemoRequest.md:
     id: 1641e5e931bf
     last_write_checksum: sha1:6b77f8dcf61104b7f908c4d245cebd8b64f1773f
@@ -7209,8 +7209,8 @@ trackedFiles:
     pristine_git_object: 7b979381c3bcf4f1a6cb5b1c00754201c3534bc8
   docs/Models/Operations/UpdateAtsActivityQueryParamFields.md:
     id: 19d3a57a24b3
-    last_write_checksum: sha1:3f69c716a459dce7b6fe643b0f553016143a7146
-    pristine_git_object: e0c65692d68adc0cbb6dda6e7c2e1dc6e866703a
+    last_write_checksum: sha1:692a2e75942b4b565a3ed7cf195bed8a52f9aa14
+    pristine_git_object: de6e543b9f1043382b40cb5c4931fdf384ffecd5
   docs/Models/Operations/UpdateAtsActivityRequest.md:
     id: 6e6ce06ac526
     last_write_checksum: sha1:588946565e45078bb0a445b7db1a374210874146
@@ -8293,8 +8293,8 @@ trackedFiles:
     pristine_git_object: f83d4daf1be5c8fce8e0054797f892a291833b48
   docs/Models/Shared/AccountingCreditmemo.md:
     id: c809cba8eb74
-    last_write_checksum: sha1:1bdf17d385339d0bdf63fbc4ce57a6a9ab3d4e0e
-    pristine_git_object: af5ad19f51e834016747829d9084f75f46d547fb
+    last_write_checksum: sha1:bba081304201a4a7368ffa8874e80e2372301e3e
+    pristine_git_object: 7949f1f3345b91a6863cdc86e86f48a72dd8d8b1
   docs/Models/Shared/AccountingCreditmemoPaymentCollectionMethod.md:
     id: e6ca8dd00513
     last_write_checksum: sha1:77aec1c586f5e083a055bc035f0c796e81cc381b
@@ -8657,8 +8657,8 @@ trackedFiles:
     pristine_git_object: a8e0017a8a8d700de8b2c1faaaa9703b4bcac998
   docs/Models/Shared/AtsActivity.md:
     id: da8299995b10
-    last_write_checksum: sha1:78c3e4130d5628586092a8c57c470542eca85090
-    pristine_git_object: 55b96b733dbab5726d15d0054331b784279ef9f4
+    last_write_checksum: sha1:a9acaf06028b82aa784a3fde32f281ab6b7743b7
+    pristine_git_object: a67f02c8800052e00f49ec748c68841ac8a32194
   docs/Models/Shared/AtsActivityType.md:
     id: da0ee14eb04e
     last_write_checksum: sha1:03c79455ad0a705cee5656e540c6d15df8f73da8
@@ -13085,8 +13085,8 @@ trackedFiles:
     pristine_git_object: 284aa167c37ffaf20ed8f4c17a8933ab5aefe23e
   src/Models/Operations/CreateAccountingBillQueryParamFields.php:
     id: a8009729e08c
-    last_write_checksum: sha1:378b7c2f1ca22bffc986e96c3f361bd386c8d6f1
-    pristine_git_object: 9017dd57e715ad058c24afd18880d2dbb412d585
+    last_write_checksum: sha1:225399e5ee586290d0a8d7e64fec6504776a585e
+    pristine_git_object: ea9c1a0af916d8fa808c4613d0b0a806d86a8044
   src/Models/Operations/CreateAccountingBillRequest.php:
     id: 870e26280378
     last_write_checksum: sha1:33b368daee5737f14311afb9e646ffe1f0967007
@@ -13121,8 +13121,8 @@ trackedFiles:
     pristine_git_object: f4e517263f1261f8cc71ca0c9e913feb45991810
   src/Models/Operations/CreateAccountingCreditmemoQueryParamFields.php:
     id: 3c84c3dae766
-    last_write_checksum: sha1:cd449b2bcd2f538e4f6fe0fff5feeca51d44b679
-    pristine_git_object: 99b79f1e120649f2f67b36ea6e3d35841e970328
+    last_write_checksum: sha1:115fdc45c4d28a780a287c729a1b0d6bd9b72f52
+    pristine_git_object: e1345e58b1be7ce6903742f98ab6a291c217bdff
   src/Models/Operations/CreateAccountingCreditmemoRequest.php:
     id: 94b6467838c3
     last_write_checksum: sha1:db1eb6ff967d385ea6917a0acd493ee7ab93fcdb
@@ -13357,8 +13357,8 @@ trackedFiles:
     pristine_git_object: bc53840d4f3e95d1749091d33a261fdf2146da92
   src/Models/Operations/CreateAtsActivityQueryParamFields.php:
     id: 26d79f79ab30
-    last_write_checksum: sha1:59a41c2804e717d4989f141587840418929e30b3
-    pristine_git_object: b89df2bf1a4e357cece6d95439e7f3450b1056d8
+    last_write_checksum: sha1:0fce13ea1f41fe411a56a95ceecfc4032771bf65
+    pristine_git_object: cac30269cacf4156153985baec6f64a0167d3eaf
   src/Models/Operations/CreateAtsActivityRequest.php:
     id: 39fed548e8e8
     last_write_checksum: sha1:7995dd4dbd8eacd88f87f90c97f946fe57bdba9a
@@ -14429,8 +14429,8 @@ trackedFiles:
     pristine_git_object: 7ed266fc25333755120ae8dd0984a7945fca896d
   src/Models/Operations/GetAccountingBillQueryParamFields.php:
     id: 07834db5725f
-    last_write_checksum: sha1:11cf1355d5b6d986c563cbffb1546a077d1916e3
-    pristine_git_object: 24a8740608fa41a34594d16a08c211012dcfee7b
+    last_write_checksum: sha1:022f37e4975e5fdbc2ed5642c69428a079853f9c
+    pristine_git_object: 3744fefa0d6e23cf9f9ce1e0e877d34a754ed66c
   src/Models/Operations/GetAccountingBillRequest.php:
     id: 70d30906e452
     last_write_checksum: sha1:b57781458523552b63054d7afd74de95051ac8b9
@@ -14477,8 +14477,8 @@ trackedFiles:
     pristine_git_object: 7e80aa04f8f57d0e020137894799df6eed115eaa
   src/Models/Operations/GetAccountingCreditmemoQueryParamFields.php:
     id: db68e31e8e75
-    last_write_checksum: sha1:5cf285b060f01815ae0442b967e6d938c410669d
-    pristine_git_object: 8243ad6b314c1a222246e1ccd3f0a17937892443
+    last_write_checksum: sha1:b1cb112aab7def6f9f439d754e5244684311b11a
+    pristine_git_object: 74695df18f1997897afa571f6149df7cd37f781c
   src/Models/Operations/GetAccountingCreditmemoRequest.php:
     id: dc3ee05cc5c9
     last_write_checksum: sha1:29613e41e7a6848c7adb40a36c0b7e193aab07cb
@@ -14797,8 +14797,8 @@ trackedFiles:
     pristine_git_object: ecddd0d3f6becb3d36a506c0ebd287db38b76517
   src/Models/Operations/GetAtsActivityQueryParamFields.php:
     id: 5242f06f1fb6
-    last_write_checksum: sha1:2728fca36614467f5fe84110e5a320c965b377c9
-    pristine_git_object: 03bc521b9550360d0685c9baf83b71670d0dbab4
+    last_write_checksum: sha1:af9f44b94c569c783bb4ffb60220575806154cf1
+    pristine_git_object: 7b8ccf9134f6475bb3eea3da3adf72834811a5e4
   src/Models/Operations/GetAtsActivityRequest.php:
     id: 5bf69632872e
     last_write_checksum: sha1:faf5acacceac15bc08461dbb8168873149129a02
@@ -16057,8 +16057,8 @@ trackedFiles:
     pristine_git_object: a338c12b3fb433163afb912912b851783d53d5bc
   src/Models/Operations/ListAccountingBillsQueryParamFields.php:
     id: 8d32d5397aa9
-    last_write_checksum: sha1:6ea09ecfbcaa375c2bffe703548d42c1f2ac3332
-    pristine_git_object: d8e14fc0a11296df765628ec4a841c4e7f4206a8
+    last_write_checksum: sha1:79296b9f1ab5fd05ba1c31a09d10427298879381
+    pristine_git_object: efb934c04f8166c0fa9b10e9b99fdf13c1dd54ec
   src/Models/Operations/ListAccountingBillsRequest.php:
     id: 789172c3c17e
     last_write_checksum: sha1:631d9a18e75b2c9c1d36c67086902ef80cb085bb
@@ -16105,8 +16105,8 @@ trackedFiles:
     pristine_git_object: d54e6cda19a009e80af86c9290d26328a8b452a4
   src/Models/Operations/ListAccountingCreditmemoesQueryParamFields.php:
     id: 9ac5ce311ae0
-    last_write_checksum: sha1:f86f34dc64371db9e1c2db3c178bd94ca0398353
-    pristine_git_object: 8437999bd71e4c5c7755fdf81f1d01d2df87c0fd
+    last_write_checksum: sha1:dbb7929f596bc359bd8d8cb8525c63cab0c99854
+    pristine_git_object: 779fed04739cdc3026353b23ac6f6e43eb057ec6
   src/Models/Operations/ListAccountingCreditmemoesRequest.php:
     id: 0860ab91b0e5
     last_write_checksum: sha1:904236dd9bad7aedcb26090a6a011ff182f6d70a
@@ -16449,8 +16449,8 @@ trackedFiles:
     pristine_git_object: 3d4efd0e01404fff0497bd96d2babad527398e65
   src/Models/Operations/ListAtsActivitiesQueryParamFields.php:
     id: d1cc1391d693
-    last_write_checksum: sha1:fa1f316a0d9732957f4d440ce03c10b64567e605
-    pristine_git_object: e7914f5a2271c73117399cf08795529c69536594
+    last_write_checksum: sha1:08c117cc1947401b414f0090738490c10ecaf92d
+    pristine_git_object: 80ac4c47219564f06c4c6ca537f27799c8339ad3
   src/Models/Operations/ListAtsActivitiesRequest.php:
     id: 4566b87e8304
     last_write_checksum: sha1:fd912b264a4ae860f97d92086a2995e231da1856
@@ -17789,8 +17789,8 @@ trackedFiles:
     pristine_git_object: 28521936bddd4d5a4dca5963ce26dc502542d1ed
   src/Models/Operations/PatchAccountingBillQueryParamFields.php:
     id: dfd3a1aecd5a
-    last_write_checksum: sha1:c24fc1984b6559e1bf770ecf12bd4288c4145c24
-    pristine_git_object: c61e14cf58b92486cb95df7955c14f028257e136
+    last_write_checksum: sha1:30e85c7ceeb34899237aae9b5d038b963efe4815
+    pristine_git_object: 3dde7965b70a16fe7feb8e34c87eea5bf4169ec0
   src/Models/Operations/PatchAccountingBillRequest.php:
     id: 5a755db8ef40
     last_write_checksum: sha1:3d7117be13dbdb63d8c4b87582e6c6ba70f5a5b6
@@ -17825,8 +17825,8 @@ trackedFiles:
     pristine_git_object: e53f158ba8faaa07f3934b9dee4ef3183f94ce69
   src/Models/Operations/PatchAccountingCreditmemoQueryParamFields.php:
     id: 99e654679e94
-    last_write_checksum: sha1:ee3165e18ed006c1d518a29d0bec7e9c42f76a28
-    pristine_git_object: b14622bb37df04b9236cd1de1d124ad0ebb351b4
+    last_write_checksum: sha1:8ae980c393acb965202ae22a410622cdf7888e40
+    pristine_git_object: 28ecc6dea5c49d667ca6afe3dea7abd666a2ec70
   src/Models/Operations/PatchAccountingCreditmemoRequest.php:
     id: 8219bd7e83e6
     last_write_checksum: sha1:0c5b494758829f413f9a7f37058b36440b32b9db
@@ -18061,8 +18061,8 @@ trackedFiles:
     pristine_git_object: 9f72967602759eb7863e0b61322b4132dda2c9db
   src/Models/Operations/PatchAtsActivityQueryParamFields.php:
     id: 550be59cbd3c
-    last_write_checksum: sha1:c384934e6ec5fa1043e2439c0ab9754fe979955d
-    pristine_git_object: c5422bd4d691d950d0d894366bced405283305dd
+    last_write_checksum: sha1:4d22a65567a330a3c0e3c7a40fafabc480c1c0a2
+    pristine_git_object: 161915681802674f9c59647984d1593b00b174c2
   src/Models/Operations/PatchAtsActivityRequest.php:
     id: 13b9a72bea4f
     last_write_checksum: sha1:ff982101fe8bb321e9a3dd66e6336447d954b8af
@@ -19969,8 +19969,8 @@ trackedFiles:
     pristine_git_object: 27a69f496d7975eb2b134830b0602d61862a6670
   src/Models/Operations/UpdateAccountingBillQueryParamFields.php:
     id: 469d08dcad2e
-    last_write_checksum: sha1:66ad9a5142ba4d7a460699bab5f5cdcd65f20be4
-    pristine_git_object: c3b0dd839d6c73c298980cbee86b0baaedd43169
+    last_write_checksum: sha1:341ee89ecd1b3c446c4346c442b87377874ef669
+    pristine_git_object: 672be98d970877b4adfdef7e9ee3d51d311a90bc
   src/Models/Operations/UpdateAccountingBillRequest.php:
     id: 254455a36992
     last_write_checksum: sha1:52873e4112302ecb10b34dc41a63db1d7a16845d
@@ -20005,8 +20005,8 @@ trackedFiles:
     pristine_git_object: f5d1e211adb03fd8dbd950c9240b3fe7d0d00859
   src/Models/Operations/UpdateAccountingCreditmemoQueryParamFields.php:
     id: 6f005b31be46
-    last_write_checksum: sha1:e3b499e9a440024cbe4439c2892c3e64eff83526
-    pristine_git_object: 727ee8d4a9d48c24298d45f8f38ad9254973d828
+    last_write_checksum: sha1:699091b82b3ab64054fdb3834aa8a871f7b3818b
+    pristine_git_object: ba9744a451acb805f10de6a5e306592636f5a1de
   src/Models/Operations/UpdateAccountingCreditmemoRequest.php:
     id: "722957744e77"
     last_write_checksum: sha1:609829df5d09ab4f9059b8b6315b3362542fd202
@@ -20241,8 +20241,8 @@ trackedFiles:
     pristine_git_object: b6b0d261b6d172f4cfbda2030cece6e73d7a87af
   src/Models/Operations/UpdateAtsActivityQueryParamFields.php:
     id: f239e145860f
-    last_write_checksum: sha1:66d638f2490040b16b78a81c9aa9b1598263234a
-    pristine_git_object: f14824d1cbb345f07e1168612a6aa09a19817910
+    last_write_checksum: sha1:120d32cf83f740a1313045dc182cf18964ced308
+    pristine_git_object: 8bcfecc2fda650d9bf1a8d678b065a19eb30b57a
   src/Models/Operations/UpdateAtsActivityRequest.php:
     id: b7b09e0a313a
     last_write_checksum: sha1:3c10237484f726d54258ebee293c7c4134fdde5e
@@ -21325,8 +21325,8 @@ trackedFiles:
     pristine_git_object: a4dfd78471d7f8fb641cf3558c875229b45924fd
   src/Models/Shared/AccountingCreditmemo.php:
     id: 16cdfbca0584
-    last_write_checksum: sha1:cc3a4b026dd767dd14990a959a90bf5eb4dd1300
-    pristine_git_object: 65fbf80c6714444d4ea7244a2209f45a0e5cda59
+    last_write_checksum: sha1:b3d7c2c8c0d7cc4bbf864de79c441bc62f9b6934
+    pristine_git_object: 43c2f00ec08f11005e5e494532125782a2c97217
   src/Models/Shared/AccountingCreditmemoPaymentCollectionMethod.php:
     id: 17e51edec67f
     last_write_checksum: sha1:e7f3a552a846e70e8826966796c293e7d2ee4a3b
@@ -21685,8 +21685,8 @@ trackedFiles:
     pristine_git_object: fab600c6bef88dfce64624f39ba666f2e1e9abf9
   src/Models/Shared/AtsActivity.php:
     id: 573d0215872c
-    last_write_checksum: sha1:1db2ed5160a83e600f6f1b1698043c6cf8df9faf
-    pristine_git_object: 55f9e52f0310ca5ec97e7e2c5c3ffa387bf8e796
+    last_write_checksum: sha1:1717eec338ad1bc5815838f643e79c631ca90c8e
+    pristine_git_object: ae460d61d8995845c1c20bcfdb033f5c977c1708
   src/Models/Shared/AtsActivityType.php:
     id: be500043b030
     last_write_checksum: sha1:7e4d46037f2f331a24ef76fff74f9daee0917faa
@@ -25065,8 +25065,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:75298ddbdcc9f9502f3f15b156845f7a51eb9e10
-    pristine_git_object: 5141f7798a29e32af3268f74bf902c3fb3439be3
+    last_write_checksum: sha1:697326b22247e15987a6bf10d6b2dc72ebe77964
+    pristine_git_object: e179acc6d6e8e87e5cfc75780e07932b9a461b26
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -38348,12 +38348,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Php SDK Changes:
-  2720 method changes summary (please refer to the full report for details):
-  * 1356 added
-  * 1344 removed
-  * 20 changed
+releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->getAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->listAccountingBills()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->invoiceId` **Added**\n* `unified-to->accounting->patchAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->updateAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->bill->createAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->getAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->listAccountingBills()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->patchAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->updateAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->invoiceId` **Added**\n* `unified-to->creditmemo->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->ats->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->ats->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->activity->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

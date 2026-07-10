@@ -94,6 +94,14 @@ class AccountingCreditmemo
     public ?string $id = null;
 
     /**
+     *
+     * @var ?string $invoiceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('invoice_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $invoiceId = null;
+
+    /**
      * $lineitems
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
@@ -246,6 +254,7 @@ class AccountingCreditmemo
      * @param  ?float  $discountAmount
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
+     * @param  ?string  $invoiceId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $notes
      * @param  ?string  $organizationId
@@ -265,7 +274,7 @@ class AccountingCreditmemo
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceId = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
@@ -277,6 +286,7 @@ class AccountingCreditmemo
         $this->discountAmount = $discountAmount;
         $this->dueAt = $dueAt;
         $this->id = $id;
+        $this->invoiceId = $invoiceId;
         $this->lineitems = $lineitems;
         $this->notes = $notes;
         $this->organizationId = $organizationId;

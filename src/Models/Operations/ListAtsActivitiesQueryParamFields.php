@@ -30,5 +30,6 @@ enum ListAtsActivitiesQueryParamFields: string
     case Bcc = 'bcc';
     case SubType = 'sub_type';
     case CompanyId = 'company_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

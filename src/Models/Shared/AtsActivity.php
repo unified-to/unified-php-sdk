@@ -123,6 +123,16 @@ class AtsActivity
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -199,6 +209,7 @@ class AtsActivity
      * @param  ?string  $interviewId
      * @param  ?bool  $isPrivate
      * @param  ?string  $jobId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $subType
      * @param  ?string  $title
@@ -208,7 +219,7 @@ class AtsActivity
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?array $bcc = null, ?string $candidateId = null, ?array $cc = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $documentIds = null, ?PropertyAtsActivityFrom $from = null, ?string $id = null, ?string $interviewId = null, ?bool $isPrivate = null, ?string $jobId = null, ?array $metadata = null, ?array $raw = null, ?string $subType = null, ?string $title = null, ?array $to = null, ?AtsActivityType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->bcc = $bcc;
@@ -223,6 +234,7 @@ class AtsActivity
         $this->interviewId = $interviewId;
         $this->isPrivate = $isPrivate;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->subType = $subType;
         $this->title = $title;

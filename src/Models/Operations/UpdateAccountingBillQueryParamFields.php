@@ -13,7 +13,6 @@ enum UpdateAccountingBillQueryParamFields: string
 {
     case Id = 'id';
     case BillNumber = 'bill_number';
-    case Term = 'term';
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case DueAt = 'due_at';
@@ -39,4 +38,5 @@ enum UpdateAccountingBillQueryParamFields: string
     case Send = 'send';
     case OrganizationId = 'organization_id';
     case Raw = 'raw';
+    case Term = 'term';
 }
