@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: d678a2007a56718bfb29f419fb284e0a
+  docChecksum: 765c9a8f026f994299cd84192f56c8b0
   docVersion: "1.0"
-  speakeasyVersion: 1.789.1
+  speakeasyVersion: 1.789.2
   generationVersion: 2.916.4
-  releaseVersion: 1.6.81
-  configChecksum: 5f1736cdc15106d79d73ec277de480d1
+  releaseVersion: 1.6.82
+  configChecksum: 51eddd9ff0d59656632692db13f4e80a
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 151f9ff8-a54f-4a23-a678-8202385780ab
-  pristine_commit_hash: 6518319e5e4411c351304bbdf8aa649d99132844
-  pristine_tree_hash: 082edec46337e3365ad8d4ac5a8de7a7f4592d88
+  generation_id: e3195c59-9d23-41f9-982c-bd0809168643
+  pristine_commit_hash: 4847f844ce7343241d87fe61b109f89dc7bc658d
+  pristine_tree_hash: 787b19044164b43cc87b3515269009c8fe2220e3
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -4517,8 +4517,8 @@ trackedFiles:
     pristine_git_object: 5befca1adf850f56fb1ca60d563339ea75775f18
   docs/Models/Operations/ListTaskChangesRequest.md:
     id: fe71fe9d2071
-    last_write_checksum: sha1:e8116ba37e72b04006a13b29cf42d58fb16acbaf
-    pristine_git_object: 44ad79e968d4267e713bd231ff4fa8bcc92fe043
+    last_write_checksum: sha1:f9008af3d45fba911c5015d395d38302919b729c
+    pristine_git_object: d41d11be54d788a6851b10508f1d6d24a8d941bc
   docs/Models/Operations/ListTaskChangesResponse.md:
     id: d87a27f86adb
     last_write_checksum: sha1:7b285b8946eea5805b26ac79c3898e5e2b872a76
@@ -17549,8 +17549,8 @@ trackedFiles:
     pristine_git_object: e450571c33325b9b22ae61c92a7b473d8e6601ce
   src/Models/Operations/ListTaskChangesRequest.php:
     id: ef6fca1212c6
-    last_write_checksum: sha1:233a0fb87a84c05387ca3d8ae6179894df715bfe
-    pristine_git_object: 71ebbe4c546081c6a6dc84172dc5edbc619f4af9
+    last_write_checksum: sha1:8eec18d70de99370d9aa492d0fd8a84964355360
+    pristine_git_object: 162ace9ebe13da9dbec87611d44d1c3c4a818bcf
   src/Models/Operations/ListTaskChangesResponse.php:
     id: 9a103aa33bdd
     last_write_checksum: sha1:4fb3ef6ba8ea2cf0137dfa246e58ece9aabb9efb
@@ -25065,8 +25065,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:697326b22247e15987a6bf10d6b2dc72ebe77964
-    pristine_git_object: e179acc6d6e8e87e5cfc75780e07932b9a461b26
+    last_write_checksum: sha1:a7b92a6845ea828450c45d8417d539c2fece1b0f
+    pristine_git_object: ca6a2ba9945b3e11dea0248200c6f38ded492ffb
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -38348,7 +38348,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->accounting->createAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->getAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->listAccountingBills()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->invoiceId` **Added**\n* `unified-to->accounting->patchAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->accounting->updateAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->accounting->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->bill->createAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->getAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->listAccountingBills()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->patchAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->bill->updateAccountingBill()`: \n  *  `request->fields` **Changed**\n* `unified-to->creditmemo->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->invoiceId` **Added**\n* `unified-to->creditmemo->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->creditmemo->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoiceId` **Added**\n* `unified-to->ats->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->ats->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->ats->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->getAtsActivity()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->listAtsActivities()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->activity->patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->activity->updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->task->listTaskChanges()`: \n  *  `request->projectId` **Added**\n* `unified-to->change->listTaskChanges()`: \n  *  `request->projectId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
